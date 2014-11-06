@@ -6,7 +6,7 @@ footer.common {
   padding: 32px 0 0 0;
   text-align: center;
   width: 1170px;
-  @media screen and (max-width: $break) {
+  @media screen and (max-width: $width) {
     padding-bottom: 30px;
     width: 100%;
   }

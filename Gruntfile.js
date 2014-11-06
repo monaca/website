@@ -35,7 +35,7 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd   : 'src/templates/sass',
+                    cwd   : 'src/sass',
                     src   : '*.scss',
                     dest  : 'dist/css/',
                     ext   : '.css'
@@ -53,9 +53,9 @@ module.exports = function(grunt) {
                 },
                 files: [
                     '<%= config.dist %>/{,*/}*.html',
-                    '<%= config.dist %>/assets/{,*/}*.css',
-                    '<%= config.dist %>/assets/{,*/}*.js',
-                    '<%= config.dist %>/assets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+                    '<%= config.dist %>/{,*/}*.css',
+                    '<%= config.dist %>/{,*/}*.js',
+                    '<%= config.dist %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
             },
             sass: {
@@ -64,9 +64,20 @@ module.exports = function(grunt) {
                 options : {
                     spawn: false
                 }
+            },
+            js: {
+                files: ['<%= config.src %>/**/*.js'],
+                tasks: ['concat']
+            },
+        },
+        concat: {
+            dist: {
+                src: [
+                    '<%= config.src %>/js/**/*.js'
+                ],
+                dest: '<%= config.dist %>/js/all.js'
             }
         },
-
         connect: {
             options: {
                 port: 9000,
@@ -125,9 +136,10 @@ module.exports = function(grunt) {
         clean: ['<%= config.dist %>/**/*.{html,xml}']
 
     });
-
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
     grunt.registerTask('server', [
         'build',
@@ -139,6 +151,7 @@ module.exports = function(grunt) {
         'clean',
         'copy',
         'sass',
+        'concat',
         'assemble'
     ]);
 

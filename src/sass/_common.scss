@@ -1,0 +1,92 @@
+.box-full {
+  > * {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    width: $width;
+    @media screen and (max-width: $width) {
+      width: 100%;
+    }
+    @media screen and (max-width: $break) {
+      padding: 0 5%;
+    }
+  }
+}
+
+.column-3 {
+  @include clearfix;
+  li {
+    float: left;
+    margin-right: percentage(30px/1170px);
+    width: percentage(370px/1170px);
+    @media screen and (max-width: $break-lg) {
+      margin-right: percentage(40px/640px);
+      width: percentage(300px/640px);
+    }
+    @media screen and (min-width: $break-lg) {
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    @media screen and (max-width: $break-lg) and (min-width: $break-xs) {
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+    @media screen and (max-width: $break-xs) {
+      float: none;
+      margin: 0 auto 20px;
+      width: 100%;
+    }
+  }
+}
+
+.column-4 {
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0px;
+    visibility: hidden;
+    font-size: 0;
+  }
+  li {
+    float: left;
+    margin-right: percentage(30px/1170px);
+    width: percentage(270px/1170px);
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+    @media screen and (max-width: $break) {
+      float: none;
+      margin: 0 auto 20px;
+      width: 100%;
+    }
+  }
+}
+
+.box-1 {
+  background-color: #fafafa;
+  border: 1px solid #d4d5d7;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #999;
+  margin-bottom: 25px;
+  padding: 70px 30px 40px;
+  position: relative;
+  h1, h2, h3, h4, h5, h6 {
+    color: #43587e;
+    font-size: 24px;
+    @media screen and (max-width: $break) {
+      font-size: 32px;
+    }
+  }
+}
+
+.bnr-1 {
+  background-color: #43587e;
+  color: #ffffff;
+  display: inline-block;
+  padding: 2px 20px;
+}

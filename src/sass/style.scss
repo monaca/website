@@ -107,17 +107,28 @@ p {
 	word-wrap: break-word;
 }
 
+@mixin clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
 /* =Bootstrap overwrite
 -------------------------------------------------------------- */
-$width: 1080px;
-$break: 480px;
-
+$width: 1170px;
+$break: 767px;
+$break-lg: 970px;
+$break-xs: 640px;
 
 .container {
   padding: 0;
   width: $width;
+  @media screen and (max-width: $width) {
+    width: 100%;
+  }
 }
-
 
 /* =User styles
 -------------------------------------------------------------- */
@@ -127,8 +138,15 @@ html {
 	text-align:center;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+}
+
 body {
   min-width: $width;
+  @media screen and (max-width: $width) {
+    min-width: 0;
+  }
 }
 
 img, iframe, object { 

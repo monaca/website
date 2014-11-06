@@ -1,0 +1,31 @@
+header.navbar {
+  opacity: 0.9;
+  min-width: $width;
+  @media screen and (max-width: $break) {
+    width: 100%;
+  }
+  .container {
+    @media screen and (max-width: $break) {
+      padding: 0 5%;
+    }
+  }
+  .navbar-toggle {
+    background-color: transparent;
+    border: none;
+  }
+  .navbar-brand img {
+    width: 110px;
+  }
+  .navbar-collapse {
+    float: right;
+    @media screen and (max-width: $break - 1px) {
+      float: none;
+    }
+  }
+  .navbar-nav > li > a {
+    color: #ffffff;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

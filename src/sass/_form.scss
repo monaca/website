@@ -26,12 +26,13 @@
 }
 
 %flat-btn {
+  $c: #ffffff;
   background-color: #505763;
   border: 1px solid #373d47;
   border-radius: 3px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: white;
+  color: $c;
   display: inline-block;
   font-size: 18px;
   font-weight: 500;
@@ -42,24 +43,32 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
-  height: 45px;
-  line-height: 45px;
+  height: 40px;
+  line-height: 41px;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
   &:hover {
-    text-decoration: none;
+    text-shadow: none;
+    color: $c;
     cursor: pointer;
     opacity: 0.85;
+    text-decoration: none;
   }
   &:active, &:focus {
     outline: none;
   }
   &:active {
-    opacity: 1 !important;
+    opacity: 1;
   }
-  &:disabled {
+  &[disabled] {
     opacity: 0.4;
     pointer-events: none;
+    &:hover {
+      opacity: 0.2;
+    }
+    &:active {
+      opacity: 0.2;
+    }
   }
 }
 
@@ -70,18 +79,13 @@
   color: #fff;
   font-weight: 600;
   text-shadow: none;
-  &[disabled]:hover {
-    opacity: 0.2;
-  }
-  &[disabled]:active {
-    opacity: 0.2;
-  }
-  &:hover {
-  }
-  &:active,
-  &.active {
-    opacity: 1;
-  }
+}
+
+.btn-white {
+  @extend %flat-btn;
+  background-color: #ffffff;
+  border: 1px solid #c9c9c9;
+  color: #505763;
 }
 
 .btn-orange {
@@ -92,7 +96,6 @@
   text-shadow: 0 -1px 0px rgba(0, 0, 0, .1);
   &[disabled] {
     opacity: 0.2;
-    filter: alpha(opacity=20);
   }
   &:not([disabled]) {
     &:hover {
@@ -104,7 +107,7 @@
     }
   }
   .small {
-    font-size: 88%;
+    font-size: 0.88rem;
   }
 }
 
