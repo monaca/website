@@ -1,0 +1,130 @@
+%btn {
+  border: none;
+  display: inline-block;
+  $height: 32px;
+  letter-spacing: 1px;
+  height: $height;
+  text-align: center;
+  padding: 0 14px;
+  font-size: 13px;
+  line-height: $height;
+  text-decoration: none !important;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-weight: 500;
+  &:hover {
+    cursor: pointer;
+    outline: none;
+  }
+  &[disabled] {
+    cursor: default;
+    opacity: 0.3;
+    filter: alpha(opacity=30);
+  }
+}
+
+%flat-btn {
+  background-color: #505763;
+  border: 1px solid #373d47;
+  border-radius: 3px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: white;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0 14px;
+  margin: 0;
+  background-color: #ff8b24;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  height: 45px;
+  line-height: 45px;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.85;
+  }
+  &:active, &:focus {
+    outline: none;
+  }
+  &:active {
+    opacity: 1 !important;
+  }
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.btn-blue {
+  @extend %flat-btn;
+  background-color: #468fff;
+  border: 1px solid #468fff;
+  color: #fff;
+  font-weight: 600;
+  text-shadow: none;
+  &[disabled]:hover {
+    opacity: 0.2;
+  }
+  &[disabled]:active {
+    opacity: 0.2;
+  }
+  &:hover {
+  }
+  &:active,
+  &.active {
+    opacity: 1;
+  }
+}
+
+.btn-orange {
+  @extend %btn;
+  background-color: #ff8b24;
+  border: 1px solid #ec761f;
+  color: #fff;
+  text-shadow: 0 -1px 0px rgba(0, 0, 0, .1);
+  &[disabled] {
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+  }
+  &:not([disabled]) {
+    &:hover {
+      border-color: #ff8f4b;
+      opacity: 0.85;
+    }
+    &:active {
+      background-color: darken(#ff8b24, 10);
+    }
+  }
+  .small {
+    font-size: 88%;
+  }
+}
+
+.btn-black {
+  @extend %btn;
+  background-color: #505763;
+  border: 1px solid #373d47;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  &[disabled]:hover {
+    opacity: 0.2;
+  }
+  &[disabled]:active {
+    opacity: 0.2;
+  }
+  &:hover {
+    opacity: 0.85;
+  }
+  &:active {
+    opacity: 1;
+  }
+}
