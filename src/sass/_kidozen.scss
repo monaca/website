@@ -1,0 +1,67 @@
+body.kidozen {
+
+  .keyvisual {
+    background: url(../img/kidozen/keyvisual.png) no-repeat right bottom, url(../img/kidozen/keyvisual_bg.png) repeat-x left bottom;
+    background-size: contain auto;
+    color: #000;
+    height: 660px;
+    padding-bottom: 0;
+    position: relative;
+    h1 {
+      font-size: 54px;
+      font-weight: 400;
+      line-height: 68px;
+      margin-bottom: 10px;
+      padding-top: 100px;
+      text-align: left;
+      span {
+        color: #d70101;
+      }
+    }
+    p {
+      font-size: 20px;
+      text-align: left;
+      width: 420px;
+      word-break: break-all;
+    }
+    .btns {
+      line-height: 64px;
+      .btn {
+        width: 175px;
+        height: 54px;
+        line-height: 54px;
+      }
+    }
+  }
+
+  article.main {
+    section {
+      border-bottom: 1px solid #ccc;
+      padding: 140px 0 80px;
+      h1 {
+        text-align: center;
+      }
+      p {
+        text-align: center;
+        width: 790px;
+      }
+    }
+    .box-try {
+      padding: 140px 0;
+      .btn {
+        font-size: 24px;
+        height: 64px;
+        line-height: 64px;
+        padding: 0 40px;
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .lucy-in-the-sky {
+    background: url(../img/kidozen/img_3.jpg) no-repeat top center;
+    section.baas {
+      min-height: 840px;
+    }
+  }
+}

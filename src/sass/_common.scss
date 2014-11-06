@@ -2,7 +2,8 @@
   > * {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     width: $width;
     @media screen and (max-width: $width) {
@@ -89,4 +90,18 @@
   color: #ffffff;
   display: inline-block;
   padding: 2px 20px;
+}
+
+section {
+  h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  p {
+    color: #666;
+  }
 }
