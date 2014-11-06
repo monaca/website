@@ -1,8 +1,9 @@
 header.navbar {
   opacity: 0.9;
   min-width: $width;
-  @media screen and (max-width: $break) {
+  @media screen and (max-width: $width) {
     width: 100%;
+    min-width: 0;
   }
   .container {
     @media screen and (max-width: $break) {
