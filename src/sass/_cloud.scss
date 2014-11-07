@@ -41,11 +41,6 @@ body.cloud {
 
   article.main {
     section {
-      border-bottom: 1px solid #ccc;
-      padding: 90px 0 80px;
-      &:first-child {
-        padding-top: 140px;
-      }
       h1 {
         text-align: center;
       }
@@ -57,76 +52,81 @@ body.cloud {
 
       &.summary {
         background: url(../img/cloud/img_1.jpg) no-repeat right 60px;
-        height: 860px;
+        background-size: 100%;
+        padding-bottom: 42%;
+        @media screen and (max-width: $break) {
+          background-position: right 120px;
+        }
         h1 {
           line-height: 1.4;
           text-align: left;
         }
         p {
+          margin-left: 0;
           width: 370px;
           text-align: left;
         }
       }
-      &.workflow > ul {
-        width: 100%;
-        background: url(../img/cloud/workflow.png) no-repeat center top;
-        padding-top: 141px;
-        font-size: 0px;
-        text-align: center;
-        margin-bottom: 60px;
-
-        > li {
+      &.workflow {
+        > ul {
+          width: 100%;
+          background: url(../img/cloud/workflow.png) no-repeat center top;
+          padding-top: 141px;
+          font-size: 0px;
           text-align: center;
-          font-weight: 600;
-          color: #333;
-          font-size: 16px;
-          height: 36px;
-          width: 172px;
-          margin-right: 48px;
-          display: inline-block;
-          position: relative;
-          white-space: nowrap;
-          overflow: visible;
+          margin-bottom: 60px;
 
-          &:last-child {
-            margin-right: 0px;
+          > li {
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+            height: 36px;
+            width: 172px;
+            margin-right: 48px;
+            display: inline-block;
+            position: relative;
+            white-space: nowrap;
+            overflow: visible;
+
+            &:last-child {
+              margin-right: 0px;
+            }
+
+            &:after {
+              content: '';
+              height: 2px;
+              width: 170px;
+              background-color: white;
+              border: 1px solid black;
+              position: absolute;
+              left: 0px;
+              right: 0px;
+              bottom: 0px;
+            }
           }
 
-          &:after {
-            content: '';
-            height: 2px;
-            width: 170px;
-            background-color: white;
-            border: 1px solid black;
-            position: absolute;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
+          > li.workflow-action-coding:after {
+            background-color: #7daeff;
+            border-color: #0065ff;
+          }
+
+          > li.workflow-action-debug:after {
+            background-color: #917dff;
+            border-color: #2300ff;
+          }
+
+          > li.workflow-action-build:after {
+            background-color: #c99dde;
+            border-color: #9340bf;
+          }
+
+          > li.workflow-action-store:after {
+            background-color: #fabe81;
+            border-color: #f67b08;
           }
         }
-
-        > li.workflow-action-coding:after {
-          background-color: #7daeff;
-          border-color: #0065ff;
-        }
-
-        > li.workflow-action-debug:after {
-          background-color: #917dff;
-          border-color: #2300ff;
-        }
-
-        > li.workflow-action-build:after {
-          background-color: #c99dde;
-          border-color: #9340bf;
-        }
-
-        > li.workflow-action-store:after {
-          background-color: #fabe81;
-          border-color: #f67b08;
-        }
-      }
-      @media screen and (max-width: $break) {
-        #feature-workflow {
+        @media screen and (max-width: $break) {
           box-sizing: border-box;
           padding: 30px 3%;
           width: 100%;

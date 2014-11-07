@@ -162,6 +162,27 @@ section {
   }
 }
 
+article.main section {
+  border-bottom: 1px solid #ccc;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 90px 0 80px;
+  position: relative;
+  width: $width;
+  &:first-child {
+    padding-top: 140px;
+  }
+  p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (max-width: $width) {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+  }
+}
+
 @import "common";
 @import "form";
 @import "header";

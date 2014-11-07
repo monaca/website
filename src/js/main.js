@@ -1,17 +1,21 @@
 "use strict";
 
 $(function() {
-    $("[tile=2]").tile(2);
-    $("[tile=3]").tile(3);
-    $("[tile=4]").tile(4);
+    var $tile2 = $("[tile=2]");
+    var $tile3 = $("[tile=3]");
+    var $tile4 = $("[tile=4]");
+    $tile2.tile(2);
+    $tile3.tile(3);
+    $tile4.tile(4);
+
     var timer = null;
     window.addEventListener("resize", function() {
         clearTimeout(timer);
         timer = setTimeout(function() {
-            $("[tile=2]").tile(2);
-            $("[tile=3]").tile(3);
-            $("[tile=4]").tile(4);
-        }, 100);
+            $tile2.tile(2);
+            $tile3.tile(3);
+            $tile4.tile(4);
+        }, 150);
     })
 })
 
