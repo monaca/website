@@ -2,6 +2,20 @@
 
 > Monaca Website Renewal(2014.11).
 
+## Grunt tasks
+
+### grunt build
+
+Build and copy images
+
+### grunt server
+
+watch src directory
+
+### grunt aws_s3
+
+upload files to S3
+
 ## [Assemble](http://assemble.io/)
 
 Assemble is a component and static site generator that makes it dead simple to build modular sites, documentation and components from reusable templates and data.

@@ -131,6 +131,26 @@ module.exports = function(grunt) {
             }
         },
 
+        aws: grunt.file.readJSON('aws_keys.json'),
+
+        aws_s3: {
+            options: {
+                accessKeyId: '<%= aws.key %>', // Use the variables
+                secretAccessKey: '<%= aws.secret %>', // You can also use env variables
+                uploadConcurrency: 5, // 5 simultaneous uploads
+                downloadConcurrency: 5 // 5 simultaneous downloads
+            },
+            ja: {
+                options: {
+                    bucket: 'ja.monaca.io',
+                    region: 'ap-northeast-1',
+                },
+                files: [
+                    {expand: true, cwd: 'dist', src: ['**'], dest: ''},
+                ]
+            },
+        },
+
         // Before generating any new files,
         // remove any previously-created files.
         clean: ['<%= config.dist %>/**/*.{html,xml}']
@@ -140,6 +160,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-aws-s3');
 
     grunt.registerTask('server', [
         'build',

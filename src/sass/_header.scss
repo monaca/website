@@ -46,11 +46,11 @@ header.navbar {
   }
   .dropdown-menu {
     @extend .dropdown-menu-dark;
-    background-color: transparent;
     padding: 0 0 5px;
     left: 0;
     right: auto;
     @media screen and (max-width: $break) {
+      background-color: transparent;
       display: block;
       position: static;
       top: auto;
