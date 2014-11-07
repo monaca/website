@@ -26,14 +26,6 @@ body.support {
       width: 420px;
       word-break: break-all;
     }
-    .btns {
-      line-height: 64px;
-      .btn {
-        width: 175px;
-        height: 54px;
-        line-height: 54px;
-      }
-    }
   }
 
   article.main {
@@ -58,10 +50,17 @@ body.support {
         }
         .alignleft {
           float: left;
-          margin-right: 40px;
+          margin: 0 40px 40px 0;
+          @media screen and (max-width: $break) {
+            width: 50%;
+          }
         }
         .tech-cont {
           padding-top: 60px;
+          text-align: left;
+          @media screen and (max-width: $break) {
+            padding: 0 5%;
+          }
         }
       }
       &.forum {
