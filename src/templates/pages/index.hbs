@@ -9,10 +9,10 @@ layout: src/templates/layouts/index.hbs
     <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
 </div></div>
 
-<div class="products box-full">
+<div class="container products box-full">
     <ul class="column-3">
         <li class="box-1" tile="3">
-            <span class="type bnr-1">Cloud</span>
+            <span class="type bnr-1"><img src="/img/index/tag_cloud.png" alt="Cloud"/></span>
             <dl>
                 <dt>Monacaクラウド</dt>
                 <dd>MonacaクラウドIDEは、HTML5ハイブリッドアプリ開発に特化したブラウザベースのフルス。</dd>
@@ -20,7 +20,7 @@ layout: src/templates/layouts/index.hbs
             <div class="btns"><a class="btn btn-white" href="#">すぐに試す</a><a class="btn btn-blue" href="#">詳細はこちら</a></div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1">Business</span>
+            <span class="type bnr-1"><img src="/img/index/tag_business.png" alt="Business"/></span>
             <dl>
                 <dt>Monacaエンタープライズ</dt>
                 <dd>Monacaエンタープライズは、業務アプリ開発に最適なCordova/PhoneGapベースのアプリ開発。</dd>
@@ -28,7 +28,7 @@ layout: src/templates/layouts/index.hbs
             <div class="btns"><a class="btn btn-blue" href="#">詳細はこちら</a></div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1">Local</span>
+            <span class="type bnr-1"><img src="/img/index/tag_local.png" alt="Local"/></span>
             <dl>
                 <dt>Monaca Localkit</dt>
                 <dd>Monacaクラウドと同様の手軽さで、Monacaの開発環境をローカル上に構築します。</dd>
@@ -36,7 +36,7 @@ layout: src/templates/layouts/index.hbs
             <div class="btns"><a class="btn btn-blue" href="#">詳細はこちら</a></div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1">Debugging</span>
+            <span class="type bnr-1"><img src="/img/index/tag_debugging.png" alt="Debugging"/></span>
             <dl>
                 <dt>Monacaデバッガー</dt>
                 <dd>MonacaクラウドIDEは、HTML5ハイブリッドアプリ開発に特化したブラウザベースのフルス。</dd>
@@ -44,7 +44,7 @@ layout: src/templates/layouts/index.hbs
             <div class="btns"><a class="btn btn-blue" href="#">詳細はこちら</a></div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1">UI Framework</span>
+            <span class="type bnr-1"><img src="/img/index/tag_ui.png" alt="UI Framework"/></span>
             <dl>
                 <dt>Onsen UI</dt>
                 <dd>MonacaクラウドIDEは、HTML5ハイブリッドアプリ開発に特化したブラウザベースのフルス。</dd>
@@ -52,7 +52,7 @@ layout: src/templates/layouts/index.hbs
             <div class="btns"><a class="btn btn-blue" href="#">詳細はこちら</a></div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1">Backend</span>
+            <span class="type bnr-1"><img src="/img/index/tag_backend.png" alt="Backend" /></span>
             <dl>
                 <dt>KidoZen<span class="small">（エンタープライズmBaaS）</span></dt>
                 <dd>エンタープライズ用途に特化したmBaaS。既存システムとの連携用コネクターやアプリ配布。</dd>
@@ -62,10 +62,10 @@ layout: src/templates/layouts/index.hbs
     </ul>
 </div>
 
-<div class="programs box-full">
+<div class="container programs box-full">
     <ul>
         <li class="box-1">
-            <span class="type bnr-1">Academic</span>
+            <span class="type bnr-1"><img src="/img/index/tag_academic.png" alt="Academic"/></span>
             <dl>
                 <dt>Monacaアカデミックプラン</dt>
                 <dd>教育や研究にMonacaをご利用いただく教育機関を対象にした専用プランを提供しています。</dd>
@@ -73,7 +73,7 @@ layout: src/templates/layouts/index.hbs
             <p class="detail"><a href="#">詳細はこちら</a></p>
         </li>
         <li class="box-1">
-            <span class="type bnr-1">Support</span>
+            <span class="type bnr-1"><img src="/img/index/tag_support.png" alt="Support"/></span>
             <dl>
                 <dt>HTML5/Cordova開発支援</dt>
                 <dd>経験豊富な開発・サポートチームが、HTML5/Cordovaアプリ開発の支援を致します。アプリの受託開発から、ヘルプデスク。</dd>
@@ -83,7 +83,7 @@ layout: src/templates/layouts/index.hbs
     </ul>
 </div>
 
-<div class="features box-full">
+<div class="container features box-full">
     <h2>Monacaの5つの特徴</h2>
     
     <ol>
@@ -116,46 +116,45 @@ layout: src/templates/layouts/index.hbs
     </ol>
 </div>
 
-<div class="box-examples">
+<div class="container box-examples">
     <h2>すでに<strong>2,000</strong>以上のアプリがApp StoreやGoogle Playを通じて公開されています</h2>
-
-    <div><img src="/img/index/examples_img.png"></div>
+    <img src="/img/index/examples_img.png">
     <p><a href="#" class="btn btn-darkgray">事例を見る</a></p>
 </div>
 
-<div class="box-uservoices">
+<div class="container box-uservoices">
     <h2>Monacaを使っているユーザーの声</h2>
 
-    <div class="user-voice">
-        <div class="user-voice-balloon">
+    <div class="uservoice">
+        <div class="uservoice-balloon" tile="2">
             <q>使う言語がHTML5とJavaScriptなのでプログラマーがいなくてもアプリを作ることができて、
                 とても助かります。また、作ったアプリをすぐにデバッガーで確認できるのも嬉しいです。</q>
         </div>
 
-        <div class="user-voice-user">
-            <div class="user-voice-organization">株式会社ファンシーリンクス</div>
-            <div class="user-voice-name">アプリ開発担当者様</div>
+        <div class="uservoice-user">
+            <div class="uservoice-organization">株式会社ファンシーリンクス</div>
+            <div class="uservoice-name">アプリ開発担当者様</div>
         </div>
     </div>
 
-    <div class="user-voice">
-        <div class="user-voice-balloon">
+    <div class="uservoice">
+        <div class="uservoice-balloon" tile="2">
             <q>ノンプログラマでも簡単なものなら基本のHTMLやJavaScriptの知識があればアプリを作成できるのは画期的。
                 非常に希望を持てます。iOSアプリも作成だけならWindows環境でできてしまうのは感動です。</q>
         </div>
 
-        <div class="user-voice-user">
-            <div class="user-voice-organization">株式会社ワンディッシュ</div>
-            <div class="user-voice-name">代表 村田大様</div>
+        <div class="uservoice-user">
+            <div class="uservoice-organization">株式会社ワンディッシュ</div>
+            <div class="uservoice-name">代表 村田大様</div>
         </div>
     </div>
 </div>
 
-<div class="box-partners">
+<div class="container box-partners">
     <img src="/img/index/partners.png">
 </div>
 
-<div class="box-awards">
+<div class="container box-awards">
     <ul class="clearfix">
         <li><img src="/img/index/award_1.png" alt="Microsoft Innovation Award 2013 優秀賞"></li>
         <li><img src="/img/index/award_4.png" alt="Red Herring Asia: Top 100 Winner"></li>
@@ -164,6 +163,6 @@ layout: src/templates/layouts/index.hbs
     </ul>
 </div>
 
-<div class="box-try">
+<div class="container box-try">
     <a href="#" class="btn btn-blue">今すぐ試す<span>(無料)</span></a>
 </div>

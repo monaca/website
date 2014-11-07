@@ -43,6 +43,12 @@ body.home {
         font-size: 0.93rem;
       }
     }
+    .bnr-1 {
+      padding: 0;
+      img {
+        vertical-align: bottom;
+      }
+    }
   }
 
   .products {
@@ -91,13 +97,30 @@ body.home {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         float: left;
+        margin-bottom: 0;
         padding: 0 90px;
         width: 50%;
+        @media screen and (max-width: $break) {
+          float: none;
+          width: 100%;
+          &:first-child {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+          }
+        }
         .bnr-1 {
           margin-bottom: 6px;
         }
+        .detail {
+          margin-bottom: 0;
+        }
         dl dd {
           height: 90px;
+          @media screen and (max-width: $break) {
+            height: auto;
+            margin-bottom: 40px;
+          }
         }
       }
     }
@@ -120,22 +143,15 @@ body.home {
     }
   }
 
-  .tryit {
+  .box-try {
     text-align: center;
     padding: 80px 0;
 
-    .btn-try {
-      @extend %flat-btn;
-      color: white;
+    .btn {
       font-size: 24px;
-      background-color: #468fff;
-      border: none;
       height: 67px;
       line-height: 67px;
       padding: 0 40px;
-      > span {
-        font-size: 20px;
-      }
       @media screen and (max-width: 320px) {
         font-size: 20px;
         padding: 0 30px;

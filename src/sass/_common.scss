@@ -108,124 +108,6 @@
   }
 }
 
-.box-uservoices {
-  width: 920px;
-  margin: 0 auto;
-  padding: 66px 0;
-  font-size: 0px;
-  text-align: center;
-  @media screen and (max-width: 920px) {
-    width: 100%;
-  }
-
-  > h2 {
-    text-align: center;
-    margin-bottom: 36px;
-  }
-
-  @media screen and (min-width: 921px) {
-    > h2 + .user-voice {
-      margin-right: 40px;
-    }
-  }
-  > .user-voice {
-    display: inline-block;
-    font-size: 16px;
-    width: 440px;
-    text-align: left;
-    white-space: nowrap;
-
-    @media screen and (max-width: 920px) {
-      width: 80%;
-    }
-    @media screen and (max-width: $break) {
-      width: 90%;
-      .user-voice-balloon {
-        padding: 24px !important;
-      }
-      q:before,
-      q:after {
-        background-image: none !important;
-      }
-    }
-
-    > .user-voice-balloon {
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      min-height: 220px;
-      position: relative;
-      padding: 34px 50px;
-      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.04);
-      &:after {
-        position: absolute;
-        border-bottom: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-        transform: rotate(45deg);
-        width: 20px;
-        height: 20px;
-        bottom: -12px;
-        left: 60px;
-        background-color: white;
-        content: '';
-      }
-      @media screen and (max-width: 920px) {
-        &:after {
-          left: 22px;
-        }
-      }
-
-      q {
-        font-weight: 600;
-        line-height: 1.8;
-        white-space: normal;
-        color: #333;
-        position: relative;
-
-        &:before {
-          content: '';
-          position: absolute;
-          width: 32px;
-          height: 26px;
-          left: -36px;
-          top: -14px;
-          background: url(../img/common/icn_quote_left.png) no-repeat left top;
-        }
-
-        &:after {
-          content: '';
-          position: absolute;
-          width: 32px;
-          height: 26px;
-          background: url(../img/common/icn_quote_right.png) no-repeat left top;
-        }
-
-      }
-    }
-
-    > .user-voice-user {
-      background: url(../img/index/user_icon.png) no-repeat 38px 25px;
-      height: 100px;
-      padding: 34px 0 0 120px;
-      @media screen and (max-width: $break) {
-        background-position: 0 25px;
-        padding-left: 80px;
-      }
-      > .user-voice-name {
-        font-weight: 600;
-        color: #333;
-        font-size: 18px;
-      }
-
-      > .user-voice-organization {
-        font-weight: 300;
-        font-size: 16px;
-      }
-    }
-
-  }
-}
-
 .box-1 {
   background-color: #fafafa;
   border: 1px solid #d4d5d7;
@@ -244,31 +126,119 @@
   }
 }
 
-.box-examples {
-  text-align: center;
-  border-top: 1px solid #cdd1d6;
-  border-bottom: 1px solid #cdd1d6;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 22px 0;
-  text-align: center;
-  background: url(../img/index/examples_bg.jpg) no-repeat left top;
-  background-size: cover;
-  min-height: 429px;
-  @media screen and (max-width: $break) {
-    padding: 22px 3%;
+.box-uservoices {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  width: 920px;
+  @include clearfix;
+  @media screen and (max-width: 920px) {
+    width: 100%;
   }
   > h2 {
-    font-size: 24px;
-    letter-spacing: 0px;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  > .uservoice {
+    float: left;
+    font-size: 16px;
+    margin-right: percentage(40px/920px);
+    width: percentage(440px/920px);
+    text-align: left;
+    @media screen and (max-width: $break) {
+      float: none;
+      margin-right: 0;
+      margin-bottom: 40px;
+      width: 100%;
+    }
+    + .uservoice {
+      margin-right: 0;
+    }
+    > .uservoice-balloon {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      position: relative;
+      padding: 34px 50px;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.04);
+      &:after {
+        position: absolute;
+        bottom: -12px;
+        left: 60px;
+        background-color: #ffffff;
+        border-bottom: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        transform: rotate(45deg);
+        width: 20px;
+        height: 20px;
+        content: '';
+      }
+      q {
+        color: #333;
+        font-weight: 600;
+        line-height: 1.8;
+        position: relative;
+        white-space: normal;
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          width: 32px;
+          height: 26px;
+        }
+        &:before {
+          background: url(../img/common/icn_quote_left.png) no-repeat left top;
+          left: -36px;
+          top: -14px;
+        }
+        &:after {
+          background: url(../img/common/icn_quote_right.png) no-repeat left top;
+        }
+
+      }
+    }
+    > .uservoice-user {
+      background: url(../img/index/user_icon.png) no-repeat 38px 25px;
+      height: 100px;
+      padding: 34px 0 0 120px;
+      @media screen and (max-width: $break) {
+        background-position: 0 25px;
+        padding-left: 80px;
+      }
+      > .uservoice-name {
+        font-weight: 600;
+        font-size: 18px;
+      }
+      > .uservoice-organization {
+        font-weight: 300;
+        font-size: 16px;
+      }
+    }
+
+  }
+}
+
+.box-examples {
+  background: url(../img/index/examples_bg.jpg) no-repeat left top;
+  background-size: cover;
+  border-top: 1px solid #cdd1d6;
+  border-bottom: 1px solid #cdd1d6;
+  height: 428px;
+  padding: 30px 5%;
+  text-align: center;
+  > h2 {
     font-family: 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+    font-size: 24px;
     font-weight: 300;
     margin-bottom: 20px;
     > strong {
+      font-size: 26px;
       font-weight: 600;
       letter-spacing: 1px;
-      font-size: 26px;
     }
+  }
+  p {
+    padding-top: 20px;
   }
 }
 
