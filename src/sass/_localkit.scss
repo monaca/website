@@ -16,23 +16,12 @@ body.localkit {
       img {
         vertical-align: 4px;
       }
-      span {
-        color: #d70101;
-      }
     }
     p {
       font-size: 20px;
       text-align: left;
       width: 420px;
       word-break: break-all;
-    }
-    .btns {
-      line-height: 64px;
-      .btn {
-        width: 175px;
-        height: 54px;
-        line-height: 54px;
-      }
     }
   }
 
@@ -53,7 +42,8 @@ body.localkit {
       }
       &.debug {
         background: url(../img/localkit/img_3.png) no-repeat center 330px;
-        min-height: 1000px;
+        background-size: 110%;
+        padding-bottom: 70%;
       }
     }
     .box-try {
