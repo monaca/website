@@ -1,0 +1,78 @@
+body.debugger {
+
+  .keyvisual {
+    background: url(../img/debugger/keyvisual.jpg) no-repeat left bottom, url(../img/debugger/keyvisual_bg.png) repeat-x left bottom;
+    color: #000;
+    height: 540px;
+    padding-bottom: 0;
+    position: relative;
+    h1 {
+      font-size: 54px;
+      font-weight: 400;
+      line-height: 65px;
+      margin-bottom: 10px;
+      padding-top: 140px;
+      text-align: left;
+      img {
+        vertical-align: 4px;
+      }
+      span {
+        color: #d70101;
+      }
+    }
+    p {
+      font-size: 20px;
+      text-align: left;
+      width: 420px;
+      word-break: break-all;
+    }
+    .btns {
+      line-height: 64px;
+      .btn {
+        width: 175px;
+        height: 54px;
+        line-height: 54px;
+      }
+    }
+  }
+
+  article.main {
+    section {
+      border-bottom: 1px solid #ccc;
+      padding: 90px 0 80px;
+      &:first-child {
+        padding-top: 140px;
+      }
+      h1 {
+        text-align: center;
+      }
+      p {
+        margin-bottom: 30px;
+        text-align: center;
+        width: 580px;
+      }
+      &.integration {
+        background: url(../img/debugger/img_3.png) no-repeat center 330px;
+        min-height: 670px;
+      }
+      &.usb {
+        background: url(../img/debugger/img_4.png) no-repeat center 330px;
+        min-height: 670px;
+      }
+      &.internet {
+        background: url(../img/debugger/img_6.png) no-repeat center 330px;
+        min-height: 670px;
+      }    }
+    .box-try {
+      padding: 140px 0;
+      .btn {
+        font-size: 24px;
+        height: 64px;
+        line-height: 64px;
+        padding: 0 40px;
+        margin: 0 10px;
+      }
+    }
+  }
+
+}
