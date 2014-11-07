@@ -5,11 +5,10 @@ body.home {
     height: 540px;
     position: relative;
     h1 {
-      position: absolute;
-      top: 160px;
-      left: 0;
+      padding-top: 160px;
       font-size: 54px;
       font-weight: 400;
+      margin-bottom: 30px;
       text-align: left;
       .small {
         color: #ffffff;
@@ -17,9 +16,6 @@ body.home {
       }
     }
     p {
-      position: absolute;
-      top: 295px;
-      left: 0;
       font-size: 20px;
       text-align: left;
       width: 585px;
@@ -54,8 +50,9 @@ body.home {
     box-sizing: content-box;
     background-color: #f6f7f9;
     padding: 50px 0 10px;
-    @media screen and (max-width: 970px) {
-      li {
+    li {
+      padding-bottom: 70px;
+      @media screen and (max-width: 1070px) and (min-width: $break-lg) {
         padding-bottom: 120px;
       }
     }
@@ -74,6 +71,11 @@ body.home {
       width: 100%;
       .btn {
         margin: 0 6px 10px;
+        @media screen and (max-width: 1070px) and (min-width: $break-lg) {
+          display: block;
+          margin: 0 auto 8px;
+          width: 68%;
+        }
       }
     }
   }

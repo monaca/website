@@ -123,9 +123,12 @@ $break-lg: 970px;
 $break-xs: 640px;
 
 .container {
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
   width: $width;
   @media screen and (max-width: $width) {
+    padding-left: 5%;
+    padding-right: 5%;
     width: 100%;
   }
 }

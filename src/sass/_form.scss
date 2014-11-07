@@ -91,6 +91,15 @@
   }
 }
 
+.btn-darkgray {
+  @extend %flat-btn;
+  background-color: #4d5868;
+  color: #ffffff;
+  &:hover {
+    color: lighten(#4d5868, 0.1);
+  }
+}
+
 .btn-orange {
   @extend %btn;
   background-color: #ff8b24;

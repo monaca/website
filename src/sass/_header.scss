@@ -14,8 +14,11 @@ header.navbar {
     background-color: transparent;
     border: none;
   }
-  .navbar-brand img {
-    width: 110px;
+  .navbar-brand {
+    padding-top: 13px;
+    img {
+      width: 110px;
+    }
   }
   .navbar-collapse {
     float: right;
@@ -25,8 +28,30 @@ header.navbar {
   }
   .navbar-nav > li > a {
     color: #ffffff;
+    padding-left: 8px;
+    padding-right: 8px;
     &:hover {
       opacity: 0.7;
+    }
+    &.login {
+      color: #7cdaff;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .dropdown-menu {
+    @extend .dropdown-menu-dark;
+    padding: 0 0 5px;
+    left: 0;
+    right: auto;
+    @media screen and (max-width: $break) {
+      display: block;
+      position: static;
+      top: auto;
+      left: auto;
+      float: none;
     }
   }
 }
