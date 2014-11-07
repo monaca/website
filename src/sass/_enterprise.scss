@@ -1,0 +1,66 @@
+body.enterprise {
+
+  .keyvisual {
+    background: url(../img/enterprise/keyvisual.jpg) no-repeat left bottom;
+    color: #ffffff;
+    height: 540px;
+    padding-bottom: 0;
+    position: relative;
+    h1 {
+      font-size: 54px;
+      font-weight: 400;
+      line-height: 65px;
+      margin-bottom: 10px;
+      padding-top: 140px;
+      text-align: left;
+      img {
+        vertical-align: 4px;
+      }
+      span {
+        color: #d70101;
+      }
+    }
+    p {
+      font-size: 20px;
+      text-align: left;
+      width: 420px;
+      word-break: break-all;
+    }
+    .btns {
+      line-height: 64px;
+      .btn {
+        width: 175px;
+        height: 54px;
+        line-height: 54px;
+      }
+    }
+  }
+
+  article.main {
+    section {
+      border-bottom: 1px solid #ccc;
+      padding: 90px 0 80px;
+      &:first-child {
+        padding-top: 140px;
+      }
+      h1 {
+        text-align: center;
+      }
+      p {
+        margin: 0 auto 30px;
+        text-align: center;
+        width: 580px;
+      }
+    }
+    .box-try {
+      padding: 140px 0;
+      .btn {
+        font-size: 24px;
+        height: 64px;
+        line-height: 64px;
+        padding: 0 40px;
+        margin: 0 10px;
+      }
+    }
+  }
+}
