@@ -1,7 +1,7 @@
 body.kidozen {
 
   .keyvisual {
-    background: url(../img/kidozen/keyvisual.png) no-repeat right bottom, url(../img/kidozen/keyvisual_bg.png) repeat-x left bottom;
+    background: url(../img/kidozen/keyvisual.png) no-repeat left bottom, url(../img/kidozen/keyvisual_bg.png) repeat-x left bottom;
     background-size: contain auto;
     color: #000;
     height: 660px;
@@ -46,7 +46,13 @@ body.kidozen {
       }
       p {
         text-align: center;
-        width: 790px;
+        width: 640px;
+      }
+    }
+    .lucy-in-the-sky {
+      background: url(../img/kidozen/img_3.jpg) no-repeat center top;
+      section.baas {
+        min-height: 840px;
       }
     }
     .box-try {
@@ -58,13 +64,6 @@ body.kidozen {
         padding: 0 40px;
         margin: 0 10px;
       }
-    }
-  }
-
-  .lucy-in-the-sky {
-    background: url(../img/kidozen/img_3.jpg) no-repeat center top;
-    section.baas {
-      min-height: 840px;
     }
   }
 }
