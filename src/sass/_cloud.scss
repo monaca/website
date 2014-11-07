@@ -41,21 +41,12 @@ body.cloud {
 
   article.main {
     section {
-      h1 {
-        text-align: center;
-      }
-      p {
-        margin-bottom: 30px;
-        text-align: center;
-        width: 580px;
-      }
-
       &.summary {
         background: url(../img/cloud/img_1.jpg) no-repeat right 60px;
         background-size: 100%;
         padding-bottom: 42%;
         @media screen and (max-width: $break) {
-          background-position: right 120px;
+          background-position: right bottom;
         }
         h1 {
           line-height: 1.4;

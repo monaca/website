@@ -16,9 +16,6 @@ body.enterprise {
       img {
         vertical-align: 4px;
       }
-      span {
-        color: #d70101;
-      }
     }
     p {
       font-size: 20px;
@@ -26,36 +23,19 @@ body.enterprise {
       width: 420px;
       word-break: break-all;
     }
-    .btns {
-      line-height: 64px;
-      .btn {
-        width: 175px;
-        height: 54px;
-        line-height: 54px;
-      }
-    }
   }
 
   article.main {
     section {
-      border-bottom: 1px solid #ccc;
-      padding: 90px 0 80px;
-      &:first-child {
-        padding-top: 140px;
-      }
-      h1 {
-        text-align: center;
-      }
-      p {
-        margin: 0 auto 30px;
-        text-align: center;
-        width: 580px;
+      * + h2 {
+        margin-top: 100px;
       }
     }
     .box-try {
       padding: 140px 0;
       .btn {
         font-size: 24px;
+        font-weight: 400;
         height: 64px;
         line-height: 64px;
         padding: 0 40px;

@@ -172,14 +172,21 @@ article.main section {
   &:first-child {
     padding-top: 140px;
   }
-  p {
-    margin-left: auto;
-    margin-right: auto;
-  }
   @media screen and (max-width: $width) {
     padding-left: 5%;
     padding-right: 5%;
     width: 100%;
+  }
+  h1 {
+    text-align: center;
+  }
+  p {
+    margin: 0 auto 30px;
+    text-align: center;
+    width: 580px;
+    @media screen and (max-width: 580px) {
+      width: 100%;
+    }
   }
 }
 

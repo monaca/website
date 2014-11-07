@@ -36,17 +36,9 @@ body.debugger {
 
   article.main {
     section {
-      h1 {
-        text-align: center;
-      }
       h2 {
         color: #666;
         font-size: 30px;
-      }
-      p {
-        margin-bottom: 30px;
-        text-align: center;
-        width: 580px;
       }
       &.integration {
         background: url(../img/debugger/img_3.png) no-repeat center 330px;
