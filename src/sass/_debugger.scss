@@ -16,9 +16,6 @@ body.debugger {
       img {
         vertical-align: 4px;
       }
-      span {
-        color: #d70101;
-      }
     }
     p {
       font-size: 20px;
@@ -28,23 +25,23 @@ body.debugger {
     }
     .btns {
       line-height: 64px;
-      .btn {
-        width: 175px;
-        height: 54px;
-        line-height: 54px;
+      padding-top: 40px;
+      width: 500px;
+      img {
+        margin-right: 10px;
+        width: 135px;
       }
     }
   }
 
   article.main {
     section {
-      border-bottom: 1px solid #ccc;
-      padding: 90px 0 80px;
-      &:first-child {
-        padding-top: 140px;
-      }
       h1 {
         text-align: center;
+      }
+      h2 {
+        color: #666;
+        font-size: 30px;
       }
       p {
         margin-bottom: 30px;
@@ -53,24 +50,32 @@ body.debugger {
       }
       &.integration {
         background: url(../img/debugger/img_3.png) no-repeat center 330px;
-        min-height: 670px;
+        background-size: 112%;
+        padding-bottom: 70%;
       }
       &.usb {
         background: url(../img/debugger/img_4.png) no-repeat center 330px;
-        min-height: 670px;
+        background-size: 112%;
+        padding-bottom: 70%;
       }
-      &.internet {
-        background: url(../img/debugger/img_6.png) no-repeat center 330px;
-        min-height: 670px;
-      }    }
+      &.collaboration {
+        padding: 90px 0;
+        .internet {
+          background: url(../img/debugger/img_7.png) no-repeat center 240px;
+          background-size: 112%;
+          border-bottom: none;
+          padding: 60px 5% 92%;
+        }
+        .communication {
+          padding-top: 0;
+        }
+      }
+    }
     .box-try {
-      padding: 140px 0;
-      .btn {
-        font-size: 24px;
-        height: 64px;
-        line-height: 64px;
-        padding: 0 40px;
+      padding: 40px 0;
+      a img {
         margin: 0 10px;
+        width: 135px;
       }
     }
   }
