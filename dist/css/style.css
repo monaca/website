@@ -449,7 +449,7 @@ article.main section {
   border-radius: 3px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: white;
+  color: #ffffff;
   display: inline-block;
   font-size: 18px;
   font-weight: 500;
@@ -466,7 +466,7 @@ article.main section {
   -webkit-font-smoothing: antialiased; }
   .btn-blue:hover, .btn-white:hover, .btn-darkgray:hover {
     text-shadow: none;
-    color: white;
+    color: #ffffff;
     cursor: pointer;
     opacity: 0.85;
     text-decoration: none; }
@@ -556,8 +556,8 @@ header.navbar {
         float: none; } }
   header.navbar .navbar-nav > li > a {
     color: #ffffff;
-    padding-left: 8px;
-    padding-right: 8px; }
+    padding-left: 13px;
+    padding-right: 13px; }
     header.navbar .navbar-nav > li > a:hover {
       opacity: 0.7; }
     header.navbar .navbar-nav > li > a.login {
@@ -569,7 +569,7 @@ header.navbar {
       header.navbar .navbar-nav > li > a {
         text-align: left; } }
   header.navbar .dropdown-menu {
-    padding: 0 0 5px;
+    padding: 15px 0 18px;
     left: 0;
     right: auto; }
     @media screen and (max-width: 767px) {
@@ -1054,7 +1054,7 @@ body.prices article.main .plan {
         letter-spacing: -0.05em; }
     body.prices article.main .planlist > li.recommend .bottombox,
     body.prices article.main .plan.recommend .bottombox {
-      background: url(/img/plan/bg_ribbon_shadow.png) no-repeat center bottom white;
+      background: url(/img/plan/bg_ribbon_shadow.png) no-repeat center bottom #fff;
       margin-bottom: -5px; }
   body.prices article.main .planlist > li.enterprise,
   body.prices article.main .plan.enterprise {
