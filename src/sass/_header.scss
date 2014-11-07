@@ -40,9 +40,13 @@ header.navbar {
         text-decoration: none;
       }
     }
+    @media screen and (max-width: $break) {
+      text-align: left;
+    }
   }
   .dropdown-menu {
     @extend .dropdown-menu-dark;
+    background-color: transparent;
     padding: 0 0 5px;
     left: 0;
     right: auto;
@@ -52,6 +56,9 @@ header.navbar {
       top: auto;
       left: auto;
       float: none;
+      li a {
+        color: #0088cc;
+      }
     }
   }
 }

@@ -61,6 +61,9 @@ body.home {
       @media screen and (max-width: 1070px) and (min-width: $break-lg) {
         padding-bottom: 120px;
       }
+      @media screen and (max-width: 720px) and (min-width: $break-xs) {
+        padding-bottom: 120px;
+      }
     }
     dl dd {
       height: 75px;
@@ -78,6 +81,11 @@ body.home {
       .btn {
         margin: 0 6px 10px;
         @media screen and (max-width: 1070px) and (min-width: $break-lg) {
+          display: block;
+          margin: 0 auto 8px;
+          width: 68%;
+        }
+        @media screen and (max-width: 720px) and (min-width: $break-xs) {
           display: block;
           margin: 0 auto 8px;
           width: 68%;
