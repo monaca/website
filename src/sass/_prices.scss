@@ -1,52 +1,29 @@
 body.prices article.main {
-
-  section {
-    border-bottom: 1px solid #ccc;
-    padding: 90px 0 80px;
-    &:first-child {
-      padding-top: 140px;
-    }
-    h1 {
-      text-align: center;
-    }
-    p {
-      margin-bottom: 30px;
-      text-align: center;
-      width: 580px;
-    }
-    &.debug {
-      background: url(../img/localkit/img_3.png) no-repeat center 330px;
-      min-height: 1000px;
-    }
-  }
-  .box-try {
-    padding: 140px 0;
-    .btn {
-      font-size: 24px;
-      height: 64px;
-      line-height: 64px;
-      padding: 0 40px;
-      margin: 0 10px;
-    }
+  h1 {
+    font-size: 40px;
+    padding-top: 120px;
+    text-align: left;
   }
 
   .planlist {
     @include clearfix;
     margin: 0 auto;
     width: 928px;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
   }
-  .planlist > li {
-    background-color: #f1f1f1;
+  .planlist > li,
+  .plan {
+    background-color: #ffffff;
     border: 1px solid #dfdfdf;
-    border-bottom: none;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     float: left;
-    margin: 28px 2px 40px;
+    margin: 28px 2px 5px;
     padding: 37px 20px 0;
     position: relative;
     width: 228px;
-
     &:before {
       background-color: #0062a9;
       content: ' ';
@@ -57,29 +34,38 @@ body.prices article.main {
       top: 0;
       left: -1px;
     }
+    @media screen and (max-width: $break) {
+      border-radius: 4px 4px 0 0;
+      float: none;
+      margin: 0 auto;
+    }
 
     .summary {
-      height: 480px;
-      border-bottom: 1px solid #ddd;
+      height: 180px;
       h2 {
         border-bottom: 1px solid #999;
         color: black;
         font-size: 30px;
-        font-size: 2.15rem;
+        font-weight: 700;
         margin-bottom: 10px;
         padding-bottom: 3px;
         overflow: hidden;
         white-space: nowrap;
+        .yeah {
+          color: #618fe6;
+          display: block;
+          font-size: 11px;
+        }
       }
       .price {
         color: #618fe6;
         font-size: 16px;
         margin-bottom: 0;
         white-space: nowrap;
+        width: auto;
         em {
           font-size: 24px;
-          font-size: 3.85rem;
-          font-weight: 700;
+          font-weight: 400;
           font-style: normal;
           line-height: 100%;
         }
@@ -162,6 +148,52 @@ body.prices article.main {
         height: auto;
       }
     }
+  }
+
+  .plan {
+    border-radius: 4px 4px 0 0;
+    float: none;
+    margin: 0 auto;
+    width: 490px;
+    padding-bottom: 40px;
+    @media screen and (max-width: 470px) {
+      width: 100%;
+    }
+    &:before {
+      border-radius: 4px 4px 0 0;
+      width: 490px;
+    }
+    dl {
+      margin-bottom: 10px;
+      dt {
+        font-weight: 700;
+        display: inline-block;
+      }
+      dd {
+        color: #618fe6;
+        display: inline-block;
+        font-size: 16px;
+        margin-bottom: 0;
+        white-space: nowrap;
+        width: auto;
+        em {
+          font-size: 24px;
+          font-weight: 400;
+          font-style: normal;
+          line-height: 100%;
+        }
+      }
+    }
+    p {
+      color: #333;
+      width: auto;
+      font-weight: 700;
+    }
+  }
+
+  .annotation {
+    text-align: left;
+    width: auto;
   }
 
   .activation-code {
