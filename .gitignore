@@ -19,3 +19,5 @@ node_modules
 .sass-cache
 
 aws_keys.json
+
+.DS_Store
