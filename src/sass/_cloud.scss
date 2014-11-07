@@ -1,0 +1,170 @@
+body.cloud {
+
+  .keyvisual {
+    background: url(../img/cloud/keyvisual.jpg) no-repeat left bottom, url(../img/cloud/keyvisual_bg.png) repeat-x left bottom;
+    color: #000;
+    height: 650px;
+    padding-bottom: 0;
+    position: relative;
+    h1 {
+      font-size: 54px;
+      font-weight: 400;
+      line-height: 72px;
+      margin-bottom: 10px;
+      padding-top: 140px;
+      text-align: left;
+      img.num {
+        vertical-align: -19px;
+      }
+      span {
+        display: block;
+        font-size: 30px;
+        line-height: 45px;
+        margin-top: 22px;
+      }
+    }
+    p {
+      font-size: 20px;
+      text-align: left;
+      width: 420px;
+      word-break: break-all;
+    }
+    .btns {
+      line-height: 64px;
+      .btn {
+        width: 175px;
+        height: 54px;
+        line-height: 54px;
+      }
+    }
+  }
+
+  article.main {
+    section {
+      border-bottom: 1px solid #ccc;
+      padding: 90px 0 80px;
+      &:first-child {
+        padding-top: 140px;
+      }
+      h1 {
+        text-align: center;
+      }
+      p {
+        margin-bottom: 30px;
+        text-align: center;
+        width: 580px;
+      }
+
+      &.summary {
+        background: url(../img/cloud/img_1.jpg) no-repeat right 60px;
+        height: 860px;
+        h1 {
+          line-height: 1.4;
+          text-align: left;
+        }
+        p {
+          width: 370px;
+          text-align: left;
+        }
+      }
+      &.workflow > ul {
+        width: 100%;
+        background: url(../img/cloud/workflow.png) no-repeat center top;
+        padding-top: 141px;
+        font-size: 0px;
+        text-align: center;
+        margin-bottom: 60px;
+
+        > li {
+          text-align: center;
+          font-weight: 600;
+          color: #333;
+          font-size: 16px;
+          height: 36px;
+          width: 172px;
+          margin-right: 48px;
+          display: inline-block;
+          position: relative;
+          white-space: nowrap;
+          overflow: visible;
+
+          &:last-child {
+            margin-right: 0px;
+          }
+
+          &:after {
+            content: '';
+            height: 2px;
+            width: 170px;
+            background-color: white;
+            border: 1px solid black;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+          }
+        }
+
+        > li.workflow-action-coding:after {
+          background-color: #7daeff;
+          border-color: #0065ff;
+        }
+
+        > li.workflow-action-debug:after {
+          background-color: #917dff;
+          border-color: #2300ff;
+        }
+
+        > li.workflow-action-build:after {
+          background-color: #c99dde;
+          border-color: #9340bf;
+        }
+
+        > li.workflow-action-store:after {
+          background-color: #fabe81;
+          border-color: #f67b08;
+        }
+      }
+      @media screen and (max-width: $break) {
+        #feature-workflow {
+          box-sizing: border-box;
+          padding: 30px 3%;
+          width: 100%;
+          > ul {
+            background: none;
+            padding-top: 0;
+            > li {
+              background: none no-repeat center top;
+              display: block;
+              margin: 0 auto 34px !important;
+              padding-top: 141px;
+              &.workflow-action-coding {
+                background-image: url(../img/cloud/workflow_1.png);
+              }
+              &.workflow-action-debug {
+                background-image: url(../img/cloud/workflow_2.png);
+              }
+              &.workflow-action-build {
+                background-image: url(../img/cloud/workflow_3.png);
+              }
+              &.workflow-action-store {
+                background-image: url(../img/cloud/workflow_4.png);
+              }
+            }
+          }
+        }
+      }
+    }
+    .box-try {
+      padding: 140px 0;
+      .btn {
+        font-size: 24px;
+        height: 64px;
+        line-height: 64px;
+        padding: 0 40px;
+        margin: 0 10px;
+      }
+    }
+  }
+
+}

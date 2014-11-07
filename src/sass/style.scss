@@ -151,7 +151,21 @@ body {
 
 img, iframe, object { 
 	max-width : 100%; 
-} 
+}
+
+section {
+  h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  p {
+    color: #666;
+  }
+}
 
 @import "common";
 @import "form";
@@ -164,3 +178,4 @@ img, iframe, object {
 @import "prices";
 @import "debugger";
 @import "enterprise";
+@import "cloud";
