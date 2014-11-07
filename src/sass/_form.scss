@@ -77,7 +77,16 @@
   background-color: #468fff;
   border: 1px solid #468fff;
   color: #fff;
-  font-weight: 600;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+.btn-green {
+  @extend %flat-btn;
+  background-color: #8bcc37;
+  border: 1px solid #8bcc37;
+  color: #fff;
+  font-weight: 400;
   text-shadow: none;
 }
 
@@ -95,9 +104,6 @@
   @extend %flat-btn;
   background-color: #4d5868;
   color: #ffffff;
-  &:hover {
-    color: lighten(#4d5868, 0.1);
-  }
 }
 
 .btn-orange {
@@ -141,5 +147,15 @@
   }
   &:active {
     opacity: 1;
+  }
+}
+
+.btn-line-white {
+  @extend %flat-btn;
+	background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
   }
 }

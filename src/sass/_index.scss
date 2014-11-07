@@ -1,11 +1,15 @@
 body.home {
+  .keyvisual-container {
+	  background: url(../img/index/keyvisual_bg.png) repeat-x 0 0;
+		height: 540px;
+	}
   .keyvisual {
-    background: url(../img/keyvisual.jpg) no-repeat center center;
+    background: url(../img/index/keyvisual.jpg) no-repeat center center, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
     color: #ffffff;
     height: 540px;
     position: relative;
     h1 {
-      padding-top: 160px;
+      padding-top: 130px;
       font-size: 54px;
       font-weight: 400;
       margin-bottom: 30px;
@@ -19,9 +23,27 @@ body.home {
       font-size: 20px;
       text-align: left;
       width: 585px;
+			margin-bottom: 0;
       word-break: break-all;
     }
+		.box-try {
+		  text-align: left;
+			padding: 60px 0 0;
+		  .btn {
+		    padding: 0 20px;
+			  min-width: 240px;
+		  	margin: 0 20px 20px 0;
+		  }
+	  }
   }
+	
+	.products-container {
+	  background-color: #f6f7f9;
+	}
+	
+	.programs-container {
+	  background-color: #eef0f5;
+	}
 
   .products,
   .programs {
@@ -37,6 +59,9 @@ body.home {
         }
         .small {
           font-size: 1.07rem;
+        }
+        &.sub {
+          font-size: 20px;
         }
       }
       dd {
@@ -76,7 +101,7 @@ body.home {
     .btns {
       position: absolute;
       left: 0;
-      bottom: 30px;
+      bottom: 17px;
       width: 100%;
       .btn {
         margin: 0 6px 10px;
@@ -118,7 +143,7 @@ body.home {
           }
         }
         .bnr-1 {
-          margin-bottom: 6px;
+          margin-bottom: 12px;
         }
         .detail {
           margin-bottom: 0;
