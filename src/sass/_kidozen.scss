@@ -1,10 +1,10 @@
 body.kidozen {
 
   .keyvisual {
-    background: url(../img/kidozen/keyvisual.png) no-repeat left bottom, url(../img/kidozen/keyvisual_bg.png) repeat-x left bottom;
+    background: url(../img/kidozen/keyvisual.png) no-repeat center bottom, url(../img/kidozen/keyvisual_bg.png) repeat-x left bottom;
     background-size: contain auto;
     color: #000;
-    height: 660px;
+    height: 590px;
     padding-bottom: 0;
     position: relative;
     h1 {
@@ -12,7 +12,7 @@ body.kidozen {
       font-weight: 400;
       line-height: 68px;
       margin-bottom: 10px;
-      padding-top: 100px;
+      padding-top: 110px;
       text-align: left;
       span {
         color: #d70101;
@@ -24,6 +24,15 @@ body.kidozen {
       width: 420px;
       word-break: break-all;
     }
+		div.box-try-mid.box-btn {
+		  text-align: left;
+			padding: 50px 0 0;
+		  .btn {
+		    padding: 0 20px;
+			  min-width: 180px;
+		  	margin: 0 15px 15px 0;
+		  }
+		}
     .btns {
       line-height: 64px;
       .btn {
@@ -62,6 +71,17 @@ body.kidozen {
         height: 64px;
         line-height: 64px;
         padding: 0 40px;
+        margin: 0 10px;
+				min-width: 210px;
+      }
+    }
+    .box-try-mid {
+      padding: 140px 0;
+      .btn {
+        font-size: 24px;
+        height: 56px;
+        line-height: 56px;
+        padding: 0 30px;
         margin: 0 10px;
       }
     }
