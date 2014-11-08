@@ -151,6 +151,23 @@ module.exports = function(grunt) {
             },
         },
 
+        invalidate_cloudfront: {
+            options: {
+               key: '<%= aws.key %>',
+               secret: '<%= aws.secret %>',
+               distribution: 'EV2KT3V34BFDP'
+            },
+            production: {
+                files: [{
+                    expand: true,
+                    cwd: 'dist',
+                    src: ['**'],
+                    filter: 'isFile',
+                    dest: ''
+                }]
+           }
+        },
+
         // Before generating any new files,
         // remove any previously-created files.
         clean: ['<%= config.dist %>/**/*.{html,xml}']
@@ -161,6 +178,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-aws-s3');
+    grunt.loadNpmTasks('grunt-invalidate-cloudfront');
 
     grunt.registerTask('server', [
         'build',
