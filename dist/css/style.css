@@ -865,7 +865,7 @@ body.kidozen article.main .box-try-mid {
     margin: 0 10px; }
 
 body.localkit .keyvisual {
-  background: url(../img/localkit/keyvisual.jpg) no-repeat left bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
+  background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
   color: #000;
   height: 540px;
   padding-bottom: 0;
@@ -899,7 +899,7 @@ body.localkit article.main section {
   body.localkit article.main section.debug {
     background: url(../img/localkit/img_3.png) no-repeat center 330px;
     background-size: 110%;
-    padding-bottom: 70%; }
+    padding-bottom: 50%; }
 body.localkit article.main .box-try {
   padding: 140px 0; }
   body.localkit article.main .box-try .btn {
@@ -907,7 +907,8 @@ body.localkit article.main .box-try {
     height: 64px;
     line-height: 64px;
     padding: 0 40px;
-    margin: 0 10px; }
+    margin: 0 10px;
+    min-width: 210px; }
 
 body.support .keyvisual {
   background: url(../img/support/keyvisual.jpg) no-repeat left bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
@@ -1308,7 +1309,7 @@ body.debugger article.main .box-try {
     width: 135px; }
 
 body.enterprise .keyvisual {
-  background: url(../img/enterprise/keyvisual.jpg) no-repeat left bottom;
+  background: url(../img/enterprise/keyvisual.jpg) no-repeat center bottom, #1e212e;
   color: #ffffff;
   height: 540px;
   padding-bottom: 0;
@@ -1318,7 +1319,7 @@ body.enterprise .keyvisual {
     font-weight: 400;
     line-height: 65px;
     margin-bottom: 10px;
-    padding-top: 140px;
+    padding-top: 110px;
     text-align: left; }
     body.enterprise .keyvisual h1 img {
       vertical-align: 4px; }
@@ -1327,6 +1328,13 @@ body.enterprise .keyvisual {
     text-align: left;
     width: 420px;
     word-break: break-all; }
+  body.enterprise .keyvisual div.box-try-left.box-btn {
+    text-align: left;
+    padding: 50px 0 0; }
+    body.enterprise .keyvisual div.box-try-left.box-btn .btn {
+      padding: 0 20px;
+      min-width: 200px;
+      margin: 0 15px 20px 0; }
 body.enterprise article.main section * + h2 {
   margin-top: 100px; }
 body.enterprise article.main .box-try {
@@ -1337,7 +1345,8 @@ body.enterprise article.main .box-try {
     height: 64px;
     line-height: 64px;
     padding: 0 40px;
-    margin: 0 10px; }
+    margin: 0 10px;
+    min-width: 240px; }
 
 body.cloud .keyvisual {
   background: url(../img/cloud/keyvisual.jpg) no-repeat left bottom, url(../img/cloud/keyvisual_bg.png) repeat-x left bottom;
@@ -1456,5 +1465,52 @@ body.cloud article.main .box-try {
     line-height: 64px;
     padding: 0 40px;
     margin: 0 10px; }
+
+body.dev-support .keyvisual {
+  background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
+  color: #000;
+  height: 540px;
+  padding-bottom: 0;
+  position: relative; }
+  body.dev-support .keyvisual h1 {
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 65px;
+    margin-bottom: 10px;
+    padding-top: 140px;
+    text-align: left;
+    text-shadow: 0 0 10px white; }
+    body.dev-support .keyvisual h1 img {
+      vertical-align: 4px; }
+  body.dev-support .keyvisual p {
+    font-size: 20px;
+    color: #666;
+    text-align: left;
+    width: 500px;
+    word-break: break-all; }
+body.dev-support article.main section {
+  border-bottom: 1px solid #ccc;
+  padding: 90px 0 80px; }
+  body.dev-support article.main section:first-child {
+    padding-top: 140px; }
+  body.dev-support article.main section h1 {
+    text-align: center; }
+  body.dev-support article.main section p {
+    margin-bottom: 30px;
+    text-align: center;
+    width: 580px; }
+  body.dev-support article.main section.debug {
+    background: url(../img/localkit/img_3.png) no-repeat center 330px;
+    background-size: 110%;
+    padding-bottom: 50%; }
+body.dev-support article.main .box-try {
+  padding: 140px 0; }
+  body.dev-support article.main .box-try .btn {
+    font-size: 24px;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 40px;
+    margin: 0 10px;
+    min-width: 210px; }
 
 /*# sourceMappingURL=style.css.map */

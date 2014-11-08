@@ -1,4 +1,4 @@
-body.localkit {
+body.dev-support {
 
   .keyvisual {
     background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
@@ -20,8 +20,9 @@ body.localkit {
     }
     p {
       font-size: 20px;
+			color: #666;
       text-align: left;
-      width: 420px;
+      width: 500px;
       word-break: break-all;
     }
   }
