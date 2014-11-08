@@ -198,4 +198,10 @@ module.exports = function(grunt) {
         'build'
     ]);
 
+    grunt.registerTask('deploy', [
+        'build',
+        'aws_s3',
+        'invalidate_cloudfront'
+    ]);
+
 };
