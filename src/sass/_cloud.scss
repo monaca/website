@@ -1,7 +1,7 @@
 body.cloud {
 
   .keyvisual {
-    background: url(../img/cloud/keyvisual.jpg) no-repeat left bottom, url(../img/cloud/keyvisual_bg.png) repeat-x left bottom;
+    background: url(../img/cloud/keyvisual.jpg) no-repeat center bottom, url(../img/cloud/keyvisual_bg.png) repeat-x left bottom;
     color: #000;
     height: 650px;
     padding-bottom: 0;
@@ -44,7 +44,7 @@ body.cloud {
       &.summary {
         background: url(../img/cloud/img_1.jpg) no-repeat right 60px;
         background-size: 100%;
-        padding-bottom: 42%;
+        padding-bottom: 38%;
         @media screen and (max-width: $break) {
           background-position: right bottom;
         }

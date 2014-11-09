@@ -154,7 +154,7 @@ article.main section {
     text-align: center; }
   article.main section p {
     margin: 0 auto 30px;
-    text-align: center;
+    text-align: left;
     width: 580px; }
     @media screen and (max-width: 580px) {
       article.main section p {
@@ -189,6 +189,47 @@ article.main section {
 
 .wide-container {
   width: 100%; }
+
+.box-txt {
+  text-align: left;
+  margin: 0 auto 50px;
+  line-height: 1.8; }
+
+.w500 {
+  width: 500px; }
+
+.w550 {
+  width: 550px; }
+
+.w600 {
+  width: 600px; }
+
+.w650 {
+  width: 650px; }
+
+.w700 {
+  width: 700px; }
+
+.w750 {
+  width: 750px; }
+
+.w800 {
+  width: 800px; }
+
+.w850 {
+  width: 850px; }
+
+.w900 {
+  width: 900px; }
+
+.w950 {
+  width: 950px; }
+
+.w1000 {
+  width: 1000px; }
+
+.w1050 {
+  width: 1050px; }
 
 .bnr-1 {
   background-color: #43587e;
@@ -840,7 +881,7 @@ body.kidozen article.main section {
   body.kidozen article.main section h1 {
     text-align: center; }
   body.kidozen article.main section p {
-    text-align: center;
+    text-align: left;
     width: 640px; }
 body.kidozen article.main .lucy-in-the-sky {
   background: url(../img/kidozen/img_3.jpg) no-repeat center top; }
@@ -894,7 +935,7 @@ body.localkit article.main section {
     text-align: center; }
   body.localkit article.main section p {
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
     width: 580px; }
   body.localkit article.main section.debug {
     background: url(../img/localkit/img_3.png) no-repeat center 330px;
@@ -911,7 +952,7 @@ body.localkit article.main .box-try {
     min-width: 210px; }
 
 body.support .keyvisual {
-  background: url(../img/support/keyvisual.jpg) no-repeat left bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
+  background: url(../img/support/keyvisual.jpg) no-repeat center bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
   color: #000;
   height: 540px;
   padding-bottom: 0;
@@ -942,7 +983,7 @@ body.support article.main section {
     text-align: center; }
   body.support article.main section p {
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
     width: 580px; }
   body.support article.main section.tech:after {
     content: "";
@@ -964,8 +1005,7 @@ body.support article.main section {
         padding: 0 5%; } }
   body.support article.main section.forum {
     background: url(../img/support/img_4.jpg) no-repeat center 330px;
-    min-height: 670px;
-    margin-bottom: 300px; }
+    min-height: 670px; }
 body.support article.main .box-try {
   padding: 140px 0; }
   body.support article.main .box-try .btn {
@@ -1052,6 +1092,7 @@ body.prices article.main .plan {
     body.prices article.main .plan .summary .price {
       color: #618fe6;
       font-size: 13px;
+      text-align: center;
       margin-bottom: 0;
       white-space: nowrap;
       width: auto; }
@@ -1256,7 +1297,7 @@ body.prices article.main .support-ticket {
       list-style-position: inside; }
 
 body.debugger .keyvisual {
-  background: url(../img/debugger/keyvisual.jpg) no-repeat left bottom, url(../img/debugger/keyvisual_bg.png) repeat-x left bottom;
+  background: url(../img/debugger/keyvisual.jpg) no-repeat center bottom, url(../img/debugger/keyvisual_bg.png) repeat-x left bottom;
   color: #000;
   height: 540px;
   padding-bottom: 0;
@@ -1285,18 +1326,20 @@ body.debugger .keyvisual {
 body.debugger article.main section h2 {
   color: #666;
   font-size: 30px; }
+body.debugger article.main section p {
+  text-align: left; }
 body.debugger article.main section.integration {
-  background: url(../img/debugger/img_3.png) no-repeat center 330px;
-  background-size: 112%;
-  padding-bottom: 70%; }
+  background: url(../img/debugger/img_3.jpg) no-repeat center 330px;
+  background-size: 100%;
+  padding-bottom: 52%; }
 body.debugger article.main section.usb {
-  background: url(../img/debugger/img_4.png) no-repeat center 330px;
-  background-size: 112%;
-  padding-bottom: 70%; }
+  background: url(../img/debugger/img_4.jpg) no-repeat center 330px;
+  background-size: 100%;
+  padding-bottom: 52%; }
 body.debugger article.main section.collaboration {
   padding: 90px 0; }
   body.debugger article.main section.collaboration .internet {
-    background: url(../img/debugger/img_7.png) no-repeat center 240px;
+    background: url(../img/debugger/img_7.jpg) no-repeat center 240px;
     background-size: 112%;
     border-bottom: none;
     padding: 60px 5% 92%; }
@@ -1337,6 +1380,8 @@ body.enterprise .keyvisual {
       margin: 0 15px 20px 0; }
 body.enterprise article.main section * + h2 {
   margin-top: 100px; }
+body.enterprise article.main section p {
+  text-align: left; }
 body.enterprise article.main .box-try {
   padding: 140px 0; }
   body.enterprise article.main .box-try .btn {
@@ -1349,7 +1394,7 @@ body.enterprise article.main .box-try {
     min-width: 240px; }
 
 body.cloud .keyvisual {
-  background: url(../img/cloud/keyvisual.jpg) no-repeat left bottom, url(../img/cloud/keyvisual_bg.png) repeat-x left bottom;
+  background: url(../img/cloud/keyvisual.jpg) no-repeat center bottom, url(../img/cloud/keyvisual_bg.png) repeat-x left bottom;
   color: #000;
   height: 650px;
   padding-bottom: 0;
@@ -1382,7 +1427,7 @@ body.cloud .keyvisual {
 body.cloud article.main section.summary {
   background: url(../img/cloud/img_1.jpg) no-repeat right 60px;
   background-size: 100%;
-  padding-bottom: 42%; }
+  padding-bottom: 38%; }
   @media screen and (max-width: 767px) {
     body.cloud article.main section.summary {
       background-position: right bottom; } }
@@ -1497,7 +1542,7 @@ body.dev-support article.main section {
     text-align: center; }
   body.dev-support article.main section p {
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
     width: 580px; }
   body.dev-support article.main section.debug {
     background: url(../img/localkit/img_3.png) no-repeat center 330px;

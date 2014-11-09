@@ -1,7 +1,7 @@
 body.support {
 
   .keyvisual {
-    background: url(../img/support/keyvisual.jpg) no-repeat left bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
+    background: url(../img/support/keyvisual.jpg) no-repeat center bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
     color: #000;
     height: 540px;
     padding-bottom: 0;
@@ -41,7 +41,7 @@ body.support {
       }
       p {
         margin-bottom: 30px;
-        text-align: center;
+        text-align: left;
         width: 580px;
       }
       &.tech {
@@ -67,7 +67,6 @@ body.support {
       &.forum {
         background: url(../img/support/img_4.jpg) no-repeat center 330px;
         min-height: 670px;
-				margin-bottom: 300px;
       }
     }
     .box-try {

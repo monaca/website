@@ -1,7 +1,7 @@
 body.debugger {
 
   .keyvisual {
-    background: url(../img/debugger/keyvisual.jpg) no-repeat left bottom, url(../img/debugger/keyvisual_bg.png) repeat-x left bottom;
+    background: url(../img/debugger/keyvisual.jpg) no-repeat center bottom, url(../img/debugger/keyvisual_bg.png) repeat-x left bottom;
     color: #000;
     height: 540px;
     padding-bottom: 0;
@@ -40,20 +40,23 @@ body.debugger {
         color: #666;
         font-size: 30px;
       }
+			p {
+			  text-align: left;
+			}
       &.integration {
-        background: url(../img/debugger/img_3.png) no-repeat center 330px;
-        background-size: 112%;
-        padding-bottom: 70%;
+        background: url(../img/debugger/img_3.jpg) no-repeat center 330px;
+        background-size: 100%;
+        padding-bottom: 52%;
       }
       &.usb {
-        background: url(../img/debugger/img_4.png) no-repeat center 330px;
-        background-size: 112%;
-        padding-bottom: 70%;
+        background: url(../img/debugger/img_4.jpg) no-repeat center 330px;
+        background-size: 100%;
+        padding-bottom: 52%;
       }
       &.collaboration {
         padding: 90px 0;
         .internet {
-          background: url(../img/debugger/img_7.png) no-repeat center 240px;
+          background: url(../img/debugger/img_7.jpg) no-repeat center 240px;
           background-size: 112%;
           border-bottom: none;
           padding: 60px 5% 92%;
