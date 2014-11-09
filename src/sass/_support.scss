@@ -49,9 +49,9 @@ body.support {
         p {
           width: auto;
         }
-        .alignleft {
-          float: left;
-          margin: 0 40px 40px 0;
+        .alignright {
+          float: right;
+          margin: 0 0 40px 40px;
           @media screen and (max-width: $break) {
             width: 50%;
           }

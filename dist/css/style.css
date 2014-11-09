@@ -991,11 +991,11 @@ body.support article.main section {
     display: block; }
   body.support article.main section.tech p {
     width: auto; }
-  body.support article.main section.tech .alignleft {
-    float: left;
-    margin: 0 40px 40px 0; }
+  body.support article.main section.tech .alignright {
+    float: right;
+    margin: 0 0 40px 40px; }
     @media screen and (max-width: 767px) {
-      body.support article.main section.tech .alignleft {
+      body.support article.main section.tech .alignright {
         width: 50%; } }
   body.support article.main section.tech .tech-cont {
     padding-top: 60px;
