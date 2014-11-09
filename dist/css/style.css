@@ -1503,13 +1503,16 @@ body.cloud article.main section.workflow > ul {
         body.cloud article.main section.workflow > ul > li.workflow-action-store {
           background-image: url(../img/cloud/workflow_4.png); } }
 body.cloud article.main .box-try {
-  padding: 140px 0; }
+  padding: 20px 0 0; }
   body.cloud article.main .box-try .btn {
     font-size: 24px;
     height: 64px;
     line-height: 64px;
-    padding: 0 40px;
-    margin: 0 10px; }
+    padding: 0 20px;
+    margin: 0;
+    min-width: 240px; }
+    body.cloud article.main .box-try .btn span {
+      display: inline-block; }
 
 body.dev-support .keyvisual {
   background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;

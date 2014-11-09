@@ -147,13 +147,17 @@ body.cloud {
       }
     }
     .box-try {
-      padding: 140px 0;
+      padding: 20px 0 0;
       .btn {
         font-size: 24px;
         height: 64px;
         line-height: 64px;
-        padding: 0 40px;
-        margin: 0 10px;
+        padding: 0 20px;
+        margin: 0;
+				min-width: 240px;
+				span {
+				  display: inline-block;
+				}
       }
     }
   }
