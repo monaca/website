@@ -641,6 +641,8 @@ header.navbar {
         float: none; }
         header.navbar .dropdown-menu li a {
           color: #0088cc; } }
+  header.navbar ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block; }
 
 footer.common {
   border-top: 1px solid #ddd;
