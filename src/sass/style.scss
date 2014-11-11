@@ -111,17 +111,20 @@ p {
 -------------------------------------------------------------- */
 $width: 1170px;
 $break: 767px;
+$break-xl: 1300px; // 1300 * 0.9 = 1170
 $break-lg: 970px;
 $break-xs: 640px;
 
 .container {
   padding-left: 0;
   padding-right: 0;
-  width: $width;
-  @media screen and (max-width: $width) {
+  min-width: $width;
+  width: auto;
+  @media screen and (max-width: $break-xl) {
     padding-left: 5%;
     padding-right: 5%;
     width: 100%;
+    min-width: 0;
   }
 }
 
@@ -139,7 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   min-width: $width;
-  @media screen and (max-width: $width) {
+  @media screen and (max-width: $break-xl) {
     min-width: 0;
   }
 }
@@ -159,6 +162,7 @@ section {
   }
   p {
     color: #666;
+    word-break: break-all;
   }
 }
 
@@ -172,7 +176,7 @@ article.main section {
   &:first-child {
     padding-top: 140px;
   }
-  @media screen and (max-width: $width) {
+  @media screen and (max-width: $break-xl) {
     padding-left: 5%;
     padding-right: 5%;
     width: 100%;

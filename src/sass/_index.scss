@@ -1,49 +1,69 @@
 body.home {
-  .keyvisual-container {
-	  background: url(../img/index/keyvisual_bg.png) repeat-x 0 0;
-		height: 540px;
-	}
   .keyvisual {
-    background: url(../img/index/keyvisual.jpg) no-repeat center center, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
+    background: url(../img/index/keyvisual.jpg) no-repeat center center #126faa;
     color: #ffffff;
     height: 540px;
     position: relative;
+    @media screen and (max-width: $break-xs) {
+      height: auto;
+      padding-bottom: 20px;
+    }
     h1 {
       padding-top: 130px;
       font-size: 54px;
       font-weight: 400;
+      line-height: 1.1;
       margin-bottom: 30px;
       text-align: left;
+      @media screen and (max-width: $break-xs) {
+        padding-top: 100px;
+      }
       .small {
         color: #ffffff;
+        display: inline-block;
         font-size: 33px;
+        line-height: 40px;
+        @media screen and (max-width: $break-xs) {
+            font-size: 27px;
+        }
+      }
+      .key {
+        @media screen and (max-width: $break-xs) {
+            font-size: 46px;
+        }
       }
     }
     p {
       font-size: 20px;
       text-align: left;
       width: 585px;
-			margin-bottom: 0;
+      margin-bottom: 0;
       word-break: break-all;
+      .small {
+        vertical-align: baseline;
+      }
+      @media screen and (max-width: 640px) {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 0 5%;
+        width: 100%;
+      }
     }
-		.box-try {
-		  text-align: left;
-			padding: 60px 0 0;
-		  .btn {
-		    padding: 0 20px;
-			  min-width: 240px;
-		  	margin: 0 20px 20px 0;
-		  }
-	  }
+    .box-try {
+      text-align: left;
+      padding: 60px 0 0;
+      @media screen and (max-width: $break-xs) {
+        padding-top: 30px;
+        text-align: center;
+      }
+      .btn {
+        padding: 0 20px;
+        min-width: 240px;
+        margin: 0 20px 20px 0;
+      }
+    }
   }
-	
-	.products-container {
-	  background-color: #f6f7f9;
-	}
-	
-	.programs-container {
-	  background-color: #eef0f5;
-	}
 
   .products,
   .programs {
@@ -87,11 +107,19 @@ body.home {
         padding-bottom: 120px;
       }
       @media screen and (max-width: 720px) and (min-width: $break-xs) {
-        padding-bottom: 120px;
+        padding-bottom: 70px;
+      }
+      @media screen and (max-width: $break-xs) {
+        height: auto !important; // disable tile
+        padding-bottom: 20px;
       }
     }
     dl dd {
       height: 75px;
+      @media screen and (max-width: $break-xs) {
+        height: auto;
+        margin-bottom: 30px;
+      }
     }
     .bnr-1 {
       position: absolute;
@@ -103,6 +131,10 @@ body.home {
       left: 0;
       bottom: 17px;
       width: 100%;
+      @media screen and (max-width: $break) {
+        position: static;
+        bottom: auto;
+      }
       .btn {
         margin: 0 6px 10px;
         @media screen and (max-width: 1070px) and (min-width: $break-lg) {
@@ -115,6 +147,11 @@ body.home {
           margin: 0 auto 8px;
           width: 68%;
         }
+        @media screen and (max-width: 380px) {
+          display: block;
+          margin: 0 auto 8px;
+          width: 68%;
+        }
       }
     }
   }
@@ -123,7 +160,11 @@ body.home {
     background-color: #eef0f5;
     padding: 40px 0;
     ul {
-      &:after {content: ""; clear: both; display: block;}
+      &:after {
+        content: "";
+        clear: both;
+        display: block;
+      }
       li {
         background-color: transparent;
         border: none;
@@ -141,6 +182,10 @@ body.home {
             margin-bottom: 30px;
             padding-bottom: 30px;
           }
+        }
+        @media screen and (max-width: $break-xs) {
+          padding-left: 5%;
+          padding-right: 5%;
         }
         .bnr-1 {
           margin-bottom: 12px;
@@ -173,6 +218,15 @@ body.home {
     }
     li {
       margin-bottom: 100px;
+    }
+    p {
+      line-height: 1.8;
+      margin: 0 auto 50px;
+      text-align: left;
+      width: 600px;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
     }
   }
 

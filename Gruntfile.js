@@ -75,7 +75,8 @@ module.exports = function(grunt) {
                 src: [
                     '<%= config.src %>/js/**/*.js'
                 ],
-                dest: '<%= config.dist %>/js/all.js'
+                dest: '<%= config.dist %>/js/all.js',
+                separator: ";"
             }
         },
         connect: {

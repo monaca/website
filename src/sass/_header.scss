@@ -1,23 +1,35 @@
 header.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0;
   opacity: 0.9;
   min-width: $width;
-  @media screen and (max-width: $width) {
+  z-index: 100;
+  @media screen and (max-width: $break-xl) {
     width: 100%;
     min-width: 0;
   }
   .container {
-    @media screen and (max-width: $break) {
-      padding: 0 5%;
+    width: $width;
+    @media screen and (max-width: $break-xl) {
+      padding: 0 0 0 16px;
+      width: 100%;
     }
   }
   .navbar-toggle {
     background-color: transparent;
     border: none;
   }
-  .navbar-brand {
-    padding-top: 13px;
-    img {
-      width: 110px;
+
+  .navbar-header {
+    margin: 0;
+    .navbar-brand {
+      margin: 0;
+      padding: 13px 0;
+      img {
+        width: 110px;
+      }
     }
   }
   .navbar-collapse {
@@ -28,8 +40,34 @@ header.navbar {
   }
   .navbar-nav > li > a {
     color: #ffffff;
-    padding-left: 13px;
-    padding-right: 13px;
+    padding: 16px 13px 14px;
+    @media screen and (max-width: 1170px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media screen and (max-width: 1100px) {
+      font-size: 13px;
+      .opt {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: 940px) {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    @media screen and (max-width: 840px) {
+      font-size: 11px;
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+    @media screen and (max-width: $break) {
+      font-size: 1rem;
+      padding-left: 16px;
+      text-align: left;
+    }
     &:hover {
       opacity: 0.7;
     }
@@ -40,9 +78,6 @@ header.navbar {
         text-decoration: none;
       }
     }
-    @media screen and (max-width: $break) {
-      text-align: left;
-    }
   }
   .dropdown-menu {
     @extend .dropdown-menu-dark;
@@ -52,6 +87,7 @@ header.navbar {
     @media screen and (max-width: $break) {
       background-color: transparent;
       display: block;
+      padding: 0;
       position: static;
       top: auto;
       left: auto;
@@ -63,6 +99,7 @@ header.navbar {
   }
 
   ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;    
+    display: block;
   }
+
 }

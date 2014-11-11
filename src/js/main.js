@@ -8,6 +8,8 @@ $(function() {
     $tile3.tile(3);
     $tile4.tile(4);
 
+    FastClick.attach(document.querySelector("header.navbar .navbar-toggle"));
+
     var timer = null;
     window.addEventListener("resize", function() {
         clearTimeout(timer);
