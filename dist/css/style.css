@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
@@ -101,12 +102,14 @@ p {
 .container {
   padding-left: 0;
   padding-right: 0;
-  width: 1170px; }
-  @media screen and (max-width: 1170px) {
+  min-width: 1170px;
+  width: auto; }
+  @media screen and (max-width: 1300px) {
     .container {
       padding-left: 5%;
       padding-right: 5%;
-      width: 100%; } }
+      width: 100%;
+      min-width: 0; } }
 
 /* =User styles
 -------------------------------------------------------------- */
@@ -119,7 +122,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   min-width: 1170px; }
-  @media screen and (max-width: 1170px) {
+  @media screen and (max-width: 1300px) {
     body {
       min-width: 0; } }
 
@@ -133,7 +136,8 @@ section h2 {
   font-size: 32px;
   margin-bottom: 20px; }
 section p {
-  color: #666; }
+  color: #666;
+  word-break: break-all; }
 
 article.main section {
   border-bottom: 1px solid #ccc;
@@ -144,7 +148,7 @@ article.main section {
   width: 1170px; }
   article.main section:first-child {
     padding-top: 140px; }
-  @media screen and (max-width: 1170px) {
+  @media screen and (max-width: 1300px) {
     article.main section {
       padding-left: 5%;
       padding-right: 5%;
@@ -166,7 +170,7 @@ article.main section {
   margin-right: auto;
   position: relative;
   width: 1170px; }
-  @media screen and (max-width: 1170px) {
+  @media screen and (max-width: 1300px) {
     .box-full > * {
       padding-left: 5%;
       padding-right: 5%;
@@ -179,7 +183,7 @@ article.main section {
   margin-right: auto;
   position: relative;
   width: 1170px; }
-  @media screen and (max-width: 1170px) {
+  @media screen and (max-width: 1300px) {
     .box-full-transparent {
       width: 100%; } }
   @media screen and (max-width: 767px) {
@@ -188,47 +192,6 @@ article.main section {
 
 .wide-container {
   width: 100%; }
-
-.box-txt {
-  text-align: left;
-  margin: 0 auto 50px;
-  line-height: 1.8; }
-
-.w500 {
-  width: 500px; }
-
-.w550 {
-  width: 550px; }
-
-.w600 {
-  width: 600px; }
-
-.w650 {
-  width: 650px; }
-
-.w700 {
-  width: 700px; }
-
-.w750 {
-  width: 750px; }
-
-.w800 {
-  width: 800px; }
-
-.w850 {
-  width: 850px; }
-
-.w900 {
-  width: 900px; }
-
-.w950 {
-  width: 950px; }
-
-.w1000 {
-  width: 1000px; }
-
-.w1050 {
-  width: 1050px; }
 
 .bnr-1 {
   background-color: #43587e;
@@ -358,6 +321,7 @@ article.main section {
         background-color: #ffffff;
         border-bottom: 1px solid #ccc;
         border-right: 1px solid #ccc;
+        -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
         width: 20px;
         height: 20px;
@@ -416,14 +380,13 @@ article.main section {
   .box-examples p {
     padding-top: 20px; }
 
-.partners-container {
+.box-partners {
+  background-color: #F9FAFC;
   border-top: 1px solid #cdd1d6;
   border-bottom: 1px solid #cdd1d6;
-  background-color: #F9FAFC; }
-
-.box-partners {
   text-align: center;
-  overflow: hidden; }
+  overflow: hidden;
+  padding: 0; }
 
 .box-awards {
   height: 200px;
@@ -459,7 +422,7 @@ article.main section {
           left: auto;
           float: left;
           margin: 0 0 20px;
-          padding: 0 20px;
+          padding: 0 30px;
           text-align: center;
           width: 50%;
           min-height: 113px;
@@ -496,7 +459,7 @@ article.main section {
   border-radius: 3px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: #ffffff;
+  color: white;
   display: inline-block;
   font-size: 18px;
   font-weight: 500;
@@ -513,7 +476,7 @@ article.main section {
   -webkit-font-smoothing: antialiased; }
   .btn-blue:hover, .btn-green:hover, .btn-white:hover, .btn-darkgray:hover, .btn-line-white:hover {
     text-shadow: none;
-    color: #ffffff;
+    color: white;
     cursor: pointer;
     opacity: 0.85;
     text-decoration: none; }
@@ -592,22 +555,33 @@ article.main section {
     background-color: rgba(255, 255, 255, 0.3); }
 
 header.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0;
   opacity: 0.9;
-  min-width: 1170px; }
-  @media screen and (max-width: 1170px) {
+  min-width: 1170px;
+  z-index: 100; }
+  @media screen and (max-width: 1300px) {
     header.navbar {
       width: 100%;
       min-width: 0; } }
-  @media screen and (max-width: 767px) {
-    header.navbar .container {
-      padding: 0 5%; } }
+  header.navbar .container {
+    width: 1170px; }
+    @media screen and (max-width: 1300px) {
+      header.navbar .container {
+        padding: 0 0 0 16px;
+        width: 100%; } }
   header.navbar .navbar-toggle {
     background-color: transparent;
     border: none; }
-  header.navbar .navbar-brand {
-    padding-top: 13px; }
-    header.navbar .navbar-brand img {
-      width: 110px; }
+  header.navbar .navbar-header {
+    margin: 0; }
+    header.navbar .navbar-header .navbar-brand {
+      margin: 0;
+      padding: 13px 0; }
+      header.navbar .navbar-header .navbar-brand img {
+        width: 110px; }
   header.navbar .navbar-collapse {
     float: right; }
     @media screen and (max-width: 766px) {
@@ -615,8 +589,33 @@ header.navbar {
         float: none; } }
   header.navbar .navbar-nav > li > a {
     color: #ffffff;
-    padding-left: 13px;
-    padding-right: 13px; }
+    padding: 16px 13px 14px; }
+    @media screen and (max-width: 1170px) {
+      header.navbar .navbar-nav > li > a {
+        padding-left: 10px;
+        padding-right: 10px; } }
+    @media screen and (max-width: 1100px) {
+      header.navbar .navbar-nav > li > a {
+        font-size: 13px; }
+        header.navbar .navbar-nav > li > a .opt {
+          display: none; } }
+    @media screen and (max-width: 1000px) {
+      header.navbar .navbar-nav > li > a {
+        font-size: 12px; } }
+    @media screen and (max-width: 940px) {
+      header.navbar .navbar-nav > li > a {
+        padding-left: 5px;
+        padding-right: 5px; } }
+    @media screen and (max-width: 840px) {
+      header.navbar .navbar-nav > li > a {
+        font-size: 11px;
+        padding-left: 4px;
+        padding-right: 4px; } }
+    @media screen and (max-width: 767px) {
+      header.navbar .navbar-nav > li > a {
+        font-size: 1rem;
+        padding-left: 16px;
+        text-align: left; } }
     header.navbar .navbar-nav > li > a:hover {
       opacity: 0.7; }
     header.navbar .navbar-nav > li > a.login {
@@ -624,9 +623,6 @@ header.navbar {
       text-decoration: underline; }
       header.navbar .navbar-nav > li > a.login:hover {
         text-decoration: none; }
-    @media screen and (max-width: 767px) {
-      header.navbar .navbar-nav > li > a {
-        text-align: left; } }
   header.navbar .dropdown-menu {
     padding: 15px 0 18px;
     left: 0;
@@ -635,6 +631,7 @@ header.navbar {
       header.navbar .dropdown-menu {
         background-color: transparent;
         display: block;
+        padding: 0;
         position: static;
         top: auto;
         left: auto;
@@ -652,7 +649,7 @@ footer.common {
   padding: 32px 0 0 0;
   text-align: center;
   width: 1170px; }
-  @media screen and (max-width: 1170px) {
+  @media screen and (max-width: 1300px) {
     footer.common {
       padding-bottom: 30px;
       width: 100%; } }
@@ -684,40 +681,62 @@ footer.common {
     margin: 0 14px;
     vertical-align: middle; }
 
-body.home .keyvisual-container {
-  background: url(../img/index/keyvisual_bg.png) repeat-x 0 0;
-  height: 540px; }
 body.home .keyvisual {
-  background: url(../img/index/keyvisual.jpg) no-repeat center center, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
+  background: url(../img/index/keyvisual.jpg) no-repeat center center #126faa;
   color: #ffffff;
   height: 540px;
   position: relative; }
+  @media screen and (max-width: 767px) {
+    body.home .keyvisual {
+      height: auto;
+      padding-bottom: 20px; } }
   body.home .keyvisual h1 {
     padding-top: 130px;
     font-size: 54px;
     font-weight: 400;
+    line-height: 1.1;
     margin-bottom: 30px;
     text-align: left; }
+    @media screen and (max-width: 767px) {
+      body.home .keyvisual h1 {
+        padding-top: 100px; } }
     body.home .keyvisual h1 .small {
       color: #ffffff;
-      font-size: 33px; }
+      display: inline-block;
+      font-size: 33px;
+      line-height: 40px; }
+      @media screen and (max-width: 767px) {
+        body.home .keyvisual h1 .small {
+          font-size: 27px; } }
+    @media screen and (max-width: 767px) {
+      body.home .keyvisual h1 .key {
+        font-size: 46px; } }
   body.home .keyvisual p {
     font-size: 20px;
     text-align: left;
     width: 585px;
     margin-bottom: 0;
     word-break: break-all; }
+    body.home .keyvisual p .small {
+      vertical-align: baseline; }
+    @media screen and (max-width: 767px) {
+      body.home .keyvisual p {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 0 5%;
+        width: 100%; } }
   body.home .keyvisual .box-try {
     text-align: left;
     padding: 60px 0 0; }
+    @media screen and (max-width: 767px) {
+      body.home .keyvisual .box-try {
+        padding-top: 30px;
+        text-align: center; } }
     body.home .keyvisual .box-try .btn {
       padding: 0 20px;
       min-width: 240px;
       margin: 0 20px 20px 0; }
-body.home .products-container {
-  background-color: #f6f7f9; }
-body.home .programs-container {
-  background-color: #eef0f5; }
 body.home .products dl dt,
 body.home .programs dl dt {
   color: #43587e;
@@ -754,11 +773,22 @@ body.home .products {
     @media screen and (max-width: 1070px) and (min-width: 970px) {
       body.home .products li {
         padding-bottom: 120px; } }
+    @media screen and (max-width: 767px) and (min-width: 720px) {
+      body.home .products li {
+        padding-bottom: 70px; } }
     @media screen and (max-width: 720px) and (min-width: 640px) {
       body.home .products li {
         padding-bottom: 120px; } }
+    @media screen and (max-width: 640px) {
+      body.home .products li {
+        height: auto !important;
+        padding-bottom: 20px; } }
   body.home .products dl dd {
     height: 75px; }
+    @media screen and (max-width: 640px) {
+      body.home .products dl dd {
+        height: auto;
+        margin-bottom: 30px; } }
   body.home .products .bnr-1 {
     position: absolute;
     top: 0;
@@ -768,6 +798,10 @@ body.home .products {
     left: 0;
     bottom: 17px;
     width: 100%; }
+    @media screen and (max-width: 640px) {
+      body.home .products .btns {
+        position: static;
+        bottom: auto; } }
     body.home .products .btns .btn {
       margin: 0 6px 10px; }
       @media screen and (max-width: 1070px) and (min-width: 970px) {
@@ -776,6 +810,11 @@ body.home .products {
           margin: 0 auto 8px;
           width: 68%; } }
       @media screen and (max-width: 720px) and (min-width: 640px) {
+        body.home .products .btns .btn {
+          display: block;
+          margin: 0 auto 8px;
+          width: 68%; } }
+      @media screen and (max-width: 380px) {
         body.home .products .btns .btn {
           display: block;
           margin: 0 auto 8px;
@@ -794,7 +833,7 @@ body.home .programs {
     box-sizing: border-box;
     float: left;
     margin-bottom: 0;
-    padding: 0 90px;
+    padding: 0 8.41121%;
     width: 50%; }
     @media screen and (max-width: 767px) {
       body.home .programs ul li {
@@ -804,6 +843,10 @@ body.home .programs {
           border-bottom: 1px solid #ddd;
           margin-bottom: 30px;
           padding-bottom: 30px; } }
+    @media screen and (max-width: 640px) {
+      body.home .programs ul li {
+        padding-left: 5%;
+        padding-right: 5%; } }
     body.home .programs ul li .bnr-1 {
       margin-bottom: 12px; }
     body.home .programs ul li .detail {
@@ -826,6 +869,14 @@ body.home .features {
     margin-bottom: 34px; }
   body.home .features li {
     margin-bottom: 100px; }
+  body.home .features p {
+    line-height: 1.8;
+    margin: 0 auto 50px;
+    text-align: left;
+    width: 600px; }
+    @media screen and (max-width: 600px) {
+      body.home .features p {
+        width: 100%; } }
 body.home .box-try {
   text-align: center;
   padding: 80px 0; }
@@ -1167,7 +1218,7 @@ body.prices article.main .plan {
         letter-spacing: -0.05em; }
     body.prices article.main .planlist > li.recommend .bottombox,
     body.prices article.main .plan.recommend .bottombox {
-      background: url(/img/plan/bg_ribbon_shadow.png) no-repeat center bottom #fff;
+      background: url(/img/plan/bg_ribbon_shadow.png) no-repeat center bottom white;
       margin-bottom: -5px; }
   body.prices article.main .planlist > li.enterprise,
   body.prices article.main .plan.enterprise {
