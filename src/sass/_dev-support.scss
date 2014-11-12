@@ -3,26 +3,27 @@ body.dev-support {
   .keyvisual {
     background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
     color: #000;
-    height: 540px;
     padding-bottom: 0;
     position: relative;
+    @media screen and (max-width: $break-xs) {
+      padding-bottom: 40px;
+    }
     h1 {
-      font-size: 54px;
-      font-weight: 400;
-      line-height: 65px;
       margin-bottom: 10px;
       padding-top: 140px;
       text-align: left;
-			text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+      @media screen and (max-width: $break-xs) {
+        padding-top: 100px;
+      }
       img {
         vertical-align: 4px;
       }
     }
     p {
       font-size: 20px;
-			color: #666;
+      color: #666;
       text-align: left;
-      width: 500px;
       word-break: break-all;
     }
   }
@@ -39,11 +40,9 @@ body.dev-support {
       }
       p {
         margin-bottom: 30px;
-        text-align: left;
-        width: 580px;
       }
       &.debug {
-        background: url(../img/localkit/img_3.png) no-repeat center 330px;
+        background: url(../img/localkit/img_3.png) no-repeat center bottom 20px;
         background-size: 110%;
         padding-bottom: 50%;
       }
@@ -51,12 +50,8 @@ body.dev-support {
     .box-try {
       padding: 140px 0;
       .btn {
-        font-size: 24px;
-        height: 64px;
-        line-height: 64px;
         padding: 0 40px;
-        margin: 0 10px;
-				min-width: 210px;
+        min-width: 210px;
       }
     }
   }
