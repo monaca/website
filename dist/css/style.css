@@ -140,7 +140,7 @@ section h2 {
   margin-bottom: 20px; }
   @media screen and (max-width: 640px) {
     section h2 {
-      font-size: 24px; } }
+      font-size: 20px; } }
 section p {
   color: #666;
   word-break: break-all; }
@@ -180,7 +180,7 @@ article.main section {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 5%;
         width: 100%; } }
 
 .keyvisual {
@@ -227,9 +227,6 @@ article.main section {
   @media screen and (max-width: 767px) {
     .box-full-transparent {
       padding: 0 5%; } }
-
-.wide-container {
-  width: 100%; }
 
 .bnr-1 {
   background-color: #43587e;
@@ -746,17 +743,14 @@ body.home .keyvisual {
   background: url(../img/index/keyvisual.jpg) no-repeat center center, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
   background-color: #126faa;
   color: #ffffff;
-  height: 540px;
   position: relative; }
   @media screen and (max-width: 767px) {
     body.home .keyvisual {
-      height: auto;
       padding-bottom: 20px; } }
   body.home .keyvisual h1 {
     padding-top: 130px;
-    font-size: 54px;
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1.2;
     margin-bottom: 30px;
     text-align: left; }
     @media screen and (max-width: 767px) {
@@ -925,10 +919,16 @@ body.home .features {
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 80px; }
+    @media screen and (max-width: 640px) {
+      body.home .features h2 {
+        font-size: 32px; } }
   body.home .features h3 {
     font-size: 30px;
     font-weight: 400;
     margin-bottom: 34px; }
+    @media screen and (max-width: 640px) {
+      body.home .features h3 {
+        font-size: 20px; } }
   body.home .features li {
     margin-bottom: 100px; }
   body.home .features p {
@@ -1116,181 +1116,60 @@ body.support article.main .box-try {
     padding: 0 40px;
     margin: 0 10px; }
 
-body.prices article.main .keyvisual h1 {
+body.prices article.main > h1 {
   font-size: 40px;
   padding-top: 150px;
   text-align: center; }
-body.prices article.main .first-item {
+body.prices article.main section {
   padding-top: 70px; }
-body.prices article.main .planlist {
-  margin: 0 auto;
-  width: 928px; }
-  body.prices article.main .planlist:after {
-    content: "";
-    clear: both;
-    display: block; }
-  @media screen and (max-width: 767px) {
-    body.prices article.main .planlist {
-      width: 100%; } }
-body.prices article.main .planlist > li,
 body.prices article.main .plan {
   background-color: #ffffff;
   border: 1px solid #dfdfdf;
+  border-radius: 4px 4px 0 0;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
-  float: left;
-  margin: 28px 2px 5px;
-  padding: 37px 20px 0;
+  margin: 0 auto;
+  padding: 37px 20px 40px;
   position: relative;
-  width: 228px; }
-  body.prices article.main .planlist > li:before,
+  width: 490px; }
+  @media screen and (max-width: 640px) {
+    body.prices article.main .plan {
+      width: auto; } }
   body.prices article.main .plan:before {
     background-color: #0062a9;
     content: ' ';
+    border-radius: 4px 4px 0 0;
     color: transparent;
     height: 10px;
-    width: 228px;
+    width: 100%;
+    width: calc(100% + 2px);
     position: absolute;
     top: 0;
     left: -1px; }
-  @media screen and (max-width: 767px) {
-    body.prices article.main .planlist > li,
-    body.prices article.main .plan {
-      border-radius: 4px 4px 0 0;
-      float: none;
-      margin: 0 auto; } }
-  body.prices article.main .planlist > li .summary,
-  body.prices article.main .plan .summary {
-    height: 180px; }
-    body.prices article.main .planlist > li .summary.single-summary, body.prices article.main .planlist > li .summary .single-summary-enterprise,
-    body.prices article.main .plan .summary.single-summary,
-    body.prices article.main .plan .summary .single-summary-enterprise {
-      height: 200px; }
-    body.prices article.main .planlist > li .summary.single-summary-enterprise,
-    body.prices article.main .plan .summary.single-summary-enterprise {
-      height: 200px; }
-    body.prices article.main .planlist > li .summary h2,
-    body.prices article.main .plan .summary h2 {
-      border-bottom: 1px solid #999;
-      color: black;
-      font-size: 30px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      padding-bottom: 5px;
-      line-height: 1.3;
-      overflow: hidden;
-      white-space: nowrap; }
-      body.prices article.main .planlist > li .summary h2 .yeah,
-      body.prices article.main .plan .summary h2 .yeah {
-        color: #618fe6;
-        display: block;
-        font-size: 11px; }
-      body.prices article.main .planlist > li .summary h2.single-title,
-      body.prices article.main .plan .summary h2.single-title {
-        margin-bottom: 20px;
-        padding-bottom: 10px; }
-    body.prices article.main .planlist > li .summary .price,
-    body.prices article.main .plan .summary .price {
-      color: #618fe6;
-      font-size: 13px;
-      text-align: center;
-      margin-bottom: 0;
-      white-space: nowrap;
-      width: auto; }
-      body.prices article.main .planlist > li .summary .price em,
-      body.prices article.main .plan .summary .price em {
+    @media screen and (max-width: 767px) {
+      body.prices article.main .plan:before {
+        border-radius: 4px 4px 0 0 !important; } }
+  body.prices article.main .plan h2 {
+    border-bottom: 1px solid #999;
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    white-space: nowrap; }
+    @media screen and (max-width: 640px) {
+      body.prices article.main .plan h2 {
         font-size: 24px;
-        font-weight: 400;
-        font-style: normal;
-        line-height: 100%; }
-    body.prices article.main .planlist > li .summary .trial,
-    body.prices article.main .plan .summary .trial {
-      color: black;
-      font-size: 11px;
-      line-height: 15px;
-      margin: 6px 0 20px;
-      padding-left: 0.5em;
-      text-indent: -0.5em; }
-      body.prices article.main .planlist > li .summary .trial strong,
-      body.prices article.main .plan .summary .trial strong {
-        font-size: 13px;
-        font-weight: 700; }
-    body.prices article.main .planlist > li .summary .mainfeature-title,
-    body.prices article.main .plan .summary .mainfeature-title {
-      color: white;
-      font-weight: 700;
-      margin: 0 0 8px -23px; }
-    body.prices article.main .planlist > li .summary .mainfeature,
-    body.prices article.main .plan .summary .mainfeature {
-      color: black;
-      margin-bottom: 30px; }
-      body.prices article.main .planlist > li .summary .mainfeature li,
-      body.prices article.main .plan .summary .mainfeature li {
-        background: url(/img/common/ico_list_blue.png) no-repeat left 7px;
-        font-size: 14px;
-        font-size: 1.08rem;
-        line-height: 1.62rem;
-        margin-bottom: 5px;
-        padding-left: 13px; }
-        body.prices article.main .planlist > li .summary .mainfeature li strong,
-        body.prices article.main .plan .summary .mainfeature li strong {
-          font-size: 17px;
-          font-size: 1.31rem;
-          font-weight: 700; }
-  body.prices article.main .planlist > li:first-child,
-  body.prices article.main .plan:first-child {
-    border-radius: 5px 0 0 0; }
-    body.prices article.main .planlist > li:first-child:before,
-    body.prices article.main .plan:first-child:before {
-      border-radius: 5px 0 0 0; }
-  body.prices article.main .planlist > li:last-child,
-  body.prices article.main .plan:last-child {
-    border-radius: 0 5px 0 0; }
-    body.prices article.main .planlist > li:last-child:before,
-    body.prices article.main .plan:last-child:before {
-      border-radius: 0 5px 0 0; }
-  body.prices article.main .planlist > li.recommend,
-  body.prices article.main .plan.recommend {
-    background: none white;
-    border-radius: 5px 5px 0 0;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-    margin-top: 0;
-    z-index: 4; }
-    body.prices article.main .planlist > li.recommend:before,
-    body.prices article.main .plan.recommend:before {
-      border-radius: 5px 5px 0 0; }
-    body.prices article.main .planlist > li.recommend .summary,
-    body.prices article.main .plan.recommend .summary {
-      height: 508px; }
-      body.prices article.main .planlist > li.recommend .summary h2,
-      body.prices article.main .plan.recommend .summary h2 {
-        letter-spacing: -0.05em; }
-    body.prices article.main .planlist > li.recommend .bottombox,
-    body.prices article.main .plan.recommend .bottombox {
-      background: url(/img/plan/bg_ribbon_shadow.png) no-repeat center bottom white;
-      margin-bottom: -5px; }
-  body.prices article.main .planlist > li.enterprise,
-  body.prices article.main .plan.enterprise {
-    background-color: #f1f1f1;
-    clear: both;
-    float: none; }
-    body.prices article.main .planlist > li.enterprise .summary,
-    body.prices article.main .plan.enterprise .summary {
-      height: auto; }
-body.prices article.main .plan {
-  border-radius: 4px 4px 0 0;
-  float: none;
-  margin: 0 auto;
-  width: 490px;
-  padding-bottom: 40px; }
-  @media screen and (max-width: 470px) {
-    body.prices article.main .plan {
-      width: 100%; } }
-  body.prices article.main .plan:before {
-    border-radius: 4px 4px 0 0;
-    width: 490px; }
+        padding-bottom: 6px; } }
+    body.prices article.main .plan h2 .yeah {
+      color: #618fe6;
+      display: block;
+      font-size: 11px; }
   body.prices article.main .plan dl {
-    margin-bottom: 10px; }
+    text-align: left;
+    margin: 0 auto 10px; }
     body.prices article.main .plan dl dt {
       font-weight: 700;
       display: inline-block; }
@@ -1306,96 +1185,102 @@ body.prices article.main .plan {
         font-weight: 400;
         font-style: normal;
         line-height: 100%; }
-  body.prices article.main .plan .single-summary-enterprise dl {
-    text-align: left;
-    width: 250px;
-    margin-right: auto;
-    margin-left: auto; }
-  body.prices article.main .plan .single-summary dl {
-    text-align: left;
-    width: 300px;
-    margin-right: auto;
-    margin-left: auto; }
-  body.prices article.main .plan .single-summary p {
-    text-align: left;
-    width: 300px; }
   body.prices article.main .plan p {
     color: #333;
-    width: auto;
-    font-weight: 700; }
+    font-weight: 700;
+    padding-left: 0;
+    text-align: left;
+    width: auto; }
+  body.prices article.main .plan .price {
+    color: #618fe6;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 0;
+    white-space: nowrap;
+    width: auto; }
+    body.prices article.main .plan .price em {
+      font-size: 24px;
+      font-weight: 400;
+      font-style: normal;
+      line-height: 100%; }
+body.prices article.main .planlist {
+  margin: 0 auto;
+  width: 928px; }
+  body.prices article.main .planlist:after {
+    content: "";
+    clear: both;
+    display: block; }
+  @media screen and (max-width: 928px) {
+    body.prices article.main .planlist {
+      width: 100%; } }
+  body.prices article.main .planlist h2 {
+    margin-bottom: 10px;
+    padding-bottom: 5px; }
+  body.prices article.main .planlist > .plan {
+    border-radius: 0;
+    float: left;
+    margin: 0px 2px 5px;
+    width: 228px;
+    height: 200px; }
+    @media screen and (max-width: 928px) {
+      body.prices article.main .planlist > .plan {
+        float: none;
+        height: auto;
+        margin: 0 auto 40px;
+        width: 490px; } }
+    @media screen and (max-width: 640px) {
+      body.prices article.main .planlist > .plan {
+        width: 90%; } }
+    body.prices article.main .planlist > .plan:before {
+      border-radius: 0; }
+    body.prices article.main .planlist > .plan:first-child {
+      border-radius: 5px 0 0 0; }
+      body.prices article.main .planlist > .plan:first-child:before {
+        border-radius: 5px 0 0 0; }
+    body.prices article.main .planlist > .plan:last-child {
+      border-radius: 0 5px 0 0; }
+      body.prices article.main .planlist > .plan:last-child:before {
+        border-radius: 0 5px 0 0; }
+    body.prices article.main .planlist > .plan.recommend {
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+      height: 228px;
+      margin-top: -28px;
+      z-index: 4; }
+      body.prices article.main .planlist > .plan.recommend:before {
+        border-radius: 5px 5px 0 0; }
+      @media screen and (max-width: 928px) {
+        body.prices article.main .planlist > .plan.recommend {
+          height: auto;
+          margin-top: 0; } }
+body.prices article.main section.enterprise .plan .summary,
+body.prices article.main section.kidozen .plan .summary {
+  margin: 0 auto 30px; }
+  body.prices article.main section.enterprise .plan .summary p,
+  body.prices article.main section.kidozen .plan .summary p {
+    line-height: 1.4;
+    margin-bottom: 0; }
+  @media screen and (max-width: 640px) {
+    body.prices article.main section.enterprise .plan .summary,
+    body.prices article.main section.kidozen .plan .summary {
+      width: auto !important; } }
+  @media screen and (min-width: 480px) {
+    body.prices article.main section.enterprise .plan .summary br.opt,
+    body.prices article.main section.kidozen .plan .summary br.opt {
+      display: none; } }
+body.prices article.main section.enterprise .plan .summary {
+  width: 260px; }
+body.prices article.main section.kidozen .plan .summary {
+  width: 300px; }
 body.prices article.main .annotation {
   text-align: center;
   color: #999;
-  margin: 10px 0 40px;
+  margin: 10px 0;
   width: auto; }
-body.prices article.main .box-btn .btn {
-  min-width: 180px; }
-body.prices article.main .activation-code {
-  background-color: #f1f1f1;
-  border: 1px solid #dfdfdf;
-  border-radius: 2px;
-  margin: -371px 0 0 255px;
-  padding: 28px 340px 28px 28px;
-  position: relative; }
-  body.prices article.main .activation-code h2 {
-    font-size: 1.69rem;
-    margin-bottom: 16px; }
-  body.prices article.main .activation-code p {
-    line-height: 160%;
-    margin-bottom: 0; }
-  body.prices article.main .activation-code .btn-use-activation {
-    position: absolute;
-    bottom: 28px;
-    right: 28px;
-    height: 38px;
-    line-height: 39px;
-    font-size: 14px; }
-body.prices article.main .support-ticket {
-  margin: 0 0 0 255px;
-  padding: 10px 0 0; }
-  body.prices article.main .support-ticket .btn-changeplan {
-    display: block;
-    margin: 0 auto 30px;
-    width: 160px; }
-  body.prices article.main .support-ticket h2 {
-    font-size: 22px;
-    font-size: 1.69rem;
-    margin-bottom: 20px; }
-  body.prices article.main .support-ticket p {
-    line-height: 180%; }
-  body.prices article.main .support-ticket em {
-    font-weight: 700;
-    font-style: italic; }
-  body.prices article.main .support-ticket .ticket-list {
-    margin: 0 20px; }
-    body.prices article.main .support-ticket .ticket-list table {
-      border: 2px solid #bfbfbf;
-      border-left: none;
-      border-right: none;
-      box-sizing: border-box;
-      margin-bottom: 20px;
-      width: 100%; }
-      body.prices article.main .support-ticket .ticket-list table thead {
-        background-color: #eee;
-        text-align: left; }
-      body.prices article.main .support-ticket .ticket-list table th, body.prices article.main .support-ticket .ticket-list table td {
-        width: 25%;
-        padding: 6px 8px;
-        text-align: center; }
-        body.prices article.main .support-ticket .ticket-list table th:first-child, body.prices article.main .support-ticket .ticket-list table td:first-child {
-          text-align: left;
-          width: 50%; }
-      body.prices article.main .support-ticket .ticket-list table th {
-        font-size: 14px;
-        font-size: 1.07rem;
-        font-weight: 700; }
-      body.prices article.main .support-ticket .ticket-list table td {
-        font-size: 13px;
-        font-size: 1rem; }
-    body.prices article.main .support-ticket .ticket-list .ticket-caution li {
-      padding-bottom: 5px;
-      list-style-type: circle;
-      list-style-position: inside; }
+  body.prices article.main .annotation .btn {
+    display: inline-block;
+    margin-top: 40px;
+    min-width: 180px; }
 
 body.debugger .keyvisual {
   background: url(../img/debugger/keyvisual.jpg) no-repeat center bottom, url(../img/debugger/keyvisual_bg.png) repeat-x left bottom;
