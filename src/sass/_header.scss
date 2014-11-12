@@ -36,6 +36,7 @@ header.navbar {
     float: right;
     @media screen and (max-width: $break - 1px) {
       float: none;
+      margin-right: 0;
     }
   }
   .navbar-nav > li > a {

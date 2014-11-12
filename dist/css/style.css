@@ -132,9 +132,15 @@ img, iframe, object {
 section h1 {
   font-size: 40px;
   margin-bottom: 30px; }
+  @media screen and (max-width: 640px) {
+    section h1 {
+      font-size: 32px; } }
 section h2 {
   font-size: 32px;
   margin-bottom: 20px; }
+  @media screen and (max-width: 640px) {
+    section h2 {
+      font-size: 24px; } }
 section p {
   color: #666;
   word-break: break-all; }
@@ -156,12 +162,29 @@ article.main section {
   article.main section h1 {
     text-align: center; }
   article.main section p {
-    margin: 0 auto 30px;
+    line-height: 1.8;
+    margin: 0 auto 50px;
     text-align: left;
     width: 580px; }
     @media screen and (max-width: 580px) {
       article.main section p {
         width: 100%; } }
+
+.keyvisual {
+  height: 540px; }
+  @media screen and (max-width: 767px) {
+    .keyvisual {
+      height: auto; } }
+  .keyvisual h1 {
+    font-size: 54px; }
+    @media screen and (max-width: 640px) {
+      .keyvisual h1 {
+        font-size: 34px; } }
+  .keyvisual .btns .btn {
+    font-size: 24px;
+    font-weight: 400;
+    height: 64px;
+    line-height: 64px; }
 
 .box-full > * {
   -moz-box-sizing: border-box;
@@ -358,14 +381,11 @@ article.main section {
         font-weight: 300;
         font-size: 16px; }
 
-.examples-container {
+.box-examples {
   background: url(../img/index/examples_bg.jpg) no-repeat left top;
   background-size: cover;
   border-top: 1px solid #cdd1d6;
   border-bottom: 1px solid #cdd1d6;
-  height: 428px; }
-
-.box-examples {
   padding: 30px 5%;
   text-align: center; }
   .box-examples > h2 {
@@ -429,6 +449,26 @@ article.main section {
           line-height: 113px; }
           .box-awards ul li img {
             vertical-align: middle; } }
+
+.box-try {
+  padding: 140px 0; }
+  .box-try .btn {
+    font-size: 24px;
+    font-weight: 400;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 40px;
+    margin: 0 10px;
+    min-width: 240px; }
+  @media screen and (max-width: 640px) {
+    .box-try {
+      padding: 80px 0; }
+      .box-try .btn {
+        display: block;
+        margin: 0 auto 20px;
+        width: 80%; }
+        .box-try .btn:last-child {
+          margin-bottom: 0; } }
 
 .btn-orange, .btn-black {
   border: none;
@@ -586,7 +626,8 @@ header.navbar {
     float: right; }
     @media screen and (max-width: 766px) {
       header.navbar .navbar-collapse {
-        float: none; } }
+        float: none;
+        margin-right: 0; } }
   header.navbar .navbar-nav > li > a {
     color: #ffffff;
     padding: 16px 13px 14px; }
@@ -682,7 +723,8 @@ footer.common {
     vertical-align: middle; }
 
 body.home .keyvisual {
-  background: url(../img/index/keyvisual.jpg) no-repeat center center #126faa;
+  background: url(../img/index/keyvisual.jpg) no-repeat center center, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
+  background-color: #126faa;
   color: #ffffff;
   height: 540px;
   position: relative; }
@@ -1406,16 +1448,20 @@ body.debugger article.main .box-try {
 body.enterprise .keyvisual {
   background: url(../img/enterprise/keyvisual_2.jpg) no-repeat center bottom, #1e212e;
   color: #ffffff;
-  height: 540px;
-  padding-bottom: 0;
+  padding-bottom: 0px;
   position: relative; }
+  @media screen and (max-width: 640px) {
+    body.enterprise .keyvisual {
+      padding-bottom: 30px; } }
   body.enterprise .keyvisual h1 {
-    font-size: 54px;
     font-weight: 400;
-    line-height: 65px;
+    line-height: 1.2;
     margin-bottom: 10px;
     padding-top: 110px;
     text-align: left; }
+    @media screen and (max-width: 640px) {
+      body.enterprise .keyvisual h1 {
+        padding-top: 100px; } }
     body.enterprise .keyvisual h1 img {
       vertical-align: 4px; }
   body.enterprise .keyvisual p {
@@ -1423,27 +1469,19 @@ body.enterprise .keyvisual {
     text-align: left;
     width: 420px;
     word-break: break-all; }
-  body.enterprise .keyvisual div.box-try-left.box-btn {
+  body.enterprise .keyvisual .btns {
     text-align: left;
     padding: 50px 0 0; }
-    body.enterprise .keyvisual div.box-try-left.box-btn .btn {
+    @media screen and (max-width: 640px) {
+      body.enterprise .keyvisual .btns {
+        padding-top: 30px;
+        text-align: center; } }
+    body.enterprise .keyvisual .btns .btn {
       padding: 0 20px;
       min-width: 200px;
       margin: 0 15px 20px 0; }
 body.enterprise article.main section * + h2 {
   margin-top: 100px; }
-body.enterprise article.main section p {
-  text-align: left; }
-body.enterprise article.main .box-try {
-  padding: 140px 0; }
-  body.enterprise article.main .box-try .btn {
-    font-size: 24px;
-    font-weight: 400;
-    height: 64px;
-    line-height: 64px;
-    padding: 0 40px;
-    margin: 0 10px;
-    min-width: 240px; }
 
 body.cloud .keyvisual {
   background: url(../img/cloud/keyvisual.jpg) no-repeat center bottom, url(../img/cloud/keyvisual_bg.png) repeat-x left bottom;
@@ -1451,19 +1489,26 @@ body.cloud .keyvisual {
   height: 650px;
   padding-bottom: 0;
   position: relative; }
+  @media screen and (max-width: 767px) {
+    body.cloud .keyvisual {
+      height: auto; } }
   body.cloud .keyvisual h1 {
     font-size: 54px;
     font-weight: 400;
-    line-height: 72px;
+    line-height: 1.3;
     margin-bottom: 10px;
     padding-top: 140px;
     text-align: left; }
+    @media screen and (max-width: 767px) {
+      body.cloud .keyvisual h1 {
+        font-size: 36px;
+        padding-top: 110px; } }
     body.cloud .keyvisual h1 img.num {
       vertical-align: -19px; }
     body.cloud .keyvisual h1 span {
       display: block;
       font-size: 30px;
-      line-height: 45px;
+      line-height: 1.5;
       margin-top: 22px; }
   body.cloud .keyvisual p {
     font-size: 20px;
@@ -1490,70 +1535,60 @@ body.cloud article.main section.summary {
     margin-left: 0;
     width: 370px;
     text-align: left; }
-body.cloud article.main section.workflow > ul {
-  width: 100%;
-  background: url(../img/cloud/workflow.png) no-repeat center top;
-  padding-top: 141px;
-  font-size: 0px;
-  text-align: center;
-  margin-bottom: 60px; }
-  body.cloud article.main section.workflow > ul > li {
-    text-align: center;
-    font-weight: 600;
-    color: #333;
-    font-size: 16px;
-    height: 36px;
-    width: 172px;
-    margin-right: 48px;
-    display: inline-block;
-    position: relative;
-    white-space: nowrap;
-    overflow: visible; }
-    body.cloud article.main section.workflow > ul > li:last-child {
-      margin-right: 0px; }
-    body.cloud article.main section.workflow > ul > li:after {
-      content: '';
-      height: 2px;
-      width: 170px;
-      background-color: white;
-      border: 1px solid black;
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      bottom: 0px; }
-  body.cloud article.main section.workflow > ul > li.workflow-action-coding:after {
-    background-color: #7daeff;
-    border-color: #0065ff; }
-  body.cloud article.main section.workflow > ul > li.workflow-action-debug:after {
-    background-color: #917dff;
-    border-color: #2300ff; }
-  body.cloud article.main section.workflow > ul > li.workflow-action-build:after {
-    background-color: #c99dde;
-    border-color: #9340bf; }
-  body.cloud article.main section.workflow > ul > li.workflow-action-store:after {
-    background-color: #fabe81;
-    border-color: #f67b08; }
-@media screen and (max-width: 767px) {
-  body.cloud article.main section.workflow {
-    box-sizing: border-box;
-    padding: 30px 3%;
-    width: 100%; }
-    body.cloud article.main section.workflow > ul {
-      background: none;
-      padding-top: 0; }
-      body.cloud article.main section.workflow > ul > li {
-        background: none no-repeat center top;
-        display: block;
-        margin: 0 auto 34px !important;
-        padding-top: 141px; }
-        body.cloud article.main section.workflow > ul > li.workflow-action-coding {
-          background-image: url(../img/cloud/workflow_1.png); }
-        body.cloud article.main section.workflow > ul > li.workflow-action-debug {
-          background-image: url(../img/cloud/workflow_2.png); }
-        body.cloud article.main section.workflow > ul > li.workflow-action-build {
-          background-image: url(../img/cloud/workflow_3.png); }
-        body.cloud article.main section.workflow > ul > li.workflow-action-store {
-          background-image: url(../img/cloud/workflow_4.png); } }
+    @media screen and (max-width: 767px) {
+      body.cloud article.main section.summary p {
+        width: 100%; } }
+body.cloud article.main section.workflow {
+  border-bottom: none; }
+  body.cloud article.main section.workflow > ol {
+    background: url(../img/cloud/workflow.png) no-repeat center top;
+    background-size: 86%;
+    padding-top: 17%; }
+    body.cloud article.main section.workflow > ol:after {
+      content: "";
+      clear: both;
+      display: block; }
+    body.cloud article.main section.workflow > ol > li {
+      border-bottom: 2px solid transparent;
+      color: #333;
+      float: left;
+      font-weight: 600;
+      font-size: 16px;
+      margin: 0 2%;
+      position: relative;
+      text-align: center;
+      white-space: nowrap;
+      width: 21%; }
+      body.cloud article.main section.workflow > ol > li:nth-child(1) {
+        border-color: #0065ff; }
+      body.cloud article.main section.workflow > ol > li:nth-child(2) {
+        border-color: #2300ff; }
+      body.cloud article.main section.workflow > ol > li:nth-child(3) {
+        border-color: #9340bf; }
+      body.cloud article.main section.workflow > ol > li:nth-child(4) {
+        border-color: #f67b08; }
+    @media screen and (max-width: 767px) {
+      body.cloud article.main section.workflow > ol {
+        background: none;
+        padding-top: 0; }
+        body.cloud article.main section.workflow > ol > li {
+          background: none no-repeat center top;
+          display: block;
+          font-size: 12px;
+          padding-top: 141px; }
+          body.cloud article.main section.workflow > ol > li:nth-child(1) {
+            background-image: url(../img/cloud/workflow_1.png); }
+          body.cloud article.main section.workflow > ol > li:nth-child(2) {
+            background-image: url(../img/cloud/workflow_2.png); }
+          body.cloud article.main section.workflow > ol > li:nth-child(3) {
+            background-image: url(../img/cloud/workflow_3.png); }
+          body.cloud article.main section.workflow > ol > li:nth-child(4) {
+            background-image: url(../img/cloud/workflow_4.png); } }
+    @media screen and (max-width: 640px) {
+      body.cloud article.main section.workflow > ol > li {
+        float: none;
+        margin: 0 auto 30px;
+        width: 30%; } }
 body.cloud article.main .box-try {
   padding: 20px 0 0; }
   body.cloud article.main .box-try .btn {
