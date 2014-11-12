@@ -190,7 +190,8 @@ article.main section {
       height: auto; } }
   .keyvisual h1 {
     font-size: 54px;
-    line-height: 1.18; }
+    line-height: 1.18;
+    text-align: left; }
     @media screen and (max-width: 640px) {
       .keyvisual h1 {
         font-size: 34px; } }
@@ -1016,24 +1017,21 @@ body.kidozen article.main .box-try-mid {
 body.localkit .keyvisual {
   background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
   color: #000;
-  height: 540px;
   padding-bottom: 0;
   position: relative; }
+  @media screen and (max-width: 767px) {
+    body.localkit .keyvisual {
+      padding-bottom: 40px; } }
   body.localkit .keyvisual h1 {
-    font-size: 54px;
     font-weight: 400;
-    line-height: 65px;
     margin-bottom: 10px;
     padding-top: 140px;
-    text-align: left;
     text-shadow: 0 0 10px white; }
+    @media screen and (max-width: 767px) {
+      body.localkit .keyvisual h1 {
+        padding-top: 100px; } }
     body.localkit .keyvisual h1 img {
       vertical-align: 4px; }
-  body.localkit .keyvisual p {
-    font-size: 20px;
-    text-align: left;
-    width: 420px;
-    word-break: break-all; }
 body.localkit article.main section {
   border-bottom: 1px solid #ccc;
   padding: 90px 0 80px; }
@@ -1049,15 +1047,9 @@ body.localkit article.main section {
     background: url(../img/localkit/img_3.png) no-repeat center 330px;
     background-size: 110%;
     padding-bottom: 50%; }
-body.localkit article.main .box-try {
-  padding: 140px 0; }
-  body.localkit article.main .box-try .btn {
-    font-size: 24px;
-    height: 64px;
-    line-height: 64px;
-    padding: 0 40px;
-    margin: 0 10px;
-    min-width: 210px; }
+body.localkit article.main .box-try .btn {
+  padding: 0 40px;
+  min-width: 210px; }
 
 body.support .keyvisual {
   background: url(../img/support/keyvisual.jpg) no-repeat center bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
