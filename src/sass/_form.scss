@@ -26,20 +26,16 @@
 }
 
 %flat-btn {
-  $c: #ffffff;
-  background-color: #505763;
-  border: 1px solid #373d47;
   border-radius: 3px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: $c;
+  cursor: pointer;
   display: inline-block;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 1px;
-  padding: 0 14px;
   margin: 0;
-  background-color: #ff8b24;
+  padding: 0 14px;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -47,30 +43,31 @@
   line-height: 41px;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
+
   &:hover {
-    text-shadow: none;
-    color: $c;
-    cursor: pointer;
-    opacity: 0.85;
     text-decoration: none;
   }
-  &:active, &:focus {
+  &:focus {
     outline: none;
   }
   &:active {
     opacity: 1;
+    outline: none;
   }
   &[disabled] {
+    cursor: default;
     opacity: 0.4;
     pointer-events: none;
     &:hover {
-      opacity: 0.2;
+      opacity: 0.4;
     }
     &:active {
-      opacity: 0.2;
+      opacity: 0.4;
     }
   }
 }
+
+$hover-intensity: 5;
 
 .btn-blue {
   @extend %flat-btn;
@@ -79,6 +76,10 @@
   color: #fff;
   font-weight: 400;
   text-shadow: none;
+  &:hover {
+    background-color: lighten(#468fff, $hover-intensity);
+    color: #fff;
+  }
 }
 
 .btn-green {
@@ -88,6 +89,10 @@
   color: #fff;
   font-weight: 400;
   text-shadow: none;
+  &:hover {
+    background-color: lighten(#8bcc37, $hover-intensity);
+    color: #fff;
+  }
 }
 
 .btn-white {
@@ -96,7 +101,7 @@
   border: 1px solid #c9c9c9;
   color: #505763;
   &:hover {
-    color: #505763;
+    color: lighten(#505763, $hover-intensity);
   }
 }
 
@@ -104,6 +109,20 @@
   @extend %flat-btn;
   background-color: #4d5868;
   color: #ffffff;
+  &:hover {
+    background-color: lighten(#4d5868, $hover-intensity + 3);
+    color: #ffffff;
+  }
+}
+
+.btn-line-white {
+  @extend %flat-btn;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: #ffffff;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .btn-orange {
@@ -117,6 +136,7 @@
   }
   &:not([disabled]) {
     &:hover {
+      background-color: lighten(#ff8b24, $hover-intensity);
       border-color: #ff8f4b;
       opacity: 0.85;
     }
@@ -147,15 +167,5 @@
   }
   &:active {
     opacity: 1;
-  }
-}
-
-.btn-line-white {
-  @extend %flat-btn;
-	background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  color: #ffffff;
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.3);
   }
 }

@@ -509,19 +509,16 @@ article.main section {
     filter: alpha(opacity=30); }
 
 .btn-blue, .btn-green, .btn-white, .btn-darkgray, .btn-line-white {
-  background-color: #505763;
-  border: 1px solid #373d47;
   border-radius: 3px;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  color: white;
+  cursor: pointer;
   display: inline-block;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 1px;
-  padding: 0 14px;
   margin: 0;
-  background-color: #ff8b24;
+  padding: 0 14px;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -530,22 +527,20 @@ article.main section {
   text-decoration: none;
   -webkit-font-smoothing: antialiased; }
   .btn-blue:hover, .btn-green:hover, .btn-white:hover, .btn-darkgray:hover, .btn-line-white:hover {
-    text-shadow: none;
-    color: white;
-    cursor: pointer;
-    opacity: 0.85;
     text-decoration: none; }
-  .btn-blue:active, .btn-green:active, .btn-white:active, .btn-darkgray:active, .btn-line-white:active, .btn-blue:focus, .btn-green:focus, .btn-white:focus, .btn-darkgray:focus, .btn-line-white:focus {
+  .btn-blue:focus, .btn-green:focus, .btn-white:focus, .btn-darkgray:focus, .btn-line-white:focus {
     outline: none; }
   .btn-blue:active, .btn-green:active, .btn-white:active, .btn-darkgray:active, .btn-line-white:active {
-    opacity: 1; }
+    opacity: 1;
+    outline: none; }
   [disabled].btn-blue, [disabled].btn-green, [disabled].btn-white, [disabled].btn-darkgray, [disabled].btn-line-white {
+    cursor: default;
     opacity: 0.4;
     pointer-events: none; }
     [disabled].btn-blue:hover, [disabled].btn-green:hover, [disabled].btn-white:hover, [disabled].btn-darkgray:hover, [disabled].btn-line-white:hover {
-      opacity: 0.2; }
+      opacity: 0.4; }
     [disabled].btn-blue:active, [disabled].btn-green:active, [disabled].btn-white:active, [disabled].btn-darkgray:active, [disabled].btn-line-white:active {
-      opacity: 0.2; }
+      opacity: 0.4; }
 
 .btn-blue {
   background-color: #468fff;
@@ -553,6 +548,9 @@ article.main section {
   color: #fff;
   font-weight: 400;
   text-shadow: none; }
+  .btn-blue:hover {
+    background-color: #5f9eff;
+    color: #fff; }
 
 .btn-green {
   background-color: #8bcc37;
@@ -560,17 +558,30 @@ article.main section {
   color: #fff;
   font-weight: 400;
   text-shadow: none; }
+  .btn-green:hover {
+    background-color: #97d14b;
+    color: #fff; }
 
 .btn-white {
   background-color: #ffffff;
   border: 1px solid #c9c9c9;
   color: #505763; }
   .btn-white:hover {
-    color: #505763; }
+    color: #5b6371; }
 
 .btn-darkgray {
   background-color: #4d5868;
   color: #ffffff; }
+  .btn-darkgray:hover {
+    background-color: #5e6c7f;
+    color: #ffffff; }
+
+.btn-line-white {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  color: #ffffff; }
+  .btn-line-white:hover {
+    background-color: rgba(255, 255, 255, 0.3); }
 
 .btn-orange {
   background-color: #ff8b24;
@@ -580,6 +591,7 @@ article.main section {
   .btn-orange[disabled] {
     opacity: 0.2; }
   .btn-orange:not([disabled]):hover {
+    background-color: #ff993e;
     border-color: #ff8f4b;
     opacity: 0.85; }
   .btn-orange:not([disabled]):active {
@@ -601,13 +613,6 @@ article.main section {
     opacity: 0.85; }
   .btn-black:active {
     opacity: 1; }
-
-.btn-line-white {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  color: #ffffff; }
-  .btn-line-white:hover {
-    background-color: rgba(255, 255, 255, 0.3); }
 
 header.navbar {
   position: absolute;
@@ -980,39 +985,37 @@ body.kidozen .keyvisual {
     line-height: 64px; }
     body.kidozen .keyvisual .btns .btn {
       width: 175px;
-      height: 54px;
-      line-height: 54px; }
+      height: 56px;
+      line-height: 56px;
+      padding: 0 30px;
+      margin: 0 10px; }
 body.kidozen article.main section {
   border-bottom: 1px solid #ccc;
   padding: 90px 0 80px; }
   body.kidozen article.main section:first-child {
     padding-top: 140px; }
-  body.kidozen article.main section h1 {
-    text-align: center; }
-  body.kidozen article.main section p {
-    text-align: left;
-    width: 640px; }
 body.kidozen article.main .lucy-in-the-sky {
-  background: url(../img/kidozen/img_3.jpg) no-repeat center top; }
+  background: url(../img/kidozen/img_3.jpg) no-repeat center top;
+  background-size: 218%; }
+  @media screen and (max-width: 767px) {
+    body.kidozen article.main .lucy-in-the-sky {
+      background-position: center 14%; } }
   body.kidozen article.main .lucy-in-the-sky section.baas {
     min-height: 840px; }
-body.kidozen article.main .box-try {
-  padding: 140px 0; }
-  body.kidozen article.main .box-try .btn {
-    font-size: 24px;
-    height: 64px;
-    line-height: 64px;
-    padding: 0 40px;
-    margin: 0 10px;
-    min-width: 210px; }
-body.kidozen article.main .box-try-mid {
-  padding: 140px 0; }
-  body.kidozen article.main .box-try-mid .btn {
-    font-size: 24px;
-    height: 56px;
-    line-height: 56px;
-    padding: 0 30px;
-    margin: 0 10px; }
+    @media screen and (max-width: 640px) {
+      body.kidozen article.main .lucy-in-the-sky section.baas {
+        min-height: 620px; } }
+body.kidozen article.main .box-try .btn {
+  font-size: 24px;
+  height: 64px;
+  line-height: 64px;
+  padding: 0 40px;
+  margin: 0 10px;
+  min-width: 210px; }
+  @media screen and (max-width: 640px) {
+    body.kidozen article.main .box-try .btn {
+      display: block;
+      margin: 0 auto 10px; } }
 
 body.localkit .keyvisual {
   background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
