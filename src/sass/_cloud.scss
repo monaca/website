@@ -6,20 +6,27 @@ body.cloud {
     height: 650px;
     padding-bottom: 0;
     position: relative;
+    @media screen and (max-width: $break) {
+        height: auto;
+    }
     h1 {
       font-size: 54px;
       font-weight: 400;
-      line-height: 72px;
+      line-height: 1.3;
       margin-bottom: 10px;
       padding-top: 140px;
       text-align: left;
+      @media screen and (max-width: $break) {
+          font-size: 36px;
+          padding-top: 110px;
+      }
       img.num {
         vertical-align: -19px;
       }
       span {
         display: block;
         font-size: 30px;
-        line-height: 45px;
+        line-height: 1.5;
         margin-top: 22px;
       }
     }
@@ -56,91 +63,69 @@ body.cloud {
           margin-left: 0;
           width: 370px;
           text-align: left;
+          @media screen and (max-width: $break) {
+              width: 100%;
+          }
         }
       }
       &.workflow {
-        > ul {
-          width: 100%;
+        border-bottom: none;
+        > ol {
           background: url(../img/cloud/workflow.png) no-repeat center top;
-          padding-top: 141px;
-          font-size: 0px;
-          text-align: center;
-          margin-bottom: 60px;
-
+          background-size: 86%;
+          padding-top: 17%;
+          @include clearfix;
           > li {
-            text-align: center;
-            font-weight: 600;
+            border-bottom: 2px solid transparent;
             color: #333;
+            float: left;
+            font-weight: 600;
             font-size: 16px;
-            height: 36px;
-            width: 172px;
-            margin-right: 48px;
-            display: inline-block;
+            margin: 0 2%;
             position: relative;
+            text-align: center;
             white-space: nowrap;
-            overflow: visible;
-
-            &:last-child {
-              margin-right: 0px;
+            width: 21%;
+            &:nth-child(1) {
+              border-color: #0065ff;
             }
-
-            &:after {
-              content: '';
-              height: 2px;
-              width: 170px;
-              background-color: white;
-              border: 1px solid black;
-              position: absolute;
-              left: 0px;
-              right: 0px;
-              bottom: 0px;
+            &:nth-child(2) {
+              border-color: #2300ff;
+            }
+            &:nth-child(3) {
+              border-color: #9340bf;
+            }
+            &:nth-child(4) {
+              border-color: #f67b08;
             }
           }
-
-          > li.workflow-action-coding:after {
-            background-color: #7daeff;
-            border-color: #0065ff;
-          }
-
-          > li.workflow-action-debug:after {
-            background-color: #917dff;
-            border-color: #2300ff;
-          }
-
-          > li.workflow-action-build:after {
-            background-color: #c99dde;
-            border-color: #9340bf;
-          }
-
-          > li.workflow-action-store:after {
-            background-color: #fabe81;
-            border-color: #f67b08;
-          }
-        }
-        @media screen and (max-width: $break) {
-          box-sizing: border-box;
-          padding: 30px 3%;
-          width: 100%;
-          > ul {
+          @media screen and (max-width: $break) {
             background: none;
             padding-top: 0;
             > li {
               background: none no-repeat center top;
               display: block;
-              margin: 0 auto 34px !important;
+              font-size: 12px;
               padding-top: 141px;
-              &.workflow-action-coding {
+              &:nth-child(1) {
                 background-image: url(../img/cloud/workflow_1.png);
               }
-              &.workflow-action-debug {
+              &:nth-child(2) {
                 background-image: url(../img/cloud/workflow_2.png);
               }
-              &.workflow-action-build {
+              &:nth-child(3) {
                 background-image: url(../img/cloud/workflow_3.png);
               }
-              &.workflow-action-store {
+              &:nth-child(4) {
                 background-image: url(../img/cloud/workflow_4.png);
               }
+            }
+          }
+          @media screen and (max-width: $break-xs) {
+            > li {
+              float: none;
+              margin: 0 auto 30px;
+              width: 30%;
             }
           }
         }

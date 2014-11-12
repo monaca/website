@@ -1,3 +1,24 @@
+.keyvisual {
+  height: 540px;
+  @media screen and (max-width: $break) {
+    height: auto;
+  }
+  h1 {
+    font-size: 54px;
+    @media screen and (max-width: $break-xs) {
+      font-size: 34px;
+    }
+  }
+  .btns {
+    .btn {
+      font-size: 24px;
+      font-weight: 400;
+      height: 64px;
+      line-height: 64px;
+    }
+  }
+}
+
 .box-full {
   > * {
     -moz-box-sizing: border-box;
@@ -224,15 +245,11 @@
   }
 }
 
-.examples-container {
+.box-examples {
   background: url(../img/index/examples_bg.jpg) no-repeat left top;
   background-size: cover;
   border-top: 1px solid #cdd1d6;
   border-bottom: 1px solid #cdd1d6;
-  height: 428px;
-}
-
-.box-examples {
   padding: 30px 5%;
   text-align: center;
   > h2 {
@@ -301,6 +318,30 @@
         img {
           vertical-align: middle;
         }
+      }
+    }
+  }
+}
+
+.box-try {
+  padding: 140px 0;
+  .btn {
+    font-size: 24px;
+    font-weight: 400;
+    height: 64px;
+    line-height: 64px;
+    padding: 0 40px;
+    margin: 0 10px;
+    min-width: 240px;
+  }
+  @media screen and (max-width: $break-xs) {
+    padding: 80px 0;
+    .btn {
+      display: block;
+      margin: 0 auto 20px;
+      width: 80%;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
