@@ -5,6 +5,7 @@
   }
   h1 {
     font-size: 54px;
+    line-height: 1.18;
     @media screen and (max-width: $break-xs) {
       font-size: 34px;
     }

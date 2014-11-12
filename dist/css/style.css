@@ -161,6 +161,15 @@ article.main section {
       width: 100%; } }
   article.main section h1 {
     text-align: center; }
+    @media screen and (max-width: 767px) {
+      article.main section h1 {
+        padding-left: 5%;
+        padding-right: 5%; } }
+  @media screen and (max-width: 767px) {
+    article.main section h2,
+    article.main section h3 {
+      padding-left: 5%;
+      padding-right: 5%; } }
   article.main section p {
     line-height: 1.8;
     margin: 0 auto 50px;
@@ -168,6 +177,10 @@ article.main section {
     width: 580px; }
     @media screen and (max-width: 580px) {
       article.main section p {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 5%;
+        padding-right: 5%;
         width: 100%; } }
 
 .keyvisual {
@@ -176,7 +189,8 @@ article.main section {
     .keyvisual {
       height: auto; } }
   .keyvisual h1 {
-    font-size: 54px; }
+    font-size: 54px;
+    line-height: 1.18; }
     @media screen and (max-width: 640px) {
       .keyvisual h1 {
         font-size: 34px; } }
@@ -1393,30 +1407,36 @@ body.prices article.main .support-ticket {
 body.debugger .keyvisual {
   background: url(../img/debugger/keyvisual.jpg) no-repeat center bottom, url(../img/debugger/keyvisual_bg.png) repeat-x left bottom;
   color: #000;
-  height: 540px;
-  padding-bottom: 0;
-  position: relative; }
+  padding-bottom: 0; }
+  @media screen and (max-width: 640px) {
+    body.debugger .keyvisual {
+      padding-bottom: 20px; } }
   body.debugger .keyvisual h1 {
-    font-size: 54px;
     font-weight: 400;
-    line-height: 65px;
     margin-bottom: 10px;
     padding-top: 140px;
     text-align: left; }
+    @media screen and (min-width: 1280px) {
+      body.debugger .keyvisual h1 br.opt {
+        display: none; } }
     body.debugger .keyvisual h1 img {
       vertical-align: 4px; }
-  body.debugger .keyvisual p {
-    font-size: 20px;
-    text-align: left;
-    width: 420px;
-    word-break: break-all; }
   body.debugger .keyvisual .btns {
+    font-size: 20px;
     line-height: 64px;
     padding-top: 40px;
-    width: 500px; }
+    text-align: left;
+    width: 500px;
+    word-break: break-all; }
     body.debugger .keyvisual .btns img {
       margin-right: 10px;
       width: 135px; }
+    @media screen and (max-width: 500px) {
+      body.debugger .keyvisual .btns {
+        width: 100%; }
+        body.debugger .keyvisual .btns img {
+          display: block;
+          margin: 0 auto 10px; } }
 body.debugger article.main section h2 {
   color: #666;
   font-size: 30px; }
@@ -1432,18 +1452,31 @@ body.debugger article.main section.usb {
   padding-bottom: 52%; }
 body.debugger article.main section.collaboration {
   padding: 90px 0; }
+  @media screen and (max-width: 767px) {
+    body.debugger article.main section.collaboration h1 + p {
+      margin-bottom: 20px; } }
   body.debugger article.main section.collaboration .internet {
-    background: url(../img/debugger/img_7.jpg) no-repeat center 240px;
+    background: url(../img/debugger/img_7.jpg) no-repeat center 80%;
     background-size: 112%;
     border-bottom: none;
     padding: 60px 5% 92%; }
+    @media screen and (max-width: 767px) {
+      body.debugger article.main section.collaboration .internet {
+        padding-left: 0;
+        padding-right: 0; } }
   body.debugger article.main section.collaboration .communication {
     padding-top: 0; }
 body.debugger article.main .box-try {
   padding: 40px 0; }
+  body.debugger article.main .box-try p {
+    margin-bottom: 40px; }
   body.debugger article.main .box-try a img {
     margin: 0 10px;
     width: 135px; }
+    @media screen and (max-width: 500px) {
+      body.debugger article.main .box-try a img {
+        display: block;
+        margin: 0 auto 10px; } }
 
 body.enterprise .keyvisual {
   background: url(../img/enterprise/keyvisual_2.jpg) no-repeat center bottom, #1e212e;
