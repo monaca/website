@@ -121,6 +121,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif; }
 
 body {
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
   min-width: 1170px; }
   @media screen and (max-width: 1300px) {
     body {
@@ -131,15 +132,25 @@ img, iframe, object {
 
 section h1 {
   font-size: 40px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  -webkit-font-smoothing: antialiased; }
   @media screen and (max-width: 640px) {
     section h1 {
       font-size: 32px; } }
 section h2 {
   font-size: 32px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  -webkit-font-smoothing: antialiased; }
   @media screen and (max-width: 640px) {
     section h2 {
+      font-size: 20px; } }
+section h3 {
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 34px;
+  -webkit-font-smoothing: antialiased; }
+  @media screen and (max-width: 640px) {
+    section h3 {
       font-size: 20px; } }
 section p {
   color: #666;
@@ -615,14 +626,11 @@ header.navbar {
   position: absolute;
   top: 0;
   left: 0;
+  border-width: 0px;
   border-radius: 0;
   opacity: 0.9;
-  min-width: 1170px;
+  width: 100%;
   z-index: 100; }
-  @media screen and (max-width: 1300px) {
-    header.navbar {
-      width: 100%;
-      min-width: 0; } }
   header.navbar .container {
     width: 1170px; }
     @media screen and (max-width: 1300px) {
@@ -647,26 +655,26 @@ header.navbar {
         margin-right: 0; } }
   header.navbar .navbar-nav > li > a {
     color: #ffffff;
-    padding: 16px 13px 14px; }
-    @media screen and (max-width: 1170px) {
+    padding: 16px 13px 14px;
+    -webkit-font-smoothing: antialiased; }
+    @media screen and (max-width: 1120px) {
       header.navbar .navbar-nav > li > a {
         padding-left: 10px;
         padding-right: 10px; } }
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1050px) {
       header.navbar .navbar-nav > li > a {
         font-size: 13px; }
         header.navbar .navbar-nav > li > a .opt {
           display: none; } }
-    @media screen and (max-width: 1000px) {
-      header.navbar .navbar-nav > li > a {
-        font-size: 12px; } }
     @media screen and (max-width: 940px) {
       header.navbar .navbar-nav > li > a {
-        padding-left: 5px;
-        padding-right: 5px; } }
+        font-size: 12px; } }
+    @media screen and (max-width: 900px) {
+      header.navbar .navbar-nav > li > a {
+        padding-left: 8px;
+        padding-right: 8px; } }
     @media screen and (max-width: 840px) {
       header.navbar .navbar-nav > li > a {
-        font-size: 11px;
         padding-left: 4px;
         padding-right: 4px; } }
     @media screen and (max-width: 767px) {
@@ -922,13 +930,6 @@ body.home .features {
     @media screen and (max-width: 640px) {
       body.home .features h2 {
         font-size: 32px; } }
-  body.home .features h3 {
-    font-size: 30px;
-    font-weight: 400;
-    margin-bottom: 34px; }
-    @media screen and (max-width: 640px) {
-      body.home .features h3 {
-        font-size: 20px; } }
   body.home .features li {
     margin-bottom: 100px; }
   body.home .features p {

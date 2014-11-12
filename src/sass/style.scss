@@ -141,6 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
   min-width: $width;
   @media screen and (max-width: $break-xl) {
     min-width: 0;
@@ -155,6 +156,7 @@ section {
   h1 {
     font-size: 40px;
     margin-bottom: 30px;
+    -webkit-font-smoothing: antialiased;
     @media screen and (max-width: $break-xs) {
         font-size: 32px;
     }
@@ -162,6 +164,16 @@ section {
   h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    -webkit-font-smoothing: antialiased;
+    @media screen and (max-width: $break-xs) {
+      font-size: 20px;
+    }
+  }
+  h3 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 34px;
+    -webkit-font-smoothing: antialiased;
     @media screen and (max-width: $break-xs) {
       font-size: 20px;
     }

@@ -2,14 +2,11 @@ header.navbar {
   position: absolute;
   top: 0;
   left: 0;
+  border-width: 0px;
   border-radius: 0;
   opacity: 0.9;
-  min-width: $width;
+  width: 100%;
   z-index: 100;
-  @media screen and (max-width: $break-xl) {
-    width: 100%;
-    min-width: 0;
-  }
   .container {
     width: $width;
     @media screen and (max-width: $break-xl) {
@@ -42,25 +39,25 @@ header.navbar {
   .navbar-nav > li > a {
     color: #ffffff;
     padding: 16px 13px 14px;
-    @media screen and (max-width: 1170px) {
+    -webkit-font-smoothing: antialiased;
+    @media screen and (max-width: 1120px) {
       padding-left: 10px;
       padding-right: 10px;
     }
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1050px) {
       font-size: 13px;
       .opt {
         display: none;
       }
     }
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 940px) {
       font-size: 12px;
     }
-    @media screen and (max-width: 940px) {
-      padding-left: 5px;
-      padding-right: 5px;
+    @media screen and (max-width: 900px) {
+      padding-left: 8px;
+      padding-right: 8px;
     }
     @media screen and (max-width: 840px) {
-      font-size: 11px;
       padding-left: 4px;
       padding-right: 4px;
     }
