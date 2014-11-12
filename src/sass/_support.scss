@@ -3,17 +3,18 @@ body.support {
   .keyvisual {
     background: url(../img/support/keyvisual.jpg) no-repeat center bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
     color: #000;
-    height: 540px;
     padding-bottom: 0;
     position: relative;
     h1 {
-      font-size: 54px;
       font-weight: 400;
-      line-height: 65px;
       margin-bottom: 10px;
       padding-top: 140px;
       text-align: left;
-			text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+      text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+      @media screen and (max-width: $break) {
+        padding-top: 100px;
+        padding-bottom: 40px;
+      }
       img {
         vertical-align: 4px;
       }
@@ -32,7 +33,8 @@ body.support {
   article.main {
     section {
       border-bottom: 1px solid #ccc;
-      padding: 90px 0 80px;
+      padding-top: 90px;
+      padding-bottom: 80px;
       &:first-child {
         padding-top: 140px;
       }
@@ -41,8 +43,6 @@ body.support {
       }
       p {
         margin-bottom: 30px;
-        text-align: left;
-        width: 580px;
       }
       &.tech {
         @include clearfix;
@@ -52,8 +52,11 @@ body.support {
         .alignright {
           float: right;
           margin: 0 0 40px 40px;
+          max-width: 52%;
           @media screen and (max-width: $break) {
-            width: 50%;
+            float: none;
+            margin-left: 0;
+            max-width: 100%;
           }
         }
         .tech-cont {
@@ -67,16 +70,11 @@ body.support {
       &.forum {
         background: url(../img/support/img_4.jpg) no-repeat center 330px;
         min-height: 670px;
-      }
-    }
-    .box-try {
-      padding: 140px 0;
-      .btn {
-        font-size: 24px;
-        height: 64px;
-        line-height: 64px;
-        padding: 0 40px;
-        margin: 0 10px;
+        @media screen and (max-width: $break-xs) {
+          background-size: 160%;
+          background-position: center bottom;
+          min-height: 600px;
+        }
       }
     }
   }

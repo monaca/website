@@ -1055,17 +1055,18 @@ body.localkit article.main .box-try .btn {
 body.support .keyvisual {
   background: url(../img/support/keyvisual.jpg) no-repeat center bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
   color: #000;
-  height: 540px;
   padding-bottom: 0;
   position: relative; }
   body.support .keyvisual h1 {
-    font-size: 54px;
     font-weight: 400;
-    line-height: 65px;
     margin-bottom: 10px;
     padding-top: 140px;
     text-align: left;
     text-shadow: 0 0 10px white; }
+    @media screen and (max-width: 767px) {
+      body.support .keyvisual h1 {
+        padding-top: 100px;
+        padding-bottom: 40px; } }
     body.support .keyvisual h1 img {
       vertical-align: 4px; }
     body.support .keyvisual h1 span {
@@ -1077,15 +1078,14 @@ body.support .keyvisual {
     word-break: break-all; }
 body.support article.main section {
   border-bottom: 1px solid #ccc;
-  padding: 90px 0 80px; }
+  padding-top: 90px;
+  padding-bottom: 80px; }
   body.support article.main section:first-child {
     padding-top: 140px; }
   body.support article.main section h1 {
     text-align: center; }
   body.support article.main section p {
-    margin-bottom: 30px;
-    text-align: left;
-    width: 580px; }
+    margin-bottom: 30px; }
   body.support article.main section.tech:after {
     content: "";
     clear: both;
@@ -1094,10 +1094,13 @@ body.support article.main section {
     width: auto; }
   body.support article.main section.tech .alignright {
     float: right;
-    margin: 0 0 40px 40px; }
+    margin: 0 0 40px 40px;
+    max-width: 52%; }
     @media screen and (max-width: 767px) {
       body.support article.main section.tech .alignright {
-        width: 50%; } }
+        float: none;
+        margin-left: 0;
+        max-width: 100%; } }
   body.support article.main section.tech .tech-cont {
     padding-top: 60px;
     text-align: left; }
@@ -1107,14 +1110,11 @@ body.support article.main section {
   body.support article.main section.forum {
     background: url(../img/support/img_4.jpg) no-repeat center 330px;
     min-height: 670px; }
-body.support article.main .box-try {
-  padding: 140px 0; }
-  body.support article.main .box-try .btn {
-    font-size: 24px;
-    height: 64px;
-    line-height: 64px;
-    padding: 0 40px;
-    margin: 0 10px; }
+    @media screen and (max-width: 640px) {
+      body.support article.main section.forum {
+        background-size: 160%;
+        background-position: center bottom;
+        min-height: 600px; } }
 
 body.prices article.main > h1 {
   font-size: 40px;
