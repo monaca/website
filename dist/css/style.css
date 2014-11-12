@@ -955,18 +955,16 @@ body.home .box-try {
 
 body.kidozen .keyvisual {
   background: url(../img/kidozen/keyvisual.png) no-repeat center bottom, url(../img/kidozen/keyvisual_bg.png) repeat-x left bottom;
-  background-size: contain auto;
   color: #000;
-  height: 590px;
-  padding-bottom: 0;
-  position: relative; }
+  height: 590px; }
+  @media screen and (max-width: 767px) {
+    body.kidozen .keyvisual {
+      height: auto;
+      padding-bottom: 40px; } }
   body.kidozen .keyvisual h1 {
-    font-size: 54px;
     font-weight: 400;
-    line-height: 68px;
     margin-bottom: 10px;
-    padding-top: 110px;
-    text-align: left; }
+    padding-top: 110px; }
     body.kidozen .keyvisual h1 span {
       color: #d70101; }
   body.kidozen .keyvisual p {
@@ -974,21 +972,21 @@ body.kidozen .keyvisual {
     text-align: left;
     width: 420px;
     word-break: break-all; }
-  body.kidozen .keyvisual div.box-try-mid.box-btn {
-    text-align: left;
-    padding: 50px 0 0; }
-    body.kidozen .keyvisual div.box-try-mid.box-btn .btn {
-      padding: 0 20px;
-      min-width: 180px;
-      margin: 0 15px 15px 0; }
   body.kidozen .keyvisual .btns {
-    line-height: 64px; }
+    padding: 50px 0 0;
+    text-align: left; }
     body.kidozen .keyvisual .btns .btn {
+      min-width: 180px;
       width: 175px;
       height: 56px;
       line-height: 56px;
-      padding: 0 30px;
-      margin: 0 10px; }
+      padding: 0 20px;
+      margin: 0 15px 15px 0; }
+      @media screen and (max-width: 440px) {
+        body.kidozen .keyvisual .btns .btn {
+          display: block;
+          margin: 0 auto 15px;
+          width: 80%; } }
 body.kidozen article.main section {
   border-bottom: 1px solid #ccc;
   padding: 90px 0 80px; }

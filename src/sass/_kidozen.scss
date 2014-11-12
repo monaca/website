@@ -2,18 +2,16 @@ body.kidozen {
 
   .keyvisual {
     background: url(../img/kidozen/keyvisual.png) no-repeat center bottom, url(../img/kidozen/keyvisual_bg.png) repeat-x left bottom;
-    background-size: contain auto;
     color: #000;
     height: 590px;
-    padding-bottom: 0;
-    position: relative;
+    @media screen and (max-width: $break) {
+      height: auto;
+      padding-bottom: 40px;
+    }
     h1 {
-      font-size: 54px;
       font-weight: 400;
-      line-height: 68px;
       margin-bottom: 10px;
       padding-top: 110px;
-      text-align: left;
       span {
         color: #d70101;
       }
@@ -24,23 +22,21 @@ body.kidozen {
       width: 420px;
       word-break: break-all;
     }
-		div.box-try-mid.box-btn {
-		  text-align: left;
-			padding: 50px 0 0;
-		  .btn {
-		    padding: 0 20px;
-			  min-width: 180px;
-		  	margin: 0 15px 15px 0;
-		  }
-		}
     .btns {
-      line-height: 64px;
+      padding: 50px 0 0;
+      text-align: left;
       .btn {
+        min-width: 180px;
         width: 175px;
         height: 56px;
         line-height: 56px;
-        padding: 0 30px;
-        margin: 0 10px;
+        padding: 0 20px;
+        margin: 0 15px 15px 0;
+        @media screen and (max-width: 440px) {
+          display: block;
+          margin: 0 auto 15px;
+          width: 80%;
+        }
       }
     }
   }
@@ -57,12 +53,12 @@ body.kidozen {
       background: url(../img/kidozen/img_3.jpg) no-repeat center top;
       background-size: 218%;
       @media screen and (max-width: $break) {
-          background-position: center 14%;
+        background-position: center 14%;
       }
       section.baas {
         min-height: 840px;
         @media screen and (max-width: $break-xs) {
-            min-height: 620px;
+          min-height: 620px;
         }
       }
     }
@@ -75,8 +71,8 @@ body.kidozen {
         margin: 0 10px;
         min-width: 210px;
         @media screen and (max-width: $break-xs) {
-            display: block;
-            margin: 0 auto 10px;
+          display: block;
+          margin: 0 auto 10px;
         }
       }
     }
