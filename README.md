@@ -58,6 +58,29 @@ grunt deploy
 
 Note: Required to create aws_keys.json manually.
 
+## i18n
+
+### Separate Templates
+
+Place "hoge.en.hbs" or "hoge.ja.hbs" and "hoge.html" will be created.
+Note that \*.{en|ja}.hbs have higher priority than \*.hbs, so if you place both hoge.hbs and hoge.en.hbs, hoge.en.hbs is used.
+
+### Use Same Template
+
+We can use shortcode in hbs files
+ 
+```html
+<html>
+    <body>
+        <p>{{ i18n "hoge"}}</p>
+    </body>
+</html>
+```
+
+Translation files
+: /src/data/i18n/*.json
+
+
 ## Bower Components
 
 * Twitter Bootstrap

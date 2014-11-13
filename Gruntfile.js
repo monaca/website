@@ -25,7 +25,8 @@ module.exports = function(grunt) {
 
         config: {
             src: 'src',
-            dist: 'dist'
+            dist: 'dist/en',
+            distJa: 'dist/ja'
         },
 
         sass: {
@@ -37,11 +38,12 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd   : 'src/sass',
                     src   : '*.scss',
-                    dest  : 'dist/css/',
+                    dest  : '<%= config.dist %>/css/',
                     ext   : '.css'
                 }]
             }
         },
+
         watch: {
             assemble: {
                 files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
@@ -70,6 +72,7 @@ module.exports = function(grunt) {
                 tasks: ['concat']
             },
         },
+
         concat: {
             dist: {
                 src: [
@@ -79,35 +82,55 @@ module.exports = function(grunt) {
                 separator: ";"
             }
         },
-        connect: {
-            options: {
-                port: 3010,
-                livereload: 35729,
-                // change this to '0.0.0.0' to access the server from outside
-                hostname: '0.0.0.0'
-            },
-            livereload: {
-                options: {
-                    open: true,
-                    base: [
-                        '<%= config.dist %>'
-                    ]
-                }
-            }
-        },
 
         assemble: {
-            pages: {
-                options: {
-                    flatten: true,
-                    assets: '<%= config.dist %>/assets',
-                    layout: '<%= config.src %>/templates/layouts/default.hbs',
-                    data: '<%= config.src %>/data/*.{json,yml}',
-                    partials: '<%= config.src %>/templates/partials/*.hbs'
-                },
-                files: {
-                    '<%= config.dist %>/': ['<%= config.src %>/templates/pages/*.hbs']
+            options: {
+                flatten: true,
+                layout: '<%= config.src %>/templates/layouts/default.hbs',
+                data: '<%= config.src %>/data/**/*.{json,yml}',
+                partials: '<%= config.src %>/templates/partials/*.hbs',
+                i18n: {
+                    languages: ["en", "ja"],
+                    templates: ["<%= config.src %>/templates/pages/*.hbs"],
                 }
+            },
+            en: {
+                options: {
+                    language: "en"
+                },
+                files: [{
+                    expand: true,
+                    cwd: "<%= config.src %>/templates/pages/",
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs'],
+                    dest: '<%= config.dist %>/'
+                }, {
+                    expand: true,
+                    cwd: "<%= config.src %>/templates/pages/",
+                    src: '**/*.en.hbs',
+                    dest: '<%= config.dist %>/',
+                    rename: function(dest, src) {
+                        return dest + src.replace('.en.hbs', '.html');
+                    }
+                }]
+            },
+            ja: {
+                options: {
+                    language: "ja"
+                },
+                files: [{
+                    expand: true,
+                    cwd: "<%= config.src %>/templates/pages/",
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs'],
+                    dest: '<%= config.distJa %>/'
+                }, {
+                    expand: true,
+                    cwd: "<%= config.src %>/templates/pages/",
+                    src: '**/*.ja.hbs',
+                    dest: '<%= config.distJa %>/',
+                    rename: function(dest, src) {
+                        return dest + src.replace('.ja.hbs', '.html');
+                    }
+                }]
             }
         },
 
@@ -123,6 +146,12 @@ module.exports = function(grunt) {
                 cwd: 'bower_components/jquery/dist/',
                 src: '**',
                 dest: '<%= config.dist %>/js/'
+            },
+            fontawesome: {
+                expand: true,
+                cwd: 'bower_components/fontawesome/',
+                src: ['css/font-awesome.min.css', 'fonts/**'],
+                dest: '<%= config.dist %>/'
             },
             codemirror_js: {
                 expand: true,
@@ -141,6 +170,12 @@ module.exports = function(grunt) {
                 cwd: 'src/assets/',
                 src: '**',
                 dest: '<%= config.dist %>/'
+            },
+            multilocale: {
+                expand: true,
+                cwd: '<%= config.dist %>',
+                src: '**',
+                dest: '<%= config.distJa %>'
             }
         },
 
@@ -173,7 +208,7 @@ module.exports = function(grunt) {
             production: {
                 files: [{
                     expand: true,
-                    cwd: 'dist',
+                    cwd: '<%= config.dist %>',
                     src: ['**'],
                     filter: 'isFile',
                     dest: ''
@@ -181,10 +216,24 @@ module.exports = function(grunt) {
            }
         },
 
-        // Before generating any new files,
-        // remove any previously-created files.
-        clean: ['<%= config.dist %>/**/*.{html,xml}']
+        clean: ['dist/**/*'],
 
+        connect: {
+            options: {
+                port: 3010,
+                livereload: 35729,
+                // change this to '0.0.0.0' to access the server from outside
+                hostname: '0.0.0.0'
+            },
+            livereload: {
+                options: {
+                    open: true,
+                    base: [
+                        '<%= config.dist %>'
+                    ]
+                }
+            }
+        }
     });
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -201,9 +250,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'clean',
-        'copy',
         'sass',
         'concat',
+        'copy',
         'assemble'
     ]);
 
