@@ -18,6 +18,7 @@ node_modules
 *.sublime-*
 .sass-cache
 
+dist
 aws_keys.json
 
 .DS_Store
