@@ -48,6 +48,9 @@ body.cloud {
 
   article.main {
     section {
+      h1 {
+        margin-bottom: 30px;
+      }
       &.summary {
         background: url(../img/cloud/img_1.jpg) no-repeat right 60px;
         background-size: 100%;
