@@ -72,7 +72,7 @@ We can use shortcode in hbs files
 ```html
 <html>
     <body>
-        <p>{{ i18n "hoge"}}</p>
+        <p>{{i18n "hoge"}}</p>
     </body>
 </html>
 ```
