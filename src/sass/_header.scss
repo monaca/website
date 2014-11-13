@@ -10,7 +10,6 @@ header.navbar {
   .container {
     width: $width;
     @media screen and (max-width: $break-xl) {
-      padding: 0 0 0 16px;
       width: 100%;
     }
   }
@@ -40,26 +39,26 @@ header.navbar {
     color: #ffffff;
     padding: 16px 13px 14px;
     -webkit-font-smoothing: antialiased;
-    @media screen and (max-width: 1120px) {
-      padding-left: 10px;
-      padding-right: 10px;
+    @media screen and (max-width: 1170px) {
+      padding-left: 8px;
+      padding-right: 8px;
     }
-    @media screen and (max-width: 1050px) {
+    @media screen and (max-width: 1070px) {
       font-size: 13px;
       .opt {
         display: none;
       }
     }
-    @media screen and (max-width: 940px) {
+    @media screen and (max-width: 960px) {
       font-size: 12px;
     }
     @media screen and (max-width: 900px) {
-      padding-left: 8px;
-      padding-right: 8px;
-    }
-    @media screen and (max-width: 840px) {
       padding-left: 4px;
       padding-right: 4px;
+    }
+    @media screen and (max-width: 820px) {
+      padding-left: 2px;
+      padding-right: 2px;
     }
     @media screen and (max-width: $break) {
       font-size: 1rem;
@@ -79,6 +78,7 @@ header.navbar {
   }
   .dropdown-menu {
     @extend .dropdown-menu-dark;
+    margin-top: -1px;
     padding: 15px 0 18px;
     left: 0;
     right: auto;

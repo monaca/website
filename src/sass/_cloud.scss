@@ -7,7 +7,7 @@ body.cloud {
     padding-bottom: 0;
     position: relative;
     @media screen and (max-width: $break) {
-        height: auto;
+      height: auto;
     }
     h1 {
       font-size: 54px;
@@ -17,8 +17,8 @@ body.cloud {
       padding-top: 140px;
       text-align: left;
       @media screen and (max-width: $break) {
-          font-size: 36px;
-          padding-top: 110px;
+        font-size: 36px;
+        padding-top: 110px;
       }
       img.num {
         vertical-align: -19px;
@@ -64,7 +64,7 @@ body.cloud {
           width: 370px;
           text-align: left;
           @media screen and (max-width: $break) {
-              width: 100%;
+            width: 100%;
           }
         }
       }
@@ -132,17 +132,17 @@ body.cloud {
       }
     }
     .box-try {
-      padding: 20px 0 0;
+      padding: 20px 0 40px;
       .btn {
         font-size: 24px;
         height: 64px;
         line-height: 64px;
         padding: 0 20px;
         margin: 0;
-				min-width: 240px;
-				span {
-				  display: inline-block;
-				}
+        min-width: 240px;
+        span {
+          display: inline-block;
+        }
       }
     }
   }

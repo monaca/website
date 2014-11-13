@@ -58,6 +58,16 @@ grunt deploy
 
 Note: Required to create aws_keys.json manually.
 
+## Bower Components
+
+* Twitter Bootstrap
+
+* jQuery
+
+* CodeMirror
+
+These components are copied to appropriate directories by "grunt copy".
+
 ## [Assemble](http://assemble.io/)
 
 Assemble is a component and static site generator that makes it dead simple to build modular sites, documentation and components from reusable templates and data.

@@ -43,7 +43,8 @@
   line-height: 41px;
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
-
+  transition-property: background-color, border-color, color;
+  transition-duration: 80ms, 80ms, 80ms;
   &:hover {
     text-decoration: none;
   }
@@ -90,7 +91,7 @@ $hover-intensity: 5;
   font-weight: 400;
   text-shadow: none;
   &:hover {
-    background-color: lighten(#8bcc37, $hover-intensity);
+    background-color: lighten(#8bcc37, $hover-intensity + 2);
     color: #fff;
   }
 }
@@ -122,6 +123,7 @@ $hover-intensity: 5;
   color: #ffffff;
   &:hover {
     background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
   }
 }
 
