@@ -31,7 +31,22 @@ class: cloud
     <h1>超高速ライブリロード<br/>ソースコードを保存するだけで実機上で即時確認</h1>
     <p>Monacaデバッガーを使うとソースコードを保存するだけで、すぐに実機上でアプリの動作を確認できます。デバッグのために、いちいちアプリをビルドする必要も、端末にインストールする必要もありません。HTML5のAPIだけでなくCordovaプラグインの動作確認にも対応しています。</p>
     <p>詳しくは<a href="/debugger.html">Monacaデバッガーページ</a>をご覧ください。</p>
-    <img src="/img/cloud/img_3.png" alt=""/>
+    <div id="animation-livereload" class="hidden-xs">
+        <div class="livereload-editor">
+            <div class="livereload-editor-header">index.html</div>
+            <div class="livereload-editor-mask"></div>
+            <div class="livereload-saved"></div>
+        </div>
+
+        <div class="livereload-connect stop"></div>
+
+        <div class="livereload-device">
+            <div class="livereload-device-screen-base"></div>
+            <div class="livereload-device-screen"></div>
+            <div class="livereload-device-screen-reloaded hidden"></div>
+        </div>
+    </div>
+    <img src="/img/debugger/img_1.png" class="visible-xs"/>
 </section>
 
 <section class="workflow">
@@ -95,5 +110,12 @@ class: cloud
     <a href="https://monaca.mobi/ja/register/start" class="btn btn-blue">今すぐ試す<span>(無料)</span></a>
 </div>
 
-<br>
-<br>
+
+<link href="/css/codemirror.css" rel="stylesheet">
+<script src="/js/codemirror.js"></script>
+
+<script>
+    window.onload = function() {
+        animateLivereload(document.getElementById("animation-livereload"));
+    };
+</script>

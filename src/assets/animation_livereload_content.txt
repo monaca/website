@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="./lib/font_awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../onsen-css-components-default.css">
+    <link rel="stylesheet" href="list_thumbnails.css">
+  </head>
+  <body ontouchstart="" class="page scroller">
+    <div class="navigation-bar">
+      <div class="navigation-bar__left">&nbsp; </div>
+      <div class="navigation-bar__center">
+        <span class="navigation-bar__title navigation-bar__line-height">List with Pictures
+        </span>
+      </div>
+      <div class="navigation-bar__right">&nbsp; </div>
+    </div>
+    <div class="list list-top">
+      <ul class="list__container">
+        <li class="list__item list__item--tappable list__item__line-height list-item-container">
+          <div class="list-item-main">
+            <div class="list-item-left">
+              <img src="images/location1.png" class="thumbnail">
+            </div>
+            <div class="list-item-right">
+              <div class="list-item-content">
+                <span class="list-item-name">Eiffel Tower &nbsp;
+                <br/>

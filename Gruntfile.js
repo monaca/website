@@ -124,6 +124,18 @@ module.exports = function(grunt) {
                 src: '**',
                 dest: '<%= config.dist %>/js/'
             },
+            codemirror_js: {
+                expand: true,
+                cwd: 'bower_components/codemirror/lib/',
+                src: 'codemirror.js',
+                dest: '<%= config.dist %>/js/'
+            },
+            codemirror_css: {
+                expand: true,
+                cwd: 'bower_components/codemirror/lib/',
+                src: 'codemirror.css',
+                dest: '<%= config.dist %>/css/'
+            },
             assets: {
                 expand: true,
                 cwd: 'src/assets/',
