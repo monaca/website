@@ -44,21 +44,29 @@ body.kidozen {
   article.main {
     section {
       border-bottom: 1px solid #ccc;
-      padding: 90px 0 80px;
+      padding-top: 90px;
+      padding-bottom: 80px;
       &:first-child {
         padding-top: 140px;
       }
     }
     .lucy-in-the-sky {
       background: url(../img/kidozen/img_3.jpg) no-repeat center top;
-      background-size: 218%;
+      background-size: 200%;
+      @media screen and (min-width: 1000px) {
+        background-size: 1890px 985px;
+      }
       @media screen and (max-width: $break) {
-        background-position: center 14%;
+        background-position: center 20%;
+      }
+      @media screen and (max-width: 400px) {
+        background-position: center 27%;
       }
       section.baas {
-        min-height: 840px;
-        @media screen and (max-width: $break-xs) {
-          min-height: 620px;
+        padding-bottom: 46%;
+        max-height: 800px;
+        @media screen and (min-width: $break-xl) {
+            padding-bottom: 420px;
         }
       }
     }
