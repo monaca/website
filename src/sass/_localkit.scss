@@ -38,6 +38,9 @@ body.localkit {
         background: url(../img/localkit/img_3.png) no-repeat center 330px;
         background-size: 110%;
         padding-bottom: 50%;
+        @media screen and (min-width: $break-xl) {
+            padding-bottom: 610px;
+        }
         @media screen and (max-width: $break) {
           background-position: center bottom;
           background-position: center bottom 30px;
@@ -67,6 +70,7 @@ body.localkit {
         }
         a {
           color: #ffffff;
+          &:hover {text-decoration: none;}
         }
       }
       .notes {

@@ -20,7 +20,6 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
 
-    // Project configuration.
     grunt.initConfig({
 
         config: {
@@ -198,7 +197,7 @@ module.exports = function(grunt) {
                     region: 'ap-northeast-1',
                 },
                 files: [
-                    {expand: true, cwd: 'dist', src: ['**'], dest: ''},
+                    {expand: true, cwd: '<%= config.distJa %>', src: ['**'], dest: ''},
                 ]
             },
         },
@@ -212,7 +211,7 @@ module.exports = function(grunt) {
             production: {
                 files: [{
                     expand: true,
-                    cwd: '<%= config.dist %>',
+                    cwd: '<%= config.distJa %>',
                     src: ['**'],
                     filter: 'isFile',
                     dest: ''
@@ -229,11 +228,19 @@ module.exports = function(grunt) {
                 // change this to '0.0.0.0' to access the server from outside
                 hostname: '0.0.0.0'
             },
-            livereload: {
+            en: {
                 options: {
                     open: true,
                     base: [
                         '<%= config.dist %>'
+                    ]
+                }
+            },
+            ja: {
+                options: {
+                    open: true,
+                    base: [
+                        '<%= config.distJa %>'
                     ]
                 }
             }
@@ -248,7 +255,13 @@ module.exports = function(grunt) {
 
     grunt.registerTask('server', [
         'build',
-        'connect:livereload',
+        'connect:en',
+        'watch'
+    ]);
+
+    grunt.registerTask('server:ja', [
+        'build',
+        'connect:ja',
         'watch'
     ]);
 

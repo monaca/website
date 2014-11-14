@@ -55,11 +55,17 @@ body.debugger {
         background: url(../img/debugger/img_3.jpg) no-repeat center 330px;
         background-size: 100%;
         padding-bottom: 52%;
+        @media screen and (min-width: $break-xl) {
+          padding-bottom: 640px;
+        }
       }
       &.usb {
         background: url(../img/debugger/img_4.jpg) no-repeat center 330px;
         background-size: 100%;
         padding-bottom: 52%;
+        @media screen and (min-width: $break-xl) {
+            padding-bottom: 610px;
+        }
       }
       &.collaboration {
         padding: 90px 0;
