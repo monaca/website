@@ -1,3 +1,12 @@
+/* =Bootstrap overwrite
+-------------------------------------------------------------- */
+$width: 1170px;
+$break: 767px;
+$break-xl: 1300px; // 1300 * 0.9 = 1170
+$break-lg: 970px;
+$break-xs: 640px;
+
+
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -107,26 +116,6 @@ p {
   }
 }
 
-/* =Bootstrap overwrite
--------------------------------------------------------------- */
-$width: 1170px;
-$break: 767px;
-$break-xl: 1300px; // 1300 * 0.9 = 1170
-$break-lg: 970px;
-$break-xs: 640px;
-
-.container {
-  padding-left: 0;
-  padding-right: 0;
-  min-width: $width;
-  width: auto;
-  @media screen and (max-width: $break-xl) {
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 100%;
-    min-width: 0;
-  }
-}
 
 /* =User styles
 -------------------------------------------------------------- */
@@ -152,10 +141,22 @@ img, iframe, object {
 	max-width : 100%; 
 }
 
-section {
+section,
+div.section {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 90px 0 80px;
+  position: relative;
+  width: $width;
+  @media screen and (max-width: $break-xl) {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+  }
   h1 {
     font-size: 40px;
     margin-bottom: 80px;
+    text-align: center;
     -webkit-font-smoothing: antialiased;
     @media screen and (max-width: $break-xs) {
         font-size: 32px;
@@ -180,44 +181,11 @@ section {
   }
   p {
     color: #666;
-    word-break: break-all;
-  }
-}
-
-article.main section {
-  border-bottom: 1px solid #ccc;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 90px 0 80px;
-  position: relative;
-  width: $width;
-  &:first-child {
-    padding-top: 140px;
-  }
-  @media screen and (max-width: $break-xl) {
-    padding-left: 5%;
-    padding-right: 5%;
-    width: 100%;
-  }
-  h1 {
-    text-align: center;
-    @media screen and (max-width: $break) {
-      padding-left: 5%;
-      padding-right: 5%;
-    }
-  }
-  h2,
-  h3 {
-    @media screen and (max-width: $break) {
-      padding-left: 5%;
-      padding-right: 5%;
-    }
-  }
-  p {
     line-height: 1.8;
     margin: 0 auto 50px;
     text-align: left;
     width: 580px;
+    word-break: break-all;
     @media screen and (max-width: 580px) {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -225,6 +193,23 @@ article.main section {
       padding-right: 5%;
       width: 100%;
     }
+  }
+}
+
+article.main section {
+  border-bottom: 1px solid #ccc;
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+  min-width: $width;
+  width: auto;
+  @media screen and (max-width: $break-xl) {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    min-width: 0;
   }
 }
 
