@@ -25,10 +25,8 @@ body.localkit {
   article.main {
     section {
       border-bottom: 1px solid #ccc;
-      padding: 90px 0 80px;
-      &:first-child {
-        padding-top: 140px;
-      }
+      padding-top: 90px;
+      padding-bottom: 80px;
       h1 {
         text-align: center;
       }
@@ -40,17 +38,40 @@ body.localkit {
         background: url(../img/localkit/img_3.png) no-repeat center 330px;
         background-size: 110%;
         padding-bottom: 50%;
+        @media screen and (max-width: $break) {
+          background-position: center bottom;
+          background-position: center bottom 30px;
+        }
+      }
+    }
+    .keyvisual + section {
+      @media screen and (min-width: $break) {
+        padding-top: 140px;
       }
     }
     .box-try {
       .btn {
-        padding: 0 40px;
+        padding: 12px 40px 0;
         min-width: 210px;
+        height: auto;
+        min-height: 54px;
+        line-height: 1.2;
+        @media screen and (max-width: $break-xs) {
+          padding: 13px 0;
+          font-size: 16px;
+        }
+        @media screen and (min-width: $break-xs) {
+            br.opt {
+              display: none;
+            }
+        }
+        a {
+          color: #ffffff;
+        }
+      }
+      .notes {
+        margin-top: 30px;
       }
     }
   }
-	.notes {
-	  margin-top: 30px;
-	}
-
 }
