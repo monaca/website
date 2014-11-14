@@ -12,6 +12,9 @@ header.navbar {
     @media screen and (max-width: $break-xl) {
       width: 100%;
     }
+    @media screen and (max-width: $break) {
+      padding: 0;
+    }
   }
   .navbar-toggle {
     background-color: transparent;
@@ -23,6 +26,9 @@ header.navbar {
     .navbar-brand {
       margin: 0;
       padding: 13px 0;
+      @media screen and (max-width: $break) {
+        padding-left: 16px;
+      }
       img {
         width: 110px;
       }
@@ -32,6 +38,7 @@ header.navbar {
     float: right;
     @media screen and (max-width: $break - 1px) {
       float: none;
+      margin-left: 0;
       margin-right: 0;
     }
   }
@@ -39,6 +46,61 @@ header.navbar {
     color: #ffffff;
     padding: 16px 13px 14px;
     -webkit-font-smoothing: antialiased;
+    @media screen and (max-width: 860px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    @media screen and (max-width: $break) {
+      color: #0088cc;
+      font-size: 1rem;
+      padding-left: 16px;
+      text-align: left;
+    }
+    &:hover {
+      color: #7cdaff;
+    }
+    &.login {
+      color: #7cdaff;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .navbar-nav > li.dropdown > a {
+    color: #ffffff;
+    &:hover {
+      color: #7cdaff;
+    }
+  }
+  .dropdown-menu {
+    @extend .dropdown-menu-dark;
+    margin-top: -1px;
+    padding: 15px 0 18px;
+    left: 0;
+    right: auto;
+    @media screen and (max-width: $break) {
+      background-color: transparent;
+      display: block;
+      padding: 0;
+      position: static;
+      top: auto;
+      left: auto;
+      float: none;
+      li a {
+        color: #0088cc;
+        padding-left: 30px;
+      }
+    }
+  }
+
+  ul.nav li.dropdown:hover > ul.dropdown-menu {
+    display: block;
+  }
+}
+
+html[lang=ja] {
+  .navbar-nav > li > a {
     @media screen and (max-width: 1170px) {
       padding-left: 8px;
       padding-right: 8px;
@@ -60,44 +122,5 @@ header.navbar {
       padding-left: 2px;
       padding-right: 2px;
     }
-    @media screen and (max-width: $break) {
-      font-size: 1rem;
-      padding-left: 16px;
-      text-align: left;
-    }
-    &:hover {
-      opacity: 0.7;
-    }
-    &.login {
-      color: #7cdaff;
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
-    }
   }
-  .dropdown-menu {
-    @extend .dropdown-menu-dark;
-    margin-top: -1px;
-    padding: 15px 0 18px;
-    left: 0;
-    right: auto;
-    @media screen and (max-width: $break) {
-      background-color: transparent;
-      display: block;
-      padding: 0;
-      position: static;
-      top: auto;
-      left: auto;
-      float: none;
-      li a {
-        color: #0088cc;
-      }
-    }
-  }
-
-  ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;
-  }
-
 }

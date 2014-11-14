@@ -196,6 +196,14 @@ div.section {
   }
 }
 
+html[lang=en] .visible-ja {
+  display: none;
+}
+
+html[lang=ja] .visible-en {
+  display: none;
+}
+
 article.main section {
   border-bottom: 1px solid #ccc;
 }

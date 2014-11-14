@@ -38,20 +38,6 @@
   }
 }
 
-.box-full-transparent {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  width: $width;
-  @media screen and (max-width: $break-xl) {
-    width: 100%;
-  }
-  @media screen and (max-width: $break) {
-    padding: 0 5%;
-  }
-}
 
 .bnr-1 {
   background-color: #43587e;
@@ -68,6 +54,7 @@
     span {
       color: #ffffff;
       display: inline-block;
+      -webkit-font-smoothing: antialiased;
       padding: 0 25px;
       width: 100%;
       height: 100%;

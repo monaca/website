@@ -60,6 +60,10 @@ module.exports = function(grunt) {
                     '<%= config.dist %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
                 ]
             },
+            assets: {
+                files: ['<%= config.src %>/assets/**/*'],
+                tasks: ['copy'],
+            },
             sass: {
                 files: ['<%= config.src %>/**/*.scss'],
                 tasks: ['sass'],

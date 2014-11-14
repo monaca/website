@@ -1,4 +1,20 @@
 {
     "lang": "ja",
-    "monacaCloud": "Monacaクラウド"
+    "products": "製品",
+    "monacaCloud": "Monacaクラウド",
+    "monacaEnterprise": "Monacaエンタープライズ",
+    "monacaDebugger": "Monacaデバッガー",
+    "monacaAcademic": "Monacaアカデミックプラン",
+    "pricing": "料金",
+    "partners": "パートナー",
+    "support": "サポート",
+    "login": "ログイン",
+    "signup": "サインアップ",
+
+    "urlPricing": "/price.html",
+    "urlBlog": "http://blog.asial.co.jp/category/21",
+    "urlSupport": "/support.html",
+    "urlLogin": "https://monaca.mobi/en/login",
+    "urlSignup": "https://monaca.mobi/en/register/start"
+
 }
