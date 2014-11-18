@@ -45,7 +45,7 @@ module.exports = function(grunt) {
 
         watch: {
             assemble: {
-                files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml}'],
+                files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml,json}'],
                 tasks: ['assemble']
             },
             livereload: {
@@ -223,7 +223,6 @@ module.exports = function(grunt) {
 
         connect: {
             options: {
-                port: 3010,
                 livereload: 35729,
                 // change this to '0.0.0.0' to access the server from outside
                 hostname: '0.0.0.0'
@@ -231,6 +230,7 @@ module.exports = function(grunt) {
             en: {
                 options: {
                     open: true,
+                    port: 3010,
                     base: [
                         '<%= config.dist %>'
                     ]
@@ -239,6 +239,7 @@ module.exports = function(grunt) {
             ja: {
                 options: {
                     open: true,
+                    port: 3011,
                     base: [
                         '<%= config.distJa %>'
                     ]
@@ -254,6 +255,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-invalidate-cloudfront');
 
     grunt.registerTask('server', [
+        'build',
+        'connect:en',
+        'connect:ja',
+        'watch'
+    ]);
+
+    grunt.registerTask('server:en', [
         'build',
         'connect:en',
         'watch'

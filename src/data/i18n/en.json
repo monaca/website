@@ -16,5 +16,30 @@
     "urlBlog": "https://monaca.mobi/en/blog",
     "urlSupport": "https://monaca.mobi/en/support/index",
     "urlLogin": "https://monaca.mobi/en/login",
-    "urlSignup": "https://monaca.mobi/en/register/start"
+    "urlSignup": "https://monaca.mobi/en/register/start",
+
+    "btnDemo": "Try Demo",
+    "btnContact": "Contact Us",
+
+    "enterpriseHeading": "Accelerate Your Mobile Strategy <br />with Monaca Enterprise",
+    "enterpriseSummaryTitle": "Enterprise App Development &amp; Management Framework <br />for HTML5/Cordova Apps",
+    "enterpriseSummaryBody": "<p>Monaca Enterprise is a mobile app development and management framework that provides full featured services for secure and efficient mobile app development and management. Equipped with Cordova, an industry-standard HTML5 hybrid app OSS (Open Source Framework), it enables you to develop multiplatform mobile apps by using web technology standards.</p><p>Monaca Enterprise will accelerate your enterprise mobile strategy.</p>",
+    "enterpriseRelationTitle": "Easy Collaboration with Enterprise Data, <br />In-House Systems, and Cloud Services",
+    "enterpriseRelationBody": "Enterprise mobile app development becomes challenging when you need to link existing in-house systems and user verification with external cloud services. Monaca eliminates this problem by offering &quot;KidoZen&quot;, an optional enterprise mBaaS that brings easy and secure collaboration between mobile apps and existing systems.",
+    "enterpriseEditorTitle": "Choose Your Own Development Style and Coding Environment",
+    "enterpriseEditorBody": "In addition to its browser-based IDE, Monaca also offers your favorite local development environment including Visual Studio, Eclipse, Dreamweaver, and Sublime Text. You can also use it with version control tools like Git and Subversion. Choose the best environment based on your target user and purpose.",
+    "enterprisePluginsTitle": "Plugins for Secure HTML5 Hybrid App Development",
+    "enterpriseEncryptTitle": "App Logic Encryption",
+    "enterpriseEncryptBody": "Mocana enables a high level of security by encrypting files in the app to keep them from being decoded or copied.",
+    "enterpriseStorageTitle": "Secure Storage",
+    "enterpriseStorageBody": "Provides secure storage by encrypting saved data on devices. This prevents information leaks in the case of theft or loss.",
+    "enterpriseUpdaterTitle": "In-App Updater",
+    "enterpriseUpdaterBody": "Offers an automatic app update feature that does not require re-downloading from an app store. Users can always enjoy your latest, updated apps without the need for redistribution or reinstallation.",
+    "enterprisePerformanceTitle": "HTML5ハイブリッドアプリのパフォーマンスを向上",
+    "enterprisePerformanceBody": "Onsen UIはHTML5ハイブリッドアプリ開発の課題である「アプリのパフォーマンス問題」を解決します。さらにMonacaではAndroidアプリ側にChromiumベースの最新ブラウザエンジン「Crosswalk」を組み込み、OSバージョンの違いを吸収します。これにより、AndroidWebViewのパフォーマンスとフラグメンテーション問題を一気に解決します。",
+    "enterprisePerformanceCaution": "※ Crosswalkの組込みはAndroid4.0以上が対象となります。",
+    "enterpriseDebuggerTitle": "Streamline HTML5 Hybrid App Debugging",
+    "enterpriseDebuggerBody": "Monaca offers debugging tools specifically designed for HTML5 hybrid apps. You can instantly test your app in real-time on an actual device, without compiling it. It also supports more serious debugging features like setting breakpoints in JavaScript and stepping.",
+    "enterpriseServiceTitle": "HTML5/Cordova Development Support Services",
+    "enterpriseServiceBody": "<p>Monaca’s seasoned development and support team fully support your HTML5/Cordova app development. We offer comprehensive services that span customized app development and help desk to training.</p><p><a href=\"/support.html\">Read more about support services</a></p>"
 }

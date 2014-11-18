@@ -44,14 +44,17 @@ grunt build
 
 ### Watch and live-reload
 
+If you wanna launch both English and Japanese server, do: 
+
 ```
 grunt server
 ```
 
-or
+or type like this for single server:
 
 ```
 grunt server:ja
+grunt server:en
 ```
 
 _server command don't watch assets directory, so please run "build" manually after you moved any filed in assets folder._
@@ -89,6 +92,11 @@ We can use shortcode in hbs files
 {{else}}
     <p>like this</p>
 {{/is}}
+```
+
+```html
+{{i18n "key"}} <- HTML will be escaped
+{{{i18n "key"}}} <- Call with triple brackets will prevent escaping
 ```
 
 Translation files

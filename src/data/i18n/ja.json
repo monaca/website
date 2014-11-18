@@ -15,6 +15,30 @@
     "urlBlog": "http://blog.asial.co.jp/category/21",
     "urlSupport": "/support.html",
     "urlLogin": "https://monaca.mobi/en/login",
-    "urlSignup": "https://monaca.mobi/en/register/start"
+    "urlSignup": "https://monaca.mobi/en/register/start",
 
+    "btnDemo": "デモを見る",
+    "btnContact": "資料請求",
+
+    "enterpriseHeading": "企業のモバイル戦略を促進する<br/>Monacaエンタープライズ",
+    "enterpriseSummaryTitle": "HTML5/Cordovaアプリ開発に特化した<br/>エンタープライズ向けアプリ開発・運用基盤",
+    "enterpriseSummaryBody": "<p>Monacaエンタープライズは、モバイルアプリの開発・運用・管理を安全に効率的にする機能・サービスを提供する、モバイルアプリ開発・運用基盤です。HTML5ハイブリッドアプリの業界標準OSS(オープンソース)フレームワーク「Cordova」を内包し、Webのスタンダード技術でマルチプラットフォーム対応のモバイルアプリケーションの開発を行うことができます。Monacaエンタープライズは企業のモバイル戦略を促進します。</p>",
+    "enterpriseRelationTitle": "企業データ、社内システム、クラウドサービスと<br/>容易な接続",
+    "enterpriseRelationBody": "業務アプリ開発を行う際に、既存の社内システムやユーザー認証、外部のクラウドサービスとの連携が大きな課題となります。Monacaのオプションとして提供されるエンタープライズ向けmBaaS「KidoZen」を活用することで、容易にかつセキュアにモバイルアプリと既存システムを連携できます。",
+    "enterpriseEditorTitle": "選べる開発スタイル/コーディング環境",
+    "enterpriseEditorBody": "Monaca Localkitを活用することで、開発者はVisual Studio、Eclipse、Dreamweaver、 Sublime Textなどお好みのローカル開発環境を使ってアプリ開発を行えます。また、GitやSubversionといったバージョン管理ツールとも併用可能です。利用者や用途にあわせて、最適な制作環境をお選びください。",
+    "enterprisePluginsTitle": "セキュアなHTML5ハイブリッドアプリ開発を<br/>実現するプラグイン群",
+    "enterpriseEncryptTitle": "アプリロジック暗号化",
+    "enterpriseEncryptBody": "Monacaではアプリ内のファイルを暗号化する事によって、解読、複製を防止しアプリのセキュリティレベルを保ちます。",
+    "enterpriseStorageTitle": "セキュアストレージ",
+    "enterpriseStorageBody": "デバイス上に保存されるデータを暗号化して保存をする、セキュアなストレージを提供します。端末の盗難や紛失などの万が一の際の情報漏洩を未然に防ぎます。",
+    "enterpriseUpdaterTitle": "In-App アップデーター",
+    "enterpriseUpdaterBody": "ストアから再ダウンロードすることなく、アプリの自動更新を行う機能を提供します。アプリの再配布、端末への再インストールを行うことなく、常にユーザーが最新のアプリを利用している状態を保ちます。",
+    "enterprisePerformanceTitle": "HTML5ハイブリッドアプリのパフォーマンスを向上",
+    "enterprisePerformanceBody": "Onsen UIはHTML5ハイブリッドアプリ開発の課題である「アプリのパフォーマンス問題」を解決します。さらにMonacaではAndroidアプリ側にChromiumベースの最新ブラウザエンジン「Crosswalk」を組み込み、OSバージョンの違いを吸収します。これにより、AndroidWebViewのパフォーマンスとフラグメンテーション問題を一気に解決します。",
+    "enterprisePerformanceCaution": "※ Crosswalkの組込みはAndroid4.0以上が対象となります。",
+    "enterpriseDebuggerTitle": "HTML5ハイブリッドアプリのデバッグを効率化",
+    "enterpriseDebuggerBody": "MonacaではHTML5ハイブリッドアプリ専用のデバッグツールを提供しています。開発中のアプリをコンパイルせずに、即時に実機上で動作確認できます。JavaScriptブレークポイントやステップ実行など、より高度なデバッグにも対応します。",
+    "enterpriseServiceTitle": "HTML5/Cordova開発支援サービス",
+    "enterpriseServiceBody": "<p>経験豊富な開発・サポートチームが、HTML5/Cordovaアプリ開発の支援を致します。アプリの受託開発から、ヘルプデスク、トレーニングまで各種サービスを取り揃えています。</p><p>詳しくは<a href=\"/support.html\">開発支援サービスページ</a>をご覧ください。</p>"
 }
