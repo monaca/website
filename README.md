@@ -48,6 +48,12 @@ grunt build
 grunt server
 ```
 
+or
+
+```
+grunt server:ja
+```
+
 _server command don't watch assets directory, so please run "build" manually after you moved any filed in assets folder._
 
 ### Deploy to the server
@@ -75,6 +81,14 @@ We can use shortcode in hbs files
         <p>{{i18n "hoge"}}</p>
     </body>
 </html>
+```
+
+```html
+{{#is language "ja"}}
+    <p>簡単な分岐はできます</p>
+{{else}}
+    <p>like this</p>
+{{/is}}
 ```
 
 Translation files
