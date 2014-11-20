@@ -85,6 +85,16 @@
     "kidozenAnalysisBody": " <p>KidoZenモバイルアプリストアはGoogle PlayやApp Storeと類似のサービスを提供する社内向けのモバイルアプリ配布用の基盤です。企業内のアプリユーザーはKidoZenに自身のモバイル端末でアクセスすることでアプリを探してインストールできるようになります。</p><p>また、アプリ運用時に必要な各種アプリの利用ログ、クラッシュレポートなどの収集を行う事も可能です。</p>",
     "kidozenCaseTitle": "導入実績",
     "kidozenCaseBody": "KidoZenはグローバル市場で活躍する大企業、政府機関等を中心とした100社以上のモバイル戦略を支えるプラットフォームとして導入されております。",
-    "kidozenCaseAnchor": "すべての導入実績を見る（英語サイト）"
+    "kidozenCaseAnchor": "すべての導入実績を見る（英語サイト）",
+
+    "localkitHeading": "Monacaの便利で快適な機能を<br/>ローカル開発環境でも<br/>利用可能に！",
+    "localkitSummaryTitle": "Monaca Localkitとは",
+    "localkitSummaryBody": "Monaca Localkitは、アプリ開発プラットフォーム『Monaca』が提供するローカル開発支援ツールです。エディターやバージョン管理システムなど様々な既存の開発ツールとMonacaが提供する便利な開発支援機能を組み合わせることで、よりセキュアで快適なアプリ開発環境を提供します。",
+    "localkitEditorTitle": "選べる開発スタイル/コーディング環境",
+    "localkitEditorBody": "Monaca Localkitを活用することで、開発者はVisual Studio、Eclipse、Dreamweaver、Sublime Textなどお好みのローカル開発環境を使ってアプリ開発を行えます。また、GitやSubversionといったバージョン管理ツールとも併用可能です。利用者や用途にあわせて、最適な制作環境をお選びください。",
+    "localkitDebugTitle": "HTML5ハイブリッドアプリのデバッグを効率化",
+    "localkitDebugBody": "Monaca Localkitでは、HTML5ハイブリッドアプリ専用のデバッグツール「Monacaデバッガー」を利用できます。開発中のソースコードを保存するだけで即時に実機上で動作確認できます。更に実機とPCをUSB接続することで、Chrome Dev Tools等を使ったJavaScriptブレークポイントやステップ実行などの、より高度なデバッグ機能を提供します。",
+    "localkitDownload": "Monaca Localkit β版 <br class=\"opt\">利用マニュアルを開く",
+    "localkitDownloadCaution": "※PDFファイルが開かれます"
 
 }

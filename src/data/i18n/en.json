@@ -85,6 +85,17 @@
     "kidozenAnalysisBody": "<p>The KidoZen Mobile App Store is an in-house mobile app distribution platform that offers services similar to Google Play and the App Store. In-house users can search for and install apps by accessing KidoZen from their own devices.</p><p>You can also keep user logs to be used for app management, and store crash reports.</p>",
     "kidozenCaseTitle": "Showcases",
     "kidozenCaseBody": "KidoZen is the choice for more than 100 businesses including the world’s largest organizations and government, to power their mobile strategy.",
-    "kidozenCaseAnchor": "See All"
+    "kidozenCaseAnchor": "See All",
+
+    "localkitHeading": "Experience Monaca’s Usability and Comfort in Your Local Development Environment",
+    "localkitSummaryTitle": "What is Monaca Localkit?",
+    "localkitSummaryBody": "Monaca Localkit is a local environment development support tool. It is offered through our app development platform, “Monaca”. You can get better security and peace-of-mind from your app development environment by combining existing tools like the editor and version management system, with the versatile development support capabilities of Monaca.",
+    "localkitEditorTitle": "Choose Your Own Development Style and Coding Environment",
+    "localkitEditorBody": "Monaca Localkit enables developers to create apps locally using their favorite development environment including Visual Studio, Eclipse, Dreamweaver, and Sublime Text. You can also use it with version control tools like Git and Subversion. Choose the best environment based on your target user and purpose.",
+    "localkitDebugTitle": "Streamline HTML5 Hybrid App Debugging",
+    "localkitDebugBody": "Monaca Localkit offers “Monaca Debugger”, the debugging tool for HTML5 hybrid apps. You can immediately run the app on a real device simply by saving your source code in progress. You can also have a USB connection between a device and PC to perform more serious debugging like JavaScript breakpoints and stepping using tools such as Chrome Dev Tools.",
+    "localkitDownload": "Open User Manual for <br class=\"opt\">Monaca Localkit Beta Version",
+    "localkitDownloadCaution": "* a PDF will be opened."
+
 
 }
