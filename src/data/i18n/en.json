@@ -127,6 +127,17 @@
     "priceKidozenBody": "The enterprise mBaaS KidoZen is offered as one of the optional services from Monaca Enterprise.",
     "priceKidozenPrice": "Pricing:",
     "priceKidozenPrice2": "Open price",
-    "priceKidozenExpl": "We will provide a quote based on your requested services, number of users, API calls and other specifications."
+    "priceKidozenExpl": "We will provide a quote based on your requested services, number of users, API calls and other specifications.",
 
+    "supportHeading": "Technical Support by HTML5 Hybrid App Development Experts",
+    "supportTechTitle": "Monaca Technical Support",
+    "supportTechBody1": "Help desk support is provided for Monaca’s paid users. Our professional Monaca Support Team will help you solve issues that cannot be resolved on the Monaca Forum, or that require an immediate response. We also provide code review and sample code as needed.",
+    "supportTechBody2": "Monaca Technical Support is a ticket-based service. Get more details on the <a href=\"https://monaca.mobi/ja/support/index\">contact page</a>.",
+    "supportDevTitle": "HTML5 Hybrid App Development Support Service",
+    "supportDevBody": "We offer end-to-end support for all kinds of technical challenges related to HTML5 hybrid app　development. Asial provides full support for your app development projects, leveraging our proven experience and knowledge gained from developing Monaca and numerous other apps. We support a wide range of technologies including HTML5, Cordova, Monaca, Onsen UI, AngularJS and more for your HTML5 hybrid app development.",
+    "supportTrainingTitle": "HTML5 Hybrid App Development Training",
+    "supportTrainingBody": "We offer various training programs for HTML5 and JavaScript hybrid mobile apps (HTML5 hybrid apps) using Monaca, our HTML5 mobile app development tool. You can choose from a full range of training from JavaScript basics to simple app development. You can also customize it for your corporate training program needs.",
+    "supportForumTitle": "Monaca Forum",
+    "supportForumBody": "The Monaca Forum is available for all Monaca users. The Monaca Forum lets you ask for any kind of advice about technical issues, and share useful tips with other community members when developing apps with Monaca. <br />You can also contact us with requests and bug reports from here.",
+    "supportForumBtn": "Go to Monaca Forum"
 }
