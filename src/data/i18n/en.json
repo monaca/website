@@ -22,6 +22,8 @@
     "btnContact": "Contact Us",
     "btnTryBeta": "Try the Beta Version",
 
+    "indexHeading": "<span class=\"small\">Accelerate Your App Development with</span><br/><span class=\"key\">HTML5 Hybrid Apps</span>",
+
     "enterpriseHeading": "Accelerate Your Mobile Strategy <br />with Monaca Enterprise",
     "enterpriseSummaryTitle": "Enterprise App Development &amp; Management Framework <br />for HTML5/Cordova Apps",
     "enterpriseSummaryBody": "<p>Monaca Enterprise is a mobile app development and management framework that provides full featured services for secure and efficient mobile app development and management. Equipped with Cordova, an industry-standard HTML5 hybrid app OSS (Open Source Framework), it enables you to develop multiplatform mobile apps by using web technology standards.</p><p>Monaca Enterprise will accelerate your enterprise mobile strategy.</p>",

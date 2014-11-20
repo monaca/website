@@ -22,6 +22,8 @@
     "btnContact": "資料請求",
     "btnTryBeta": "β版を試す",
 
+    "indexHeading": "<span class=\"small\">HTML5ハイブリッドアプリで</span><br/><span class=\"key\">アプリ開発を加速します</span>",
+
     "enterpriseHeading": "企業のモバイル戦略を促進する<br/>Monacaエンタープライズ",
     "enterpriseSummaryTitle": "HTML5/Cordovaアプリ開発に特化した<br/>エンタープライズ向けアプリ開発・運用基盤",
     "enterpriseSummaryBody": "<p>Monacaエンタープライズは、モバイルアプリの開発・運用・管理を安全に効率的にする機能・サービスを提供する、モバイルアプリ開発・運用基盤です。HTML5ハイブリッドアプリの業界標準OSS(オープンソース)フレームワーク「Cordova」を内包し、Webのスタンダード技術でマルチプラットフォーム対応のモバイルアプリケーションの開発を行うことができます。Monacaエンタープライズは企業のモバイル戦略を促進します。</p>",
