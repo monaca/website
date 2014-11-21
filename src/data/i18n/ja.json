@@ -99,7 +99,7 @@
 
     "priceHeading": "ご利用料金",
     "priceCloudTitle": "Monacaクラウド",
-    "priceCloudBody": "Monacaクラウドはプライベート、ビジネスユースにかかわらずお使いいただけるHTML5アプリ開発プラットフォームです。無料で使えるBasicプランから、利用用途に応じて4段階の料金プランをご用意しています。詳細はMonacaクラウドご利用料金ページをご覧ください。",
+    "priceCloudBody": "Monacaクラウドはプライベート、ビジネスユースにかかわらずお使いいただけるHTML5アプリ開発プラットフォームです。無料で使えるBasicプランから、利用用途に応じて4段階の料金プランをご用意しています。詳細は<a href=\"https://monaca.mobi/ja/pricing\">Monacaクラウドご利用料金ページ</a>をご覧ください。",
     "priceCloudBasic": "<em>無料</em>",
     "priceCloudPersonal": "<em>980</em>円/月<br/>（9,800円/年）",
     "priceCloudGold": "<em>5,000</em>円/月<br/>（50,000円/年）",

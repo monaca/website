@@ -99,7 +99,7 @@
 
     "priceHeading": "Pricing",
     "priceCloudTitle": "Monaca Cloud",
-    "priceCloudBody": "Monaca Cloud is an HTML5 app development platform for both individuals and enterprises. It offers 4 plans starting with the free Basic Plan. Get more details on the Monaca Cloud pricing page.",
+    "priceCloudBody": "Monaca Cloud is an HTML5 app development platform for both individuals and enterprises. It offers 4 plans starting with the free Basic Plan. Get more details on the <a href=\"https://monaca.mobi/en/pricing\">Monaca Cloud pricing page</a>.",
     "priceCloudBasic": "<em>Free</em>",
     "priceCloudPersonal": "<em>980</em>yen/mo<br/>(9,800yen/yr)",
     "priceCloudGold": "<em>5,000</em>yen/mo<br/>(50,000yen/yr)",
