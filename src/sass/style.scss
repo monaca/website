@@ -159,7 +159,8 @@ div.section {
     text-align: center;
     -webkit-font-smoothing: antialiased;
     @media screen and (max-width: $break-xs) {
-        font-size: 32px;
+      font-size: 32px;
+      margin-bottom: 40px;
     }
   }
   h2 {
