@@ -28,6 +28,7 @@
   .livereload-editor {
     width: 72%;
     width: calc(100% - 310px);
+    max-width: 640px;
     height: 335px;
     background-color: white;
     border: 3px solid #3D3D3D;
@@ -105,7 +106,7 @@
     right: 210px;
     top: 220px;
     background: url(../img/animations/livereload-connect.png) no-repeat left top;
-    width: 145px;
+    width: 355px;
     height: 24px;
     -moz-animation: connect 0.2s linear infinite;
     -webkit-animation: connect 0.2s linear infinite;
