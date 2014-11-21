@@ -2,7 +2,7 @@ header.navbar {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(44,44,44,0.95);
+  background-color: rgba(58,58,58,0.9);
   border-width: 0px;
   border-radius: 0;
   width: 100%;
@@ -22,13 +22,10 @@ header.navbar {
     border: none;
     height: 50px;
     margin: 0;
-    padding: 0 0 0 11px;
-    width: 50px;
-    &:nth-child(2) {
-
-    }
+    padding: 0 0 0 15px;
+    width: 52px;
     &.collapsed {
-
+      background-color: #3c3c3c;
     }
   }
 
@@ -48,6 +45,8 @@ header.navbar {
   .navbar-collapse {
     float: right;
     @media screen and (max-width: $break - 1px) {
+      background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2), #2c2c2c);
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), #2c2c2c);
       float: none;
       margin-left: 0;
       margin-right: 0;
@@ -107,6 +106,9 @@ header.navbar {
       li a {
         color: #0088cc;
         padding-left: 30px;
+        &:hover {
+          background-color: rgba(0,0,0,0.5);
+        }
       }
     }
   }
