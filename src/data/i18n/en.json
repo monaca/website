@@ -50,7 +50,7 @@
     "dbgLivereloadTitle": "Ultrafast Live Reload<br />Just Save Your Source Code, and the App Runs on the Real Device Immediately",
     "dbgLivereloadBody": "Monaca Debugger enables you to run your app on an actual device right after saving only the source code. No more hassle building your app, or installing on a device. In addition to HTML5 APIs, Monaca Debugger also supports Cordova plugins.",
     "dbgDebugTitle": "Debugging Capabilities Designed for HTML Hybrid Apps",
-    "dbgDebugBody": "Monaca Debugger provides comprehensive debugging capabilities specifically designed for HTML5 hybrid app development. It will dramatically improve your app development efficiency.。",
+    "dbgDebugBody": "Monaca Debugger provides comprehensive debugging capabilities specifically designed for HTML5 hybrid app development. It will dramatically improve your app development efficiency.",
     "dbgIntegrateTitle": "Seamless Debugging Environment between Monaca IDE",
     "dbgIntegrateBody": "You can debug your app running on Monaca Debugger from Monaca IDE. You can check DOM manipulation, style changes, JS consoles, and AJAX requests and more.",
     "dbgUsbTitle": "USB Connectivity for Advanced Debugging",

@@ -51,20 +51,38 @@ body.debugger {
       p {
         text-align: left;
       }
-      &.integration {
-        background: url(../img/debugger/img_3.jpg) no-repeat center 330px;
-        background-size: 100%;
-        padding-bottom: 52%;
-        @media screen and (min-width: $break-xl) {
-          padding-bottom: 640px;
+      &.debug {
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
+        .integration,
+        .usb,
+        .plugins {
+          padding-top: 130px;
         }
-      }
-      &.usb {
-        background: url(../img/debugger/img_4.jpg) no-repeat center 330px;
-        background-size: 100%;
-        padding-bottom: 52%;
-        @media screen and (min-width: $break-xl) {
-            padding-bottom: 610px;
+        .integration {
+          background: url(../img/debugger/img_3.jpg) no-repeat center bottom;
+          background-size: 1287px;
+          padding-bottom: 52%;
+          max-height: 1020px;
+          @media screen and (max-width: 1240px) {
+            background-size: 114%;
+          }
+        }
+        .usb {
+          background: url(../img/debugger/img_4.jpg) no-repeat center bottom;
+          background-size: 1287px;
+          padding-bottom: 52%;
+          max-height: 1020px;
+          @media screen and (max-width: 1240px) {
+            background-size: 114%;
+          }
+        }
+        .plugins {
+          max-height: 1020px;
+          @media screen and (max-width: 1170px) {
+            background-size: 100%;
+          }
         }
       }
       &.collaboration {
