@@ -19,5 +19,14 @@ $(function() {
             $tile4.tile(4);
         }, 150);
     })
-})
+
+    $("header.navbar .navbar-collapse a").on({
+        "touchstart": function() {
+            $(this).addClass("active");
+        },
+        "touchend": function() {
+            $("header.navbar .navbar-collapse a").removeClass("active");
+        }
+    });
+});
 

@@ -2,9 +2,9 @@ header.navbar {
   position: absolute;
   top: 0;
   left: 0;
+  background-color: rgba(44,44,44,0.95);
   border-width: 0px;
   border-radius: 0;
-  opacity: 0.9;
   width: 100%;
   z-index: 100;
   .container {
@@ -18,7 +18,18 @@ header.navbar {
   }
   .navbar-toggle {
     background-color: transparent;
+    border-radius: 0;
     border: none;
+    height: 50px;
+    margin: 0;
+    padding: 0 0 0 11px;
+    width: 50px;
+    &:nth-child(2) {
+
+    }
+    &.collapsed {
+
+    }
   }
 
   .navbar-header {
@@ -53,6 +64,7 @@ header.navbar {
     @media screen and (max-width: $break) {
       color: #0088cc;
       font-size: 1rem;
+      font-weight: 700;
       padding-left: 16px;
       text-align: left;
     }
@@ -72,6 +84,9 @@ header.navbar {
     &:hover {
       color: #7cdaff;
     }
+    &[href="#"] {
+      color: #ffffff;
+    }
   }
   .dropdown-menu {
     @extend .dropdown-menu-dark;
@@ -80,7 +95,9 @@ header.navbar {
     left: 0;
     right: auto;
     @media screen and (max-width: $break) {
-      background-color: transparent;
+      background: none transparent;
+      border-color: transparent;
+      box-shadow: none;
       display: block;
       padding: 0;
       position: static;
@@ -94,33 +111,46 @@ header.navbar {
     }
   }
 
+  //bootstrap init
+  .dropdown.open > a {
+    background-color: transparent;
+  }
+  .dropdown.open .dropdown-menu > li > a {
+    color: #0088cc;
+    padding: 0 0 0 30px;
+    line-height: 39px;
+  }
+
   ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
   }
 }
 
-html[lang=ja] {
-  .navbar-nav > li > a {
-    @media screen and (max-width: 1170px) {
-      padding-left: 8px;
-      padding-right: 8px;
-    }
-    @media screen and (max-width: 1070px) {
-      font-size: 13px;
-      .opt {
-        display: none;
+// Desktop header toolbar: margin fix for Japanese
+@media screen and (min-width: $break) {
+  html[lang=ja] {
+    .navbar-nav > li > a {
+      @media screen and (max-width: 1170px) {
+        padding-left: 8px;
+        padding-right: 8px;
       }
-    }
-    @media screen and (max-width: 960px) {
-      font-size: 12px;
-    }
-    @media screen and (max-width: 900px) {
-      padding-left: 4px;
-      padding-right: 4px;
-    }
-    @media screen and (max-width: 820px) {
-      padding-left: 2px;
-      padding-right: 2px;
+      @media screen and (max-width: 1070px) {
+        font-size: 13px;
+        .opt {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 960px) {
+        font-size: 12px;
+      }
+      @media screen and (max-width: 900px) {
+        padding-left: 4px;
+        padding-right: 4px;
+      }
+      @media screen and (max-width: 820px) {
+        padding-left: 2px;
+        padding-right: 2px;
+      }
     }
   }
 }
