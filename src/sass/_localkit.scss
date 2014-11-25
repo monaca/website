@@ -39,15 +39,14 @@ body.localkit {
         text-align: left;
       }
       &.debug {
-        background: url(../img/localkit/img_3.png) no-repeat center 330px;
+        background: url(../img/localkit/img_3.png) no-repeat center bottom;
         background-size: 110%;
-        padding-bottom: 50%;
+        padding-bottom: 53%;
         @media screen and (min-width: $break-xl) {
-            padding-bottom: 610px;
+            padding-bottom: 630px;
         }
         @media screen and (max-width: $break) {
           background-position: center bottom;
-          background-position: center bottom 30px;
         }
       }
     }
