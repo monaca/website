@@ -182,5 +182,10 @@ body.cloud {
       }
     }
   }
+}
 
+html[lang=en] body.cloud {
+  .keyvisual span {
+    line-height: 1.2;
+  }
 }
