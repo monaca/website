@@ -36,17 +36,51 @@ header.navbar {
       height: 50px;
       margin: 0;
       padding: 0 0 0 15px;
+      position: relative;
+      text-align: left;
       width: 52px;
+      .icon-bar {
+        opacity: 0;
+        transition: opacity 140ms;
+      }
+      .icon-bar-left,
+      .icon-bar-right {
+        position: absolute;
+        background-color: #ffffff;
+        transition: transform 140ms cubic-bezier(.34, .94, .69, 1);
+        transform-origin: bottom center;
+        float: left;
+        width: 14px;
+        height: 2px;
+      }
       .icon-bar-left {
-
+        top: 24px;
+        left: 15px;
+        border-radius: 1px 0 0 1px;
+        transform: rotate(-45deg);
       }
       .icon-bar-right {
-
+        top: 24px;
+        right: 15px;
+        border-radius: 0 1px 1px 0;
+        transform: rotate(45deg);
+      }
+      .icon-bar + .icon-bar {
+        clear: both;
+        margin-top: 10px;
       }
       &.collapsed {
         background-color: transparent;
+        .icon-bar {
+          opacity: 1;
+        }
+        .icon-bar-left {
+          transform: rotate(0);
+          width: 12px;
+        }
         .icon-bar-right {
-          opacity: 0;
+          transform: rotate(0);
+          width: 12px;
         }
       }
     }
