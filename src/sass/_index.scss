@@ -263,3 +263,9 @@ body.home {
     }
   }
 }
+
+html[lang=en] body.home {
+  .keyvisual .box-try {
+    padding-top: 20px;
+  }
+}
