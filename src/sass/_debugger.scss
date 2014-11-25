@@ -61,7 +61,7 @@ body.debugger {
           padding-top: 130px;
         }
         .integration {
-          background: url(../img/debugger/img_3.jpg) no-repeat center bottom;
+          background: url(../img/debugger/img_3_ja.jpg) no-repeat center bottom;
           background-size: 1287px;
           padding-bottom: 52%;
           max-height: 1020px;
@@ -70,7 +70,7 @@ body.debugger {
           }
         }
         .usb {
-          background: url(../img/debugger/img_4.jpg) no-repeat center bottom;
+          background: url(../img/debugger/img_4_ja.jpg) no-repeat center bottom;
           background-size: 1287px;
           padding-bottom: 52%;
           max-height: 1020px;
@@ -93,7 +93,7 @@ body.debugger {
           }
         }
         .internet {
-          background: url(../img/debugger/img_7.jpg) no-repeat center 80%;
+          background: url(../img/debugger/img_7_ja.jpg) no-repeat center 80%;
           background-size: 112%;
           border-bottom: none;
           padding: 60px 5% 92%;
@@ -122,5 +122,18 @@ body.debugger {
       }
     }
   }
+}
 
+html[lang=en] body.debugger {
+  article.main section {
+		.integration {
+			background: url(../img/debugger/img_3_en.jpg) no-repeat center bottom;
+		}
+		.usb {
+			background: url(../img/debugger/img_4_en.jpg) no-repeat center bottom;
+		}
+		.internet {
+			background: url(../img/debugger/img_7_en.jpg) no-repeat center 80%;
+		}
+  }
 }
