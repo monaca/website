@@ -73,7 +73,7 @@ body.cloud {
         margin-bottom: 30px;
       }
       &.summary {
-        background: url(../img/cloud/img_1.jpg) no-repeat center bottom;
+        background: url(../img/cloud/img_1_ja.jpg) no-repeat center bottom;
         background-size: 1170px;
         padding-bottom: 43%;
         max-height: 840px;
@@ -188,4 +188,12 @@ html[lang=en] body.cloud {
   .keyvisual span {
     line-height: 1.2;
   }
+}
+
+html[lang=en] body.cloud {
+  article.main section {
+		&.summary {
+			background: url(../img/cloud/img_1_en.jpg) no-repeat center bottom;
+    }	
+	}
 }
