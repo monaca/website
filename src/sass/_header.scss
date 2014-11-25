@@ -16,18 +16,6 @@ header.navbar {
       padding: 0;
     }
   }
-  .navbar-toggle {
-    background-color: transparent;
-    border-radius: 0;
-    border: none;
-    height: 50px;
-    margin: 0;
-    padding: 0 0 0 15px;
-    width: 52px;
-    &.collapsed {
-      background-color: #3c3c3c;
-    }
-  }
 
   .navbar-header {
     margin: 0;
@@ -41,8 +29,32 @@ header.navbar {
         width: 110px;
       }
     }
+    .navbar-toggle {
+      background-color: rgba(0,0,0,0.2);
+      border-radius: 0;
+      border: none;
+      height: 50px;
+      margin: 0;
+      padding: 0 0 0 15px;
+      width: 52px;
+      .icon-bar-left {
+
+      }
+      .icon-bar-right {
+
+      }
+      &.collapsed {
+        background-color: transparent;
+        .icon-bar-right {
+          opacity: 0;
+        }
+      }
+    }
   }
+
   .navbar-collapse {
+    border-top: none;
+    box-shadow: none;
     float: right;
     @media screen and (max-width: $break - 1px) {
       background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.2), #2c2c2c);
@@ -52,43 +64,49 @@ header.navbar {
       margin-right: 0;
     }
   }
-  .navbar-nav > li > a {
-    color: #ffffff;
-    padding: 16px 13px 14px;
-    -webkit-font-smoothing: antialiased;
-    @media screen and (max-width: 860px) {
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-    @media screen and (max-width: $break) {
-      color: #0088cc;
-      font-size: 1rem;
-      font-weight: 700;
-      padding-left: 16px;
-      text-align: left;
-    }
-    &:hover {
-      color: #7cdaff;
-    }
-    &.login {
-      color: #7cdaff;
-      text-decoration: underline;
+
+  .navbar-nav {
+    > li > a {
+      color: #ffffff;
+      padding: 16px 13px 14px;
+      -webkit-font-smoothing: antialiased;
       &:hover {
-        text-decoration: none;
+        color: #7cdaff;
+      }
+      &.login {
+        color: #7cdaff;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .dropdown:hover > .dropdown-toggle {
+      background-color: #2c2c2c;
+      color: #7cdaff;
+    }
+
+    @media screen and (max-width: $break) {
+      .dropdown-toggle {
+        color: white;
+      }
+      > li > a {
+        color: #0088cc;
+        font-size: 1rem;
+        font-weight: 700;
+        padding-left: 16px;
+        text-align: left;
+      }
+      .dropdown:hover > .dropdown-toggle {
+        background-color: transparent;
+        color: #ffffff;
       }
     }
   }
-  .navbar-nav > li.dropdown > a {
-    color: #ffffff;
-    &:hover {
-      color: #7cdaff;
-    }
-    &[href="#"] {
-      color: #ffffff;
-    }
-  }
+
   .dropdown-menu {
     @extend .dropdown-menu-dark;
+    border-top: none;
     margin-top: -1px;
     padding: 15px 0 18px;
     left: 0;
@@ -114,22 +132,29 @@ header.navbar {
   }
 
   //bootstrap init
-  .dropdown.open > a {
-    background-color: transparent;
-  }
-  .dropdown.open .dropdown-menu > li > a {
-    color: #0088cc;
-    padding: 0 0 0 30px;
-    line-height: 39px;
-  }
-
   ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
   }
+  @media screen and (max-width: $break) {
+    .dropdown.open .dropdown-menu > li > a {
+      color: #0088cc;
+      padding: 0 0 0 30px;
+      line-height: 39px;
+    }
+  }
 }
 
-// Desktop header toolbar: margin fix for Japanese
+// Desktop header toolbar: margin fix
 @media screen and (min-width: $break) {
+  html[lang=en] {
+    .navbar-nav > li > a {
+      @media screen and (max-width: 860px) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+    }
+  }
+
   html[lang=ja] {
     .navbar-nav > li > a {
       @media screen and (max-width: 1170px) {
