@@ -231,7 +231,10 @@ module.exports = function(grunt) {
             },
             en: {
                 options: {
-                    open: true,
+                    open: {
+                        target: 'http://0.0.0.0:3010',
+                        appName: 'Google Chrome'
+                    },
                     port: 3010,
                     base: [
                         '<%= config.dist %>'
@@ -240,7 +243,10 @@ module.exports = function(grunt) {
             },
             ja: {
                 options: {
-                    open: true,
+                    open: {
+                        target: 'http://0.0.0.0:3011',
+                        appName: 'Google Chrome'
+                    },
                     port: 3011,
                     base: [
                         '<%= config.distJa %>'
