@@ -49,7 +49,7 @@ body.kidozen {
       }
     }
     .lucy-in-the-sky {
-      background: url(../img/kidozen/img_3.jpg) no-repeat center 200px;
+      background: url(../img/kidozen/img_3_ja.jpg) no-repeat center 200px;
       background-size: 1890px 985px;
       @media screen and (max-width: 960px) {
         background-size: 190%;
@@ -82,6 +82,14 @@ body.kidozen {
           margin: 0 auto 10px;
         }
       }
+    }
+  }
+}
+
+html[lang=en] body.kidozen {
+  article.main {
+    .lucy-in-the-sky {
+      background: url(../img/kidozen/img_3_en.jpg) no-repeat center 200px;
     }
   }
 }

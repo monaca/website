@@ -11,10 +11,14 @@ body.localkit {
     h1 {
       font-weight: 400;
       margin-bottom: 10px;
-      padding-top: 140px;
+      padding-top: 130px;
       text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+			letter-spacing: -0.03em;
+      font-size: 50px;
+      padding-right: 330px;
       @media screen and (max-width: $break) {
           padding-top: 100px;
+          padding-right: 0px;
       }
       img {
         vertical-align: 4px;

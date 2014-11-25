@@ -74,6 +74,7 @@ layout: src/templates/layouts/index.hbs
     </ul>
 </div>
 
+{{#is language "ja"}}
 <div class="container programs box-full">
     <ul>
         <li class="box-1">
@@ -94,6 +95,7 @@ layout: src/templates/layouts/index.hbs
         </li>
     </ul>
 </div>
+{{/is}}
 
 <div class="container section features box-full">
     <h2>{{i18n "indexFeaturesTitle"}}</h2>
@@ -106,7 +108,7 @@ layout: src/templates/layouts/index.hbs
         <li>
             <h3>{{i18n "indexFeatures2Title"}}</h3>
             <p>{{i18n "indexFeatures2Body"}}</p>
-            <img src="/img/index/img_2.jpg" alt=""/>
+            <img src="/img/index/img_2_{{language}}.jpg" alt=""/>
         </li>
         <li>
             <h3>{{i18n "indexFeatures3Title"}}</h3>
@@ -117,7 +119,7 @@ layout: src/templates/layouts/index.hbs
         <li>
             <h3>{{i18n "indexFeatures4Title"}}</h3>
             <p>{{i18n "indexFeatures4Body"}}</p>
-            <img src="/img/index/img_4.jpg" alt=""/>
+            <img src="/img/index/img_4_{{language}}.jpg" alt=""/>
         </li>
         <li>
             <h3>{{i18n "indexFeatures5Title"}}</h3>
@@ -161,16 +163,55 @@ layout: src/templates/layouts/index.hbs
             </div>
         </div>
     </div>
+{{else}}
+    <div class="container box-uservoices">
+        <h2>Monaca User Testimonials</h2>
+        <div class="uservoice">
+            <div class="uservoice-balloon" tile="2">
+                <q>Publishing your app to an App store will be harder than developing your app with Monaca.</q>
+            </div>
+
+            <div class="uservoice-user user-1">
+                <div class="uservoice-organization">Student of Business at Vigo University / Freelancer</div>
+                <div class="uservoice-name">Victor Fernandez</div>
+            </div>
+        </div>
+
+        <div class="uservoice">
+            <div class="uservoice-balloon" tile="2">
+                <q>The main thing I love about Monaca is the cloud IDE. It makes my life and my machine’s life a lot easier by not having to download and install the Monaca tools. Another thing that I loved about Monaca is the strong support.</q>
+            </div>
+
+            <div class="uservoice-user user-2">
+                <div class="uservoice-organization">Software Engineer</div>
+                <div class="uservoice-name">Sambruce Joseph</div>
+            </div>
+        </div>
+        <!--
+        <div class="uservoice">
+            <div class="uservoice-balloon" tile="2">
+                <q>There are lots of Phonegap IDEs out there but Monaca is the best I have ever worked with. A complete suite of all the tools you need to create awesome multi-platform apps!</q>
+            </div>
+
+            <div class="uservoice-user user-3">
+                <div class="uservoice-organization">Freelance Web Developer</div>
+                <div class="uservoice-name">Tobi Ayilara</div>
+            </div>
+        </div>
+        -->
+    </div>
 {{/is}}
 
-
+{{#is language "ja"}}
 <div class="container box-partners">
     <img src="/img/index/partners.png">
 </div>
+{{/is}}
 
 <div class="container box-awards">
     <ul class="clearfix">
         <li><img src="/img/index/award_1.png" alt="{{i18n "awardMicrosoft"}}"></li>
+        <li><img src="/img/index/award_5.png" alt="Red Herring Global: Top 100 Winner"></li>
         <li><img src="/img/index/award_4.png" alt="Red Herring Asia: Top 100 Winner"></li>
         <li><img src="/img/index/award_2.png" alt="{{i18n "awardMobileProject"}}"></li>
         <li><img src="/img/index/award_3.png" alt="{{i18n "awardInterOp"}}"></li>

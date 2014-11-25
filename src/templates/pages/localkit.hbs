@@ -14,13 +14,13 @@ class: localkit
 <section>
     <h1>{{i18n "localkitSummaryTitle"}}</h1>
     <p>{{i18n "localkitSummaryBody"}}</p>
-    <img src="/img/localkit/img_1.jpg" alt=""/>
+    <img src="/img/localkit/img_1_{{language}}.jpg" alt=""/>
 </section>
 
 <section>
     <h1>{{i18n "localkitEditorTitle"}}</h1>
     <p>{{i18n "localkitEditorBody"}}</p>
-    <img src="/img/enterprise/img_3.jpg" alt=""/>
+    <img src="/img/enterprise/img_3_{{language}}.jpg" alt=""/>
 </section>
 
 <section class="debug">
@@ -29,7 +29,11 @@ class: localkit
 </section>
 
 <div class="box-try">
-    <p class="btn btn-blue"><a href="https://drive.google.com/uc?export=preview&id=0B65hSYz0Aps9aHV6Q1Z1Z0JKaUE" target="_blank">{{{i18n "localkitDownload"}}}</a></p>
-    <p class="notes">{{i18n "localkitDownloadCaution"}}</p>
+    {{#is language "ja"}}
+        <p class="btn btn-blue"><a href="https://drive.google.com/uc?export=preview&id=0B65hSYz0Aps9aHV6Q1Z1Z0JKaUE" target="_blank">{{{i18n "localkitDownload"}}}</a></p>
+        <p class="notes">{{i18n "localkitDownloadCaution"}}</p>
+    {{else}}
+        <p class="btn btn-blue"><a href="http://monaca.mobi/en/localkit/closedbeta" target="_blank">Monaca Localkit Closed Beta</a></p>
+    {{/is}}
 </div>
 

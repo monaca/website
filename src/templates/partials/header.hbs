@@ -24,7 +24,7 @@ component: navbar
                         <li><a href="/debugger.html">{{i18n "monacaDebugger"}}</a></li>
                         <li><a href="/localkit.html">Monaca Localkit</a></li>
                         {{#is language "ja"}}<li><a href="http://monaca.mobi/ja/academic/">{{i18n "monacaAcademic"}}</a></li>{{/is}}
-                        <li><a href="http://ja.onsen.io/">Onsen UI</a></li>
+                        {{#is language "ja"}}<li><a href="http://ja.onsen.io/">Onsen UI</a></li>{{else}}<li><a href="http://onsen.io/">Onsen UI</a></li>{{/is}}
                         <li><a href="/kidozen.html">KidoZen</a></li>
                     </ul>
                 </li>
