@@ -68,6 +68,24 @@
   }
 }
 
+.column-2 {
+  @include clearfix;
+  li {
+    float: left;
+    margin-right: percentage(50px/1170px);
+    margin-bottom: 20px;
+    width: percentage(560px/1170px);
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    @media screen and (max-width: $break-xs) {
+      float: none;
+      margin: 0 auto 20px;
+      width: 100%;
+    }
+  }
+}
+
 .column-3 {
   @include clearfix;
   li {
@@ -141,33 +159,16 @@
 .box-uservoices {
   padding-top: 70px;
   padding-bottom: 100px;
-  width: 920px;
-  @include clearfix;
-  @media screen and (max-width: 920px) {
-    width: 100%;
-  }
   > h2 {
     font-size: 32px;
     -webkit-font-smoothing: antialiased;
     text-align: center;
     margin-bottom: 36px;
   }
-  > .uservoice {
-    float: left;
+  li {
     font-size: 16px;
-    margin-right: percentage(40px/920px);
-    width: percentage(440px/920px);
+    margin-bottom: 40px;
     text-align: left;
-    @media screen and (max-width: $break) {
-      float: none;
-      margin-right: 0;
-      margin-bottom: 40px;
-      padding: 0 5%;
-      width: 100%;
-    }
-    + .uservoice {
-      margin-right: 0;
-    }
     > .uservoice-balloon {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -209,7 +210,6 @@
         &:after {
           background: url(../img/common/icn_quote_right.png) no-repeat left top;
         }
-
       }
     }
     > .uservoice-user {
@@ -238,9 +238,32 @@
         font-size: 16px;
       }
     }
+  }
 
+  .column-2 .box-uservoices {
+    @media screen and (max-width: $break-xs) {
+      .uservoice-balloon {
+        height: auto !important;
+      }
+    }
+  }
+  .column-3 .box-uservoices {
+    @media screen and (max-width: $break-xl) {
+      li {
+        float: none;
+        margin: 0 auto 20px;
+        width: 100%;
+      }
+      .uservoice-balloon {
+        height: auto !important;
+      }
+      .uservoice-user {
+        padding-left: 120px;
+      }
+    }
   }
 }
+
 
 .box-examples {
   background: url(../img/index/examples_bg.jpg) no-repeat left top;
