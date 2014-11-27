@@ -102,6 +102,15 @@ We can use shortcode in hbs files
 Translation files
 : /src/data/i18n/*.json
 
+### Get current language
+
+```html
+<img src="/img/ninja_{{language}}.jpg" />
+will be
+<img src="/img/ninja_en.jpg" />
+or
+<img src="/img/ninja_ja.jpg" />
+```
 
 ## Bower Components
 
