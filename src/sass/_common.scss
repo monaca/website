@@ -1,3 +1,20 @@
+/*
+# Keyvisual
+
+```
+<div class="keyvisual box-full">
+    <div>
+        <h1>
+            Title<br/>
+            <span>Some subtitle</span>
+        </h1>
+        <div class="btns">
+                <a href="https://monaca.mobi/{{language}}/register/start" class="btn btn-green">{{{i18n "signupFree"}}}</a>
+        </div>
+    </div>
+</div>
+```
+*/
 .keyvisual {
   height: 540px;
   @media screen and (max-width: $break) {
@@ -21,6 +38,18 @@
     }
   }
 }
+
+/*
+# Full-width container
+
+```
+ <div class="box-full">
+    <div>
+        Something
+    </div>
+ </div>
+```
+*/
 
 .box-full {
   > * {
