@@ -62,7 +62,8 @@ _server command don't watch assets directory, so please run "build" manually aft
 ### Deploy to the server
 
 ```
-grunt deploy
+grunt deploy:en
+grunt deploy:ja
 ```
 
 Note: Required to create aws_keys.json manually.

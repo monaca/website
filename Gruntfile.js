@@ -25,7 +25,8 @@ module.exports = function(grunt) {
         config: {
             src: 'src',
             dist: 'dist/en',
-            distJa: 'dist/ja'
+            distJa: 'dist/ja',
+            distEn: 'dist/en'
         },
 
         sass: {
@@ -202,18 +203,41 @@ module.exports = function(grunt) {
                     {expand: true, cwd: '<%= config.distJa %>', src: ['**'], dest: ''},
                 ]
             },
+            en: {
+                options: {
+                    bucket: 'monaca.io',
+                    region: '',
+                },
+                files: [
+                    {expand: true, cwd: '<%= config.distEn %>', src: ['**'], dest: ''},
+                ]
+            },
         },
 
         invalidate_cloudfront: {
             options: {
                key: '<%= aws.key %>',
                secret: '<%= aws.secret %>',
-               distribution: 'EV2KT3V34BFDP'
             },
-            production: {
+            ja: {
+                options: {
+                  distribution: 'EV2KT3V34BFDP'
+                },
                 files: [{
                     expand: true,
                     cwd: '<%= config.distJa %>',
+                    src: ['**'],
+                    filter: 'isFile',
+                    dest: ''
+                }]
+            },
+            en: {
+                options: {
+                  distribution: 'EKMC7S6TCNKNJ'
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= config.distEn %>',
                     src: ['**'],
                     filter: 'isFile',
                     dest: ''
@@ -293,10 +317,16 @@ module.exports = function(grunt) {
         'build'
     ]);
 
-    grunt.registerTask('deploy', [
+    grunt.registerTask('deploy:ja', [
         'build',
-        'aws_s3',
-        'invalidate_cloudfront'
+        'aws_s3:ja',
+        'invalidate_cloudfront:ja'
+    ]);
+
+    grunt.registerTask('deploy:en', [
+        'build',
+        'aws_s3:en',
+        'invalidate_cloudfront:en'
     ]);
 
 };
