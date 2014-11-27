@@ -40,6 +40,18 @@ module.exports = function(grunt) {
                     dest  : '<%= config.dist %>/css/',
                     ext   : '.css'
                 }]
+            },
+            styleguide: {
+                options: {
+                    sourcemap: false
+                },
+                files: [{
+                    expand: true,
+                    cwd   : '<%= config.src %>/styleguide',
+                    src   : '*.scss',
+                    dest  : '<%= config.src %>/styleguide',
+                    ext   : '.css'
+                }]
             }
         },
 
@@ -221,8 +233,10 @@ module.exports = function(grunt) {
            }
         },
 
-        clean: ['dist/**/*'],
-
+        clean: {
+            default: ['dist/**/*'],
+            styleguide: ["docs/styleguide"]
+        },
         connect: {
             options: {
                 livereload: 35729,
@@ -253,7 +267,19 @@ module.exports = function(grunt) {
                     ]
                 }
             }
+        },
+
+        styledocco: {
+            dist: {
+                options: {
+                    name: 'monaca.io'
+                },
+                files: {
+                    'docs/styleguide': '<%= config.src %>/styleguide/styleguide.css'
+                }
+            }
         }
+
     });
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -261,6 +287,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-invalidate-cloudfront');
+    grunt.loadNpmTasks('grunt-styledocco');
 
     grunt.registerTask('server', [
         'build',
@@ -299,4 +326,9 @@ module.exports = function(grunt) {
         'invalidate_cloudfront'
     ]);
 
+    grunt.registerTask('styleguide', [
+        'clean:styleguide',
+        'sass:styleguide',
+        'styledocco'
+    ])
 };

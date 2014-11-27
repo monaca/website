@@ -1,0 +1,27 @@
+
+/*
+# global variables
+*/
+$width: 1170px;
+$break: 767px;
+$break-xl: 1300px; // 1300 * 0.9 = 1170
+$break-lg: 970px;
+$break-xs: 640px;
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+/*
+# Common Components
+*/
+@import "../sass/common";
+
+/*
+# Buttons and other forms
+*/
+@import "../sass/form";
