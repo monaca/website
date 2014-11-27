@@ -1,223 +1,162 @@
 ---
-title:
-    en: Monaca - Accelerate Your App Development with HTML5 Hybrid Apps
-    ja: Monaca - HTML5ハイブリッドアプリでアプリ開発を加速します
+title: Monaca - Accelerate Your App Development with HTML5 Hybrid Apps
 class: home
 layout: src/templates/layouts/index.hbs
 ---
 
-<div class="keyvisual box-full">
-    <div>
-        <h1>{{{i18n "indexHeading"}}}</h1>
+<div class="keyvisual box-full"><div>
+    <h1>Accelerate Your App Development with<br />HTML5 Hybrid Apps</h1>
+    <p><img src="/img/index/ico_platforms.png" alt="Platforms" /></p>
 
-        <p><img src="/img/index/ico_platforms.png" alt="プラットフォームアイコン"/></p>
-
-        <div class="box-try">
-            {{#is language "ja"}}
-                <a href="https://monaca.mobi/ja/support/inquiry" class="btn btn-line-white">お問い合わせ</a>
-            {{/is}}
-            <a href="https://monaca.mobi/{{language}}/register/start" class="btn btn-green">{{{i18n "signupFree"}}}</a>
-        </div>
+    <div class="box-try">
+        <a href="https://monaca.mobi/en/register/start" class="btn btn-green">Sign Up Now <span class='small'>(free)</span></a>
     </div>
-</div>
+</div></div>
 
 <div class="container products box-full">
     <ul class="column-3">
         <li class="box-1" tile="3">
-            <span class="type bnr-1"><img src="/img/index/tag_cloud.png" alt="Cloud"/></span>
+            <span class="type bnr-1"><img src="/img/index/tag_cloud.png" alt="Cloud" /></span>
             <dl>
-                <dt>{{i18n "monacaCloud"}}</dt>
-                <dd>{{i18n "indexCloudDesc"}}</dd>
+                <dt>Monaca Cloud</dt>
+                <dd>Monaca Cloud IDE is a browser-based full-stack IDE specifically designed for HTML5 hybrid app development.</dd>
             </dl>
-            <div class="btns"><a class="btn btn-green" href="https://monaca.mobi/ja/register/start">{{i18n "indexBtnTry"}}</a><a class="btn btn-blue" href="/cloud.html">{{i18n "indexBtnDetail"}}</a></div>
+            <div class="btns"><a class="btn btn-green" href="https://monaca.mobi/ja/register/start">Sign Up for Free</a><a class="btn btn-blue" href="/cloud.html">Detail</a>
+            </div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1"><img src="/img/index/tag_business.png" alt="Business"/></span>
+            <span class="type bnr-1"><img src="/img/index/tag_business.png" alt="Business" /></span>
             <dl>
-                <dt>{{i18n "monacaEnterprise"}}</dt>
-                <dd>{{i18n "indexEnterpriseDesc"}}</dd>
+                <dt>Monaca Enterprise</dt>
+                <dd>Monaca Enterprise enables you to develop and manage your custom enterprise apps with hightened security and better efficiency across larger teams.</dd>
             </dl>
-            <div class="btns"><a class="btn btn-blue" href="/enterprise.html">{{i18n "indexBtnDetail"}}</a></div>
+            <div class="btns"><a class="btn btn-blue" href="/enterprise.html">Detail</a></div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1"><img src="/img/index/tag_local.png" alt="Local"/></span>
+            <span class="type bnr-1"><img src="/img/index/tag_local.png" alt="Local" /></span>
             <dl>
                 <dt>Monaca Localkit</dt>
-                <dd>{{i18n "indexLocalkitDesc"}}</dd>
+                <dd>Monaca Localkit provides you with a local environment to develop Monaca apps, just as easy as with Monaca Cloud.</dd>
             </dl>
-            <div class="btns"><a class="btn btn-blue" href="/localkit.html">{{i18n "indexBtnDetail"}}</a></div>
+            <div class="btns"><a class="btn btn-blue" href="/localkit.html">Detail</a></div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1"><img src="/img/index/tag_debugging.png" alt="Debugging"/></span>
+            <span class="type bnr-1"><img src="/img/index/tag_debugging.png" alt="Debugging" /></span>
             <dl>
-                <dt>{{i18n "monacaDebugger"}}</dt>
-                <dd>{{i18n "indexDebuggerDesc"}}</dd>
+                <dt>Monaca Debugger</dt>
+                <dd>Monaca includes the world’s best Cordova debugger. It is a debugger built specifically for hybrid app development, combinging debugging and building.</dd>
             </dl>
-            <div class="btns"><a class="btn btn-blue" href="/debugger.html">{{i18n "indexBtnDetail"}}</a></div>
+            <div class="btns"><a class="btn btn-blue" href="/debugger.html">Detail</a></div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1"><img src="/img/index/tag_ui.png" alt="UI Framework"/></span>
+            <span class="type bnr-1"><img src="/img/index/tag_ui.png" alt="UI Framework" /></span>
             <dl>
                 <dt>Onsen UI</dt>
-                <dd>{{i18n "indexOnsenDesc"}}</dd>
+                <dd>Onsen UI is an AngularJS driven app framework to intuitively implement native-like, beautiful, and smooth UIs.</dd>
             </dl>
-            <div class="btns"><a class="btn btn-blue" href="http://ja.onsen.io/">{{i18n "indexBtnDetail"}}</a></div>
+            <div class="btns"><a class="btn btn-blue" href="http://ja.onsen.io/">Detail</a></div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1"><img src="/img/index/tag_backend.png" alt="Backend"/></span>
+            <span class="type bnr-1"><img src="/img/index/tag_backend.png" alt="Backend" /></span>
             <dl>
-                <dt>KidoZen<span class="small">{{i18n "indexEnterpriseMbaas"}}</span></dt>
-                <dd>{{i18n "indexKidozenDesc"}}</dd>
+                <dt>KidoZen<span class="small">(Enterprise mBaaS)</span></dt>
+                <dd>mBaaS for enterprise systems. Provides connector to the existing system, app deployment and remote push notifications.</dd>
             </dl>
-            <div class="btns"><a class="btn btn-blue" href="/kidozen.html">{{i18n "indexBtnDetail"}}</a></div>
+            <div class="btns"><a class="btn btn-blue" href="/kidozen.html">Detail</a></div>
         </li>
     </ul>
 </div>
-
-{{#is language "ja"}}
-<div class="container programs box-full">
-    <ul>
-        <li class="box-1">
-            <span class="type bnr-1"><img src="/img/index/tag_academic.png" alt="Academic"/></span>
-            <dl>
-                <dt class="sub">{{i18n "indexAcademic"}}</dt>
-                <dd>{{i18n "indexAcademicDesc"}}</dd>
-            </dl>
-            <p class="detail"><a href="http://monaca.mobi/ja/academic/">{{i18n "indexBtnLearn"}} <i class="fa fa-angle-right"></i></a></p>
-        </li>
-        <li class="box-1">
-            <span class="type bnr-1"><img src="/img/index/tag_support.png" alt="Support"/></span>
-            <dl>
-                <dt class="sub">{{i18n "indexSupport"}}</dt>
-                <dd>{{i18n "indexSupportDesc"}}</dd>
-            </dl>
-            <p class="detail"><a href="/support.html">{{i18n "indexBtnContact"}} <i class="fa fa-angle-right"></i></a></p>
-        </li>
-    </ul>
-</div>
-{{/is}}
 
 <div class="container section features box-full">
-    <h2>{{i18n "indexFeaturesTitle"}}</h2>
+    <h2>Monaca&#x27;s Top 5 Features</h2>
     <ol>
         <li>
-            <h3>{{i18n "indexFeatures1Title"}}</h3>
-            <p>{{i18n "indexFeatures1Body"}}</p>
-            <img src="/img/index/img_1.jpg" alt=""/>
+            <h3>1. HTML5 Hybrid App Development Environment is Faster and Easier Than Ever</h3>
+
+            <p>Monaca gives web producers and developers an instant way to develop iOS or Android mobile apps using existing skill sets.</p>
+            <img src="/img/index/img_1.jpg" alt="" />
         </li>
         <li>
-            <h3>{{i18n "indexFeatures2Title"}}</h3>
-            <p>{{i18n "indexFeatures2Body"}}</p>
-            <img src="/img/index/img_2_{{language}}.jpg" alt=""/>
+            <h3>2. Choose Your Own Development Style / Coding Environment</h3>
+
+            <p>Monaca not only offers its own browser-based IDE, but also your favorite local development environment such as Visual Studio or Sublime Text. You can choose the best environment based on target user and purpose.</p>
+            <img src="/img/index/img_2_en.jpg" alt="" />
         </li>
         <li>
-            <h3>{{i18n "indexFeatures3Title"}}</h3>
-            <p style="margin-bottom:20px">{{i18n "indexFeatures3Body"}}</p>
-            <p>{{i18n "indexFeatures3Caution"}}</p>
-            <img src="/img/index/img_3.jpg" alt=""/>
+            <h3>3. Higher Performance for HTML5 Hybrid Apps</h3>
+
+            <p style="margin-bottom:20px">Onsen UI eliminates performance related issues that are typically a weakness for HTML5 hybrid apps. In addition, Monaca offsets OS differences by implementing “Crosswalk,” the latest Chromium browser engine for Android apps. This avoids all performance and fragmentation issues with Android WebView.</p>
+            <img src="/img/index/img_3.jpg" alt="" />
         </li>
         <li>
-            <h3>{{i18n "indexFeatures4Title"}}</h3>
-            <p>{{i18n "indexFeatures4Body"}}</p>
-            <img src="/img/index/img_4_{{language}}.jpg" alt=""/>
+            <h3>4. Improve Total App Life Cycle</h3>
+
+            <p>Monaca is more than just an app development tool. It is an integrated platform that can drastically improve your app development and management. It provides comprehensive support that includes design, app development, backend development, existing system integration, testing and debugging, app distribution, analytics, and more.</p>
+            <img src="/img/index/img_4_en.jpg" alt="" />
         </li>
         <li>
-            <h3>{{i18n "indexFeatures5Title"}}</h3>
-            <p>{{i18n "indexFeatures5Body"}}</p>
-            <img src="/img/index/img_5.jpg" alt=""/>
+            <h3>5. Compatible with Other App Development Support Tools</h3>
+
+            <p>Monaca works with other mobile app development and support tools, such as mBaaS, testing support, and advertising offered by other companies.</p>
+            <img src="/img/index/img_5.jpg" alt="" />
         </li>
     </ol>
 </div>
 
 <div class="container box-examples">
-    <h2>{{{i18n "exampleTitle"}}}</h2>
+    <h2>More than <strong>2,000</strong> apps are available on App Store and Google Play.</h2>
     <img src="/img/index/examples_img.png">
 
-    <p><a href="http://monaca.mobi/ja/showcase" class="btn btn-darkgray">{{i18n "exampleBtn"}}</a></p>
+    <p><a href="http://monaca.mobi/ja/showcase" class="btn btn-darkgray">Showcase</a></p>
 </div>
 
-{{#is language "ja"}}
-    <div class="container box-uservoices">
-        <h2>Monacaを使っているユーザーの声</h2>
-        <ul class="column-2">
-            <li>
-                <div class="uservoice-balloon" tile="2">
-                    <q>使う言語がHTML5とJavaScriptなのでプログラマーがいなくてもアプリを作ることができて、
-                        とても助かります。また、作ったアプリをすぐにデバッガーで確認できるのも嬉しいです。</q>
-                </div>
-                <div class="uservoice-user">
-                    <div class="uservoice-organization">株式会社ファンシーリンクス</div>
-                    <div class="uservoice-name">アプリ開発担当者様</div>
-                </div>
-            </li>
+<div class="container box-uservoices">
+    <h2>Monaca User Testimonials</h2>
+    <ul class="column-3">
+        <li>
+            <div class="uservoice-balloon" tile="3">
+                <q>Publishing your app to an App store will be harder than developing your app with Monaca.</q>
+            </div>
 
-            <li>
-                <div class="uservoice-balloon" tile="2">
-                    <q>ノンプログラマでも簡単なものなら基本のHTMLやJavaScriptの知識があればアプリを作成できるのは画期的。
-                        非常に希望を持てます。iOSアプリも作成だけならWindows環境でできてしまうのは感動です。</q>
-                </div>
-                <div class="uservoice-user">
-                    <div class="uservoice-organization">株式会社ワンディッシュ</div>
-                    <div class="uservoice-name">代表 村田大様</div>
-                </div>
-            </li>
-        </ul>
-    </div>
-{{else}}
-    <div class="container box-uservoices">
-        <h2>Monaca User Testimonials</h2>
-        <ul class="column-3">
-            <li>
-                <div class="uservoice-balloon" tile="3">
-                    <q>Publishing your app to an App store will be harder than developing your app with Monaca.</q>
-                </div>
+            <div class="uservoice-user user-1">
+                <div class="uservoice-organization">Student of Business at Vigo University / Freelancer</div>
+                <div class="uservoice-name">Victor Fernandez</div>
+            </div>
+        </li>
 
-                <div class="uservoice-user user-1">
-                    <div class="uservoice-organization">Student of Business at Vigo University / Freelancer</div>
-                    <div class="uservoice-name">Victor Fernandez</div>
-                </div>
-            </li>
+        <li>
+            <div class="uservoice-balloon" tile="3">
+                <q>The main thing I love about Monaca is the cloud IDE. It makes my life and my machine’s life a lot easier by not having to download and install the Monaca tools. Another thing that I loved about Monaca is the strong support.</q>
+            </div>
 
-            <li>
-                <div class="uservoice-balloon" tile="3">
-                    <q>The main thing I love about Monaca is the cloud IDE. It makes my life and my machine’s life a lot easier by not having to download and install the Monaca tools. Another thing that I loved about Monaca is the strong support.</q>
-                </div>
+            <div class="uservoice-user user-2">
+                <div class="uservoice-organization">Software Engineer</div>
+                <div class="uservoice-name">Sambruce Joseph</div>
+            </div>
+        </li>
+        <li>
+            <div class="uservoice-balloon" tile="3">
+                <q>There are lots of Phonegap IDEs out there but Monaca is the best I have ever worked with. A complete suite of all the tools you need to create awesome multi-platform apps!</q>
+            </div>
 
-                <div class="uservoice-user user-2">
-                    <div class="uservoice-organization">Software Engineer</div>
-                    <div class="uservoice-name">Sambruce Joseph</div>
-                </div>
-            </li>
-            <li>
-                <div class="uservoice-balloon" tile="3">
-                    <q>There are lots of Phonegap IDEs out there but Monaca is the best I have ever worked with. A complete suite of all the tools you need to create awesome multi-platform apps!</q>
-                </div>
-
-                <div class="uservoice-user user-3">
-                    <div class="uservoice-organization">Freelance Web Developer</div>
-                    <div class="uservoice-name">Tobi Ayilara</div>
-                </div>
-            </li>
-        </ul>
-    </div>
-{{/is}}
-
-{{#is language "ja"}}
-<div class="container box-partners">
-    <img src="/img/index/partners.png">
+            <div class="uservoice-user user-3">
+                <div class="uservoice-organization">Freelance Web Developer</div>
+                <div class="uservoice-name">Tobi Ayilara</div>
+            </div>
+        </li>
+    </ul>
 </div>
-{{/is}}
 
 <div class="container box-awards">
     <ul class="clearfix">
-        <li><img src="/img/index/award_1.png" alt="{{i18n "awardMicrosoft"}}"></li>
+        <li><img src="/img/index/award_1.png" alt="Microsoft Innovation Award 2013 優秀賞"></li>
         <li><img src="/img/index/award_5.png" alt="Red Herring Global: Top 100 Winner"></li>
         <li><img src="/img/index/award_4.png" alt="Red Herring Asia: Top 100 Winner"></li>
-        <li><img src="/img/index/award_2.png" alt="{{i18n "awardMobileProject"}}"></li>
-        <li><img src="/img/index/award_3.png" alt="{{i18n "awardInterOp"}}"></li>
+        <li><img src="/img/index/award_2.png" alt="モバイルプロジェクト・アワード2014 モバイルプラットフォーム・ソリューション部門 優秀賞"></li>
+        <li><img src="/img/index/award_3.png" alt="INTEROP フロンティア・チャレンジ部門 特別賞"></li>
     </ul>
 </div>
 
 <div class="container box-try">
-    <a href="https://monaca.mobi/ja/register/start" class="btn btn-green">{{{i18n "signupFree"}}}</a>
+    <a href="https://monaca.mobi/en/register/start" class="btn btn-green">Sign Up Now <span class='small'>(free)</span></a>
 </div>
