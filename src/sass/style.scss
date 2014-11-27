@@ -1,3 +1,6 @@
+@charset "UTF-8";
+
+
 /* =Bootstrap overwrite
 -------------------------------------------------------------- */
 $width: 1170px;
@@ -159,7 +162,8 @@ div.section {
     text-align: center;
     -webkit-font-smoothing: antialiased;
     @media screen and (max-width: $break-xs) {
-        font-size: 32px;
+      font-size: 32px;
+      margin-bottom: 40px;
     }
   }
   h2 {
@@ -235,3 +239,4 @@ article.main section {
 @import "enterprise";
 @import "cloud";
 @import "dev-support";
+@import "localkit-closedbeta";

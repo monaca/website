@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html lang="{{language}}">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{title}} | {{site.title}}</title>
+    <title>
+        {{#is language "ja"}}
+            {{title.ja}}
+        {{else}}
+            {{title.en}}
+        {{/is}}
+    </title>
     <meta name="description" content="HTML5,Cordovaベースのモバイルアプリ開発環境。iOS/Android/Windows 8向けハイブリッドアプリ開発に対応。">
     <meta name="keywords" content="Cordova,モバイルアプリ開発,iPhone開発,Android開発,ハイブリッドアプリ,クロスプラットフォーム,PhoneGap,Monaca">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="/img/favicon.ico">
-  </head>
-  <body class="{{class}}">
+</head>
+<body class="{{class}}">
 
-    {{> header }}
+{{> header }}
 
-    <div class="main" role="main">
+<div class="main" role="main">
 
-      {{> body }}
+    {{> body }}
 
-    </div>
+</div>
 
-    {{> footer }}
+{{> footer }}
 
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/all.js"></script>
-  </body>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/all.js"></script>
+</body>
 </html>

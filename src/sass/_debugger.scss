@@ -51,20 +51,38 @@ body.debugger {
       p {
         text-align: left;
       }
-      &.integration {
-        background: url(../img/debugger/img_3.jpg) no-repeat center 330px;
-        background-size: 100%;
-        padding-bottom: 52%;
-        @media screen and (min-width: $break-xl) {
-          padding-bottom: 640px;
+      &.debug {
+        padding-left: 0;
+        padding-right: 0;
+        width: auto;
+        .integration,
+        .usb,
+        .plugins {
+          padding-top: 130px;
         }
-      }
-      &.usb {
-        background: url(../img/debugger/img_4.jpg) no-repeat center 330px;
-        background-size: 100%;
-        padding-bottom: 52%;
-        @media screen and (min-width: $break-xl) {
-            padding-bottom: 610px;
+        .integration {
+          background: url(../img/debugger/img_3_ja.jpg) no-repeat center bottom;
+          background-size: 1287px;
+          padding-bottom: 52%;
+          max-height: 1020px;
+          @media screen and (max-width: 1240px) {
+            background-size: 114%;
+          }
+        }
+        .usb {
+          background: url(../img/debugger/img_4_ja.jpg) no-repeat center bottom;
+          background-size: 1287px;
+          padding-bottom: 52%;
+          max-height: 1020px;
+          @media screen and (max-width: 1240px) {
+            background-size: 114%;
+          }
+        }
+        .plugins {
+          max-height: 1020px;
+          @media screen and (max-width: 1170px) {
+            background-size: 100%;
+          }
         }
       }
       &.collaboration {
@@ -75,7 +93,7 @@ body.debugger {
           }
         }
         .internet {
-          background: url(../img/debugger/img_7.jpg) no-repeat center 80%;
+          background: url(../img/debugger/img_7_ja.jpg) no-repeat center 80%;
           background-size: 112%;
           border-bottom: none;
           padding: 60px 5% 92%;
@@ -104,5 +122,18 @@ body.debugger {
       }
     }
   }
+}
 
+html[lang=en] body.debugger {
+  article.main section {
+		.integration {
+			background: url(../img/debugger/img_3_en.jpg) no-repeat center bottom;
+		}
+		.usb {
+			background: url(../img/debugger/img_4_en.jpg) no-repeat center bottom;
+		}
+		.internet {
+			background: url(../img/debugger/img_7_en.jpg) no-repeat center 80%;
+		}
+  }
 }

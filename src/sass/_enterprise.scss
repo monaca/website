@@ -30,7 +30,7 @@ body.enterprise {
     .btns {
       text-align: left;
       padding: 50px 0 0;
-      @media screen and (max-width: $break-xs) {
+      @media screen and (max-width: $break) {
         padding-top: 30px;
         text-align: center;
       }
@@ -42,10 +42,13 @@ body.enterprise {
     }
   }
 
-  article.main {
-    section {
-      * + h2 {
-        margin-top: 100px;
+  section.plugins {
+    img.img-encrypt,
+    img.img-storage {
+      display: inline-block;
+      margin-bottom: 100px;
+      @media screen and (max-width: $break-xs) {
+          margin-bottom: 60px;
       }
     }
   }

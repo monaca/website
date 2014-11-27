@@ -156,17 +156,19 @@ module.exports = function(grunt) {
                 src: ['css/font-awesome.min.css', 'fonts/**'],
                 dest: '<%= config.dist %>/'
             },
-            codemirror_js: {
-                expand: true,
-                cwd: 'bower_components/codemirror/lib/',
-                src: 'codemirror.js',
-                dest: '<%= config.dist %>/js/'
-            },
-            codemirror_css: {
-                expand: true,
-                cwd: 'bower_components/codemirror/lib/',
-                src: 'codemirror.css',
-                dest: '<%= config.dist %>/css/'
+            codemirror: {
+                files: [{
+                    src: ['bower_components/codemirror/lib/codemirror.js'],
+                    dest: '<%= config.dist %>/js/codemirror/codemirror.js'
+                }, {
+                    expand: true,
+                    cwd: 'bower_components/codemirror/mode/',
+                    src: ['javascript/*.js', 'htmlmixed/*.js', 'xml/xml.js'],
+                    dest: '<%= config.dist %>/js/codemirror/mode/'
+                }, {
+                    src: 'bower_components/codemirror/lib/codemirror.css',
+                    dest: '<%= config.dist %>/css/codemirror.css'
+                }]
             },
             assets: {
                 expand: true,
@@ -229,7 +231,10 @@ module.exports = function(grunt) {
             },
             en: {
                 options: {
-                    open: true,
+                    open: {
+                        target: 'http://0.0.0.0:3010',
+                        appName: 'Google Chrome'
+                    },
                     port: 3010,
                     base: [
                         '<%= config.dist %>'
@@ -238,7 +243,10 @@ module.exports = function(grunt) {
             },
             ja: {
                 options: {
-                    open: true,
+                    open: {
+                        target: 'http://0.0.0.0:3011',
+                        appName: 'Google Chrome'
+                    },
                     port: 3011,
                     base: [
                         '<%= config.distJa %>'

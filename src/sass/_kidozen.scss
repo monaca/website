@@ -44,30 +44,29 @@ body.kidozen {
   article.main {
     section {
       border-bottom: 1px solid #ccc;
-      padding-top: 90px;
-      padding-bottom: 80px;
       &:first-child {
         padding-top: 140px;
       }
     }
     .lucy-in-the-sky {
-      background: url(../img/kidozen/img_3.jpg) no-repeat center top;
-      background-size: 200%;
-      @media screen and (min-width: 1000px) {
-        background-size: 1890px 985px;
+      background: url(../img/kidozen/img_3_ja.jpg) no-repeat center 200px;
+      background-size: 1890px 985px;
+      @media screen and (max-width: 960px) {
+        background-size: 190%;
       }
       @media screen and (max-width: $break) {
-        background-position: center 20%;
+        background-position: center 180px;
       }
-      @media screen and (max-width: 400px) {
-        background-position: center 27%;
+      @media screen and (max-width: $break-xs) {
+        background-position: center 26%;
+      }
+      @media screen and (max-width: 460px) {
+        background-position: center 36%;
       }
       section.baas {
         padding-bottom: 46%;
-        max-height: 800px;
-        @media screen and (min-width: $break-xl) {
-            padding-bottom: 420px;
-        }
+        max-height: 980px;
+
       }
     }
     .box-try {
@@ -83,6 +82,14 @@ body.kidozen {
           margin: 0 auto 10px;
         }
       }
+    }
+  }
+}
+
+html[lang=en] body.kidozen {
+  article.main {
+    .lucy-in-the-sky {
+      background: url(../img/kidozen/img_3_en.jpg) no-repeat center 200px;
     }
   }
 }
