@@ -49,7 +49,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd   : '<%= config.src %>/styleguide',
                     src   : '*.scss',
-                    dest  : '<%= config.src %>/styleguide',
+                    dest  : 'docs/styleguide',
                     ext   : '.css'
                 }]
             }
@@ -86,6 +86,10 @@ module.exports = function(grunt) {
                 files: ['<%= config.src %>/**/*.js'],
                 tasks: ['concat']
             },
+            styleguide: {
+                files: ['<%= config.src %>/**/*.scss'],
+                tasks: ['styleguide']
+            }
         },
 
         concat: {
@@ -193,6 +197,12 @@ module.exports = function(grunt) {
                 cwd: '<%= config.dist %>',
                 src: '**',
                 dest: '<%= config.distJa %>'
+            },
+            styleguide: {
+                expand: true,
+                cwd: '<%= config.dist %>/img/',
+                src: '**',
+                dest: 'docs/img/'
             }
         },
 
@@ -272,10 +282,17 @@ module.exports = function(grunt) {
         styledocco: {
             dist: {
                 options: {
-                    name: 'monaca.io'
+                    name: 'monaca.io',
+                    include: [
+                        'bower_components/jquery/dist/jquery.js',
+                        'bower_components/bootstrap/dist/css/bootstrap.css',
+                        'bower_components/bootstrap/dist/js/bootstrap.min.js',
+                        'docs/styleguide/styleguide.css',
+                        'docs/styleguide/form.css'
+                    ]
                 },
                 files: {
-                    'docs/styleguide': '<%= config.src %>/styleguide/styleguide.css'
+                    'docs/styleguide': ['docs/styleguide/']
                 }
             }
         }
@@ -329,6 +346,7 @@ module.exports = function(grunt) {
     grunt.registerTask('styleguide', [
         'clean:styleguide',
         'sass:styleguide',
+        'copy:styleguide',
         'styledocco'
     ])
 };
