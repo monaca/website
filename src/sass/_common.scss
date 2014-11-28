@@ -216,10 +216,6 @@
       background: url(../img/index/user_icon.png) no-repeat 38px 25px;
       height: 100px;
       padding: 34px 0 0 120px;
-      @media screen and (max-width: $break) {
-        background-position: 0 25px;
-        padding-left: 80px;
-      }
       &.user-1 {
         background: url(../img/index/user_icon_1.png) no-repeat 38px 25px;
       }
