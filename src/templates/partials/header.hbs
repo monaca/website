@@ -111,6 +111,11 @@ component: navbar
 
                 <li><a href="{{i18n "urlLogin"}}" class="login">{{i18n "login"}}</a></li>
                 <li><a href="{{i18n "urlSignup"}}" class="login">{{i18n "signup"}}</a></li>
+
+                {{#is language "en"}}
+                    <li><a href="http://ja.monaca.io/" class="hidden-xs">日本語</a></li>
+                {{/is}}
+
             </ul>
         </div>
     </div>
