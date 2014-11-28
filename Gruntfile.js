@@ -244,7 +244,7 @@ module.exports = function(grunt) {
         },
 
         clean: {
-            default: ['dist/**/*'],
+            dist: ['dist/**/*'],
             styleguide: ["docs/styleguide"]
         },
         connect: {
@@ -326,8 +326,8 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('build', [
-        'clean',
-        'sass',
+        'clean:dist',
+        'sass:dist',
         'concat',
         'copy',
         'assemble'
