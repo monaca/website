@@ -288,7 +288,7 @@ module.exports = function(grunt) {
                         'bower_components/bootstrap/dist/css/bootstrap.css',
                         'bower_components/bootstrap/dist/js/bootstrap.min.js',
                         'docs/styleguide/styleguide.css',
-                        'docs/styleguide/form.css'
+                        'docs/styleguide/button.css'
                     ]
                 },
                 files: {
