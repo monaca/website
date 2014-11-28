@@ -29,6 +29,11 @@ partials/footer.hbs
 partials/header.hbs
 : Global header
 
+### /docs
+
+docs/styleguide
+: Style guide
+
 ## Available Grunt tasks
 
 ### Build Website
