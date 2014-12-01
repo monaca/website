@@ -29,6 +29,11 @@ partials/footer.hbs
 partials/header.hbs
 : Global header
 
+### /docs
+
+docs/styleguide
+: Style guide
+
 ## Available Grunt tasks
 
 ### Build Website
@@ -73,11 +78,11 @@ Note: Required to create aws_keys.json manually.
 ### Separate Templates
 
 Place "hoge.en.hbs" or "hoge.ja.hbs" and "hoge.html" will be created.
-Note that \*.{en|ja}.hbs have higher priority than \*.hbs, so if you place both hoge.hbs and hoge.en.hbs, hoge.en.hbs is used.
+While \*.{en|ja}.hbs have higher priority than \*.hbs, if you place both hoge.hbs and hoge.en.hbs, hoge.en.hbs will be used.
 
 ### Use Same Template
 
-We can use shortcode in hbs files
+We can use shortcode in hbs files:
  
 ```html
 <html>
@@ -111,6 +116,23 @@ will be
 <img src="/img/ninja_en.jpg" />
 or
 <img src="/img/ninja_ja.jpg" />
+```
+
+## CSS selector to be applied to only Japanese/English pages
+
+```css
+html[lang=en] body.localkit {
+    h1 {
+        color: gold;
+    }
+}
+
+html[lang=ja] body.localkit {
+    h1 {
+        color: dimgray;
+        margin-bottom: 20px;
+    }
+}
 ```
 
 ## Bower Components

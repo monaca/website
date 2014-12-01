@@ -41,6 +41,18 @@ module.exports = function(grunt) {
                     dest  : '<%= config.dist %>/css/',
                     ext   : '.css'
                 }]
+            },
+            styleguide: {
+                options: {
+                    sourcemap: false
+                },
+                files: [{
+                    expand: true,
+                    cwd   : '<%= config.src %>/styleguide',
+                    src   : '*.scss',
+                    dest  : 'docs/styleguide',
+                    ext   : '.css'
+                }]
             }
         },
 
@@ -75,6 +87,10 @@ module.exports = function(grunt) {
                 files: ['<%= config.src %>/**/*.js'],
                 tasks: ['concat']
             },
+            styleguide: {
+                files: ['<%= config.src %>/**/*.scss'],
+                tasks: ['styleguide']
+            }
         },
 
         concat: {
@@ -182,6 +198,12 @@ module.exports = function(grunt) {
                 cwd: '<%= config.dist %>',
                 src: '**',
                 dest: '<%= config.distJa %>'
+            },
+            styleguide: {
+                expand: true,
+                cwd: '<%= config.dist %>/img/',
+                src: '**',
+                dest: 'docs/img/'
             }
         },
 
@@ -245,8 +267,10 @@ module.exports = function(grunt) {
            }
         },
 
-        clean: ['dist/**/*'],
-
+        clean: {
+            dist: ['dist/**/*'],
+            styleguide: ["docs/styleguide"]
+        },
         connect: {
             options: {
                 livereload: 35729,
@@ -277,7 +301,26 @@ module.exports = function(grunt) {
                     ]
                 }
             }
+        },
+
+        styledocco: {
+            dist: {
+                options: {
+                    name: 'monaca.io',
+                    include: [
+                        'bower_components/jquery/dist/jquery.js',
+                        'bower_components/bootstrap/dist/css/bootstrap.css',
+                        'bower_components/bootstrap/dist/js/bootstrap.min.js',
+                        'docs/styleguide/styleguide.css',
+                        'docs/styleguide/button.css'
+                    ]
+                },
+                files: {
+                    'docs/styleguide': ['docs/styleguide/']
+                }
+            }
         }
+
     });
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-contrib-sass');
@@ -285,6 +328,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-invalidate-cloudfront');
+    grunt.loadNpmTasks('grunt-styledocco');
 
     grunt.registerTask('server', [
         'build',
@@ -306,8 +350,8 @@ module.exports = function(grunt) {
     ]);
 
     grunt.registerTask('build', [
-        'clean',
-        'sass',
+        'clean:dist',
+        'sass:dist',
         'concat',
         'copy',
         'assemble'
@@ -329,4 +373,10 @@ module.exports = function(grunt) {
         'invalidate_cloudfront:en'
     ]);
 
+    grunt.registerTask('styleguide', [
+        'clean:styleguide',
+        'sass:styleguide',
+        'copy:styleguide',
+        'styledocco'
+    ])
 };

@@ -1,3 +1,20 @@
+/*
+# Keyvisual
+
+```
+<div class="keyvisual box-full">
+    <div>
+        <h1>
+            Title<br/>
+            <span>Some subtitles</span>
+        </h1>
+        <div class="btns">
+                <a href="#" class="btn btn-green">Try it!</a>
+        </div>
+    </div>
+</div>
+```
+*/
 .keyvisual {
   height: 540px;
   @media screen and (max-width: $break) {
@@ -22,6 +39,18 @@
   }
 }
 
+/*
+# Full-width container
+
+```
+ <div class="box-full">
+    <div>
+        Something
+    </div>
+ </div>
+```
+*/
+
 .box-full {
   > * {
     -moz-box-sizing: border-box;
@@ -38,7 +67,15 @@
   }
 }
 
+/*
+# Ultramarine box
 
+This items are used in top page
+
+```
+<span class="bnr-1">Enterprise</span>
+```
+*/
 .bnr-1 {
   background-color: #43587e;
   color: #ffffff;
@@ -46,9 +83,26 @@
   padding: 2px 20px;
 }
 
+/*
+# Dark dropdown menu
+
+```
+<div style="height:160px;">
+    <div class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dogs</a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a href="#">Shiba</a></li>
+            <li><a href="#">Corgy</a></li>
+            <li><span>Akita with no link</span></li>
+        </ul>
+    </div>
+</div>
+```
+*/
 .dropdown-menu-dark {
   background-color: #2c2c2c;
   li {
+    color: #ffffff;
     height: 38px;
     a,
     span {
@@ -68,6 +122,22 @@
   }
 }
 
+/*
+# 2-column boxes
+
+goes 1-column in responsive
+
+```
+<ul class="column-2" style="height:280px;" >
+    <li class="box-1">
+        <img src="http://lorempixel.com/g/400/240/animals/" />
+    </li>
+    <li class="box-1">
+        <img src="http://lorempixel.com/g/400/240/animals/" />
+    </li>
+</ul>
+```
+*/
 .column-2 {
   @include clearfix;
   li {
@@ -86,6 +156,25 @@
   }
 }
 
+/*
+# 3-column boxes
+
+Goes 2 to 1-column in responsive
+
+```
+<ul class="column-3" style="height:580px;" >
+    <li class="box-1">
+        <img src="http://lorempixel.com/g/640/300/animals/" />
+    </li>
+    <li class="box-1">
+        <img src="http://lorempixel.com/g/640/300/animals/" />
+    </li>
+    <li class="box-1">
+        <img src="http://lorempixel.com/g/640/300/animals/" />
+    </li>
+</ul>
+```
+*/
 .column-3 {
   @include clearfix;
   li {
@@ -114,15 +203,27 @@
   }
 }
 
+/*
+# 4-column boxes
+
+Goes 2 to 1-column in responsive
+
+```
+<ul class="column-4" style="height:580px;" >
+    <li class="box-1">
+        <img src="http://lorempixel.com/g/640/300/animals/" />
+    </li>
+    <li class="box-1">
+        <img src="http://lorempixel.com/g/640/300/animals/" />
+    </li>
+    <li class="box-1">
+        <img src="http://lorempixel.com/g/640/300/animals/" />
+    </li>
+</ul>
+```
+*/
 .column-4 {
-  &:after {
-    content: ".";
-    display: block;
-    clear: both;
-    height: 0px;
-    visibility: hidden;
-    font-size: 0;
-  }
+  @include clearfix;
   li {
     float: left;
     margin-right: percentage(30px/1170px);
@@ -138,6 +239,15 @@
   }
 }
 
+/*
+# Bordered boxes
+
+```
+<div class="box-1">
+    <img src="http://lorempixel.com/g/640/300/animals/" style="width:640px;height:300px;"/>
+</div>
+```
+*/
 .box-1 {
   background-color: #fafafa;
   border: 1px solid #d4d5d7;
@@ -156,6 +266,36 @@
   }
 }
 
+/*
+# Users' voices
+
+```
+<div class="container box-uservoices">
+    <h2>User Testimonials</h2>
+    <ul class="column-2">
+        <li>
+            <div class="uservoice-balloon" tile="2">
+                <q>Awesome!</q>
+            </div>
+            <div class="uservoice-user">
+                <div class="uservoice-organization">Shiba inu inc.</div>
+                <div class="uservoice-name">Shiba Jiro</div>
+            </div>
+        </li>
+
+        <li>
+            <div class="uservoice-balloon" tile="2">
+                <q>Sooooooo fancy!</q>
+            </div>
+            <div class="uservoice-user">
+                <div class="uservoice-organization">Akita corp.</div>
+                <div class="uservoice-name">Akita Taro</div>
+            </div>
+        </li>
+    </ul>
+</div>
+```
+*/
 .box-uservoices {
   padding-top: 70px;
   padding-bottom: 100px;
@@ -260,7 +400,18 @@
   }
 }
 
+/*
+# Examples on top page
 
+```
+<div class="container box-examples">
+    <h2>Examples</h2>
+    <img src="../img/index/examples_img.png">
+
+    <p><a href="#" class="btn btn-darkgray">Try it!</a></p>
+</div>
+```
+*/
 .box-examples {
   background: url(../img/index/examples_bg.jpg) no-repeat left top;
   background-size: cover;
@@ -285,6 +436,15 @@
   }
 }
 
+/*
+# Partners on top page
+
+```
+<div class="container box-partners">
+    <img src="../img/index/partners.png">
+</div>
+```
+*/
 .box-partners {
   background-color: #F9FAFC;
   border-top: 1px solid #cdd1d6;
@@ -293,6 +453,22 @@
   overflow: hidden;
   padding: 0;
 }
+
+/*
+# Awards on top page
+
+```
+<div class="container box-awards">
+    <ul>
+        <li><img src="../img/index/award_1.png"></li>
+        <li><img src="../img/index/award_5.png"></li>
+        <li><img src="../img/index/award_4.png"></li>
+        <li><img src="../img/index/award_2.png"></li>
+        <li><img src="../img/index/award_3.png"></li>
+    </ul>
+</div>
+```
+*/
 
 .box-awards {
   height: 200px;
@@ -305,6 +481,7 @@
     float: left;
     position: relative;
     left: 50%;
+    @include clearfix;
     li {
       position: relative;
       left: -50%;
@@ -340,6 +517,15 @@
   }
 }
 
+/*
+# Buttons box on page bottom
+
+```
+<div class="container box-try">
+    <a href="#" class="btn btn-green">Try it!</a>
+</div>
+```
+*/
 .box-try {
   padding: 140px 0;
   .btn {
