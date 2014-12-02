@@ -4,34 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-        {{#is language "ja"}}
-            {{title.ja}}
-        {{else}}
-            {{title.en}}
-        {{/is}}
+        {{title}}
     </title>
-    <meta name="description" content="HTML5,Cordovaベースのモバイルアプリ開発環境。iOS/Android/Windows 8向けハイブリッドアプリ開発に対応。">
-    <meta name="keywords" content="Cordova,モバイルアプリ開発,iPhone開発,Android開発,ハイブリッドアプリ,クロスプラットフォーム,PhoneGap,Monaca">
+    <meta name="description" content="{{#is language "ja"}}HTML5,Cordovaベースのモバイルアプリ開発環境。iOS/Android/Windows 8向けハイブリッドアプリ開発に対応。{{else}}Monaca is a cloud based mobile app development environment. Supports iOS/Android/Windows 8 hybrid apps in one source.{{/is}}">
+    <meta name="keywords" content="{{#is language "ja"}}Cordova,モバイルアプリ開発,iPhone開発,Android開発,ハイブリッドアプリ,クロスプラットフォーム,PhoneGap,Monaca{{else}}mobile app development,iphone development,android development,hybrid app,cross-platform,phonegap app,monaca,windows store development{{/is}}">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="/img/favicon.ico">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <meta property="og:url" content="http://monaca.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:image" content="http://monaca.io/img/ogp.png">
+    <meta property="og:description" content="{{#is language "ja"}}HTML5,Cordovaベースのモバイルアプリ開発環境。iOS/Android/Windows 8向けハイブリッドアプリ開発に対応。{{else}}Monaca is a cloud based mobile app development environment. Supports iOS/Android/Windows 8 hybrid apps in one source.{{/is}}">
+
 </head>
 <body class="{{class}}">
 
-{{> header }}
+    {{> header }}
 
-<div class="main" role="main">
+    <div class="main" role="main">
 
-    {{> body }}
+        {{> body }}
 
-</div>
+    </div>
 
-{{> footer }}
+    {{> footer }}
 
-<script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/all.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/all.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 </body>
 </html>

@@ -525,10 +525,6 @@ Goes 2 to 1-column in responsive
       background: url(../img/index/user_icon.png) no-repeat 38px 25px;
       height: 100px;
       padding: 34px 0 0 120px; }
-      @media screen and (max-width: 767px) {
-        .box-uservoices li > .uservoice-user {
-          background-position: 0 25px;
-          padding-left: 80px; } }
       .box-uservoices li > .uservoice-user.user-1 {
         background: url(../img/index/user_icon_1.png) no-repeat 38px 25px; }
       .box-uservoices li > .uservoice-user.user-2 {
@@ -678,6 +674,7 @@ Goes 2 to 1-column in responsive
   .box-try .btn {
     font-size: 24px;
     font-weight: 400;
+    font-family: Open Sans,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
     height: 64px;
     line-height: 64px;
     padding: 0 40px;
