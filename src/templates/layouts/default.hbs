@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{language}}">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
@@ -14,12 +14,33 @@
             {{/is}}
         {{/compare}}
     </title>
+    <meta name="keywords" content="{{#is language "ja"}}Cordova,モバイルアプリ開発,iPhone開発,Android開発,ハイブリッドアプリ,クロスプラットフォーム,PhoneGap,Monaca{{else}}mobile app development,iphone development,android development,hybrid app,cross-platform,phonegap app,monaca,windows store development{{/is}}">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="/img/favicon.ico">
-  </head>
-  <body class="{{class}}">
+
+    <meta property="og:url" content="http://monaca.io/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="
+        {{#compare title "typeof" "string"}}
+            {{title}} | Monaca
+        {{else}}
+            {{#is language "ja"}}
+                {{title.ja}} | Monaca
+            {{else}}
+                {{title.en}} | Monaca
+            {{/is}}
+        {{/compare}}
+    ">
+    <meta property="og:image" content="http://monaca.io/img/ogp.png">
+
+    {{#compare description "typeof" "string"}}
+        <meta name="description" content="{{description}}">
+        <meta property="og:description" content="{{description}}">
+    {{/compare}}
+</head>
+<body class="{{class}}">
 
     {{> header }}
 
