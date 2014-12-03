@@ -20,7 +20,6 @@
     <link href="/css/font-awesome.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <meta property="og:url" content="http://monaca.io/">
     <meta property="og:type" content="article">
     <meta property="og:title" content="
         {{#compare title "typeof" "string"}}
@@ -33,13 +32,31 @@
             {{/is}}
         {{/compare}}
     ">
-    <meta property="og:image" content="http://monaca.io/img/ogp.png">
+    <meta property="og:image" content="https://monaca.io/img/ogp.png">
+    <meta property="fb:admins" content="383915818289853" >
+    <meta name="twitter:site" content="@monaca_io">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@monaca_io">
+    <meta name="twitter:image" content="https://monaca.io/img/ogp.png">
+    <meta property="twitter:title" content="
+        {{#compare title "typeof" "string"}}
+            {{title}} | Monaca
+        {{else}}
+            {{#is language "ja"}}
+                {{title.ja}} | Monaca
+            {{else}}
+                {{title.en}} | Monaca
+            {{/is}}
+        {{/compare}}
+    ">
 
     {{#compare description "typeof" "string"}}
         <meta name="description" content="{{description}}">
         <meta property="og:description" content="{{description}}">
+        <meta name="twitter:description" content="{{description}}">
     {{/compare}}
 </head>
+
 <body class="{{class}}">
 
     {{> header }}

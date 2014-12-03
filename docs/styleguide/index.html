@@ -33,13 +33,14 @@
 <textarea class="preview-code" spellcheck="false">grunt server:ja
 grunt server:en</textarea><p><em>server command don&#39;t watch assets directory, so please run &quot;build&quot; manually after you moved any filed in assets folder.</em></p>
 <h3 id="deploy-to-the-server">Deploy to the server</h3>
-<textarea class="preview-code" spellcheck="false">grunt deploy</textarea><p>Note: Required to create aws_keys.json manually.</p>
+<textarea class="preview-code" spellcheck="false">grunt deploy:en
+grunt deploy:ja</textarea><p>Note: Required to create aws_keys.json manually.</p>
 <h2 id="i18n">i18n</h2>
 <h3 id="separate-templates">Separate Templates</h3>
 <p>Place &quot;hoge.en.hbs&quot; or &quot;hoge.ja.hbs&quot; and &quot;hoge.html&quot; will be created.
-Note that *.{en|ja}.hbs have higher priority than *.hbs, so if you place both hoge.hbs and hoge.en.hbs, hoge.en.hbs is used.</p>
+While *.{en|ja}.hbs have higher priority than *.hbs, if you place both hoge.hbs and hoge.en.hbs, hoge.en.hbs will be used.</p>
 <h3 id="use-same-template">Use Same Template</h3>
-<p>We can use shortcode in hbs files</p>
+<p>We can use shortcode in hbs files:</p>
 <textarea class="preview-code" spellcheck="false">&lt;html&gt;
     &lt;body&gt;
         &lt;p&gt;{{i18n "hoge"}}&lt;/p&gt;
@@ -51,6 +52,24 @@ Note that *.{en|ja}.hbs have higher priority than *.hbs, so if you place both ho
 {{/is}}</textarea><textarea class="preview-code" spellcheck="false">{{i18n "key"}} &lt;- HTML will be escaped
 {{{i18n "key"}}} &lt;- Call with triple brackets will prevent escaping</textarea><p>Translation files
 : /src/data/i18n/*.json</p>
+<h3 id="get-current-language">Get current language</h3>
+<textarea class="preview-code" spellcheck="false">&lt;img src="/img/ninja_{{language}}.jpg" /&gt;
+will be
+&lt;img src="/img/ninja_en.jpg" /&gt;
+or
+&lt;img src="/img/ninja_ja.jpg" /&gt;</textarea><h2 id="css-selector-to-be-applied-to-only-japaneseenglish-pages">CSS selector to be applied to only Japanese/English pages</h2>
+<pre><code class="lang-css">html[lang=en] body.localkit {
+    h1 {
+        color: gold;
+    }
+}
+
+html[lang=ja] body.localkit {
+    h1 {
+        color: dimgray;
+        margin-bottom: 20px;
+    }
+}</code></pre>
 <h2 id="bower-components">Bower Components</h2>
 <ul>
 <li><p>Twitter Bootstrap</p>
