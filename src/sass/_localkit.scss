@@ -11,17 +11,32 @@ body.localkit {
     h1 {
       font-weight: 400;
       margin-bottom: 10px;
-      padding-top: 130px;
+      padding-top: 120px;
       text-shadow: 0 0 10px rgba(255, 255, 255, 1);
       letter-spacing: -0.03em;
-      font-size: 50px;
+      font-size: 45px;
       padding-right: 330px;
       @media screen and (max-width: 1020px) {
           padding-top: 100px;
           padding-right: 0px;
       }
       img {
-        vertical-align: 4px;
+        vertical-align: -10px;
+      }
+    }
+    .box-try {
+      text-align: left;
+			padding: 40px 0 0;
+      }
+    .btns {
+      padding: 20px 0 40px;
+      line-height: 64px;
+      .btn {
+        padding: 0 20px;
+        min-width: 240px;
+      }
+      @media screen and (max-width: $break-xs) {
+          text-align: center;
       }
     }
   }
@@ -62,6 +77,7 @@ body.localkit {
         height: auto;
         min-height: 54px;
         line-height: 1.2;
+				margin: 0;
         @media screen and (max-width: $break-xs) {
           padding: 13px 0;
           font-size: 16px;

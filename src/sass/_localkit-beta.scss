@@ -81,12 +81,13 @@ body.localkit-closedbeta {
 		text-align: center;
 		
 		.movie {
-			margin-bottom: 40px;
+			margin-bottom: 70px;
 		}
 
 		.info {
 			width: 940px;
 			margin: 0 auto 100px;
+      text-align: left;
 		
 			p {
 				font-size: 30px;
@@ -94,9 +95,58 @@ body.localkit-closedbeta {
 				margin-bottom: 25px;
 				font-weight: 300;
 			}
+			
+			i {
+			  font-size: smaller;
+			}
+			
+			.sub_paragraph_1 {
+        margin: 60px 60px 70px 60px;
+		    border-bottom: 1px solid #ccc;
+		    border-top: 1px solid #ccc;
+        padding: 25px 0;
+				
+				p span {
+				  font-weight: 800;
+					color: #485f67;
+					margin-right: 0.2em;
+				}
+
+        ol {
+				  counter-reset: list-number;
+					margin: 0 0 0px 80px;
+				}
+				
+				li {
+				  list-style-position: outside;
+				  font-size: 24px;
+					line-height: 1.2;
+					color: #485f67;
+					margin-bottom: 20px;
+				}
+				
+				li:before {
+				  counter-increment: list-number;
+					content: counter(list-number);
+					background-color: #485f67;
+					border-radius: 50%;
+					color: #fff;
+					text-align: center;
+					display: inline-block;
+					font-size: 18px;
+					width: 1.5em;
+					height: 1.5em;
+					line-height: 1.5;
+					margin: 0 0.5em 0 -2em;
+				}
+			}
 		}
 		.btn-area {
 			margin-bottom: 110px;
+		}
+		.divider-line {
+		  border-bottom: 1px solid #ccc;
+			padding-bottom: 25px;
 		}
 	}
 }
