@@ -1,4 +1,4 @@
-/*
+ld:/*
  * Generated on 2014-11-05
  * generator-assemble v0.5.0
  * https://github.com/assemble/generator-assemble
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    sourcemap: true
+                    sourcemap: false
                 },
                 files: [{
                     expand: true,
