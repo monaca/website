@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         {{#compare title "typeof" "string"}}
-            {{title}} | Monaca
+            {{#is language "ja"}}
+                {{title}}
+            {{else}}
+                {{title}} | Monaca
+            {{/is}}
         {{else}}
             {{#is language "ja"}}
-                {{title.ja}} | Monaca
+                {{title.ja}}
             {{else}}
                 {{title.en}} | Monaca
             {{/is}}
@@ -30,10 +34,14 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="
         {{#compare title "typeof" "string"}}
-            {{title}} | Monaca
+            {{#is language "ja"}}
+                {{title}}
+            {{else}}
+                {{title}} | Monaca
+            {{/is}}
         {{else}}
             {{#is language "ja"}}
-                {{title.ja}} | Monaca
+                {{title.ja}}
             {{else}}
                 {{title.en}} | Monaca
             {{/is}}
@@ -47,10 +55,14 @@
     <meta name="twitter:image" content="https://monaca.io/img/ogp.png">
     <meta property="twitter:title" content="
         {{#compare title "typeof" "string"}}
-            {{title}} | Monaca
+            {{#is language "ja"}}
+                {{title}}
+            {{else}}
+                {{title}} | Monaca
+            {{/is}}
         {{else}}
             {{#is language "ja"}}
-                {{title.ja}} | Monaca
+                {{title.ja}}
             {{else}}
                 {{title.en}} | Monaca
             {{/is}}
