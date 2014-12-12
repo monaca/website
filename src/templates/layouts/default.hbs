@@ -5,16 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         {{#compare title "typeof" "string"}}
-            {{title}} | Monaca
+            {{#is language "ja"}}
+                {{title}}
+            {{else}}
+                {{title}} | Monaca
+            {{/is}}
         {{else}}
             {{#is language "ja"}}
-                {{title.ja}} | Monaca
+                {{title.ja}}
             {{else}}
                 {{title.en}} | Monaca
             {{/is}}
         {{/compare}}
     </title>
-    <meta name="keywords" content="{{#is language "ja"}}Cordova,モバイルアプリ開発,iPhone開発,Android開発,ハイブリッドアプリ,クロスプラットフォーム,PhoneGap,Monaca{{else}}mobile app development,iphone development,android development,hybrid app,cross-platform,phonegap app,monaca,windows store development{{/is}}">
+    <meta name="keywords" content="
+        {{#compare keywords "typeof" "string"}}
+            {{keywords}}
+        {{else}}
+            {{#is language "ja"}}Cordova,モバイルアプリ開発,iPhone開発,Android開発,ハイブリッドアプリ,クロスプラットフォーム,PhoneGap,Monaca
+            {{else}}mobile app development,iphone development,android development,hybrid app,cross-platform,phonegap app,monaca,windows store development{{/is}}
+        {{/compare}}
+    ">
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/font-awesome.min.css" rel="stylesheet">
@@ -23,10 +34,14 @@
     <meta property="og:type" content="article">
     <meta property="og:title" content="
         {{#compare title "typeof" "string"}}
-            {{title}} | Monaca
+            {{#is language "ja"}}
+                {{title}}
+            {{else}}
+                {{title}} | Monaca
+            {{/is}}
         {{else}}
             {{#is language "ja"}}
-                {{title.ja}} | Monaca
+                {{title.ja}}
             {{else}}
                 {{title.en}} | Monaca
             {{/is}}
@@ -40,10 +55,14 @@
     <meta name="twitter:image" content="https://monaca.io/img/ogp.png">
     <meta property="twitter:title" content="
         {{#compare title "typeof" "string"}}
-            {{title}} | Monaca
+            {{#is language "ja"}}
+                {{title}}
+            {{else}}
+                {{title}} | Monaca
+            {{/is}}
         {{else}}
             {{#is language "ja"}}
-                {{title.ja}} | Monaca
+                {{title.ja}}
             {{else}}
                 {{title.en}} | Monaca
             {{/is}}
