@@ -1,7 +1,6 @@
 body.home {
   .recruit-xs {
-    padding: 65px 0 15px 16px;
-    background-color: #8bcc37;
+    background-color: #007bff;
     width: 100%;
     position: absolute;
       top: 0;
@@ -11,28 +10,55 @@ body.home {
       font-size: 16px;
       line-height: 16px;
       font-weight: 400;
-      color: #333;
+      color: #fff;
       text-align: center;
+
     }
     img {
       width: 70px;
       vertical-align: top;
-      margin-right: 0.5em;
+      margin: -1px 0.5em 0 0;
     }
     a {
       color: #333;
       text-decoration: none;
+      padding: 65px 0 15px;
+      display: block;
+      
+      &:hover {
+          background-color: #0056b2;
+          transition: .2s ease-in-out;
+            -webkit-transition: .4s ease-in-out;
+            -moz-transition: .4s ease-in-out;
+            -ms-transition: .4s ease-in-out;
+      }
+      &:active {
+          background-color: #0056b2;
+      }
     }
   }
   .recruit-md {
     width: 1170px;
     margin: 0 auto;
     position: relative;
-    img {
+    .badge {
+      width: 266px;
+      height: 263px;
+      background: url(../img/careers/banner_recruit_normal.png) no-repeat 0 0;
+      text-indent: -99999px;
+      display: block;
       position: absolute;
        right: 0;
-       top: 50px;
+       top: 65px;
       z-index: 50;
+      
+      &:hover {
+         background: url(../img/careers/banner_recruit_hover.png) no-repeat 0 0;
+          transition: .2s ease-in-out;
+            -webkit-transition: .4s ease-in-out;
+            -moz-transition: .4s ease-in-out;
+            -ms-transition: .4s ease-in-out;
+      }
     }
   }
   
@@ -46,7 +72,7 @@ body.home {
       padding-bottom: 20px;
     }
     h1 {
-      padding-top: 130px;
+      padding-top: 115px;
       font-weight: 400;
       line-height: 1.2;
       margin-bottom: 30px;
