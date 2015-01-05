@@ -550,3 +550,42 @@ Goes 2 to 1-column in responsive
     }
   }
 }
+.monaca_info {
+	background-color: #e5e477;
+	width: 100%;
+	position: absolute;
+		top: 0;
+		left: 0;
+	z-index: 50;
+	h2 {
+		font-size: 14px;
+		line-height: 1.4;
+		font-weight: 400;
+		color: #333;
+		text-align: center;
+		padding: 0 40px;
+		@media screen and (max-width: $break) {
+				padding: 0 5%;
+				font-size: 12px;
+		}
+	}
+	a {
+		color: #333;
+		text-decoration: none;
+		padding: 65px 0 15px;
+		display: block;
+		
+		&:hover {
+		    text-decoration: underline;
+				background-color: #fffd85;
+				transition: .2s ease-in-out;
+					-webkit-transition: .4s ease-in-out;
+					-moz-transition: .4s ease-in-out;
+					-ms-transition: .4s ease-in-out;
+		}
+		&:active {
+				background-color: #e5e477;
+				text-decoration: none;
+		}
+	}
+}
