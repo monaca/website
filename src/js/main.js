@@ -18,7 +18,7 @@ $(function() {
             $tile3.tile(3);
             $tile4.tile(4);
         }, 150);
-    })
+    });
 
     $("header.navbar .navbar-collapse a").on({
         "touchstart": function() {
@@ -28,5 +28,26 @@ $(function() {
             $("header.navbar .navbar-collapse a").removeClass("active");
         }
     });
+
+    setNotificationHeader();
+
 });
 
+function setNotificationHeader() {
+  $.ajax({
+    type: 'GET',
+    url: window.NOTIFICATION_MESSAGE_URL
+  }).done(function (data) {
+    try {
+      var message = JSON.parse(data);
+    }catch(e){
+      return;
+    }
+
+    var lang = window.LANG;
+    if (typeof message[lang] === "undefined" || message[lang] === "") return;
+    
+    $('#' + lang + '-notification-header-content').text(message[lang]);
+    $('#notificationHeader').show();
+  });
+}
