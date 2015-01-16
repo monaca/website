@@ -32,7 +32,7 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    sourcemap: false
+                    sourcemap: true
                 },
                 files: [{
                     expand: true,
