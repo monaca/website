@@ -22,8 +22,8 @@ body.monaca-book {
     }
     .errata {
       position: absolute;
-        right: 43px;
-        bottom: 5px;
+      right: 43px;
+      bottom: 5px;
       width: 100%;
       font-size: 16px;
       line-height: 1.2;
@@ -50,8 +50,8 @@ body.monaca-book {
     }
     .official-badge {
       position: absolute;
-        right: 43px;
-        top: 0px;
+      right: 43px;
+      top: 0px;
       background-color: none;
       img {
         width: 162px;
@@ -201,15 +201,21 @@ body.monaca-book {
     }  /* apps-item */
     .grid {
       padding: 0 5%;
+      @include clearfix;
       @media screen and (max-width: $break) {
-        padding: 0 5%;
-      } /* grid */
+        padding: 0;
+      }
       > li {
         float: left;
-        margin-bottom: 50px;
+        margin: 0 0 50px 0;
         width: 25%;
         @media screen and (max-width: 992px) {
-          width: 50%;
+          width: 48%;
+        }
+        @media screen and (max-width: $break) {
+          &:nth-child(odd) {
+            margin-right: 4%;
+          }
         }
         figure {
           margin: 0;
@@ -307,7 +313,8 @@ body.monaca-book {
               }
             } /* over-cap */
             
-            &:hover {
+            &:hover,
+            &.hover {
               display: block;
               .over-cap {
                 opacity: 1;

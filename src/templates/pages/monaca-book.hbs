@@ -36,7 +36,7 @@ layout: src/templates/layouts/default.hbs
           <img src="/img/monaca_book/3-1.png" alt="" />
           <figcaption class="over-cap">
             <h3><span class="chapter">第3章　3-1</span>今年は平成何年？</h3>
-            <a class="btn-darkgray" href="#">Monacaに<br class="visible-xs" />インポート <i class="fa fa-angle-right"></i></a>
+            <a class="btn-import btn-darkgray" href="#">Monacaに<br class="visible-xs" />インポート <i class="fa fa-angle-right"></i></a>
           </figcaption>
         </div>
         <figcaption class="cap">
@@ -51,7 +51,7 @@ layout: src/templates/layouts/default.hbs
           <img src="/img/monaca_book/3-15A.png" alt="" />
           <figcaption class="over-cap">
             <h3><span class="chapter">第3章　3-5</span>Monacaカウンター</h3>
-            <a class="btn-darkgray" href="#">Monacaに<br class="visible-xs" />インポート <i class="fa fa-angle-right"></i></a>
+            <a class="btn-import btn-darkgray" href="#">Monacaに<br class="visible-xs" />インポート <i class="fa fa-angle-right"></i></a>
           </figcaption>
         </div>
         <figcaption class="cap">
@@ -66,7 +66,7 @@ layout: src/templates/layouts/default.hbs
           <img src="/img/monaca_book/4-1A.png" alt="" />
           <figcaption class="over-cap">
             <h3><span class="chapter">第4章　4-1-1</span>フレームアニメーション</h3>
-            <a class="btn-darkgray" href="#">Monacaに<br class="visible-xs" />インポート <i class="fa fa-angle-right"></i></a>
+            <a class="btn-import btn-darkgray" href="#">Monacaに<br class="visible-xs" />インポート <i class="fa fa-angle-right"></i></a>
           </figcaption>
         </div>
          <figcaption class="cap">
@@ -81,7 +81,7 @@ layout: src/templates/layouts/default.hbs
           <img src="/img/monaca_book/4-3B.png" alt="" />
           <figcaption class="over-cap">
             <h3><span class="chapter">第4章　4-1-2</span>往復アニメーション</h3>
-            <a class="btn-darkgray" href="#">Monacaに<br class="visible-xs" />インポート <i class="fa fa-angle-right"></i></a>
+            <a class="btn-import btn-darkgray" href="#">Monacaに<br class="visible-xs" />インポート <i class="fa fa-angle-right"></i></a>
           </figcaption>
         </div>
         <figcaption class="cap">
@@ -166,5 +166,12 @@ $(function() {
     if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(onResize, 300);
   }
+
+  $("#apps li .btn-import").click(function(e) {
+    if (parseFloat($(this).closest("figcaption").css("opacity")) !== 1) {
+      e.preventDefault();
+    }
+  });
+
 })
 </script>
