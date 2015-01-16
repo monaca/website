@@ -78,7 +78,7 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: ['<%= config.src %>/**/*.scss'],
-                tasks: ['sass'],
+                tasks: ['sass', 'copy:css'],
                 options : {
                     spawn: false
                 }
@@ -87,10 +87,10 @@ module.exports = function(grunt) {
                 files: ['<%= config.src %>/**/*.js'],
                 tasks: ['concat']
             },
-            styleguide: {
-                files: ['<%= config.src %>/**/*.scss'],
-                tasks: ['styleguide']
-            }
+            //styleguide: {
+            //    files: ['<%= config.src %>/**/*.scss'],
+            //    tasks: ['styleguide']
+            //}
         },
 
         concat: {
@@ -199,6 +199,12 @@ module.exports = function(grunt) {
                 src: '**',
                 dest: '<%= config.distJa %>'
             },
+            css: {
+                expand: true,
+                cwd: '<%= config.dist %>/css/',
+                src: 'style.*',
+                dest: '<%= config.distJa %>/css/'
+            },
             styleguide: {
                 expand: true,
                 cwd: '<%= config.dist %>/img/',
@@ -271,6 +277,7 @@ module.exports = function(grunt) {
             dist: ['dist/**/*'],
             styleguide: ["docs/styleguide"]
         },
+
         connect: {
             options: {
                 livereload: 35729,
