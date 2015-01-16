@@ -25,13 +25,12 @@ layout: src/templates/layouts/default.hbs
     <p class="errata"><a href="#">正誤表はこちら</a> <i class="fa fa-chevron-circle-right"></i></p>
 </div></div>
 
-<div class="container section  sample-apps box-full">
+<div class="container section sample-apps box-full">
   <h2>本書で扱う<br class="visible-xs" />サンプルアプリ</h2>
   <p>本書で解説するサンプルアプリは、Monacaデバッガーを使って実機上でそのまま実行できます。各画面下の「Monacaにインポート」をクリックしてください。</p>
 
-  <ul class="grid apps-item">
-  
-    <li class="grid-item item-1">
+  <ul id="apps" class="grid apps-item">
+    <li class="item-1">
       <figure>
         <div>
           <img src="/img/monaca_book/3-1.png" alt="" />
@@ -41,12 +40,12 @@ layout: src/templates/layouts/default.hbs
           </figcaption>
         </div>
         <figcaption class="cap">
-          <h3><span class="chapter">第3章　3-1</span>今年は平成何年？</h3>
+          <h3><span class="chapter">第3章　3-1</span>今年は平成何年？今年は平成何年？今年は平成何年？</h3>
           <a href="#">Monacaにインポート <i class="fa fa-angle-right"></i></a>
         </figcaption>
       </figure>
     </li>
-    <li class="grid-item item-2">
+    <li class="item-2">
       <figure>
         <div>
           <img src="/img/monaca_book/3-15A.png" alt="" />
@@ -61,7 +60,7 @@ layout: src/templates/layouts/default.hbs
         </figcaption>
       </figure>
     </li>
-    <li class="grid-item item-3">
+    <li class="item-3">
      <figure>
        <div>
           <img src="/img/monaca_book/4-1A.png" alt="" />
@@ -76,7 +75,7 @@ layout: src/templates/layouts/default.hbs
         </figcaption>
       </figure>
    </li>
-   <li class="grid-item item-4">
+   <li class="item-4">
      <figure>
         <div>
           <img src="/img/monaca_book/4-3B.png" alt="" />
@@ -149,3 +148,23 @@ layout: src/templates/layouts/default.hbs
 <div class="container box-try">
     <a href="https://monaca.mobi/ja/register/start" class="btn btn-darkgray">Amazonで購入</a>
 </div>
+
+<script type="text/javascript">
+var resizeTimer = null;
+
+function onResize() {
+  if (window.innerWidth >= 992) {
+    $("#apps li").tile(4);
+  } else {
+    $("#apps li").tile(2);   
+  }
+}
+
+$(function() {
+  onResize();
+  window.onresize = function() {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(onResize, 300);
+  }
+})
+</script>
