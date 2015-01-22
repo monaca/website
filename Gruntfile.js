@@ -30,10 +30,11 @@ module.exports = function(grunt) {
         },
 
         sass: {
+            options: {
+                sourceMap: true,
+                includePaths: require('node-bourbon').includePaths
+            },
             dist: {
-                options: {
-                    sourcemap: true
-                },
                 files: [{
                     expand: true,
                     cwd   : 'src/sass',
@@ -330,7 +331,7 @@ module.exports = function(grunt) {
 
     });
     grunt.loadNpmTasks('assemble');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-aws-s3');
