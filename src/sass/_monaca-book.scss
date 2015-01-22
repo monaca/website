@@ -167,11 +167,6 @@ body.monaca-book {
     }
   }
    
-  .item-1 { background-color: #ffe9d9; }
-  .item-2 { background-color: #e5ffd9; }
-  .item-3 { background-color: #d9f2ff; }
-  .item-4 { background-color: #dfd9ff; }
-    
   .sample-apps {
     padding-bottom: 0;
     @media screen and(max-width: $break) {
@@ -213,26 +208,67 @@ body.monaca-book {
           width: 48%;
         }
         @media screen and (max-width: $break) {
-          &:nth-child(odd) {
+          &:nth-of-type(2n + 1) {
             margin-right: 4%;
+          }
+        }
+        > h3 {
+          font-size: 18px;
+          line-height: 1.3;
+          font-weight: 600;
+          color: #333;
+          margin: 14px auto 10px;
+          width: 180px;
+          @media screen and(max-width: $break) {
+            font-size: 16px;
+            margin-bottom: 5px;
+            width: 170px;
+          }
+          @media screen and (max-width: $break-xs) {
+            width: 140px;
+          }
+          .chapter {
+            display: block;
+            font-size: 12px;
+            line-height: 1.2;
+            margin-bottom: 2px;
+            color: #999;
+          }
+        }
+        > a {
+          font-size: 13px;
+          line-height: 1.6;
+          @media screen and(max-width: $break) {
+            font-size: 12px;
           }
         }
         figure {
           margin: 0;
           width: 200px;
           margin: 0 auto;
+          overflow: hidden;
+          position: relative;
           @media screen and (max-width: $break) {
             width: 170px;
           }
           @media screen and (max-width: $break-xs) {
             width: 140px;
           }
-          > div {
+          figcaption {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 200px;
             height: 356px;
-            margin: 0 auto;
-            overflow: hidden;
-            position: relative;
+            padding: 20px;
+            background: url(../img/monaca_book/bg_thumb.png);
+            color: #fff;
+            opacity: 0;
+            text-align: center;
+            visibility: hidden;
+            @include backface-visibility(hidden);
+            @include transition(transform 0.3s, opacity 0.3s, visibility 0s linear 0.3s);
+
             @media screen and (max-width: $break) {
               width: 170px;
               height: 303px;
@@ -241,119 +277,73 @@ body.monaca-book {
               width: 140px;
               height: 249px;
             }
-            .over-cap {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 200px;
-              height: 356px;
-              padding: 20px;
-              background: url(../img/monaca_book/bg_thumb.png);
-              color: #fff;
+            h3 {
+              color: #ffffff; 
+              font-size: 24px;
+              line-height: 1.2;
+              font-weight: 600;
+              margin: 80px 0 15px;
               
+              /* Animation */
               opacity: 0;
               text-align: center;
-              -webkit-backface-visibility: hidden;
-              -moz-backface-visibility: hidden;
-              backface-visibility: hidden;
-              -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-              -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-              transition: transform 0.3s, opacity 0.3s;
               
+              @include transform(translate(0, -60px));
+
               @media screen and (max-width: $break) {
-                width: 170px;
-                height: 303px;
+                margin-top: 60px;
+                font-size: 20px;
               }
               @media screen and (max-width: $break-xs) {
-                width: 140px;
-                height: 249px;
+                margin-top: 40px;
+                font-size: 17;
               }
-              h3 {
-                font-size: 24px;
+              .chapter {
+                color: #ffffff;
+                font-size: 18px;
                 line-height: 1.2;
-                font-weight: 600;
-                margin: 80px 0 15px;
-                
-                /* Animation */
-                opacity: 0;
-                text-align: center;
-                
-                -webkit-transform: translate(0, -60px);
-                -moz-transform: translate(0, -60px);
-                -ms-transform: translate(0, -60px);
-                transform: translate(0, -60px);
-                span {
-                  font-size: 18px;
-                  line-height: 1.2;
-                  font-weight: 400;
-                  display: block;
-                  @media screen and (max-width: $break) {
-                    font-size: 16px;
-                  }
-                  @media screen and (max-width: $break-xs) {
-                    margin-top: 30px;
-                    font-size: 12px;
-                  }
-                }
+                font-weight: 400;
+                display: block;
                 @media screen and (max-width: $break) {
-                  margin-top: 60px;
-                  font-size: 20px;
+                  font-size: 16px;
                 }
                 @media screen and (max-width: $break-xs) {
-                  margin-top: 40px;
-                  font-size: 17;
+                  margin-top: 30px;
+                  font-size: 12px;
                 }
               }
-              a {
-                opacity: 0;
-                -webkit-transform: scale(1.5, 1.5);
-                -moz-transform: scale(1.5, 1.5);
-                -ms-transform: scale(1.5, 1.5);
-                transform: scale(1.5, 1.5);
+            }
+            .btn-import {
+              opacity: 0;
+              @include transform(scale(1.5, 1.5));
+              &:hover {
+                background-color: lighten(#34454b, 4);
               }
-            } /* over-cap */
-            
-            &:hover,
-            &.hover {
-              display: block;
-              .over-cap {
+            }
+          } /* /figcaption */
+          
+          &.on {
+            display: block;
+            figcaption {
+              opacity: 1;
+              visibility: visible;
+              @include transition-delay(0, 0, 0);
+              h3 {
                 opacity: 1;
-                h3 {
-                  opacity: 1;
-                  
-                  -webkit-transform: translate(0, 0);
-                  -moz-transform: translate(0, 0);
-                  -ms-transform: translate(0, 0);
-                  transform: translate(0, 0);
-                  
-                  -webkit-transition: -webkit-transform 0.3s, opacity 1s;
-                  -moz-transition: -moz-transform 0.3s, opacity 1s;
-                  transition: transform 0.3s, opacity 1s;
-                }
-                a {
-                  opacity: 1;
-                  -webkit-transform: scale(1, 1);
-                  -moz-transform: scale(1, 1);
-                  -ms-transform: scale(1, 1);
-                  transform: scale(1, 1);
-                
-                  -webkit-transition: -webkit-transform 0.3s, opacity 1.5s;
-                  -moz-transition: -moz-transform 0.3s, opacity 1.5s;
-                  transition: transform 0.3s, opacity 1.5s;
-                }
-              } /* over-cap */
-              img {
-                opacity: 1;
-                -webkit-transform: scale(1.4, 1.4);
-                -moz-transform: scale(1.4, 1.4);
-                -ms-transform: scale(1.4, 1.4);
-                transform: scale(1.4, 1.4);
-                
-                -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-                -moz-transition: -moz-transform 0.3s, opacity 0.3s;
-                transition: transform 0.3s, opacity 0.3s;
+                @include transform(translate(0, 0));
+                @include transition(transform 0.3s, opacity 1s);
               }
-            } /* div:hover  */
+              .btn-import {
+                opacity: 1;
+                @include transform(scale(1, 1));
+                @include transition(transform 0.3s, opacity 1.5s);
+              }
+            }
+            img {
+              opacity: 1;
+              @include transform(scale(1.4, 1.4));
+              @include transition(transform 0.3s, opacity 0.3s);
+            }
           }
           img {
             max-width: 100%;
@@ -368,42 +358,9 @@ body.monaca-book {
               height: 249px;
             }
           }
-          .cap {
-            @media screen and (max-width: $break) {
-              width: 170px;
-            }
-            @media screen and (max-width: $break-xs) {
-              width: 140px;
-            }
-            h3 {
-              font-size: 18px;
-              line-height: 1.3;
-              font-weight: 600;
-              color: #333;
-              margin: 14px 0 10px;
-              @media screen and(max-width: $break) {
-                font-size: 16px;
-                margin-bottom: 5px;
-              }
-              .chapter {
-                display: block;
-                font-size: 12px;
-                line-height: 1.2;
-                margin-bottom: 2px;
-                color: #999;
-              }
-            }
-            a {
-              font-size: 13px;
-              line-height: 1.6;
-              @media screen and(max-width: $break) {
-                font-size: 12px;
-              }
-            }
-          } /* cap */
         } /* figure */
       }
-      } /* grid */
+    } /* grid */
   } /* sample-apps */
   
   .book-outline {
