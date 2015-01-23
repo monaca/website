@@ -1,18 +1,18 @@
-body.dev-support {
+body.devsupport {
 
   .keyvisual {
-    background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
-    color: #000;
-    padding-bottom: 0;
+    background: url(../img/devsupport/keyvisual.jpg) no-repeat center bottom;
+    padding-bottom: 0px;
     position: relative;
     @media screen and (max-width: $break-xs) {
-      padding-bottom: 40px;
+        padding-bottom: 30px;
     }
     h1 {
+      font-weight: 400;
+      line-height: 1.2;
       margin-bottom: 10px;
-      padding-top: 140px;
+      padding-top: 110px;
       text-align: left;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 1);
       @media screen and (max-width: $break-xs) {
         padding-top: 100px;
       }
@@ -20,40 +20,109 @@ body.dev-support {
         vertical-align: 4px;
       }
     }
-    p {
-      font-size: 20px;
-      color: #666;
-      text-align: left;
-      word-break: break-all;
+  }
+
+  section {
+    h1 {
+      margin-bottom: 40px;
     }
   }
 
-  article.main {
-    section {
-      border-bottom: 1px solid #ccc;
-      padding: 90px 0 80px;
-      &:first-child {
-        padding-top: 140px;
-      }
+  section.menu {
+    @media screen and (max-width: $break) {
+      padding-left: 0;
+      padding-right: 0;
       h1 {
-        text-align: center;
-      }
-      p {
-        margin-bottom: 30px;
-      }
-      &.debug {
-        background: url(../img/localkit/img_3.png) no-repeat center bottom 20px;
-        background-size: 110%;
-        padding-bottom: 50%;
+        padding-left: 5%;
+        padding-right: 5%;      
       }
     }
-    .box-try {
-      padding: 140px 0;
-      .btn {
-        padding: 0 40px;
-        min-width: 210px;
+    table {
+      width: 100%;
+      thead {
+        td {
+          background-color: #f2f2f2;
+          border: 1px solid #cccccc;
+          font-size: 30px;
+          padding: 40px 0;
+          text-align: center;
+        }
+      }
+      tbody {
+        tr {
+          height: 140px;
+          &:last-child th {
+            border-bottom: 1px solid #cccccc;
+          }
+          &.tech li {
+            display: inline-block;
+            white-space: nowrap;
+            width: 190px;
+            max-width: 33%;
+          }
+        }
+        th {
+          font-size: 24px;
+          padding: 0 5px 0 0;
+          vertical-align: top;
+          width: 36%;
+          @media screen and (max-width: $break-xs) {
+              width: 24%;
+          }
+          > span {
+            border-top: 1px solid #cccccc;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 20px 5px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        td {
+          border: 1px solid #cccccc;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1.6;
+          padding: 20px;
+          width: 32%;
+          p {
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 20px;
+          }
+          ul {
+            margin-bottom: 20px;
+            li {
+              line-height: 1.6;
+              margin-bottom: 6px;
+              text-indent: -1em;
+              padding-left: 1em;
+              &:before {
+                content: "・";
+              }
+            }
+          }
+        }
+      }
+      @media screen and (max-width: $break) {
+        thead td {
+          font-size: 16px;
+        }
+        tbody {
+          th {
+            font-size: 14px;
+            word-break: break-word;
+          }
+          td {
+            font-size: 14px;
+            word-break: break-word;
+          }
+          tr.tech ul li {
+            display: block;
+          }
+        }
       }
     }
   }
-
 }
