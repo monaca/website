@@ -6,7 +6,13 @@ notification_message_url: https://642dad3ff5abc36218998a19ee31a174f322b763.googl
 <html lang="{{language}}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{#compare viewport "typeof" "string"}}
+        <meta name="viewport" content="{{viewport}}">
+    {{else}}
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{/compare}}
+
     <title>
         {{#compare title "typeof" "string"}}
             {{#is language "ja"}}
@@ -83,8 +89,7 @@ notification_message_url: https://642dad3ff5abc36218998a19ee31a174f322b763.googl
 <body class="{{class}}">
 
     {{> header }}
-    <div class="main" role="main">
-      {{> notificationHeader }}
+    {{> notificationHeader }}
     <article class="main" role="main">
 
       {{> body }}
