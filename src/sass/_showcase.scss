@@ -140,10 +140,10 @@ body.showcase-index {
                 margin-bottom: 6px;
             }
         }
-    }   
+    }
     article.main > .contact {
         border-top: 1px solid #ccc;
-        padding: 80px 0; 
+        padding: 80px 0;
         text-align: center;
         p {
             color: #333;
@@ -168,7 +168,7 @@ body.showcase-index {
 
 body.showcase {
     min-width: 1170px;
-    -webkit-text-size-adjust: 100%; 
+    -webkit-text-size-adjust: 100%;
     @media screen and (max-width: $break-xs) {
         min-width: 0;
     }
@@ -308,7 +308,7 @@ body.showcase {
                 }
             }
             .info-cont {
-                border-top: 1px solid $border-color;            
+                border-top: 1px solid $border-color;
                 padding: 25px 30px;
                 h1 {
                     margin-bottom: 5px;
@@ -401,7 +401,7 @@ body.showcase {
         > .download,
         > .contact {
             border-top: 1px solid #ccc;
-            padding: 80px 0; 
+            padding: 80px 0;
             text-align: center;
             p {
                 font-size: 24px;
