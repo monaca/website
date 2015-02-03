@@ -31,8 +31,8 @@ body.showcase {
 		section {
 			border-bottom: none;
 			text-align: left;
-      width: 1080px;
-      
+			width: 1080px;
+			
 		}
 		h1 {
 			margin-bottom: 34px;
@@ -57,9 +57,9 @@ body.showcase {
 			font-style: normal;
 			font-weight: 700;
 		}
-    a {
-      outline: none;
-    }
+		a {
+			outline: none;
+		}
 		figure {
 			figcaption {
 				color: #666;
@@ -89,36 +89,36 @@ body.showcase {
 				font-size: 14px;
 				margin-bottom: 20px;
 			}
-      p {
-        margin-bottom: 0;
-      }
+			p {
+				margin-bottom: 0;
+			}
 			.keyvisual {
 				vertical-align: bottom;
-        width: 1078px;
-        height: 448px;
+				width: 1078px;
+				height: 448px;
 			}
-      .info-header {
-        width: 1078px;
-        height: 448px;
-        position: relative;
-        h1 {
-          background-color: rgba(0, 0, 0, 0.7);
-          width: 100%;
-          margin: 0;
-          padding: 20px 30px ;
-          color: #ccc;
-          line-height: 1.3;
-          position: absolute;
-           left: 0;
-            bottom: 0;
-        }
-      }
+			.info-header {
+				width: 1078px;
+				height: 448px;
+				position: relative;
+				h1 {
+					background-color: rgba(0, 0, 0, 0.7);
+					width: 100%;
+					margin: 0;
+					padding: 20px 30px ;
+					color: #ccc;
+					line-height: 1.3;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+				}
+			}
 			.info-cont {
 				border-top: 1px solid $border-color;			
 				padding: 25px 30px;
-        h1 {
-          margin-bottom: 5px;
-        }
+				h1 {
+					margin-bottom: 5px;
+				}
 			}
 			.note {
 				font-size: 12px;
@@ -181,13 +181,13 @@ body.showcase {
 				color: #57a100;
 				font-size: 20px;
 				margin-bottom: 8px;
-        text-indent: -1.7em;
-        margin-left: 1.7em;
+				text-indent: -1.7em;
+				margin-left: 1.7em;
 			}
 			p {
 				line-height: 1.85;
 				margin-bottom: 30px;
-        margin-left: 34px;
+				margin-left: 34px;
 			}
 			figure {
 				width: percentage(365px/1080px);
@@ -226,10 +226,10 @@ body.showcase {
 			overflow: hidden;
 		}
 	}
-  
-  .container {
-    min-width: 1080px;
-  }
+	
+	.container {
+		min-width: 1080px;
+	}
 }
 
 body.showcase.hitachitool {
