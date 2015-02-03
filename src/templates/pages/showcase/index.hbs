@@ -1,0 +1,70 @@
+---
+title: Monaca導入事例
+class: showcase-index
+viewport: width=1200px
+---
+
+<h1>Monaca導入事例</h1>
+
+<div id="carousel-showcase" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="/img/showcase/keyvisual_1.jpg" alt="日立ツール株式会社：iOSとAndroidのハイブリッドアプリを同時開発により開発コストを半減">
+        </div>
+        <div class="item">
+            <img src="/img/showcase/keyvisual_1.jpg" alt="...">
+        </div>
+    </div>
+
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-showcase" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-showcase" data-slide-to="1"></li>
+    </ol>
+</div>
+
+<ul class="cases-category">
+    <li data-category="all">全て</li>
+    <li data-category="sales">販売・サービス</li>
+    <li data-category="manufacture">製造</li>
+    <li data-category="consulting">コンサルティング</li>
+    <li data-category="finance">金融</li>
+    <li data-category="education">教育</li>
+    <li data-category="others">その他</li>
+</ul>
+
+<ul class="cases">
+    <li data-category="manufacture">
+        <a href="hitachitool.html"><img src="/img/showcase/btn_hitachitool.png" alt="" class="thumb"></a>
+        <p class="title"><a href="hitachitool.html">日立ツール株式会社</a></p>
+        <p class="category">製造</p>
+        <p>開発に至るコストはざっと想像しただけでも、 通常と比べても半分以下になったように感じます。そもそもMonacaがなければ、HTML5ハイブリッドアプリ の開発自体を諦めていたかもしれません。</p>
+    </li>
+</ul>
+
+
+<div class="container contact">
+    <p>Monaca導入のご相談、お見積り、資料請求はお気軽に<br />こちらからお問い合わせください。</p>
+    <a href="https://monaca.mobi/ja/support/inquiry" class="btn btn-big btn-blue">お問い合わせ</a>
+</div>
+
+<script>
+$(function() {
+    var cases = $(".cases li");
+    var selectors = $(".cases-category li");
+    
+    selectors.click(function() {
+        selectors.removeClass("active");
+        $(this).addClass("active");
+        
+        var cat = this.dataset["category"];
+
+        cases.each(function() {
+            if ((cat === "all") || (cat === this.dataset["category"])) {
+                $(this).show();  
+            } else {
+                $(this).hide()
+            }
+        });
+    });
+});
+</script>
