@@ -14,8 +14,8 @@ body.showcase-index {
         padding-top: 140px;
         width: 1080px;
         @media screen and (max-width: $break-xs) {
-            padding-left: 40px;
-            padding-right: 40px;
+            padding-left: 5%;
+            padding-right: 5%;
             width: auto;
         }
         > h1 {
@@ -191,7 +191,7 @@ body.showcase {
         text-align: left;
         width: 1080px;
         @media screen and (max-width: $break-xs) {
-            width: 560px;
+            width: 576px;
         }
         header {
             background: none no-repeat left top;
