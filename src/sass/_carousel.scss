@@ -1,0 +1,50 @@
+.carousel-1 {
+  clear: both;
+  overflow: hidden;
+  position: relative;
+  .carousel-container {
+    height: 100%;
+    padding: 0;
+  }
+  .carousel-items {
+    height: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+    @include clearfix;
+    .item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 640px;
+      img {
+        opacity: 0.5;
+        vertical-align: bottom;
+        transition: opacity 1400ms;
+        width: 100%;
+      }
+      &.on img {
+        opacity: 1;
+      }
+    }
+  }
+  &.transition {
+    .carousel-items .item {
+      transition: transform 1000ms;
+    }
+  }
+}
+
+.carousel-1-indicators {
+  line-height: 31px;
+  .prev,
+  .next,
+  .indicator {
+    color: #333;
+    cursor: pointer;
+    font-size: 36px;
+    font-family: Arial;
+    margin: 0 7px;
+  }
+}

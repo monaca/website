@@ -68,6 +68,8 @@ body.home {
     background: url(../img/index/keyvisual.jpg) no-repeat center center, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
     background-color: #126faa;
     color: #ffffff;
+    height: 0;
+    padding-bottom: percentage(540px/1170px);
     position: relative;
     @media screen and (max-width: $break) {
       padding-bottom: 20px;
