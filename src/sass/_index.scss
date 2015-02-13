@@ -3,8 +3,8 @@ body.home {
     background-color: #007bff;
     width: 100%;
     position: absolute;
-      top: 0;
-      left: 0;
+    top: 0;
+    left: 0;
     z-index: 50;
     h2 {
       font-size: 16px;
@@ -28,9 +28,9 @@ body.home {
       &:hover {
           background-color: #0056b2;
           transition: .2s ease-in-out;
-            -webkit-transition: .4s ease-in-out;
-            -moz-transition: .4s ease-in-out;
-            -ms-transition: .4s ease-in-out;
+          -webkit-transition: .4s ease-in-out;
+          -moz-transition: .4s ease-in-out;
+          -ms-transition: .4s ease-in-out;
       }
       &:active {
           background-color: #0056b2;
@@ -49,30 +49,46 @@ body.home {
       display: block;
       outline: none;
       position: absolute;
-       right: 0;
-       top: 65px;
+      right: 0;
+      top: 65px;
       z-index: 50;
       
       &:hover {
-         background: url(../img/careers/banner_recruit_hover.png) no-repeat 0 0;
-          transition: .2s ease-in-out;
-            -webkit-transition: .4s ease-in-out;
-            -moz-transition: .4s ease-in-out;
-            -ms-transition: .4s ease-in-out;
+        background: url(../img/careers/banner_recruit_hover.png) no-repeat 0 0;
+        transition: .2s ease-in-out;
+        -webkit-transition: .4s ease-in-out;
+        -moz-transition: .4s ease-in-out;
+        -ms-transition: .4s ease-in-out;
       }
     }
   }
   
   
   .keyvisual {
-    background: url(../img/index/keyvisual.jpg) no-repeat center center, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
     background-color: #126faa;
     color: #ffffff;
-    height: 0;
-    padding-bottom: percentage(540px/1170px);
+    max-height: 540px;
     position: relative;
-    @media screen and (max-width: $break) {
-      padding-bottom: 20px;
+    transition: background 800ms;
+    &[data-index="0"] {
+      background: url(../img/index/keyvisual.jpg) no-repeat center center, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
+    }
+    &[data-index="1"] {
+      background-color: #f50;
+    }
+    &[data-index="2"] {
+      background-color: #030;
+    }
+    &[data-index="3"] {
+      background-color: #2ff;
+    }
+    .carousel-container {
+      height: 0;
+      padding-bottom: percentage(540px/1170px);
+      @media screen and (max-width: $break-xs) {
+        height: 400px;
+        padding-bottom: 0;
+      }
     }
     h1 {
       padding-top: 115px;

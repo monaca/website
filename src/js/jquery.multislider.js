@@ -35,7 +35,7 @@ var MultiSlider = (function() {
             this.indicatorsEl = null;
         }
 
-        this.maxItemWidth = 640;
+        this.maxItemWidth = 1070;
         this.isLeaping = false;
         this.interval = 8000;
         this.timer = null;
@@ -97,11 +97,14 @@ var MultiSlider = (function() {
     };
 
     MultiSlider.prototype.getWindowWidth = function() {
+        /*
         if ((window.innerWidth < 480) || (window.innerWidth > 940)) {
             return window.innerWidth;
         } else {
             return 940;
         }
+        */
+        return window.innerWidth;
     };
 
     /**
@@ -128,6 +131,8 @@ var MultiSlider = (function() {
             $(this.indicatorsEl).text("○");
             $(this.indicatorsEl[this.idx % this.defaultItemsNum]).text("●");
         }
+
+        $(this.el).attr("data-index", this.idx);
 
         this.isLeaping = true;
     };

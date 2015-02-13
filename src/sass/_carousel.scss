@@ -8,7 +8,7 @@
   }
   .carousel-items {
     height: 100%;
-    max-width: 640px;
+    max-width: 1070px;
     margin: 0 auto;
     position: relative;
     text-align: left;
@@ -37,11 +37,15 @@
 }
 
 .carousel-1-indicators {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   line-height: 31px;
   .prev,
   .next,
   .indicator {
-    color: #333;
+    color: white;
     cursor: pointer;
     font-size: 36px;
     font-family: Arial;
