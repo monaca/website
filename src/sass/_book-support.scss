@@ -1,4 +1,4 @@
-body.monaca-book {
+body.book-support {
   
   h2 {
     font-size: 40px;
@@ -10,7 +10,7 @@ body.monaca-book {
   }
   
   .keyvisual {
-    background: url(../img/monaca_book/bg_keyvisual_high_light.png) no-repeat center center, url(../img/monaca_book/bg_keyvisual_repeat.jpg) repeat left top;
+    background: url(../img/book/support/bg_keyvisual_high_light.png) no-repeat center center, url(../img/book/support/bg_keyvisual_repeat.jpg) repeat left top;
     color: #ffffff;
     position: relative;
     padding-top: 80px;
@@ -261,7 +261,7 @@ body.monaca-book {
             width: 200px;
             height: 356px;
             padding: 20px;
-            background: url(../img/monaca_book/bg_thumb.png);
+            background: url(../img/book/support/bg_thumb.png);
             color: #fff;
             opacity: 0;
             text-align: center;
