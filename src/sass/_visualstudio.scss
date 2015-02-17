@@ -54,6 +54,7 @@ body.visualstudio {
       h1 {
         text-align: center;
         margin-bottom: 50px;
+        -webkit-font-smoothing: antialiased;
       }
       p {
         margin-bottom: 30px;
@@ -109,6 +110,26 @@ body.visualstudio {
         }
       }
     }
+    section.voices {
+      @media screen and (max-width: $break) {
+        .box-full {
+          padding: 0;
+        }
+        .column-2 {
+          padding: 0;
+        }
+        .box-1 {
+          padding-left: 0;
+          padding-right: 0;
+          h2 {
+            text-align: center;
+          }
+          .link {
+            text-align: center;
+          }
+        }
+      }
+    }
     .keyvisual + section {
       @media screen and (min-width: $break) {
         padding-top: 100px;
@@ -127,7 +148,7 @@ body.visualstudio {
         height: auto;
         min-height: 54px;
         line-height: 1.2;
-				margin: 0;
+				margin: 0 auto;
         @media screen and (max-width: $break-xs) {
           padding: 13px 0;
           font-size: 16px;
