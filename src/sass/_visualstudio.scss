@@ -55,6 +55,9 @@ body.visualstudio {
         text-align: center;
         margin-bottom: 50px;
         -webkit-font-smoothing: antialiased;
+        @media screen and (max-width: $break-xs) {
+          font-weight: 400;
+        }
       }
       p {
         margin-bottom: 30px;
