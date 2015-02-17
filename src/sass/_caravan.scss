@@ -1,22 +1,17 @@
 body.caravan {
 
   .keyvisual {
-    background: url(../img/caravan/keyvisual_bg.png) no-repeat center 50px #e2f2f9;
-    background-size: contain;
-    border-top: 8px solid #00a0e9;
-    box-shadow: 0 -10px 50px rgba(0,156,227,0.08) inset;
+    background: url(../img/caravan/keyvisual_bg.jpg) repeat-x left bottom #e2f2f9;
     height: auto;
     overflow: visible;
     padding: 0;
     position: relative;
     h1 {
       img {
-        transform: translate(0, 28px);
         vertical-align: bottom;
       }
     }
     @media screen and (max-width: $break) {
-      border-top: none;
       > div {
         padding: 50px 0 0;
         img {
@@ -178,7 +173,7 @@ body.caravan {
               margin-right: 0;
             }
           }
-          @media screen and (min-width: $break-xs + 1px) {
+          @media screen and (max-width: 919px) and (min-width: $break-xs + 1px) {
             margin-right: 6%;
             margin-bottom: 40px;
             width: 47%;
