@@ -102,6 +102,9 @@ body.book-campaign {
                 li {
                     color: #666;
                     font-size: 1rem;
+                    text-indent: -1em;
+                    padding-left: 1em;
+                    margin-bottom: 4px;
                     &:before {
                         content: "・";
                     }
@@ -110,6 +113,8 @@ body.book-campaign {
                     color: #666;
                     font-size: 0.85rem;
                     padding-left: 20px;
+                    margin-bottom: 15px;
+                    line-height: 1.6;
                 }
             }
         }
