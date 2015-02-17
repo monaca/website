@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * MultiSlider by K.Hitomi
  * License: MIT
@@ -35,7 +37,7 @@ var MultiSlider = (function() {
             this.indicatorsEl = null;
         }
 
-        this.maxItemWidth = 1070;
+        this.maxItemWidth = 1170;
         this.isLeaping = false;
         this.interval = 8000;
         this.timer = null;
@@ -132,7 +134,7 @@ var MultiSlider = (function() {
             $(this.indicatorsEl[this.idx % this.defaultItemsNum]).text("●");
         }
 
-        $(this.el).attr("data-index", this.idx);
+        $(this.el).attr("data-index", this.idx % this.defaultItemsNum);
 
         this.isLeaping = true;
     };
