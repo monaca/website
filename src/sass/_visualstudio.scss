@@ -14,8 +14,9 @@ body.visualstudio {
       padding-top: 180px;
       text-shadow: 0 0 10px rgba(255, 255, 255, 1);
       letter-spacing: -0.03em;
-      font-size: 45px;
-      padding-right: 330px;
+      font-size: 50px;
+      line-height: 1.2;
+      padding-right: 200px;
       @media screen and (max-width: 1020px) {
           padding-top: 100px;
           padding-right: 0px;
@@ -25,7 +26,7 @@ body.visualstudio {
       }
       img {
         vertical-align: -10px;
-        margin-bottom: 8px;
+        margin-bottom: 16px;
       }
     }
     .box-try {
