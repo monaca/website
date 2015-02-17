@@ -59,7 +59,7 @@ module.exports = function(grunt) {
 
         watch: {
             assemble: {
-                files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml,json}'],
+                files: ['<%= config.src %>/{content,data,templates}/**/*.{md,hbs,yml,json}'],
                 tasks: ['assemble']
             },
             livereload: {
@@ -67,11 +67,11 @@ module.exports = function(grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    '<%= config.dist %>/{,*/}*.html',
-                    '<%= config.dist %>/{,*/}*.css',
-                    '<%= config.dist %>/{,*/}*.js',
-                    '<%= config.dist %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-                ]
+                    '<%= config.dist %>/**/*.html',
+                    '<%= config.dist %>/**/*.css',
+                    '<%= config.dist %>/**/*.js',
+                    '<%= config.dist %>/**/*.{png,jpg,jpeg,gif,webp,svg}'
+                ],
             },
             assets: {
                 files: ['<%= config.src %>/assets/**/*'],
@@ -282,13 +282,12 @@ module.exports = function(grunt) {
         connect: {
             options: {
                 livereload: 35729,
-                // change this to '0.0.0.0' to access the server from outside
                 hostname: '0.0.0.0'
             },
             en: {
                 options: {
                     open: {
-                        target: 'http://0.0.0.0:3010',
+                        target: 'http://localhost:3010',
                         appName: 'Google Chrome'
                     },
                     port: 3010,
@@ -300,7 +299,7 @@ module.exports = function(grunt) {
             ja: {
                 options: {
                     open: {
-                        target: 'http://0.0.0.0:3011',
+                        target: 'http://localhost:3011',
                         appName: 'Google Chrome'
                     },
                     port: 3011,
