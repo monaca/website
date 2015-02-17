@@ -15,6 +15,15 @@ body.caravan {
         vertical-align: bottom;
       }
     }
+    @media screen and (max-width: $break) {
+      border-top: none;
+      > div {
+        padding: 50px 0 0;
+        img {
+          transform: none;
+        }
+      }
+    }
   }
 
   article.main {
@@ -42,6 +51,9 @@ body.caravan {
     }
     section.summary {
       padding-bottom: 0;
+      @media screen and (max-width: $break) {
+        padding-top: 20px;
+      }
       h2 {
         background-image: url(/img/caravan/icn_schedule.png);
       }
