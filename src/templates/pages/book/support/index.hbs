@@ -559,19 +559,20 @@ var resizeTimer = null;
 var touchFlag = false;
 
 function onResize() {
-  if (window.innerWidth >= 992) {
-    $("#apps li").tile(4);
-  } else {
-    $("#apps li").tile(2);   
-  }
+ setTimeout(function() {
+   if (window.innerWidth >= 992) {
+     $("#apps li").tile(4);
+   } else {
+     $("#apps li").tile(2);
+   }
+ }, 100);
 }
 
 $(function() {
-  onResize();
-  window.onresize = function() {
-    if (resizeTimer) clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(onResize, 100);
-  }
+ onResize();
+ window.onresize = function() {
+   onResize();
+ }
 
   $("#apps li figure").on({
     "mouseenter": function(e) {
