@@ -401,16 +401,7 @@ Goes 2 to 1-column in responsive
 }
 
 /*
-# Examples on top page
-
-```
-<div class="container box-examples">
-    <h2>Examples</h2>
-    <img src="../img/index/examples_img.png">
-
-    <p><a href="#" class="btn btn-darkgray">Try it!</a></p>
-</div>
-```
+# Some components on the top page
 */
 .box-examples {
   background: url(../img/index/examples_bg.jpg) no-repeat left top;
@@ -436,15 +427,6 @@ Goes 2 to 1-column in responsive
   }
 }
 
-/*
-# Partners on top page
-
-```
-<div class="container box-partners">
-    <img src="../img/index/partners.png">
-</div>
-```
-*/
 .box-partners {
   background-color: #F9FAFC;
   border-top: 1px solid #cdd1d6;
@@ -453,22 +435,6 @@ Goes 2 to 1-column in responsive
   overflow: hidden;
   padding: 0;
 }
-
-/*
-# Awards on top page
-
-```
-<div class="container box-awards">
-    <ul>
-        <li><img src="../img/index/award_1.png"></li>
-        <li><img src="../img/index/award_5.png"></li>
-        <li><img src="../img/index/award_4.png"></li>
-        <li><img src="../img/index/award_2.png"></li>
-        <li><img src="../img/index/award_3.png"></li>
-    </ul>
-</div>
-```
-*/
 
 .box-awards {
   height: 200px;

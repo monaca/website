@@ -209,7 +209,7 @@ module.exports = function(grunt) {
             styleguide: {
                 expand: true,
                 cwd: '<%= config.dist %>/img/',
-                src: '**',
+                src: 'common/*',
                 dest: 'docs/img/'
             }
         },
