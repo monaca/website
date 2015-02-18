@@ -21,4 +21,7 @@ node_modules
 dist
 aws_keys.json
 
+docs/styleguide/button.css.map
+docs/styleguide/common.css.map
+
 .DS_Store

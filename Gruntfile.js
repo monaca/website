@@ -30,10 +30,11 @@ module.exports = function(grunt) {
         },
 
         sass: {
+            options: {
+                sourceMap: true,
+                includePaths: require('node-bourbon').includePaths
+            },
             dist: {
-                options: {
-                    sourcemap: false
-                },
                 files: [{
                     expand: true,
                     cwd   : 'src/sass',
@@ -58,7 +59,7 @@ module.exports = function(grunt) {
 
         watch: {
             assemble: {
-                files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml,json}'],
+                files: ['<%= config.src %>/{content,data,templates}/**/*.{md,hbs,yml,json}'],
                 tasks: ['assemble']
             },
             livereload: {
@@ -66,11 +67,11 @@ module.exports = function(grunt) {
                     livereload: '<%= connect.options.livereload %>'
                 },
                 files: [
-                    '<%= config.dist %>/{,*/}*.html',
-                    '<%= config.dist %>/{,*/}*.css',
-                    '<%= config.dist %>/{,*/}*.js',
-                    '<%= config.dist %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-                ]
+                    '<%= config.dist %>/**/*.html',
+                    '<%= config.dist %>/**/*.css',
+                    '<%= config.dist %>/**/*.js',
+                    '<%= config.dist %>/**/*.{png,jpg,jpeg,gif,webp,svg}'
+                ],
             },
             assets: {
                 files: ['<%= config.src %>/assets/**/*'],
@@ -78,7 +79,7 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: ['<%= config.src %>/**/*.scss'],
-                tasks: ['sass'],
+                tasks: ['sass', 'copy:css'],
                 options : {
                     spawn: false
                 }
@@ -87,10 +88,10 @@ module.exports = function(grunt) {
                 files: ['<%= config.src %>/**/*.js'],
                 tasks: ['concat']
             },
-            styleguide: {
-                files: ['<%= config.src %>/**/*.scss'],
-                tasks: ['styleguide']
-            }
+            //styleguide: {
+            //    files: ['<%= config.src %>/**/*.scss'],
+            //    tasks: ['styleguide']
+            //}
         },
 
         concat: {
@@ -199,6 +200,12 @@ module.exports = function(grunt) {
                 src: '**',
                 dest: '<%= config.distJa %>'
             },
+            css: {
+                expand: true,
+                cwd: '<%= config.dist %>/css/',
+                src: 'style.*',
+                dest: '<%= config.distJa %>/css/'
+            },
             styleguide: {
                 expand: true,
                 cwd: '<%= config.dist %>/img/',
@@ -271,16 +278,16 @@ module.exports = function(grunt) {
             dist: ['dist/**/*'],
             styleguide: ["docs/styleguide"]
         },
+
         connect: {
             options: {
                 livereload: 35729,
-                // change this to '0.0.0.0' to access the server from outside
                 hostname: '0.0.0.0'
             },
             en: {
                 options: {
                     open: {
-                        target: 'http://0.0.0.0:3010',
+                        target: 'http://localhost:3010',
                         appName: 'Google Chrome'
                     },
                     port: 3010,
@@ -292,7 +299,7 @@ module.exports = function(grunt) {
             ja: {
                 options: {
                     open: {
-                        target: 'http://0.0.0.0:3011',
+                        target: 'http://localhost:3011',
                         appName: 'Google Chrome'
                     },
                     port: 3011,
@@ -323,7 +330,7 @@ module.exports = function(grunt) {
 
     });
     grunt.loadNpmTasks('assemble');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-aws-s3');
