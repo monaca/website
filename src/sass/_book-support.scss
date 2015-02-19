@@ -252,7 +252,7 @@ body.book-support {
         }
         figure {
           margin: 0;
-          width: 200px;
+          width: 202px;
           margin: 0 auto;
           border: 1px solid #dcdcdc;
           overflow: hidden;
@@ -262,6 +262,9 @@ body.book-support {
           }
           @media screen and (max-width: $break-xs) {
             width: 140px;
+          }
+          > img {
+            height: 356px;
           }
           figcaption {
             position: absolute;
