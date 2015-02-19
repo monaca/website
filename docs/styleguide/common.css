@@ -458,18 +458,18 @@ Goes 2 to 1-column in responsive
     -webkit-font-smoothing: antialiased;
     text-align: center;
     margin-bottom: 36px; }
-  .box-uservoices li {
+  .box-uservoices li, .box-uservoices .uservoice {
     font-size: 16px;
     margin-bottom: 40px;
     text-align: left; }
-    .box-uservoices li > .uservoice-balloon {
+    .box-uservoices li > .uservoice-balloon, .box-uservoices .uservoice > .uservoice-balloon {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       border: 1px solid #ccc;
       position: relative;
       padding: 34px 50px;
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.04); }
-      .box-uservoices li > .uservoice-balloon:after {
+      .box-uservoices li > .uservoice-balloon:after, .box-uservoices .uservoice > .uservoice-balloon:after {
         position: absolute;
         bottom: -12px;
         left: 60px;
@@ -481,37 +481,37 @@ Goes 2 to 1-column in responsive
         width: 20px;
         height: 20px;
         content: ''; }
-      .box-uservoices li > .uservoice-balloon q {
+      .box-uservoices li > .uservoice-balloon q, .box-uservoices .uservoice > .uservoice-balloon q {
         color: #333;
         font-weight: 600;
         line-height: 1.8;
         position: relative;
         white-space: normal; }
-        .box-uservoices li > .uservoice-balloon q:before, .box-uservoices li > .uservoice-balloon q:after {
+        .box-uservoices li > .uservoice-balloon q:before, .box-uservoices li > .uservoice-balloon q:after, .box-uservoices .uservoice > .uservoice-balloon q:before, .box-uservoices .uservoice > .uservoice-balloon q:after {
           content: '';
           position: absolute;
           width: 32px;
           height: 26px; }
-        .box-uservoices li > .uservoice-balloon q:before {
+        .box-uservoices li > .uservoice-balloon q:before, .box-uservoices .uservoice > .uservoice-balloon q:before {
           background: url(../img/common/icn_quote_left.png) no-repeat left top;
           left: -36px;
           top: -14px; }
-        .box-uservoices li > .uservoice-balloon q:after {
+        .box-uservoices li > .uservoice-balloon q:after, .box-uservoices .uservoice > .uservoice-balloon q:after {
           background: url(../img/common/icn_quote_right.png) no-repeat left top; }
-    .box-uservoices li > .uservoice-user {
+    .box-uservoices li > .uservoice-user, .box-uservoices .uservoice > .uservoice-user {
       background: url(../img/index/user_icon.png) no-repeat 38px 25px;
       height: 100px;
       padding: 34px 0 0 120px; }
-      .box-uservoices li > .uservoice-user.user-1 {
+      .box-uservoices li > .uservoice-user.user-1, .box-uservoices .uservoice > .uservoice-user.user-1 {
         background: url(../img/index/user_icon_1.png) no-repeat 38px 25px; }
-      .box-uservoices li > .uservoice-user.user-2 {
+      .box-uservoices li > .uservoice-user.user-2, .box-uservoices .uservoice > .uservoice-user.user-2 {
         background: url(../img/index/user_icon_2.png) no-repeat 38px 25px; }
-      .box-uservoices li > .uservoice-user.user-3 {
+      .box-uservoices li > .uservoice-user.user-3, .box-uservoices .uservoice > .uservoice-user.user-3 {
         background: url(../img/index/user_icon_3.png) no-repeat 38px 25px; }
-      .box-uservoices li > .uservoice-user > .uservoice-name {
+      .box-uservoices li > .uservoice-user > .uservoice-name, .box-uservoices .uservoice > .uservoice-user > .uservoice-name {
         font-weight: 600;
         font-size: 18px; }
-      .box-uservoices li > .uservoice-user > .uservoice-organization {
+      .box-uservoices li > .uservoice-user > .uservoice-organization, .box-uservoices .uservoice > .uservoice-user > .uservoice-organization {
         font-weight: 300;
         font-size: 16px; }
   @media screen and (max-width: 640px) {
