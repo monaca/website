@@ -1,169 +1,166 @@
-
 @-webkit-keyframes connect {
-  0% {}
-  100% {-webkit-transform: translate3D(20px, 0px, 0px); }
+    0% {} 100% {
+        -webkit-transform: translate3D(20px, 0px, 0px);
+    }
 }
-
 @-moz-keyframes connect {
-  0% {}
-  100% {-moz-transform: translate3D(20px, 0px, 0px); }
+    0% {} 100% {
+        -moz-transform: translate3D(20px, 0px, 0px);
+    }
 }
-
 @-o-keyframes connect {
-  0% {}
-  100% {-o-transform: translate3D(20px, 0px, 0px); }
+    0% {} 100% {
+        -o-transform: translate3D(20px, 0px, 0px);
+    }
 }
-
 @-ms-keyframes connect {
-  0% {}
-  100% {-ms-transform: translate3D(20px, 0px, 0px); }
+    0% {} 100% {
+        -ms-transform: translate3D(20px, 0px, 0px);
+    }
 }
-
-
 #animation-livereload {
-  height: 462px;
-  width: 100%;
-  padding-top: 53px;
-  position: relative;
-  .livereload-editor {
-    width: 72%;
-    width: calc(100% - 310px);
-    max-width: 640px;
-    height: 335px;
-    background-color: white;
-    border: 3px solid #3D3D3D;
-    border-radius: 4px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 30px 2px 2px 2px;
-    position: relative;
-    text-align: left;
-    z-index: 5;
-  }
-  .livereload-editor-header {
-    background: url(../img/animations/livereload-editor.png) no-repeat left top;
-    background: url(../img/animations/livereload-editor_bg1.png) no-repeat 8px 5px, url(../img/animations/livereload-editor_bg3.png) no-repeat right center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #3D3D3D;
-    color: #777;
-    height: 30px;
-    line-height: 31px;
+    height: 462px;
     width: 100%;
-    text-align: center;
-  }
-  .livereload-editor-mask {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    top: 0px;
-    content: '';
-    background-color: rgba(0, 0, 0, 0.001);
-    z-index: 4;
-  }
-  .livereload-saved {
-    position: absolute;
-    left: 50%;
-    top: 140px;
-    content: '';
-    z-index: 5;
-    background: url(../img/animations/livereload-saved.png) no-repeat top left;
-    margin-left: -74px;
-    width: 149px;
-    height: 65px;
-    opacity: 0;
-    -webkit-transform: translateY(-12px);
-    -moz-transform: translateY(-12px);
-    transform: translateY(-12px);
-    -webkit-transition: opacity 0.4s linear 0;
-    transition: opacity 0.4s linear 0;
-
-    &.on {
-      opacity: 1;
-      -webkit-transform: translateY(-0px);
-      -moz-transform: translateY(0px);
-      transform: translateY(0px);
+    padding-top: 53px;
+    position: relative;
+    .livereload-editor {
+        width: 72%;
+        width: calc(100% - 310px);
+        max-width: 640px;
+        height: 335px;
+        background-color: white;
+        border: 3px solid #3D3D3D;
+        border-radius: 4px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 30px 2px 2px 2px;
+        position: relative;
+        text-align: left;
+        z-index: 5;
     }
-  }
-  .CodeMirror {
-    background-color: transparent;
-    border-radius: 3px;
-    font-size: 11px !important;
-    font-family: menlo, monospace;
-    opacity: 0.6;
-    ::-webkit-scrollbar  {
-      display: none;
+    .livereload-editor-header {
+        background: url(../img/animations/livereload-editor.png) no-repeat left top;
+        background: url(../img/animations/livereload-editor_bg1.png) no-repeat 8px 5px, url(../img/animations/livereload-editor_bg3.png) no-repeat right center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #3D3D3D;
+        color: #777;
+        height: 30px;
+        line-height: 31px;
+        width: 100%;
+        text-align: center;
     }
-  }
-  .CodeMirror-scroll {
-    overflow: hidden !important;
-  }
-  .livereload-connect {
-    position: absolute;
-    z-index: 1;
-    right: 210px;
-    top: 220px;
-    background: url(../img/animations/livereload-connect.png) no-repeat left top;
-    width: 355px;
-    height: 24px;
-    -moz-animation: connect 0.2s linear infinite;
-    -webkit-animation: connect 0.2s linear infinite;
-    -ms-animation: connect 0.2s linear infinite;
-    -o-animation: connect 0.2s linear infinite;
-    animation: connect 0.2s linear infinite;
-    &.stop {
-      -webkit-animation-play-state: paused;
-      -moz-animation-play-state: paused;
-      -ms-animation-play-state: paused;
-      -o-animation-play-state: paused;
-      animation-play-state: paused;
+    .livereload-editor-mask {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        content: '';
+        background-color: rgba(0, 0, 0, 0.001);
+        z-index: 4;
     }
-  }
-  .livereload-device {
-    position: absolute;
-    z-index: 2;
-    top: 0px;
-    right: 0px;
-    left: auto;
-    width: 220px;
-    height: 457px;
-    background: url(../img/animations/livereload-device.png) no-repeat left top;
-  }
-  .livereload-device-screen-base {
-    position: absolute;
-    top: 67px;
-    left: 21px;
-    width: 183px;
-    height: 324px;
-    z-index: 2;
-    background-color: #F8F8F8;
-  }
-  .livereload-device-screen {
-    position: absolute;
-    top: 67px;
-    left: 21px;
-    width: 183px;
-    height: 35px;
-    z-index: 3;
-    background: url(../img/animations/livereload-result-screen.png) no-repeat left top;
-  }
-  .livereload-device-screen-reloaded {
-    position: absolute;
-    top: 67px;
-    left: 21px;
-    width: 183px;
-    height: 324px;
-    z-index: 3;
-    background: url(../img/animations/livereload-result-screen.png) no-repeat left top;
-    opacity: 1;
-    transition-property: all;
-    transition-duration: 0.2s;
-    transition-timing-function: linear;
-    &.hidden {
-      opacity: 0.0;
-      transition-property: none;
+    .livereload-saved {
+        position: absolute;
+        left: 50%;
+        top: 140px;
+        content: '';
+        z-index: 5;
+        background: url(../img/animations/livereload-saved.png) no-repeat top left;
+        margin-left: -74px;
+        width: 149px;
+        height: 65px;
+        opacity: 0;
+        -webkit-transform: translateY(-12px);
+        -moz-transform: translateY(-12px);
+        transform: translateY(-12px);
+        -webkit-transition: opacity 0.4s linear 0;
+        transition: opacity 0.4s linear 0;
+        &.on {
+            opacity: 1;
+            -webkit-transform: translateY(-0px);
+            -moz-transform: translateY(0px);
+            transform: translateY(0px);
+        }
     }
-  }
+    .CodeMirror {
+        background-color: transparent;
+        border-radius: 3px;
+        font-size: 11px !important;
+        font-family: menlo, monospace;
+        opacity: 0.6;
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    .CodeMirror-scroll {
+        overflow: hidden !important;
+    }
+    .livereload-connect {
+        position: absolute;
+        z-index: 1;
+        right: 210px;
+        top: 220px;
+        background: url(../img/animations/livereload-connect.png) no-repeat left top;
+        width: 355px;
+        height: 24px;
+        -moz-animation: connect 0.2s linear infinite;
+        -webkit-animation: connect 0.2s linear infinite;
+        -ms-animation: connect 0.2s linear infinite;
+        -o-animation: connect 0.2s linear infinite;
+        animation: connect 0.2s linear infinite;
+        &.stop {
+            -webkit-animation-play-state: paused;
+            -moz-animation-play-state: paused;
+            -ms-animation-play-state: paused;
+            -o-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+    }
+    .livereload-device {
+        position: absolute;
+        z-index: 2;
+        top: 0px;
+        right: 0px;
+        left: auto;
+        width: 220px;
+        height: 457px;
+        background: url(../img/animations/livereload-device.png) no-repeat left top;
+    }
+    .livereload-device-screen-base {
+        position: absolute;
+        top: 67px;
+        left: 21px;
+        width: 183px;
+        height: 324px;
+        z-index: 2;
+        background-color: #F8F8F8;
+    }
+    .livereload-device-screen {
+        position: absolute;
+        top: 67px;
+        left: 21px;
+        width: 183px;
+        height: 35px;
+        z-index: 3;
+        background: url(../img/animations/livereload-result-screen.png) no-repeat left top;
+    }
+    .livereload-device-screen-reloaded {
+        position: absolute;
+        top: 67px;
+        left: 21px;
+        width: 183px;
+        height: 324px;
+        z-index: 3;
+        background: url(../img/animations/livereload-result-screen.png) no-repeat left top;
+        opacity: 1;
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-timing-function: linear;
+        &.hidden {
+            opacity: 0.0;
+            transition-property: none;
+        }
+    }
 }

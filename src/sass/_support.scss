@@ -1,82 +1,79 @@
 body.support {
-
-  .keyvisual {
-    background: url(../img/support/keyvisual.jpg) no-repeat center bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
-    color: #000;
-    padding-bottom: 0;
-    position: relative;
-    h1 {
-      font-weight: 400;
-      margin-bottom: 10px;
-      padding-top: 140px;
-      text-align: left;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 1);
-      @media screen and (max-width: $break) {
-        padding-top: 100px;
-        padding-bottom: 40px;
-      }
-      img {
-        vertical-align: 4px;
-      }
-      span {
-        color: #d70101;
-      }
-    }
-    p {
-      font-size: 20px;
-      text-align: left;
-      width: 420px;
-      word-break: break-all;
-    }
-  }
-
-  article.main {
-    section {
-      border-bottom: 1px solid #ccc;
-      padding-top: 90px;
-      padding-bottom: 80px;
-      &:first-child {
-        padding-top: 140px;
-      }
-      h1 {
-        text-align: center;
-      }
-      p {
-        margin-bottom: 30px;
-      }
-      &.tech {
-        @include clearfix;
+    .keyvisual {
+        background: url(../img/support/keyvisual.jpg) no-repeat center bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
+        color: #000;
+        padding-bottom: 0;
+        position: relative;
+        h1 {
+            font-weight: 400;
+            margin-bottom: 10px;
+            padding-top: 140px;
+            text-align: left;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+            @media screen and (max-width: $break) {
+                padding-top: 100px;
+                padding-bottom: 40px;
+            }
+            img {
+                vertical-align: 4px;
+            }
+            span {
+                color: #d70101;
+            }
+        }
         p {
-          width: auto;
+            font-size: 20px;
+            text-align: left;
+            width: 420px;
+            word-break: break-all;
         }
-        .alignright {
-          float: right;
-          margin: 0 0 40px 40px;
-          max-width: 52%;
-          @media screen and (max-width: $break) {
-            float: none;
-            margin-left: 0;
-            max-width: 100%;
-          }
-        }
-        .tech-cont {
-          padding-top: 60px;
-          text-align: left;
-          @media screen and (max-width: $break) {
-            padding: 0 5%;
-          }
-        }
-      }
-      &.forum {
-        background: url(../img/support/img_4.jpg) no-repeat center 330px;
-        min-height: 670px;
-        @media screen and (max-width: $break-xs) {
-          background-size: 160%;
-          background-position: center bottom;
-          min-height: 600px;
-        }
-      }
     }
-  }
-
+    article.main {
+        section {
+            border-bottom: 1px solid #ccc;
+            padding-top: 90px;
+            padding-bottom: 80px;
+            &:first-child {
+                padding-top: 140px;
+            }
+            h1 {
+                text-align: center;
+            }
+            p {
+                margin-bottom: 30px;
+            }
+            &.tech {
+                @include clearfix;
+                p {
+                    width: auto;
+                }
+                .alignright {
+                    float: right;
+                    margin: 0 0 40px 40px;
+                    max-width: 52%;
+                    @media screen and (max-width: $break) {
+                        float: none;
+                        margin-left: 0;
+                        max-width: 100%;
+                    }
+                }
+                .tech-cont {
+                    padding-top: 60px;
+                    text-align: left;
+                    @media screen and (max-width: $break) {
+                        padding: 0 5%;
+                    }
+                }
+            }
+            &.forum {
+                background: url(../img/support/img_4.jpg) no-repeat center 330px;
+                min-height: 670px;
+                @media screen and (max-width: $break-xs) {
+                    background-size: 160%;
+                    background-position: center bottom;
+                    min-height: 600px;
+                }
+            }
+        }
+    }
 }
