@@ -1,239 +1,231 @@
 body.showcase {
-	min-width: 1170px;
-	-webkit-text-size-adjust: 100%; 
-	header.navbar {
-		min-width: 1170px;
-	}
-	article.main {
-		-moz-box-sizing: content-box;
-		box-sizing: content-box;
-		margin: 0 auto;
-		padding: 110px 0px 0;
-		text-align: left;
-		width: 1080px;
-
-		header {
-			background: none no-repeat left top;
-			font-size: 26px;
-			font-weight: 700;
-			margin-bottom: 20px;
-			padding: 10px 0 0 112px;
-			min-height: 100px;
-			max-height: 100%;
-			em {
-				color: #57a100;
-				display: block;
-				font-size: 32px;
-				font-weight: 400;
-				max-height: 100%;
-			}
-		}
-		section {
-			border-bottom: none;
-			text-align: left;
-      width: 1080px;
-      
-		}
-		h1 {
-			margin-bottom: 34px;
-			text-align: left;
-			max-height: 100%;
-		}
-		> h1 {
-			font-size: 54px;
-			line-height: 1.3;
-			margin-bottom: 40px;
-		}
-		h2 {
-			max-height: 100%;
-		}
-		p {
-			color: #666;
-			max-height: 100%;
-			width: auto;
-		}
-		em {
-			color: #333;
-			font-style: normal;
-			font-weight: 700;
-		}
-    a {
-      outline: none;
+    min-width: 1170px;
+    -webkit-text-size-adjust: 100%;
+    header.navbar {
+        min-width: 1170px;
     }
-		figure {
-			figcaption {
-				color: #666;
-				font-size: 14px;
-				margin-top: 8px;
-			}
-		}
-
-		.info {
-			$border-color: #d4d4d4;
-			border: 1px solid $border-color;
-			margin: 0 auto;
-			padding: 0;
-			max-height: 1080px;
-			dl {
-				margin-bottom: 4px;
-				dt {
-					display: inline-block;
-					font-weight: 700;
-					width: 90px;
-				}
-				dd {
-					display: inline-block;
-				}
-			}
-			h2 {
-				font-size: 14px;
-				margin-bottom: 20px;
-			}
-      p {
-        margin-bottom: 0;
-      }
-			.keyvisual {
-				vertical-align: bottom;
-        width: 1078px;
-        height: 448px;
-			}
-      .info-header {
-        width: 1078px;
-        height: 448px;
-        position: relative;
-        h1 {
-          background-color: rgba(0, 0, 0, 0.7);
-          width: 100%;
-          margin: 0;
-          padding: 20px 30px ;
-          color: #ccc;
-          line-height: 1.3;
-          position: absolute;
-           left: 0;
-            bottom: 0;
+    article.main {
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        margin: 0 auto;
+        padding: 110px 0px 0;
+        text-align: left;
+        width: 1080px;
+        header {
+            background: none no-repeat left top;
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding: 10px 0 0 112px;
+            min-height: 100px;
+            max-height: 100%;
+            em {
+                color: #57a100;
+                display: block;
+                font-size: 32px;
+                font-weight: 400;
+                max-height: 100%;
+            }
         }
-      }
-			.info-cont {
-				border-top: 1px solid $border-color;			
-				padding: 25px 30px;
-        h1 {
-          margin-bottom: 5px;
+        section {
+            border-bottom: none;
+            text-align: left;
+            width: 1080px;
         }
-			}
-			.note {
-				font-size: 12px;
-				margin-top: 10px;
-				width: auto;
-			}
-			.developer {
-				h2 {
-					color: #57a100;
-					margin-bottom: 15px;
-				}
-				.logo {
-					display: block;
-					margin-bottom: 10px;
-				}
-				.url {
-					margin-left: 30px;
-				}
-			}
-		}
-
-		.backstory {
-			padding: 90px 0 40px;
-			&:after { content: ""; clear: both; display: block; }
-			p {
-				line-height: 1.85;
-				margin-bottom: 7px;
-			}
-			.alignleft,
-			.alignright {
-				width: percentage(400px/1080px);
-			}
-		}
-
-		.effect {
-			background: url(/img/hitachitool/bg_effect.jpg) no-repeat center top;
-			color: white;
-			padding: 40px;
-			h1 {
-				margin-bottom: 30px;
-			}
-			ul {
-				padding-left: 4px;
-				li {
-					font-size: 20px;
-					margin-bottom: 10px;
-					max-height: 100%;
-					&:before {
-						content: "・";
-						padding-left: -1em;
-						text-indent: -1em;
-					}
-				}
-			}
-		}
-
-		.interview {
-			padding: 90px 0 40px;
-			h2 {
-				color: #57a100;
-				font-size: 20px;
-				margin-bottom: 8px;
-        text-indent: -1.7em;
-        margin-left: 1.7em;
-			}
-			p {
-				line-height: 1.85;
-				margin-bottom: 30px;
-        margin-left: 34px;
-			}
-			figure {
-				width: percentage(365px/1080px);
-			}
-		}
-
-		> .download,
-		> .contact {
-			border-top: 1px solid #ccc;
-			padding: 80px 0; 
-			text-align: center;
-			p {
-				font-size: 24px;
-				margin-bottom: 40px;
-			}
-			a {
-				margin: 0 15px;
-			}
-			.btn-big {
-				font-size: 24px;
-				height: 60px;
-				line-height: 61px;
-				padding: 0 45px;
-			}
-		}
-
-		.alignleft {
-			float: left;
-			margin-right: 40px;
-		}
-		.alignright {
-			float: right;
-			margin-left: 40px;
-		}
-		.nowrap {
-			overflow: hidden;
-		}
-	}
-  
-  .container {
-    min-width: 1080px;
-  }
+        h1 {
+            margin-bottom: 34px;
+            text-align: left;
+            max-height: 100%;
+        }
+        > h1 {
+            font-size: 54px;
+            line-height: 1.3;
+            margin-bottom: 40px;
+        }
+        h2 {
+            max-height: 100%;
+        }
+        p {
+            color: #666;
+            max-height: 100%;
+            width: auto;
+        }
+        em {
+            color: #333;
+            font-style: normal;
+            font-weight: 700;
+        }
+        a {
+            outline: none;
+        }
+        figure {
+            figcaption {
+                color: #666;
+                font-size: 14px;
+                margin-top: 8px;
+            }
+        }
+        .info {
+            $border-color: #d4d4d4;
+            border: 1px solid $border-color;
+            margin: 0 auto;
+            padding: 0;
+            max-height: 1080px;
+            dl {
+                margin-bottom: 4px;
+                dt {
+                    display: inline-block;
+                    font-weight: 700;
+                    width: 90px;
+                }
+                dd {
+                    display: inline-block;
+                }
+            }
+            h2 {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            p {
+                margin-bottom: 0;
+            }
+            .keyvisual {
+                vertical-align: bottom;
+                width: 1078px;
+                height: 448px;
+            }
+            .info-header {
+                width: 1078px;
+                height: 448px;
+                position: relative;
+                h1 {
+                    background-color: rgba(0, 0, 0, 0.7);
+                    width: 100%;
+                    margin: 0;
+                    padding: 20px 30px;
+                    color: #ccc;
+                    line-height: 1.3;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+            .info-cont {
+                border-top: 1px solid $border-color;
+                padding: 25px 30px;
+                h1 {
+                    margin-bottom: 5px;
+                }
+            }
+            .note {
+                font-size: 12px;
+                margin-top: 10px;
+                width: auto;
+            }
+            .developer {
+                h2 {
+                    color: #57a100;
+                    margin-bottom: 15px;
+                }
+                .logo {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                .url {
+                    margin-left: 30px;
+                }
+            }
+        }
+        .backstory {
+            padding: 90px 0 40px;
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+            p {
+                line-height: 1.85;
+                margin-bottom: 7px;
+            }
+            .alignleft, .alignright {
+                width: percentage(400px/1080px);
+            }
+        }
+        .effect {
+            background: url(/img/hitachitool/bg_effect.jpg) no-repeat center top;
+            color: white;
+            padding: 40px;
+            h1 {
+                margin-bottom: 30px;
+            }
+            ul {
+                padding-left: 4px;
+                li {
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                    max-height: 100%;
+                    &:before {
+                        content: "・";
+                        padding-left: -1em;
+                        text-indent: -1em;
+                    }
+                }
+            }
+        }
+        .interview {
+            padding: 90px 0 40px;
+            h2 {
+                color: #57a100;
+                font-size: 20px;
+                margin-bottom: 8px;
+                text-indent: -1.7em;
+                margin-left: 1.7em;
+            }
+            p {
+                line-height: 1.85;
+                margin-bottom: 30px;
+                margin-left: 34px;
+            }
+            figure {
+                width: percentage(365px/1080px);
+            }
+        }
+        > .download, > .contact {
+            border-top: 1px solid #ccc;
+            padding: 80px 0;
+            text-align: center;
+            p {
+                font-size: 24px;
+                margin-bottom: 40px;
+            }
+            a {
+                margin: 0 15px;
+            }
+            .btn-big {
+                font-size: 24px;
+                height: 60px;
+                line-height: 61px;
+                padding: 0 45px;
+            }
+        }
+        .alignleft {
+            float: left;
+            margin-right: 40px;
+        }
+        .alignright {
+            float: right;
+            margin-left: 40px;
+        }
+        .nowrap {
+            overflow: hidden;
+        }
+    }
+    .container {
+        min-width: 1080px;
+    }
 }
-
 body.showcase.hitachitool {
-	article.main header {
-		background-image: url(/img/hitachitool/icn_hitachi_ja.png);
-	}
+    article.main header {
+        background-image: url(/img/hitachitool/icn_hitachi_ja.png);
+    }
 }

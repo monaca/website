@@ -1,55 +1,52 @@
 body.enterprise {
-
-  .keyvisual {
-    background: url(../img/enterprise/keyvisual.jpg) no-repeat center bottom, #1e212e;
-    color: #ffffff;
-    padding-bottom: 0px;
-    position: relative;
-    @media screen and (max-width: $break-xs) {
-        padding-bottom: 30px;
+    .keyvisual {
+        background: url(../img/enterprise/keyvisual.jpg) no-repeat center bottom, #1e212e;
+        color: #ffffff;
+        padding-bottom: 0px;
+        position: relative;
+        @media screen and (max-width: $break-xs) {
+            padding-bottom: 30px;
+        }
+        h1 {
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            padding-top: 110px;
+            text-align: left;
+            @media screen and (max-width: $break-xs) {
+                padding-top: 100px;
+            }
+            img {
+                vertical-align: 4px;
+            }
+        }
+        p {
+            font-size: 20px;
+            text-align: left;
+            width: 420px;
+            word-break: break-all;
+        }
+        .btns {
+            text-align: left;
+            padding: 50px 0 0;
+            @media screen and (max-width: $break) {
+                padding-top: 30px;
+                text-align: center;
+            }
+            .btn {
+                padding: 0 20px;
+                min-width: 200px;
+                margin: 0 15px 20px 0;
+            }
+        }
     }
-    h1 {
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 10px;
-      padding-top: 110px;
-      text-align: left;
-      @media screen and (max-width: $break-xs) {
-        padding-top: 100px;
-      }
-      img {
-        vertical-align: 4px;
-      }
+    section.plugins {
+        img.img-encrypt, img.img-storage {
+            display: inline-block;
+            margin-bottom: 100px;
+            @media screen and (max-width: $break-xs) {
+                margin-bottom: 60px;
+            }
+        }
     }
-    p {
-      font-size: 20px;
-      text-align: left;
-      width: 420px;
-      word-break: break-all;
-    }
-    .btns {
-      text-align: left;
-      padding: 50px 0 0;
-      @media screen and (max-width: $break) {
-        padding-top: 30px;
-        text-align: center;
-      }
-      .btn {
-        padding: 0 20px;
-        min-width: 200px;
-        margin: 0 15px 20px 0;
-      }
-    }
-  }
-
-  section.plugins {
-    img.img-encrypt,
-    img.img-storage {
-      display: inline-block;
-      margin-bottom: 100px;
-      @media screen and (max-width: $break-xs) {
-          margin-bottom: 60px;
-      }
-    }
-  }
 }

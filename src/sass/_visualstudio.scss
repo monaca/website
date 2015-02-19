@@ -1,177 +1,177 @@
 body.visualstudio {
-
-  .keyvisual {
-    background: url(../img/visualstudio/keyvisual.png) no-repeat center bottom, url(../img/visualstudio/keyvisual_bg.png) repeat-x left bottom;
-    color: #000;
-    padding-bottom: 0;
-    position: relative;
-    @media screen and (max-width: $break) {
-        padding-bottom: 40px;
-    }
-    h1 {
-      font-weight: 400;
-      margin-bottom: 10px;
-      padding-top: 180px;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 1);
-      letter-spacing: -0.03em;
-      font-size: 50px;
-      line-height: 1.2;
-      padding-right: 200px;
-      @media screen and (max-width: 1020px) {
-          padding-top: 100px;
-          padding-right: 0px;
-      }
-      .space-400 {
-        letter-spacing: -0.4em;
-      }
-      img {
-        vertical-align: -10px;
-        margin-bottom: 16px;
-      }
-    }
-    .box-try {
-      text-align: left;
-			padding: 40px 0 0;
-      }
-    .btns {
-      padding: 20px 0 40px;
-      line-height: 64px;
-      .btn {
-        padding: 0 20px;
-        min-width: 240px;
-      }
-      @media screen and (max-width: $break-xs) {
-          text-align: center;
-      }
-    }
-  }
-
-  article.main {
-    section {
-      border-bottom: 1px solid #ccc;
-      padding-top: 90px;
-      padding-bottom: 80px;
-      h1 {
-        text-align: center;
-        margin-bottom: 50px;
-        -webkit-font-smoothing: antialiased;
-        @media screen and (max-width: $break-xs) {
-          font-weight: 400;
-        }
-      }
-      p {
-        margin-bottom: 30px;
-        text-align: left;
-      }
-      &.debug {
-        background: url(../img/localkit/img_3.png) no-repeat center bottom;
-        background-size: 110%;
-        padding-bottom: 53%;
-        @media screen and (min-width: $break-xl) {
-            padding-bottom: 630px;
-        }
+    .keyvisual {
+        background: url(../img/visualstudio/keyvisual.png) no-repeat center bottom, url(../img/visualstudio/keyvisual_bg.png) repeat-x left bottom;
+        color: #000;
+        padding-bottom: 0;
+        position: relative;
         @media screen and (max-width: $break) {
-          background-position: center bottom;
+            padding-bottom: 40px;
         }
-      }
-      .outline {
-        margin-bottom: 100px;
-      }
-      .box-full > * {
-        width: 1080px;
-        @media screen and(max-width: 1300px) {
-          padding-left: 5%;
-          padding-right: 5%;
-          width: 100%;
+        h1 {
+            font-weight: 400;
+            margin-bottom: 10px;
+            padding-top: 180px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+            letter-spacing: -0.03em;
+            font-size: 50px;
+            line-height: 1.2;
+            padding-right: 200px;
+            @media screen and (max-width: 1020px) {
+                padding-top: 100px;
+                padding-right: 0px;
+            }
+            .space-400 {
+                letter-spacing: -0.4em;
+            }
+            img {
+                vertical-align: -10px;
+                margin-bottom: 16px;
+            }
         }
-        li {
-          border: none;
-          img {
-            margin-bottom: 40px;
-          }
-          &.box-1 {
-            background-color: transparent;
-          }
-          div {
-            border-top: 1px solid #d4d5d7;
-            padding-top: 40px;
+        .box-try {
             text-align: left;
-            h2 {
-              margin-bottom: 5px;
+            padding: 40px 0 0;
+        }
+        .btns {
+            padding: 20px 0 40px;
+            line-height: 64px;
+            .btn {
+                padding: 0 20px;
+                min-width: 240px;
+            }
+            @media screen and (max-width: $break-xs) {
+                text-align: center;
+            }
+        }
+    }
+    article.main {
+        section {
+            border-bottom: 1px solid #ccc;
+            padding-top: 90px;
+            padding-bottom: 80px;
+            h1 {
+                text-align: center;
+                margin-bottom: 50px;
+                -webkit-font-smoothing: antialiased;
+                @media screen and (max-width: $break-xs) {
+                    font-weight: 400;
+                }
             }
             p {
-              width: 100%;
-              margin-bottom: 0;
-              &.link {
-                margin-bottom: 20px;
-              }
-              &.name {
-                font-weight: 600;
-              }
+                margin-bottom: 30px;
+                text-align: left;
             }
-          }
-        }
-      }
-    }
-    section.voices {
-      @media screen and (max-width: $break) {
-        .box-full {
-          padding: 0;
-        }
-        .column-2 {
-          padding: 0;
-        }
-        .box-1 {
-          padding-left: 0;
-          padding-right: 0;
-          h2 {
-            text-align: center;
-          }
-          .link {
-            text-align: center;
-          }
-        }
-      }
-    }
-    .keyvisual + section {
-      @media screen and (min-width: $break) {
-        padding-top: 100px;
-      }
-      p {
-        width: 680px;
-        @media screen and (max-width: $break){
-          width: 100%;
-        }
-      }
-    }
-    .box-try {
-      .btn {
-        padding: 12px 40px 0;
-        min-width: 210px;
-        height: auto;
-        min-height: 54px;
-        line-height: 1.2;
-				margin: 0 auto;
-        @media screen and (max-width: $break-xs) {
-          padding: 13px 0;
-          font-size: 16px;
-        }
-        @media screen and (min-width: $break-xs) {
-            br.opt {
-              display: none;
+            &.debug {
+                background: url(../img/localkit/img_3.png) no-repeat center bottom;
+                background-size: 110%;
+                padding-bottom: 53%;
+                @media screen and (min-width: $break-xl) {
+                    padding-bottom: 630px;
+                }
+                @media screen and (max-width: $break) {
+                    background-position: center bottom;
+                }
+            }
+            .outline {
+                margin-bottom: 100px;
+            }
+            .box-full > * {
+                width: 1080px;
+                @media screen and(max-width: 1300px) {
+                    padding-left: 5%;
+                    padding-right: 5%;
+                    width: 100%;
+                }
+                li {
+                    border: none;
+                    img {
+                        margin-bottom: 40px;
+                    }
+                    &.box-1 {
+                        background-color: transparent;
+                    }
+                    div {
+                        border-top: 1px solid #d4d5d7;
+                        padding-top: 40px;
+                        text-align: left;
+                        h2 {
+                            margin-bottom: 5px;
+                        }
+                        p {
+                            width: 100%;
+                            margin-bottom: 0;
+                            &.link {
+                                margin-bottom: 20px;
+                            }
+                            &.name {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
             }
         }
-        a {
-          color: #ffffff;
-          &:hover {text-decoration: none;}
+        section.voices {
+            @media screen and (max-width: $break) {
+                .box-full {
+                    padding: 0;
+                }
+                .column-2 {
+                    padding: 0;
+                }
+                .box-1 {
+                    padding-left: 0;
+                    padding-right: 0;
+                    h2 {
+                        text-align: center;
+                    }
+                    .link {
+                        text-align: center;
+                    }
+                }
+            }
         }
-      }
-      .notes {
-        margin-top: 30px;
-      }
+        .keyvisual + section {
+            @media screen and (min-width: $break) {
+                padding-top: 100px;
+            }
+            p {
+                width: 680px;
+                @media screen and (max-width: $break) {
+                    width: 100%;
+                }
+            }
+        }
+        .box-try {
+            .btn {
+                padding: 12px 40px 0;
+                min-width: 210px;
+                height: auto;
+                min-height: 54px;
+                line-height: 1.2;
+                margin: 0 auto;
+                @media screen and (max-width: $break-xs) {
+                    padding: 13px 0;
+                    font-size: 16px;
+                }
+                @media screen and (min-width: $break-xs) {
+                    br.opt {
+                        display: none;
+                    }
+                }
+                a {
+                    color: #ffffff;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+            .notes {
+                margin-top: 30px;
+            }
+        }
     }
-  }
-  a {
-    outline: none;
-  }
+    a {
+        outline: none;
+    }
 }

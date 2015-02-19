@@ -1,95 +1,91 @@
 body.kidozen {
-
-  .keyvisual {
-    background: url(../img/kidozen/keyvisual.png) no-repeat center bottom, url(../img/kidozen/keyvisual_bg.png) repeat-x left bottom;
-    color: #000;
-    height: 590px;
-    @media screen and (max-width: $break) {
-      height: auto;
-      padding-bottom: 40px;
-    }
-    h1 {
-      font-weight: 400;
-      margin-bottom: 10px;
-      padding-top: 110px;
-      span {
-        color: #d70101;
-      }
-    }
-    p {
-      font-size: 20px;
-      text-align: left;
-      width: 420px;
-      word-break: break-all;
-    }
-    .btns {
-      padding: 50px 0 0;
-      text-align: left;
-      .btn {
-        min-width: 180px;
-        width: 175px;
-        height: 56px;
-        line-height: 56px;
-        padding: 0 20px;
-        margin: 0 15px 15px 0;
-        @media screen and (max-width: 440px) {
-          display: block;
-          margin: 0 auto 15px;
-          width: 80%;
+    .keyvisual {
+        background: url(../img/kidozen/keyvisual.png) no-repeat center bottom, url(../img/kidozen/keyvisual_bg.png) repeat-x left bottom;
+        color: #000;
+        height: 590px;
+        @media screen and (max-width: $break) {
+            height: auto;
+            padding-bottom: 40px;
         }
-      }
-    }
-  }
-
-  article.main {
-    section {
-      border-bottom: 1px solid #ccc;
-      &:first-child {
-        padding-top: 140px;
-      }
-    }
-    .lucy-in-the-sky {
-      background: url(../img/kidozen/img_3_ja.jpg) no-repeat center 200px;
-      background-size: 1890px 985px;
-      @media screen and (max-width: 960px) {
-        background-size: 190%;
-      }
-      @media screen and (max-width: $break) {
-        background-position: center 180px;
-      }
-      @media screen and (max-width: $break-xs) {
-        background-position: center 26%;
-      }
-      @media screen and (max-width: 460px) {
-        background-position: center 36%;
-      }
-      section.baas {
-        padding-bottom: 46%;
-        max-height: 980px;
-
-      }
-    }
-    .box-try {
-      .btn {
-        font-size: 24px;
-        height: 64px;
-        line-height: 64px;
-        padding: 0 40px;
-        margin: 0 10px;
-        min-width: 210px;
-        @media screen and (max-width: $break-xs) {
-          display: block;
-          margin: 0 auto 10px;
+        h1 {
+            font-weight: 400;
+            margin-bottom: 10px;
+            padding-top: 110px;
+            span {
+                color: #d70101;
+            }
         }
-      }
+        p {
+            font-size: 20px;
+            text-align: left;
+            width: 420px;
+            word-break: break-all;
+        }
+        .btns {
+            padding: 50px 0 0;
+            text-align: left;
+            .btn {
+                min-width: 180px;
+                width: 175px;
+                height: 56px;
+                line-height: 56px;
+                padding: 0 20px;
+                margin: 0 15px 15px 0;
+                @media screen and (max-width: 440px) {
+                    display: block;
+                    margin: 0 auto 15px;
+                    width: 80%;
+                }
+            }
+        }
     }
-  }
+    article.main {
+        section {
+            border-bottom: 1px solid #ccc;
+            &:first-child {
+                padding-top: 140px;
+            }
+        }
+        .lucy-in-the-sky {
+            background: url(../img/kidozen/img_3_ja.jpg) no-repeat center 200px;
+            background-size: 1890px 985px;
+            @media screen and (max-width: 960px) {
+                background-size: 190%;
+            }
+            @media screen and (max-width: $break) {
+                background-position: center 180px;
+            }
+            @media screen and (max-width: $break-xs) {
+                background-position: center 26%;
+            }
+            @media screen and (max-width: 460px) {
+                background-position: center 36%;
+            }
+            section.baas {
+                padding-bottom: 46%;
+                max-height: 980px;
+            }
+        }
+        .box-try {
+            .btn {
+                font-size: 24px;
+                height: 64px;
+                line-height: 64px;
+                padding: 0 40px;
+                margin: 0 10px;
+                min-width: 210px;
+                @media screen and (max-width: $break-xs) {
+                    display: block;
+                    margin: 0 auto 10px;
+                }
+            }
+        }
+    }
 }
-
 html[lang=en] body.kidozen {
-  article.main {
-    .lucy-in-the-sky {
-      background: url(../img/kidozen/img_3_en.jpg) no-repeat center 200px;
+    article.main {
+        .lucy-in-the-sky {
+            background: url(../img/kidozen/img_3_en.jpg) no-repeat center 200px;
+        }
     }
-  }
 }
