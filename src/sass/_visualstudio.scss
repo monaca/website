@@ -17,6 +17,7 @@ body.visualstudio {
             line-height: 1.2;
             padding-right: 200px;
             @media screen and (max-width: 1020px) {
+                font-size: 48px;
                 padding-top: 100px;
                 padding-right: 0px;
             }
@@ -49,13 +50,21 @@ body.visualstudio {
             border-bottom: 1px solid #ccc;
             padding-top: 90px;
             padding-bottom: 80px;
+            &:nth-of-type(1) {
+                padding-top: 60px;
+            }
             h1 {
                 line-height: 1.3;
                 text-align: center;
                 margin-bottom: 50px;
                 -webkit-font-smoothing: antialiased;
-                @media screen and (max-width: $break-xs) {
+                @media screen and (max-width: $break) {
+                    font-size: 34px;
                     font-weight: 400;
+                    margin-bottom: 40px;
+                }
+                @media screen and (max-width: $break-xs) {
+                    font-size: 24px;
                 }
             }
             p {
@@ -75,6 +84,7 @@ body.visualstudio {
             }
             .outline {
                 margin-bottom: 100px;
+                font-size: 12px;
             }
             .box-full > * {
                 width: 1080px;
@@ -87,6 +97,10 @@ body.visualstudio {
                     border: none;
                     img {
                         margin-bottom: 40px;
+                        @media screen and (max-width: $break) {
+                            height: 130px;
+                            margin-bottom: 30px;
+                        }
                     }
                     &.box-1 {
                         background-color: transparent;
@@ -113,7 +127,19 @@ body.visualstudio {
             }
         }
         section.voices {
+            h1 {
+                @media screen and (max-width: $break) {
+                    margin-bottom: 30px;
+                }
+            }
+            h2 {
+                @media screen and (max-width: $break) {
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+            }
             @media screen and (max-width: $break) {
+                padding-bottom: 0;
                 .box-full {
                     padding: 0;
                 }
