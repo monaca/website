@@ -240,11 +240,12 @@ body.book-support {
                     width: 180px;
                     word-wrap: break-word;
                     @media screen and(max-width: $break) {
-                        font-size: 16px;
+                        font-size: 15px;
                         margin-bottom: 5px;
                         width: 170px;
                     }
                     @media screen and (max-width: $break-xs) {
+                        font-size: 14px;
                         width: 140px;
                     }
                     .chapter {
@@ -253,6 +254,9 @@ body.book-support {
                         line-height: 1.2;
                         margin-bottom: 2px;
                         color: #999;
+                        @media screen and (max-width: $break-xs) {
+                            font-size: 11px;
+                        }
                     }
                 }
                 > a {
