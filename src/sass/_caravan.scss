@@ -142,6 +142,15 @@ body.caravan {
                         content: "日時決定";
                         background-color: #34454b;
                     }
+                    &.added:after {
+                        content: "追加決定";
+                        background-color: #34454b;
+                        color: #a2d7f3;
+                    }
+                    &.ended:after {
+                        content: "開催終了";
+                        background-color: #999;
+                    }
                     &.tba {
                         background-color: #ddd;
                         border: 8px solid #eee;
@@ -194,6 +203,10 @@ body.caravan {
                         font-size: 2.28rem;
                         margin-bottom: 18px;
                         padding: 10px;
+                        .small {
+                            font-size: 1.5rem;
+                            color: #00a0e9;
+                        }
                     }
                     p {
                         text-align: center;
@@ -259,5 +272,11 @@ body.caravan {
                 }
             }
         }
+    }
+    .space-40 {
+        letter-spacing: -0.4em;
+    }
+    .indent1em {
+        text-indent: 1em;
     }
 }
