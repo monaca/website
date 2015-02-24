@@ -21,7 +21,7 @@
             img {
                 opacity: 0.5;
                 vertical-align: bottom;
-                transition: opacity 1400ms;
+                @include transition(opacity 1400ms);
                 width: 100%;
             }
             &.on img {
@@ -31,10 +31,11 @@
     }
     &.transition {
         .carousel-items .item {
-            transition: transform 1000ms;
+            @include transition(transform 1000ms);
         }
     }
 }
+
 .carousel-1-indicators {
     position: absolute;
     bottom: 10px;
