@@ -170,6 +170,14 @@ body.cloud {
         }
       }
     }
+    .box-uservoices {
+      width: 1170px;
+      @media screen and (max-width: 1300px) {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: auto;
+      }
+    }
     .box-try {
       padding: 20px 0 40px;
       .btn {
