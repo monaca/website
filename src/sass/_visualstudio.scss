@@ -127,15 +127,18 @@ body.visualstudio {
             }
         }
         section.voices {
-            h1 {
-                @media screen and (max-width: $break) {
-                    margin-bottom: 30px;
+            ul {
+                @include display(flex);
+                @include flex-direction(row);
+                li {
+                    margin: 0 0 20px;
+                    width: 50%;
                 }
             }
-            h2 {
-                @media screen and (max-width: $break) {
-                    font-size: 24px;
-                    font-weight: 400;
+            @media screen and (max-width: 940px) {
+                ul {
+                    padding-left: 0;
+                    padding-right: 0;
                 }
             }
             @media screen and (max-width: $break) {
@@ -143,17 +146,26 @@ body.visualstudio {
                 .box-full {
                     padding: 0;
                 }
-                .column-2 {
-                    padding: 0;
+                h1 {
+                    margin-bottom: 30px;
                 }
-                .box-1 {
-                    padding-left: 0;
-                    padding-right: 0;
-                    h2 {
-                        text-align: center;
-                    }
-                    .link {
-                        text-align: center;
+                h2 {
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+                ul {
+                    @include display(block);
+                    li {
+                        margin: 0 auto 20px;
+                        padding-left: 0;
+                        padding-right: 0;
+                        width: 100%;
+                        h2 {
+                            text-align: center;
+                        }
+                        .link {
+                            text-align: center;
+                        }
                     }
                 }
             }

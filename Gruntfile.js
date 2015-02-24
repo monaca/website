@@ -58,20 +58,12 @@ module.exports = function(grunt) {
         },
 
         watch: {
+            options: {
+                livereload: '<%= connect.options.livereload %>'
+            },
             assemble: {
                 files: ['<%= config.src %>/{content,data,templates}/**/*.{md,hbs,yml,json}'],
                 tasks: ['assemble']
-            },
-            livereload: {
-                options: {
-                    livereload: '<%= connect.options.livereload %>'
-                },
-                files: [
-                    '<%= config.dist %>/**/*.html',
-                    '<%= config.dist %>/**/*.css',
-                    '<%= config.dist %>/**/*.js',
-                    '<%= config.dist %>/**/*.{png,jpg,jpeg,gif,webp,svg}'
-                ],
             },
             assets: {
                 files: ['<%= config.src %>/assets/**/*'],
