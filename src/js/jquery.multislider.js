@@ -126,7 +126,7 @@ var MultiSlider = (function() {
 
         for (var i = 0; i < this.itemsEl.length; i++) {
             var percentage = 500 * (i - this.idx);
-            this.itemsEl[i].style.transform = "translateX(" + percentage + "%)";
+            $(this.itemsEl[i]).css("transform", "translateX(" + percentage + "%)");
         }
 
         if (this.indicatorsEl) {
@@ -164,7 +164,7 @@ var MultiSlider = (function() {
 
         for (var i = 0; i < this.itemsEl.length; i++) {
             var percentage = 500 * (i - this.idx);
-            this.itemsEl[i].style.transform = "translateX(" + percentage + "%)";
+            $(this.itemsEl[i]).css("transform", "translateX(" + percentage + "%)");
         }
 
         this.startTransition();
@@ -216,7 +216,9 @@ var MultiSlider = (function() {
     MultiSlider.prototype.start = function() {
         var self = this;
 
-        this.startTransition();
+        setTimeout(function() {
+            self.startTransition.call(self);
+        }, 200);
 
         if (this.timer) clearTimeout(this.timer);
         this.timer = setInterval(function() {

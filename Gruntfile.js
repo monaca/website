@@ -78,7 +78,7 @@ module.exports = function(grunt) {
             },
             js: {
                 files: ['<%= config.src %>/**/*.js'],
-                tasks: ['concat']
+                tasks: ['concat', 'copy:js']
             },
             //styleguide: {
             //    files: ['<%= config.src %>/**/*.scss'],
@@ -197,6 +197,12 @@ module.exports = function(grunt) {
                 cwd: '<%= config.dist %>/css/',
                 src: 'style.*',
                 dest: '<%= config.distJa %>/css/'
+            },
+            js: {
+                expand: true,
+                cwd: '<%= config.dist %>/js/',
+                src: 'all.js',
+                dest: '<%= config.distJa %>/js/'
             },
             styleguide: {
                 expand: true,
