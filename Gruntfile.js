@@ -248,7 +248,6 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= config.distJa %>',
                     src: ['**'],
-                    filter: 'isFile',
                     dest: ''
                 }]
             },
@@ -260,7 +259,6 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= config.distEn %>',
                     src: ['**'],
-                    filter: 'isFile',
                     dest: ''
                 }]
            }
