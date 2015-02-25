@@ -11,7 +11,7 @@ body.devsupport {
       font-weight: 400;
       line-height: 1.2;
       margin-bottom: 10px;
-      padding-top: 110px;
+      padding-top: 170px;
       text-align: left;
       @media screen and (max-width: $break-xs) {
         padding-top: 100px;
@@ -43,14 +43,14 @@ body.devsupport {
         td {
           background-color: #f2f2f2;
           border: 1px solid #cccccc;
-          font-size: 30px;
-          padding: 40px 0;
+          font-size: 22px;
+          padding: 30px 0;
           text-align: center;
         }
       }
       tbody {
         tr {
-          height: 140px;
+          height: 120px;
           &:last-child th {
             border-bottom: 1px solid #cccccc;
           }
@@ -62,7 +62,7 @@ body.devsupport {
           }
         }
         th {
-          font-size: 24px;
+          font-size: 22px;
           padding: 0 5px 0 0;
           vertical-align: top;
           width: 36%;
@@ -82,7 +82,7 @@ body.devsupport {
         td {
           border: 1px solid #cccccc;
           font-size: 16px;
-          font-weight: 700;
+          font-weight: 400;
           line-height: 1.6;
           padding: 20px;
           width: 32%;
