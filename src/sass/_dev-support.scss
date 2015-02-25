@@ -27,8 +27,14 @@ body.devsupport {
       margin-bottom: 40px;
     }
   }
+  
+  section.support {
+    border-bottom: none;
+  }
 
   section.menu {
+    border-bottom: none;
+    padding-bottom: 150px;
     @media screen and (max-width: $break) {
       padding-left: 0;
       padding-right: 0;
@@ -38,6 +44,8 @@ body.devsupport {
       }
     }
     table {
+      margin: 0 auto;
+      max-width: 1080px;
       width: 100%;
       thead {
         td {
