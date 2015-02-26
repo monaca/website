@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*
 #### Reset CSS and global variables in _init.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -8,22 +7,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   vertical-align: baseline; }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
 
-ol,
-ul {
+ol, ul {
   list-style: none; }
 
-blockquote,
-q {
+blockquote, q {
   quotes: none; }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
   content: '';
   content: none; }
 
@@ -31,9 +24,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-caption,
-th,
-td {
+caption, th, td {
   font-weight: normal;
   text-align: left; }
 
@@ -46,9 +37,7 @@ html {
 a:focus {
   outline: thin dotted; }
 
-audio,
-canvas,
-video {
+audio, canvas, video {
   display: inline-block; }
 
 audio:not([controls]) {
@@ -68,8 +57,7 @@ hr {
   margin: 24px;
   margin-bottom: 1.714285714rem; }
 
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -100,14 +88,14 @@ p {
   word-wrap: break-word; }
 
 html {
-  font: 14px/1.3 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font: 14px/1.3 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
   text-align: center; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif; }
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif; }
 
 body {
-  font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
   min-width: 1170px; }
   @media screen and (max-width: 1300px) {
     body {
@@ -129,62 +117,51 @@ img, iframe, object {
 </section>
 ```
 */
-section,
-div.section {
+section, div.section {
   margin-left: auto;
   margin-right: auto;
   padding: 90px 0 80px;
   position: relative;
   width: 1170px; }
   @media screen and (max-width: 1300px) {
-    section,
-    div.section {
+    section, div.section {
       padding-left: 5%;
       padding-right: 5%;
       width: 100%; } }
-  section h1,
-  div.section h1 {
+  section h1, div.section h1 {
     font-size: 40px;
     margin-bottom: 80px;
     text-align: center;
     -webkit-font-smoothing: antialiased; }
     @media screen and (max-width: 640px) {
-      section h1,
-      div.section h1 {
+      section h1, div.section h1 {
         font-size: 32px;
         margin-bottom: 40px; } }
-    section h1.small,
-    div.section h1.small {
+    section h1.small, div.section h1.small {
       font-size: 26px; }
-  section h2,
-  div.section h2 {
+  section h2, div.section h2 {
     font-size: 32px;
     margin-bottom: 20px;
     -webkit-font-smoothing: antialiased; }
     @media screen and (max-width: 640px) {
-      section h2,
-      div.section h2 {
+      section h2, div.section h2 {
         font-size: 20px; } }
-  section h3,
-  div.section h3 {
+  section h3, div.section h3 {
     font-size: 30px;
     font-weight: 400;
     margin-bottom: 34px;
     -webkit-font-smoothing: antialiased; }
     @media screen and (max-width: 640px) {
-      section h3,
-      div.section h3 {
+      section h3, div.section h3 {
         font-size: 20px; } }
-  section p,
-  div.section p {
+  section p, div.section p {
     color: #666;
     line-height: 1.8;
     margin: 0 auto 50px;
     text-align: left;
     max-width: 580px; }
     @media screen and (max-width: 580px) {
-      section p,
-      div.section p {
+      section p, div.section p {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         padding-left: 5%;
@@ -324,8 +301,7 @@ This items are used in top page
   .dropdown-menu-dark li {
     color: #ffffff;
     height: 38px; }
-    .dropdown-menu-dark li a,
-    .dropdown-menu-dark li span {
+    .dropdown-menu-dark li a, .dropdown-menu-dark li span {
       color: #ffffff;
       display: inline-block;
       -webkit-font-smoothing: antialiased;
@@ -333,9 +309,7 @@ This items are used in top page
       width: 100%;
       height: 100%;
       line-height: 39px; }
-      .dropdown-menu-dark li a:hover, .dropdown-menu-dark li a.active,
-      .dropdown-menu-dark li span:hover,
-      .dropdown-menu-dark li span.active {
+      .dropdown-menu-dark li a:hover, .dropdown-menu-dark li a.active, .dropdown-menu-dark li span:hover, .dropdown-menu-dark li span.active {
         background-color: #383838;
         color: #7cdaff; }
 
@@ -361,9 +335,9 @@ goes 1-column in responsive
   display: block; }
 .column-2 li {
   float: left;
-  margin-right: 4.2735%;
+  margin-right: 4.2735042735%;
   margin-bottom: 20px;
-  width: 47.86325%; }
+  width: 47.8632478632%; }
   .column-2 li:nth-child(2n) {
     margin-right: 0; }
   @media screen and (max-width: 640px) {
@@ -397,18 +371,20 @@ Goes 2 to 1-column in responsive
   display: block; }
 .column-3 li {
   float: left;
-  margin-right: 2.5641%;
-  width: 31.62393%; }
+  margin-right: 2.5641025641%;
+  width: 31.6239316239%; }
   @media screen and (max-width: 970px) {
     .column-3 li {
       margin-right: 6.25%;
       width: 46.875%; } }
   @media screen and (min-width: 970px) {
     .column-3 li:nth-child(3n) {
-      margin-right: 0; } }
+      margin-right: 0; }
+ }
   @media screen and (max-width: 970px) and (min-width: 640px) {
     .column-3 li:nth-child(2n) {
-      margin-right: 0; } }
+      margin-right: 0; }
+ }
   @media screen and (max-width: 640px) {
     .column-3 li {
       float: none;
@@ -440,8 +416,8 @@ Goes 2 to 1-column in responsive
   display: block; }
 .column-4 li {
   float: left;
-  margin-right: 2.5641%;
-  width: 23.07692%; }
+  margin-right: 2.5641025641%;
+  width: 23.0769230769%; }
   .column-4 li:nth-child(4n) {
     margin-right: 0; }
   @media screen and (max-width: 767px) {
@@ -513,18 +489,19 @@ Goes 2 to 1-column in responsive
     -webkit-font-smoothing: antialiased;
     text-align: center;
     margin-bottom: 36px; }
-  .box-uservoices li {
+  .box-uservoices li, .box-uservoices .uservoice {
+    float: left;
     font-size: 16px;
     margin-bottom: 40px;
     text-align: left; }
-    .box-uservoices li > .uservoice-balloon {
+    .box-uservoices li > .uservoice-balloon, .box-uservoices .uservoice > .uservoice-balloon {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       border: 1px solid #ccc;
       position: relative;
       padding: 34px 50px;
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.04); }
-      .box-uservoices li > .uservoice-balloon:after {
+      .box-uservoices li > .uservoice-balloon:after, .box-uservoices .uservoice > .uservoice-balloon:after {
         position: absolute;
         bottom: -12px;
         left: 60px;
@@ -536,63 +513,58 @@ Goes 2 to 1-column in responsive
         width: 20px;
         height: 20px;
         content: ''; }
-      .box-uservoices li > .uservoice-balloon q {
+      .box-uservoices li > .uservoice-balloon q, .box-uservoices .uservoice > .uservoice-balloon q {
         color: #333;
         font-weight: 600;
         line-height: 1.8;
         position: relative;
         white-space: normal; }
-        .box-uservoices li > .uservoice-balloon q:before, .box-uservoices li > .uservoice-balloon q:after {
+        .box-uservoices li > .uservoice-balloon q:before, .box-uservoices li > .uservoice-balloon q:after, .box-uservoices .uservoice > .uservoice-balloon q:before, .box-uservoices .uservoice > .uservoice-balloon q:after {
           content: '';
           position: absolute;
           width: 32px;
           height: 26px; }
-        .box-uservoices li > .uservoice-balloon q:before {
+        .box-uservoices li > .uservoice-balloon q:before, .box-uservoices .uservoice > .uservoice-balloon q:before {
           background: url(../img/common/icn_quote_left.png) no-repeat left top;
           left: -36px;
           top: -14px; }
-        .box-uservoices li > .uservoice-balloon q:after {
+        .box-uservoices li > .uservoice-balloon q:after, .box-uservoices .uservoice > .uservoice-balloon q:after {
           background: url(../img/common/icn_quote_right.png) no-repeat left top; }
-    .box-uservoices li > .uservoice-user {
+    .box-uservoices li > .uservoice-user, .box-uservoices .uservoice > .uservoice-user {
       background: url(../img/index/user_icon.png) no-repeat 38px 25px;
       height: 100px;
       padding: 34px 0 0 120px; }
-      .box-uservoices li > .uservoice-user.user-1 {
+      .box-uservoices li > .uservoice-user.user-1, .box-uservoices .uservoice > .uservoice-user.user-1 {
         background: url(../img/index/user_icon_1.png) no-repeat 38px 25px; }
-      .box-uservoices li > .uservoice-user.user-2 {
+      .box-uservoices li > .uservoice-user.user-2, .box-uservoices .uservoice > .uservoice-user.user-2 {
         background: url(../img/index/user_icon_2.png) no-repeat 38px 25px; }
-      .box-uservoices li > .uservoice-user.user-3 {
+      .box-uservoices li > .uservoice-user.user-3, .box-uservoices .uservoice > .uservoice-user.user-3 {
         background: url(../img/index/user_icon_3.png) no-repeat 38px 25px; }
-      .box-uservoices li > .uservoice-user > .uservoice-name {
+      .box-uservoices li > .uservoice-user > .uservoice-name, .box-uservoices .uservoice > .uservoice-user > .uservoice-name {
         font-weight: 600;
         font-size: 18px; }
-      .box-uservoices li > .uservoice-user > .uservoice-organization {
+      .box-uservoices li > .uservoice-user > .uservoice-organization, .box-uservoices .uservoice > .uservoice-user > .uservoice-organization {
         font-weight: 300;
         font-size: 16px; }
   @media screen and (max-width: 640px) {
     .box-uservoices .column-2 .box-uservoices .uservoice-balloon {
-      height: auto !important; } }
+      height: auto !important; }
+ }
   @media screen and (max-width: 1300px) {
     .box-uservoices .column-3 .box-uservoices li {
       float: none;
       margin: 0 auto 20px;
       width: 100%; }
+
     .box-uservoices .column-3 .box-uservoices .uservoice-balloon {
       height: auto !important; }
+
     .box-uservoices .column-3 .box-uservoices .uservoice-user {
-      padding-left: 120px; } }
+      padding-left: 120px; }
+ }
 
 /*
-# Examples on top page
-
-```
-<div class="container box-examples">
-    <h2>Examples</h2>
-    <img src="../img/index/examples_img.png">
-
-    <p><a href="#" class="btn btn-darkgray">Try it!</a></p>
-</div>
-```
+# Some components on the top page
 */
 .box-examples {
   background: url(../img/index/examples_bg.jpg) no-repeat left top;
@@ -614,15 +586,6 @@ Goes 2 to 1-column in responsive
   .box-examples p {
     padding-top: 20px; }
 
-/*
-# Partners on top page
-
-```
-<div class="container box-partners">
-    <img src="../img/index/partners.png">
-</div>
-```
-*/
 .box-partners {
   background-color: #F9FAFC;
   border-top: 1px solid #cdd1d6;
@@ -631,21 +594,6 @@ Goes 2 to 1-column in responsive
   overflow: hidden;
   padding: 0; }
 
-/*
-# Awards on top page
-
-```
-<div class="container box-awards">
-    <ul>
-        <li><img src="../img/index/award_1.png"></li>
-        <li><img src="../img/index/award_5.png"></li>
-        <li><img src="../img/index/award_4.png"></li>
-        <li><img src="../img/index/award_2.png"></li>
-        <li><img src="../img/index/award_3.png"></li>
-    </ul>
-</div>
-```
-*/
 .box-awards {
   height: 200px;
   margin: 0 auto;
@@ -706,7 +654,7 @@ Goes 2 to 1-column in responsive
   .box-try .btn {
     font-size: 24px;
     font-weight: 400;
-    font-family: Open Sans,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    font-family: Open Sans, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
     height: 64px;
     line-height: 64px;
     padding: 0 40px;
@@ -748,13 +696,15 @@ Goes 2 to 1-column in responsive
     .monaca_info a:hover {
       text-decoration: underline;
       background-color: #fffd85;
-      transition: .2s ease-in-out;
-      -webkit-transition: .4s ease-in-out;
-      -moz-transition: .4s ease-in-out;
-      -ms-transition: .4s ease-in-out; }
+      transition: 0.2s ease-in-out;
+      -webkit-transition: 0.4s ease-in-out;
+      -moz-transition: 0.4s ease-in-out;
+      -ms-transition: 0.4s ease-in-out; }
     .monaca_info a:active {
       background-color: #e5e477;
       text-decoration: none; }
 
 body {
   text-align: left; }
+
+/*# sourceMappingURL=common.css.map */

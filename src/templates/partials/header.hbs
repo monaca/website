@@ -20,11 +20,12 @@ component: navbar
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{i18n "products"}}</a>
                     <ul class="dropdown-menu">
                         <li><a href="/cloud.html">{{i18n "monacaCloud"}}</a></li>
-                        <li><a href="/enterprise.html">{{i18n "monacaEnterprise"}}</a></li>
+                        <li><a href="/visualstudio.html">Monaca for Visual Studio</a></li>
                         <li><a href="/debugger.html">{{i18n "monacaDebugger"}}</a></li>
                         <li><a href="/localkit.html">Monaca Localkit</a></li>
                         {{#is language "ja"}}<li><a href="http://monaca.mobi/ja/academic/">{{i18n "monacaAcademic"}}</a></li>{{/is}}
                         {{#is language "ja"}}<li><a href="http://ja.onsen.io/">Onsen UI</a></li>{{else}}<li><a href="http://onsen.io/">Onsen UI</a></li>{{/is}}
+                        <li><a href="/enterprise.html">{{i18n "monacaEnterprise"}}</a></li>
                         <li><a href="/kidozen.html">KidoZen</a></li>
                     </ul>
                 </li>
@@ -59,7 +60,7 @@ component: navbar
                             <li><a href="http://monaca.mobi/en/headline">Updates</a></li>
                             <li><a href="http://docs.monaca.mobi/en/" target="_blank">Docs <i class="fa fa-external-link">&nbsp;</i></a></li>
                             <li><a href="http://monaca.mobi/en/showcase">Showcase</a></li>
-                            <li><a href="http://monaca.mobi/en/forum">Forum</a></li>
+                            <li><a href="http://monaca.mobi/en/forum/home">Forum</a></li>
                             <!-- <li><a href="http://monaca.mobi/en/contest">App Contest</a></li> -->
                         </ul>
                     </li>
@@ -75,6 +76,7 @@ component: navbar
                             <li><a href="/support.html">サポート・サービス概要</a></li>
                             <li><a href="http://monaca.mobi/ja/training/">トレーニング</a></li>
                             <li><a href="https://monaca.mobi/ja/support/index">サポート受付</a></li>
+                            <li><a href="/book/support/">Monaca公式ガイドブック</a></li>
                         </ul>
                     </li>
                 {{else}}
@@ -88,6 +90,7 @@ component: navbar
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">活用事例</a>
                         <ul class="dropdown-menu">
                             <li><a href="http://monaca.mobi/ja/showcase">アプリ事例</a></li>
+                            <li><a href="/showcase/hitachitool.html">導入事例</a></li>
                         </ul>
                     </li>
                     <li><a href="http://docs.monaca.mobi/" target="_blank">ドキュメント</a></li>
@@ -112,7 +115,7 @@ component: navbar
                 <li><a href="{{i18n "urlSignup"}}" class="login">{{i18n "signup"}}</a></li>
 
                 {{#is language "en"}}
-                    <li><a href="http://ja.monaca.io/" class="hidden-xs">日本語</a></li>
+                    <li><a href="https://ja.monaca.io/" class="hidden-xs">日本語</a></li>
                 {{/is}}
 
             </ul>

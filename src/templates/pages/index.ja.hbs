@@ -5,13 +5,35 @@ layout: src/templates/layouts/index.hbs
 ---
 
 <div class="recruit-xs visible-xs visible-sm visible-md">
-    <a href="/careers.html"><h2><img src="/img/careers/ico_recruitment.png" alt="Recruitment">開発チームに参加しませんか?  <i class="fa fa-chevron-circle-right"></i></h2></a>       
+    <a href="/careers.html"><h2><img src="/img/careers/ico_recruitment.png" alt="Recruitment">開発チームに参加しませんか?  <i class="fa fa-chevron-circle-right"></i></h2></a>
 </div>
 <div class="recruit-md visible-lg">
     <a class="badge" href="/careers.html">Recruitment 開発チームに参加しませんか？</a>
 </div>
 
-<div class="keyvisual box-full"><div>
+<div id="keyvisual" class="keyvisual carousel-1 box-full hidden-xs">
+    <div class="carousel-container">
+        <ul class="carousel-items">
+            <li class="item" data-index="0">
+                <img src="/img/index/keyvisual.png" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/>
+                <div class="box-try">
+                    <a href="https://monaca.mobi/ja/support/inquiry" class="btn btn-line-white">お問い合わせ</a>
+                    <a href="https://monaca.mobi/ja/register/start" class="btn btn-green">今すぐ試す<span class="small">(無料)</span></a>
+                </div>
+            </li>
+            <li class="item" data-index="1"><a href="/book/caravan.html">
+                <img src="/img/index/keyvisual_caravan.png" alt="Monaca公式ガイドブック「クラウドでできるHTML5ハイブリッドアプリ開発」出版記念　アプリ開発セミナー全国キャラバン開催！"/>
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="carousel-1-indicators">
+        <span class="indicator" onclick="slider.leapTo(0)">○</span>
+        <span class="indicator" onclick="slider.leapTo(1)">○</span>
+    </div>
+</div>
+
+<div class="keyvisual box-full visible-xs"><div>
     <h1><span class="small">HTML5ハイブリッドアプリで</span><br /><span class="key">アプリ開発を加速します</span></h1>
     <p><img src="/img/index/ico_platforms.png" alt="プラットフォームアイコン" /></p>
 
@@ -20,6 +42,10 @@ layout: src/templates/layouts/index.hbs
         <a href="https://monaca.mobi/ja/register/start" class="btn btn-green">今すぐ試す<span class='small'>(無料)</span></a>
     </div>
 </div></div>
+
+
+<a href="/book/caravan.html" class="visible-xs"><img src="/img/index/keyvisual_caravan_sp.jpg" alt="Monaca公式ガイドブック「クラウドでできるHTML5ハイブリッドアプリ開発」出版記念　アプリ開発セミナー全国キャラバン開催！"/></a>
+
 
 <div class="container products box-full">
     <ul class="column-3">
@@ -34,12 +60,12 @@ layout: src/templates/layouts/index.hbs
             </div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1"><img src="/img/index/tag_business.png" alt="Business" /></span>
+            <span class="type bnr-1"><img src="/img/index/tag_local.png" alt="Local" /></span>
             <dl>
-                <dt>Monacaエンタープライズ</dt>
-                <dd>Monacaエンタープライズは、業務アプリ向けの開発、運用基盤です。カスタムアプリをより安全に、効率的に開発、運用できます。</dd>
+                <dt>Monaca for Visual Studio</dt>
+                <dd>Visual StudioでiOS、Android、Chrome Apps等のマルチプラットフォームのアプリ開発を行うことができます。</dd>
             </dl>
-            <div class="btns"><a class="btn btn-blue" href="/enterprise.html">詳細はこちら</a></div>
+            <div class="btns"><a class="btn btn-blue" href="/visualstudio.html">詳細はこちら</a></div>
         </li>
         <li class="box-1" tile="3">
             <span class="type bnr-1"><img src="/img/index/tag_local.png" alt="Local" /></span>
@@ -66,12 +92,12 @@ layout: src/templates/layouts/index.hbs
             <div class="btns"><a class="btn btn-blue" href="http://ja.onsen.io/">詳細はこちら</a></div>
         </li>
         <li class="box-1" tile="3">
-            <span class="type bnr-1"><img src="/img/index/tag_backend.png" alt="Backend" /></span>
+            <span class="type bnr-1"><img src="/img/index/tag_business.png" alt="Business" /></span>
             <dl>
-                <dt>KidoZen<span class="small">（エンタープライズmBaaS）</span></dt>
-                <dd>エンタープライズ用途に特化したmBaaS。既存システムとの連携用コネクターやアプリ配布、プッシュ通知機能など提供します。</dd>
+                <dt>Monacaエンタープライズ</dt>
+                <dd>Monacaエンタープライズは、業務アプリ向けの開発、運用基盤です。カスタムアプリをより安全に、効率的に開発、運用できます。</dd>
             </dl>
-            <div class="btns"><a class="btn btn-blue" href="/kidozen.html">詳細はこちら</a></div>
+            <div class="btns"><a class="btn btn-blue" href="/enterprise.html">詳細はこちら</a></div>
         </li>
     </ul>
 </div>
@@ -183,3 +209,13 @@ layout: src/templates/layouts/index.hbs
 <div class="container box-try">
     <a href="https://monaca.mobi/ja/register/start" class="btn btn-green">今すぐ試す<span class='small'>(無料)</span></a>
 </div>
+
+
+<script>
+var slider;
+
+$(function() {
+    slider = new MultiSlider(document.getElementById("keyvisual"));
+    slider.start();
+});
+</script>

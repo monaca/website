@@ -1,139 +1,134 @@
 body.debugger {
-
-  .keyvisual {
-    background: url(../img/debugger/keyvisual.jpg) no-repeat center bottom, url(../img/debugger/keyvisual_bg.png) repeat-x left bottom;
-    color: #000;
-    padding-bottom: 0;
-    @media screen and (max-width: $break-xs) {
-        padding-bottom: 20px;
-    }
-    h1 {
-      font-weight: 400;
-      margin-bottom: 10px;
-      padding-top: 140px;
-      text-align: left;
-      @media screen and (min-width: 1280px) {
-        br.opt {
-            display: none;
+    .keyvisual {
+        background: url(../img/debugger/keyvisual.jpg) no-repeat center bottom, url(../img/debugger/keyvisual_bg.png) repeat-x left bottom;
+        color: #000;
+        padding-bottom: 0;
+        @media screen and (max-width: $break-xs) {
+            padding-bottom: 20px;
         }
-      }
-      img {
-        vertical-align: 4px;
-      }
-    }
-    .btns {
-      font-size: 20px;
-      line-height: 64px;
-      padding-top: 40px;
-      text-align: left;
-      width: 500px;
-      word-break: break-all;
-      img {
-        margin-right: 10px;
-        width: 135px;
-      }
-      @media screen and (max-width: 500px) {
-        width: 100%;
-        img {
-          display: block;
-          margin: 0 auto 10px
+        h1 {
+            font-weight: 400;
+            margin-bottom: 10px;
+            padding-top: 140px;
+            text-align: left;
+            @media screen and (min-width: 1280px) {
+                br.opt {
+                    display: none;
+                }
+            }
+            img {
+                vertical-align: 4px;
+            }
         }
-      }
-    }
-  }
-
-  article.main {
-    section {
-      h2 {
-        color: #666;
-        font-size: 30px;
-      }
-      p {
-        text-align: left;
-      }
-      &.debug {
-        padding-left: 0;
-        padding-right: 0;
-        width: auto;
-        .integration,
-        .usb,
-        .plugins {
-          padding-top: 130px;
+        .btns {
+            font-size: 20px;
+            line-height: 64px;
+            padding-top: 40px;
+            text-align: left;
+            width: 500px;
+            word-break: break-all;
+            img {
+                margin-right: 10px;
+                width: 135px;
+            }
+            @media screen and (max-width: 500px) {
+                width: 100%;
+                img {
+                    display: block;
+                    margin: 0 auto 10px
+                }
+            }
         }
+    }
+    article.main {
+        section {
+            h2 {
+                color: #666;
+                font-size: 30px;
+            }
+            p {
+                text-align: left;
+            }
+            &.debug {
+                padding-left: 0;
+                padding-right: 0;
+                width: auto;
+                .integration, .usb, .plugins {
+                    padding-top: 130px;
+                }
+                .integration {
+                    background: url(../img/debugger/img_3_ja.jpg) no-repeat center bottom;
+                    background-size: 1287px;
+                    padding-bottom: 52%;
+                    max-height: 1020px;
+                    @media screen and (max-width: 1240px) {
+                        background-size: 114%;
+                    }
+                }
+                .usb {
+                    background: url(../img/debugger/img_4_ja.jpg) no-repeat center bottom;
+                    background-size: 1287px;
+                    padding-bottom: 52%;
+                    max-height: 1020px;
+                    @media screen and (max-width: 1240px) {
+                        background-size: 114%;
+                    }
+                }
+                .plugins {
+                    max-height: 1020px;
+                    @media screen and (max-width: 1170px) {
+                        background-size: 100%;
+                    }
+                }
+            }
+            &.collaboration {
+                padding: 90px 0;
+                h1 + p {
+                    @media screen and (max-width: $break) {
+                        margin-bottom: 20px;
+                    }
+                }
+                .internet {
+                    background: url(../img/debugger/img_7_ja.jpg) no-repeat center 80%;
+                    background-size: 112%;
+                    border-bottom: none;
+                    padding: 60px 5% 92%;
+                    @media screen and (max-width: $break) {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                }
+                .communication {
+                    padding-top: 0;
+                }
+            }
+        }
+        .box-try {
+            padding: 40px 0;
+            p {
+                margin-bottom: 40px;
+            }
+            a img {
+                margin: 0 10px;
+                width: 135px;
+                @media screen and (max-width: 500px) {
+                    display: block;
+                    margin: 0 auto 10px
+                }
+            }
+        }
+    }
+}
+html[lang=en] body.debugger {
+    article.main section {
         .integration {
-          background: url(../img/debugger/img_3_ja.jpg) no-repeat center bottom;
-          background-size: 1287px;
-          padding-bottom: 52%;
-          max-height: 1020px;
-          @media screen and (max-width: 1240px) {
-            background-size: 114%;
-          }
+            background: url(../img/debugger/img_3_en.jpg) no-repeat center bottom;
         }
         .usb {
-          background: url(../img/debugger/img_4_ja.jpg) no-repeat center bottom;
-          background-size: 1287px;
-          padding-bottom: 52%;
-          max-height: 1020px;
-          @media screen and (max-width: 1240px) {
-            background-size: 114%;
-          }
-        }
-        .plugins {
-          max-height: 1020px;
-          @media screen and (max-width: 1170px) {
-            background-size: 100%;
-          }
-        }
-      }
-      &.collaboration {
-        padding: 90px 0;
-        h1 + p {
-          @media screen and (max-width: $break) {
-              margin-bottom: 20px;
-          }
+            background: url(../img/debugger/img_4_en.jpg) no-repeat center bottom;
         }
         .internet {
-          background: url(../img/debugger/img_7_ja.jpg) no-repeat center 80%;
-          background-size: 112%;
-          border-bottom: none;
-          padding: 60px 5% 92%;
-          @media screen and (max-width: $break) {
-            padding-left: 0;
-            padding-right: 0;
-          }
+            background: url(../img/debugger/img_7_en.jpg) no-repeat center 80%;
         }
-        .communication {
-          padding-top: 0;
-        }
-      }
     }
-    .box-try {
-      padding: 40px 0;
-      p {
-        margin-bottom: 40px;
-      }
-      a img {
-        margin: 0 10px;
-        width: 135px;
-        @media screen and (max-width: 500px) {
-          display: block;
-          margin: 0 auto 10px
-        }
-      }
-    }
-  }
-}
-
-html[lang=en] body.debugger {
-  article.main section {
-		.integration {
-			background: url(../img/debugger/img_3_en.jpg) no-repeat center bottom;
-		}
-		.usb {
-			background: url(../img/debugger/img_4_en.jpg) no-repeat center bottom;
-		}
-		.internet {
-			background: url(../img/debugger/img_7_en.jpg) no-repeat center 80%;
-		}
-  }
 }

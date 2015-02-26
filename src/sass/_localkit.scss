@@ -1,100 +1,100 @@
 body.localkit {
-
-  .keyvisual {
-    background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
-    color: #000;
-    padding-bottom: 0;
-    position: relative;
-    @media screen and (max-width: $break) {
-        padding-bottom: 40px;
-    }
-    h1 {
-      font-weight: 400;
-      margin-bottom: 10px;
-      padding-top: 120px;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 1);
-      letter-spacing: -0.03em;
-      font-size: 45px;
-      padding-right: 330px;
-      @media screen and (max-width: 1020px) {
-          padding-top: 100px;
-          padding-right: 0px;
-      }
-      img {
-        vertical-align: -10px;
-      }
-    }
-    .box-try {
-      text-align: left;
-			padding: 40px 0 0;
-      }
-    .btns {
-      padding: 20px 0 40px;
-      line-height: 64px;
-      .btn {
-        padding: 0 20px;
-        min-width: 240px;
-      }
-      @media screen and (max-width: $break-xs) {
-          text-align: center;
-      }
-    }
-  }
-
-  article.main {
-    section {
-      border-bottom: 1px solid #ccc;
-      padding-top: 90px;
-      padding-bottom: 80px;
-      h1 {
-        text-align: center;
-      }
-      p {
-        margin-bottom: 30px;
-        text-align: left;
-      }
-      &.debug {
-        background: url(../img/localkit/img_3.png) no-repeat center bottom;
-        background-size: 110%;
-        padding-bottom: 53%;
-        @media screen and (min-width: $break-xl) {
-            padding-bottom: 630px;
-        }
+    .keyvisual {
+        background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
+        color: #000;
+        padding-bottom: 0;
+        position: relative;
         @media screen and (max-width: $break) {
-          background-position: center bottom;
+            padding-bottom: 40px;
         }
-      }
-    }
-    .keyvisual + section {
-      @media screen and (min-width: $break) {
-        padding-top: 140px;
-      }
-    }
-    .box-try {
-      .btn {
-        padding: 12px 40px 0;
-        min-width: 210px;
-        height: auto;
-        min-height: 54px;
-        line-height: 1.2;
-				margin: 0;
-        @media screen and (max-width: $break-xs) {
-          padding: 13px 0;
-          font-size: 16px;
-        }
-        @media screen and (min-width: $break-xs) {
-            br.opt {
-              display: none;
+        h1 {
+            font-weight: 400;
+            margin-bottom: 10px;
+            padding-top: 120px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+            letter-spacing: -0.03em;
+            font-size: 45px;
+            padding-right: 330px;
+            @media screen and (max-width: 1020px) {
+                padding-top: 100px;
+                padding-right: 0px;
+            }
+            img {
+                vertical-align: -10px;
             }
         }
-        a {
-          color: #ffffff;
-          &:hover {text-decoration: none;}
+        .box-try {
+            text-align: left;
+            padding: 40px 0 0;
         }
-      }
-      .notes {
-        margin-top: 30px;
-      }
+        .btns {
+            padding: 20px 0 40px;
+            line-height: 64px;
+            .btn {
+                padding: 0 20px;
+                min-width: 240px;
+            }
+            @media screen and (max-width: $break-xs) {
+                text-align: center;
+            }
+        }
     }
-  }
+    article.main {
+        section {
+            border-bottom: 1px solid #ccc;
+            padding-top: 90px;
+            padding-bottom: 80px;
+            h1 {
+                text-align: center;
+            }
+            p {
+                margin-bottom: 30px;
+                text-align: left;
+            }
+            &.debug {
+                background: url(../img/localkit/img_3.png) no-repeat center bottom;
+                background-size: 110%;
+                padding-bottom: 53%;
+                @media screen and (min-width: $break-xl) {
+                    padding-bottom: 630px;
+                }
+                @media screen and (max-width: $break) {
+                    background-position: center bottom;
+                }
+            }
+        }
+        .keyvisual + section {
+            @media screen and (min-width: $break) {
+                padding-top: 140px;
+            }
+        }
+        .box-try {
+            .btn {
+                padding: 12px 40px 0;
+                min-width: 210px;
+                height: auto;
+                min-height: 54px;
+                line-height: 1.2;
+                margin: 0;
+                @media screen and (max-width: $break-xs) {
+                    padding: 13px 0;
+                    font-size: 16px;
+                }
+                @media screen and (min-width: $break-xs) {
+                    br.opt {
+                        display: none;
+                    }
+                }
+                a {
+                    color: #ffffff;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+            .notes {
+                margin-top: 30px;
+            }
+        }
+    }
 }

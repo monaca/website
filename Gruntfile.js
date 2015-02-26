@@ -30,10 +30,11 @@ module.exports = function(grunt) {
         },
 
         sass: {
+            options: {
+                sourceMap: true,
+                includePaths: require('node-bourbon').includePaths
+            },
             dist: {
-                options: {
-                    sourcemap: false
-                },
                 files: [{
                     expand: true,
                     cwd   : 'src/sass',
@@ -57,20 +58,12 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            assemble: {
-                files: ['<%= config.src %>/{content,data,templates}/{,*/}*.{md,hbs,yml,json}'],
-                tasks: ['assemble']
+            options: {
+                livereload: '<%= connect.options.livereload %>'
             },
-            livereload: {
-                options: {
-                    livereload: '<%= connect.options.livereload %>'
-                },
-                files: [
-                    '<%= config.dist %>/{,*/}*.html',
-                    '<%= config.dist %>/{,*/}*.css',
-                    '<%= config.dist %>/{,*/}*.js',
-                    '<%= config.dist %>/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
-                ]
+            assemble: {
+                files: ['<%= config.src %>/{content,data,templates}/**/*.{md,hbs,yml,json}'],
+                tasks: ['assemble']
             },
             assets: {
                 files: ['<%= config.src %>/assets/**/*'],
@@ -78,19 +71,19 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: ['<%= config.src %>/**/*.scss'],
-                tasks: ['sass'],
+                tasks: ['sass', 'copy:css'],
                 options : {
                     spawn: false
                 }
             },
             js: {
                 files: ['<%= config.src %>/**/*.js'],
-                tasks: ['concat']
+                tasks: ['concat', 'copy:js']
             },
-            styleguide: {
-                files: ['<%= config.src %>/**/*.scss'],
-                tasks: ['styleguide']
-            }
+            //styleguide: {
+            //    files: ['<%= config.src %>/**/*.scss'],
+            //    tasks: ['styleguide']
+            //}
         },
 
         concat: {
@@ -199,10 +192,22 @@ module.exports = function(grunt) {
                 src: '**',
                 dest: '<%= config.distJa %>'
             },
+            css: {
+                expand: true,
+                cwd: '<%= config.dist %>/css/',
+                src: 'style.*',
+                dest: '<%= config.distJa %>/css/'
+            },
+            js: {
+                expand: true,
+                cwd: '<%= config.dist %>/js/',
+                src: 'all.js',
+                dest: '<%= config.distJa %>/js/'
+            },
             styleguide: {
                 expand: true,
                 cwd: '<%= config.dist %>/img/',
-                src: '**',
+                src: 'common/*',
                 dest: 'docs/img/'
             }
         },
@@ -249,7 +254,6 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= config.distJa %>',
                     src: ['**'],
-                    filter: 'isFile',
                     dest: ''
                 }]
             },
@@ -261,7 +265,6 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= config.distEn %>',
                     src: ['**'],
-                    filter: 'isFile',
                     dest: ''
                 }]
            }
@@ -271,16 +274,16 @@ module.exports = function(grunt) {
             dist: ['dist/**/*'],
             styleguide: ["docs/styleguide"]
         },
+
         connect: {
             options: {
                 livereload: 35729,
-                // change this to '0.0.0.0' to access the server from outside
                 hostname: '0.0.0.0'
             },
             en: {
                 options: {
                     open: {
-                        target: 'http://0.0.0.0:3010',
+                        target: 'http://localhost:3010',
                         appName: 'Google Chrome'
                     },
                     port: 3010,
@@ -292,7 +295,7 @@ module.exports = function(grunt) {
             ja: {
                 options: {
                     open: {
-                        target: 'http://0.0.0.0:3011',
+                        target: 'http://localhost:3011',
                         appName: 'Google Chrome'
                     },
                     port: 3011,
@@ -323,7 +326,7 @@ module.exports = function(grunt) {
 
     });
     grunt.loadNpmTasks('assemble');
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-aws-s3');
