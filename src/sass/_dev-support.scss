@@ -47,6 +47,9 @@ body.devsupport {
       margin: 0 auto;
       max-width: 1080px;
       width: 100%;
+      @media screen and (max-width: $break) {
+        width: 90%;
+      }
       thead {
         td {
           background-color: #f2f2f2;
@@ -68,6 +71,9 @@ body.devsupport {
             width: 190px;
             max-width: 33%;
           }
+          @media screen and (max-width: $break) {
+            height: 100px;
+          }
         }
         th {
           font-size: 22px;
@@ -75,6 +81,7 @@ body.devsupport {
           vertical-align: top;
           width: 36%;
           @media screen and (max-width: $break-xs) {
+              font-weight: 700;
               width: 24%;
           }
           > span {

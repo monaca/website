@@ -1,4 +1,103 @@
 /*
+# Main Section
+
+```
+<section>
+    <h1>Heading 1</h1>
+    <h1 class="small">Gentle small heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, deserunt, nisi. Suscipit delectus ad voluptatem modi possimus vitae eius libero neque, placeat laboriosam minima, atque et culpa facilis molestias quod.</p>
+</section>
+```
+*/
+section,
+div.section {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 90px 0 80px;
+  position: relative;
+  width: $width;
+  @media screen and (max-width: $break-xl) {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+  }
+  h1 {
+    font-size: 40px;
+    margin-bottom: 80px;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    @media screen and (max-width: $break-xs) {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+    &.small {
+      font-size: 26px;
+    }
+  }
+  h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    -webkit-font-smoothing: antialiased;
+    @media screen and (max-width: $break-xs) {
+      font-size: 20px;
+    }
+  }
+  h3 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 34px;
+    -webkit-font-smoothing: antialiased;
+    @media screen and (max-width: $break-xs) {
+      font-size: 20px;
+    }
+  }
+  p {
+    color: #666;
+    line-height: 1.8;
+    margin: 0 auto 50px;
+    text-align: left;
+    max-width: 580px;
+    //word-break: break-all;
+    @media screen and (max-width: 580px) {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+  }
+}
+
+article.main section {
+  border-bottom: 1px solid #ccc;
+}
+
+/*
+# Main Container
+
+```
+<div class="container box-full">
+    <p>Yeah</p>
+</div>
+```
+*/
+.container {
+  padding-left: 0;
+  padding-right: 0;
+  min-width: $width;
+  width: auto;
+  @media screen and (max-width: $break-xl) {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+
+
+/*
 # Keyvisual
 
 ```
@@ -65,6 +164,22 @@
       width: 100%;
     }
   }
+}
+
+/*
+# Language specific display
+
+```
+<p class="visible-ja">Japanese only</span>
+<p class="visible-en">English only</span>
+```
+*/
+html[lang=en] .visible-ja {
+  display: none;
+}
+
+html[lang=ja] .visible-en {
+  display: none;
 }
 
 /*
