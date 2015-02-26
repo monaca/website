@@ -1,11 +1,16 @@
 body.devsupport {
 
   .keyvisual {
-    background: url(../img/devsupport/keyvisual.jpg) no-repeat center bottom;
+    background: url(../img/devsupport/keyvisual.png) no-repeat center bottom, url(../img/devsupport/keyvisual_bg.png) repeat-x left bottom;
     padding-bottom: 0px;
     position: relative;
+    @media screen and (max-width: $break) {
+        padding-bottom: 30px;
+        background-size: cover;
+    }
     @media screen and (max-width: $break-xs) {
         padding-bottom: 30px;
+        background-size: cover;
     }
     h1 {
       font-weight: 400;
@@ -13,8 +18,12 @@ body.devsupport {
       margin-bottom: 10px;
       padding-top: 170px;
       text-align: left;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+      @media screen and (max-width: $break) {
+        padding: 90px 0 40px;
+      }
       @media screen and (max-width: $break-xs) {
-        padding-top: 100px;
+        padding: 70px 0 0;
       }
       img {
         vertical-align: 4px;
@@ -25,6 +34,25 @@ body.devsupport {
   section {
     h1 {
       margin-bottom: 40px;
+    }
+  }
+
+  article {
+    section {
+      &:nth-of-type(1) {
+        padding-top: 50px;
+        p:first-child {
+          margin-bottom: 100px;
+          @media screen and (max-width: $break-xs) {
+            margin-bottom: 70px;
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        @media screen and (max-width: $break) {
+          padding-bottom: 0;
+        }
+      }
     }
   }
   
@@ -57,6 +85,12 @@ body.devsupport {
           font-size: 22px;
           padding: 30px 0;
           text-align: center;
+          @media screen and (max-width: $break) {
+            padding: 20px 0;
+            &:last-child {
+              border-right: none;
+            }
+          }
         }
       }
       tbody {
@@ -101,6 +135,11 @@ body.devsupport {
           line-height: 1.6;
           padding: 20px;
           width: 32%;
+          @media screen and (max-width: $break) {
+            &:last-child {
+              border-right: none;
+            }
+          }
           p {
             font-weight: 400;
             line-height: 1.6;
