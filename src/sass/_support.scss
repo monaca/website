@@ -60,6 +60,10 @@ body.support {
                 .tech-cont {
                     padding-top: 60px;
                     text-align: left;
+                    p {
+                        max-width: initial;
+                        max-width: auto;
+                    }
                     @media screen and (max-width: $break) {
                         padding: 0 5%;
                     }

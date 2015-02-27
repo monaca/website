@@ -56,7 +56,9 @@ body.book-campaign {
         }
         p {
             margin-bottom: 20px;
-            width: auto;
+            /*width: auto;*/
+            max-width: initial;
+            max-width: auto;
         }
         section.summary {
             padding-top: 120px;
@@ -87,10 +89,13 @@ body.book-campaign {
                 &:first-child {
                     margin-right: 4%;
                 }
+                @media screen and (min-width: $break-xs) (max-width: $break) {
+                    height: 400px;
+                }
                 @media screen and (max-width: $break-xs) {
                     float: none;
                     height: auto;
-                    margin: 0 auto;
+                    margin: 0 auto 50px;
                     width: 90%;
                 }
                 h3 {
