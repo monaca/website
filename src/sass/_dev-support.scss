@@ -1,56 +1,182 @@
-body.dev-support {
-    .keyvisual {
-        background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
-        color: #000;
-        padding-bottom: 0;
-        position: relative;
-        @media screen and (max-width: $break-xs) {
-            padding-bottom: 40px;
-        }
-        h1 {
-            margin-bottom: 10px;
-            padding-top: 140px;
-            text-align: left;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 1);
-            @media screen and (max-width: $break-xs) {
-                padding-top: 100px;
-            }
-            img {
-                vertical-align: 4px;
-            }
-        }
-        p {
-            font-size: 20px;
-            color: #666;
-            text-align: left;
-            word-break: break-all;
-        }
+body.devsupport {
+
+  .keyvisual {
+    background: url(../img/devsupport/keyvisual.png) no-repeat center bottom, url(../img/devsupport/keyvisual_bg.png) repeat-x left bottom;
+    padding-bottom: 0px;
+    position: relative;
+    @media screen and (max-width: $break) {
+        padding-bottom: 30px;
+        background-size: cover;
     }
-    article.main {
-        section {
-            border-bottom: 1px solid #ccc;
-            padding: 90px 0 80px;
-            &:first-child {
-                padding-top: 140px;
-            }
-            h1 {
-                text-align: center;
-            }
-            p {
-                margin-bottom: 30px;
-            }
-            &.debug {
-                background: url(../img/localkit/img_3.png) no-repeat center bottom 20px;
-                background-size: 110%;
-                padding-bottom: 50%;
-            }
-        }
-        .box-try {
-            padding: 140px 0;
-            .btn {
-                padding: 0 40px;
-                min-width: 210px;
-            }
-        }
+    @media screen and (max-width: $break-xs) {
+        padding-bottom: 30px;
+        background-size: cover;
     }
+    h1 {
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      padding-top: 170px;
+      text-align: left;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+      @media screen and (max-width: $break) {
+        padding: 90px 0 40px;
+      }
+      @media screen and (max-width: $break-xs) {
+        padding: 70px 0 0;
+      }
+      img {
+        vertical-align: 4px;
+      }
+    }
+  }
+
+  section {
+    h1 {
+      margin-bottom: 40px;
+    }
+  }
+
+  article {
+    section {
+      &:nth-of-type(1) {
+        padding-top: 50px;
+        p:first-child {
+          margin-bottom: 100px;
+          @media screen and (max-width: $break-xs) {
+            margin-bottom: 70px;
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        @media screen and (max-width: $break) {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  
+  section.support {
+    border-bottom: none;
+  }
+
+  section.menu {
+    border-bottom: none;
+    padding-bottom: 150px;
+    @media screen and (max-width: $break) {
+      padding-left: 0;
+      padding-right: 0;
+      h1 {
+        padding-left: 5%;
+        padding-right: 5%;      
+      }
+    }
+    table {
+      margin: 0 auto;
+      max-width: 1080px;
+      width: 100%;
+      @media screen and (max-width: $break) {
+        width: 90%;
+      }
+      thead {
+        td {
+          background-color: #f2f2f2;
+          border: 1px solid #cccccc;
+          font-size: 22px;
+          padding: 30px 0;
+          text-align: center;
+          @media screen and (max-width: $break) {
+            padding: 20px 0;
+            &:last-child {
+              border-right: none;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          height: 120px;
+          &:last-child th {
+            border-bottom: 1px solid #cccccc;
+          }
+          &.tech li {
+            display: inline-block;
+            white-space: nowrap;
+            width: 190px;
+            max-width: 33%;
+          }
+          @media screen and (max-width: $break) {
+            height: 100px;
+          }
+        }
+        th {
+          font-size: 22px;
+          padding: 0 5px 0 0;
+          vertical-align: top;
+          width: 36%;
+          @media screen and (max-width: $break-xs) {
+              font-weight: 700;
+              width: 24%;
+          }
+          > span {
+            border-top: 1px solid #cccccc;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 20px 5px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        td {
+          border: 1px solid #cccccc;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1.6;
+          padding: 20px;
+          width: 32%;
+          @media screen and (max-width: $break) {
+            &:last-child {
+              border-right: none;
+            }
+          }
+          p {
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 20px;
+          }
+          ul {
+            margin-bottom: 20px;
+            li {
+              line-height: 1.6;
+              margin-bottom: 6px;
+              text-indent: -1em;
+              padding-left: 1em;
+              &:before {
+                content: "・";
+              }
+            }
+          }
+        }
+      }
+      @media screen and (max-width: $break) {
+        thead td {
+          font-size: 16px;
+        }
+        tbody {
+          th {
+            font-size: 14px;
+            word-break: break-word;
+          }
+          td {
+            font-size: 14px;
+            word-break: break-word;
+          }
+          tr.tech ul li {
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }

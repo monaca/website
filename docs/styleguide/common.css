@@ -104,6 +104,19 @@ body {
 img, iframe, object {
   max-width: 100%; }
 
+/*
+# Main Section
+
+```
+<section>
+    <h1>Heading 1</h1>
+    <h1 class="small">Gentle small heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, deserunt, nisi. Suscipit delectus ad voluptatem modi possimus vitae eius libero neque, placeat laboriosam minima, atque et culpa facilis molestias quod.</p>
+</section>
+```
+*/
 section, div.section {
   margin-left: auto;
   margin-right: auto;
@@ -124,6 +137,8 @@ section, div.section {
       section h1, div.section h1 {
         font-size: 32px;
         margin-bottom: 40px; } }
+    section h1.small, div.section h1.small {
+      font-size: 26px; }
   section h2, div.section h2 {
     font-size: 32px;
     margin-bottom: 20px;
@@ -144,24 +159,26 @@ section, div.section {
     line-height: 1.8;
     margin: 0 auto 50px;
     text-align: left;
-    width: 580px; }
+    max-width: 580px; }
     @media screen and (max-width: 580px) {
       section p, div.section p {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         padding-left: 5%;
-        padding-right: 5%;
-        width: 100%; } }
-
-html[lang=en] .visible-ja {
-  display: none; }
-
-html[lang=ja] .visible-en {
-  display: none; }
+        padding-right: 5%; } }
 
 article.main section {
   border-bottom: 1px solid #ccc; }
 
+/*
+# Main Container
+
+```
+<div class="container box-full">
+    <p>Yeah</p>
+</div>
+```
+*/
 .container {
   padding-left: 0;
   padding-right: 0;
@@ -233,6 +250,20 @@ article.main section {
       padding-left: 5%;
       padding-right: 5%;
       width: 100%; } }
+
+/*
+# Language specific display
+
+```
+<p class="visible-ja">Japanese only</span>
+<p class="visible-en">English only</span>
+```
+*/
+html[lang=en] .visible-ja {
+  display: none; }
+
+html[lang=ja] .visible-en {
+  display: none; }
 
 /*
 # Ultramarine box
