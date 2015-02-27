@@ -89,7 +89,7 @@ body.book-campaign {
                 &:first-child {
                     margin-right: 4%;
                 }
-                @media screen and (min-width: $break-xs) (max-width: $break) {
+                @media screen and (min-width: $break-xs) and (max-width: $break) {
                     height: 400px;
                 }
                 @media screen and (max-width: $break-xs) {
