@@ -48,7 +48,9 @@ body.showcase {
         p {
             color: #666;
             max-height: 100%;
-            width: auto;
+            /* width: auto; */
+            max-width: initial;
+            max-width: auto;
         }
         em {
             color: #333;
