@@ -35,7 +35,7 @@ html {
   -ms-text-size-adjust: 100%; }
 
 a:focus {
-  outline: thin dotted; }
+  outline: none; }
 
 audio, canvas, video {
   display: inline-block; }
