@@ -278,12 +278,13 @@ module.exports = function(grunt) {
         connect: {
             options: {
                 livereload: 35729,
-                hostname: '0.0.0.0'
+                hostname: '0.0.0.0',
+                protocol: 'https'
             },
             en: {
                 options: {
                     open: {
-                        target: 'http://localhost:3010',
+                        target: 'https://localhost:3010',
                         appName: 'Google Chrome'
                     },
                     port: 3010,
@@ -295,7 +296,7 @@ module.exports = function(grunt) {
             ja: {
                 options: {
                     open: {
-                        target: 'http://localhost:3011',
+                        target: 'https://localhost:3011',
                         appName: 'Google Chrome'
                     },
                     port: 3011,
