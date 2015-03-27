@@ -116,7 +116,7 @@ var MultiSlider = (function() {
         var self = this;
 
         if (this.isLeaping) {
-            console.log("I'm leaping now, no disturb");
+            //console.log("I'm leaping now, no disturb");
         }
 
         this.setIndex(num);
