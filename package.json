@@ -2,17 +2,14 @@
   "name": "monacaweb",
   "description": "Monaca Website Renewal(2014.11).",
   "version": "0.1.0",
-  "homepage": "https://github.com/assemble/monacaweb",
+  "homepage": "https://monaca.io",
   "author": {
-    "name": "Hitomi Katsuhiro",
-    "url": "http://github.com/assemble/"
+    "name": "Monaca",
+    "url": "https://monaca.io/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/assemble/monacaweb.git"
-  },
-  "bugs": {
-    "url": "https://github.com/assemble/monacaweb/issues"
+    "url": "git://github.com/monaca/website.git"
   },
   "engines": {
     "node": ">=0.10"
@@ -37,7 +34,8 @@
     "grunt-styledocco": "^0.2.1",
     "node-bourbon": "^1.2.3",
     "grunt-sass": "^0.17.0",
-    "grunt-contrib-compress": "^0.13.0"
+    "grunt-contrib-compress": "^0.13.0",
+    "grunt-sitemap": "^1.2.1"
   },
   "licenses": [
     {

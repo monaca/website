@@ -345,6 +345,21 @@ module.exports = function(grunt) {
             styleguide: ["docs/styleguide"]
         },
 
+        sitemap: {
+            en: {
+                pattern: ['<%= config.dist %>/**/*.html', '!**/google*.html'],
+                siteRoot: '<%= config.dist %>',
+                homepage: 'http://monaca.io/',
+                changefreq: 'weekly'
+            },
+            ja: {
+                pattern: ['<%= config.distJa %>/**/*.html', '!**/google*.html'],
+                siteRoot: '<%= config.distJa %>',
+                homepage: 'http://ja.monaca.io/',
+                changefreq: 'weekly'
+            }
+        },
+
         connect: {
             options: {
                 livereload: 35729,
@@ -398,6 +413,7 @@ module.exports = function(grunt) {
     });
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-sitemap');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compress');
@@ -431,7 +447,6 @@ module.exports = function(grunt) {
         'uglify',
         'copy',
         'assemble',
-        'compress'
     ]);
 
     grunt.registerTask('default', [
@@ -440,12 +455,16 @@ module.exports = function(grunt) {
 
     grunt.registerTask('deploy:ja', [
         'build',
+        'compress',
+        'sitemap',
         'aws_s3:ja',
         'invalidate_cloudfront:ja'
     ]);
 
     grunt.registerTask('deploy:en', [
         'build',
+        'compress',
+        'sitemap',
         'aws_s3:en',
         'invalidate_cloudfront:en'
     ]);
