@@ -212,10 +212,14 @@ layout: src/templates/layouts/index.hbs
 
 
 <script>
-var slider;
+window.addEventListener("load", function() {
+    "use strict";
 
-$(function() {
-    slider = new MultiSlider(document.getElementById("keyvisual"));
-    slider.start();
-});
+    var slider;
+
+    $(function() {
+        slider = new MultiSlider(document.getElementById("keyvisual"));
+        slider.start();
+    });
+})
 </script>
