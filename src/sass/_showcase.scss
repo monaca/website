@@ -152,6 +152,18 @@ body.showcase {
             .alignleft, .alignright {
                 width: percentage(400px/1080px);
             }
+
+        }
+        .app-info {
+            padding: 90px 0 40px;
+            background: url(/img/jnb/img_1.jpg) no-repeat right bottom;
+            min-height: 611px;
+            div p {
+                margin-bottom: 15px;
+                &:nth-of-type(2) {
+                    margin-bottom: 0;
+                }   
+            }
         }
         .effect {
             background: url(/img/hitachitool/bg_effect.jpg) no-repeat center top;
@@ -229,5 +241,25 @@ body.showcase {
 body.showcase.hitachitool {
     article.main header {
         background-image: url(/img/hitachitool/icn_hitachi_ja.png);
+    }
+}
+body.showcase.jnb {
+    article.main header {
+        background-image: url(/img/jnb/icn_jnb_ja.png);
+
+    }
+    article.main .info .info-header h1 {
+        padding: 25px 30px;
+    }
+    article.main .effect {
+        background: url(/img/jnb/bg_effect.jpg) no-repeat center top;
+    }
+    article.main figure figcaption {
+        margin-bottom: 40px;
+    }
+    article.main .interview {
+        .alignleft, .alignright {
+            width: 285px;
+        }
     }
 }
