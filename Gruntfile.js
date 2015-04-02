@@ -31,6 +31,7 @@ module.exports = function(grunt) {
 
         sass: {
             options: {
+                outputStyle: "compressed",
                 sourceMap: true,
                 includePaths: require('node-bourbon').includePaths
             },
@@ -93,6 +94,72 @@ module.exports = function(grunt) {
                 ],
                 dest: '<%= config.dist %>/js/all.js',
                 separator: ";"
+            }
+        },
+
+        uglify: {
+            en: {
+                files: {"<%= config.dist %>/js/all.js": ["<%= config.dist %>/js/all.js"]}
+            },
+            ja: {
+                files: {"<%= config.distJa %>/js/all.js": ["<%= config.distJa %>/js/all.js"]}
+            }
+        },
+
+        compress: {
+            options: {
+                mode: "gzip",
+                level: 9,
+                pretty: true
+            },
+            html: {
+                files: [{
+                    expand: true,
+                    src: '<%= config.dist %>/**/*.html',
+                    ext: '.html.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.distJa %>/**/*.html',
+                    ext: '.html.gz'
+                }]
+            },
+            css: {
+                files: [{
+                    expand: true,
+                    src: '<%= config.dist %>/css/*.min.css',
+                    ext: '.min.css.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.dist %>/css/style.css',
+                    ext: '.css.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.distJa %>/css/*.min.css',
+                    ext: '.min.css.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.distJa %>/css/style.css',
+                    ext: '.css.gz'
+                }]
+            },
+            js: {
+                files: [{
+                    expand: true,
+                    src: '<%= config.dist %>/js/*.min.js',
+                    ext: '.min.js.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.dist %>/js/all.js',
+                    ext: '.js.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.distJa %>/js/*.min.js',
+                    ext: '.min.js.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.distJa %>/js/all.js',
+                    ext: '.js.gz'
+                }]
             }
         },
 
@@ -330,6 +397,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-invalidate-cloudfront');
     grunt.loadNpmTasks('grunt-styledocco');
@@ -357,8 +425,10 @@ module.exports = function(grunt) {
         'clean:dist',
         'sass:dist',
         'concat',
+        'uglify',
         'copy',
-        'assemble'
+        'assemble',
+        'compress'
     ]);
 
     grunt.registerTask('default', [
