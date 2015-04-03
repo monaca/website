@@ -402,6 +402,21 @@ body.showcase {
     .container {
         min-width: 1080px;
     }
+    .ls-400 {
+        letter-spacing: -0.4em;
+    }
+    .ls-300 {
+        letter-spacing: -0.3em;
+    }
+    .ls-200 {
+        letter-spacing: -0.2em;
+    }
+    .ls-150 {
+        letter-spacing: -0.15em;
+    }
+    .ls-100 {
+        letter-spacing: -0.1em;
+    }
 }
 body.showcase.hitachitool {
     article.main header {
@@ -414,7 +429,14 @@ body.showcase.jnb {
 
     }
     article.main .info .info-header h1 {
-        padding: 25px 30px;
+        background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 70%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(40%,rgba(0,0,0,0.7)), color-stop(70%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* IE10+ */
+        background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+
     }
     article.main .effect {
         background: url(/img/jnb/bg_effect.jpg) no-repeat center top;
