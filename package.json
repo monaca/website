@@ -35,7 +35,7 @@
     "node-bourbon": "^1.2.3",
     "grunt-sass": "^0.17.0",
     "grunt-contrib-compress": "^0.13.0",
-    "grunt-sitemap": "^1.2.1"
+    "assemble-middleware-sitemap": "^0.2.5"
   },
   "licenses": [
     {

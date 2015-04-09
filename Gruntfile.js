@@ -169,14 +169,27 @@ module.exports = function(grunt) {
                 layout: '<%= config.src %>/templates/layouts/default.hbs',
                 data: '<%= config.src %>/data/**/*.{json,yml}',
                 partials: '<%= config.src %>/templates/partials/*.hbs',
+                plugins: ['assemble-middleware-sitemap'],
                 i18n: {
                     languages: ["en", "ja"],
                     templates: ["<%= config.src %>/templates/pages/*.hbs"],
-                }
+                },
+                sitemap: {
+                    changefreq: 'weekly',
+                    priority: '0.5',
+                    https: true,
+                    robot: false
+                },
             },
             en: {
                 options: {
-                    language: "en"
+                    language: "en",
+                    sitemap: {
+                        dest: '<%= config.distEn %>',
+                        relativedest: '<%= config.distEn %>',
+                        homepage: 'http://monaca.io',
+                        exclude: ["google4c5ba612e05a835b", "error404", "error500"]
+                    }
                 },
                 files: [{
                     expand: true,
@@ -195,7 +208,13 @@ module.exports = function(grunt) {
             },
             ja: {
                 options: {
-                    language: "ja"
+                    language: "ja",
+                    sitemap: {
+                        dest: '<%= config.distJa %>',
+                        relativedest: '<%= config.distJa %>',
+                        homepage: 'http://ja.monaca.io',
+                        exclude: ["google4c5ba612e05a835b", "error404", "error500"]
+                    }
                 },
                 files: [{
                     expand: true,
@@ -345,21 +364,6 @@ module.exports = function(grunt) {
             styleguide: ["docs/styleguide"]
         },
 
-        sitemap: {
-            en: {
-                pattern: ['<%= config.dist %>/**/*.html', '!**/google*.html'],
-                siteRoot: '<%= config.dist %>',
-                homepage: 'http://monaca.io/',
-                changefreq: 'weekly'
-            },
-            ja: {
-                pattern: ['<%= config.distJa %>/**/*.html', '!**/google*.html'],
-                siteRoot: '<%= config.distJa %>',
-                homepage: 'http://ja.monaca.io/',
-                changefreq: 'weekly'
-            }
-        },
-
         connect: {
             options: {
                 livereload: 35729,
@@ -444,8 +448,9 @@ module.exports = function(grunt) {
         'clean:dist',
         'sass:dist',
         'concat',
-        'uglify',
+        'uglify:en',
         'copy',
+        'uglify:ja',
         'assemble',
     ]);
 
