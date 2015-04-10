@@ -705,6 +705,21 @@ Goes 2 to 1-column in responsive
       background-color: #e5e477;
       text-decoration: none; }
 
+/*
+# Align icons
+
+```
+<div class="container">
+    <a href="#"><i class="glyphicon glyphicon-save glyphicon-fw">Download</i></a><br />
+    <a href="#"><i class="glyphicon glyphicon-flash glyphicon-fw">Bomb</i></a><br />
+    <a href="#"><i class="glyphicon glyphicon-heart-empty glyphicon-fw">1UP</i></a><br />
+</div>
+```
+*/
+.glyphicon-fw {
+  width: 1.28571429em;
+  text-align: center; }
+
 body {
   text-align: left; }
 
