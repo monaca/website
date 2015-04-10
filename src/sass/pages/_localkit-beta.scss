@@ -171,7 +171,9 @@ body.localkit-closedbeta {
         }
     }
     .glyphicon-new-window {
-        font-size: 1.4rem;
+        margin: 0 3px;
+        top: -3px;
+        transform: scale(1.5);
     }
     .glyphicon-save {
         font-size: 1.6rem;
