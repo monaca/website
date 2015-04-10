@@ -31,6 +31,7 @@ module.exports = function(grunt) {
 
         sass: {
             options: {
+                outputStyle: "compressed",
                 sourceMap: true,
                 includePaths: require('node-bourbon').includePaths
             },
@@ -96,20 +97,99 @@ module.exports = function(grunt) {
             }
         },
 
+        uglify: {
+            en: {
+                files: {"<%= config.dist %>/js/all.js": ["<%= config.dist %>/js/all.js"]}
+            },
+            ja: {
+                files: {"<%= config.distJa %>/js/all.js": ["<%= config.distJa %>/js/all.js"]}
+            }
+        },
+
+        compress: {
+            options: {
+                mode: "gzip",
+                level: 9,
+                pretty: true
+            },
+            html: {
+                files: [{
+                    expand: true,
+                    src: '<%= config.dist %>/**/*.html',
+                    ext: '.html.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.distJa %>/**/*.html',
+                    ext: '.html.gz'
+                }]
+            },
+            css: {
+                files: [{
+                    expand: true,
+                    src: '<%= config.dist %>/css/*.min.css',
+                    ext: '.min.css.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.dist %>/css/style.css',
+                    ext: '.css.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.distJa %>/css/*.min.css',
+                    ext: '.min.css.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.distJa %>/css/style.css',
+                    ext: '.css.gz'
+                }]
+            },
+            js: {
+                files: [{
+                    expand: true,
+                    src: '<%= config.dist %>/js/*.min.js',
+                    ext: '.min.js.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.dist %>/js/all.js',
+                    ext: '.js.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.distJa %>/js/*.min.js',
+                    ext: '.min.js.gz'
+                }, {
+                    expand: true,
+                    src: '<%= config.distJa %>/js/all.js',
+                    ext: '.js.gz'
+                }]
+            }
+        },
+
         assemble: {
             options: {
                 flatten: true,
                 layout: '<%= config.src %>/templates/layouts/default.hbs',
                 data: '<%= config.src %>/data/**/*.{json,yml}',
                 partials: '<%= config.src %>/templates/partials/*.hbs',
+                plugins: ['assemble-middleware-sitemap'],
                 i18n: {
                     languages: ["en", "ja"],
                     templates: ["<%= config.src %>/templates/pages/*.hbs"],
-                }
+                },
+                sitemap: {
+                    changefreq: 'weekly',
+                    priority: '0.5',
+                    https: true,
+                    robot: false
+                },
             },
             en: {
                 options: {
-                    language: "en"
+                    language: "en",
+                    sitemap: {
+                        dest: '<%= config.distEn %>',
+                        relativedest: '<%= config.distEn %>',
+                        homepage: 'http://monaca.io',
+                        exclude: ["google4c5ba612e05a835b", "error404", "error500"]
+                    }
                 },
                 files: [{
                     expand: true,
@@ -128,7 +208,13 @@ module.exports = function(grunt) {
             },
             ja: {
                 options: {
-                    language: "ja"
+                    language: "ja",
+                    sitemap: {
+                        dest: '<%= config.distJa %>',
+                        relativedest: '<%= config.distJa %>',
+                        homepage: 'http://ja.monaca.io',
+                        exclude: ["google4c5ba612e05a835b", "error404", "error500"]
+                    }
                 },
                 files: [{
                     expand: true,
@@ -219,7 +305,10 @@ module.exports = function(grunt) {
                 accessKeyId: '<%= aws.key %>', // Use the variables
                 secretAccessKey: '<%= aws.secret %>', // You can also use env variables
                 uploadConcurrency: 5, // 5 simultaneous uploads
-                downloadConcurrency: 5 // 5 simultaneous downloads
+                downloadConcurrency: 5, // 5 simultaneous downloads
+                params: {
+                    cacheControl: 'max-age=3600'
+                }
             },
             ja: {
                 options: {
@@ -328,8 +417,10 @@ module.exports = function(grunt) {
     });
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-sitemap');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-invalidate-cloudfront');
     grunt.loadNpmTasks('grunt-styledocco');
@@ -357,8 +448,10 @@ module.exports = function(grunt) {
         'clean:dist',
         'sass:dist',
         'concat',
+        'uglify:en',
         'copy',
-        'assemble'
+        'uglify:ja',
+        'assemble',
     ]);
 
     grunt.registerTask('default', [
@@ -367,12 +460,16 @@ module.exports = function(grunt) {
 
     grunt.registerTask('deploy:ja', [
         'build',
+        'compress',
+        'sitemap',
         'aws_s3:ja',
         'invalidate_cloudfront:ja'
     ]);
 
     grunt.registerTask('deploy:en', [
         'build',
+        'compress',
+        'sitemap',
         'aws_s3:en',
         'invalidate_cloudfront:en'
     ]);

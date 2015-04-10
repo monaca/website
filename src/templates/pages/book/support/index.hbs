@@ -552,55 +552,59 @@ layout: src/templates/layouts/default.hbs
     <a href="http://www.amazon.co.jp/dp/4798140287" class="btn btn-darkgray">Amazonで購入</a>
 </div>
 
-<script type="text/javascript">
-var resizeTimer = null;
-var touchFlag = false;
+<script>
+window.addEventListener("load", function() {
+  "use strict";
 
-function onResize() {
- if (window.innerWidth >= 992) {
-   $("#apps li").tile(4);
- } else {
-   $("#apps li").tile(2);
- }
-}
+  var resizeTimer = null;
+  var touchFlag = false;
 
-$(function() {
-  onResize();
-  window.onresize = function() {
-    if (resizeTimer) clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(onResize, 100);
+  function onResize() {
+   if (window.innerWidth >= 992) {
+     $("#apps li").tile(4);
+   } else {
+     $("#apps li").tile(2);
+   }
   }
 
-  $("#apps li figure").on({
-    "mouseenter": function(e) {
-      $(this).addClass("on");
-    },
-    "mouseleave": function(e) {
-      $(this).removeClass("on");
-    },
-    "touchstart": function(e) {
-      touchFlag = true;
-      setTimeout(function() {
-        touchFlag = false;
-      }, 500);
-
-      if ($(this).hasClass("on")) {
-        $(this).removeClass("on");
-      } else {
-        $("#apps li figure").removeClass("on");
-        $(this).addClass("on");        
-      }
-    },
-  });
-
-  $("#apps figure .btn-import").on({
-    "touchstart": function(e) {
-      e.stopPropagation();
-    },
-    "click": function(e) {
-      if (touchFlag) e.preventDefault();
+  $(function() {
+    onResize();
+    window.onresize = function() {
+      if (resizeTimer) clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(onResize, 100);
     }
-  })
 
+    $("#apps li figure").on({
+      "mouseenter": function(e) {
+        $(this).addClass("on");
+      },
+      "mouseleave": function(e) {
+        $(this).removeClass("on");
+      },
+      "touchstart": function(e) {
+        touchFlag = true;
+        setTimeout(function() {
+          touchFlag = false;
+        }, 500);
+
+        if ($(this).hasClass("on")) {
+          $(this).removeClass("on");
+        } else {
+          $("#apps li figure").removeClass("on");
+          $(this).addClass("on");        
+        }
+      },
+    });
+
+    $("#apps figure .btn-import").on({
+      "touchstart": function(e) {
+        e.stopPropagation();
+      },
+      "click": function(e) {
+        if (touchFlag) e.preventDefault();
+      }
+    })
+
+  })
 })
 </script>
