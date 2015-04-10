@@ -72,6 +72,10 @@ body.support {
             &.forum {
                 background: url(../img/support/img_4.jpg) no-repeat center 330px;
                 min-height: 670px;
+                .glyphicon-menu-right {
+                    font-size: 0.4rem;
+                    top: 0;
+                }
                 @media screen and (max-width: $break-xs) {
                     background-size: 160%;
                     background-position: center bottom;

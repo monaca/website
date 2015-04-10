@@ -112,9 +112,6 @@ body.localkit-closedbeta {
                     width: 100%;
                 }
             }
-            i {
-                font-size: smaller;
-            }
             .sub_paragraph_1 {
                 margin: 60px 60px 70px 60px;
                 border-bottom: 1px solid #ccc;
@@ -172,5 +169,11 @@ body.localkit-closedbeta {
             border-bottom: 1px solid #ccc;
             padding-bottom: 25px;
         }
+    }
+    .glyphicon-new-window {
+        font-size: 1.4rem;
+    }
+    .glyphicon-save {
+        font-size: 1.6rem;
     }
 }

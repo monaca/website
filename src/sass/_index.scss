@@ -34,6 +34,9 @@ body.home {
                 background-color: #0056b2;
             }
         }
+        .glyphicon {
+            font-size: 1rem;
+        }
     }
     .recruit-md {
         width: 1170px;
@@ -185,6 +188,10 @@ body.home {
                 }
                 .bnr-1 {
                     margin-bottom: 10px;
+                }
+                .glyphicon-menu-right {
+                    font-size: 0.4rem;
+                    top: 0;
                 }
                 .detail {
                     margin-bottom: 0;

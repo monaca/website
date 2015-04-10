@@ -163,6 +163,9 @@ header.navbar {
     ul.nav li.dropdown:hover > ul.dropdown-menu {
         display: block;
     }
+    .glyphicon-new-window {
+        font-size: 0.84rem;
+    }
     @media screen and (max-width: $break) {
         .dropdown.open .dropdown-menu > li > a {
             color: #0088cc;
