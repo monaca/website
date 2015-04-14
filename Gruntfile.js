@@ -307,7 +307,7 @@ module.exports = function(grunt) {
                 uploadConcurrency: 5, // 5 simultaneous uploads
                 downloadConcurrency: 5, // 5 simultaneous downloads
                 params: {
-                    cacheControl: 'max-age=3600'
+                    CacheControl: 'max-age=3600'
                 }
             },
             ja: {
