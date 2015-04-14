@@ -74,38 +74,38 @@ layout: src/templates/layouts/index.hbs
             <h3>1. HTML5 Hybrid App Development is Faster and Easier Than Ever</h3>
 
             <p>Monaca gives web producers and developers an efficient way to develop iOS or Android mobile apps by allowing them to use existing skill sets.</p>
-            <img src="/img/index/img_1.jpg" alt="" />
+            <img id="features-img-1" alt="" />
         </li>
         <li>
             <h3>2. Choose Your Own Development Style / Coding Environment</h3>
 
             <p>Monaca not only offers its own browser-based IDE, but also your favorite local development environment such as Visual Studio or Sublime Text. You can choose the best environment based on target user and purpose.</p>
-            <img src="/img/index/img_2_en.jpg" alt="" />
+            <img id="features-img-2" alt="" />
         </li>
         <li>
             <h3>3. Higher Performance for HTML5 Hybrid Apps</h3>
 
             <p style="margin-bottom:20px">Onsen UI eliminates performance related issues that are typically a weakness for HTML5 hybrid apps. In addition, Monaca offsets OS differences by implementing “Crosswalk,” the latest Chromium browser engine for Android apps. This avoids all performance and fragmentation issues with Android WebView.</p>
-            <img src="/img/index/img_3.jpg" alt="" />
+            <img id="features-img-3" alt="" />
         </li>
         <li>
             <h3>4. Improve Total App Life Cycle</h3>
 
             <p>Monaca is more than just an app development tool. It is an integrated platform that can drastically improve your app development and management. It provides comprehensive support that includes design, app development, backend development, existing system integration, testing and debugging, app distribution, analytics, and more.</p>
-            <img src="/img/index/img_4_en.jpg" alt="" />
+            <img id="features-img-4" alt="" />
         </li>
         <li>
             <h3>5. Compatible with Other App Development Support Tools</h3>
 
             <p>Monaca works with other mobile app development and support tools, such as mBaaS, testing support, and advertising offered by other companies.</p>
-            <img src="/img/index/img_5.jpg" alt="" />
+            <img id="features-img-5.jpg" alt="" />
         </li>
     </ol>
 </div>
 
 <div class="container box-examples">
     <h2>More than <strong>2,000</strong> apps are available on App Store and Google Play.</h2>
-    <img src="/img/index/examples_img.png">
+    <img id="examples-img">
 
     <p><a href="http://monaca.mobi/ja/showcase" class="btn btn-darkgray">Showcase</a></p>
 </div>
@@ -160,3 +160,19 @@ layout: src/templates/layouts/index.hbs
 <div class="container box-try">
     <a href="https://monaca.mobi/en/register/start" class="btn btn-green">Sign Up Now <span class='small'>(free)</span></a>
 </div>
+
+
+<script>
+window.addEventListener("load", function() {
+    "use strict";
+
+    setTimeout(function() {
+        document.getElementById("examples-img").src = "img/index/examples_img.png";
+        document.getElementById("features-img-1").src = "img/index/img_1.jpg";
+        document.getElementById("features-img-2").src = "img/index/img_2_en.jpg";
+        document.getElementById("features-img-3").src = "img/index/img_3.jpg";
+        document.getElementById("features-img-4").src = "img/index/img_4_en.jpg";
+        document.getElementById("features-img-5").src = "img/index/img_5.jpg";
+    }, 4000);
+})
+</script>
