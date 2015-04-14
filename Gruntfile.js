@@ -1,4 +1,4 @@
-ld:/*
+/*
  * Generated on 2014-11-05
  * generator-assemble v0.5.0
  * https://github.com/assemble/generator-assemble
@@ -316,7 +316,8 @@ module.exports = function(grunt) {
                     region: 'ap-northeast-1',
                 },
                 files: [
-                    {expand: true, cwd: '<%= config.distJa %>', src: ['**'], dest: ''},
+                    {expand: true, cwd: '<%= config.distJa %>', src: ['**', '!**/img/**', '!**/fonts/**'], dest: ''},
+                    {expand: true, cwd: '<%= config.distJa %>', src: ['img/**', 'fonts/**'], dest: '', params: {CacheControl: 60*60*24*7}},
                 ]
             },
             en: {
@@ -325,7 +326,8 @@ module.exports = function(grunt) {
                     region: '',
                 },
                 files: [
-                    {expand: true, cwd: '<%= config.distEn %>', src: ['**'], dest: ''},
+                    {expand: true, cwd: '<%= config.distEn %>', src: ['**', '!img/**/*', '!**/fonts/**'], dest: ''},
+                    {expand: true, cwd: '<%= config.distEn %>', src: ['img/**/*', 'fonts/**'], dest: '', params: {CacheControl: 60*60*24*7}},
                 ]
             },
         },
