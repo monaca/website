@@ -317,7 +317,7 @@ module.exports = function(grunt) {
                 },
                 files: [
                     {expand: true, cwd: '<%= config.distJa %>', src: ['**', '!**/img/**', '!**/fonts/**'], dest: ''},
-                    {expand: true, cwd: '<%= config.distJa %>', src: ['img/**', 'fonts/**'], dest: '', params: {CacheControl: 60*60*24*7}},
+                    {expand: true, cwd: '<%= config.distJa %>', src: ['img/**', 'fonts/**'], dest: '', params: {CacheControl: '604800'}},
                 ]
             },
             en: {
@@ -327,7 +327,7 @@ module.exports = function(grunt) {
                 },
                 files: [
                     {expand: true, cwd: '<%= config.distEn %>', src: ['**', '!img/**/*', '!**/fonts/**'], dest: ''},
-                    {expand: true, cwd: '<%= config.distEn %>', src: ['img/**/*', 'fonts/**'], dest: '', params: {CacheControl: 60*60*24*7}},
+                    {expand: true, cwd: '<%= config.distEn %>', src: ['img/**/*', 'fonts/**'], dest: '', params: {CacheControl: '604800'}},
                 ]
             },
         },
