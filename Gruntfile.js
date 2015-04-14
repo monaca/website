@@ -417,7 +417,6 @@ module.exports = function(grunt) {
     });
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-sitemap');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compress');
@@ -461,7 +460,6 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy:ja', [
         'build',
         'compress',
-        'sitemap',
         'aws_s3:ja',
         'invalidate_cloudfront:ja'
     ]);
@@ -469,7 +467,6 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy:en', [
         'build',
         'compress',
-        'sitemap',
         'aws_s3:en',
         'invalidate_cloudfront:en'
     ]);
