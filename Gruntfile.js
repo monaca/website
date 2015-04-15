@@ -306,6 +306,7 @@ module.exports = function(grunt) {
                 secretAccessKey: '<%= aws.secret %>', // You can also use env variables
                 uploadConcurrency: 5, // 5 simultaneous uploads
                 downloadConcurrency: 5, // 5 simultaneous downloads
+                gzipRename: 'ext',
                 params: {
                     CacheControl: 'max-age=3600'
                 }
@@ -317,7 +318,7 @@ module.exports = function(grunt) {
                 },
                 files: [
                     {expand: true, cwd: '<%= config.distJa %>', src: ['**', '!**/img/**', '!**/fonts/**'], dest: ''},
-                    {expand: true, cwd: '<%= config.distJa %>', src: ['img/**', 'fonts/**'], dest: '', params: {CacheControl: '604800'}},
+                    {expand: true, cwd: '<%= config.distJa %>', src: ['img/**', 'fonts/**'], dest: '', params: {CacheControl: 'max-age=604800'}},
                 ]
             },
             en: {
@@ -327,7 +328,7 @@ module.exports = function(grunt) {
                 },
                 files: [
                     {expand: true, cwd: '<%= config.distEn %>', src: ['**', '!img/**/*', '!**/fonts/**'], dest: ''},
-                    {expand: true, cwd: '<%= config.distEn %>', src: ['img/**/*', 'fonts/**'], dest: '', params: {CacheControl: '604800'}},
+                    {expand: true, cwd: '<%= config.distEn %>', src: ['img/**/*', 'fonts/**'], dest: '', params: {CacheControl: 'max-age=604800'}},
                 ]
             },
         },
