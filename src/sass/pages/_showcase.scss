@@ -456,6 +456,9 @@ body.showcase.jnb {
 body.showcase.proto {
     article.main header {
         background-image: url(/img/proto/icn_proto_ja.png);
+        em {
+            margin-left: 2px;
+        }
 
     }
     article.main .info .info-header h1 {
