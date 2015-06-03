@@ -423,7 +423,7 @@ html[lang=en] body.home {
             color: #ffffff;
             font-size: 24px;
             height: auto;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
         p {
             margin-bottom: 55px;
@@ -437,12 +437,12 @@ html[lang=en] body.home {
             }
             li {
                 float: left;
-                height: 116px;
+                height: 114px;
                 width: 33.33%;
                 &:nth-child(1),
                 &:nth-child(2),
                 &:nth-child(3) {
-                    margin-bottom: 20px;
+                    margin-bottom: 22px;
                 }
             }
         }
@@ -453,7 +453,7 @@ html[lang=en] body.home {
             box-sizing: border-box;
             margin: 0 auto;
             max-width: 800px;
-            padding: 30px 40px 0;
+            padding: 30px 40px 6px;
         }
     }
     .section.subfeatures {
@@ -678,7 +678,7 @@ html[lang=ja] body.home {
         }
     }
     .keyvisual.visible-xs {
-        background: url(../img/index/keyvisual_sp.png) no-repeat center center, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
+        background: url(../img/index/keyvisual_sp.jpg) no-repeat center center, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
         background-color: #126faa;
         color: #ffffff;
         position: relative;
