@@ -22,7 +22,7 @@ layout: src/templates/layouts/index.hbs
     <img src="/img/index/img_block.png" alt="">
 </div>
 
-
+<!-- 
 <div class="container section features">
     <h2>Monaca&#x27;s Top 3 Benefits</h2>
     <ol>
@@ -44,6 +44,32 @@ layout: src/templates/layouts/index.hbs
             <h3>3. Free Yourself From Frameworks: <br />Who says you need to commit to a framework? Be flexible and future-proof. </h3>
             <p>We provide an award-winning framework called Onsen, closely integrated with our dev tools. Onsen provides UI components that are smooth and native-like, with bindings for Angular and jQuery. <br />
             Already have a framework that feels native to you? No problem. You can use whatever you want. For example, Ionic developers can use Monaca CLI to sync to our cloud and take advantage of our excellent debugger and remote build service. No complicated porting necessary. You see, we take OPEN very seriously.</p>
+        </li>
+    </ol>
+</div>
+
+-->
+
+<div class="container section benefits">
+    <h2>Monaca&#x27;s Top 3 Benefits</h2>
+    <ol>
+        <li>
+            <img src="/img/index/icn_charge.svg" alt="" class="thumb">
+            <h3>1. Supercharge Your Development with Cloud-Powered Tools</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aspernatur et ullam nemo deleniti, amet nam. Quo ad, praesentium, alias reiciendis maxime atque voluptate voluptates officiis unde eius, esse ipsa!</p>
+        </li>
+        <li>
+            <img src="/img/index/icn_apps.svg" alt="" class="thumb">
+            <h3>2. Everything You Need to Develop Awesome Hybrid Apps.</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aspernatur et ullam nemo deleniti, amet nam. Quo ad, praesentium, alias reiciendis maxime atque voluptate voluptates officiis unde eius, esse ipsa!</p>
+        </li>
+        <li>
+            <img src="/img/index/icn_frameworks.svg" alt="" class="thumb">
+            <h3>3. Free Yourself From Frameworks: <br />Who says you need to commit to a framework? Be flexible and future-proof. </h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia aspernatur et ullam nemo deleniti, amet nam. Quo ad, praesentium, alias reiciendis maxime atque voluptate voluptates officiis unde eius, esse ipsa!</p>
         </li>
     </ol>
 </div>
@@ -158,8 +184,6 @@ layout: src/templates/layouts/index.hbs
 window.addEventListener("load", function() {
     "use strict";
 
-    var body = document.body;
-
     animateLivereload(document.getElementById("animation-livereload"));
 
     setTimeout(function() {
@@ -168,9 +192,11 @@ window.addEventListener("load", function() {
     }, 4000);
 
     window.addEventListener("scroll", function(e) {
-        if (body.scrollTop < 1000) return;
+        var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    
+        if (scrollTop < 1000) return;
 
-        var y = -1 * (body.scrollTop * 0.1);
+        var y = -1 * (scrollTop * 0.1);
         document.getElementById("lineup").style.backgroundPosition = "center " + y + "px";
     })
 });
