@@ -20,6 +20,8 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
 
+    var isWindows = /^win/.test(process.platform);
+
     grunt.initConfig({
 
         config: {
@@ -377,7 +379,7 @@ module.exports = function(grunt) {
                 options: {
                     open: {
                         target: 'https://localhost:3010',
-                        appName: 'Google Chrome'
+                        appName: isWindows ? 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' : 'Google Chrome'
                     },
                     port: 3010,
                     base: [
