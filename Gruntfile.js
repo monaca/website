@@ -391,7 +391,7 @@ module.exports = function(grunt) {
                 options: {
                     open: {
                         target: 'https://localhost:3011',
-                        appName: 'Google Chrome'
+                        appName: isWindows ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' : 'Google Chrome'
                     },
                     port: 3011,
                     base: [
