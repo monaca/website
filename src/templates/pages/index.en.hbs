@@ -50,7 +50,7 @@ layout: src/templates/layouts/index.hbs
 
 -->
 
-<div class="container section benefits">
+<div id="benefits" class="container section benefits">
     <h2>Monaca&#x27;s Top 3 Benefits</h2>
     <ol>
         <li>
@@ -224,6 +224,9 @@ window.addEventListener("load", function() {
         if (scrollTop < 1000) return;
 
         var y = -1 * (scrollTop * 0.1);
+        document.getElementById("benefits").style.backgroundPosition = "center " + y + "px";
+
+        y += 400;
         document.getElementById("lineup").style.backgroundPosition = "center " + y + "px";
     })
 });

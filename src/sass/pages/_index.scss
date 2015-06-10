@@ -412,7 +412,9 @@ html[lang=en] body.home {
             background-size: 1900px;
         }
         @media screen and (max-width: $break-xs) {
-            background-size: 1200px;
+            background-attachment: scroll;
+            background-size: cover;
+            background-position: 0 0 !important;
             padding-left: 3%;
             padding-right: 3%;
         }
@@ -499,6 +501,12 @@ html[lang=en] body.home {
                 @media screen and (max-width: $break) {
                     margin-bottom: 0 !important;
                     width: 50%;
+                    height: 122px;
+                }
+                @media screen and (max-width: 480px) {
+                    height: 82px;
+                }
+                @media screen and (max-width: 360px) {
                     height: 72px;
                 }
             }
@@ -681,8 +689,13 @@ html[lang=en] body.home {
                 dl {
                     text-align: left;
                 }
-                @media screen and (max-width: $break) {
+            }
+            @media screen and (max-width: $break) {
+                padding: 70px 0 50px;
+                li {
                     float: none;
+                    padding-top: 40px;
+                    padding-bottom: 40px;
                     width: 100%;
                 }
             }
