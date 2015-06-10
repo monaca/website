@@ -411,7 +411,7 @@ html[lang=en] body.home {
         @media screen and (max-width: 1320px) {
             background-size: 1900px;
         }
-        @media screen and (max-width: $break-xs) {
+        @media screen and (max-width: $break) {
             background-attachment: scroll;
             background-size: cover;
             background-position: 0 0 !important;
@@ -472,6 +472,7 @@ html[lang=en] body.home {
             font-size: 30px;
             margin-bottom: 30px;
             text-align: center;
+            text-shadow: 0 0 10px rgba(255,255,255,1.0);
         }
         h3 {
             color: #ffffff;
@@ -519,6 +520,10 @@ html[lang=en] body.home {
             margin: 0 auto;
             max-width: 800px;
             padding: 30px 40px 6px;
+            @media screen and (max-width: 880px) {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
         }
     }
     .section.subfeatures {
@@ -553,6 +558,12 @@ html[lang=en] body.home {
                 @media screen and (max-width: 1170px) {
                     padding-left: 5%;
                     padding-right: 5%;
+                }
+                @media screen and (max-width: $break-xs) {
+                    p {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
                 }
             }
             &:nth-child(2) {
@@ -611,6 +622,11 @@ html[lang=en] body.home {
                 }
                 @media screen and (max-width: $break-xs) {
                     display: block;
+                    p {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+
                     .onsentools {
                         float: none;
                         margin-top: 0;
