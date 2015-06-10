@@ -282,7 +282,7 @@ html[lang=en] body.home {
         }
     }
     .keyvisual {
-        background: url(../img/index/keyvisual_en.jpg) no-repeat center top, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
+        background: url(../img/index/keyvisual_en.jpg) no-repeat center bottom, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
         background-color: #126faa;
         color: #ffffff;
         position: relative;
@@ -370,7 +370,7 @@ html[lang=en] body.home {
         }
     }
     .summary {
-        border-bottom: 1px solid #d9d9d9;
+        /* border-bottom: 1px solid #d9d9d9; */
         padding: 90px 5% 40px;
         p {
             max-width: none;
@@ -398,42 +398,9 @@ html[lang=en] body.home {
             max-width: 930px;
         }
     }
-    .section.benefits {
-        padding-bottom: 0;
-        h2 {
-            margin-bottom: 70px;
-        }
-        h3 {
-        }
-        li {
-            float: left;
-            margin-bottom: 0;
-            padding: 0 percentage(40px/1170px);
-            width: 33.33%;
-            &:first-child {
-                padding-top: 0;
-            }
-            &:last-child {
-            }
-            @media screen and (max-width: $break) {
-                float: none;
-                padding: 0;
-                width: auto;
-            }
-        }
-        p {
-            text-align: left;
-            width: auto;
-            max-width: 930px;
-        }
-        .thumb {
-            display: block;
-            margin: 0 auto 22px;
-            width: 128px;
-        }
-    }
-    .lineupbox {
-        background: url(/img/index/bg_lineup.jpg) no-repeat center center;
+    .fixed-bg {
+        background-position: center center;
+        background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: 2400px;
         padding-top: 90px;
@@ -449,6 +416,56 @@ html[lang=en] body.home {
             padding-left: 3%;
             padding-right: 3%;
         }
+    }
+    .section.benefits {
+        @extend .fixed-bg;
+        background-image: url(/img/index/bg_benefits.jpg);
+        color: #fff;
+        width: 100%;
+        h2 {
+            margin-bottom: 70px;
+        }
+        h3 {
+            margin-bottom: 10px;
+        }
+        ol {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+        li {
+            float: left;
+            margin-bottom: 0;
+            padding: 0 percentage(40px/1170px);
+            width: 33.33%;
+            &:first-child {
+                padding-top: 0;
+            }
+            &:last-child {
+            }
+            @media screen and (max-width: $break) {
+                float: none;
+                padding: 0;
+                width: auto;
+                margin-bottom: 80px;
+            }
+        }
+        p {
+            text-align: left;
+            width: auto;
+            max-width: 930px;
+            color: #fff;
+            opacity: 0.5;
+        }
+        .thumb {
+            display: block;
+            margin: 0 auto 22px;
+            width: 128px;
+        }
+    }
+
+    .lineupbox {
+        @extend .fixed-bg;
+        background-image: url(/img/index/bg_learn_more.jpg);
         h2 {
             font-size: 30px;
             margin-bottom: 30px;
@@ -511,6 +528,9 @@ html[lang=en] body.home {
                 font-size: 30px;
                 line-height: 1.3;
                 text-align: left;
+                @media screen and (max-width: $break) {
+                    text-align: center;;
+                }
             }
             p {
                 margin-bottom: 0;
@@ -603,13 +623,15 @@ html[lang=en] body.home {
         }
     }
     .box-awards {
-        background-color: #5db2d1;
+        background-color: rgba(0, 0, 0, 0.8);
         height: auto;
         padding: 0;
         position: relative;
+        color: #808080;
         h2 {
+            color: #999;
             position: absolute;
-            top: 36px;
+            top: 40px;
             left: 50%;
             -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
@@ -634,21 +656,11 @@ html[lang=en] body.home {
                 display: block;
             }
             li {
-                color: white;
                 float: left;
                 left: auto;
                 margin: 0;
                 padding: 120px percentage(40px/1170px);
                 width: 33.33%;
-                &:nth-child(1) {
-                    background-color: #e26075;
-                }
-                &:nth-child(2) {
-                    background-color: #67c8eb;
-                }
-                &:nth-child(3) {
-                    background-color: #a8dd70;
-                }
                 .thumb {
                     float: left;
                     margin-right: 15px;
@@ -659,6 +671,12 @@ html[lang=en] body.home {
                 }
                 dt {
                     text-align: left;
+                    color: #999;
+                    margin-bottom: 5px;
+                }
+                dd {
+                    line-height: 1.3;
+                    color: #666;
                 }
                 dl {
                     text-align: left;
