@@ -32,7 +32,7 @@
     "time-grunt": "^1.0.0",
     "grunt-styledocco": "^0.2.1",
     "node-bourbon": "^1.2.3",
-    "grunt-sass": "^0.17.0",
+    "grunt-sass": "^1.0.0",
     "grunt-contrib-compress": "^0.13.0",
     "assemble-middleware-sitemap": "^0.2.5",
     "grunt-aws-s3": "^0.12.3"
