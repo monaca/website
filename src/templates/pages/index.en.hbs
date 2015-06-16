@@ -180,12 +180,22 @@ layout: src/templates/layouts/index.hbs
 <script src="/js/codemirror/codemirror.js"></script>
 <script src="/js/codemirror/mode/xml/xml.js"></script>
 <script src="/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
-<script>
-    window.onload = function() {
-    };
-</script>
 
 <script>
+(function() {
+
+function setBackgroundPosition() {
+    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+
+    if (scrollTop < 1000) return;
+
+    var y = -1 * (scrollTop * 0.1);
+    document.getElementById("benefits").style.backgroundPosition = "center " + y + "px";
+
+    y += 400;
+    document.getElementById("lineup").style.backgroundPosition = "center " + y + "px";
+}
+
 window.addEventListener("load", function() {
     "use strict";
 
@@ -196,19 +206,12 @@ window.addEventListener("load", function() {
         document.getElementById("features-img-2").src = "img/index/img_onsen.jpg";
     }, 4000);
 
-    window.addEventListener("load", function(e) {
-        var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
-    
-        if (scrollTop < 1000) return;
-
-        var y = -1 * (scrollTop * 0.1);
-        document.getElementById("benefits").style.backgroundPosition = "center " + y + "px";
-
-        y += 400;
-        document.getElementById("lineup").style.backgroundPosition = "center " + y + "px";
-    })
-
+    window.addEventListener("scroll", setBackgroundPosition);
 });
+
+window.addEventListener("DOMContentLoaded", setBackgroundPosition);
+
+})();
 </script>
 
 
