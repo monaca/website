@@ -21,34 +21,6 @@ layout: src/templates/layouts/index.hbs
     <img src="/img/index/img_block.png" alt="">
 </div>
 
-<!-- 
-<div class="container section features">
-    <h2>Monaca&#x27;s Top 3 Benefits</h2>
-    <ol>
-        <li>
-            <h3>1. Supercharge Your Development with Cloud-Powered Tools</h3>
-
-            <p>Yes, we get it. You want full control of what you create. We are all for that, but we realized from our own app development experience that some things are better with cloud. <br />
-            We support two configurations: local development or complete cloud development, depending on your needs. A full browser-based XXX IDE is provided if you want to quickly turn your idea to an app, <br />
-            without setting up your local environment. Have a favorite dev environment? Use our Monaca local tools that connect to our cloud. <br />
-            Either way, Monaca Debugger allows you to live sync your app as you code - without building it - so you can test changes instantly. Furthermore, the cloud allows you to do remote builds. You don’t need to setup SDKs to build iOS or Android apps. How cool is that? <br />
-            Strategic use of the cloud will fire up your development. Try it, you’ll see.</p>
-        </li>
-        <li>
-            <h3>2. Everything You Need to Develop Awesome Hybrid Apps.</h3>
-            <p>Once you start developing apps with PhoneGap/Cordova, you’ll realize that many things are missing, and you’ll spend time hunting for fixes and tools. Not with Monaca. We’ve got you covered all the way from design, app development, backend development, testing &amp; debugging to build &amp; distribution. <br />
-            The best part is that Monaca can be used as a piece or a whole. So you can keep your tools and environment, such as Sublime Text or Visual Studio. Just pick what you need. Monaca will seamlessly plug into your workflow.</p>
-        </li>
-        <li>
-            <h3>3. Free Yourself From Frameworks: <br />Who says you need to commit to a framework? Be flexible and future-proof. </h3>
-            <p>We provide an award-winning framework called Onsen, closely integrated with our dev tools. Onsen provides UI components that are smooth and native-like, with bindings for Angular and jQuery. <br />
-            Already have a framework that feels native to you? No problem. You can use whatever you want. For example, Ionic developers can use Monaca CLI to sync to our cloud and take advantage of our excellent debugger and remote build service. No complicated porting necessary. You see, we take OPEN very seriously.</p>
-        </li>
-    </ol>
-</div>
-
--->
-
 <div id="benefits" class="container section benefits">
     <h2>Monaca&#x27;s Top 3 Benefits</h2>
     <ol>
@@ -224,7 +196,7 @@ window.addEventListener("load", function() {
         document.getElementById("features-img-2").src = "img/index/img_onsen.jpg";
     }, 4000);
 
-    window.addEventListener("scroll", function(e) {
+    window.addEventListener("load", function(e) {
         var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
     
         if (scrollTop < 1000) return;
@@ -235,6 +207,7 @@ window.addEventListener("load", function() {
         y += 400;
         document.getElementById("lineup").style.backgroundPosition = "center " + y + "px";
     })
+
 });
 </script>
 

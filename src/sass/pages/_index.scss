@@ -399,17 +399,17 @@ html[lang=en] body.home {
         }
     }
     .fixed-bg {
-        background-position: center center;
+        background-position: center bottom;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        background-size: 2400px;
+        background-size: cover;
         padding-top: 90px;
         padding-bottom: 50px;
         @media screen and (min-width: 2560px) {
             background-size: cover;
         }
         @media screen and (max-width: 1320px) {
-            background-size: 1900px;
+            background-size: cover;
         }
         @media screen and (max-width: $break) {
             background-attachment: scroll;
@@ -421,7 +421,7 @@ html[lang=en] body.home {
     }
     .section.benefits {
         @extend .fixed-bg;
-        background-image: url(/img/index/bg_benefits.jpg);
+        background-image: url(/img/index/bg_benefits_2.jpg);
         color: #fff;
         width: 100%;
         h2 {
