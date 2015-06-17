@@ -24,14 +24,16 @@
             {{/is}}
         {{/compare}}
     </title>
-    <meta name="keywords" content="
-        {{#compare keywords "typeof" "string"}}
-            {{keywords}}
-        {{else}}
-            {{#is language "ja"}}Cordova,モバイルアプリ開発,iPhone開発,Android開発,ハイブリッドアプリ,クロスプラットフォーム,PhoneGap,Monaca
-            {{else}}mobile app development,iphone development,android development,hybrid app,cross-platform,phonegap app,monaca,windows store development{{/is}}
-        {{/compare}}
-    ">
+    {{#is language "ja"}}
+        <meta name="keywords" content="
+            {{#compare keywords "typeof" "string"}}
+                {{keywords}}
+            {{else}}
+                Cordova,モバイルアプリ開発,iPhone開発,Android開発,ハイブリッドアプリ,クロスプラットフォーム,PhoneGap,Monaca
+            {{/compare}}
+        ">
+    {{/is}}
+
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
