@@ -567,10 +567,11 @@ html[lang=en] body.home {
             .legwork {
                 h3.maintitle {
                     margin-bottom: 2px;
-                    letter-spacing: -0.03em;
                 }
                 h4.subtitle {
+                    font-size: 20px;
                     text-align: left;
+                    letter-spacing: -0.02em;
                     @media screen and (max-width: $break) {
                         text-align: center;
                     }
