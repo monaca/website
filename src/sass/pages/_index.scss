@@ -594,58 +594,55 @@ html[lang=en] body.home {
                 }
             }
             &:nth-child(2) {
-                display: flex;
-                flex-flow: row nowrap;
-                align-items: center;
+                display: table;
                 padding-top: 60px;
                 .legwork {
-                    float: left;
+                    display: table-cell;
+                    padding-right: 20px;
+                    vertical-align: middle;
                     width: 46%;
                 }
                 .thumb {
-                    flex-basis: percentage(585px/1170px);
-                    flex-shrink: 0;
-                    float: right;
-                    margin-left: 20px;
-                    width: percentage(585px/1170px);
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: right;
                 }
                 @media screen and (max-width: $break-xs) {
                     display: block;
                     .legwork {
-                        float: none;
+                        display: block;
                         width: auto;
                         p {
                             padding: 0 0 40px;
                         }
                     }
                     .thumb {
-                        float: none;
+                        display: block;
                         margin-left: 0;
+                        text-align: center;
                         width: auto;
                     }
                 }
             }
             &:nth-child(3) {
-                display: flex;
-                flex-flow: row-reverse nowrap;
-                align-items: center;
+                display: table;
                 border-bottom: none;
                 padding-top: 40px;
                 padding-bottom: 0;
                 .thumb {
-                    flex-basis: percentage(585px/1170px);
-                    flex-shrink: 0;
-                    float: left;
-                    margin-right: 20px;
+                    display: table-cell;
                     vertical-align: bottom;
-                    width: percentage(582px/1170px);
+                    text-align: left;
                 }
-                .onsentools {
-                    float: right;
-                    margin-top: -40px;
-                    padding: 40px 0;
+                .onsentools-lg {
+                    display: table-cell;
+                    padding: 0 0 30px 20px;
                     overflow: hidden;
+                    vertical-align: middle;
                     width: 46%;
+                }
+                .onsentools-xs {
+                    display: none;
                 }
                 @media screen and (max-width: $break-xs) {
                     display: block;
@@ -653,17 +650,21 @@ html[lang=en] body.home {
                         padding-left: 0;
                         padding-right: 0;
                     }
-
-                    .onsentools {
-                        float: none;
+                    .onsentools-xs {
+                        display: block;
                         margin-top: 0;
                         margin-bottom: 40px;
                         padding: 0;
                         width: auto;
                     }
+                    .onsentools-lg {
+                        display: none;
+                    }
                     .thumb {
+                        display: block;
                         float: none;
                         margin-right: 0;
+                        text-align: center;
                         width: auto;
                     }
                 }
