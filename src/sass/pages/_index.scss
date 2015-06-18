@@ -554,6 +554,7 @@ html[lang=en] body.home {
             h4.subtitle {
                 font-size: 22px;
                 margin-bottom: 34px;
+                color: #555;
                 @media screen and (max-width: $break) {
                     font-weight: 400;
                 }
@@ -562,6 +563,18 @@ html[lang=en] body.home {
                 margin-bottom: 0;
                 max-width: none;
                 overflow: hidden;
+            }
+            .legwork {
+                h3.maintitle {
+                    margin-bottom: 2px;
+                    letter-spacing: -0.03em;
+                }
+                h4.subtitle {
+                    text-align: left;
+                    @media screen and (max-width: $break) {
+                        text-align: center;
+                    }
+                }
             }
             &:nth-child(1) {
                 padding: 10px 10% 40px;
@@ -737,9 +750,12 @@ html[lang=en] body.home {
         }
         a:hover {
             text-decoration: none;
-            opacity: 0.8;
             img, dt, dd {
-                opacity: 0.8;
+                opacity: 0.6;
+                transition: .4s ease-in-out;
+                -webkit-transition: .4s ease-in-out;
+                -moz-transition: .4s ease-in-out;
+                -ms-transition: .4s ease-in-out;
             }
         }
     }
