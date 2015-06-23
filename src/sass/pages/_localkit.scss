@@ -9,7 +9,7 @@ body.localkit {
         }
         h1 {
             font-weight: 400;
-            margin-bottom: 10px;
+            margin-bottom: 50px;
             padding-top: 120px;
             text-shadow: 0 0 10px rgba(255, 255, 255, 1);
             letter-spacing: -0.03em;
@@ -19,8 +19,21 @@ body.localkit {
                 padding-top: 100px;
                 padding-right: 0px;
             }
+            @media screen and (max-width: $break-xs) {
+                margin-bottom: 30px;
+            }
             img {
                 vertical-align: -10px;
+            }
+        }
+        .version {
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-indent: 0.2em;
+            @media screen and (max-width: $break-xs) {
+                text-align: center;
+                margin-bottom: 20px;
             }
         }
         .box-try {
@@ -28,14 +41,30 @@ body.localkit {
             padding: 40px 0 0;
         }
         .btns {
-            padding: 20px 0 40px;
+            padding: 0 0 40px;
             line-height: 64px;
+            text-align: left;
             .btn {
                 padding: 0 20px;
                 min-width: 240px;
+                margin-right: 20px;
             }
             @media screen and (max-width: $break-xs) {
                 text-align: center;
+            }
+            .btn-green {
+                @media screen and (max-width: $break) {
+                    margin-right: 10px;
+                }
+                @media screen and (max-width: $break-xs) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                &:last-child {
+                    @media screen and (max-width: $break-xs) {
+                    margin-bottom: 0;
+                    }
+                }
             }
         }
     }
@@ -69,6 +98,13 @@ body.localkit {
             }
         }
         .box-try {
+            @media screen and (max-width: $break) {
+                    padding: 100px 0;
+            }
+            @media screen and (max-width: $break-xs) {
+                    padding: 50px 3% 30px;
+                    font-size: 16px;
+            }
             .btn {
                 padding: 12px 40px 0;
                 min-width: 210px;
@@ -90,6 +126,24 @@ body.localkit {
                     &:hover {
                         text-decoration: none;
                     }
+                }
+            }
+            .btn-green {
+                margin-right: 20px;
+                font-size: 22px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:first-child {
+                    @media screen and (max-width: $break-xs) {
+                        margin-bottom: 10px;
+                    }
+                }
+                @media screen and (max-width: $break) {
+                    margin: 0 0 20px;
+                }
+                @media screen and (max-width: $break-xs) {
+                    width: 100%;
                 }
             }
             .notes {
