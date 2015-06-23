@@ -6,6 +6,7 @@ body.localkit {
         position: relative;
         @media screen and (max-width: $break) {
             padding-bottom: 40px;
+            background-size: cover;
         }
         h1 {
             font-weight: 400;
