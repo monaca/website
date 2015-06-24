@@ -76,6 +76,9 @@ body.localkit {
             padding-bottom: 80px;
             h1 {
                 text-align: center;
+                @media screen and (max-width: $break) {
+                    font-weight: 400;
+                }
             }
             p {
                 margin-bottom: 30px;

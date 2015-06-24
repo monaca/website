@@ -25,12 +25,14 @@ div.section {
   }
   h1 {
     font-size: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     text-align: center;
     -webkit-font-smoothing: antialiased;
+    @media screen and (max-width: $break) {
+      margin-bottom: 40px;
+    }
     @media screen and (max-width: $break-xs) {
       font-size: 32px;
-      margin-bottom: 40px;
     }
     &.small {
       font-size: 26px;

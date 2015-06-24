@@ -773,6 +773,11 @@ html[lang=en] body.home {
 }
 
 html[lang=ja] body.home {
+    .monaca_info {
+        @media screen and (max-width: $break) {
+          top: 50px;
+        }
+    }
     .keyvisual.carousel-1 {
         @include transition(background-color 1200ms);
         height: auto;
@@ -818,7 +823,7 @@ html[lang=ja] body.home {
         }
     }
     .keyvisual.visible-xs {
-        background: url(../img/index/keyvisual_sp.jpg) no-repeat center center, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
+        background: url(../img/index/keyvisual_sp.jpg) no-repeat center bottom, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
         background-color: #126faa;
         color: #ffffff;
         position: relative;
