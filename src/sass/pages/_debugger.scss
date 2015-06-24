@@ -3,6 +3,9 @@ body.debugger {
         background: url(../img/debugger/keyvisual.jpg) no-repeat center bottom, url(../img/debugger/keyvisual_bg.png) repeat-x left bottom;
         color: #000;
         padding-bottom: 0;
+        @media screen and (max-width: $break) {
+            background-size: cover;
+        }
         @media screen and (max-width: $break-xs) {
             padding-bottom: 20px;
         }
