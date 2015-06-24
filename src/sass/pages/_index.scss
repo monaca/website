@@ -773,7 +773,10 @@ html[lang=en] body.home {
 }
 
 html[lang=ja] body.home {
-    .monaca_info {
+    #notificationHeader {
+        @media screen and (max-width: 1200px) {
+          top: 50px;
+        }
         @media screen and (max-width: $break) {
           top: 50px;
         }
