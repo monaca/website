@@ -59,22 +59,13 @@ body.debugger {
                 .integration, .usb, .plugins {
                     padding-top: 130px;
                 }
-                .integration {
-                    background: url(../img/debugger/img_3_ja.jpg) no-repeat center bottom;
-                    background-size: 1287px;
-                    padding-bottom: 52%;
-                    max-height: 1020px;
-                    @media screen and (max-width: 1240px) {
-                        background-size: 114%;
-                    }
-                }
+                .integration,
                 .usb {
-                    background: url(../img/debugger/img_4_ja.jpg) no-repeat center bottom;
-                    background-size: 1287px;
-                    padding-bottom: 52%;
-                    max-height: 1020px;
-                    @media screen and (max-width: 1240px) {
-                        background-size: 114%;
+                    .illust {
+                        display: block;
+                        margin: 0 auto;
+                        padding: 3% 0;
+                        @include transform(scale(1.05, 1.05));
                     }
                 }
                 .plugins {
@@ -92,13 +83,12 @@ body.debugger {
                     }
                 }
                 .internet {
-                    background: url(../img/debugger/img_7_ja.jpg) no-repeat center 80%;
-                    background-size: 112%;
-                    border-bottom: none;
-                    padding: 60px 5% 92%;
-                    @media screen and (max-width: $break) {
-                        padding-left: 0;
-                        padding-right: 0;
+                    padding: 60px 5% 0;
+                    .illust {
+                        display: block;
+                        margin: 0 auto;
+                        padding: 12% 0 20%;
+                        @include transform(scale(1.25, 1.25));
                     }
                 }
                 .communication {
@@ -119,19 +109,6 @@ body.debugger {
                     margin: 0 auto 10px
                 }
             }
-        }
-    }
-}
-html[lang=en] body.debugger {
-    article.main section {
-        .integration {
-            background: url(../img/debugger/img_3_en.jpg) no-repeat center bottom;
-        }
-        .usb {
-            background: url(../img/debugger/img_4_en.jpg) no-repeat center bottom;
-        }
-        .internet {
-            background: url(../img/debugger/img_7_en.jpg) no-repeat center 80%;
         }
     }
 }
