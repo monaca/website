@@ -61,17 +61,12 @@ body.debugger {
                 }
                 .integration,
                 .usb {
+                    overflow: hidden;
                     .illust {
                         display: block;
                         margin: 0 auto;
                         padding: 3% 0;
                         @include transform(scale(1.05, 1.05));
-                    }
-                }
-                .plugins {
-                    max-height: 1020px;
-                    @media screen and (max-width: 1170px) {
-                        background-size: 100%;
                     }
                 }
             }
@@ -83,6 +78,7 @@ body.debugger {
                     }
                 }
                 .internet {
+                    overflow: hidden;
                     padding: 60px 5% 0;
                     .illust {
                         display: block;
