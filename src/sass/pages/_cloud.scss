@@ -203,8 +203,10 @@ html[lang=en] body.cloud {
 
 html[lang=en] body.cloud {
   article.main section {
-		&.summary {
-			background: url(../img/cloud/img_1_en.jpg) no-repeat center bottom;
-    }	
-	}
+    &.summary {
+      background-image: url(../img/cloud/img_1_en.jpg);
+      background-position: center bottom;
+      background-position: center bottom 40px;
+    } 
+  }
 }

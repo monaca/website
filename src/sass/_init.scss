@@ -124,9 +124,8 @@ img, iframe, object {
     max-width: 100%;
 }
 
-html[lang="ja"] {
-    html, body {
-        font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
-        font-size: 14px;
-    }
+html[lang="ja"],
+html[lang="ja"] body {
+    font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+    font-size: 14px;
 }
