@@ -34,6 +34,10 @@
         ">
     {{/is}}
 
+    {{#compare redirect "typeof" "string"}}
+        <meta http-equiv="refresh" content="0; URL={{redirect}}">
+    {{/compare}}
+
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
