@@ -7,7 +7,8 @@ keywords: Monaca,HTML5,Cordova,PhoneGap
 
 <div class="keyvisual box-full"><div>
     <h1><img src="/img/localkit/logo.png" alt="Monaca Localkit" /><br />Monacaの便利で快適な機能を<br />ローカル開発環境でも<br />利用可能に！</h1>
-    <p class="version">バージョン<strong>1.1.2</strong> | 2015年6月30日 </p>
+    <p class="version"><a href="https://github.com/monaca/monaca_localkit/releases">バージョン<strong><!--1.1.2--></strong></a> | <span><!--2015年6月30日--></span></p>
+	
 	<div class="btns">
 	    <a class="btn btn-green" href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/localkit-setup.exe">Windows版</a>
 	    <a class="btn btn-green" href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/Monaca%20Localkit.zip">Mac OS X版</a>
@@ -38,4 +39,29 @@ keywords: Monaca,HTML5,Cordova,PhoneGap
     <p class="btn btn-green"><a style="color: white" href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/localkit-setup.exe">Windows版ダウンロード</a></p>
     <p class="btn btn-green"><a style="color: white" href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/Monaca%20Localkit.zip">Mac OS X版ダウンロード</a></p>
 </div>
+
+
+<script src="/js/moment.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script>
+$(window).load(function() {
+	$('div.keyvisual div p.version').hide();
+	$.ajax({
+		url: 'https://api.github.com/repos/OnsenUI/OnsenUI/releases',
+		dataType: 'jsonp',
+		success: function(res) {
+			$('div.keyvisual div p.version').show();
+			
+			$('div.keyvisual div p.version a strong').text(res.data[0].name);
+			var dateJa = moment(res.data[0].published_at).format('YYYY年MM月DD日');
+			$('div.keyvisual div p.version span').text(dateJa);
+			
+		},
+		error: function() {
+			$('div.keyvisual div p.version').hide();
+		}
+	}); 
+});
+</script>
+
 
