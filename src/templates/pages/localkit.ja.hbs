@@ -47,7 +47,7 @@ keywords: Monaca,HTML5,Cordova,PhoneGap
 $(window).load(function() {
 	$('div.keyvisual span#github-published_at').hide();
 	$.ajax({
-		url: 'https://api.github.com/repos/OnsenUI/OnsenUI/releases',
+		url: 'https://api.github.com/repos/monaca/Localkit/releases',
 		dataType: 'jsonp',
 		success: function(res) {
 			$('div.keyvisual span#github-published_at a strong').text(res.data[0].name);
