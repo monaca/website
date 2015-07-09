@@ -34,8 +34,8 @@ keywords: Monaca,HTML5,Cordova,PhoneGap
 </section>
 
 <div class="box-try">
-    <a style="color: white" class="btn btn-green localkit_download_for_win">Windows版ダウンロード</a>
-    <a style="color: white" class="btn btn-green localkit_download_for_mac">Mac OS X版ダウンロード</a>
+	<a style="color: white" class="btn btn-green localkit_download_for_win"></a>
+	<a style="color: white" class="btn btn-green localkit_download_for_mac"></a>
 </div>
 
 
@@ -61,10 +61,13 @@ $(window).load(function() {
 			$("div.keyvisual div.btns").append($('<a class="btn btn-green localkit_download_for_win">Windows版</a>'));
 			$("div.keyvisual div.btns").append($('<a class="btn btn-green localkit_download_for_mac">Mac OS X版</a>'));
 			$('div.btns a').hide();
+			$("div.box-try a.localkit_download_for_win").text('Windows版ダウンロード');
+			$("div.box-try a.localkit_download_for_mac").text('Mac OS X版ダウンロード');
+			
 			$("a.localkit_download_for_win").attr("href",res.data[0].assets[0].browser_download_url);
 			$("a.localkit_download_for_mac").attr("href",res.data[0].assets[1].browser_download_url);
+
 			$('div.btns a').fadeIn(fadeInSpeed);
-			
 			$('div.box-try').fadeIn(fadeInSpeed);	
 		},
 		error: function() {

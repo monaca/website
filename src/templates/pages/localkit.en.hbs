@@ -33,8 +33,8 @@ description: Take advantage of Monaca mobile development cloud and tools without
 </section>
 
 <div class="box-try">
-    <a class="btn btn-green localkit_download_for_win">Download Windows Version</a>
-    <a class="btn btn-green localkit_download_for_mac">Download Mac OS X Version</a>
+	<a class="btn btn-green localkit_download_for_win"></a>
+	<a class="btn btn-green localkit_download_for_mac"></a>
 </div>
 
 
@@ -60,10 +60,13 @@ $(window).load(function() {
 			$("div.keyvisual div.btns").append($('<a class="btn btn-green localkit_download_for_win">Download for Windows</a>'));
 			$("div.keyvisual div.btns").append($('<a class="btn btn-green localkit_download_for_mac">Download for Mac OS X</a>'));
 			$('div.btns a').hide();
+			$("div.box-try a.localkit_download_for_win").text('Download Windows Version');
+			$("div.box-try a.localkit_download_for_mac").text('Download Mac OS X Version');
+
 			$("a.localkit_download_for_win").attr("href",res.data[0].assets[0].browser_download_url);
 			$("a.localkit_download_for_mac").attr("href",res.data[0].assets[1].browser_download_url);
-			$('div.btns a').fadeIn(fadeInSpeed);
 
+			$('div.btns a').fadeIn(fadeInSpeed);
 			$('div.box-try').fadeIn(fadeInSpeed);
 		},
 		error: function() {
