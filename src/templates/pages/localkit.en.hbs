@@ -6,11 +6,11 @@ description: Take advantage of Monaca mobile development cloud and tools without
 
 <div class="keyvisual box-full"><div>
     <h1><img src="/img/localkit/logo.png" alt="Monaca Localkit" /><br />Experience Monaca’s Usability and Comfort in Your Local Development Environment</h1>
-    <p class="version"><span id="github-published_at" class="version"><a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span></span></span></p>
+    <p class="version"><span id="github-published_at" class="version"></span></p>
+    
 	<div class="btns">
-
-	    <a class="btn btn-green" href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/localkit-setup.exe">Download for Windows</a>
-	    <a class="btn btn-green" href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/Monaca%20Localkit.zip">Download for Mac OS X</a>
+	    <a class="btn btn-green localkit_download_for_win">Download for Windows</a>
+	    <a class="btn btn-green localkit_download_for_mac">Download for Mac OS X</a>
 	</div>
 </div></div>
 
@@ -35,28 +35,42 @@ description: Take advantage of Monaca mobile development cloud and tools without
 </section>
 
 <div class="box-try">
-    <p class="btn btn-green"><a href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/localkit-setup.exe">Download Windows Version</a></p>
-    <p class="btn btn-green"><a href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/Monaca%20Localkit.zip">Download Mac OS X Version</a></p>
+    <a class="btn btn-green localkit_download_for_win">Download Windows Version</a>
+    <a class="btn btn-green localkit_download_for_mac">Download Mac OS X Version</a>
 </div>
+
 
 <script src="/js/moment.js"></script>
 <script src="/js/jquery.min.js"></script>
 <script>
+
 $(window).load(function() {
+	var fadeInSpeed = 400;
 	$('div.keyvisual span#github-published_at').hide();
+	$('div.btns a').hide();
+	$("div.box-try").wrap($('<section class="btns_box_body"></section>'));
+	$('div.box-try').hide();
 	$.ajax({
 		url: 'https://api.github.com/repos/monaca/Localkit/releases',
 		dataType: 'jsonp',
 		success: function(res) {
+			$("div.keyvisual span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
 			$('div.keyvisual span#github-published_at a strong').text(res.data[0].name);
 			var dateJa = moment(res.data[0].published_at).format('ll');
 			$('div.keyvisual span#github-published_at span').text(dateJa);
 			
-			$('div.keyvisual span#github-published_at').show();
+			$("a.localkit_download_for_win").attr("href",res.data[0].assets[0].browser_download_url);
+			$("a.localkit_download_for_mac").attr("href",res.data[0].assets[1].browser_download_url);
 			
+			$('div.btns a').fadeIn(fadeInSpeed);
+			$('div.keyvisual span#github-published_at').fadeIn(fadeInSpeed);
+			$('div.box-try').fadeIn(fadeInSpeed);
+
 		},
 		error: function() {
 			$('div.keyvisual span#github-published_at').hide();
+			$('div.btns a').hide();
+			$('div.box-try a').hide();
 		}
 	}); 
 });

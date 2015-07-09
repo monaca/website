@@ -46,6 +46,9 @@ body.localkit {
             padding: 0 0 40px;
             line-height: 64px;
             text-align: left;
+            @media screen and (max-width: $break) {
+                height: 178px;
+            }
             .btn {
                 padding: 0 20px;
                 min-width: 240px;
@@ -97,18 +100,32 @@ body.localkit {
                 }
             }
         }
+        section.debug {
+            border-bottom: none;
+        }
+        section.btns_box_body {
+            padding: 0px;
+            height: 334px;
+            @media screen and (max-width: $break) {
+                height: 348px;
+            }
+            @media screen and (max-width: $break-xs) {
+                height: 221px;
+            }
+        }
         .keyvisual + section {
             @media screen and (min-width: $break) {
                 padding-top: 140px;
             }
         }
         .box-try {
+                border-top: 1px solid #ccc;
             @media screen and (max-width: $break) {
-                    padding: 100px 0;
+                padding: 100px 0;
             }
             @media screen and (max-width: $break-xs) {
-                    padding: 50px 3% 30px;
-                    font-size: 16px;
+                padding: 50px 3% 30px;
+                font-size: 16px;
             }
             .btn {
                 padding: 12px 40px 0;

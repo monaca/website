@@ -7,11 +7,11 @@ keywords: Monaca,HTML5,Cordova,PhoneGap
 
 <div class="keyvisual box-full"><div>
     <h1><img src="/img/localkit/logo.png" alt="Monaca Localkit" /><br />Monacaの便利で快適な機能を<br />ローカル開発環境でも<br />利用可能に！</h1>
-    <p class="version"><span id="github-published_at" class="version"><a href="https://github.com/monaca/Localkit/releases">バージョン<strong></strong></a> / <span></span></span></p>
+    <p class="version"><span id="github-published_at" class="version"></span></p>
 	
 	<div class="btns">
-	    <a class="btn btn-green" href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/localkit-setup.exe">Windows版</a>
-	    <a class="btn btn-green" href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/Monaca%20Localkit.zip">Mac OS X版</a>
+	    <a class="btn btn-green localkit_download_for_win">Windows版</a>
+	    <a class="btn btn-green localkit_download_for_mac">Mac OS X版</a>
 	</div>
 </div></div>
 
@@ -36,29 +36,41 @@ keywords: Monaca,HTML5,Cordova,PhoneGap
 </section>
 
 <div class="box-try">
-    <p class="btn btn-green"><a style="color: white" href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/localkit-setup.exe">Windows版ダウンロード</a></p>
-    <p class="btn btn-green"><a style="color: white" href="https://googledrive.com/host/0B-F5PfgMvTC9fjdPMlRrbUtMVmVWT1Z4RWdwY2dnQUZkMElHckdid2NCci1DVzQyN2dhLTg/Monaca%20Localkit.zip">Mac OS X版ダウンロード</a></p>
+    <a style="color: white" class="btn btn-green localkit_download_for_win">Windows版ダウンロード</a>
+    <a style="color: white" class="btn btn-green localkit_download_for_mac">Mac OS X版ダウンロード</a>
 </div>
 
 
 <script src="/js/moment.js"></script>
 <script src="/js/jquery.min.js"></script>
 <script>
+
 $(window).load(function() {
+	var fadeInSpeed = 400;
 	$('div.keyvisual span#github-published_at').hide();
+	$('div.btns a').hide();
+	$("div.box-try").wrap($('<section class="btns_box_body"></section>'));
+	$('div.box-try').hide();
 	$.ajax({
 		url: 'https://api.github.com/repos/monaca/Localkit/releases',
 		dataType: 'jsonp',
 		success: function(res) {
+			$("div.keyvisual span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">バージョン<strong></strong></a> / <span id="published_Date"></span>'));
 			$('div.keyvisual span#github-published_at a strong').text(res.data[0].name);
 			var dateJa = moment(res.data[0].published_at).format('YYYY年MM月DD日');
-			$('div.keyvisual span#github-published_at span').text(dateJa);
-			
-			$('div.keyvisual span#github-published_at').show();
-			
+			$('div.keyvisual span#github-published_at span#published_Date').text(dateJa);
+
+			$("a.localkit_download_for_win").attr("href",res.data[0].assets[0].browser_download_url);
+			$("a.localkit_download_for_mac").attr("href",res.data[0].assets[1].browser_download_url);
+
+			$('div.btns a').fadeIn(fadeInSpeed);
+			$('div.keyvisual span#github-published_at').fadeIn(fadeInSpeed);
+			$('div.box-try').fadeIn(fadeInSpeed);	
 		},
 		error: function() {
 			$('div.keyvisual span#github-published_at').hide();
+			$('div.btns a').hide();
+			$('div.box-try').hide();
 		}
 	}); 
 });
