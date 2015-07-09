@@ -9,8 +9,6 @@ description: Take advantage of Monaca mobile development cloud and tools without
     <p class="version"><span id="github-published_at" class="version"></span></p>
     
 	<div class="btns">
-	    <a class="btn btn-green localkit_download_for_win">Download for Windows</a>
-	    <a class="btn btn-green localkit_download_for_mac">Download for Mac OS X</a>
 	</div>
 </div></div>
 
@@ -47,7 +45,6 @@ description: Take advantage of Monaca mobile development cloud and tools without
 $(window).load(function() {
 	var fadeInSpeed = 400;
 	$('div.keyvisual span#github-published_at').hide();
-	$('div.btns a').hide();
 	$("div.box-try").wrap($('<section class="btns_box_body"></section>'));
 	$('div.box-try').hide();
 	$.ajax({
@@ -58,19 +55,21 @@ $(window).load(function() {
 			$('div.keyvisual span#github-published_at a strong').text(res.data[0].name);
 			var dateJa = moment(res.data[0].published_at).format('ll');
 			$('div.keyvisual span#github-published_at span').text(dateJa);
-			
+			$('div.keyvisual span#github-published_at').fadeIn(fadeInSpeed);
+
+			$("div.keyvisual div.btns").append($('<a class="btn btn-green localkit_download_for_win">Download for Windows</a>'));
+			$("div.keyvisual div.btns").append($('<a class="btn btn-green localkit_download_for_mac">Download for Mac OS X</a>'));
+			$('div.btns a').hide();
 			$("a.localkit_download_for_win").attr("href",res.data[0].assets[0].browser_download_url);
 			$("a.localkit_download_for_mac").attr("href",res.data[0].assets[1].browser_download_url);
-			
 			$('div.btns a').fadeIn(fadeInSpeed);
-			$('div.keyvisual span#github-published_at').fadeIn(fadeInSpeed);
-			$('div.box-try').fadeIn(fadeInSpeed);
 
+			$('div.box-try').fadeIn(fadeInSpeed);
 		},
 		error: function() {
 			$('div.keyvisual span#github-published_at').hide();
 			$('div.btns a').hide();
-			$('div.box-try a').hide();
+			$('div.box-try').hide();
 		}
 	}); 
 });

@@ -106,6 +106,7 @@ body.localkit {
         section.btns_box_body {
             padding: 0px;
             height: 334px;
+            border-bottom: 0px;
             @media screen and (max-width: $break) {
                 height: 348px;
             }
