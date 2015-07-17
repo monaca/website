@@ -43,4 +43,11 @@
   ga('require', 'displayfeatures');
   ga('require', 'linkid', 'linkid.js');
   ga('send', 'pageview');
+  
+  ga('create', 'UA-526750-34', 'auto', { 'allowLinker': true });
+  ga('require', 'linker');
+  ga('require', 'displayfeatures');
+  ga('require', 'linkid', 'linkid.js');
+  ga('linker:autoLink', ['monaca.io','ja.monaca.io', 'monaca.mobi']);
+  ga('send', 'pageview');
 </script>
