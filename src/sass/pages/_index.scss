@@ -790,9 +790,13 @@ html[lang=ja] body.home {
             @include background(linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0) 50%, rgba(0,0,0,0.1)));
             background-color: #126aaa;
         }
-        &[data-index="1"] { //Caravan
+        &[data-index="2"] { //Caravan
             /*@include background(linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0) 80%, rgba(0,100,200,0.05)));*/
             background-color: #e5e5e5;
+        }
+        &[data-index="1"] { //Default keyvisual
+            @include background(linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0) 50%, rgba(0,0,0,0.1)));
+            background-color: #126aaa;
         }
         .carousel-container {
             padding-bottom: percentage(540px/1170px);
