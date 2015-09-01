@@ -279,7 +279,7 @@ body.showcase {
             }
             .info-cont {
                 border-top: 1px solid $border-color;
-                padding: 25px 30px;
+                padding: 30px 30px 25px;
                 h1 {
                     margin-bottom: 5px;
                 }
@@ -615,6 +615,11 @@ body.showcase.tokyocalendar {
     }
     article.main .effect {
         background: url(/img/tokyocalendar/bg_effect.jpg) no-repeat center top;
+    }
+    article.main .interview {
+        .alignleft, .alignright {
+            width: 285px;
+        }
     }
 }
 
