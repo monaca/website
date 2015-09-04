@@ -304,10 +304,11 @@ module.exports = function(grunt) {
 
         aws_s3: {
             options: {
-                accessKeyId: '<%= aws.key %>', // Use the variables
-                secretAccessKey: '<%= aws.secret %>', // You can also use env variables
-                uploadConcurrency: 5, // 5 simultaneous uploads
-                downloadConcurrency: 5, // 5 simultaneous downloads
+                accessKeyId: '<%= aws.key %>',
+                secretAccessKey: '<%= aws.secret %>',
+                uploadConcurrency: 5,
+                downloadConcurrency: 5,
+                differential: true,
                 gzipRename: 'ext',
                 params: {
                     CacheControl: 'max-age=3600'
