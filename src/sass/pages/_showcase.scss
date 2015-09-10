@@ -432,8 +432,13 @@ body.showcase {
     }
 }
 body.showcase.hitachitool {
-    article.main header {
-        background-image: url(/img/hitachitool/icn_hitachi_ja.png);
+    article.main {
+        header {
+            background-image: url(/img/hitachitool/icn_hitachi_ja.png);
+        }
+        .info dl dt {
+            width: 80px;
+        }
     }
 }
 body.showcase.jnb {
