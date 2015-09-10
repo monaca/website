@@ -320,6 +320,7 @@ module.exports = function(grunt) {
                     region: 'ap-northeast-1',
                 },
                 files: [
+                    {action: "delete", expand: true, cwd: '<%= config.distJa %>', src: '', dest: ''},
                     {expand: true, cwd: '<%= config.distJa %>', src: ['**', '!**/img/**', '!**/fonts/**'], dest: ''},
                     {expand: true, cwd: '<%= config.distJa %>', src: ['img/**', 'fonts/**'], dest: '', params: {CacheControl: 'max-age=604800'}},
                 ]
@@ -330,6 +331,7 @@ module.exports = function(grunt) {
                     region: '',
                 },
                 files: [
+                    {action: "delete", expand: true, cwd: '<%= config.distEn %>', src: '', dest: ''},
                     {expand: true, cwd: '<%= config.distEn %>', src: ['**', '!img/**/*', '!**/fonts/**'], dest: ''},
                     {expand: true, cwd: '<%= config.distEn %>', src: ['img/**/*', 'fonts/**'], dest: '', params: {CacheControl: 'max-age=604800'}},
                 ]
