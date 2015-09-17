@@ -308,7 +308,6 @@ module.exports = function(grunt) {
                 secretAccessKey: '<%= aws.secret %>',
                 uploadConcurrency: 5,
                 downloadConcurrency: 5,
-                differential: true,
                 gzipRename: 'ext',
                 params: {
                     CacheControl: 'max-age=3600'
@@ -320,7 +319,7 @@ module.exports = function(grunt) {
                     region: 'ap-northeast-1',
                 },
                 files: [
-                    {action: "delete", cwd: '<%= config.distJa %>'},
+                    {action: "delete", dest: '/'},
                     {expand: true, cwd: '<%= config.distJa %>', src: ['**', '!**/img/**', '!**/fonts/**'], dest: ''},
                     {expand: true, cwd: '<%= config.distJa %>', src: ['img/**', 'fonts/**'], dest: '', params: {CacheControl: 'max-age=604800'}},
                 ]
@@ -331,7 +330,7 @@ module.exports = function(grunt) {
                     region: '',
                 },
                 files: [
-                    {action: "delete", cwd: '<%= config.distEn %>'},
+                    {action: "delete", dest: '/'},
                     {expand: true, cwd: '<%= config.distEn %>', src: ['**', '!img/**/*', '!**/fonts/**'], dest: ''},
                     {expand: true, cwd: '<%= config.distEn %>', src: ['img/**/*', 'fonts/**'], dest: '', params: {CacheControl: 'max-age=604800'}},
                 ]
