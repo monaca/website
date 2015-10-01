@@ -295,6 +295,10 @@ html[lang=en] body.home {
         }
         > div {
             position: static;
+            @media screen and (min-width: $break + 1px) and (max-width: 1000px) {
+                padding-left: 3%;
+                padding-right: 3%;
+            }
         }
         h1 {
             font-family: Helvetica, Arial, sans-serif;
@@ -333,6 +337,9 @@ html[lang=en] body.home {
             word-break: break-all;
             .small {
                 vertical-align: baseline;
+            }
+            @media screen and (min-width: $break + 1px) and (max-width: 1000px) {
+                font-size: 23px;
             }
             @media screen and (max-width: $break) {
                 -moz-box-sizing: border-box;
@@ -399,6 +406,16 @@ html[lang=en] body.home {
                 }
                 .bnr-ninjabnr-more-on {
                     opacity: 1.0;
+                }
+            }
+            @media screen and (min-width: $break + 1px) and (max-width: 1000px) {
+                width: 256px;
+                height: 116px;
+                .bnr-ninjabnr-more,
+                .bnr-ninjabnr-more-on {
+                    right: 165px;
+                    bottom: 28px;
+                    width: 62px;
                 }
             }
             @media screen and (max-width: $break) {
