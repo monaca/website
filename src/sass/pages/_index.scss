@@ -293,6 +293,9 @@ html[lang=en] body.home {
             background: url(../img/index/keyvisual_en.jpg) no-repeat center bottom #0672b3;
             padding-bottom: 20px;
         }
+        > div {
+            position: static;
+        }
         h1 {
             font-family: Helvetica, Arial, sans-serif;
             padding-top: 184px;
@@ -366,6 +369,90 @@ html[lang=en] body.home {
                     width: 100%;
                     max-width: 300px;
                 }
+            }
+        }
+        .bnr-ninjabnr {
+            position: absolute;
+            right: 10px;
+            bottom: 17px;
+            width: 356px;
+            height: 156px;
+            padding: 0;
+            .bnr-ninjabnr-bg {
+                vertical-align: bottom;
+            }
+            .bnr-ninjabnr-more,
+            .bnr-ninjabnr-more-on {
+                position: absolute;
+                right: 240px;
+                bottom: 36px;
+                width: 76px;
+                opacity: 1.0;
+                @include transition(opacity 0.3s linear);
+            }
+            .bnr-ninjabnr-more-on {
+                opacity: 0.0;
+            }
+            &:hover {
+                .bnr-ninjabnr-more {
+                    opacity: 0.0;
+                }
+                .bnr-ninjabnr-more-on {
+                    opacity: 1.0;
+                }
+            }
+            @media screen and (max-width: $break) {
+                display: none;
+            }
+        }
+    }
+    .bnr-ninjabnr-sp {
+        position: relative;
+        .bnr-ninjabnr-bg-lg,
+        .bnr-ninjabnr-bg-xs {
+            vertical-align: bottom;
+        }
+        .bnr-ninjabnr-more,
+        .bnr-ninjabnr-more-on {
+            position: absolute;
+            opacity: 1.0;
+            @include transition(opacity 0.3s linear);
+        }
+        .bnr-ninjabnr-more-on {
+            opacity: 0.0;
+        }
+        &:hover {
+            .bnr-ninjabnr-more {
+                opacity: 0.0;
+            }
+            .bnr-ninjabnr-more-on {
+                opacity: 1.0;
+            }
+        }
+        @media screen and (min-width: $break + 1px) {
+            display: none;
+        }
+        @media screen and (min-width: $break-xs + 1px) and (max-width: $break) {
+            .bnr-ninjabnr-bg-xs {
+                display: none;
+            }
+            .bnr-ninjabnr-more,
+            .bnr-ninjabnr-more-on {
+                right: percentage(150px/2200px);
+                top: percentage(150px/400px);
+                width: percentage(330px/2200px);
+            }
+        }
+        @media screen and (max-width: $break-xs) {
+            .bnr-ninjabnr-bg-lg {
+                display: none;
+            }
+            .bnr-ninjabnr-more,
+            .bnr-ninjabnr-more-on {
+                right: auto;
+                left: percentage(120px/1240px);
+                top: percentage(276px/400px);
+                width: percentage(230px/1240px);
             }
         }
     }
