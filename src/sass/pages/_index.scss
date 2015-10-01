@@ -385,6 +385,9 @@ html[lang=en] body.home {
             width: 356px;
             height: 156px;
             padding: 0;
+            @media screen and (min-width: 1170px) {
+                right: calc(50% - 580px);
+            }
             .bnr-ninjabnr-bg {
                 vertical-align: bottom;
             }
