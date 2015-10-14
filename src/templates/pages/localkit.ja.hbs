@@ -10,6 +10,8 @@ keywords: Monaca,HTML5,Cordova,PhoneGap
     <p class="version"><span id="github-published_at" class="version"></span></p>
 	
 	<div class="btns">
+		<a class="btn btn-green localkit_download_for_win" href="https://monaca.mobi/download/localkit-win">Windows版ダウンロード</a>
+		<a class="btn btn-green localkit_download_for_mac" href="https://monaca.mobi/download/localkit-mac">Mac OS X版ダウンロード</a>
 	</div>
 </div></div>
 
@@ -34,8 +36,8 @@ keywords: Monaca,HTML5,Cordova,PhoneGap
 </section>
 
 <div class="box-try">
-	<a style="color: white" class="btn btn-green localkit_download_for_win"></a>
-	<a style="color: white" class="btn btn-green localkit_download_for_mac"></a>
+	<a class="btn btn-green localkit_download_for_win" href="https://monaca.mobi/download/localkit-win">Windows版ダウンロード</a>
+	<a class="btn btn-green localkit_download_for_mac" href="https://monaca.mobi/download/localkit-mac">Mac OS X版ダウンロード</a>
 </div>
 
 
@@ -46,36 +48,20 @@ keywords: Monaca,HTML5,Cordova,PhoneGap
 $(window).load(function() {
 	var fadeInSpeed = 400;
 	$('div.keyvisual span#github-published_at').hide();
-	$("div.box-try").wrap($('<section class="btns_box_body"></section>'));
-	$('div.box-try').hide();
 	$.ajax({
 		url: 'https://api.github.com/repos/monaca/Localkit/releases',
 		dataType: 'jsonp',
 		success: function(res) {
-			$("div.keyvisual span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">バージョン<strong></strong></a> / <span id="published_Date"></span>'));
+			$("div.keyvisual span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
 			$('div.keyvisual span#github-published_at a strong').text(res.data[0].name);
-			var dateJa = moment(res.data[0].published_at).format('YYYY年MM月DD日');
-			$('div.keyvisual span#github-published_at span#published_Date').text(dateJa);
+			var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
+			$('div.keyvisual span#github-published_at span').text(dateJa);
 			$('div.keyvisual span#github-published_at').fadeIn(fadeInSpeed);
-
-			$("div.keyvisual div.btns").append($('<a class="btn btn-green localkit_download_for_win">Windows版</a>'));
-			$("div.keyvisual div.btns").append($('<a class="btn btn-green localkit_download_for_mac">Mac OS X版</a>'));
-			$('div.btns a').hide();
-			$("div.box-try a.localkit_download_for_win").text('Windows版ダウンロード');
-			$("div.box-try a.localkit_download_for_mac").text('Mac OS X版ダウンロード');
-			
-			$("a.localkit_download_for_win").attr("href",res.data[0].assets[0].browser_download_url);
-			$("a.localkit_download_for_mac").attr("href",res.data[0].assets[1].browser_download_url);
-
-			$('div.btns a').fadeIn(fadeInSpeed);
-			$('div.box-try').fadeIn(fadeInSpeed);	
 		},
 		error: function() {
 			$('div.keyvisual span#github-published_at').hide();
-			$('div.btns a').hide();
-			$('div.box-try').hide();
 		}
-	}); 
+	});
 });
 </script>
 
