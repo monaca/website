@@ -680,6 +680,11 @@ html[lang=en] body.home {
                 max-width: none;
                 overflow: hidden;
             }
+            .thumb {
+                img {
+                    width: 100%;
+                }
+            }
             .legwork {
                 h3.maintitle {
                     margin-bottom: 2px;
