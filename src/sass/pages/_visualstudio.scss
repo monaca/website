@@ -182,34 +182,6 @@ body.visualstudio {
             }
         }
         .box-try {
-            .btn {
-                padding: 12px 40px 0;
-                min-width: 210px;
-                height: auto;
-                min-height: 54px;
-                line-height: 1.2;
-                margin: 0 auto;
-                @media screen and (max-width: $break-xs) {
-                    padding: 13px 0;
-                    font-size: 16px;
-                }
-                @media screen and (min-width: $break-xs) {
-                    br.opt {
-                        display: none;
-                    }
-                }
-                a {
-                    color: #ffffff;
-                    &:hover {
-                        text-decoration: none;
-                    }
-                }
-            }
-            .notes {
-                margin-top: 30px;
-            }
-        }
-        .box-try {
             padding: 40px 0 40;
             @media screen and (max-width: $break-xs) {
                 padding-top: 40px;
@@ -219,10 +191,10 @@ body.visualstudio {
             }
             .btn {
                 font-size: 24px;
-                line-height: 63px;
-                padding: 0 20px;
+                padding: 10px 20px;
                 margin: 0 20px 20px 0;
                 min-width: 210px;
+                height: auto;
                 span {
                     font-size: 20px;
                 }
@@ -233,7 +205,9 @@ body.visualstudio {
                     }
                 }
                 @media screen and (max-width: $break-xs) {
+                    font-size: 16px;
                     margin: 40px auto 20px;
+                    padding: 13px 0;
                     width: 100%;
                     max-width: 300px;
                     line-height: 24px;
@@ -241,6 +215,14 @@ body.visualstudio {
                     padding: 10px 40px;
                     font-size: 18px;
                 }
+                @media screen and (min-width: $break-xs) {
+                    br.opt {
+                        display: none;
+                    }
+                }
+            }
+            .notes {
+                margin-top: 30px;
             }
         }
     }
@@ -278,8 +260,8 @@ html[lang="en"] body.visualstudio {
         }
         .btn {
             font-size: 24px;
-            line-height: 63px;
-            padding: 0 20px;
+            line-height: 1.4;
+            padding: 14px 20px;
             margin: 0 20px 20px 0;
             min-width: 210px;
             span {
@@ -295,8 +277,6 @@ html[lang="en"] body.visualstudio {
                 margin: 0 auto 40px;
                 width: 100%;
                 max-width: 300px;
-                line-height: 26px;
-                text-align: center;
                 padding: 10px 40px;
             }
         }
@@ -417,6 +397,9 @@ html[lang="en"] body.visualstudio {
                 text-decoration: none;
             }
         }
+        .box-try {
+            padding: 0;
+        }
     }
     section, section.content_btm {
         border-bottom: 1px solid #ccc;
@@ -447,8 +430,8 @@ html[lang="en"] body.visualstudio {
                 max-width: none;
                 overflow: hidden;
             }
-            .legwork,
-            .onsentools-xs{
+            .experience,
+            .onsentools-xs {
                 h2 {
                     text-align: center;
                     color: #333;
@@ -465,7 +448,7 @@ html[lang="en"] body.visualstudio {
                     }
                 }
             }
-            &:nth-child(1){
+            &:nth-child(1) {
                 padding: 10px 10% 0px;
                 border-bottom: 0px solid #d9d9d9;
                 p{
@@ -492,6 +475,7 @@ html[lang="en"] body.visualstudio {
                 padding: 26px 5%;
             }
             &:nth-child(2),
+            &:nth-child(3),
             &:nth-child(4) {
                 display: table;
                 border-bottom: none;
@@ -499,8 +483,12 @@ html[lang="en"] body.visualstudio {
                 padding-bottom: 80px;
                 .thumb {
                     display: table-cell;
-                    vertical-align: bottom;
+                    vertical-align: middle;
                     text-align: left;
+                    width: 50%;
+                    img {
+                        width: 100%;
+                    }
                 }
                 .onsentools-lg {
                     display: table-cell;
