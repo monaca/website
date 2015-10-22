@@ -680,6 +680,11 @@ html[lang=en] body.home {
                 max-width: none;
                 overflow: hidden;
             }
+            .thumb {
+                img {
+                    width: 100%;
+                }
+            }
             .legwork {
                 h3.maintitle {
                     margin-bottom: 2px;
@@ -698,7 +703,7 @@ html[lang=en] body.home {
                 h3 {
                     text-align: center;
                 }
-                @media screen and (max-width: 1170px) {
+                @media screen and (max-width: $break-xl) {
                     padding-left: 5%;
                     padding-right: 5%;
                 }
