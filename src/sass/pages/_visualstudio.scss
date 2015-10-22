@@ -240,6 +240,7 @@ html[lang="en"] body.visualstudio {
         height: 650px;
         @media screen and (max-width: $break) {
             padding-bottom: 30px;
+            height: auto;
         }
     }
     h2 {
@@ -252,17 +253,16 @@ html[lang="en"] body.visualstudio {
     }
     .box-try {
         padding: 40px 0 0;
-        @media screen and (max-width: $break-xs) {
-            padding-top: 40px;
-        }
         @media screen and (max-width: $break) {
             padding-top: 50px;
         }
+        @media screen and (max-width: $break-xs) {
+            padding-top: 40px;
+        }
         .btn {
             font-size: 24px;
-            line-height: 1.4;
+            line-height: 1.2em;
             padding: 14px 20px;
-            margin: 0 20px 20px 0;
             min-width: 210px;
             span {
                 font-size: 20px;
@@ -273,34 +273,29 @@ html[lang="en"] body.visualstudio {
                     text-decoration: none;
                 }
             }
-            @media screen and (max-width: $break-xs) {
+            @media screen and (max-width: $break $break-xs) {
                 margin: 0 auto 40px;
                 width: 100%;
                 max-width: 300px;
                 padding: 10px 40px;
+                line-height: 1.0em;
             }
-        }
-    }
-    div.content_l{
-        border-bottom: 1px solid #ccc;
-        padding: 0px 0 800px;
-        div {
-            text-align: left;
-            float: left;
-        }
-        div.c_01{
-            margin-right: 40px;
-        }
-    }
-    div.content_r {
-        border-bottom: 1px solid #ccc;
-        padding: 0px 0 400px;
-        div {
-            text-align: left;
-            float: right;
-        }
-        div.c_01{
-            margin-right: 40px;
+            @-moz-document url-prefix() {
+                @media screen and (max-width: $break) {
+                    margin: 0 auto 40px;
+                    width: 100%;
+                    max-width: 300px;
+                    padding: 10px 40px;
+                    line-height: 0.5em;
+                }
+                @media screen and (max-width: $break-xs) {
+                    margin: 0 auto 40px;
+                    width: 100%;
+                    max-width: 300px;
+                    padding: 10px 40px;
+                    line-height: 1.0em;
+                }
+            }
         }
     }
     section {
@@ -455,11 +450,12 @@ html[lang="en"] body.visualstudio {
                     width: 600px;
                     margin-bottom: 100px;
                 }
-                @media screen and (max-width: 1170px) {
+                @media screen and (max-width: $break) {
                     padding-left: 5%;
                     padding-right: 5%;
                     p{
-                        width: 100%;
+                        width: 600px;
+                        margin-bottom: 100px;
                     }
                 }
                 @media screen and (max-width: $break-xs) {
