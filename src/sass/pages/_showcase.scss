@@ -822,7 +822,6 @@ body.showcase.naganobank {
     article.main .app-info.backstory-tablet {
         background: url(/img/naganobank/img_2.jpg) no-repeat right bottom;
         min-height: 650px;
-        }
     }
     article.main .backstory {
         img {
@@ -831,6 +830,9 @@ body.showcase.naganobank {
     }
     article.main .effect {
         background: url(/img/naganobank/bg_effect.jpg) no-repeat center top;
+    }
+    article.main figure figcaption {
+        margin-bottom: 40px;
     }
     article.main .interview {
         .alignleft, .alignright {
