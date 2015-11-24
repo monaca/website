@@ -135,6 +135,18 @@ html[lang=ja] body.localkit {
 }
 ```
 
+## jQuery load order
+
+As jQuery is loaded in the bottom of pages, we can't use $(function(){}) before it.
+use addEventListener instead:
+
+```javascript
+window.addEventListener("load", function() {
+    $(".slick").slick();
+});
+```
+
+
 ## Bower Components
 
 * Twitter Bootstrap
