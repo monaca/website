@@ -324,8 +324,8 @@ module.exports = function(grunt) {
             },
             en: {
                 options: {
-                    bucket: 'monaca.io',
-                    region: '',
+                    bucket: grunt.option('aws-bucket'),
+                    region: grunt.option('aws-region'),
                 },
                 files: [
                     {action: "delete", dest: '/'},
