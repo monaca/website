@@ -9,6 +9,10 @@ machine:
 checkout:
   post:
     - git submodule sync
+dependencies:
+  override:
+    - npm install
+    - npm rebuild node-sass
 deployment:
   staging:
     branch: master
