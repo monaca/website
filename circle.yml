@@ -9,9 +9,6 @@ machine:
 checkout:
   post:
     - git submodule sync
-dependencies:
-  override:
-    - npm install
 deployment:
   staging:
     branch: master
