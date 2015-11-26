@@ -18,8 +18,8 @@ deployment:
     branch: master
     commands:
       - npm install -g grunt
-      - grunt deploy:en --aws-key="${AWS_KEY}" --aws-secret="${AWS_SECRET}" --aws-region="ap-northeast-1" --aws-bucket="s.monaca.io"
-      - grunt deploy:ja --aws-key="${AWS_KEY}" --aws-secret="${AWS_SECRET}" --aws-region="ap-northeast-1" --aws-bucket="s.ja.monaca.io"
+      - grunt deploy:en --aws-key="${AWS_KEY}" --aws-secret="${AWS_SECRET}" --aws-region="" --aws-bucket="stg-monaca.io"
+      - grunt deploy:ja --aws-key="${AWS_KEY}" --aws-secret="${AWS_SECRET}" --aws-region="" --aws-bucket="stg-ja.monaca.io"
   production:
     branch: production
     commands:
