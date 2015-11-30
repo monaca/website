@@ -6,7 +6,7 @@ This repository contains assets and other public materials that are published on
 
 ### /dist
 
-Compiled files will be placed into here
+Compiled files will be placed into here.
 
 _grunt server command don't watch assets directory, so please run "build" manually after you moved any filed in assets folder._
 
@@ -14,25 +14,25 @@ _grunt server command don't watch assets directory, so please run "build" manual
 
 Assemble templates.
 
-layouts/default.hbs
-: Master template
+- `layouts/default.hbs`
+   : Master template
 
-layouts:index.hbs
-: Template for index.html
+- `layouts:index.hbs`
+   : Template for index.html
 
-pages/*.hbs
-: Template for each HTML files
+- `pages/*.hbs`
+   : Template for each HTML files
 
-partials/footer.hbs
-: Global footer
+- `partials/footer.hbs`
+   : Global footer
 
-partials/header.hbs
-: Global header
+- `partials/header.hbs`
+   : Global header
 
 ### /docs
 
-docs/styleguide
-: Style guide
+- `docs/styleguide`
+   : Style guide
 
 ## Available Grunt tasks
 
@@ -42,36 +42,41 @@ docs/styleguide
 grunt build
 ```
 
-1. Copy assets in /src/assets into /dist.
+1. Copy assets in `/src/assets` into `/dist`.
 2. Compile sass files.
-3. Concat JS files in /src/js. Created "all.js" is placed to /dist/js.
+3. Concatenate JS files in `/src/js`. Generated `all.js` will be placed in `/dist/js`.
 
 
 ### Watch and live-reload
 
-If you wanna launch both English and Japanese server, do: 
+To launch both English and Japanese Website in the local environment: 
 
 ```
 grunt server
 ```
 
-or type like this for single server:
+or type like this for each languages:
 
 ```
 grunt server:ja
 grunt server:en
 ```
 
-_server command don't watch assets directory, so please run "build" manually after you moved any filed in assets folder._
+_server command don't watch assets directory. Please run `build` manually after you moved any filed in assets folder._
 
-### Deploy to the server
+## About [Assemble](http://assemble.io/)
 
-```
-grunt deploy:en
-grunt deploy:ja
-```
+Assemble is a component and static site generator that makes it dead simple to build modular sites, documentation and components from reusable templates and data.
 
-Note: Required to create aws_keys.json manually.
+* [Documentation](http://assemble.io/docs/)
+* [Plugins](http://assemble.io/plugins/) - Plugins extend the core functionality of Assemble.
+
+### Handlebars Template System
+
+Templates are compiled by [Handlebars](http://handlebarsjs.com/).
+
+- Handlebar Built-in Helpers: [Built-In Helpers](http://handlebarsjs.com/builtin_helpers.html)
+- Additional Helpers: [handlebars-helpers](http://github.com/assemble/handlebars-helpers)
 
 ## i18n
 
@@ -135,10 +140,9 @@ html[lang=ja] body.localkit {
 }
 ```
 
-## jQuery load order
+## Using jQuery
 
-As jQuery is loaded in the bottom of pages, we can't use $(function(){}) before it.
-use addEventListener instead:
+As jQuery is loaded in the bottom of pages, we can't use $(function(){}) before it. Use addEventListener instead:
 
 ```javascript
 window.addEventListener("load", function() {
@@ -146,24 +150,19 @@ window.addEventListener("load", function() {
 });
 ```
 
+## Deployment
+
+Deployment to the staging server is automatically made by pushing to `master` branch. Similarly, deployment to to the production server is automatically done by pushing to `production` branch.
+
+Staging server URL: http://s.ja.monaca.io/ and http://s.monaca.io/.
 
 ## Bower Components
 
 * Twitter Bootstrap
-
 * jQuery
-
 * CodeMirror
 
 These components are copied to appropriate directories by "grunt copy".
-
-## [Assemble](http://assemble.io/)
-
-Assemble is a component and static site generator that makes it dead simple to build modular sites, documentation and components from reusable templates and data.
-
-* Documentation
-* Plugins - Plugins extend the core functionality of Assemble.
-* Helpers - Documentation for the helpers in the [handlebars-helpers](http://github.com/assemble/handlebars-helpers) library.
 
 ## Copyright
 
