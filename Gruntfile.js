@@ -28,7 +28,7 @@ module.exports = function(grunt) {
             src: 'src',
             dist: 'dist/en',
             distJa: 'dist/ja',
-            distEn: 'dist/en'
+            distEn: 'dist/en'    
         },
 
         sass: {
@@ -300,12 +300,10 @@ module.exports = function(grunt) {
             }
         },
 
-        aws: grunt.file.readJSON('aws_keys.json'),
-
         aws_s3: {
             options: {
-                accessKeyId: '<%= aws.key %>',
-                secretAccessKey: '<%= aws.secret %>',
+                accessKeyId: grunt.option('aws-key'),
+                secretAccessKey: grunt.option('aws-secret'),
                 uploadConcurrency: 5,
                 downloadConcurrency: 5,
                 gzipRename: 'ext',
@@ -315,8 +313,8 @@ module.exports = function(grunt) {
             },
             ja: {
                 options: {
-                    bucket: 'ja.monaca.io',
-                    region: 'ap-northeast-1',
+                    bucket: grunt.option('aws-bucket'),
+                    region: grunt.option('aws-region'),
                 },
                 files: [
                     {action: "delete", dest: '/'},
@@ -326,8 +324,8 @@ module.exports = function(grunt) {
             },
             en: {
                 options: {
-                    bucket: 'monaca.io',
-                    region: '',
+                    bucket: grunt.option('aws-bucket'),
+                    region: grunt.option('aws-region'),
                 },
                 files: [
                     {action: "delete", dest: '/'},
@@ -335,35 +333,6 @@ module.exports = function(grunt) {
                     {expand: true, cwd: '<%= config.distEn %>', src: ['img/**/*', 'fonts/**'], dest: '', params: {CacheControl: 'max-age=604800'}},
                 ]
             },
-        },
-
-        invalidate_cloudfront: {
-            options: {
-               key: '<%= aws.key %>',
-               secret: '<%= aws.secret %>',
-            },
-            ja: {
-                options: {
-                  distribution: 'EV2KT3V34BFDP'
-                },
-                files: [{
-                    expand: true,
-                    cwd: '<%= config.distJa %>',
-                    src: ['**'],
-                    dest: ''
-                }]
-            },
-            en: {
-                options: {
-                  distribution: 'EKMC7S6TCNKNJ'
-                },
-                files: [{
-                    expand: true,
-                    cwd: '<%= config.distEn %>',
-                    src: ['**'],
-                    dest: ''
-                }]
-           }
         },
 
         clean: {
@@ -428,7 +397,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-aws-s3');
-    grunt.loadNpmTasks('grunt-invalidate-cloudfront');
     grunt.loadNpmTasks('grunt-styledocco');
 
     grunt.registerTask('server', [
@@ -467,15 +435,13 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy:ja', [
         'build',
         'compress',
-        'aws_s3:ja',
-        'invalidate_cloudfront:ja'
+        'aws_s3:ja'
     ]);
 
     grunt.registerTask('deploy:en', [
         'build',
         'compress',
-        'aws_s3:en',
-        'invalidate_cloudfront:en'
+        'aws_s3:en'
     ]);
 
     grunt.registerTask('styleguide', [
