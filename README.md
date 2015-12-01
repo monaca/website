@@ -2,6 +2,15 @@
 
 This repository contains assets and other public materials that are published on http://monaca.io Website.
 
+## Settting Up
+
+```
+$ git clone https://github.com/monaca/website.git
+$ cd website
+$ npm install
+$ npm install -g grunt-cli
+```
+
 ## Directory structure
 
 ### /dist
