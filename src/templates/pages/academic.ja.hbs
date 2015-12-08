@@ -2,6 +2,7 @@
 title: Monacaアカデミックプラン - 教育機関専用プラン
 class: academic
 description: クラウド上のアプリ開発環境。iOS/Android/Windows向けHTML5ハイブリッドアプリに対応。
+viewport: width=1200px
 ---
 
 <div id="main-wrap">
@@ -219,19 +220,19 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
 
 $(window).load(function() {
 	var fadeInSpeed = 400;
-	$('div.keyvisual span#github-published_at').hide();
+	$('div.academic span#github-published_at').hide();
 	$.ajax({
 		url: 'https://api.github.com/repos/monaca/Localkit/releases',
 		dataType: 'jsonp',
 		success: function(res) {
-			$("div.keyvisual span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
-			$('div.keyvisual span#github-published_at a strong').text(res.data[0].name);
+			$("div.academic span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
+			$('div.academic span#github-published_at a strong').text(res.data[0].name);
 			var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
-			$('div.keyvisual span#github-published_at span').text(dateJa);
-			$('div.keyvisual span#github-published_at').fadeIn(fadeInSpeed);
+			$('div.academic span#github-published_at span').text(dateJa);
+			$('div.academic span#github-published_at').fadeIn(fadeInSpeed);
 		},
 		error: function() {
-			$('div.keyvisual span#github-published_at').hide();
+			$('div.academic span#github-published_at').hide();
 		}
 	});
 });
