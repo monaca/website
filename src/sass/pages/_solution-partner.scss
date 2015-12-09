@@ -22,8 +22,16 @@ body.solution-partner {
       width: 1170px;
       z-index: 101;
     }
-    .outline_list {
-    color: #666;
+    .partner {
+      p {
+        font-size: 14px;
+        line-height: 22px;
+        color: #333;
+        margin-bottom: 10px;
+      }
+    }
+    .outline-list {
+        color: #666;
         font-size: 14px;
         line-height: 22px;
         margin: 0px auto 25px auto;
@@ -32,14 +40,22 @@ body.solution-partner {
         width: 790px;
         border: none;
         p{
+          max-width: 100%;
           color: #666;
+        }
+        a {
+          color: $_link-color;
+          text-decoration: underline;
+        }
+        a:hover {
+          text-decoration: none;
         }
         div{
           color: #666;
         }
     }
     .list-container {
-        @extend .outline_list;
+        @extend .outline-list;
         margin-bottom: 50px;
         .link-list {
             margin: 0 0 30px 40px;
@@ -85,15 +101,22 @@ body.solution-partner {
             }
         }
     }
-    .partner_item {
+    .partner-item {
         margin: 0px auto;
         text-align: left;
         padding: 30px;
-        width: 730px;
+        width: 790px;
         border: solid 1px #e5e5e5;
         border-radius: 4px;
+        a {
+          text-decoration: underline;
+          color: $_link-color;
+        }
+        a:hover {
+          text-decoration: none;
+        }
     }
-    .partner_head {
+    .partner-head {
         width: 730px;
         margin: 0px;
         padding: 0px 0px 14px 0px;
@@ -104,11 +127,11 @@ body.solution-partner {
           display: block;
         }
     }
-    .partner_logo {
+    .partner-logo {
         float: left;
         margin: 0px 0px 0px 0px;
     }
-    .partner_info {
+    .partner-info {
         width: 590px;
         margin: 0px 20px 0px 90px;
     }
@@ -120,16 +143,16 @@ body.solution-partner {
         line-height: 14px;
         margin: 12px 0px 0px 0px;
     }
-    .partner_name {
+    .partner-name {
         width: 590px;
-    color: #363636;
+        color: #363636;
         font-size: 24px;
         line-height: 120%;
         text-align: left;
         margin-bottom: 6px;
     }
-    .partner_location {
-    color: #666;
+    .partner-location {
+        color: #666;
         font-size: 12px;
         line-height: 18px;
         text-align: left;
@@ -137,7 +160,7 @@ body.solution-partner {
     }
 
 
-    .partner_content {
+    .partner-content {
         width: 730px;
         margin: 0px;
         padding: 0px;
@@ -147,13 +170,13 @@ body.solution-partner {
           display: block;
         }
     }
-    .partner_content_left {
+    .partner-content-left {
         float: left;
         width: 430px;
         margin: 0px 40px 0px 0px;
         padding: 0px;
     }
-    .partner_abstract {
+    .partner-abstract {
     color: #666;
         font-size: 13px;
         line-height: 160%;
@@ -161,26 +184,26 @@ body.solution-partner {
         margin: 21px 0px 36px 0px;
         padding: 0px;
     }
-    .partner_field {
+    .partner-field {
     color: #666;
         font-size: 13px;
         line-height: 160%;
         width: 430px;
         padding: 0px;
     }
-    .partner_content_right {
+    .partner-content-right {
         float: right;
         width: 260px;
         margin: 0px;
         padding: 0px;
     }
 
-    .partner_works {
+    .partner-works {
         width: 260px;
         margin: 0px;
         padding: 0px;
     }
-    .partner_work_item {
+    .partner-work-item {
         width: 260px;
         margin: 0px;
         padding: 17px 0px 20px 0px;
@@ -191,7 +214,7 @@ body.solution-partner {
           display: block;
         }
     }
-    .work_item_prof {
+    .work-item-prof {
     color: #666;
         font-size: 13px;
         line-height: 140%;
@@ -203,20 +226,20 @@ body.solution-partner {
           display: block;
         }
     }
-    .work_item_ico {
+    .work-item-ico {
         float: left;
         width: 60px;
         margin: 0px 0px 0px 0px;
         padding: 0px;
     }
-    .work_item_info {
+    .work-item-info {
         margin: 0px 0px 0px 68px;
         padding: 0px;
         a {
           line-height: 160%;
        }
     }
-    .partner_contact {
+    .partner-contact {
         float:left;
         background-color: #f2f2f2;
         font-size: 12px;
@@ -226,7 +249,7 @@ body.solution-partner {
         padding: 0px;
         border-radius: 2px;
     }
-    .partner_contact_list {
+    .partner-contact-list {
         margin: 11px 15px 11px 15px;
         padding: 0px;
         &:after{
@@ -235,7 +258,7 @@ body.solution-partner {
           display: block;
         }
     }
-    .partner_contact_item {
+    .partner-contact-item {
         width: 230px;
         margin: 0px;
         padding: 0px;
@@ -245,7 +268,7 @@ body.solution-partner {
           display: block;
         }
     }
-    .partner_contact_content {
+    .partner-contact-content {
         text-align: left;
         word-wrap: break-word;
         word-break: break-word;
@@ -253,8 +276,9 @@ body.solution-partner {
         margin: 0px 15px 0px 44px;
         padding: 0px;
     }
-    .btn-btt {
+    p.btn-btt {
         width: 790px;
+        max-width: 790px;
         margin: 7px auto 50px;
         text-align: right;
         font-size: 12px;
@@ -278,11 +302,11 @@ body.solution-partner {
     .menuimg {
         margin: -7px 0px 0px 0px;
     }
-    .bold_headline {
+    .bold-headline {
     color: #2472b3;
         font-weight: bold;
     }
-    .bold_headline_title {
+    .bold-headline-title {
     color: #2472b3;
         font-weight: bold;
         font-size: 14px;
@@ -365,13 +389,6 @@ body.solution-partner {
     font-size: 20px;
     letter-spacing: -0.05em;
   }
-  .partner p {
-    font-size: 14px;
-    line-height: 22px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-
 
   .outline {
     background-color: #f9f9f9;
