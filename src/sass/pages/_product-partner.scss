@@ -111,6 +111,10 @@ body.product-partner {
            display: inline;
            border-radius: 20px;
            color: #355772;
+           transition: .4s ease-in-out;
+            -webkit-transition: .4s ease-in-out;
+            -moz-transition: .4s ease-in-out;
+            -ms-transition: .4s ease-in-out;
          }
        }
 
