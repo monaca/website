@@ -159,6 +159,14 @@ body.service {
               font-weight: 400;
               text-shadow: none;
               text-align: center;
+              &:hover {
+                background-color: #1c3966;
+                border:  solid 1px #1c3966;
+               transition: .4s ease-in-out;
+                -webkit-transition: .4s ease-in-out;
+                -moz-transition: .4s ease-in-out;
+                -ms-transition: .4s ease-in-out;
+              }
             }
         }
         th {
@@ -181,6 +189,12 @@ body.service {
             line-height: 1.4;
             color: #363636;
             margin-bottom: 10px;
+            a {
+              text-decoration: underline;
+              &:hover {
+              text-decoration: none;
+              }
+            }
           }
         }
         .theme {
@@ -326,9 +340,6 @@ body.service {
       .table-purple {
         th, td {
           /*border: 1px solid #68217a;*/
-        }
-        .course-title {
-          width: 200px;
         }
         .theme {
           width: 580px;

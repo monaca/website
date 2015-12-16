@@ -359,7 +359,7 @@ viewport: width=1200px
 
   <div class="gray-bg-container">
     <h3 class="trainee-voice-title">受講者の声</h3>
-    <div id="slides" class="trainee-voice">
+    <div id="slides1" class="trainee-voice">
       <div><span>効果的に全体像がわかりました。</span></div>
       <div><span>分かりやすくて、テンポもよく良かったです。</span></div>
       <div><span>講座以外の質問にもご丁寧に回答していただきまして<br>ありがとうございました。</span></div>
@@ -393,26 +393,16 @@ HTML5を用いたモバイルアプリ開発の需要は、B2Cアプリのみな
     <button onClick="location.href='/ja/support/inquiry/training'" class="btn-h56">お問い合わせ</button>
   </div>
 <script>
-  $(function(){
-   $('#slides').slidesjs({
-     width: 730,
-     height: 80,
-     navigation: false,
-     pagination: false,
-       play: {
-        auto: true,
-        active: false,
-        effect: "slide",
-        interval: 5000,
-        pauseOnHover: true
-       },
-       effect: {
-        slide: {
-         speed: 2000
-        }
-       }
-   });
+$(document).ready(function(){
+  $('.trainee-voice-title').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 8000,
+    dots: false,
+    arrows: false
   });
+});
 </script>
 </section>
 <script src="/js/jquery.smoothScroll.js"></script>
@@ -441,5 +431,16 @@ $(window).load(function() {
 	});
 });
 </script>
-
+<script>
+    window.addEventListener("load", function() {
+        $('.trainee-voice-title').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 8000,
+            dots: false,
+            arrows: false
+        });
+   });
+</script>
 

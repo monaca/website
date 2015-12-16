@@ -87,23 +87,12 @@ body.product-partner {
        a {
          color: #355772;
          text-decoration: none;
-
-         p {
-           font-size: 20px;
-           line-height: 20px;
-           padding: 6px 18px;
-           display: inline;
-           border-radius: 20px;
-           color: #355772;
-         }
-
          &:hover {
            color: #fff;
            transition: .4s ease-in-out;
             -webkit-transition: .4s ease-in-out;
             -moz-transition: .4s ease-in-out;
             -ms-transition: .4s ease-in-out;
-
            .cate-img {
              background-position: 0 -200px;
            }
@@ -114,6 +103,14 @@ body.product-partner {
              background-color: #355772;
              color: #fff;
            }
+         }
+         p {
+           font-size: 20px;
+           line-height: 20px;
+           padding: 6px 18px;
+           display: inline;
+           border-radius: 20px;
+           color: #355772;
          }
        }
 
