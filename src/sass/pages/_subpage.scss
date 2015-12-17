@@ -1,5 +1,6 @@
 $break-xs: 640px;
 /* Subpage */
+
 body.terms-of-service {
   color: #666;
     a > img:hover {
@@ -11,7 +12,7 @@ body.terms-of-service {
       height: 50px;
       position: relative;
       z-index: 100;
-      .navbar {
+      &.navbar {
         margin: 0;
       }
     }
@@ -44,6 +45,9 @@ body.terms-of-service {
       text-align: center;
       padding: 0;
       border: none;
+      span {
+        font-size: 18px;
+      }
       @media screen and (max-width: $break) {
         font-size: 24px;
       }
@@ -59,6 +63,13 @@ body.terms-of-service {
     p {
       margin: 0 auto 10px auto;
       line-height: 26px;
+    }
+    a.info {
+      color: #666;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
     }
     .headline-nav {
       margin-bottom: 40px;
@@ -150,7 +161,6 @@ body.terms-of-service {
     }
   }
 }
-
 
 #company, #companyTeam {
   .container {
