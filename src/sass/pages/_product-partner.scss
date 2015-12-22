@@ -1,0 +1,280 @@
+body.product-partner {
+    header {
+      background-color: #222;
+      border-bottom: 1px solid #080808;
+      height: 50px;
+      position: relative;
+      z-index: 100;
+    }
+    .navbar {
+      margin: 0;
+    }
+    header > .container {
+      border-bottom: medium none;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0;
+      width: 1170px;
+      z-index: 101;
+    }
+    section {
+      padding: 0;
+      width: 100%;
+    }
+    #productsPartner {
+      position: relative;
+      z-index: 0;
+      box-sizing: border-box;
+      border: none;
+    a {
+      color: #44b6ff;
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    p.btn-btt {
+      text-align: right;
+      margin: 8px 0 150px;
+      max-width: 100%;
+    }
+
+    .productsPartner-header {
+      width: 100%;
+      height: 400px;
+      background: url(/img/product-partner/bg_keyvisual_repeat.png) repeat-x 0 0;
+      overflow: hidden;
+
+      .productsPartner-contents {
+        height: 400px;
+
+        .productsPartner-txt {
+          width: 1170px;
+          margin: 0 auto;
+
+          h2 {
+            margin: 0 -369px;
+          }
+        }
+      }
+    }
+
+    .cate {
+      width: 1170px;
+      margin: 110px auto 140px;
+    }
+
+    .cate-link {
+      width: 100%;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      justify-content: center;
+      -webkit-justify-content: center;
+      -moz-box-pack: center;
+
+      li {
+        width: 200px;
+        text-align: center;
+        margin-right: 70px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+       a {
+         color: #355772;
+         text-decoration: none;
+         &:hover {
+           color: #fff;
+           transition: .4s ease-in-out;
+            -webkit-transition: .4s ease-in-out;
+            -moz-transition: .4s ease-in-out;
+            -ms-transition: .4s ease-in-out;
+           .cate-img {
+             background-position: 0 -200px;
+           }
+
+           p {
+             padding: 6px 18px;
+             border-radius: 20px;
+             background-color: #355772;
+             color: #fff;
+           }
+         }
+         p {
+           font-size: 20px;
+           line-height: 20px;
+           padding: 6px 18px;
+           display: inline;
+           border-radius: 20px;
+           color: #355772;
+           transition: .4s ease-in-out;
+            -webkit-transition: .4s ease-in-out;
+            -moz-transition: .4s ease-in-out;
+            -ms-transition: .4s ease-in-out;
+         }
+       }
+
+       .cate-img {
+         width: 200px;
+         height: 200px;
+         margin: 0 auto 20px;
+         background-position: 0 0;
+         background-repeat: no-repeat;
+
+         &:hover {
+          background-position: 0 -200px;
+         }
+       }
+
+       .test-img {
+         background-image: url(/img/product-partner/test_img.png);
+       }
+       .backend-img {
+         background-image: url(/img/product-partner/backend_img.png);
+       }
+       .ad-img {
+         background-image: url(/img/product-partner/ad_img.png);
+       }
+       .analytics-img {
+         background-image: url(/img/product-partner/analytics_img.png);
+       }
+      }
+    }
+
+    .list-contents {
+      width: 1170px;
+      margin: 0 auto;
+
+      h3 {
+        color: #444444;
+        font-size: 36px;
+        font-weight: normal;
+        line-height: 1;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      table {
+        layout: fixed;
+        border-top: 2px solid #0092bf;
+        border-bottom: 1px solid #dbdbdb;
+
+        th,td {
+          border-bottom: 1px solid #dbdbdb;
+          vertical-align: middle;
+          padding: 60px 40px 0 40px;
+        }
+
+        .products-name {
+          width: 250px;
+          padding: 0 50px;
+          background-color: #fafafa;
+          text-align: center;
+
+          img {
+            margin-bottom: 15px;
+          }
+
+          a {
+            color: #505763;
+          }
+          .btn-gray-line {
+              -moz-user-select: none;
+              background-color: #fff;
+              border: 2px solid #d6d6d6;
+              border-radius: 3px;
+              box-sizing: border-box;
+              color: #505763;
+              display: inline-block;
+              font-size: 15px;
+              font-weight: 500;
+              height: 40px;
+              letter-spacing: 1px;
+              line-height: 38px;
+              margin-left: 5px;
+              padding: 0 12px;
+              text-decoration: none;
+              transition: all 0.1s linear 0s;
+              &:hover {
+                opacity: 0.8;
+              }
+          }
+        }
+
+        .outline {
+          width: 600px;
+          padding-right: 0;
+
+          .outline-contents {
+            border-right: 1px solid #dbdbdb;
+            padding-right: 35px;
+
+            h4 {
+              color: #444;
+              font-size: 24px;
+              line-height: 26px;
+              margin-bottom: 15px;
+              font-weight: bold;
+            }
+
+            p {
+              color: #666666;
+              font-size: 14px;
+              line-height: 1.6;
+
+            }
+
+          }
+        }
+
+        .info {
+          width: 320px;
+          padding: 30px 40px;
+
+          h5 {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.4;
+            color: #555;
+          }
+
+          .link-area {
+            margin-top: 16px;
+          }
+
+          .tantou {
+            font-size: 13px;
+            line-height: 1.2;
+          }
+
+          .form, .homepage, .mail, .tel {
+            font-size: 13px;
+            line-height: 1.4;
+            margin-bottom: 14px;
+            padding-left: 26px;
+            color: #44b6ff;
+          }
+
+          .form {
+            background: url(/img/product-partner/ico_mail_form.png) no-repeat left center;
+          }
+
+          .homepage {
+            background: url(/img/product-partner/ico_url.png) no-repeat left center;
+          }
+          .mail {
+            background: url(/img/product-partner/ico_mail.png) no-repeat left center;
+          }
+
+          .tel {
+            background: url(/img/product-partner/ico_tel.png) no-repeat left center;
+          }
+        }
+      }
+    }
+  }
+}
