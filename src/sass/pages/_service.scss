@@ -429,6 +429,19 @@ body.service {
       }
       &.box-05 {
         padding: 42px 30px 30px 30px;
+        h2 {
+        margin: 12px 0 28px 0;
+        padding: 0;
+        font-size: 21px;
+        line-height: 26px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+
+        &.row2-title {
+          margin: 0 0 29px 0px;
+        }
+      }
       }
 
       @media screen and (min-width: $break + 1px) {
@@ -746,7 +759,7 @@ body.lang-en section#support {
 
         .text {
           width: 980px;
-          margin: 44px 400px 0 95px;
+          margin: 44px 400px 80px 95px;
 
           p {
             margin-bottom: 15px;
