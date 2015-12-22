@@ -23,7 +23,7 @@ component: navbar
                         <li><a href="/visualstudio.html">Monaca for Visual Studio</a></li>
                         <li><a href="/debugger.html">{{i18n "monacaDebugger"}}</a></li>
                         <li><a href="/localkit.html">Monaca Localkit</a></li>
-                        {{#is language "ja"}}<li><a href="http://monaca.mobi/ja/academic/">{{i18n "monacaAcademic"}}</a></li>{{/is}}
+                        {{#is language "ja"}}<li><a href="/academic.html">{{i18n "monacaAcademic"}}</a></li>{{/is}}
                         {{#is language "ja"}}<li><a href="http://ja.onsen.io/">Onsen UI</a></li>{{else}}<li><a href="http://onsen.io/">Onsen UI</a></li>{{/is}}
                         <li><a href="/enterprise.html">{{i18n "monacaEnterprise"}}</a></li>
                     </ul>
@@ -47,9 +47,9 @@ component: navbar
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">パートナー</a>
                         <ul class="dropdown-menu">
-                            <li><a href="http://monaca.mobi/ja/partner">開発パートナー制度</a></li>
-                            <li><a href="http://monaca.mobi/ja/partner/list">開発パートナー企業紹介</a></li>
-                            <li><a href="http://monaca.mobi/ja/productsPartner/">プロダクトパートナー</a></li>
+                            <li><a href="/solution-partner/index.html">開発パートナー制度</a></li>
+                            <li><a href="/solution-partner/list.html">開発パートナー企業紹介</a></li>
+                            <li><a href="/product-partner/index.html">プロダクトパートナー</a></li>
                         </ul>
                     </li>
                 {{else}}
@@ -72,16 +72,16 @@ component: navbar
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">サポート<span class="opt">・サービス</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/support.html">サポート・サービス概要</a></li>
-                            <li><a href="http://monaca.mobi/ja/training/">トレーニング</a></li>
-                            <li><a href="https://monaca.mobi/ja/support/index">サポート受付</a></li>
+                            <li><a href="/service/index.html">サポート・サービス概要</a></li>
+                            <li><a href="/service/training.html">トレーニング</a></li>
+                            <li><a href="https://monaca.mobi/ja/login?url=https%3A%2F%2Fmonaca.mobi%2Fja%2Fsupport%2Ftechnical">サポート受付</a></li>
                             <li><a href="/book/support/">Monaca公式ガイドブック</a></li>
                             <li><a href="/development.html">アプリ開発依頼</a></li>
                         </ul>
                     </li>
                 {{else}}
                     <li>
-                        <a href="https://monaca.mobi/en/support/index">Services</a>
+                        <a href="/service">Services</a>
                     </li>
                 {{/is}}
 
@@ -105,7 +105,7 @@ component: navbar
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">お問い合わせ</a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://monaca.mobi/ja/support/index">サポート受付</a></li>
+                            <li><a href="/service/">サポート受付</a></li>
                             <li><a href="https://monaca.mobi/ja/support/inquiry">お問い合わせ</a></li>
                             <li><a href="/development.html">アプリ開発依頼</a></li>
                             <li><a href="/careers.html">採用情報</a></li>
