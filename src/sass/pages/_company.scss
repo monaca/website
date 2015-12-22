@@ -111,12 +111,11 @@ body.company {
   .teamMember {
     @media screen and (max-width: $break) {
       width: 390px;
-
     }
     ul {
       list-style-type: none;
       li {
-      margin-right: 67px;
+      margin-right: 89px;
       margin-bottom: 32px;
       text-align:center;
       float: left;
@@ -129,6 +128,10 @@ body.company {
         font-size:12px;
         }
       }
+      li:nth-child(4n) {
+        margin-right: 0;
+      }
+
     }
     ul#monacateamList,
     ul#onsenTeamList {
@@ -137,9 +140,12 @@ body.company {
       }
     }
 
-    @media screen and (max-width: $break-xs) {
+    @media screen and (max-width: $break-xl) {
       ul li {
-        margin-right: 32px;
+        margin-right: 46px;
+      }
+      li:nth-child(4n) {
+        margin-right: 0;
       }
     }
     img {
