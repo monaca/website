@@ -1,25 +1,5 @@
 $break-xs: 640px;
 /* Subpage */
-
-body.terms-of-service {
-  color: #666;
-    a > img:hover {
-      opacity: 0.7;
-    }
-    header {
-      background-color: #222;
-      border-bottom: 1px solid #080808;
-      height: 50px;
-      position: relative;
-      z-index: 100;
-      &.navbar {
-        margin: 0;
-      }
-    }
-    section {
-      padding: 0;
-      border: none;
-    }
 .subpage {
   p {
         max-width: 980px;
@@ -614,7 +594,6 @@ section#resetpassword {
 
     }
   }
-}
 
   .lang-en .headline-nav {
     span,a {

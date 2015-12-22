@@ -199,6 +199,9 @@ body.product-partner {
               padding: 0 12px;
               text-decoration: none;
               transition: all 0.1s linear 0s;
+              &:hover {
+                opacity: 0.8;
+              }
           }
         }
 

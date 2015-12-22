@@ -427,6 +427,9 @@ body.service {
         left: 106px;
         top: -16px;
       }
+      &.box-05 {
+        padding: 42px 30px 30px 30px;
+      }
 
       @media screen and (min-width: $break + 1px) {
         &:last-child {
@@ -742,7 +745,7 @@ body.lang-en section#support {
         position: relative;
 
         .text {
-          width: 580px;
+          width: 980px;
           margin: 44px 400px 0 95px;
 
           p {
@@ -794,13 +797,13 @@ body.lang-en section#support {
               font-weight: 400;
               text-shadow: none;
               text-align: center;
+              user-select: none;
+              -moz-user-select: none;
+              -webkit-user-select: none;
+              -ms-user-select: none;
+              text-decoration: none;
               &:hover {
-                background-color: #1c3966;
-                border:  solid 1px #1c3966;
-               transition: .4s ease-in-out;
-                -webkit-transition: .4s ease-in-out;
-                -moz-transition: .4s ease-in-out;
-                -ms-transition: .4s ease-in-out;
+                opacity: 0.8;
               }
             }
         }
@@ -980,7 +983,7 @@ body.lang-en section#support {
           width: 580px;
         }
         .price {
-          width: 200px;
+          width: 220px;
         }
       }
       .table-cap {
@@ -1059,6 +1062,9 @@ body.lang-en section#support {
         border: none;
         height: 56px;
         line-height: 56px;
+        &:hover {
+          opacity: 0.8;
+        }
       }
       .movie-container {
         @extend .training-table-container;
