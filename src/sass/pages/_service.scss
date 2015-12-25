@@ -469,7 +469,7 @@ body.service {
       }
 
       > div.support-index-box-description {
-        margin-bottom: 70px;
+        margin-bottom: 100px;
 
         > p {
           font-size: 13px;
@@ -525,6 +525,7 @@ body.service {
         }
       }
 
+
      section .box-00 {
         margin-right: 0;
       }
@@ -561,7 +562,14 @@ body.service {
       }
     }
   }
-
+  .box-02 div.support-index-box-footer {
+    a {
+      width: 90%;
+      &:first-child {
+        margin-bottom: 7px;
+      }
+    }
+  }
 }
 
 
@@ -1230,4 +1238,24 @@ body.lang-en section#support {
         }
       }
     }
+}
+
+html[lang="en"] {
+  body.service {
+    #support-index .container section.box-02 {
+      div.support-index-box-description {
+        margin-bottom: 70px;
+      }
+      div.support-index-box-footer {
+        a {
+          width: 40%;
+          margin-bottom: 0;
+          display: inline-block;
+          &:first-child {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
 }
