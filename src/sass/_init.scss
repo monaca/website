@@ -3,6 +3,7 @@ $break: 767px;
 $break-xl: 1300px; // 1300 * 0.9 = 1170
 $break-lg: 970px;
 $break-xs: 640px;
+$_link-color: #4457ff;
 /*
 #### Reset CSS and global variables in _init.scss */
 
@@ -15,7 +16,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	vertical-align: baseline;
     -webkit-font-smoothing: antialiased;
 }
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
