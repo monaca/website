@@ -65,6 +65,10 @@ body.pricing article.main {
                     float: left;
                 }
             }
+            .box-1.popular {
+                border: 2px solid #2990ea;
+                padding-top: 33px;
+            }
             h2 {
                 font-size: 18px;
                 font-weight: 700;
@@ -422,6 +426,20 @@ body.pricing article.main {
                         }
                     }
                 }
+            }
+        }
+    }
+    .container.compare {
+        .compare-table {
+            width: 1026px;
+            margin: 0 auto 70px;
+            @media screen and (max-width: 1026px) {
+                width: 90%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            th, td {
+                border: 1px solid #dcdcdc;
             }
         }
     }
