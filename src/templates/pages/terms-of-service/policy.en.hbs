@@ -6,14 +6,14 @@ viewport: width=1200px
 ---
 
 <div id="main-wrap">
-<section id="privacy" class="subpage">
-  <div class="container">
-    <h1>Privacy Policy</h1>
-    <div class="line"></div>
+    <section id="privacy" class="subpage">
+      <div class="container">
+        <h1>Privacy Policy</h1>
+        <div class="line"></div>
 
-    <p class="canceler">Asial views the Internet as a domain for business activities and is fully aware and respectful of the importance of user's information as a social obligation, so we work hard to protect it appropriately.<br /><br /> In providing its various services, Asial collects information in an appropriate range, such as with cookies, access logs, etc. Further, when using Asial services, once the user confirms the content, information from registration is also gathered. The use of this information is for the purpose of providing our various services and is based on legal and fair practices.<br /><br /> Asial has administrators in charge of handling collected data in each department and they work diligently to manage it appropriately; user information is not disclosed or provided to any third party without the consent of the users. However, insofar as a request/demand for disclosure or provision of information is made by a law enforcement agency, such as a court, prosecutor's office or the police, the request may be complied with.<br /><br /> When it comes to the handling of user information, we of course comply with the laws and other norms of Japan, as well as keeping our handling in line with social mores, such as public opinion, and we also endeavor to make improvements as appropriate.<br /><br /> Asial Corporation<br /><br /> For inquiries about this matter, please contact:<br /> info@asial.co.jp
-    </p>
-  </div>
+        <p class="canceler">Asial views the Internet as a domain for business activities and is fully aware and respectful of the importance of user's information as a social obligation, so we work hard to protect it appropriately.<br /><br /> In providing its various services, Asial collects information in an appropriate range, such as with cookies, access logs, etc. Further, when using Asial services, once the user confirms the content, information from registration is also gathered. The use of this information is for the purpose of providing our various services and is based on legal and fair practices.<br /><br /> Asial has administrators in charge of handling collected data in each department and they work diligently to manage it appropriately; user information is not disclosed or provided to any third party without the consent of the users. However, insofar as a request/demand for disclosure or provision of information is made by a law enforcement agency, such as a court, prosecutor's office or the police, the request may be complied with.<br /><br /> When it comes to the handling of user information, we of course comply with the laws and other norms of Japan, as well as keeping our handling in line with social mores, such as public opinion, and we also endeavor to make improvements as appropriate.<br /><br /> Asial Corporation<br /><br /> For inquiries about this matter, please contact:<br /> info@asial.co.jp
+        </p>
+    </div>
 </section>
 <script src="/js/jquery.smoothScroll.js"></script>
 
@@ -22,24 +22,24 @@ viewport: width=1200px
 <script src="/js/jquery.min.js"></script>
 <script>
 
-$(window).load(function() {
-	var fadeInSpeed = 400;
-	$('div.terms-of-service span#github-published_at').hide();
-	$.ajax({
-		url: 'https://api.github.com/repos/monaca/Localkit/releases',
-		dataType: 'jsonp',
-		success: function(res) {
-			$("div.terms-of-service span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
-			$('div.terms-of-service span#github-published_at a strong').text(res.data[0].name);
-			var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
-			$('div.terms-of-service span#github-published_at span').text(dateJa);
-			$('div.terms-of-service span#github-published_at').fadeIn(fadeInSpeed);
-		},
-		error: function() {
-			$('div.terms-of-service span#github-published_at').hide();
-		}
-	});
-});
+    $(window).load(function() {
+    	var fadeInSpeed = 400;
+    	$('div.terms-of-service span#github-published_at').hide();
+    	$.ajax({
+    		url: 'https://api.github.com/repos/monaca/Localkit/releases',
+    		dataType: 'jsonp',
+    		success: function(res) {
+    			$("div.terms-of-service span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
+    			$('div.terms-of-service span#github-published_at a strong').text(res.data[0].name);
+    			var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
+    			$('div.terms-of-service span#github-published_at span').text(dateJa);
+    			$('div.terms-of-service span#github-published_at').fadeIn(fadeInSpeed);
+    		},
+    		error: function() {
+    			$('div.terms-of-service span#github-published_at').hide();
+    		}
+    	});
+    });
 </script>
 
 
