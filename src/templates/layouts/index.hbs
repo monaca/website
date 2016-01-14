@@ -8,10 +8,27 @@
     </title>
     <meta name="description" content="{{#is language "ja"}}Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。{{else}}Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.{{/is}}">
     {{#is language "ja"}}<meta name="keywords" content="Monaca,HTML5,Cordova,PhoneGap,MEAP">{{/is}}
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
+
+    <script>
+        var cb = function(href) {
+            var l = document.createElement("link"); l.rel = "stylesheet";
+            l.href = href;
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(l);
+        };
+
+        cb("/css/bootstrap.min.css");
+        cb("/css/style.css");
+        cb("//fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+        var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
+        if (raf) {
+            raf(cb);
+        } else {
+            window.addEventListener('load', cb);
+        }
+    </script>
+
     <link rel="shortcut icon" href="/img/favicon.ico">
-    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
 
     <meta property="og:url" content="{{#is language "ja"}}https://ja.monaca.io/{{else}}https://monaca.io/{{/is}}">
     <meta property="og:type" content="website">
