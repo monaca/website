@@ -368,7 +368,7 @@ body.book-support {
                         figcaption {
                             opacity: 1;
                             visibility: visible;
-                            @include transition-delay(0, 0, 0);
+                            @include transition-delay(0s, 0s, 0s);
                             h3 {
                                 opacity: 1;
                                 @include transform(translate(0, 0));
