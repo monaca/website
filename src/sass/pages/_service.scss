@@ -1268,9 +1268,10 @@ html[lang="en"] {
         a {
           margin: 0;
           font-size: 14px;
-          line-height: 38px;
-          height: 38px;
-          min-width: 175px;
+          font-weight: 700;
+          line-height: 40px;
+          height: 40px;
+          min-width: 170px;
           padding: 0 20px;
         }
 
@@ -1314,6 +1315,33 @@ html[lang="en"] {
             position: absolute;
             left: 0;
             bottom: 0;
+          }
+          &.stack-overflow {
+            p:nth-of-type(1) {
+              margin-bottom: 15px;
+            }
+            p:nth-of-type(2) {
+              font-size: 15px;
+              margin-bottom: 42px;
+              color: #3e5c7f;
+              text-indent: 0.1em;
+            }
+            .box-try {
+              a {
+                margin-right: 10px;
+                min-width: 140px;
+                img {
+                  width: 18px;
+                  color: #fff;
+                  margin-right: 5px;
+                  vertical-align: text-top;
+                  margin-top: 1px;
+                  &.monaca {
+                    width: 17px;
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -1360,7 +1388,12 @@ html[lang="en"] {
           position: absolute;
           right: 80px;
           bottom: 50%;
-          margin-bottom: -19px;
+          margin-bottom: -25px;
+          a {
+            height: 50px;
+            line-height: 50px;
+            font-size: 18px;
+          }
         }
       }
     }
