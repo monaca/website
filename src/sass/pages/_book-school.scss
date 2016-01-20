@@ -14,43 +14,12 @@ body.book-school {
         background: url(../img/book/support/bg_keyvisual_high_light.png) no-repeat center center, url(../img/book/support/bg_keyvisual_repeat.jpg) repeat left top;
         color: #ffffff;
         position: relative;
-        padding-top: 80px;
+        padding: 60px 0 0 0;
         @media screen and (max-width: $break) {
             padding-bottom: 30px;
         }
         .txt-80 {
             font-size: 80%;
-        }
-        .errata {
-            position: absolute;
-            right: 63px;
-            bottom: 5px;
-            width: 100%;
-            font-size: 16px;
-            line-height: 1.2;
-            color: #34454b;
-            text-align: right;
-            clear: both;
-            @media screen and(max-width: $break) {
-                position: static;
-                text-align: center;
-                margin: 0;
-            }
-            @media screen and(max-width: $break-xs) {
-                position: static;
-                text-align: center;
-                margin: 25px 0 0;
-            }
-            a {
-                color: #34454b;
-                text-decoration: underline;
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-            .glyphicon {
-                font-size: 1rem;
-            }
         }
         .official-badge {
             position: absolute;
@@ -63,7 +32,7 @@ body.book-school {
             }
         }
         .left-column {
-            width: 416px;
+            width: 296px;
             margin: 0 0 0 43px;
             float: left;
             @media screen and (max-width: $break) {
@@ -73,7 +42,7 @@ body.book-school {
             }
         }
         .right-column {
-            width: calc(100% - 522px);
+            width: calc(100% - 442px);
             margin: 0 43px 0 0;
             padding-top: 35px;
             float: right;
@@ -157,17 +126,14 @@ body.book-school {
             }
             .btn {
                 padding: 0 20px;
-                margin: 0 8px 20px;
-                min-width: auto;
-                float: left;
-                display: block;
+                margin: 0 17px 20px;
+                min-width: 262px;
                 span {
                     font-size: 20px;
                 }
                 @media screen and (max-width: $break) {
                     margin: 0 auto 20px;
                     width: 100%;
-                    max-width: 300px;
                 }
             }
         }
@@ -282,6 +248,12 @@ body.book-school {
                         width: 138px;
                     }
                 }
+                .no-image {
+                    display: block;
+                    width: 202px;
+                    margin: 0 auto;
+                    border: 1px solid #dcdcdc;
+                }
                 figure {
                     margin: 0;
                     width: 202px;
@@ -356,6 +328,7 @@ body.book-school {
                                 }
                             }
                         }
+
                         .btn-import {
                             opacity: 0;
                             @include transform(scale(1.5, 1.5));
@@ -410,6 +383,114 @@ body.book-school {
     }
     /* sample-apps */
 
+    .company {
+        margin: 0 0 70px 0;
+        .company-detail {
+            padding: 40px 50px 20px 50px;
+            margin: 0 0 30px 0;
+            border: solid 1px #cbd1d6;
+            box-sizing: border-box;
+            ul {
+                margin: 0 0 25px 0;
+                li {
+                    margin: 25px 30px 0 0;
+                    float: left;
+                    font-size: 26px;
+                    text-align: left;
+                    line-height: 1;
+                }
+                li:first-child {
+                    margin: 0 50px 0 0;
+                }
+                .company-name {
+                    font-size: 14px;
+                }
+            }
+            dl {
+                margin: 0 0 30px 0;
+                text-align: left;
+            }
+        }
+    }
+    /* company */
+
+    /* howto */
+    .howto {
+        .coming-soon {
+            width: 470px;
+            height: 60px;
+            position: relative;
+            background: rgba(255,255,255,0.7);
+            font-size: 26px;
+            line-height: 2;
+            @media screen and (max-width: $break) {
+                margin: 0 auto;
+                width: 92%;
+                height: 120px;
+                line-height: 4.5;
+            }
+            @media screen and (max-width: $break-xs) {
+                margin: 0 auto;
+                width: 92%;
+                height: 120px;
+                line-height: 4.5;
+            }
+        }
+        .coming-soon::before,
+        .coming-soon::after {
+            float: left;
+            line-height: 0;
+            margin: 0 20px 0 0;
+            padding: 26px 12px;
+            background-color: #4d5868;
+            color: #ffffff;
+            -moz-user-select: none;
+            border-radius: 3px;
+            box-sizing: border-box;
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 400;
+            height: 40px;
+            letter-spacing: 1px;
+            position: absolute;
+            z-index: -1;
+        }
+        .coming-soon::before {
+            content: "BookWayで購入";
+            left: 0;
+            @media screen and (max-width: $break) {
+                text-align: center;
+                clear: both;
+                top: 0;
+                width: 100%;
+            }
+            @media screen and (max-width: $break-xs) {
+                text-align: center;
+                width: 100%;
+                clear: both;
+                top: 0;
+            }
+        }
+        .coming-soon::after {
+            content: "アシアルで購入（法人限定）";
+            right: 0;
+            @media screen and (max-width: $break) {
+                text-align: center;
+                width: 100%;
+                clear: both;
+                bottom: 0;
+                left: 0;
+            }
+            @media screen and (max-width: $break-xs) {
+                text-align: center;
+                width: 100%;
+                clear: both;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
+
     .book-outline {
         padding: 0;
         .grid {
@@ -461,6 +542,7 @@ body.book-school {
             }
             ul {
                 padding: 0 6px;
+                margin: 0 0 10px 0;
                 li {
                     font-size: 14px;
                     line-height: 2;
@@ -486,4 +568,7 @@ body.book-school {
         }
     }
     /* book-outline */
+    .common {
+        margin: 90px auto 0 auto;
+    }
 }
