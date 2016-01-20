@@ -333,6 +333,20 @@ module.exports = function(grunt) {
                     {expand: true, cwd: '<%= config.distEn %>', src: ['img/**/*', 'fonts/**'], dest: '', params: {CacheControl: 'max-age=604800'}},
                 ]
             },
+            css: {
+                options: {
+                  bucket: grunt.option('aws-bucket'),
+                  region: grunt.option('aws-region'),
+                  params: {
+                    ContentEncoding: 'gzip' // applies to all the files!
+                  },
+                },
+                files: [{
+                    expand: true,
+                    src: '<%= config.dist %>/css/test.css',
+                    dest: '<%= config.dist %>/css/'
+                }]
+            }
         },
 
         clean: {
@@ -441,7 +455,8 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy:en', [
         'build',
         'compress',
-        'aws_s3:en'
+        'aws_s3:en',
+        'aws_s3:css'
     ]);
 
     grunt.registerTask('styleguide', [
