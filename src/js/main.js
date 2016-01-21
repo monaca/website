@@ -51,3 +51,18 @@ function setNotificationHeader() {
     $('#notificationHeader').show();
   });
 }
+
+function downloadLogo(url) {
+    var lang = checkLang(location.hostname);
+    $.ajax('https://monaca.local/'+lang+'/api/tracker?event=downloadLogoPackage&params[url]='+url, {
+        withCredentials: true
+    });
+    window.location.href=url;
+}
+
+function checkLang(hostname) {
+    if (hostname.match(/3011/) || hostname.match(/ja/)) {
+        return 'ja';
+    }
+    return 'en';
+}
