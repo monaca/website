@@ -117,11 +117,27 @@ body.logos article.main {
     }
 
     section#productlogo {
+        @media screen and (max-width: 790px) {
+            li {
+                width: 48%;
+                margin-right: 20px;
+                img {
+                    
+                }
+            }
+            li:first-child {
+                margin-right: 30px;
+            }
+        }
         li:first-child {
             margin-right: 30px;
         }
         @media screen and (max-width: $break) {
+            li {
+                width: 100%;
+            }
             li:first-child {
+                width: 100%;
                 margin-right: 0px;
             }
         }
