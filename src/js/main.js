@@ -51,3 +51,29 @@ function setNotificationHeader() {
     $('#notificationHeader').show();
   });
 }
+
+function sendTracker(event, params) {
+    var lang = checkLang(location.hostname);
+
+    $.ajax('https://monaca.mobi/' + lang + '/api/tracker?event=' + event, {
+        type: 'POST',
+        data: params,
+        xhrFields: {
+            withCredentials: true
+        }
+    });
+}
+
+function downloadLogo(url) {
+    sendTracker("downloadLogoPackage", {
+        url: url
+    })
+    window.location.href = url;
+}
+
+function checkLang(hostname) {
+    if (hostname.match(/3011/) || hostname.match(/ja/)) {
+        return 'ja';
+    }
+    return 'en';
+}
