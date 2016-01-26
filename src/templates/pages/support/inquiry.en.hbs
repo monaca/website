@@ -1,0 +1,93 @@
+---
+title: Monaca - Hybrid mobile development cloud for cross-platform app
+class: support
+description: Cloud powered HTML5 hybrid app development environment. Code and build iOS/Android/Windows apps cross-platform.
+---
+
+<section id="support-inquiry" class="subpage">
+  <div class="container">
+    <h1>Contact Us</h1>
+
+    <div id="content">
+      <form class="feedback-form" method="post" action="/ja/support/inquiry" id="contactForm">
+      <input type="hidden" name="inquiry[_csrf_token]" value="9403e2abf174a11c0be2c37d73915bad" id="inquiry__csrf_token" />
+        <div class="feedback-item feedback-item-radio">
+          <h2>Type of Inquiry:<span style="color:red"></span></h2>
+          <ul>
+              <li><label><input type="radio" class="question_type" name="inquiry[question_type]" value="general" checked="checked">General Questions</label></li>
+              <li><label><input type="radio" class="question_type" name="inquiry[question_type]" value="enterprise">Monaca Enterprise</label></li>
+              <li><label><input type="radio" class="question_type" name="inquiry[question_type]" value="partnership">Partners</label></li>
+              <li><label><input type="radio" class="question_type" name="inquiry[question_type]" value="support_service">Support & Service Overview</label></li>
+              <li><label><input type="radio" class="question_type" name="inquiry[question_type]" value="training">Training</label></li>
+          </ul>
+        </div>
+
+        <div class="feedback-item">
+          <h2>Your Name:</h2>
+          <label for="name" class="form-label-inline">Your Name<span class="required">*</span></label>
+          <input type="text" name="inquiry[name]" id="name" class="name" /><span style="color:red;"></span>
+          <br>
+          <label for="email" class="form-label-inline">E-mail address<span class="required">*</span></label>
+          <input type="text" name="inquiry[email]" value="m.kashiwazaki@live.jp" id="email" class="email" />          <span style="color:red;"></span>
+        </div>
+
+        <div class="feedback-item feedback-text">
+          <h2>Please enter your request in detail:</h2>
+          <table>
+            <tr>
+              <td class="label">Subject<span class="required">*</span></td>
+              <td class="form-item">
+                <select name="inquiry[subject]" id="inquiry_subject">
+                <option value="default">Select...</option>
+                <option value="monaca_service_inquiry">Monaca Service Inquiry</option>
+                <option value="general_plan_inquiry">General Plan Inquiry</option>
+                <option value="general_subscription_inquiry">General Subscription Inquiry</option>
+                <option value="subscription_status">Subscription Status</option>
+                <option value="subscription_modification">Subscription Modification</option>
+                <option value="refund">Refund</option>
+                <option value="other">Other</option>
+                </select>
+                <span class="error"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Applicable product<span class="required">*</span></td>
+              <td class="form-item">
+              <select id="inquiry_product_type" name="inquiry[product_type]">
+              <option value="default">Select...</option>
+              <option value="cloud_ide">Monaca Cloud IDE</option>
+              <option value="localkit">Monaca Localkit</option>
+              <option value="localkit_cli">Monaca Localkit CLI</option>
+              <option value="visual_studio">Monaca for Visual Studio</option>
+              <option value="android_debugger">Monaca Android Debugger</option>
+              <option value="ios_debugger">Monaca iOS Debugger</option>
+              <option value="enterprise">Monaca Enterprise</option>
+              <option value="onsen_ui">Onsen UI</option>
+              <option value="other">Other</option>
+              </select>
+                <span class="error"></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="label"></td>
+              <td>
+                <p>Please enter your inquiry in detail. To report an issue or ask technical questions, please use<a href='/ja/support/technical'>technical support</a>.</p>
+            </td>
+            </tr>
+            <tr>
+              <td class="label">Message<span class="required">*</span></td>
+              <td>
+                <span style="color:red"></span>
+                <textarea rows="4" cols="30" name="inquiry[message]" id="message" placeholder="Please input description here."></textarea>              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="form-footer">
+          <input id="send_feedback" name="submit" class="btn-blue" type="submit" value="Submit"/>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>

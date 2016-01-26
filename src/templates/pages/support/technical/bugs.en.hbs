@@ -1,0 +1,109 @@
+---
+title: Report Issue | HTML5 cross-platform mobile app development with Monaca
+class: support
+description: Cloud powered HTML5 hybrid app development environment. Code and build iOS/Android/Windows apps cross-platform.
+---
+
+<section id="support-tech" class="subpage">
+  <div class="container">
+    <h1>Report Issue</h1>
+          <p class="notification">Before reporting a issue, please check<a href='/ja/headline/fault' target='_blank' class='link-blue'>Status and Known Issues</a>.</p>
+      <br/>
+
+    <form method="post" action="/ja/support/technical/bugs">
+    <input value="bugs" type="hidden" name="support[support_type]" id="support_support_type" /><input type="hidden" name="support[user_name]" value="" id="support_user_name" /><input type="hidden" name="support[user_email]" value="m.kashiwazaki@live.jp" id="support_user_email" /><input type="hidden" name="support[_csrf_token]" value="f5fc7d01ba95e4de2ee0ed766d570b57" id="support__csrf_token" />      <table>
+        <tr>
+          <td class="label"><span class="input-label">Your Name:</span></td>
+          <td class="form-item"><img src="https://secure.gravatar.com/avatar/2ab53d9ed79b8019fbd3287fc2b5d4bc?s=24&d=mm" class="user-icon"><span class="user-info">m.kashiwazaki@live.jp</span></td>
+        </tr>
+
+        <tr>
+          <td class="label"><span class="input-label">Applicable product</span><span class="required">*</span></td>
+          <td class="form-item">
+            <select name="support[product_type]" id="support_product_type">
+            <option value="default">Select...</option>
+            <option value="cloud_ide">Monaca Cloud IDE</option>
+            <option value="localkit">Monaca Localkit</option>
+            <option value="localkit_cli">Monaca Localkit CLI</option>
+            <option value="visual_studio">Monaca for Visual Studio</option>
+            <option value="android_debugger">Monaca Android Debugger</option>
+            <option value="ios_debugger">Monaca iOS Debugger</option>
+            <option value="enterprise">Monaca Enterprise</option>
+            <option value="onsen_ui">Onsen UI</option>
+            <option value="other">Other</option>
+            </select>
+            <span class="error"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label"><span class="input-label">Subject</span><span class="required">*</span></td>
+          <td class="form-item">
+            <select name="support[subject]" id="support_subject">
+            <option value="default">Select...</option>
+            <option value="code_review">Code Review</option>
+            <option value="plugin">Plugin</option>
+            <option value="application_build">Application build</option>
+            <option value="setting_ios_certificates">Setting iOS Certificates</option>
+            <option value="onsen_ui">Onsen UI</option>
+            <option value="monaca_push_notification">Monaca Push Notification</option>
+            <option value="service_integration">Service Integration</option>
+            <option value="other">Other</option>
+            </select>
+            <span class="error"></span>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><span class="input-label">Please enter your request in detail:</span> <span class="error"></span></td>
+        </tr>
+
+        <tr>
+          <td class="label"></td>
+          <td class="form-item">
+            <textarea rows="4" cols="30" name="support[message]" id="support-text" placeholder="Input description here."></textarea>
+            <!--<div class="support-text-footer"><span class="expand-button">拡大 <img src="/img/inquiry/ico_tri_downward_7px.png"></span></div>-->
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><span class="input-label">Please specify target project if necessary:</span> <span class="error"></span></td>
+        </tr>
+
+        <tr>
+          <td class="label"></td>
+          <td class="form-item">
+            <select name="support[project_id]" id="support_project_id">
+            <option value="0">Select...</option>
+<option value="56a70756fd1734745c6107e2">Hello World App</option>
+            </select>
+            </td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><span class="input-label">Please specify target device if necessary:</span> <span class="error"></span></td>
+        </tr>
+
+        <tr>
+          <td class="label"></td>
+          <td class="form-item">
+             <label class="other-device-label">Other:<input type="text" name="support[device_os_other]" class="target-device" id="support_device_os_other" /></label>
+          </td>
+        </tr>
+
+
+        <tr>
+            <td class="label"></td>
+            <td class="form-item">
+              <p><label><input type="checkbox" name="support[agree_support]" id="support_agree_support" /> acknowledge the Monaca<a href='/ja/page/supportLicense' target='_blank'>Isupport policy</a>.</label> <span class="error"></span></p>
+            </td>
+        </tr>
+
+      </table>
+
+      <div class="form-footer"><input type="submit" name="submit" class="btn-blue" value="Submit"></div>
+    </form>
+
+
+  </div>
+</section>
