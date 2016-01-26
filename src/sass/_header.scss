@@ -16,6 +16,32 @@ header.navbar {
         @media screen and (max-width: $break) {
             padding: 0;
         }
+        .header-accordion {
+          background-color: #222;
+          max-height: 0;
+          overflow: hidden;
+          -webkit-transition: max-height 420ms;
+          -moz-transition: max-height 420ms;
+          -o-transition: max-height 420ms;
+          transition: max-height 420ms;
+          -webkit-transform: translate3d(0, 0, 0);
+          -moz-transform: translate3d(0, 0, 0);
+          -ms-transform: translate3d(0, 0, 0);
+          -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+        .header-accordion.on {
+          max-height: 750px;
+        }
+        .header-accordion.on:lang(ja) {
+          max-height: 1300px;
+        }
+        .header-accordion.loggedin.on {
+          max-height: 850px;
+        }
+        .header-accordion.loggedin.on:lang(ja) {
+          max-height: 1420px;
+        }
     }
     .navbar-header {
         margin: 0;
@@ -97,6 +123,17 @@ header.navbar {
         }
     }
     .navbar-nav {
+        .nav-title {
+            color: #80d4ff;
+            display: inline-block;
+            font-size: 14px;
+            height: 50px;
+            line-height: 51px;
+            padding: 0 13px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
         > li > a {
             color: #ffffff;
             padding: 16px 13px 14px;
@@ -112,11 +149,41 @@ header.navbar {
                 }
             }
         }
+        .pc {
+            display: block;
+                @media screen and (max-width: $break) {
+                    display: none;
+                }
+        }
+        .sp {
+            display: none;
+            @media screen and (max-width: $break) {
+                    display: block;
+                    a {
+                        text-align: left;
+                        text-decoration: underline;
+                        color: #80d4ff;
+                        font-weight: bold;
+                        img {
+                            margin: 0 5px 0 0;
+                        }
+                    }
+                }
+        }
+        .nav-user {
+            background: url("../img/common/user-menu-triangle.png") no-repeat scroll right center;
+            .user-icon {
+                vertical-align: -7px;
+            }
+        }
         .dropdown:hover > .dropdown-toggle {
             background-color: #2c2c2c;
             color: #7cdaff;
         }
         @media screen and (max-width: $break) {
+            .nav-dashboard {
+                text-align: left;
+            }
             .dropdown-toggle {
                 color: white;
             }
@@ -157,6 +224,16 @@ header.navbar {
                     background-color: rgba(0, 0, 0, 0.5);
                 }
             }
+            li a.nav-title {
+                color: #80d4ff;
+                font-weight: bold;
+            }
+        }
+    }
+    .nav-user {
+        .dropdown-menu {
+            @extend .dropdown-menu;
+            left: -120px;
         }
     }
     //bootstrap init
@@ -178,6 +255,7 @@ header.navbar {
         }
     }
 }
+
 // Desktop header toolbar: margin fix
 @media screen and (min-width: $break) {
     html[lang=en] {
@@ -214,6 +292,7 @@ header.navbar {
         }
     }
 }
+
 
 
 #language-switch-container {
