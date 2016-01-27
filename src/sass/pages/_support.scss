@@ -39,7 +39,7 @@ body.support {
                 text-align: center;
             }
             p {
-                margin-bottom: 30px;
+                margin-bottom: 20px;
             }
             &.tech {
                 @include clearfix;
@@ -85,6 +85,10 @@ body.support {
     }
     #support-tech {
         padding: 100px 0 30px 0;
+        width: 700px;
+        @media screen and (max-width: $break) {
+          width: 100%;
+        }
         .required {
             color: #f55b56;
             padding-left: 3px;
@@ -92,6 +96,10 @@ body.support {
       > .container {
         margin-bottom: 60px;
         width: 700px;
+        min-width: 100%;
+          hr {
+            margin: 0 0 20px 0;
+          }
             .form-item {
                 font-size: 12px;
                 color: #666;
@@ -187,7 +195,6 @@ body.support {
         > form > table {
           td {
             padding: 4px 0;
-
             > img.user-icon {
               vertical-align: middle;
               border: 1px solid #333;
@@ -353,11 +360,18 @@ body.support {
             line-height: 21px;
             margin: 0 4px;
           }
+          .link-blue {
+            font-size: 12px;
+          }
         }
 
         div.form-footer {
           margin-top: 10px;
           text-align: center;
+          width: 700px;
+          @media screen and (max-width: $break) {
+            width: 100%;
+          }
           > input[type=submit] {
             height: 40px;
             width: 200px;
@@ -369,8 +383,13 @@ body.support {
 
     #support-inquiry {
         padding: 100px 0 30px 0;
+        width: 700px;
+        @media screen and (max-width: $break) {
+          width: 100%;
+        }
       > .container {
         width: 700px;
+        min-width: auto;
         @media screen and (max-width: $break) {
           padding: 0 3%;
           width: auto;
@@ -434,6 +453,7 @@ body.support {
                     line-height: 150%;
                     margin: 0 0 10px;
                     color: #333;
+                    padding: 0;
                     a {
                         text-decoration: underline;
                         &:hover {
@@ -454,6 +474,10 @@ body.support {
             .feedback-item {
                 border-radius: 2px;
                 margin-bottom: 30px;
+                width: 700px;
+                @media screen and (max-width: $break) {
+                  width: 100%;
+                }
                 .required {
                     color: #f55b56;
                     padding-left: 3px;
@@ -464,7 +488,7 @@ body.support {
             text-align: right;
             padding-right: 10px;
             width: 120px;
-            margin-left: -80px;
+            float: left;
             @media screen and (max-width: $break) {
               text-align: left;
               margin-left: 0;
@@ -589,7 +613,7 @@ body.support {
 
           input[type="text"] {
             box-sizing: border-box;
-            width: 460px;
+            width: 540px;
             background: #fff none repeat scroll 0 0;
             border: 1px solid #cccccc;
             border-radius: 4px;
@@ -619,6 +643,10 @@ body.support {
 
           .form-footer {
             text-align: center;
+            width: 700px;
+                @media screen and (max-width: $break) {
+                  width: 100%;
+                }
             > input[type=submit] {
               height: 40px;
               width: 200px;
