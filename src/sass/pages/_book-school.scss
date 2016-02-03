@@ -14,9 +14,10 @@ body.book-school {
         background: url(../img/book/support/bg_keyvisual_high_light.png) no-repeat center center, url(../img/book/support/bg_keyvisual_repeat.jpg) repeat left top;
         color: #ffffff;
         position: relative;
-        padding: 60px 0 0 0;
+        padding: 40px 0 20px 0;
+        height: auto;
         @media screen and (max-width: $break) {
-            padding-bottom: 30px;
+            padding: 60px 0 30px 0;
         }
         .txt-80 {
             font-size: 80%;
@@ -67,6 +68,7 @@ body.book-school {
                     text-align: center;
                 }
                 @media screen and (max-width: $break-xs) {
+                    margin: 0 0 8% 0;
                     text-align: center;
                     font-size: 21px;
                 }
@@ -390,17 +392,53 @@ body.book-school {
             margin: 0 0 30px 0;
             border: solid 1px #cbd1d6;
             box-sizing: border-box;
+            .company-logo {
+                margin: 0 30px 0 0;
+                width: 312px;
+                float: left;
+                    @media screen and (max-width: $break) {
+                        width: 100%;
+                    }
+                    @media screen and (max-width: $break-xs) {
+                        width: 100%;
+                    }
+            }
             ul {
                 margin: 0 0 25px 0;
+                width: 630px;
+                float: left;
+                    @media screen and (max-width: $break) {
+                        width: 100%;
+                    }
+                    @media screen and (max-width: $break-xs) {
+                        width: 100%;
+                    }
                 li {
-                    margin: 25px 30px 0 0;
+                    margin: 25px 0 0 30px;
                     float: left;
                     font-size: 26px;
                     text-align: left;
                     line-height: 1;
+
+                        @media screen and (max-width: $break) {
+                            margin: 5px 0 0 0;
+                            font-size: 20px;
+                        }
+                        @media screen and (max-width: $break-xs) {
+                            margin: 5px 0 0 0;
+                            font-size: 20px;
+                        }
                 }
                 li:first-child {
-                    margin: 0 50px 0 0;
+                    margin: 25px 0 0 0;
+                        @media screen and (max-width: $break) {
+                            width: 100%;
+                            line-height: 1.3;
+                        }
+                        @media screen and (max-width: $break-xs) {
+                            width: 100%;
+                            line-height: 1.3;
+                        }
                 }
                 .company-name {
                     font-size: 14px;
@@ -416,6 +454,12 @@ body.book-school {
 
     /* howto */
     .howto {
+        p {
+            margin: 0 auto 10px auto;
+        }
+        .last {
+            margin: 0 auto 50px auto;
+        }
         .coming-soon {
             width: 470px;
             height: 60px;
@@ -549,12 +593,15 @@ body.book-school {
                     font-weight: 600;
                     text-align: left;
                     color: #666;
-                    .fs-12 {
-                        font-size: 12px;
+                }
+            }
+            .appendix {
+                li {
+                    font-size: 12px;
+                    line-height: 1.8;
                     }
                 }
             }
-        }
         .outline {
             -webkit-box: 3;
             -webkit-flex: 3;
