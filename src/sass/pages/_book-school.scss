@@ -14,7 +14,7 @@ body.book-school {
         background: url(../img/book/support/bg_keyvisual_high_light.png) no-repeat center center, url(../img/book/support/bg_keyvisual_repeat.jpg) repeat left top;
         color: #ffffff;
         position: relative;
-        padding: 40px 0 20px 0;
+        padding: 60px 0 20px 0;
         height: auto;
         @media screen and (max-width: $break) {
             padding: 60px 0 30px 0;
@@ -48,11 +48,12 @@ body.book-school {
             padding-top: 35px;
             float: right;
             @media screen and (max-width: $break) {
+                padding: 35px 0 0 0;
                 width: 100%;
                 float: none;
             }
             @media screen and (max-width: $break-xs) {
-                padding: 0;
+                padding: 35px 0 0 0;
             }
             h2 {
                 font-size: 30px;
@@ -392,6 +393,9 @@ body.book-school {
             margin: 0 0 30px 0;
             border: solid 1px #cbd1d6;
             box-sizing: border-box;
+            .company-info {
+                margin: 0 0 20px 0;
+            }
             .company-logo {
                 margin: 0 30px 0 0;
                 width: 312px;
@@ -597,6 +601,12 @@ body.book-school {
             }
             .appendix {
                 li {
+                    padding: 0 0 0 10px;
+                    font-size: 12px;
+                    line-height: 1.8;
+                }
+                    li:first-child {
+                    padding: 0;
                     font-size: 12px;
                     line-height: 1.8;
                     }
