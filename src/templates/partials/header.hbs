@@ -76,11 +76,16 @@ component: navbar
                             <li><a href="/service/index.html">サポート受付</a></li>
                             <li><a href="/book/support/">Monaca公式ガイドブック</a></li>
                             <li><a href="/development.html">アプリ開発依頼</a></li>
+                            <li><a href="/logos.html">ロゴの利用について</a></li>
                         </ul>
                     </li>
                 {{else}}
-                    <li>
-                        <a href="/service/index.html">Services</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Service</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/service/index.html">Support and Service</a></li>
+                            <li><a href="/logos.html">Logo Guideline</a></li>
+                        </ul>
                     </li>
                 {{/is}}
 
