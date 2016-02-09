@@ -1,0 +1,69 @@
+---
+title: 事例を登録する | MonacaでHTML5モバイルアプリ開発
+class: showcase
+description: クラウド上のアプリ開発環境。iOS/Android/Windows向けHTML5ハイブリッドアプリに対応。
+viewport: width=1200px
+---
+<div id="main-wrap">
+<section id="case_add" class="subpage">
+  <div class="container">
+    <h1>事例を登録する</h1>
+    <p>あなたのアプリを事例ページで宣伝しませんか?<br />
+(*印は必須項目です)</p>
+
+    <p class="error" style="padding-left: 250px; margin-bottom: 20px;">
+          </p>
+
+    <form action="/ja/showcase/add" method="post">
+    <table>
+      <tr>
+        <th>開発者名<span class="required">*</span></th>
+        <td>
+          <input type="text" name="form[name]" id="form_name" /><br /><span class="annotation">アプリはこのお名前とともに紹介されます。</span>
+        </td>
+      </tr>
+      <tr>
+        <th>AppStoreでのアプリのURL</th>
+        <td><input type="text" name="form[url_appstore]" class="wide" id="form_url_appstore" /><br /><span class="annotation">例： http://itunes.apple.com/jp/app/monaca/id550941371</span></td>
+      </tr>
+      <tr>
+        <th>Google PlayストアでのアプリのURL</th>
+        <td><input type="text" name="form[url_googleplay]" class="wide" id="form_url_googleplay" /><br /><span class="annotation">例： https://play.google.com/store/apps/details?id=mobi.monaca.debugger</span></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td><p>・アプリが事例ページに掲載されるかどうかは、Monacaチームによって判断されます。<br />
+・アプリのスクリーンショットや紹介文はMonacaチームによって記述されます。<br />
+・登録したアプリは必ず事例ページに掲載されるわけではないことをご了承ください。</p></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td><button type="submit" class="btn-black">事例を登録する</button></td>
+      </tr>
+    </table>
+    <input type="hidden" name="form[_csrf_token]" value="d4cb1262641c18d9e25294f53303c8b1" id="form__csrf_token" />   </form>
+  </div>
+</section>
+</div>
+
+<script>
+$(function() {
+    var cases = $(".cases li");
+    var selectors = $(".cases-category li");
+
+    selectors.click(function() {
+        selectors.removeClass("active");
+        $(this).addClass("active");
+
+        var cat = this.dataset["category"];
+
+        cases.each(function() {
+            if ((cat === "all") || (cat === this.dataset["category"])) {
+                $(this).show();
+            } else {
+                $(this).hide()
+            }
+        });
+    });
+});
+</script>
