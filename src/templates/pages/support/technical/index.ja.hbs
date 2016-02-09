@@ -8,82 +8,92 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
   <div class="container">
     <h1>テクニカルサポート</h1>
 
-      <p>テクニカルサポートは有償サービスです。利用には、Personalプラン以上の加入とサポートチケットが必要です。</p>
-      <br>
-      <hr>
+    <p>テクニカルサポートは有償サービスです。利用には、Personalプラン以上の加入とサポートチケットが必要です。</p>
+    <br>
+    <hr>
 
     <form method="post" action="/ja/support/technical">
-    <input type="hidden" name="support[user_name]" value="" id="support_user_name" /><input type="hidden" name="support[user_email]" value="mohimeg@gmail.com" id="support_user_email" /><input type="hidden" name="support[_csrf_token]" value="1fcef097bb55f6af9c374a340200198d" id="support__csrf_token" />      <table>
+      <input type="hidden" name="support[user_name]" value="" id="support_user_name" />
+      <input type="hidden" name="support[user_email]" value="mohimeg@gmail.com" id="support_user_email" />
+      <input type="hidden" name="support[_csrf_token]" value="1fcef097bb55f6af9c374a340200198d" id="support__csrf_token" />
+      <table>
         <tr>
-          <td class="label"><span class="input-label">送信者：</span></td>
-          <td class="form-item"><img src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm" class="user-icon"><span class="user-info">mohimeg@gmail.com</span></td>
+          <td class="label title-label"><span class="input-label">送信者：</span></td>
+          <td class="form-item block-item">
+            <img src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm" class="user-icon"><span class="user-info">mohimeg@gmail.com</span>
+          </td>
         </tr>
 
         <tr>
-          <td class="label"><span class="input-label">サポートの種類：</span></td>
-          <td class="form-item">
+          <td class="label title-label"><span class="input-label">サポートの種類：</span></td>
+          <td class="form-item block-item">
             <select name="support[support_type]" id="support_support_type">
-            <option value="technical">テクニカルサポート</option>
-            <option value="review">コードレビュー</option>
-            <option value="bugs">バグ報告</option>
+              <option value="technical">テクニカルサポート</option>
+              <option value="review">コードレビュー</option>
+              <option value="bugs">バグ報告</option>
             </select>
-            <span class="error"></span>
-            </td>
-          </tr>
+          </td>
+        </tr>
 
         <tr>
-          <td class="label"><span class="input-label">対象製品</span><span class="required">*</span></td>
-          <td class="form-item">
+          <td class="label title-label"><span class="input-label">対象製品</span><span class="required">*</span></td>
+          <td class="form-item block-item">
             <select name="support[product_type]" id="support_product_type">
-            <option value="default">選択してください</option>
-            <option value="cloud_ide">Monaca クラウド IDE</option>
-            <option value="localkit">Monaca Localkit</option>
-            <option value="localkit_cli">Monaca Localkit CLI</option>
-            <option value="visual_studio">Monaca for Visual Studio</option>
-            <option value="android_debugger">Monaca Androidデバッガー</option>
-            <option value="ios_debugger">Monaca iOSデバッガー</option>
-            <option value="enterprise">Monaca エンタープライズ</option>
-            <option value="onsen_ui">Onsen UI</option>
-            <option value="other">その他</option>
+              <option value="default">選択してください</option>
+              <option value="cloud_ide">Monaca クラウド IDE</option>
+              <option value="localkit">Monaca Localkit</option>
+              <option value="localkit_cli">Monaca Localkit CLI</option>
+              <option value="visual_studio">Monaca for Visual Studio</option>
+              <option value="android_debugger">Monaca Androidデバッガー</option>
+              <option value="ios_debugger">Monaca iOSデバッガー</option>
+              <option value="enterprise">Monaca エンタープライズ</option>
+              <option value="onsen_ui">Onsen UI</option>
+              <option value="other">その他</option>
             </select>
-            <span class="error"></span>
+            <span class="error">エラー内容が入ります。</span>
           </td>
         </tr>
 
         <tr>
-          <td class="label"><span class="input-label">件名</span><span class="required">*</span></td>
-          <td class="form-item">
+          <td class="label title-label"><span class="input-label">件名</span><span class="required">*</span></td>
+          <td class="form-item block-item">
             <select name="support[subject]" id="support_subject">
-            <option value="default">選択してください</option>
-            <option value="code_review">ソースコードレビュー依頼について</option>
-            <option value="plugin">プラグインの動作について</option>
-            <option value="application_build">アプリのビルドについて</option>
-            <option value="setting_ios_certificates">iOSの証明書の設定について</option>
-            <option value="onsen_ui">Onsen UIについて</option>
-            <option value="monaca_push_notification">プッシュ通知について</option>
-            <option value="service_integration">外部サービス連携について</option>
-            <option value="other">その他</option>
-            </select><span class="error"></span>
+              <option value="default">選択してください</option>
+              <option value="code_review">ソースコードレビュー依頼について</option>
+              <option value="plugin">プラグインの動作について</option>
+              <option value="application_build">アプリのビルドについて</option>
+              <option value="setting_ios_certificates">iOSの証明書の設定について</option>
+              <option value="onsen_ui">Onsen UIについて</option>
+              <option value="monaca_push_notification">プッシュ通知について</option>
+              <option value="service_integration">外部サービス連携について</option>
+              <option value="other">その他</option>
+            </select>
+            <span class="error">エラー内容が入ります。</span>
           </td>
         </tr>
 
         <tr>
-          <td colspan="2"><span class="input-label">お問い合わせ内容を記入してください：</span> <span class="error"></span></td>
+          <td colspan="2" class="colspan-title">
+            <span class="input-label">お問い合わせ内容を記入してください：</span>
+          </td>
         </tr>
 
         <tr>
-          <td class="label"></td>
+          <td class="label no-label"></td>
           <td class="form-item">
-            <textarea rows="4" cols="30" name="support[message]" id="support-text" placeholder="ここに内容を記入して下さい"></textarea>            <!--<div class="support-text-footer"><span class="expand-button">拡大 <img src="/img/inquiry/ico_tri_downward_7px.png"></span></div>-->
+            <textarea rows="4" cols="30" name="support[message]" id="support-text" placeholder="ここに内容を記入して下さい"></textarea>
+            <span class="error">エラー内容が入ります。</span>
           </td>
         </tr>
 
         <tr>
-          <td colspan="2"><span class="input-label">対象プロジェクトを選択してください（任意）：</span> <span class="error"></span></td>
+          <td colspan="2" class="colspan-title">
+            <span class="input-label">対象プロジェクトを選択してください（任意）：</span> <span class="error"></span>
+          </td>
         </tr>
 
         <tr>
-          <td class="label"></td>
+          <td class="label no-label"></td>
           <td class="form-item">
             <select name="support[project_id]" id="support_project_id">
             <option value="0">選択してください</option>
@@ -93,54 +103,74 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
         </tr>
 
         <tr>
-          <td colspan="2"><span class="input-label">現象が発生する端末を選択もしくは入力してください（任意）：</span> <span class="error"></span></td>
-        </tr>
-
-        <tr>
-          <td class="label"></td>
-          <td class="form-item">
-                        <label class="other-device-label">入力してください：<input type="text" name="support[device_os_other]" class="target-device" id="support_device_os_other" /></label>
+          <td colspan="2" class="colspan-title">
+            <span class="input-label">現象が発生する端末を選択もしくは<br class="visible-xs" />入力してください（任意）：</span>
           </td>
         </tr>
 
-                  <tr>
-            <td colspan="2"><span class="input-label">保有しているサポートチケット：</span> <strong class="ticket-retain">2</strong>枚 <a id="show_support_ticket" class="link-blue" href="#">所有チケットの詳細を表示...</a>
+        <tr>
+          <td class="label no-label"></td>
+          <td class="form-item">
+            <label class="device-label"><input type="checkbox" value="iPhone" name="support[device_os][]">iPhone/9.2</label>
+            <label class="device-label"><input type="checkbox" value="Nexus 5X" name="support[device_os][]">Nexus 5X/6.0</label>
+            <label class="device-label"><input type="checkbox" value="iPod touch" name="support[device_os][]">iPod touch/8.1.3</label>
+            <label class="other-device-label"><input type="text" name="support[device_os_other]" class="target-device" id="support_device_os_other" placeholder="入力してください" /></label>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2" class="colspan-title"><span class="input-label">保有しているサポートチケット：</span> <strong class="ticket-retain">2</strong>枚 <br class="visible-xs" /><a id="show_support_ticket" class="link-blue" href="#">所有チケットの詳細を表示...</a>
             <div class="balloon-wrapper" id="support-ticket-balloon" style="display: none;">
               <div class="balloon">
-              <table>
-                <tr><th style="padding-left: 12px;">付与日</th><th>有効期限</th></tr>
-                <tr>
+                <table>
+                  <tr><th style="padding-left: 12px;">付与日</th><th>有効期限</th></tr>
+                  <tr>
                     <td>+ 2016/01/27</td>
                     <td>2016/01/31</td>
                   </tr>
-                                    <tr>
+                  <tr>
                     <td>+ 2016/01/27</td>
                     <td>2016/01/31</td>
                   </tr>
                 </table>
               </div>
             </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="label"></td>
-            <td class="form-item">
-              <p>テクニカルサポートの返信の際に1枚のチケットが減算されます。ただし、ユーザー由来の問題でない場合にはその限りではありません。</p>
-            </td>
-          </tr>
-
-        <tr>
-            <td class="label"></td>
-            <td class="form-item">
-              <p><label><input type="checkbox" name="support[agree_support]" id="support_agree_support" /><a href='/ja/page/supportLicense' target='_blank'>サポート規約</a>について理解しました。</label> <span class="error"></span></p>
-            </td>
+          </td>
         </tr>
-
+        <tr>
+          <td class="label no-label"></td>
+          <td class="form-item">
+            <p>テクニカルサポートの返信の際に1枚のチケットが減算されます。ただし、ユーザー由来の問題でない場合にはその限りではありません。</p>
+            <p><label><input type="checkbox" name="support[agree_support]" id="support_agree_support" /><a href='/terms-of-service/support.html' target='_blank'>サポート規約</a>について理解しました。</label> <span class="error"></span></p>
+          </td>
+        </tr>
       </table>
-
       <div class="form-footer"><input type="submit" name="submit" class="btn-blue" value="送信する"></div>
     </form>
-
-
   </div>
 </section>
+
+<script>
+  window.addEventListener("load", function() {
+    $('body').click(function(e){
+      $target = $(e.target);
+
+      //support-type-balloon
+      if($target.is('#show_support_type')){
+        $('#support-type-balloon').toggle();
+        return false;
+      } else if($(e.target).parents('#support-type-balloon').length == 0){
+        $('#support-type-balloon').hide();
+      }
+
+      //support-ticket-balloon
+      if($target.is('#show_support_ticket')){
+        $('#support-ticket-balloon').toggle();
+        return false;
+      } else if($(e.target).parents('#support-type-balloon').length == 0){
+        $('#support-ticket-balloon').hide();
+      }
+    }
+    );
+  });
+</script>

@@ -97,26 +97,61 @@ body.support {
         margin-bottom: 60px;
         width: 700px;
         min-width: 100%;
-          hr {
-            margin: 0 0 20px 0;
-          }
-            .form-item {
-                font-size: 12px;
-                color: #666;
-                label {
-                    font-weight: normal;
-                        a {
-                            text-decoration: underline;
-                            &:hover {
-                                text-decoration: none;
-                            }
-                        }
-                }
-            }
         @media screen and (max-width: $break) {
-          padding: 0 3%;
+          padding: 0 10%;
           width: auto;
         }
+        @media screen and (max-width: $break-xs) {
+          padding: 0 7%;
+          width: auto;
+        }
+        hr {
+          margin: 0 0 20px 0;
+        }
+            .form-item {
+              font-size: 12px;
+              color: #666;
+              width: 100%;
+
+              p {
+                @media screen and (max-width: $break) {
+                  padding-left: 0;
+                  padding-right: 0;
+                }
+              }
+              label {
+                font-weight: normal;
+                a {
+                  text-decoration: underline;
+                  &:hover {
+                    text-decoration: none;
+                  }
+                }
+              }
+              textarea {
+                margin-left: 130px;
+              }
+              input[type=text] {
+                
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+              }
+              input[type=checkbox] {
+                margin-right: 0.4em;
+              }
+              .error {
+                display: block;
+                margin-top: 4px;
+                color: #f55b56;
+              }
+            }
+            .form-item.block-item {
+              @media screen and (max-width: $break) {
+                display: block;
+              }
+              
+            }
 
         .notification {
             a {
@@ -131,6 +166,9 @@ body.support {
           font-size: 13px;
           line-height: 20px;
           color: #666;
+          @media screen and (max-width: $break) {
+            padding: 0;
+          }
         }
 
         > ul {
@@ -194,7 +232,10 @@ body.support {
 
         > form > table {
           td {
-            padding: 4px 0;
+            padding: 4px 0 20px;
+            @media screen and (max-width: $break) {
+              padding-bottom: 30px;
+            }
             > img.user-icon {
               vertical-align: middle;
               border: 1px solid #333;
@@ -210,19 +251,19 @@ body.support {
 
             > label.device-label {
               display: inline-block;
-              width: 260px;
-              margin-top: 10px;
+              width: 200px;
+              margin:0 0 10px 0;
             }
 
             > label.other-device-label {
               display: block;
-              margin-top: 17px;
+              margin-top: 5px;
               font-weight: normal;
               > input.target-device {
                 box-sizing: border-box;
-                width: 400px;
+                width: 100%;
                 margin-top: 0;
-                margin-left: 12px;
+                margin-left: 0px;
                 @media screen and (max-width: $break) {
                   margin-left: 0;
                   width: 100%;
@@ -244,7 +285,7 @@ body.support {
             > textarea#support-text {
               box-sizing: border-box;
               display: block;
-              width: 95%;
+              width: 100%;
               height: 140px;
               background: #fff none repeat scroll 0 0;
               border: 1px solid #cccccc;
@@ -253,7 +294,7 @@ body.support {
               color: #666666;
               display: inline-block;
               font-size: 14px;
-              margin: 0 0 9px;
+              margin: 0 0 0px 0;
               outline: medium none;
               padding: 5px;
               @media screen and (max-width: $break) {
@@ -341,9 +382,28 @@ body.support {
             display: block;
             text-align: left;
             @media screen and (max-width: $break) {
-              width: 64px;
               word-break: break-all;
             }
+          }
+          td.label.no-label {
+            @media screen and (max-width: $break) {
+              display: none;
+            }
+          }
+          td.label.title-label {
+            @media screen and (max-width: $break) {
+              padding-bottom: 0;
+            }
+          }
+          td.colspan-title {
+            padding-bottom: 0;
+          }
+          .colspan-title-inline {
+            margin-bottom: 10px;
+            display: inline-block;
+          }
+          .colspan-item {
+            margin: 0 0 20px 130px;
           }
           td > span.input-label {
             font-size: 13px;
@@ -391,7 +451,11 @@ body.support {
         width: 700px;
         min-width: auto;
         @media screen and (max-width: $break) {
-          padding: 0 3%;
+          padding: 0 15%;
+          width: auto;
+        }
+        @media screen and (max-width: $break-xs) {
+          padding: 0 10%;
           width: auto;
         }
 
@@ -418,49 +482,73 @@ body.support {
           z-index: -100;
 
           .feedback-form {
-                select {
-                    background-color: #fff;
-                    border: 1px solid #9c9c9c;
-                    border-radius: 4px;
-                    color: #3f3e3d;
-                    height: 30px;
-                    margin-bottom: 30px;
-                    padding: 0 7px;
-                    width: 50%;
-                    vertical-align: middle;
+            select {
+                background-color: #fff;
+                border: 1px solid #9c9c9c;
+                border-radius: 4px;
+                color: #3f3e3d;
+                height: 30px;
+                margin-bottom: 30px;
+                padding: 0 7px;
+                width: 50%;
+                vertical-align: middle;
+                @media screen and (max-width: $break) {
+                  width: 75%;
                 }
-                input[type="radio"] {
-                    height: 20px;
-                    margin: 0 5px 0 40px;
-                    width: 20px;
-                    vertical-align: middle;
-                }
-                textarea {
-                    background: #fff none repeat scroll 0 0;
-                    border: 1px solid #cccccc;
-                    border-radius: 4px;
-                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
-                    color: #666666;
-                    display: inline-block;
-                    font-size: 14px;
-                    margin: 0 0 9px;
-                    outline: medium none;
-                    padding: 5px;
-                    height: 226px;
-                }
-                p {
-                    font-weight: normal;
-                    line-height: 150%;
-                    margin: 0 0 10px;
-                    color: #333;
-                    padding: 0;
-                    a {
-                        text-decoration: underline;
-                        &:hover {
-                            text-decoration: none;
-                        }
+            }
+            input[type="radio"] {
+                height: 20px;
+                margin: 0 5px 0 40px;
+                width: 20px;
+                vertical-align: middle;
+            }
+            textarea {
+                background: #fff none repeat scroll 0 0;
+                border: 1px solid #cccccc;
+                border-radius: 4px;
+                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+                color: #666666;
+                display: inline-block;
+                font-size: 14px;
+                margin: 0 0 9px;
+                outline: medium none;
+                padding: 5px;
+                height: 226px;
+            }
+            p {
+                font-weight: normal;
+                line-height: 150%;
+                margin: 0 0 10px;
+                color: #333;
+                padding: 0;
+                a {
+                    text-decoration: underline;
+                    &:hover {
+                        text-decoration: none;
                     }
                 }
+            }
+            .feedback-item {
+                border-radius: 2px;
+                margin-bottom: 30px;
+                width: 700px;
+                @media screen and (max-width: $break) {
+                  width: 100%;
+                }
+                @media screen and (max-width: $break-xs) {
+                  table td {
+                    display: block;
+                    &.label {
+                      text-align: left;
+                      padding: 9px 0;
+                    }
+                  }
+                }
+                .required {
+                    color: #f55b56;
+                    padding-left: 3px;
+                }
+              }
             }
 
           h2 {
@@ -471,18 +559,7 @@ body.support {
             font-weight: normal;
             line-height: 36px;
           }
-            .feedback-item {
-                border-radius: 2px;
-                margin-bottom: 30px;
-                width: 700px;
-                @media screen and (max-width: $break) {
-                  width: 100%;
-                }
-                .required {
-                    color: #f55b56;
-                    padding-left: 3px;
-                }
-            }
+
 
           .feedback-item .form-label-inline {
             text-align: right;
