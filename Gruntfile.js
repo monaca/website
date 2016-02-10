@@ -28,7 +28,7 @@ module.exports = function(grunt) {
             src: 'src',
             dist: 'dist/en',
             distJa: 'dist/ja',
-            distEn: 'dist/en'    
+            distEn: 'dist/en'
         },
 
         sass: {
@@ -118,49 +118,49 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     src: '<%= config.dist %>/**/*.html',
-                    ext: '.html.gz'
+                    ext: '.html'
                 }, {
                     expand: true,
                     src: '<%= config.distJa %>/**/*.html',
-                    ext: '.html.gz'
+                    ext: '.html'
                 }]
             },
             css: {
                 files: [{
                     expand: true,
                     src: '<%= config.dist %>/css/*.min.css',
-                    ext: '.min.css.gz'
+                    ext: '.min.css'
                 }, {
                     expand: true,
                     src: '<%= config.dist %>/css/style.css',
-                    ext: '.css.gz'
+                    ext: '.css'
                 }, {
                     expand: true,
                     src: '<%= config.distJa %>/css/*.min.css',
-                    ext: '.min.css.gz'
+                    ext: '.min.css'
                 }, {
                     expand: true,
                     src: '<%= config.distJa %>/css/style.css',
-                    ext: '.css.gz'
+                    ext: '.css'
                 }]
             },
             js: {
                 files: [{
                     expand: true,
                     src: '<%= config.dist %>/js/*.min.js',
-                    ext: '.min.js.gz'
+                    ext: '.min.js'
                 }, {
                     expand: true,
                     src: '<%= config.dist %>/js/all.js',
-                    ext: '.js.gz'
+                    ext: '.js'
                 }, {
                     expand: true,
                     src: '<%= config.distJa %>/js/*.min.js',
-                    ext: '.min.js.gz'
+                    ext: '.min.js'
                 }, {
                     expand: true,
                     src: '<%= config.distJa %>/js/all.js',
-                    ext: '.js.gz'
+                    ext: '.js'
                 }]
             }
         },
