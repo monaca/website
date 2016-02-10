@@ -111,56 +111,40 @@ module.exports = function(grunt) {
         compress: {
             options: {
                 mode: "gzip",
-                level: 9,
-                pretty: true
+                pretty: true,
+		level: 9
             },
             html: {
                 files: [{
                     expand: true,
-                    src: '<%= config.dist %>/**/*.html',
-                    ext: '.html'
+                    src: '<%= config.distEn %>/**/*.html',
+                    ext: '.html.gz'
                 }, {
                     expand: true,
                     src: '<%= config.distJa %>/**/*.html',
-                    ext: '.html'
+                    ext: '.html.gz'
                 }]
             },
             css: {
                 files: [{
                     expand: true,
-                    src: '<%= config.dist %>/css/*.min.css',
-                    ext: '.min.css'
+                    src: '<%= config.distEn %>/**/*.css',
+                    ext: '.css.gz'
                 }, {
                     expand: true,
-                    src: '<%= config.dist %>/css/style.css',
-                    ext: '.css'
-                }, {
-                    expand: true,
-                    src: '<%= config.distJa %>/css/*.min.css',
-                    ext: '.min.css'
-                }, {
-                    expand: true,
-                    src: '<%= config.distJa %>/css/style.css',
-                    ext: '.css'
+                    src: '<%= config.distJa %>/**/*.css',
+                    ext: '.css.gz'
                 }]
             },
             js: {
                 files: [{
                     expand: true,
-                    src: '<%= config.dist %>/js/*.min.js',
-                    ext: '.min.js'
+                    src: '<%= config.distEn %>/**/*.js',
+                    ext: '.js.gz'
                 }, {
                     expand: true,
-                    src: '<%= config.dist %>/js/all.js',
-                    ext: '.js'
-                }, {
-                    expand: true,
-                    src: '<%= config.distJa %>/js/*.min.js',
-                    ext: '.min.js'
-                }, {
-                    expand: true,
-                    src: '<%= config.distJa %>/js/all.js',
-                    ext: '.js'
+                    src: '<%= config.distJa %>/**/*.js',
+                    ext: '.js.gz'
                 }]
             }
         },
@@ -318,8 +302,8 @@ module.exports = function(grunt) {
                 },
                 files: [
                     {action: "delete", dest: '/'},
-                    {expand: true, cwd: '<%= config.distJa %>', src: ['**', '!**/img/**', '!**/fonts/**'], dest: ''},
-                    {expand: true, cwd: '<%= config.distJa %>', src: ['img/**', 'fonts/**'], dest: '', params: {CacheControl: 'max-age=604800'}},
+                    {expand: true, cwd: '<%= config.distJa %>', src: ['**'], dest: ''},
+                    {expand: true, cwd: '<%= config.distJa %>', src: ['**/*.js.gz', '**/*.html.gz', '**/*.css.gz'], dest: ''},
                 ]
             },
             en: {
@@ -329,8 +313,8 @@ module.exports = function(grunt) {
                 },
                 files: [
                     {action: "delete", dest: '/'},
-                    {expand: true, cwd: '<%= config.distEn %>', src: ['**', '!img/**/*', '!**/fonts/**'], dest: ''},
-                    {expand: true, cwd: '<%= config.distEn %>', src: ['img/**/*', 'fonts/**'], dest: '', params: {CacheControl: 'max-age=604800'}},
+                    {expand: true, cwd: '<%= config.distEn %>', src: ['**'], dest: ''},
+                    {expand: true, cwd: '<%= config.distEn %>', src: ['**/*.js.gz', '**/*.html.gz', '**/*.css.gz'], dest: ''},
                 ]
             },
         },
