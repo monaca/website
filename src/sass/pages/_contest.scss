@@ -63,9 +63,9 @@ section.ninja {
   a {
     &:hover {
       transition: .4s ease-in-out;
-        -webkit-transition: .4s ease-in-out;
-        -moz-transition: .4s ease-in-out;
-        -ms-transition: .4s ease-in-out;
+      -webkit-transition: .4s ease-in-out;
+      -moz-transition: .4s ease-in-out;
+      -ms-transition: .4s ease-in-out;
     }
   }
   /*@include all-a(#006cba);*/
@@ -154,14 +154,14 @@ section.ninja {
       &:before {
         content: url('/img/ninja/ico_ume_01.png');
         position: absolute;
-          left: 0;
-          top: -135px;
+        left: 0;
+        top: -135px;
       }
       &:after {
         content: url('/img/ninja/ico_ume_02.png');
         position: absolute;
-          right: 0;
-          bottom: -150px;
+        right: 0;
+        bottom: -150px;
         z-index: 100;
       }
       h2 {
@@ -171,7 +171,6 @@ section.ninja {
         color: #333;
         margin-bottom: 30px;
       }
-
       ul {
         width: 680px;
         margin: 0 auto;
@@ -185,8 +184,8 @@ section.ninja {
           &:before {
             content: url('/img/ninja/ico_star_red.png');
             position: absolute;
-              left: -30px;
-              top: 0px;
+            left: -30px;
+            top: 0px;
           }
           img {
             vertical-align: middle;
@@ -228,7 +227,6 @@ section.ninja {
       line-height: 1.4872rem;
     }
   }
-
 
   #criteria {
     background-color: #ffffff;
@@ -274,13 +272,12 @@ section.ninja {
   .contactus {
     text-align: center;
   }
-
 }
 
 #ninja-submit {
-    padding-left: 0;
-    padding-right: 0;
-    width: auto;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
   .keyvisual {
     background: url("/img/contest/keyvisual_submit.png") no-repeat center top,  url("/img/contest/keyvisual_bg.png") repeat-x top left;
     margin-top: -90px;
@@ -306,16 +303,16 @@ section.ninja {
     form input[type="email"],
     form input[type="url"],
     form textarea {
-        background: #fff none repeat scroll 0 0;
-        border: 1px solid #cccccc;
-        border-radius: 4px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
-        color: #666666;
-        display: inline-block;
-        font-size: 14px;
-        margin: 0 0 9px;
-        outline: medium none;
-        padding: 3px;
+      background: #fff none repeat scroll 0 0;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+      color: #666666;
+      display: inline-block;
+      font-size: 14px;
+      margin: 0 0 9px;
+      outline: medium none;
+      padding: 3px;
     }
     table {
       width: 80%;
@@ -350,8 +347,8 @@ section.ninja {
           width: 270px;
         }
         textarea {
-            height: 100px;
-            width: 350px;
+          height: 100px;
+          width: 350px;
         }
         label {
           font-weight: normal;
@@ -379,7 +376,6 @@ section.ninja {
 
 #ninja-results {
   background: url(/img/ninja/bg_mt_fuji.png) no-repeat center 36px;
-
   a {
     text-decoration: none;
     color: #2472b3;
@@ -398,67 +394,63 @@ section.ninja {
    font-weight: 900;
    font-style: italic;
    line-height: 70px;
-  }
-  .kanmuri {
-    background: url(/img/ninja/title_ninja.png) no-repeat center top;
-    padding-top: 123px;
+ }
+ .kanmuri {
+  background: url(/img/ninja/title_ninja.png) no-repeat center top;
+  padding-top: 123px;
+  margin-bottom: 45px;
+}
+p {
+  margin: 0 140px;
+  color: #666666;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+.results-wrapper {
+  @extend .keyvisual;
+  margin-top: 70px;
+  padding-top: 0;
+  .medal-winner {
     margin-bottom: 45px;
   }
-  p {
-    margin: 0 140px;
-    color: #666666;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.8;
+  .mocdal-excellence {
+    margin-bottom: 25px;
   }
-  .results-wrapper {
-    @extend .keyvisual;
-    margin-top: 70px;
-    padding-top: 0;
-
-    .medal-winner {
-      margin-bottom: 45px;
+  .main-visual {
+    margin:0 0 50px -38px;
+  }
+  .title {
+    margin: 0 0 30px 214px;
+    img {
+      float: left;
     }
-    .mocdal-excellence {
-      margin-bottom: 25px;
+    h3 {
+      font-family: 'Open Sans Condensed', sans-serif;
+      text-align: left;
+      font-size: 50px;
+      line-height: 1em;
+      margin: 0 0 10px 120px;
+      padding-top: 4px;
+      color: #2472b3;
     }
-    .main-visual {
-      margin:0 0 50px -38px;
-    }
-    .title {
-      margin: 0 0 30px 214px;
-
-      img {
-        float: left;
-      }
-      h3 {
-        font-family: 'Open Sans Condensed', sans-serif;
-        text-align: left;
-        font-size: 50px;
-        line-height: 1em;
-        margin: 0 0 10px 120px;
-        padding-top: 4px;
-        color: #2472b3;
-      }
-      h4 {
-        font-family: 'Open Sans', sans-serif;
-        color:  #888;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 1;
-        text-align: left;
-        margin-left: 122px;
-
-        span {
-          font-weight: 400;
-        }
+    h4 {
+      font-family: 'Open Sans', sans-serif;
+      color:  #888;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1;
+      text-align: left;
+      margin-left: 122px;
+      span {
+        font-weight: 400;
       }
     }
-    .announce {
-      margin: 0 0 100px 0;
-
-      img {
-        margin-bottom: 40px;
+  }
+  .announce {
+    margin: 0 0 100px 0;
+    img {
+      margin-bottom: 40px;
       }
     }
   }
@@ -483,7 +475,6 @@ section.ninja {
     margin: 0 auto;
     padding: 80px 0 100px;
     width: 790px;
-
     p {
       font-family: "ff-good-headline-web-pro-con",sans-serif;
       font-weight: 500;
@@ -562,9 +553,9 @@ button.btn-blue, .btn-blue {
     background-color: #1c3966;
     border: 1px solid #1c3966;
     transition: .4s ease-in-out;
-      -webkit-transition: .4s ease-in-out;
-      -moz-transition: .4s ease-in-out;
-      -ms-transition: .4s ease-in-out;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
   }
 }
 
