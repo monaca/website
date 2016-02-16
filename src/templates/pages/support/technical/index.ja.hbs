@@ -8,8 +8,7 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
   <div class="container">
     <h1>テクニカルサポート</h1>
 
-    <p>テクニカルサポートは有償サービスです。利用には、Personalプラン以上の加入とサポートチケットが必要です。</p>
-    <br>
+    <p class="notification">テクニカルサポートは有償サービスです。利用には、Personalプラン以上の加入とサポートチケットが必要です。</p>
     <hr>
 
     <form method="post" action="/ja/support/technical">
@@ -23,7 +22,6 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
             <img src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm" class="user-icon"><span class="user-info">mohimeg@gmail.com</span>
           </td>
         </tr>
-
         <tr>
           <td class="label title-label"><span class="input-label">サポートの種類：</span></td>
           <td class="form-item block-item">
@@ -34,7 +32,6 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
             </select>
           </td>
         </tr>
-
         <tr>
           <td class="label title-label"><span class="input-label">対象製品</span><span class="required">*</span></td>
           <td class="form-item block-item">
@@ -53,7 +50,6 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
             <span class="error">エラー内容が入ります。</span>
           </td>
         </tr>
-
         <tr>
           <td class="label title-label"><span class="input-label">件名</span><span class="required">*</span></td>
           <td class="form-item block-item">
@@ -71,26 +67,22 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
             <span class="error">エラー内容が入ります。</span>
           </td>
         </tr>
-
         <tr>
           <td colspan="2" class="colspan-title">
             <span class="input-label">お問い合わせ内容を記入してください：</span>
           </td>
         </tr>
-
         <tr>
           <td class="label no-label"></td>
           <td class="form-item">
             <textarea rows="4" cols="30" name="support[message]" id="support-text" placeholder="ここに内容を記入して下さい"></textarea>
           </td>
         </tr>
-
         <tr>
           <td colspan="2" class="colspan-title">
             <span class="input-label">対象プロジェクトを選択してください（任意）：</span> <span class="error"></span>
           </td>
         </tr>
-
         <tr>
           <td class="label no-label"></td>
           <td class="form-item">
@@ -100,14 +92,12 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
             </select>
           </td>
         </tr>
-
         <tr>
           <td colspan="2" class="colspan-title">
             <span class="input-label">現象が発生する端末を選択もしくは<br class="visible-xs" />
             入力してください（任意）：</span>
           </td>
         </tr>
-
         <tr>
           <td class="label no-label"></td>
           <td class="form-item">
@@ -117,7 +107,6 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
             <label class="other-device-label"><input type="text" name="support[device_os_other]" class="target-device" id="support_device_os_other" placeholder="入力してください" /></label>
           </td>
         </tr>
-
         <tr>
           <td colspan="2" class="colspan-title"><span class="input-label">保有しているサポートチケット：</span> <strong class="ticket-retain">2</strong>枚 <br class="visible-xs" /><a id="show_support_ticket" class="link-blue" href="#">所有チケットの詳細を表示...</a>
             <div class="balloon-wrapper" id="support-ticket-balloon" style="display: none;">
