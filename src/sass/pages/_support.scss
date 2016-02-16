@@ -86,12 +86,21 @@ body.support {
   #support-tech {
     padding: 100px 0 30px 0;
     width: 700px;
+    table {
+      width: 100%;
+    }
     @media screen and (max-width: $break) {
       width: 100%;
     }
     .required {
       color: #f55b56;
       padding-left: 3px;
+    }
+    .error {
+      display: block;
+      margin-top: 4px;
+      color: #f55b56;
+      font-size: 12px;
     }
     > .container {
       margin-bottom: 60px;
@@ -102,7 +111,7 @@ body.support {
         width: auto;
       }
       @media screen and (max-width: $break-xs) {
-        padding: 0 7%;
+        padding: 0 2%;
         width: auto;
       }
       hr {
@@ -138,11 +147,6 @@ body.support {
         }
         input[type=checkbox] {
           margin-right: 0.4em;
-        }
-        .error {
-          display: block;
-          margin-top: 4px;
-          color: #f55b56;
         }
       }
       .form-item.block-item {
@@ -370,6 +374,9 @@ body.support {
           text-align: left;
           @media screen and (max-width: $break) {
             word-break: break-all;
+          }
+          @media screen and (max-width: $break-xs) {
+            width: 100px;
           }
         }
         td.label.no-label {

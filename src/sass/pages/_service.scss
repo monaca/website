@@ -16,6 +16,9 @@ body.service {
     padding: 0;
     width: 1170px;
     z-index: 101;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
   }
   section {
     padding: 0;
@@ -272,6 +275,21 @@ body.service {
         font-size: 12px;
         overflow-y: auto;
         z-index: -100;
+        .form-error {
+          margin: 0 0 0 130px;
+          float: left;
+          text-align: left;
+          width: 100%;
+          box-sizing: border-box;
+          @media screen and (max-width: $break) {
+          margin: 0 0 10px 130px;
+          }
+        }
+        .form-error-detail {
+          text-align: left;
+          width: 100%;
+          box-sizing: border-box;
+        }
         .feedback-form {
           select {
             background-color: #fff;
@@ -324,13 +342,15 @@ body.service {
         }
         label {
           font-weight: normal;
-          line-height: 36px;
+          line-height: 30px;
         }
         .feedback-item {
+          padding-left: 30px;
           border-radius: 2px;
           margin-bottom: 30px;
-          width: 700px;
+          width: 670px;
           @media screen and (max-width: $break) {
+            padding-left: 0;
             width: 100%;
           }
           .required {
@@ -395,7 +415,7 @@ body.service {
               }
               & + span {
                 display: block;
-                margin-left: 130px;
+                margin-left: 1  0px;
                 @media screen and (max-width: $break) {
                   margin-left: 0px;
                 }

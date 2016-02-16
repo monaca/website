@@ -1040,80 +1040,124 @@ body.showcase.proroutemarumitsu {
 }
 
 body.showcase {
-    min-width: 1200px;
+    .container {
+        min-width: auto;
+    }
+    #case_add {
+        padding: 0;
+        .error {
+                color: #e5492c;
+                padding-left: 250px;
+                margin-bottom: 20px;
+                    @media screen and (max-width: $break-xs) {
+                    padding-left: 0;
+                    margin-bottom: 0;
+                }
+                    @media screen and (max-width: $break) {
+                        padding-left: 0;
+                        margin-bottom: 0;
+                }
+            }
+        .container {
+            margin: 0 auto 50px auto;
+            width: 720px;
+            min-width: 720px;
+            display: table;
+            box-sizing: border-box;
+                @media screen and (max-width: $break-xs) {
+                    min-width: auto;
+                    width: 100%;
+                }
+                @media screen and (max-width: $break) {
+                    padding: 0;
+                    min-width: auto;
+                    width: 100%;
+                  }
+                h1 {
+                    border: medium none;
+                    color: #2472b3;
+                    font-size: 36px;
+                    line-height: 36px;
+                    margin: 80px 0 50px;
+                    padding: 0;
+                    text-align: center;
+                }
+                p {
+                    line-height: 26px;
+                    margin: 0 auto 10px;
+                }
+            form {
+                table {
+                    .required {
+                            color: #f55b56;
+                            padding-left: 3px;
+                        }
+                    tr {
+                        th {
+                                width: 34.72%;
+                            }
+                        td {
+                                width: 65.27%;
+                                font-size: 11px;
+                                line-height: 1.4;
+                                padding: 0 0 15px;
+                                input.wide {
+                                            width: 85%;
+                                            }
+                                  input[type="text"],
+                                  input[type="password"],
+                                  input[type="email"],
+                                  input[type="url"],
+                                  textarea {
+                                    background: #fff none repeat scroll 0 0;
+                                    border: 1px solid #cccccc;
+                                    border-radius: 4px;
+                                    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+                                    color: #666666;
+                                    display: inline-block;
+                                    font-size: 14px;
+                                    margin: -5px 0 2px;
+                                    outline: medium none;
+                                    padding: 3px;
+                                    width: 270px;
+                                }
+                            .annotation {
+                                            color: #999;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    header.navbar {
+         @media screen and (max-width: $break-xs) {
+        min-width: 0;
+    }
+    @media screen and (max-width: $break) {
+      min-width: 0;
+  }
+    }
     @media screen and (max-width: $break-xs) {
         min-width: 0;
     }
     @media screen and (max-width: $break) {
       min-width: 0;
+  }
+  article.main {
+    @media screen and (max-width: $break-xs) {
+        width: auto;
     }
-}
-
-#case_add {
-    padding: 0;
-  .container {
-    margin: 0 auto 50px auto;
-    width: 720px;
-    min-width: 720px;
-    display: table;
     @media screen and (max-width: $break) {
-      padding: 0 3%;
       width: auto;
+      }
+      section {
+        @media screen and (max-width: $break-xs) {
+        width: auto;
     }
-    h1 {
-        border: medium none;
-        color: #2472b3;
-        font-size: 36px;
-        line-height: 36px;
-        margin: 80px 0 50px;
-        padding: 0;
-        text-align: center;
-    }
-    p {
-        line-height: 26px;
-        margin: 0 auto 10px;
-    }
-    form {
-      table {
-        .required {
-            color: #f55b56;
-            padding-left: 3px;
-        }
-        tr {
-          th {
-            width: 34.72%;
+        @media screen and (max-width: $break) {
+          width: auto;
           }
-          td {
-            width: 65.27%;
-            font-size: 11px;
-            line-height: 1.4;
-            padding: 0 0 15px;
-            input.wide {
-              width: 85%;
-            }
-            input[type="text"],
-            input[type="password"],
-            input[type="email"],
-            input[type="url"],
-            textarea {
-                background: #fff none repeat scroll 0 0;
-                border: 1px solid #cccccc;
-                border-radius: 4px;
-                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
-                color: #666666;
-                display: inline-block;
-                font-size: 14px;
-                margin: -5px 0 2px;
-                outline: medium none;
-                padding: 3px;
-                width: 270px;
-            }
-            .annotation {
-                color: #999;
-            }
-          }
-        }
       }
     }
-  }
 }

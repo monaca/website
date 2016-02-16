@@ -639,28 +639,3 @@ article.cases {
     }
   }
 }
-
-#case_add {
-  .container {
-    width: 720px;
-    @media screen and (max-width: $break) {
-      padding: 0 3%;
-      width: auto;
-    }
-    form {
-      table {
-        tr {
-          th {
-            width: 34.72%;
-          }
-          td {
-            width: 65.27%;
-            input.wide {
-              width: 85%;
-            }
-          }
-        }
-      }
-    }
-  }
-}
