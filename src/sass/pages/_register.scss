@@ -1,0 +1,506 @@
+/* Login, Signup */
+%signup-container {
+  h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 14px;
+    text-shadow: 0 1px 0 white;
+  }
+  /*$_signup-width: $_signup-container-width - ($_container-side-padding + $_box-border-width) * 2;
+  $width: $_signup-width;
+  width: $width;*/
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: block;
+  @media screen and (max-width: $break) {
+    box-sizing: border-box;
+    width: 94%;
+  }
+}
+
+%signup-form {
+  padding: 18px 0 0 0;
+  ul {
+    li {
+      margin: 0 0 4px 0;
+      &.right {
+        text-align: right;
+      }
+    }
+  }
+  input {
+    &:disabled {
+      opacity: .5;
+    }
+    &.email {
+      background-image: url(/img/start/signup_popup_mail_icon.png);
+      background-repeat: no-repeat;
+      background-position: 7px 7px;
+    }
+    &.password {
+      background-image: url(/img/start/signup_popup_password_icon.png);
+      background-repeat: no-repeat;
+      background-position: 7px 7px;
+    }
+    &:disabled + label {
+      opacity: .5;
+    }
+  }
+  button {
+    &:disabled {
+      opacity: .5;
+      &:hover {
+        /*@include box-shadow(none);*/
+        cursor: default;
+      }
+    }
+  }
+  .checkbox {
+    @extend #checkbox; /* _forms.scss */
+    font-size: 14px;
+    label {
+      padding: 2px 0 3px 26px;
+      vertical-align: middle;
+      min-height: 16px;
+      @media screen and (max-width: $break) {
+        padding: 12px 0 10px 28px;
+      }
+    }
+    input {
+      display: none;
+      margin: 0 -20px 10px 10px;
+    }
+  }
+  .error {
+    font-size: 12px;
+    /*color: $_red;*/
+    a {
+      /*color: $_red;*/
+    }
+  }
+}
+
+#login {
+  .container {
+    @extend %signup-container;
+  }
+  .login-form {
+    @extend %signup-form;
+    button {
+      float: right;
+    }
+  }
+  .bottom {
+    padding: 14px 0 10px;
+    margin-top: 66px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    clear: both;
+    a {
+      font-size: 12px;
+      /*color: $_light-gray;*/
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+#signup, #signup-invited, #signup-start, #login {
+  .container {
+    @extend %signup-container;
+    .btn-blue {
+      margin-top: 5px;
+    }
+    border-radius: 6px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+    border: 1px solid #d9d9d9;
+    padding-bottom: 6px;
+    margin: 40px auto 15px;
+    max-width: 358px;
+    @media screen and (max-width: $break) {
+      margin-top: 0;
+    }
+  }
+  .signup-form, .login-form {
+    @extend %signup-form;
+    .checkbox {
+      margin-bottom: 16px;
+    }
+    input[type=text], input[type=password], input[type=email], input[type=url] {
+      box-sizing: border-box;
+      width: 100%;
+    }
+    margin-top: 6px;
+    padding: 0;
+  }
+}
+
+#signuppopup {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 420px;
+  display: none;
+  /*@include box-shadow(0 8px 15px rgba(0, 0, 0, 0.08));*/
+
+  .signuppopup-container {
+    min-height: 300px;
+    padding: 1px 16px 10px 16px;
+    h3 {
+      color: #333;
+      font-size: 20px;
+      padding: 20px 0 14px 0;
+      font-weight: 400;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+    }
+    .close {
+      /*@include img-replacement('../0513-images/close-dark.png');*/
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      width: 19px;
+      height: 19px;
+      opacity: 1;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+    .signup-form {
+      @extend %signup-form;
+      ul li {
+        margin-bottom: 2px;
+      }
+      input {
+        &[type="text"],
+        &[type="password"] {
+          width: 387px;
+          display: block;
+          box-shadow: none;
+          border: 1px solid #ddd;
+          font-size: 16px;
+          /*@include box-sizing();*/
+          border-radius: 3px;
+          line-height: 1;
+          padding: 15px 0 10px 38px;
+          height: 45px;
+        }
+        &[type="text"] {
+          background-image: url(../0513-images/login-user-icon.png);
+          background-repeat: no-repeat;
+          background-position: 8px 9px;
+        }
+
+        &[type="password"] {
+          background-image: url(../0513-images/login-password-icon.png);
+          background-repeat: no-repeat;
+          background-position: 10px 9px;
+        }
+      }
+      button {
+        margin: 12px 0 0 0;
+        float: right;
+        font-size: 18px;
+        @extend %flat-btn;
+        background-color: #ff8b24;
+        border: 1px solid #ec761f;
+        color: white;
+        font-weight: 600;
+      }
+      .error {
+        clear: both;
+        padding: 20px 0 0 0;
+        display: none;
+        font-size: 14px;
+      }
+      .loading {
+        background: url(../0513-images/loading-gif.gif) no-repeat left top;
+        width: 16px;
+        height: 16px;
+        margin: 14px 16px 0 0;
+        float: right;
+        display: none;
+      }
+    }
+  }
+
+  #signup-ng {
+    /*@include box-sizing();
+    @include all-a(#666,underline);*/
+    padding: 15px 15px 15px;
+    text-align: center;
+    min-height: 0;
+    a.link {
+      background-repeat: no-repeat;
+      background-position: 10px 0;
+      display: inline-block;
+      font-size: 11px;
+      padding-top: 67px;
+      width: 86px; height: 20px;
+    }
+    a#link-safari {
+      background-position: 11px 0;
+      background-image: url(../img/icon_safari.png);
+    }
+    a#link-chrome {
+      background-image: url(../img/icon_chrome.png);
+    }
+  }
+
+}
+
+
+#signup-invited {
+  background: url(/img/welcome_monaca_main_en.png) no-repeat center 40px;
+  padding: 200px 0 40px;
+  @media screen and (max-width: $break) {
+    background-position: left 40px;
+  }
+  .container {
+    background-image: url(/img/linen_bg.png);
+    margin-top: 0;
+    @media screen and (max-width: $break) {
+      background-size: 250px 250px;
+    }
+  }
+  .signup-form {
+    .submit {
+      margin-bottom: 18px;
+      .btn-orange {
+        font-weight: 700;
+        width: 130px;
+      }
+    }
+    .login {
+      border-top: 1px solid #ccc;
+      clear: both;
+      line-height: 120%;
+      margin: 0;
+      padding: 10px 0 14px 0;
+      text-align: right;
+      p {
+        color: #333;
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom: 8px;
+        text-align: left;
+        text-shadow: 0 1px 1px #fff;
+      }
+      .btn {
+        font-weight: 700;
+        padding: 0;
+        width: 130px;
+      }
+    }
+  }
+}
+
+body.lang-ja #signup-invited {
+ background-image: url(/img/welcome_monaca_main_ja.png);
+}
+
+
+.register {
+  background-color: #3859a0;
+  .navbar {
+    margin: 0 0 0 0;
+    min-height: 0;
+  }
+  footer.common {
+    border: none;
+  }
+}
+
+
+#signup-start {
+  background: url(/img/start/SignUp_01_03.png) no-repeat 86px 190px;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  width: 960px;
+  height: 600px;
+  @media screen and (max-width: $break) {
+    background: none;
+    width: auto;
+    height: auto;
+      h3 {
+        font-size: 28px;
+        line-height: 40px;
+        margin-top: 34px;
+      }
+      h4 {
+        font-size: 30px;
+        line-height: 40px;
+        margin-top: 0;
+      }
+    }
+
+  h3 {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro W3", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 45px;
+    line-height: 60px;
+    margin: 110px auto 0 auto;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
+  h4 {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro W3", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 50px;
+    color: #fff;
+    margin: 5px 0 40px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 36px;
+    letter-spacing: 0;
+  }
+  h3.en {
+    font-family: Lato, Helvetica, 'MS UI Gothic', sans-serif;
+    font-size: 60px;
+    font-weight: 100;
+    letter-spacing: 0.04em;
+    line-height: 60px;
+    text-align: center;
+    @media screen and (max-width: $break) {
+      font-size: 28px;
+      line-height: 40px;
+      margin-top: 85px;
+    }
+  }
+  h4.en {
+    color: #fff;
+    font-family: Lato,Helvetica,sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: 0.04em;
+    line-height: 50px;
+    text-align: center;
+    @media screen and (max-width: $break) {
+      font-size: 30px;
+      line-height: 40px;
+      margin-top: 0;
+    }
+  }
+  .container {
+    padding: 0 14px;
+    background-image: url(/img/linen_bg.png);
+    position: absolute;
+    margin: 0 auto;
+    top: 190px;
+    right: 84px;
+    height: auto;
+    min-width: 0;
+    @media screen and (max-width: $break) {
+      background-size: 250px 250px;
+      position: static;
+      top: auto;
+      right: auto;
+    }
+    label {
+      font-weight: normal;
+    }
+    .terms {
+        text-align: left;
+        color: #666;
+        a {
+          color: #666;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+      }
+    }
+    h2 {
+      text-align: left;
+    }
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"],
+    form input[type="url"],
+    form textarea {
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+      color: #666666;
+      display: inline-block;
+      font-size: 14px;
+      margin: 0 0 9px;
+      outline: medium none;
+      padding: 11px 0 11px 46px;
+      @media screen and (max-width: $break) {
+        font-size: 16px;
+      }
+    }
+  }
+  .signup-form {
+    .submit {
+      margin-bottom: 12px;
+      .btn-orange {
+        font-weight: 700;
+        width: 130px;
+      }
+    }
+    .login {
+      border-top: 1px solid #ccc;
+      clear: both;
+      line-height: 120%;
+      margin: 0;
+      padding: 10px 0 14px 0;
+      text-align: right;
+      p {
+        color: #333;
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom: 8px;
+        text-align: left;
+        text-shadow: 0 1px 1px #fff;
+      }
+      .btn {
+        font-weight: 700;
+        padding: 0;
+        width: 130px;
+      }
+    }
+  }
+  .copyright {
+    text-align: right;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 430px;
+    margin-right: 86px;
+    @media screen and (max-width: $break) {
+      font-size: 10px;
+      margin: 30px 0 0 0;
+      padding: 0 10px 10px 0;
+    }
+    a {
+      color: #fff;
+    }
+  }
+}
+
+#signup-start .signup-form .submit .btn-orange {
+  width: 200px;
+}
+
+#login .login-form .checkbox,
+#signuppopup .signup-form .checkbox {
+  float: left;
+  padding-top: 14px;
+}
+
+#login .login-form button,
+#signup .signup-form button {
+  font-size: 16px;
+  font-weight: bold;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 20px;
+  margin: 4px 0 14px;
+}
+
+#login .error,
+#signup .error {
+  padding-bottom: 6px;
+  line-height: 16px;
+}

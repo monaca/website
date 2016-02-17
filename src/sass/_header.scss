@@ -123,6 +123,9 @@ header.navbar {
         }
     }
     .navbar-nav {
+        .dashboard {
+            text-decoration: underline;
+        }
         .nav-title {
             color: #80d4ff;
             display: inline-block;
@@ -234,7 +237,7 @@ header.navbar {
     .nav-user {
         .dropdown-menu {
             @extend .dropdown-menu;
-            left: -120px;
+            left: -110px;
         }
     }
     //bootstrap init

@@ -1,0 +1,34 @@
+---
+title: Monaca Online IDE Registration | Monaca
+class: register
+description: Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.
+---
+
+<link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+
+<div id="main-wrap">
+  <section id="signup-start">
+    <h3 class="en">Just sign up and start coding!</h3>
+    <h4 class="en">Try the faster, easier cross-platform tool.</h4>
+    <div class="container">
+      <h2>Sign Up</h2>
+      <form class="signup-form" method="post" action="/en/register/start">
+        <ul>
+          <li class="email"><input type="text" name="register[email]" placeholder="E-mail address" class="email" id="register_email" /></li>
+          <li><input type="password" name="register[password]" placeholder="Password" class="password" id="register_password" /></li>
+          <li><input type="password" name="register[password_confirm]" placeholder="Confirm password" class="password" id="register_password_confirm" /></li>
+          <li class="terms" style="font-size: 13px;"><label for="agree_policy"><a href="/en/page/license" target="_blank" style="text-decoration: none;">By clicking the button below you agree to terms of use and privacy policy</a></label></li>
+          <li class="right submit">
+            <button type="submit" class="btn-orange">Try it out now! <small>(FREE)</small></small></button>
+          </li>
+        </ul>
+        <input type="hidden" name="register[_csrf_token]" value="" id="register__csrf_token">
+        <script>
+          var csrf_token = "31ce5160833edbaf2226f6ab0a5ba3ca";
+          document.getElementById("register__csrf_token").value = csrf_token;
+        </script>
+      </form>
+      </div>
+      <div class="copyright">&copy; 2011-2016 <a href="/page/company" target="_blank">Asial Corporation</a>. All rights reserved.</div>
+  </section>
+</div>

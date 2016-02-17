@@ -91,7 +91,6 @@ section.ninja {
   }
 
   .keyvisual {
-    background: url("/img/ninja/keyvisual_bg.png") repeat-x top left;
     height: 530px;
     margin-top: -50px;
     position: relative;
@@ -345,6 +344,10 @@ section.ninja {
           margin: 0 0 3px;
           text-shadow: 0 1px 1px white;
           width: 270px;
+        }
+        input[type="checkbox"] {
+          margin: 0 6px 0 0;
+          vertical-align: middle;
         }
         textarea {
           height: 100px;

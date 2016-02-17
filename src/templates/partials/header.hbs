@@ -14,6 +14,7 @@ component: navbar
             <a class="navbar-brand" href="/"><img src="/img/common/header_logo.png" alt="Monaca"/></a>
         </div>
 
+        <!-- ログイン済みの場合　ここから -->
         <div class="navbar-collapse collapse" id="navbar-menu">
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -111,11 +112,14 @@ component: navbar
                         </ul>
                     </li>
                 {{/is}}
+                <!-- ログイン済みの場合　ここまで -->
 
-                <!--
+                <!-- 未ログインの場合
                 <li><a href="{{i18n "urlSignup"}}" class="login">{{i18n "signup"}}</a></li>
                 <li><a href="{{i18n "urlLogin"}}" class="login">{{i18n "login"}}</a></li>
                 -->
+
+                <!-- ログイン済みの場合　ここから -->
                 {{#is language "ja"}}
                 <li class="nav-dashboard pc">
                 <a class="nav-title dashboard" href="https://monaca.mobi/ja/dashboard">ダッシュボード</a>
@@ -145,9 +149,12 @@ component: navbar
                 <li class="sp"><a href="https://monaca.mobi/en/account/edit"  class="settings"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm">Manage</a></li>
                 <li class="sp"><a href="https://monaca.mobi/en/logout">Logout</a></li>
                 {{/is}}
+                <!-- ログイン済みの場合　ここまで -->
 
                 {{#is language "en"}}
+                <!-- 未ログインの場合
                     <li><a href="https://ja.monaca.io/" class="hidden-xs">日本語</a></li>
+                -->
                 {{/is}}
 
             </ul>
