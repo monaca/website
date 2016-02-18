@@ -2417,6 +2417,19 @@ description: アプリ事例 - クラウド上のアプリ開発環境。iOS/And
 </section>
 
 <script type="text/javascript">
+  window.addEventListener("load", function() {
+    $('body').on("click", ".casepopup", function(e) {
+        var $target = $($(this).attr("href"));
+        if (!$target.length) return;
+
+        $target.modal();
+    });
+  });
+</script>
+
+
+
+<script type="text/javascript">
 var pageNum = 0;
 
 function enableArrow(screen, scroll){
