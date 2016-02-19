@@ -2541,16 +2541,11 @@ $(function() {
   }
 
 
-  $('body').on("click", ".casepopup", function(e) {
+  $('.casepopup').on("click", function(e) {
     var $target = $($(this).attr("href"));
     if (!$target.length) return;
 
-    $target.appendTo('body').openAsModal({
-      left: "50%",
-      position: 'fixed',
-      overlay: .4,
-      closeButton: '.close_popup'
-    });
+    $target.openAsModal();
 
     $(".arrow", $target).click(function() {
       var $this = $(this);

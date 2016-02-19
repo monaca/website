@@ -2192,8 +2192,7 @@ function enableArrow(screen, scroll){
   }
 }
 
-$(function() {
-
+window.addEventListener("load", function() {
   $(window).on("scroll", function(e) {
     var scrollTop = $(window).scrollTop();
     var moreEl = $("#more").offset();
@@ -2286,16 +2285,11 @@ $(function() {
   }
 
 
-  $('body').on("click", ".casepopup", function(e) {
+  $(".casepopup").on("click", function(e) {
     var $target = $($(this).attr("href"));
     if (!$target.length) return;
 
-    $target.appendTo('body').openAsModal({
-      left: "50%",
-      position: 'fixed',
-      overlay: .4,
-      closeButton: '.close_popup'
-    });
+    $target.modal();
 
     $(".arrow", $target).click(function() {
       var $this = $(this);
@@ -2316,8 +2310,6 @@ $(function() {
 
     enableArrow($(".screen", $target));
 
-    if (e && e.preventDefault) e.preventDefault();
-    if (e && e.stopPropagation) e.stopPropagation();
   });
 });
 
