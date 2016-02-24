@@ -628,7 +628,15 @@ body.book-school {
         .overview {
             padding: 0;
         }
-        .download {
+        .clearfix {
+            padding: 0 5% 0 5%;
+            @media screen and(max-width: $break-lg) {
+                padding: 0 0 0 5%;
+            }
+            @media screen and (max-width: 900px) {
+                padding: 0 0 0 5%;
+            }
+        }
         dl {
             margin: 0 0 60px 0;
             width: 25%;
@@ -657,6 +665,12 @@ body.book-school {
             dt {
                 margin: 0 0 3px 0;
                 font-size: 16px;
+                @media screen and(max-width: $break-lg) {
+                    font-size: 15px;
+                }
+                @media screen and (max-width: 900px) {
+                    font-size: 15px;
+                }
                 @media screen and(max-width: $break) {
                     font-size: 14px;
                 }
@@ -676,7 +690,6 @@ body.book-school {
             }
         }
     }
-}
     /* book-outline */
     .common {
         margin: 90px auto 0 auto;
