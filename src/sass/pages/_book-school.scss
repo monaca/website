@@ -53,7 +53,7 @@ body.book-school {
                 float: none;
             }
             @media screen and (max-width: $break-xs) {
-                padding: 35px 0 0 0;
+                padding: 20px 0 0 0;
             }
             h2 {
                 font-size: 30px;
@@ -69,7 +69,7 @@ body.book-school {
                     text-align: center;
                 }
                 @media screen and (max-width: $break-xs) {
-                    margin: 0 0 8% 0;
+                    margin: 0 0 3% 0;
                     text-align: center;
                     font-size: 21px;
                 }
@@ -90,7 +90,7 @@ body.book-school {
                 @media screen and (max-width: $break-xs) {
                     text-align: center;
                     font-size: 40px;
-                    margin-bottom: 10px;
+                    margin-bottom: 20px;
                 }
             }
             .book-data {
@@ -135,7 +135,7 @@ body.book-school {
                     font-size: 20px;
                 }
                 @media screen and (max-width: $break) {
-                    margin: 0 auto 20px;
+                    margin: 20px auto 2px;
                     width: 100%;
                 }
             }
@@ -540,7 +540,6 @@ body.book-school {
     }
 
     .book-outline {
-        padding: 0;
         .grid {
             display: -webkit-box;
             display: -webkit-flex;
@@ -626,7 +625,58 @@ body.book-school {
                 padding: 0 6px;
             }
         }
+        .overview {
+            padding: 0;
+        }
+        .download {
+        dl {
+            margin: 0 0 60px 0;
+            width: 25%;
+            float: left;
+            text-align: left;
+            box-sizing: border-box;
+            @media screen and(max-width: $break-lg) {
+                margin: 0;
+                height: 120px;
+                width: 25%;
+            }
+            @media screen and (max-width: 900px) {
+                margin: 0;
+                height: 120px;
+                width: 25%;
+            }
+            @media screen and(max-width: $break) {
+                margin: 0;
+                height: 100px;
+                width: 50%;
+            }
+            span {
+                font-size: 12px;
+                color: #999;
+            }
+            dt {
+                margin: 0 0 3px 0;
+                font-size: 16px;
+                @media screen and(max-width: $break) {
+                    font-size: 14px;
+                }
+            }
+            dd {
+                margin: 0 0 5px 0;
+                color: #337ab7;
+                display: block;
+                font-size: 12px;
+                a {
+                    padding: 0 0 0 5px;
+                    font-size: 14px;
+                    @media screen and(max-width: $break) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
     }
+}
     /* book-outline */
     .common {
         margin: 90px auto 0 auto;
