@@ -90,7 +90,7 @@ body.support {
       width: 100%;
     }
     @media screen and (max-width: $break) {
-      width: 100%;
+      width: 85%;
     }
     .required {
       color: #f55b56;
@@ -99,6 +99,24 @@ body.support {
     .error {
       display: block;
       margin-top: 4px;
+      color: #f55b56;
+      font-size: 12px;
+    }
+    .input-error {
+      display: block;
+      margin: 0 0 0 130px;
+      color: #f55b56;
+      font-size: 12px;
+      @media screen and (max-width: $break) {
+        margin: 0;
+      }
+      @media screen and (max-width: $break-xs) {
+        margin: 0;
+      }
+    }
+    .checkbox-error {
+      margin: -5px 0 0 0;
+      display: block;
       color: #f55b56;
       font-size: 12px;
     }

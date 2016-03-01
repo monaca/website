@@ -318,6 +318,11 @@ body.lang-ja #signup-invited {
   position: relative;
   width: 960px;
   height: 600px;
+  @media screen and (max-width: $break-lg) {
+    background: url(/img/start/SignUp_01_03.png) no-repeat 5% 65%;
+    background-size: 40%;
+    width: auto;
+  }
   @media screen and (max-width: $break) {
     background: none;
     width: auto;
@@ -434,7 +439,7 @@ body.lang-ja #signup-invited {
   }
   .signup-form {
     .submit {
-      margin-bottom: 12px;
+      margin: 12px 0;
       .btn-orange {
         font-weight: 700;
         width: 130px;
@@ -463,7 +468,7 @@ body.lang-ja #signup-invited {
     }
   }
   .copyright {
-    text-align: right;
+    text-align: center;
     color: #fff;
     font-size: 12px;
     margin-top: 430px;

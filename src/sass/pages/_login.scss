@@ -1,0 +1,119 @@
+#header-simple {
+    margin: 120px 0 0 0;
+    h1 {
+      color: #666666;
+      padding-bottom: 20px;
+      font-size: 24px;
+      font-weight: normal;
+      text-align: center;
+    }
+    .logo {
+      a {
+        width: 160px;
+        height: 37px;
+        display: block;
+        background: url(../img/login/logo.png) no-repeat left top;
+        text-indent: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        background-size: 141px 37px;
+        margin: 0 auto;
+      }
+    }
+    .right-block {
+      position: absolute;
+      right: 26px;
+      top: 50px;
+      a.new-account {
+          margin: 0;
+          background: url(../img/login/header_new_account_icon.png) no-repeat scroll left 15px, rgba(0, 0, 0, 0) url(../img/login/header_free_label_ja.png) no-repeat scroll right 20px;
+          height: 30px;
+          padding: 20px 26px 0 24px;
+          line-height: 45px;
+          color: #666;
+          font-size: 15px;
+      }
+      .hidden-break {
+        @media screen and (max-width: 640px) {
+        display: none !important;
+        }
+      }
+      .visible-break {
+        @media screen and (min-width: 641px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+#login {
+  padding: 0;
+  margin: 0 0 40px 0;
+  .container {
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+    margin: 40px auto 15px;
+    max-width: 358px;
+    padding: 0  14px 6px 14px;
+    h2 {
+      font-size: 16px;
+      font-weight: normal;
+      margin-top: 14px;
+      text-shadow: 0 1px 0 white;
+      text-align: left;
+    }
+    .login-form {
+      margin-top: 6px;
+      padding: 0;
+      li {
+          margin: 0 0 4px;
+          input[type="text"],
+          input[type="password"],
+          input[type="email"],
+          input[type="url"],
+          textarea {
+            font-size: 16px;
+            padding: 10px 0 10px 46px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+            color: #666666;
+            display: inline-block;
+            margin: 0 0 9px;
+            outline: medium none;
+        }
+      }
+      .checkbox input[type="checkbox"]:checked + label {
+            background: url(../img/login/checkmark.png) no-repeat scroll 3px center, rgba(0, 0, 0, 0) url(../img/login/checkbox.png) no-repeat scroll left center;
+      }
+      .checkbox label {
+            background: url(../img/login/checkbox.png) no-repeat scroll left center;
+      }
+    }
+    .bottom {
+      a {
+        color: #999999;
+        font-size: 12px;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  margin: 0 0 20px 0;
+  font-size: 14px;
+  text-align: center;
+  color: #999;
+  a {
+    color: #999;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

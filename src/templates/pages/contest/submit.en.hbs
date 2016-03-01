@@ -16,7 +16,7 @@ viewport: width=1200px
         <tr>
           <th>Your Name<span class="required">*</span></th>
           <td><input type="text" name="form[name]" id="form_name" /><br />
-          <ul class="error_list">
+          <ul class="error-list">
             <li>Required.</li>
           </ul>
           </td>
@@ -26,13 +26,13 @@ viewport: width=1200px
           <td>
           States, City, etc.<br />
           <input type="text" name="form[location_city]" id="form_location_city" /><br />
-          <ul class="error_list">
+          <ul class="error-list">
             <li>Required.</li>
           </ul>
           <br />
           Country<br />
           <input type="text" name="form[location_country]" id="form_location_country" />
-          <ul class="error_list">
+          <ul class="error-list">
             <li>Required.</li>
           </ul>
           </td>
@@ -40,7 +40,7 @@ viewport: width=1200px
         <tr>
           <th>App Name<span class="required">*</span></th>
           <td><input type="text" name="form[projectname]" id="form_projectname" /><br />
-          <ul class="error_list">
+          <ul class="error-list">
             <li>Required.</li>
           </ul>
           </td>
@@ -49,7 +49,7 @@ viewport: width=1200px
           <th>Brief Description of the App<span class="required">*</span><br />
           <span style="font-size: 70%">700 characters maximum</span></th>
           <td><textarea rows="4" cols="30" name="form[description]" id="form_description"></textarea><br />
-          <ul class="error_list">
+          <ul class="error-list">
             <li>Required.</li>
           </ul>
           </td>
@@ -61,8 +61,7 @@ viewport: width=1200px
               <li><input name="form[product][]" type="checkbox" value="monaca" id="form_product_monaca" />&nbsp;<label for="form_product_monaca">Monaca</label></li>
               <li><input name="form[product][]" type="checkbox" value="onsen" id="form_product_onsen" />&nbsp;<label for="form_product_onsen">Onsen UI</label></li>
             </ul>
-            <br />
-            <ul class="error_list">
+            <ul class="error-list">
               <li>Please choose at least 1 product</li>
             </ul>
           </td>
@@ -97,11 +96,11 @@ viewport: width=1200px
         <tr>
           <th>&nbsp;</th>
           <td>
-          <ul class="error_list">
-            <li>Please agree to the terms and conditions.</li>
-          </ul>
-            <br />
             <input type="checkbox" name="form[agree_policy]" value="1" id="agree_policy" /><label for="agree_policy">Agree to <a href="terms/" target="_blank">the terms and conditions</a>.</label>
+            <br>
+            <ul class="error-list submit-error">
+              <li>Please agree to the terms and conditions.</li>
+            </ul>
           </td>
         </tr>
         </table>

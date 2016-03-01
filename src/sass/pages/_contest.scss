@@ -335,15 +335,21 @@ section.ninja {
         font-size: 11px;
         line-height: 1.4;
         padding: 0 0 15px;
+        .checkbox_list {
+          margin: 0 0 5px 0;
+        }
         input[type="text"],
         input[type="password"],
         input[type="email"],
         input[type="url"],
         textarea {
           font-size: 14px;
-          margin: 0 0 3px;
+          margin: 0 0 5px;
           text-shadow: 0 1px 1px white;
           width: 270px;
+        }
+        textarea {
+          margin: 0 0 3px;
         }
         input[type="checkbox"] {
           margin: 0 6px 0 0;
@@ -366,8 +372,11 @@ section.ninja {
       }
     }
   }
-  .error_list {
+  .error-list {
     color: #c00;
+  }
+  .submit-error {
+    margin: 5px 0 10px 0;
   }
   .btns {
     text-align: center;
