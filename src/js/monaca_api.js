@@ -59,8 +59,9 @@
     } );
   }
 
-  monacaApi.appendIssues = function( element , data ) {
+  monacaApi.appendIssues = function( lang, element , data ) {
     var result = data.result;
+    var timeZone = lang == 'ja' ? 'JST' : 'UTC';
     for (var i = 0; i < result.length; i++) {
       var entry = result[i];
       var shouldOpen = entry.shouldOpen;    
@@ -69,7 +70,7 @@
       if (entry.statusCss == "fixing") {
         statusTag = '<span class="status-fixing">Fixing</span>';
       } else if (entry.statusCss == "reported") {
-        statusTag = '<span class="status-fixing">Reported</span>';
+        statusTag = '<span class="status-reported">Reported</span>';
       } 
       var detailsClass = shouldOpen ? '' : 'display: none;';
       element.append(
@@ -89,7 +90,7 @@
             for (var j=0;j<entry.details.length;j++) {
               var detail = entry.details[j];
               result += '<dl>' +
-                        '  <dt>' + detail.dateTime + ' UTC</dt>' +
+                        '  <dt>' + detail.dateTime + ' ' + timeZone + '</dt>' +
                         '  <dd>' + detail.description + '</dd>' +
                         '</dl>';
             }

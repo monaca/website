@@ -30,7 +30,7 @@ description: Monaca makes hybrid app development with PhoneGap/Cordova a lot eas
       function(data) {
 //        $(".headline-entries").html( JSON.stringify(data) );
         window.monacaApi.appendIssues(
-          $(".headline-entries") , data
+          'en' , $(".headline-entries") , data
         );
 
         $(".headline-entry-toggle").on("click", "img", function() {

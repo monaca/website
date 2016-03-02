@@ -30,7 +30,7 @@ description: Monacaお知らせ - クラウド上のアプリ開発環境。iOS/
       function(data) {
 //        $(".headline-entries").html( JSON.stringify(data) );
         window.monacaApi.appendIssues(
-          $(".headline-entries") , data
+          'ja' , $(".headline-entries") , data
         );
 
         $(".headline-entry-toggle").on("click", "img", function() {
