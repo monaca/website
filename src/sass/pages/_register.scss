@@ -21,6 +21,11 @@
 %signup-form {
   padding: 18px 0 0 0;
   ul {
+    .error {
+      color: #e94d53;
+      font-size: 12px;
+      text-align: left;
+    }
     li {
       margin: 0 0 4px 0;
       &.right {
@@ -348,6 +353,11 @@ body.lang-ja #signup-invited {
     color: #fff;
     font-weight: normal;
     letter-spacing: 0;
+    @media screen and (max-width: $break) {
+      margin: 70px 0 8px;
+      line-height: 43px;
+      font-size: 33px;
+    }
   }
   h4 {
     font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro W3", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -358,6 +368,11 @@ body.lang-ja #signup-invited {
     font-weight: normal;
     font-size: 36px;
     letter-spacing: 0;
+    @media screen and (max-width: $break) {
+      margin: 0 0 20px;
+      line-height: 38px;
+      font-size: 28px;
+    }
   }
   h3.en {
     font-family: Lato, Helvetica, 'MS UI Gothic', sans-serif;
@@ -384,6 +399,7 @@ body.lang-ja #signup-invited {
       font-size: 30px;
       line-height: 40px;
       margin-top: 0;
+      margin-bottom: 40px;
     }
   }
   .container {

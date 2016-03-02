@@ -6,12 +6,16 @@ description: さっそくMonacaを使ってみよう! - クラウド上のアプ
 
 <div id="main-wrap">
 <section id="signup-start">
-  <h3>さっそく<br class="hidden-sm hidden-md hidden-lg" />Monacaを<br class="hidden-sm hidden-md hidden-lg" />使ってみよう!</h3>
-  <h4>クロスプラット<br class="hidden-sm hidden-md hidden-lg" />フォーム時代の<br class="hidden-sm hidden-md hidden-lg" />アプリ開発</h4>
+  <h3>さっそくMonacaを<br class="hidden-sm hidden-md hidden-lg" />使ってみよう!</h3>
+  <h4>クロスプラットフォーム時代のアプリ開発</h4>
   <div class="container">
     <h2>アカウント作成</h2>
     <form class="signup-form" method="post" action="/ja/register/start">
-      <ul><li class="email"><input type="text" name="register[email]" placeholder="メールアドレス" class="email" id="register_email" /></li>
+      <ul>
+        <!--<li class="error">・メールアドレスを入力して下さい</li>
+        <li class="error">・パスワードを入力して下さい</li>
+        <li class="error">・パスワード確認を入力して下さい</li>-->
+        <li class="email"><input type="text" name="register[email]" placeholder="メールアドレス" class="email" id="register_email" /></li>
         <li><input type="password" name="register[password]" placeholder="パスワード" class="password" id="register_password" /></li>
         <li><input type="password" name="register[password_confirm]" placeholder="パスワード再入力" class="password" id="register_password_confirm" /></li>
         <li class="terms" style="font-size: 13px;"><label for="agree_policy"><a href="/terms-of-service/" target="_blank">Monacaの利用規約</a>に同意の上、アカウントの作成をお願いします。</label></li>
