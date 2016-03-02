@@ -1,0 +1,48 @@
+---
+title: Login | HTML5 cross-platform mobile app development with Monaca
+class: login
+description: Cloud powered HTML5 hybrid app development environment. Code and build iOS/Android/Windows apps cross-platform.
+---
+<header id="header-simple">
+  <div class="container">
+    <h1 class="logo"><a href="http://monaca.mobi/ja/">Monaca</a></h1>
+  </div>
+  <div class="right-block">
+    <a href="#signuppopup" class="show_signuppopup bold new-account hidden-break">Sign Up</a>
+    <a href="/en/register/start" class="new-account visible-break">Sign Up</a>
+  </div>
+</header>
+
+<section id="login">
+  <div class="container">
+    <h2>Login</h2>
+    <form class="login-form" method="post" action="/en/login" onsubmit="$('#execute_login').prop('disabled', true);">
+      <ul>
+        <li class="email">
+          <input type="text" name="form[email]" maxlength="255" placeholder="E-mail address" class="email" id="form_email" />
+        </li>
+        <li>
+          <input type="password" name="form[password]" maxlength="30" placeholder="Password" class="password" id="form_password" />
+        </li>
+        <li class="checkbox">
+          <input type="checkbox" name="form[remember_id]" value="1" id="remember_email" checked="checked" />
+          <label for="remember_email">Keep my account logged in</label>
+        </li>
+        <li>
+          <button id="execute_login" type="submit" class="btn-blue">Login</button>
+        </li>
+      </ul>
+      <input type="hidden" name="form[_csrf_token]" value="ff5c9f539c5da9eebf1f1343006cc5a8" id="form__csrf_token" />
+    </form>
+
+    <div class="bottom">
+      <a href="/en/lost/password">Forgot password?</a>
+    </div>
+  </div>
+</section>
+
+<footer id="footer-simple">
+  <div class="container">
+    <p class="copyright">Copyright © 2016<a rel="nofollow" target="_blank" href="http://www.asial.co.jp/">Asial Corporation</a>. All rights reserved.</p>
+  </div>
+</footer>

@@ -2,29 +2,6 @@
 
 @import "bourbon";
 
-@mixin trans-prefix($value, $prefix: "") {
-  $slice: str-slice(inspect($value), 0, 9);
-  @if $slice == "transform" {
-    #{$prefix}transition: #{$prefix}#{$value};
-  } @else {
-    #{$prefix}transition: $value;
-  }
-}
-
-@mixin transition($properties...) {
-  @if length($properties) > 1 {
-    $spec:              ();
-    @for $i from 1 through length($properties) {
-      $spec:            append($spec, nth($properties, $i), comma);
-    }
-  } @else {
-    $spec:              $properties;
-  }
-  @include trans-prefix($spec, -webkit-);
-  @include trans-prefix($spec, -moz-);
-  @include trans-prefix($spec);
-}
-
 // Reset CSS and variables have been to _init.scss
 @import "init";
 @import "icon";
@@ -61,3 +38,7 @@
 @import "pages/terms-of-service";
 @import "pages/headline";
 @import "pages/logos";
+@import "pages/great-apps";
+@import "pages/contest";
+@import "pages/register";
+@import "pages/login";

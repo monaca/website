@@ -1,87 +1,734 @@
 body.support {
-    .keyvisual {
-        background: url(../img/support/keyvisual.jpg) no-repeat center bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
-        color: #000;
-        padding-bottom: 0;
-        position: relative;
-        h1 {
-            font-weight: 400;
-            margin-bottom: 10px;
-            padding-top: 140px;
-            text-align: left;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 1);
-            @media screen and (max-width: $break) {
-                padding-top: 100px;
-                padding-bottom: 40px;
-            }
-            img {
-                vertical-align: 4px;
-            }
-            span {
-                color: #d70101;
-            }
-        }
+  .keyvisual {
+    background: url(../img/support/keyvisual.jpg) no-repeat center bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
+    color: #000;
+    padding-bottom: 0;
+    position: relative;
+    h1 {
+      font-weight: 400;
+      margin-bottom: 10px;
+      text-align: left;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+      @media screen and (max-width: $break) {
+        padding-top: 100px;
+        padding-bottom: 40px;
+      }
+      img {
+        vertical-align: 4px;
+      }
+      span {
+        color: #d70101;
+      }
+    }
+    p {
+      font-size: 20px;
+      text-align: left;
+      width: 420px;
+      word-break: break-all;
+    }
+  }
+  article.main {
+    section {
+      padding-top: 90px;
+      padding-bottom: 80px;
+      border: none;
+      &:first-child {
+        padding-top: 140px;
+      }
+      h1 {
+        text-align: center;
+      }
+      p {
+        margin-bottom: 20px;
+      }
+      &.tech {
+        @include clearfix;
         p {
-            font-size: 20px;
-            text-align: left;
-            width: 420px;
+          width: auto;
+        }
+        .alignright {
+          float: right;
+          margin: 0 0 40px 40px;
+          max-width: 52%;
+          @media screen and (max-width: $break) {
+            float: none;
+            margin-left: 0;
+            max-width: 100%;
+          }
+        }
+        .tech-cont {
+          padding-top: 60px;
+          text-align: left;
+          p {
+            max-width: initial;
+            max-width: auto;
+          }
+          @media screen and (max-width: $break) {
+            padding: 0 5%;
+          }
+        }
+      }
+      &.forum {
+        background: url(../img/support/img_4.jpg) no-repeat center 330px;
+        min-height: 670px;
+        .glyphicon-menu-right {
+          font-size: 0.4rem;
+          top: 0;
+        }
+        @media screen and (max-width: $break-xs) {
+          background-size: 160%;
+          background-position: center bottom;
+          min-height: 600px;
+        }
+      }
+    }
+  }
+  #support-tech {
+    padding: 100px 0 30px 0;
+    width: 700px;
+    table {
+      width: 100%;
+    }
+    @media screen and (max-width: $break) {
+      width: 85%;
+    }
+    .required {
+      color: #f55b56;
+      padding-left: 3px;
+    }
+    .error {
+      display: block;
+      margin-top: 4px;
+      color: #f55b56;
+      font-size: 12px;
+    }
+    .input-error {
+      display: block;
+      margin: 0 0 0 130px;
+      color: #f55b56;
+      font-size: 12px;
+      @media screen and (max-width: $break) {
+        margin: 0;
+      }
+      @media screen and (max-width: $break-xs) {
+        margin: 0;
+      }
+    }
+    .checkbox-error {
+      margin: -5px 0 0 0;
+      display: block;
+      color: #f55b56;
+      font-size: 12px;
+    }
+    > .container {
+      margin-bottom: 60px;
+      width: 700px;
+      min-width: 100%;
+      @media screen and (max-width: $break) {
+        padding: 0 10%;
+        width: auto;
+      }
+      @media screen and (max-width: $break-xs) {
+        padding: 0 2%;
+        width: auto;
+      }
+      hr {
+        margin: 0 0 20px 0;
+      }
+      .form-item {
+        font-size: 12px;
+        color: #666;
+        width: 100%;
+        p {
+          @media screen and (max-width: $break) {
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
+        label {
+          font-weight: normal;
+          a {
+            text-decoration: underline;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+        textarea {
+          margin-left: 130px;
+        }
+        input[type=text] {
+
+          padding: 5px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+        }
+        input[type=checkbox] {
+          margin-right: 0.4em;
+        }
+      }
+      .form-item.block-item {
+        @media screen and (max-width: $break) {
+          display: block;
+        }
+
+      }
+
+      .notification {
+        margin-bottom: 40px;
+        a {
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      > p {
+        font-size: 13px;
+        line-height: 20px;
+        color: #666;
+        @media screen and (max-width: $break) {
+          padding: 0;
+        }
+      }
+
+      > ul {
+        margin-left: 25px;
+        margin-bottom: 30px;
+        > li {
+          line-height: 1.7;
+          list-style-position: inside;
+        }
+      }
+
+      > h1 {
+        color: #2472b3;
+        font-size: 36px;
+        line-height: 36px;
+        margin: 0 0 70px;
+        text-align: left;
+        padding: 0;
+        @media screen and (max-width: $break) {
+          font-size: 28px;
+        }
+      }
+
+      > div.support-tech-caution {
+        > h2 {
+          margin: 50px 0 32px 0;
+          text-align: center;
+          font-size: 24px;
+          line-height: 24px;
+          font-weight: bold;
+          color: #666;
+          > img {
+            vertical-align: middle;
+            display: inline-block;
+            margin-bottom: 4px;
+          }
+        }
+        > p {
+          margin: 0 130px;
+          font-size: 13px;
+          line-height: 24px;
+          color: #666;
+          @media screen and (max-width: $break) {
+            margin: 0 auto;
+          }
+        }
+
+        > div.support-tech-caution-footer {
+          margin-top: 60px;
+          text-align: center;
+          > a.btn-blue {
+            height: 40px;
+            line-height: 40px;
+            width: 240px;
+          }
+        }
+      }
+
+      > form > table {
+        td {
+          padding: 4px 0 20px;
+          @media screen and (max-width: $break) {
+            padding-bottom: 30px;
+          }
+          > img.user-icon {
+            vertical-align: middle;
+            border: 1px solid #333;
+            margin-right: 8px;
+          }
+          > span.user-info {
+            font-size: 13px;
+            line-height: 20px;
+            font-weight: bold;
+            color: #666;
+          }
+          > label.device-label {
+            display: inline-block;
+            width: 200px;
+            margin:0 0 10px 0;
+          }
+          > label.other-device-label {
+            display: block;
+            margin-top: 5px;
+            font-weight: normal;
+            > input.target-device {
+              box-sizing: border-box;
+              width: 100%;
+              margin-top: 0;
+              margin-left: 0px;
+              @media screen and (max-width: $break) {
+                margin-left: 0;
+                width: 100%;
+              }
+            }
+            > input {
+              background: #fff none repeat scroll 0 0;
+              border: 1px solid #cccccc;
+              border-radius: 4px;
+              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+              color: #666666;
+              display: inline-block;
+              font-size: 14px;
+              outline: medium none;
+              padding: 5px;
+            }
+          }
+
+          > textarea#support-text {
+            box-sizing: border-box;
+            display: block;
+            width: 100%;
+            height: 140px;
+            background: #fff none repeat scroll 0 0;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+            color: #666666;
+            display: inline-block;
+            font-size: 14px;
+            margin: 0 0 0px 0;
+            outline: medium none;
+            padding: 5px;
+            @media screen and (max-width: $break) {
+              width: 100%;
+            }
+          }
+
+
+          > div.support-text-footer {
+            text-align: right;
+            > span.expand-button {
+              display: inline-block;
+              cursor: pointer;
+              font-size: 11px;
+              line-height: 19px;
+              color: #fff;
+              background-color: #999;
+              border-radius: 0 0 4px 4px;
+              margin-right: 20px;
+              padding: 0 8px;
+              height: 19px;
+              &:hover {
+                background-color: #555;
+              }
+            }
+          }
+
+          > a.help {
+            width: 21px;
+            height: 21px;
+            display: inline-block;
+            cursor: pointer;
+            background-image: url(../img/inquiry/ico_q_21px.png);
+            vertical-align: middle;
+            &:hover {
+              background-position: left 21px;
+            }
+          }
+
+          > div.balloon-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            > div.balloon {
+              background-color: #525253;
+              border: 1px solid #333;
+              border-radius: 8px;
+              position: absolute;
+              top: -200px;
+              left: -34px;
+              width: 270px;
+              min-height: 100px;
+              font-size: 13px;
+              line-height: 16px;
+              color: #ccc;
+              padding: 14px 15px;
+              /*@include box-shadow(0 1px 0 rgba(255, 255, 255, .2) inset, 0px 4px 8px rgba(0, 0, 0, 0.3));*/
+              &:after {
+                content: '';
+                position: absolute;
+                border-top: 8px solid #525253;
+                border-right: 8px solid transparent;
+                border-left: 8px solid transparent;
+                bottom: -8px;
+                left: 15px;
+              }
+            }
+          }
+          > select {
+            min-width: 200px;
+            font-size: 12px;
+          }
+        }
+        td.label {
+          width: 130px;
+          vertical-align: top;
+          display: block;
+          text-align: left;
+          @media screen and (max-width: $break) {
             word-break: break-all;
+          }
+          @media screen and (max-width: $break-xs) {
+            width: 100px;
+          }
         }
-    }
-    article.main {
-        section {
-            border-bottom: 1px solid #ccc;
-            padding-top: 90px;
-            padding-bottom: 80px;
-            &:first-child {
-                padding-top: 140px;
-            }
-            h1 {
-                text-align: center;
-            }
-            p {
-                margin-bottom: 30px;
-            }
-            &.tech {
-                @include clearfix;
-                p {
-                    width: auto;
-                }
-                .alignright {
-                    float: right;
-                    margin: 0 0 40px 40px;
-                    max-width: 52%;
-                    @media screen and (max-width: $break) {
-                        float: none;
-                        margin-left: 0;
-                        max-width: 100%;
-                    }
-                }
-                .tech-cont {
-                    padding-top: 60px;
-                    text-align: left;
-                    p {
-                        max-width: initial;
-                        max-width: auto;
-                    }
-                    @media screen and (max-width: $break) {
-                        padding: 0 5%;
-                    }
-                }
-            }
-            &.forum {
-                background: url(../img/support/img_4.jpg) no-repeat center 330px;
-                min-height: 670px;
-                .glyphicon-menu-right {
-                    font-size: 0.4rem;
-                    top: 0;
-                }
-                @media screen and (max-width: $break-xs) {
-                    background-size: 160%;
-                    background-position: center bottom;
-                    min-height: 600px;
-                }
-            }
+        td.label.no-label {
+          @media screen and (max-width: $break) {
+            display: none;
+          }
         }
+        td.label.title-label {
+          @media screen and (max-width: $break) {
+            padding-bottom: 0;
+          }
+        }
+        td.colspan-title {
+          padding-bottom: 0;
+        }
+        .colspan-title-inline {
+          margin-bottom: 10px;
+          display: inline-block;
+        }
+        .colspan-item {
+          margin: 0 0 20px 130px;
+        }
+        td > span.input-label {
+          font-size: 13px;
+          line-height: 20px;
+          color: #333;
+          font-weight: bold;
+          display: inline-block;
+        }
+        td > strong.ticket-retain {
+          font-weight: bold;
+          color: #333;
+          font-size: 16px;
+          line-height: 21px;
+          margin: 0 4px;
+        }
+        .link-blue {
+          font-size: 12px;
+        }
+      }
+      div.form-footer {
+        margin-top: 10px;
+        text-align: center;
+        width: 700px;
+        @media screen and (max-width: $break) {
+          width: 100%;
+        }
+        > input[type=submit] {
+          height: 40px;
+          width: 200px;
+          line-height: 30px;
+        }
+      }
     }
+  }
+
+  #support-inquiry {
+    padding: 100px 0 30px 0;
+    width: 700px;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
+    > .container {
+      width: 700px;
+      min-width: auto;
+      @media screen and (max-width: $break) {
+        padding: 0 15%;
+        width: auto;
+      }
+      @media screen and (max-width: $break-xs) {
+        padding: 0 10%;
+        width: auto;
+      }
+      > h1 {
+        color: #2472b3;
+        font-size: 36px;
+        line-height: 36px;
+        margin: 0 0 70px;
+        text-align: left;
+        padding: 0;
+        @media screen and (max-width: $break) {
+          font-size: 28px;
+          margin-bottom: 30px;
+        }
+      }
+      > #content {
+        width: auto;
+        padding: 0;
+        margin: 0;
+        color: black;
+        font-size: 12px;
+        overflow-y: auto;
+        z-index: -100;
+        .feedback-form {
+          select {
+            background-color: #fff;
+            border: 1px solid #9c9c9c;
+            border-radius: 4px;
+            color: #3f3e3d;
+            height: 30px;
+            margin-bottom: 30px;
+            padding: 0 7px;
+            width: 50%;
+            vertical-align: middle;
+            @media screen and (max-width: $break) {
+              width: 75%;
+            }
+          }
+          input[type="radio"] {
+            height: 20px;
+            margin: 0 5px 0 40px;
+            width: 20px;
+            vertical-align: middle;
+          }
+          textarea {
+            background: #fff none repeat scroll 0 0;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+            color: #666666;
+            display: inline-block;
+            font-size: 14px;
+            margin: 0 0 9px;
+            outline: medium none;
+            padding: 5px;
+            height: 226px;
+          }
+          p {
+            font-weight: normal;
+            line-height: 150%;
+            margin: 0 0 10px;
+            color: #333;
+            padding: 0;
+            a {
+              text-decoration: underline;
+              &:hover {
+                text-decoration: none;
+              }
+            }
+          }
+          .feedback-item {
+            border-radius: 2px;
+            margin-bottom: 30px;
+            width: 700px;
+            @media screen and (max-width: $break) {
+              width: 100%;
+            }
+            @media screen and (max-width: $break-xs) {
+              table td {
+                display: block;
+                &.label {
+                  text-align: left;
+                  padding: 9px 0;
+                }
+              }
+            }
+            .required {
+              color: #f55b56;
+              padding-left: 3px;
+            }
+          }
+        }
+
+        h2 {
+          font-weight: bold;
+          text-align: left;
+        }
+        label {
+          font-weight: normal;
+          line-height: 36px;
+        }
+        .feedback-item .form-label-inline {
+          text-align: right;
+          padding-right: 10px;
+          width: 120px;
+          float: left;
+          @media screen and (max-width: $break) {
+            text-align: left;
+            margin-left: 0;
+            padding-right: 0;
+            width: 340px;
+          }
+        }
+        .feedback-item.feedback-item-radio {
+          padding-top: 42px;
+          > ul {
+            margin-left: 100px;
+            text-align: left;
+            @media screen and (max-width: $break) {
+              margin-left: 0px;
+            }
+          }
+        }
+        .feedback-item.service-item {
+          @media screen and (max-width: $break) {
+            margin-right: 30px;
+          }
+          input[type="text"] {
+            width: 210px;
+          }
+          h2 {
+            margin-bottom: 40px;
+          }
+          label {
+            width: 130px;
+          }
+          div {
+            margin-bottom: 26px;
+            @media screen and (max-width: $break) {
+              height: auto;
+              margin-bottom: 16px;
+            }
+            label {
+              vertical-align: middle;
+            }
+            input[type="text"] {
+              margin-right: 6px;
+              margin-bottom: 0;
+              @media screen and (max-width: $break) {
+                margin-bottom: 5px;
+                width: 100%;
+                font-size: 16px;
+              }
+              & + span {
+                display: block;
+                margin-left: 130px;
+                @media screen and (max-width: $break) {
+                  margin-left: 0px;
+                }
+              }
+            }
+            &:last-child {
+              margin-bottom: 46px;
+            }
+          }
+          table {
+            @media screen and (max-width: $break) {
+              padding-right: 30px;
+            }
+            label {
+              line-height: 1.4;
+              .row-indent {
+                margin-right: 0.5em;
+                display: inline-block;
+              }
+            }
+            td {
+              @media screen and (max-width: $break) {
+                display: block;
+                text-align: left;
+                textarea {
+                  font-size: 16px;
+                }
+              }
+              &.label {
+                width: 115px;
+                padding: 0 10px 0 0;
+                @media screen and (max-width: $break) {
+                  text-align: left;
+                  padding: 0;
+                }
+              }
+              p {
+                @media screen and (max-width: $break) {
+                  padding: 10px 0 0;
+                }
+              }
+            }
+          }
+        }
+        > form > .feedback-item {
+          table {
+            width: 100%;
+            td {
+              vertical-align: middle;
+              width: auto;
+              margin: 0;
+              padding: 0;
+            }
+            td.label {
+              width: 140px;
+              text-align: right;
+              padding: 4px 10px;
+              margin: 0;
+              color: #333;
+              font-size: 95%;
+              font-weight: normal;
+              display: block;
+              @media screen and (max-width: $break) {
+                width: auto;
+              }
+            }
+          }
+        }
+        input[type="text"] {
+          box-sizing: border-box;
+          width: 540px;
+          background: #fff none repeat scroll 0 0;
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+          color: #666666;
+          display: inline-block;
+          font-size: 14px;
+          margin: 0 0 9px;
+          outline: medium none;
+          padding: 3px;
+          @media screen and (max-width: $break) {
+            width: 100%;
+          }
+        }
+        textarea {
+          margin: 0 0 20px 0;
+        }
+        textarea, input[type=text]#device_os {
+          box-sizing:border-box;
+          width: 540px;
+          @media screen and (max-width: $break) {
+            width: 100%;
+          }
+        }
+        .form-footer {
+          text-align: center;
+          width: 700px;
+          @media screen and (max-width: $break) {
+            width: 100%;
+          }
+          > input[type=submit] {
+            height: 40px;
+            width: 200px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
 }

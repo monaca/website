@@ -1,8 +1,9 @@
 (function() {
 
   var monacaApi = Object.create(null);
+  
+  monacaApi.baseUrl = "<%= monaca_api %>";
 
-  monacaApi.baseUrl = "https://monaca.local";
 
   monacaApi.getHeadline = function (options,success,fail) {
     var lang = options.lang || 'en';
@@ -104,6 +105,11 @@
     }
   }
 
+  var login_data = null;
+  monacaApi.loadLoginData = function ( data ) {
+    login_data = data;
+    alert(JSON.stringify( login_data) );
+  }
 
   window.monacaApi = monacaApi;
 
