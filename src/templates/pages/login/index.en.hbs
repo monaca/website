@@ -3,6 +3,46 @@ title: Login | HTML5 cross-platform mobile app development with Monaca
 class: login
 description: Cloud powered HTML5 hybrid app development environment. Code and build iOS/Android/Windows apps cross-platform.
 ---
+<div id="signuppopup">
+
+  <div id="signup-ok" class="signuppopup-container">
+    <h3>アカウント作成</h3>
+
+    <a id="close_signupbackpopup" class="close"><img src="/img/login/close-dark.png"></a>
+    <form class="signup-form" method="post" action="/ja/register/start/is_popup/1" id="TryNowForm">
+      <ul>
+        <li class="error" style="padding-top: 0;"></li>
+        <li class="email">
+          <input type="text" name="register[email]" class="email" placeholder="E-mail address" id="register_email" /></li>
+        <li>
+          <input type="password" name="register[password]" class="password" placeholder="Password" id="register_password" /></li>
+        <li class="" style="font-size: 14px;">
+          <label for="agree_policy">
+          <a class="en" href="/ja/page/license" target="_blank">By clicking the button below you agree to terms of use and privacy policy</a></label>
+        </li>
+        <li>
+          <button id="create_account" type="submit">Try Now!</button>
+          <span class="loading"></span>
+        </li>
+      </ul>
+      <input type="hidden" name="register[_csrf_token]" value="" id="register__csrf_token">
+      <script>
+        var csrf_token = "2fc292d3a4d63007acb3601b5b8da564";
+        document.getElementById("register__csrf_token").value = csrf_token;
+      </script>
+    </form>
+  </div>
+
+  <!--<div class="signuppopup-container" id="signup-ng">
+    <a href="http://www.google.com/chrome/" id="link-chrome" class="link" target="_blank">Google Chrome</a>
+    <a href="http://www.apple.com/safari/" id="link-safari" class="link" target="_blank">Safari</a>
+    <p>
+      お使いのブラウザはMonacaの開発環境に対応していません。Google ChromeもしくはSafariブラウザをご利用ください。</p>
+    <a class="license" href="/ja/register/start">会員登録は行っていただけます。</a>
+  </div>-->
+</div>
+<div id="modal-overlay"></div>
+
 <header id="header-simple">
   <div class="container">
     <h1 class="logo"><a href="http://monaca.mobi/ja/">Monaca</a></h1>

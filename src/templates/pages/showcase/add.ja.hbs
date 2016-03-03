@@ -9,12 +9,12 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
       <h1>事例を登録する</h1>
       <p>あなたのアプリを事例ページで宣伝しませんか?<br />
       (*印は必須項目です)</p>
-      <p class="error">
+      <div class="error">
       ・開発者名を入力して下さい
       <br>
       ・少なくともどちらか一方のURLが必須です
       <br>
-      </p>
+      </div>
 
       <form action="/ja/showcase/add" method="post">
         <table>
@@ -31,7 +31,7 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
             <span class="annotation">例： http://itunes.apple.com/jp/app/monaca/id550941371</span></td>
           </tr>
           <tr>
-            <th>Google PlayストアでのアプリのURL</th>
+            <th>Google Playストアでの<br />アプリのURL</th>
             <td><input type="text" name="form[url_googleplay]" class="wide" id="form_url_googleplay" /><br />
             <span class="annotation">例： https://play.google.com/store/apps/details?id=mobi.monaca.debugger</span></td>
           </tr>

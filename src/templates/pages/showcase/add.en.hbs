@@ -1,0 +1,77 @@
+---
+title: Submit Your App | HTML5 cross-platform mobile app development with Monaca
+class: showcase
+description: Cloud powered HTML5 hybrid app development environment. Code and build iOS/Android/Windows apps cross-platform.
+---
+<div id="main-wrap">
+  <section id="case_add" class="subpage">
+    <div class="container">
+      <h1>Submit Your App</h1>
+      <p>Let the World Discover Your App in the Showcase!<br />
+      (* Required field)</p>
+      <div class="error">
+      ・Please type in developer name.
+      <br>
+      ・Either URL needs to be specified.
+      <br>
+      </div>
+
+      <form action="/ja/showcase/add" method="post">
+        <table>
+          <tr>
+            <th>Developer's Name<span class="required">*</span></th>
+            <td>
+              <input type="text" name="form[name]" id="form_name" /><br />
+              <span class="annotation">This name will be included with the app.</span>
+            </td>
+          </tr>
+          <tr>
+            <th>App Store URL</th>
+            <td><input type="text" name="form[url_appstore]" class="wide" id="form_url_appstore" /><br />
+            <span class="annotation">Example: http://itunes.apple.com/jp/app/monaca/id550941371</span></td>
+          </tr>
+          <tr>
+            <th>Google Play URL</th>
+            <td><input type="text" name="form[url_googleplay]" class="wide" id="form_url_googleplay" /><br />
+            <span class="annotation">Example: https://play.google.com/store/apps/details?id=mobi.monaca.debugger</span></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><p>
+            - The Monaca Team will review your app and decide whether to include it in the Showcase.
+            - Monaca Team will create the app's screenshot and description.
+            - Please note that not all submitted apps will be eligible for inclusion in the Showcase.
+            </p></td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><button type="submit" class="btn-black">Submit Your App</button></td>
+          </tr>
+        </table>
+        <input type="hidden" name="form[_csrf_token]" value="d4cb1262641c18d9e25294f53303c8b1" id="form__csrf_token" />
+      </form>
+    </div>
+  </section>
+</div>
+
+<script>
+$(function() {
+    var cases = $(".cases li");
+    var selectors = $(".cases-category li");
+
+    selectors.click(function() {
+        selectors.removeClass("active");
+        $(this).addClass("active");
+
+        var cat = this.dataset["category"];
+
+        cases.each(function() {
+            if ((cat === "all") || (cat === this.dataset["category"])) {
+                $(this).show();
+            } else {
+                $(this).hide()
+            }
+        });
+    });
+});
+</script>

@@ -31,8 +31,6 @@ module.exports = function(grunt) {
 
     var site_yaml_filename = grunt.file.exists(config.src + '/data/site_dev.yml') ? 'site_dev.yml' : 'site.yml';
 
-//    process.stdout.write( "!!!!!!!!!!!! filename = " + site_yaml_filename );
-
     var site_yaml = grunt.file.readYAML(config.src + '/data/' + site_yaml_filename);
 
     process.stdout.write( JSON.stringify( site_yaml ) );
