@@ -4,7 +4,6 @@
   
   monacaApi.baseUrl = "<%= monaca_api %>";
 
-
   monacaApi.getHeadline = function (options,success,fail) {
     var lang = options.lang || 'en';
     var news_type = options.type || 'news_and_release';
@@ -25,7 +24,6 @@
   }
 
   monacaApi.appendHeadline = function( element , data ) {  
-    // element = $(".headline-entries").
     var result = data.result;
     for (var i = 0; i < result.length; i++) {
       var entry = result[i];
@@ -105,11 +103,66 @@
     }
   }
 
-  var login_data = null;
-  monacaApi.loadLoginData = function ( data ) {
-    login_data = data;
-    alert(JSON.stringify( login_data) );
-  }
+  var loginData = { 
+    profile : null,
+    status : null,
+    onElements : [] , 
+    offElements : [] 
+  };
+
+  monacaApi.loadLoginData = function ( status ) {
+    loginData.status = status;
+    var el = document.querySelector(".navbar-nav");    
+    var children = $(el).children();
+    var n = children.size();
+    for (var i = n-8;i<n-5;i++) {
+      loginData.offElements.push( children[i] );
+    }
+    for (var i = n-5;i<n;i++) {
+      loginData.onElements.push( children[i] );
+    } 
+    if (status.isLogin) {
+      loginData.offElements.forEach( function(elem) {
+        elem.remove();
+      } );
+    } else {
+      loginData.onElements.forEach( function(elem) {
+        elem.remove();
+      } );
+    }
+  };
+
+  
+  monacaApi.showGravator = function ( ) {
+    if (loginData.profile != null) {
+      $(".user-icon").attr("src",loginData.profile.gravatar);
+    }
+  };
+
+  window.addEventListener("load", function() {  
+
+    if (! loginData.status.isLogin) {
+      return;
+    }
+
+    $.ajax( {
+      type : "GET",
+      url : monacaApi.baseUrl + "/" + window.LANG + "/login_io_check",
+            xhrFields: {
+              withCredentials: true
+            },
+            dataType: "json",
+            success: function(msg) {
+              loginData.profile = msg.result;
+              monacaApi.showGravator();
+            },
+            error: function(msg) {
+             console.log( JSON.stringify( msg ) );
+             // alert( JSON.stringify( msg ) );
+            }
+    } );
+ 
+  } , false );
 
   window.monacaApi = monacaApi;
 
