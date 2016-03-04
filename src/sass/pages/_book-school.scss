@@ -397,8 +397,9 @@ body.book-school {
                 margin: 0 0 20px 0;
             }
             .company-logo {
+                text-align: left;
                 margin: 0 30px 0 0;
-                width: 312px;
+                width: 200px;
                 float: left;
                     @media screen and (max-width: $break) {
                         width: 100%;
@@ -418,7 +419,7 @@ body.book-school {
                         width: 100%;
                     }
                 li {
-                    margin: 25px 0 0 30px;
+                    margin: 27px 0 0 30px;
                     float: left;
                     font-size: 26px;
                     text-align: left;
@@ -434,7 +435,7 @@ body.book-school {
                         }
                 }
                 li:first-child {
-                    margin: 25px 0 0 0;
+                    margin: 29px 0 0 0;
                         @media screen and (max-width: $break) {
                             width: 100%;
                             line-height: 1.3;
