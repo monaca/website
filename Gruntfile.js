@@ -106,11 +106,11 @@ module.exports = function(grunt) {
                 separator: ";",
 
             },
-            options : {
-              process : function(content,path) {
-                return grunt.template.process(content,{ data : site_yaml } );
-              }
-            }
+            // options : {
+            //   process : function(content,path) {
+            //     return grunt.template.process(content,{ data : site_yaml } );
+            //   } 
+            // }
         },
 
         uglify: {

@@ -1,116 +1,33 @@
 (function() {
 
+  // Application Settings
+
   var monacaApi = Object.create(null);
-  
-  monacaApi.baseUrl = "<%= monaca_api %>";
-
-  monacaApi.getHeadline = function (options,success,fail) {
-    var lang = options.lang || 'en';
-    var news_type = options.type || 'news_and_release';
-    var limit = options.limit || 50;
-
-    $.ajax( {
-      type : "GET",
-      url : monacaApi.baseUrl + "/" + lang + "/api/news/list",
-      dataType : "JSON",
-      contentType : "text/plain",
-      data : { type : news_type , limit : limit },
-      xhrFields: {
-        withCredentials: true
-      },
-      success : success ,
-      fail : fail
-    } );
-  }
-
-  monacaApi.appendHeadline = function( element , data ) {  
-    var result = data.result;
-    for (var i = 0; i < result.length; i++) {
-      var entry = result[i];
-      element.append(
-        '<div id="entry_"' + entry.id + '" class="headline-entry">' +
-        '  <dl>' +
-        '    <dt>' + entry.date + '</dt>' +
-        '    <dd>' +
-        '      <span class="headline-entry-comment-news">' + entry.body + '</span>' +
-        '    </dd>' +
-        '  </dl>' +
-        '</div>'
-      );
-    }
-  } 
-
-  monacaApi.getIssues = function (options,success,fail) {
-    var lang = options.lang || 'en';
-    var limit = options.limit || 50;
-    
-    $.ajax( {
-      type : "GET",
-      url : monacaApi.baseUrl + "/" + lang + "/api/issue/list",
-      dataType : "JSON",
-      contentType : "text/plain",
-      data : { limit : limit },
-      xhrFields: {
-        withCredentials: true
-      },
-      success : success ,
-      fail : fail
-    } );
-  }
-
-  monacaApi.appendIssues = function( lang, element , data ) {
-    var result = data.result;
-    var timeZone = lang == 'ja' ? 'JST' : 'UTC';
-    for (var i = 0; i < result.length; i++) {
-      var entry = result[i];
-      var shouldOpen = entry.shouldOpen;    
-      var icon = shouldOpen ? 'ico_tri_downward.png' : 'ico_tri_leftward.png' ;
-      var statusTag = '<span class="status-solved">Solved</span>';
-      if (entry.statusCss == "fixing") {
-        statusTag = '<span class="status-fixing">Fixing</span>';
-      } else if (entry.statusCss == "reported") {
-        statusTag = '<span class="status-reported">Reported</span>';
-      } 
-      var detailsClass = shouldOpen ? '' : 'display: none;';
-      element.append(
-        '<div id="entry_"' + entry.id + '" class="headline-entry">' +
-        '  <div class="headline-entry-toggle"><img src="/img/headline/' + icon + '" /></div>' +
-        '  <dl>' +
-        '    <dt>' + entry.date + '</dt>' +
-        '    <dd>' +
-               statusTag +
-        '      <span class="headline-entry-comment">' + entry.title + '</span>' +
-        '    </dd>' +
-        '  </dl>' +
-        '  <div class="headline-sub-entries" style="' + detailsClass + '">' +
-        (function() {
-          if (entry.details && entry.details.length>0) {
-            var result = "";
-            for (var j=0;j<entry.details.length;j++) {
-              var detail = entry.details[j];
-              result += '<dl>' +
-                        '  <dt>' + detail.dateTime + ' ' + timeZone + '</dt>' +
-                        '  <dd>' + detail.description + '</dd>' +
-                        '</dl>';
-            }
-            return result;
-          }
-          return "";
-        })() + 
-        '  </div>' +
-        '</div>' 
-      );
-    }
-  }
 
   var loginData = { 
+    ready : false,
     profile : null,
     status : null,
     onElements : [] , 
-    offElements : [] 
+    offElements : [] ,
+    listeners : [],
+    setReady : function() { 
+      this.ready = true; 
+      this.listeners.forEach( function(f) {
+        f(this);
+      });
+      this.listeners = [];
+    },
+    onReady : function(f) {
+      if (this.ready == true) {
+        f(this);
+      } else {
+        this.listeners.push( f );
+      }
+    }
   };
 
-  monacaApi.loadLoginData = function ( status ) {
+  monacaApi.loginCheck = function ( status ) {
     loginData.status = status;
     var el = document.querySelector(".navbar-nav");    
     var children = $(el).children();
@@ -125,29 +42,28 @@
       loginData.offElements.forEach( function(elem) {
         elem.remove();
       } );
+      this.loadLoginData();
     } else {
       loginData.onElements.forEach( function(elem) {
         elem.remove();
       } );
+      loginData.setReady();
     }
   };
-
   
-  monacaApi.showGravator = function ( ) {
-    if (loginData.profile != null) {
-      $(".user-icon").attr("src",loginData.profile.gravatar);
-    }
-  };
+  monacaApi.getBaseUrl = function() {
+    return window.MONACA_API_URL;
+  }
 
-  window.addEventListener("load", function() {  
-
+  monacaApi.loadLoginData = function() {
     if (! loginData.status.isLogin) {
+      loginData.setReady();
       return;
     }
 
     $.ajax( {
       type : "GET",
-      url : monacaApi.baseUrl + "/" + window.LANG + "/login_io_check",
+      url : monacaApi.getBaseUrl() + "/" + window.LANG + "/login_io_check",
             xhrFields: {
               withCredentials: true
             },
@@ -155,14 +71,53 @@
             success: function(msg) {
               loginData.profile = msg.result;
               monacaApi.showGravator();
+              // var evt = document.createEvent("HTMLEvents");
+              // evt.initEvent('loaddata',true,true);
+              // document.dispatchEvent( evt ) ; 
+              loginData.setReady();
             },
             error: function(msg) {
-             console.log( JSON.stringify( msg ) );
-             // alert( JSON.stringify( msg ) );
+              console.log( JSON.stringify( msg ) );
+              loginData.setReady();
             }
     } );
  
-  } , false );
+  };
+
+  monacaApi.showGravator = function ( ) {
+    if (loginData.profile != null) {
+      $(".user-icon").attr("src",loginData.profile.gravatar);
+    }
+  };
+
+  // Page Initialization;
+
+  window.addEventListener('load',function() { 
+    var path = location.pathname;
+    if (path.slice(-1) == '/') {
+      path += "index.html";
+    }
+    var f = monacaPages[path];
+    if (f) {
+      f( loginData );
+    }
+  } , false);
+
+  // Helpers
+
+  monacaApi.getUrlVars = function() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+  }
+
+  // export
 
   window.monacaApi = monacaApi;
 

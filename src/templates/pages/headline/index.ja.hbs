@@ -20,27 +20,4 @@ description: Monacaお知らせ - クラウド上のアプリ開発環境。iOS/
   </div>
 </section>
 
-<script>
-  window.addEventListener("load", function() {
 
-    window.monacaApi.getHeadline({ lang : "ja" , type : "news_and_release" , limit : 50 } ,
-      function(data) {
-        window.monacaApi.appendHeadline(
-          $(".headline-entries") , data
-        );
-
-        $(".headline-entry-toggle").on("click", "img", function() {
-          $img = $(this);
-          $entries = $img.parent().parent().find(".headline-sub-entries");
-          if ($entries.css("display") == "none") {
-            $img.attr("src", "/img/headline/ico_tri_downward.png");
-          } else {
-            $img.attr("src", "/img/headline/ico_tri_leftward.png");
-          }
-          $entries.slideToggle();
-        });
-
-      }
-    );
-  });
-</script>

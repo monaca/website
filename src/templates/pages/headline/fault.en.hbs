@@ -23,30 +23,3 @@ description: Monaca makes hybrid app development with PhoneGap/Cordova a lot eas
   </div>
 </section>
 
-<script>
-  window.addEventListener("load", function() {
-
-    window.monacaApi.getIssues( { lang : "en" , type : "fault" , limit : 50 } ,
-      function(data) {
-//        $(".headline-entries").html( JSON.stringify(data) );
-        window.monacaApi.appendIssues(
-          'en' , $(".headline-entries") , data
-        );
-
-        $(".headline-entry-toggle").on("click", "img", function() {
-          $img = $(this);
-          $entries = $img.parent().parent().find(".headline-sub-entries");
-          if ($entries.css("display") == "none") {
-            $img.attr("src", "/img/headline/ico_tri_downward.png");
-          } else {
-            $img.attr("src", "/img/headline/ico_tri_leftward.png");
-          }
-          $entries.slideToggle();
-        });
-
-
-      }
-    );
-  });
-</script>
-

@@ -125,11 +125,12 @@
     <script src="/js/all.js"></script>
     <script src="/js/jquery.form.min.js"></script>
     <script src="/js/_signuppopup.js"></script>
-    <script src="{{site.monaca_api}}/login_io?callback=monacaApi.loadLoginData"></script>
     <script>
+      window.MONACA_API_URL = "{{site.monaca_api}}";
       window.LANG = "{{language}}";
       window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
     </script>
+    <script src="{{site.monaca_api}}/login_io?callback=monacaApi.loginCheck"></script>
 
   </body>
 </html>
