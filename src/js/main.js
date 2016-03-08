@@ -67,7 +67,7 @@ function sendTracker(event, params) {
 function downloadLogo(url) {
     sendTracker("downloadLogoPackage", {
         url: url
-    })
+    });
     window.location.href = url;
 }
 

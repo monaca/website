@@ -11,22 +11,22 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
     <p class="notification">テクニカルサポートは有償サービスです。利用には、Personalプラン以上の加入とサポートチケットが必要です。</p>
     <hr>
 
-    <form method="post" action="/ja/support/technical">
-      <input type="hidden" name="support[user_name]" value="" id="support_user_name" />
-      <input type="hidden" name="support[user_email]" value="mohimeg@gmail.com" id="support_user_email" />
-      <input type="hidden" name="support[_csrf_token]" value="1fcef097bb55f6af9c374a340200198d" id="support__csrf_token" />
+    <form id="inquiry-form">
+      <!--input type="hidden" name="support[user_name]" value="" id="support_user_name" />
+      <input type="hidden" name="support[user_email]" value="" id="support_user_email" />
+      <input type="hidden" name="support[_csrf_token]" value="" id="support__csrf_token" /-->
       <table>
         <tr>
           <td class="label title-label"><span class="input-label">送信者：</span></td>
           <td class="form-item block-item">
-            <img src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm" class="user-icon"><span class="user-info">mohimeg@gmail.com</span>
+            <img id="user-icon" class="user-icon"><span id="user-info" class="user-info"></span>
           </td>
         </tr>
         <tr>
           <td class="label title-label"><span class="input-label">サポートの種類：</span></td>
           <td class="form-item block-item">
             <select name="support[support_type]" id="support_support_type">
-              <option value="technical">テクニカルサポート</option>
+              <option value="technical" selected>テクニカルサポート</option>
               <option value="review">コードレビュー</option>
               <option value="bugs">バグ報告</option>
             </select>
@@ -88,7 +88,6 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
           <td class="form-item">
             <select name="support[project_id]" id="support_project_id">
             <option value="0">選択してください</option>
-            <option value="56a6d64c7e2193c06ac9997f">Hello Worldアプリ</option>
             </select>
           </td>
         </tr>
@@ -134,7 +133,7 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
             <span class="checkbox-error">必須項目です。</span></p>
         </tr>
       </table>
-      <div class="form-footer"><input type="submit" name="submit" class="btn-blue" value="送信する"></div>
+      <div class="form-footer"><input type="button" name="submit" class="btn-blue" value="送信する" id="send-btn"></div>
     </form>
   </div>
 </section>

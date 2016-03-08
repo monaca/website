@@ -4,13 +4,15 @@
 
   var monacaApi = Object.create(null);
 
-  var loginData = { 
+  var loginData = {
+    preReady: false,
     ready : false,
     profile : null,
     status : null,
     onElements : [] , 
     offElements : [] ,
-    listeners : [],
+    preListeners : [],
+    listeners: [],
     setReady : function() { 
       this.ready = true; 
       this.listeners.forEach( function(f) {
@@ -24,12 +26,33 @@
       } else {
         this.listeners.push( f );
       }
+    },
+    setPreReady : function() {
+      this.preReady = true;
+      this.preListeners.forEach( function(f) {
+        f(this);
+      });
+      this.preListeners = [];
+    },
+    onPreReady : function(f) {
+      if (this.preReady == true) {
+        f(this);
+      } else {
+        this.preListeners.push( f );
+      }
     }
   };
 
   monacaApi.loginCheck = function ( status ) {
+    console.log('loginCheck called.');
     loginData.status = status;
-    var el = document.querySelector(".navbar-nav");    
+    loginData.setPreReady();
+
+    if (!status.isLogin) {
+      loginData.setReady();
+    }
+
+    var el = document.querySelector(".navbar-nav");
     var children = $(el).children();
     var n = children.size();
     for (var i = n-8;i<n-5;i++) {
@@ -47,13 +70,12 @@
       loginData.onElements.forEach( function(elem) {
         elem.remove();
       } );
-      loginData.setReady();
     }
   };
   
   monacaApi.getBaseUrl = function() {
     return window.MONACA_API_URL;
-  }
+  };
 
   monacaApi.loadLoginData = function() {
     if (! loginData.status.isLogin) {
@@ -71,13 +93,9 @@
             success: function(msg) {
               loginData.profile = msg.result;
               monacaApi.showGravator();
-              // var evt = document.createEvent("HTMLEvents");
-              // evt.initEvent('loaddata',true,true);
-              // document.dispatchEvent( evt ) ; 
               loginData.setReady();
             },
             error: function(msg) {
-              console.log( JSON.stringify( msg ) );
               loginData.setReady();
             }
     } );
@@ -92,7 +110,7 @@
 
   // Page Initialization;
 
-  window.addEventListener('load',function() { 
+  window.addEventListener('DOMContentLoaded',function() {
     var path = location.pathname;
     if (path.slice(-1) == '/') {
       path += "index.html";
