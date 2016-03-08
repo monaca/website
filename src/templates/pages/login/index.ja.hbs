@@ -56,6 +56,18 @@ description: さっそくMonacaを使ってみよう! - クラウド上のアプ
 <section id="login">
   <div class="container">
     <h2>ログイン</h2>
+      <div style="width: 100%; text-align: center;">
+      <div onClick="location.href='/ja/oauth/github/14574138630650'" id="signup-github" class="btn-github">
+        <div class="github-img"></div>
+        <div class="vertical-line"></div>
+        <div class="signup-label">Sign Up With GitHub</div>
+      </div>
+      <div class="or-box">
+        <hr class="line-l" />
+        or
+        <hr class="line-r" />
+      </div>
+    </div>
     <form class="login-form" method="post" action="/ja/login" onsubmit="$('#execute_login').prop('disabled', true);">
       <ul>
         <li class="email">

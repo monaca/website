@@ -3,7 +3,6 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   width: 420px;
-  display: block;
   /*display: none;*/
    display: block;
    opacity: 1;
@@ -233,12 +232,74 @@
     margin: 40px auto 15px;
     max-width: 358px;
     padding: 0  14px 6px 14px;
+    min-width: 358px;
     h2 {
       font-size: 16px;
       font-weight: normal;
       margin-top: 14px;
       text-shadow: 0 1px 0 white;
       text-align: left;
+    }
+    .btn-github {
+      background-color: #000000;
+      border-radius: 3px;
+      border-style: none;
+      color: #ffffff;
+      font-size: 17px;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      .github-img {
+        background-image: url("/img/login/chara_github.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 48px;
+      }
+      .signup-label {
+        height: 50px;
+        line-height: 50px;
+        margin-left: 10px;
+      }
+      .vertical-line {
+        border-left: 1px solid #ffffff;
+        height: 36px;
+        margin-top: 7px;
+        width: 0;
+      }
+      div {
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .or-box {
+      font-size: 14px;
+      height: 54px;
+      line-height: 54px;
+      width: 100%;
+      .line-l {
+       float: left;
+      }
+      .line-r {
+        float: right;
+    }
+      .line-l,
+      .line-r {
+        border-top: 1px solid #999999;
+        height: 0;
+        margin-top: 27px;
+        width: calc(50% - 28px);
+      }
+    }
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #cccccc;
+      margin: 1em 0;
+      padding: 0;
     }
     .login-form {
       margin-top: 6px;

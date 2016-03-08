@@ -6,7 +6,7 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
 <div id="signuppopup">
 
   <div id="signup-ok" class="signuppopup-container">
-    <h3>アカウント作成</h3>
+    <h3>Sign Up</h3>
 
     <a id="close_signupbackpopup" class="close"><img src="/img/login/close-dark.png"></a>
     <form class="signup-form" method="post" action="/ja/register/start/is_popup/1" id="TryNowForm">
@@ -56,6 +56,18 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
 <section id="login">
   <div class="container">
     <h2>Login</h2>
+    <div style="width: 100%; text-align: center;">
+      <div onClick="location.href='/ja/oauth/github/14574138630650'" id="signup-github" class="btn-github">
+        <div class="github-img"></div>
+        <div class="vertical-line"></div>
+        <div class="signup-label">Sign Up With GitHub</div>
+      </div>
+      <div class="or-box">
+        <hr class="line-l" />
+        or
+        <hr class="line-r" />
+      </div>
+    </div>
     <form class="login-form" method="post" action="/en/login" onsubmit="$('#execute_login').prop('disabled', true);">
       <ul>
         <li class="email">
