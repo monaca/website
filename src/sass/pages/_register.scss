@@ -305,7 +305,6 @@ body.lang-ja #signup-invited {
 
 
 .register {
-  background-color: #3859a0;
   .navbar {
     margin: 0 0 0 0;
     min-height: 0;
@@ -315,18 +314,25 @@ body.lang-ja #signup-invited {
   }
 }
 
+#main-wrap {
+  background-color: #3859a0;
+  padding-bottom: 10px;
+}
 
 #signup-start {
-  background: url(/img/start/SignUp_01_03.png) no-repeat 86px 190px;
+  background: url(/img/start/SignUp_01_03.png) no-repeat left 48px bottom 20%;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 5%;
   position: relative;
   width: 960px;
+  /*
   height: 600px;
+  */
   @media screen and (max-width: $break-lg) {
-    background: url(/img/start/SignUp_01_03.png) no-repeat 5% 65%;
-    background-size: 40%;
     width: auto;
+  }
+  @media screen and (max-width: 960px) {
+    background-size: 35%;
   }
   @media screen and (max-width: $break) {
     background: none;
@@ -348,13 +354,14 @@ body.lang-ja #signup-invited {
     font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro W3", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 45px;
     line-height: 60px;
-    margin: 110px auto 0 auto;
+    margin: 0 auto;
+    padding-top: 110px;
     text-align: center;
     color: #fff;
     font-weight: normal;
     letter-spacing: 0;
     @media screen and (max-width: $break) {
-      margin: 70px 0 8px;
+      margin: 0 0 8px;
       line-height: 43px;
       font-size: 33px;
     }
@@ -370,8 +377,8 @@ body.lang-ja #signup-invited {
     letter-spacing: 0;
     @media screen and (max-width: $break) {
       margin: 0 0 20px;
-      line-height: 38px;
-      font-size: 28px;
+      line-height: 28px;
+      font-size: 24px;
     }
   }
   h3.en {
@@ -381,10 +388,10 @@ body.lang-ja #signup-invited {
     letter-spacing: 0.04em;
     line-height: 60px;
     text-align: center;
+
     @media screen and (max-width: $break) {
-      font-size: 28px;
-      line-height: 40px;
-      margin-top: 85px;
+      font-size: 44px;
+      line-height: 1.2em;
     }
   }
   h4.en {
@@ -393,11 +400,11 @@ body.lang-ja #signup-invited {
     font-size: 40px;
     font-weight: 100;
     letter-spacing: 0.04em;
-    line-height: 50px;
+    line-height: 48px;
     text-align: center;
     @media screen and (max-width: $break) {
-      font-size: 30px;
-      line-height: 40px;
+      font-size: 26px;
+      line-height: 1.2em;
       margin-top: 0;
       margin-bottom: 40px;
     }
@@ -405,17 +412,26 @@ body.lang-ja #signup-invited {
   .container {
     padding: 0 14px;
     background-image: url(/img/linen_bg.png);
+    /* 
     position: absolute;
-    margin: 0 auto;
+    margin: 0 auto; 
     top: 190px;
     right: 84px;
+    */
+    margin-left: 518px;
     height: auto;
     min-width: 0;
-    @media screen and (max-width: $break) {
+    @media screen and (max-width: 960px) {
       background-size: 250px 250px;
+      margin-left: calc(100% - 442px);
+      /*
       position: static;
       top: auto;
       right: auto;
+      */
+    }
+    @media screen and (max-width: $break) {
+      margin: 0 auto;
     }
     label {
       font-weight: normal;
@@ -487,8 +503,7 @@ body.lang-ja #signup-invited {
     text-align: center;
     color: #fff;
     font-size: 12px;
-    margin-top: 430px;
-    margin-right: 86px;
+    margin-top: 50px;
     @media screen and (max-width: $break) {
       font-size: 10px;
       margin: 30px 0 0 0;
