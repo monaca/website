@@ -111,6 +111,59 @@
 
 #signup, #signup-invited, #signup-start, #login {
   .container {
+    .btn-github {
+      background-color: #000000;
+      border-radius: 3px;
+      border-style: none;
+      color: #ffffff;
+      font-size: 17px;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      .github-img {
+        background-image: url("/img/login/chara_github.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 48px;
+      }
+      .signup-label {
+        height: 50px;
+        line-height: 50px;
+        margin-left: 10px;
+      }
+      .vertical-line {
+        border-left: 1px solid #ffffff;
+        height: 36px;
+        margin-top: 7px;
+        width: 0;
+      }
+      div {
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .or-box {
+      font-size: 14px;
+      height: 54px;
+      line-height: 54px;
+      width: 100%;
+      .line-l {
+       float: left;
+      }
+      .line-r {
+        float: right;
+    }
+      .line-l,
+      .line-r {
+        border-top: 1px solid #999999;
+        height: 0;
+        margin: 27px 0 0 0;
+        width: calc(50% - 28px);
+      }
+    }
     @extend %signup-container;
     .btn-blue {
       margin-top: 5px;
@@ -412,9 +465,9 @@ body.lang-ja #signup-invited {
   .container {
     padding: 0 14px;
     background-image: url(/img/linen_bg.png);
-    /* 
+    /*
     position: absolute;
-    margin: 0 auto; 
+    margin: 0 auto;
     top: 190px;
     right: 84px;
     */

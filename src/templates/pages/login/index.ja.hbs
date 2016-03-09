@@ -7,6 +7,18 @@ description: さっそくMonacaを使ってみよう! - クラウド上のアプ
 
   <div id="signup-ok" class="signuppopup-container">
     <h3>アカウント作成</h3>
+    <div style="width: 100%; text-align: center;">
+      <div onClick="location.href='/ja/oauth/github/14574138630650'" id="signup-github" class="btn-github">
+        <div class="github-img"></div>
+        <div class="vertical-line"></div>
+        <div class="signup-label">Sign Up With GitHub</div>
+      </div>
+      <div class="or-box">
+        <hr class="line-l" />
+        or
+        <hr class="line-r" />
+      </div>
+    </div>
 
     <a id="close_signupbackpopup" class="close"><img src="/img/login/close-dark.png"></a>
     <form class="signup-form" method="post" action="/ja/register/start/is_popup/1" id="TryNowForm">
