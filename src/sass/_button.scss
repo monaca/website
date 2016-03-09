@@ -233,3 +233,16 @@ Use with "btn" class
         opacity: 1;
     }
 }
+
+.btn-none-color {
+    @extend %flat-btn;
+    //background-color: #8bcc37;
+    border: 3px solid #fff;
+    color: #fff;
+    font-weight: 400;
+    text-shadow: none;
+    &:hover {
+        //background-color: lighten(#8bcc37, $hover-intensity + 2);
+        color: #fff;
+    }
+}
