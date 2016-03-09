@@ -121,6 +121,10 @@
       margin: 0;
       padding: 0;
       width: 100%;
+      &:hover {
+        opacity: 0.7;
+        transition-duration: 0.6s;
+      }
       .github-img {
         background-image: url("/img/login/chara_github.png");
         background-position: center center;
@@ -388,6 +392,7 @@ body.lang-ja #signup-invited {
     background-size: 35%;
   }
   @media screen and (max-width: $break) {
+    padding: 0 3%;
     background: none;
     width: auto;
     height: auto;
@@ -435,13 +440,13 @@ body.lang-ja #signup-invited {
     }
   }
   h3.en {
+    padding-top: 80px;
     font-family: Lato, Helvetica, 'MS UI Gothic', sans-serif;
     font-size: 60px;
     font-weight: 100;
     letter-spacing: 0.04em;
     line-height: 60px;
     text-align: center;
-
     @media screen and (max-width: $break) {
       font-size: 44px;
       line-height: 1.2em;
@@ -473,7 +478,7 @@ body.lang-ja #signup-invited {
     */
     margin-left: 518px;
     height: auto;
-    min-width: 0;
+    min-width: 358px;
     @media screen and (max-width: 960px) {
       background-size: 250px 250px;
       margin-left: calc(100% - 442px);
@@ -485,6 +490,10 @@ body.lang-ja #signup-invited {
     }
     @media screen and (max-width: $break) {
       margin: 0 auto;
+      min-width: 100%;
+    }
+    @media screen and (max-width: $break-xs) {
+      min-width: 358px;
     }
     label {
       font-weight: normal;

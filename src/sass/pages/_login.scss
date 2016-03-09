@@ -11,12 +11,6 @@
    position: fixed;
    top: 55.5px;
    left: 50%;
-   @media screen and (max-width: $break) {
-    display: none;
-   }
-   @media screen and (max-width: $break-xs) {
-    display: none;
-   }
   /*@include box-shadow(0 8px 15px rgba(0, 0, 0, 0.08));*/
   .signuppopup-container {
     min-height: 300px;
@@ -54,6 +48,10 @@
       margin: 0;
       padding: 0;
       width: 100%;
+      &:hover {
+        opacity: 0.7;
+        transition-duration: 0.6s;
+      }
       .github-img {
         background-image: url("/img/login/chara_github.png");
         background-position: center center;
@@ -226,11 +224,7 @@
     top: 0;
     width: 100%;
     z-index: 10;
-    @media screen and (max-width: $break) {
-        display: none;
-    }
 }
-
 
 #header-simple {
     margin: 120px 0 0 0;
@@ -267,6 +261,15 @@
           color: #666;
           font-size: 15px;
       }
+      a.en-new-account {
+          margin: 0;
+          background: url(../img/login/header_new_account_icon.png) no-repeat scroll left 15px, rgba(0, 0, 0, 0) url(../img/login/header_free_label_en.png) no-repeat scroll right 20px;
+          height: 30px;
+          padding: 20px 33px 0 24px;
+          line-height: 45px;
+          color: #666;
+          font-size: 15px;
+      }
       .hidden-break {
         @media screen and (max-width: $break) {
         display: none !important;
@@ -282,7 +285,7 @@
 
 #login {
   padding: 0;
-  margin: 0 0 40px 0;
+  margin: 0 auto 40px auto;
   .container {
     border: 1px solid #d9d9d9;
     border-radius: 6px;
