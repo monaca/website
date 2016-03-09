@@ -40,6 +40,12 @@
       } else {
         this.preListeners.push( f );
       }
+    },
+    getProfileColumn: function(col) {
+      if (this.profile && this.profile[col]) {
+        return this.profile[col];
+      }
+      return '';
     }
   };
 
@@ -125,15 +131,20 @@
 
   monacaApi.getUrlVars = function() {
     var vars = [], hash;
+
+    if (window.location.href.indexOf('?') == -1) {
+      return vars;
+    }
+
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+
     for(var i = 0; i < hashes.length; i++)
     {
         hash = hashes[i].split('=');
-        vars.push(hash[0]);
         vars[hash[0]] = hash[1];
     }
     return vars;
-  }
+  };
 
   // export
 
