@@ -489,13 +489,27 @@ body.support {
         overflow-y: auto;
         z-index: -100;
         .feedback-form {
+          #question-type-radio {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+          }
+          #question-type-error {
+            margin-left: 145px;
+          }
+          p.form-error {
+            color: #ff0000;
+          }
+          td {
+            vertical-align: top;
+          }
           select {
             background-color: #fff;
             border: 1px solid #9c9c9c;
             border-radius: 4px;
             color: #3f3e3d;
             height: 30px;
-            margin-bottom: 30px;
+            margin-bottom: 5px;
             padding: 0 7px;
             width: 50%;
             vertical-align: middle;
@@ -517,7 +531,7 @@ body.support {
             color: #666666;
             display: inline-block;
             font-size: 14px;
-            margin: 0 0 9px;
+            margin: 0 0 5px;
             outline: medium none;
             padding: 5px;
             height: 226px;
@@ -558,6 +572,10 @@ body.support {
           }
         }
 
+        .message-description {
+          font-size: 11px;
+        }
+
         h2 {
           font-weight: bold;
           text-align: left;
@@ -568,9 +586,8 @@ body.support {
         }
         .feedback-item .form-label-inline {
           text-align: right;
-          padding-right: 10px;
+          padding-right: 8px;
           width: 120px;
-          float: left;
           @media screen and (max-width: $break) {
             text-align: left;
             margin-left: 0;
@@ -581,7 +598,7 @@ body.support {
         .feedback-item.feedback-item-radio {
           padding-top: 42px;
           > ul {
-            margin-left: 100px;
+            margin-left: 105px;
             text-align: left;
             @media screen and (max-width: $break) {
               margin-left: 0px;
@@ -672,7 +689,7 @@ body.support {
               vertical-align: middle;
               width: auto;
               margin: 0;
-              padding: 0;
+              padding-bottom: 25px;
             }
             td.label {
               width: 140px;

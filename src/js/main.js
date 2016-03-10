@@ -32,6 +32,10 @@ $(function() {
   setNotificationHeader();
 });
 
+function displayBody() {
+  $('body').css('display', 'block');
+}
+
 function setNotificationHeader() {
   $.ajax({
     type: 'GET',

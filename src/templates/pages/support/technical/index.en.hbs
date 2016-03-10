@@ -5,13 +5,42 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
 ---
 
 <section id="support-tech" class="subpage">
-  <div class="container">
+  <div class="container" id="login-error-container" style="display: none;">
     <h1>Advanced Technical support</h1>
 
-    <p class="notification">Technical support requires a valid subscription.<br>
-    You need to have at least Personal Plan and a Support ticket to ask for support.</p>
-    <hr>
+    <div class="support-tech-caution">
+      <h2><img src="/img/inquiry/ico_exclamation_30px.png" width="30" height="30"> Please login first.</h2>
 
+      <p style="text-align: center;">Please login to continue.</p>
+
+      <div class="support-tech-caution-footer">
+        <a href="/en/login?url=https%3A%2F%2Fmonaca.mobi%2Fen%2Fsupport%2Ftechnical%2Ftechnical" class="btn-blue">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="plan-error-container" style="display: none;">
+    <h1>Advanced Technical support</h1>
+
+    <div class="support-tech-caution">
+      <h2><img src="/img/inquiry/ico_exclamation_30px.png" width="30" height="30"> Plan upgrade is required.</h2>
+
+      <p style="text-align: center">You need to upgrade your plan to request a technical support.</p>
+
+      <div class="support-tech-caution-footer">
+        <a href="/en/plan" class="btn-blue">Upgrade Plan</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="form-container" style="display: none;">
+    <h1 class="for-technical">Advanced Technical support</h1>
+    <h1 class="for-bugs">Report Issue</h1>
+
+    <p class="notification for-technical">Technical support requires a valid subscription.<br>
+    You need to have at least Personal Plan and a Support ticket to ask for support.</p>
+    <hr class="for-technical">
+    <p class="for-bugs">Before reporting a issue, please check <a href="/headline/fault.html">Status and Known Issues.</a></p>
 
     <form id="support-form">
       <p class="form-error error" id="-csrf-token-error">Please reload this page and try again.</p>
@@ -23,7 +52,7 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
             <img class="user-icon" id="gravatar"><span class="user-info" id="email"></span>
           </td>
         </tr>
-        <tr>
+        <tr class="for-technical">
           <td class="label title-label"><span class="input-label">Type of <br class="hidden-lg" />Support:</span>
           </td>
           <td class="form-item block-item">
@@ -77,11 +106,11 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
         <tr>
           <td class="label no-label"></td>
           <td class="form-item">
-            <div id="device-checkbox"></div>
+            <ul id="device-checkbox"></ul>
             <label class="other-device-label"><input type="text" name="support[device_os_other]" class="target-device" id="device-os-other" placeholder="other" /></label>
           </td>
         </tr>
-        <tr>
+        <tr class="for-technical">
           <td colspan="2" class="colspan-title"><span class="input-label">You have：</span><strong class="ticket-retain"></strong>tickets <a id="show-support-ticket" class="link-blue" href="#">Show my tickets</a>
             <div class="balloon-wrapper" id="support-ticket-balloon" style="display: none;">
               <div class="balloon">
@@ -95,7 +124,7 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
             </div>
           </td>
         </tr>
-        <tr>
+        <tr class="for-technical">
           <td class="label no-label"></td>
           <td class="form-item">
             <p>1 support ticket will be used when responding to the question unless it is not a user issue.</p>
@@ -105,18 +134,65 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
           <td class="label no-label"></td>
           <td class="form-item">
             <p>
-              <label><input type="checkbox" name="support[agree_support]" id="agree-support" />I acknowledge the Monaca<a href='/terms-of-service/support.html' target='_blank'>support policy.</a></label>
+              <label><input type="checkbox" name="support[agree_support]" id="agree-support" />I acknowledge the Monaca <a href='/terms-of-service/support.html' target='_blank'>support policy.</a></label>
               <p class="error form-error" id="agree-support-error"></p>
             </p>
           </td>
         </tr>
       </table>
 
-      <div class="form-footer"><input type="button" name="submit" class="btn-blue" value="Submit" id="send"></div>
+      <div class="form-footer"><input type="button" name="submit" class="btn-blue submit-btn" value="Submit" id="send"></div>
     </form>
 
   </div>
 </section>
+
+<!--section id="support-index" class="subpage">
+  <div class="container">
+    <h1 style="text-align: center">Support & Service</h1>
+
+    <div class="flex-container">
+      <section class="support-index-box box-03">
+        <h2>Documents</h2>
+        <img src="/img/inquiry/ico_support_pro.png" alt="Professional Service">
+
+        <div class="support-index-box-description">
+          <p>The fastest way to find answers to general product questions is using our Docs. We prepared various tutorials, samples, references and FAQ sections for your immediate assistance.</p>
+        </div>
+        <div class="support-index-box-footer">
+          <a class="btn btn-blue"
+             href="http://docs.monaca.mobi/en">Documents</a>
+        </div>
+      </section>
+
+      <section class="support-index-box box-01">
+        <h2>Stack Overflow</h2>
+        <img src="/img/inquiry/ico_support_forum.png" alt="Monaca Forum">
+
+        <div class="support-index-box-description">
+          <p>We are monitoring all StackOverflow submissions with “monaca” tag and will help you solve your issues and provide prompt answers.</p>
+        </div>
+        <div class="support-index-box-footer">
+          <a class="btn btn-blue" href="http://stackoverflow.com/questions/tagged/monaca">Monaca Forum</a>
+        </div>
+      </section>
+
+      <section class="support-index-box box-03">
+        <h2>General Questions</h2>
+        <img src="/img/inquiry/ico_support_question.png" alt="General Questions">
+
+        <div class="support-index-box-description">
+          <p>We accept general questions, including plan upgrades, volume discount and partnership ideas.</p>
+        </div>
+        <div class="support-index-box-footer">
+          <a class="btn btn-blue"
+             href="/en/support/inquiry">Contact Us</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</section-->
+
 
 <!--script>
   window.addEventListener("load", function() {
