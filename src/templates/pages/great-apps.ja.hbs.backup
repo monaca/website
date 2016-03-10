@@ -141,7 +141,6 @@ description: アプリ事例 - クラウド上のアプリ開発環境。iOS/And
             <p>株式会社EST corporation</p>
         </a>
       </li>
-<!--
       <li class="">
         <a href="#case-541287747e2193223c7df9d5" class="casepopup">
           <figure>
@@ -583,7 +582,6 @@ description: アプリ事例 - クラウド上のアプリ開発環境。iOS/And
             <p> kazuya fukuda</p>
           </a>
         </li>
--->
       </ul>
 
 
@@ -2411,6 +2409,96 @@ function enableArrow(screen, scroll){
 
 $(function() {
 
+  $(window).on("scroll", function(e) {
+    var scrollTop = $(window).scrollTop();
+    var moreEl = $("#more").offset();
+
+    if (!moreEl) return;
+
+    var threshold = moreEl.top - $(window).height() + 160;
+
+    if (scrollTop > threshold) {
+      readMoreCases(e);
+    }
+  });
+
+  function readMoreCases(e){
+    pageNum++;
+
+    $(".btn-readmorecases").hide();
+    $(".icn-loading-cases").css({"display": "block"});
+
+    $.getJSON(location.href, {api: 1, page: pageNum}, function(data){
+      var tmpl = "";
+      var btnTmpl = "";
+
+      for(var i = 0; i < data.items.length; i++) {
+        var item = data.items[i];
+        var hasAward = item.award_text ? true : false;
+        var hasAppStore = item.url_appstore ? true : false;
+        var hasGooglePlay = item.url_googleplay ? true : false;
+        var headerClass = hasAward ? "before_award" : "";
+
+        //Create Button
+        btnTmpl += '<li>' +
+          '<a href="#case-' + item._id + '" class="casepopup">' +
+            '<img src="' + item.icon_url + '" style="width: 150px;">' +
+            '<p>' + item.app_title + '</p>' +
+            '<p>' + item.name + '</p>' +
+          '</a>' +
+        '</li>';
+
+        //Create Modal
+        tmpl += '<article class="cases" id="case-' + item._id + '">';
+
+        tmpl +=
+          '<header class="' + headerClass + '">' +
+            '<img src="' + item.icon_url + '" alt="" class="headicon">' +
+            '<h2>' + item.app_title + '</h2>' +
+            '<p class="name">' + item.name + '</p>' +
+            '<a id="close_casepopup" class="close close_popup">Close</a>' +
+          '</header>';
+
+        if (hasAward) tmpl += '<div class="award">' + item.award_text + '</div>';
+
+        tmpl += '<div class="desc-block"><ul class="stores">';
+
+        if (hasAppStore) {
+          tmpl += '<li><a href="' + item.url_appstore +  '" target="_blank"><img src="/img/great-apps/badge_appstore.png" alt="App Store"></a></li>';
+        }
+
+        if (hasGooglePlay) {
+          tmpl += '<li><a href="' + item.url_googleplay + '" target="_blank"><img src="/img/great-apps/badge_googleplay.png" alt="Google Play"></a></li>';
+        }
+
+        tmpl += '</ul><p class="desc">' + item.body + '</p></div>';
+
+        if (item.screenshot_urls && item.screenshot_urls.length) {
+          tmpl += '<div class="screenshots">' +
+            '<a href="" class="arrow left"></a>' +
+            '<ul class="screen">';
+
+          for (var j = 0; j < item.screenshot_urls.length; j++) {
+            tmpl += '<li><img class="screenshot" src="' + item.screenshot_urls[j] + '" alt=""></li>';
+          }
+
+          tmpl += '</ul><a href="" class="arrow right"></a></div>';
+        }
+
+        tmpl += '</article>';
+      }
+
+      $("section#case > .container").append(tmpl);
+      $("#caseicon").append(btnTmpl);
+
+      $(".btn-readmorecases").show();
+      $(".icn-loading-cases").hide();
+      if (data.page >= data.max_page) $("#case .container .more").hide();
+    });
+
+    if (e && e.preventDefault) e.preventDefault();
+    if (e && e.stopPropagation) e.stopPropagation();
+  }
 
 
   $('.casepopup').on("click", function(e) {
