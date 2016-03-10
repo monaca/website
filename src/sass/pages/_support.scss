@@ -38,9 +38,6 @@ body.support {
       h1 {
         text-align: center;
       }
-      p {
-        margin-bottom: 20px;
-      }
       &.tech {
         @include clearfix;
         p {
@@ -155,10 +152,11 @@ body.support {
           }
         }
         textarea {
-          margin-left: 130px;
+          margin-top: 5px;
+          width: 500px;
+          height: 200px;
         }
         input[type=text] {
-
           padding: 5px;
           border: 1px solid #ccc;
           border-radius: 4px;
@@ -173,7 +171,13 @@ body.support {
         }
 
       }
-
+      .agree-state-p {
+        margin-bottom: 0;
+        line-height: 1em;
+      }
+      .form-error {
+        margin-bottom: 0;
+      }
       .notification {
         margin-bottom: 40px;
         a {
@@ -251,7 +255,7 @@ body.support {
 
       > form > table {
         td {
-          padding: 4px 0 20px;
+          padding: 4px 0 25px;
           @media screen and (max-width: $break) {
             padding-bottom: 30px;
           }
@@ -360,8 +364,8 @@ body.support {
               border: 1px solid #333;
               border-radius: 8px;
               position: absolute;
-              top: -200px;
-              left: -34px;
+              top: -150px;
+              left: -50px;
               width: 270px;
               min-height: 100px;
               font-size: 13px;

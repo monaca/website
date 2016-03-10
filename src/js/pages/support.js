@@ -236,6 +236,7 @@
       $('#login-error-container').css('display', 'none');
       $('#plan-error-container').css('display', 'block');
       $('#form-container').css('display', 'none');
+      $('#support-index').css('display', 'block');
       displayBody();
     }
 

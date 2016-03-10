@@ -9,12 +9,12 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
     <h1>Advanced Technical support</h1>
 
     <div class="support-tech-caution">
-      <h2><img src="/img/inquiry/ico_exclamation_30px.png" width="30" height="30"> Please login first.</h2>
+      <h2><img src="/img/common/ico_exclamation_30px.png" width="30" height="30"> Please login first.</h2>
 
       <p style="text-align: center;">Please login to continue.</p>
 
       <div class="support-tech-caution-footer">
-        <a href="/en/login?url=https%3A%2F%2Fmonaca.mobi%2Fen%2Fsupport%2Ftechnical%2Ftechnical" class="btn-blue">Login</a>
+        <a href="https://monaca.mobi/en/login?url=https%3A%2F%2Fmonaca.io%2Fsupport%2Ftechnical%2F" class="btn-blue">Login</a>
       </div>
     </div>
   </div>
@@ -23,12 +23,12 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
     <h1>Advanced Technical support</h1>
 
     <div class="support-tech-caution">
-      <h2><img src="/img/inquiry/ico_exclamation_30px.png" width="30" height="30"> Plan upgrade is required.</h2>
+      <h2><img src="/img/common/ico_exclamation_30px.png" width="30" height="30"> Plan upgrade is required.</h2>
 
       <p style="text-align: center">You need to upgrade your plan to request a technical support.</p>
 
       <div class="support-tech-caution-footer">
-        <a href="/en/plan" class="btn-blue">Upgrade Plan</a>
+        <a href="https://monaca.moib/en/pricing" class="btn-blue">Upgrade Plan</a>
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
     <p class="for-bugs">Before reporting a issue, please check <a href="/headline/fault.html">Status and Known Issues.</a></p>
 
     <form id="support-form">
-      <p class="form-error error" id="-csrf-token-error">Please reload this page and try again.</p>
+      <p class="form-error" id="-csrf-token-error">Please reload this page and try again.</p>
 
       <table>
         <tr>
@@ -57,7 +57,7 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
           </td>
           <td class="form-item block-item">
             <select name="support[support_type]" id="support-type"></select>
-            <p class="form-error error" id="support-type-error">adafafsa</p>
+            <p class="form-error" id="support-type-error">adafafsa</p>
           </td>
         </tr>
         <tr>
@@ -66,7 +66,7 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
           </td>
           <td class="form-item block-item">
             <select name="support[product_type]" id="product-type"></select>
-            <p class="form-error error" id="product-type-error"></p>
+            <p class="form-error" id="product-type-error"></p>
           </td>
         </tr>
         <tr>
@@ -75,7 +75,7 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
           </td>
           <td class="form-item block-item">
             <select name="support[subject]" id="subject"></select>
-            <p class="form-error error" id="subject-error"></p>
+            <p class="form-error" id="subject-error"></p>
           </td>
         </tr>
         <tr>
@@ -86,7 +86,7 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
           <td class="label no-label"></td>
           <td class="form-item">
             <textarea rows="4" cols="30" name="support[message]" id="message" placeholder="Input description here."></textarea>
-            <p class="form-error error" id="message-error"></p>
+            <p class="form-error" id="message-error"></p>
           </td>
         </tr>
         <tr>
@@ -133,10 +133,10 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
         <tr>
           <td class="label no-label"></td>
           <td class="form-item">
-            <p>
+            <p class="agree-state-p">
               <label><input type="checkbox" name="support[agree_support]" id="agree-support" />I acknowledge the Monaca <a href='/terms-of-service/support.html' target='_blank'>support policy.</a></label>
-              <p class="error form-error" id="agree-support-error"></p>
             </p>
+            <p class="form-error" id="agree-support-error"></p>
           </td>
         </tr>
       </table>
@@ -147,14 +147,14 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
   </div>
 </section>
 
-<!--section id="support-index" class="subpage">
+<section id="support-index" class="subpage" style="display: none;">
   <div class="container">
-    <h1 style="text-align: center">Support & Service</h1>
+    <h1>Support & Service</h1>
 
     <div class="flex-container">
       <section class="support-index-box box-03">
         <h2>Documents</h2>
-        <img src="/img/inquiry/ico_support_pro.png" alt="Professional Service">
+        <img src="/img/support/ico_support_pro.png" alt="Professional Service">
 
         <div class="support-index-box-description">
           <p>The fastest way to find answers to general product questions is using our Docs. We prepared various tutorials, samples, references and FAQ sections for your immediate assistance.</p>
@@ -167,7 +167,7 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
 
       <section class="support-index-box box-01">
         <h2>Stack Overflow</h2>
-        <img src="/img/inquiry/ico_support_forum.png" alt="Monaca Forum">
+        <img src="/img/support/ico_support_forum.png" alt="Monaca Forum">
 
         <div class="support-index-box-description">
           <p>We are monitoring all StackOverflow submissions with “monaca” tag and will help you solve your issues and provide prompt answers.</p>
@@ -179,7 +179,7 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
 
       <section class="support-index-box box-03">
         <h2>General Questions</h2>
-        <img src="/img/inquiry/ico_support_question.png" alt="General Questions">
+        <img src="/img/support/ico_support_question.png" alt="General Questions">
 
         <div class="support-index-box-description">
           <p>We accept general questions, including plan upgrades, volume discount and partnership ideas.</p>
@@ -191,22 +191,4 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
       </section>
     </div>
   </div>
-</section-->
-
-
-<!--script>
-  window.addEventListener("load", function() {
-    $('body').click(function(e){
-      $target = $(e.target);
-
-      //support-ticket-balloon
-      if($target.is('#show-support-ticket')){
-        $('#support-ticket-balloon').toggle();
-        return false;
-      } else if($(e.target).parents('#support-type-balloon').length == 0){
-        $('#support-ticket-balloon').hide();
-      }
-    }
-    );
-  });
-</script-->
+</section>
