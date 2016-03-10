@@ -111,6 +111,63 @@
 
 #signup, #signup-invited, #signup-start, #login {
   .container {
+    .btn-github {
+      background-color: #000000;
+      border-radius: 3px;
+      border-style: none;
+      color: #ffffff;
+      font-size: 17px;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      &:hover {
+        opacity: 0.7;
+        transition-duration: 0.6s;
+      }
+      .github-img {
+        background-image: url("/img/login/chara_github.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 48px;
+      }
+      .signup-label {
+        height: 50px;
+        line-height: 50px;
+        margin-left: 10px;
+      }
+      .vertical-line {
+        border-left: 1px solid #ffffff;
+        height: 36px;
+        margin-top: 7px;
+        width: 0;
+      }
+      div {
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .or-box {
+      font-size: 14px;
+      height: 54px;
+      line-height: 54px;
+      width: 100%;
+      .line-l {
+       float: left;
+      }
+      .line-r {
+        float: right;
+    }
+      .line-l,
+      .line-r {
+        border-top: 1px solid #999999;
+        height: 0;
+        margin: 27px 0 0 0;
+        width: calc(50% - 28px);
+      }
+    }
     @extend %signup-container;
     .btn-blue {
       margin-top: 5px;
@@ -305,7 +362,6 @@ body.lang-ja #signup-invited {
 
 
 .register {
-  background-color: #3859a0;
   .navbar {
     margin: 0 0 0 0;
     min-height: 0;
@@ -315,20 +371,28 @@ body.lang-ja #signup-invited {
   }
 }
 
+#main-wrap {
+  background-color: #3859a0;
+  padding-bottom: 10px;
+}
 
 #signup-start {
-  background: url(/img/start/SignUp_01_03.png) no-repeat 86px 190px;
+  background: url(/img/start/SignUp_01_03.png) no-repeat left 48px bottom 20%;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 5%;
   position: relative;
   width: 960px;
+  /*
   height: 600px;
+  */
   @media screen and (max-width: $break-lg) {
-    background: url(/img/start/SignUp_01_03.png) no-repeat 5% 65%;
-    background-size: 40%;
     width: auto;
   }
+  @media screen and (max-width: 960px) {
+    background-size: 35%;
+  }
   @media screen and (max-width: $break) {
+    padding: 0 3%;
     background: none;
     width: auto;
     height: auto;
@@ -348,13 +412,14 @@ body.lang-ja #signup-invited {
     font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro W3", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 45px;
     line-height: 60px;
-    margin: 110px auto 0 auto;
+    margin: 0 auto;
+    padding-top: 110px;
     text-align: center;
     color: #fff;
     font-weight: normal;
     letter-spacing: 0;
     @media screen and (max-width: $break) {
-      margin: 70px 0 8px;
+      margin: 0 0 8px;
       line-height: 43px;
       font-size: 33px;
     }
@@ -370,11 +435,12 @@ body.lang-ja #signup-invited {
     letter-spacing: 0;
     @media screen and (max-width: $break) {
       margin: 0 0 20px;
-      line-height: 38px;
-      font-size: 28px;
+      line-height: 28px;
+      font-size: 24px;
     }
   }
   h3.en {
+    padding-top: 80px;
     font-family: Lato, Helvetica, 'MS UI Gothic', sans-serif;
     font-size: 60px;
     font-weight: 100;
@@ -382,9 +448,8 @@ body.lang-ja #signup-invited {
     line-height: 60px;
     text-align: center;
     @media screen and (max-width: $break) {
-      font-size: 28px;
-      line-height: 40px;
-      margin-top: 85px;
+      font-size: 44px;
+      line-height: 1.2em;
     }
   }
   h4.en {
@@ -393,11 +458,11 @@ body.lang-ja #signup-invited {
     font-size: 40px;
     font-weight: 100;
     letter-spacing: 0.04em;
-    line-height: 50px;
+    line-height: 48px;
     text-align: center;
     @media screen and (max-width: $break) {
-      font-size: 30px;
-      line-height: 40px;
+      font-size: 26px;
+      line-height: 1.2em;
       margin-top: 0;
       margin-bottom: 40px;
     }
@@ -405,17 +470,30 @@ body.lang-ja #signup-invited {
   .container {
     padding: 0 14px;
     background-image: url(/img/linen_bg.png);
+    /*
     position: absolute;
     margin: 0 auto;
     top: 190px;
     right: 84px;
+    */
+    margin-left: 518px;
     height: auto;
-    min-width: 0;
-    @media screen and (max-width: $break) {
+    min-width: 358px;
+    @media screen and (max-width: 960px) {
       background-size: 250px 250px;
+      margin-left: calc(100% - 442px);
+      /*
       position: static;
       top: auto;
       right: auto;
+      */
+    }
+    @media screen and (max-width: $break) {
+      margin: 0 auto;
+      /* min-width: 100%; */
+    }
+    @media screen and (max-width: $break-xs) {
+      min-width: 358px;
     }
     label {
       font-weight: normal;
@@ -487,8 +565,7 @@ body.lang-ja #signup-invited {
     text-align: center;
     color: #fff;
     font-size: 12px;
-    margin-top: 430px;
-    margin-right: 86px;
+    margin-top: 50px;
     @media screen and (max-width: $break) {
       font-size: 10px;
       margin: 30px 0 0 0;

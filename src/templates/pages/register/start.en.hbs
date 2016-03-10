@@ -12,11 +12,23 @@ description: Monaca makes hybrid app development with PhoneGap/Cordova a lot eas
     <h4 class="en">Try the faster, <br class="hidden-sm hidden-md hidden-lg" />easier cross-platform tool.</h4>
     <div class="container">
       <h2>Sign Up</h2>
+      <div style="width: 100%; text-align: center;">
+      <div onClick="location.href='/ja/oauth/github/14574138630650'" id="signup-github" class="btn-github">
+        <div class="github-img"></div>
+        <div class="vertical-line"></div>
+        <div class="signup-label">Sign Up With GitHub</div>
+      </div>
+      <div class="or-box">
+        <hr class="line-l" />
+        or
+        <hr class="line-r" />
+      </div>
+      </div>
       <form class="signup-form" method="post" action="/en/register/start">
         <ul>
-          <li class="error"> - Fill in your email address. </li>
+          <!--<li class="error"> - Fill in your email address. </li>
           <li class="error"> - Fill in a password. </li>
-          <li class="error"> - Please verify password </li>
+          <li class="error"> - Please verify password </li>-->
           <li class="email"><input type="text" name="register[email]" placeholder="E-mail address" class="email" id="register_email" /></li>
           <li><input type="password" name="register[password]" placeholder="Password" class="password" id="register_password" /></li>
           <li><input type="password" name="register[password_confirm]" placeholder="Confirm password" class="password" id="register_password_confirm" /></li>
