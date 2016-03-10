@@ -1,37 +1,40 @@
 "use strict";
 
 $(function() {
-    var $tile2 = $("[tile=2]");
-    var $tile3 = $("[tile=3]");
-    var $tile4 = $("[tile=4]");
-    $tile2.tile(2);
-    $tile3.tile(3);
-    $tile4.tile(4);
+  var $tile2 = $("[tile=2]");
+  var $tile3 = $("[tile=3]");
+  var $tile4 = $("[tile=4]");
+  $tile2.tile(2);
+  $tile3.tile(3);
+  $tile4.tile(4);
 
-    FastClick.attach(document.querySelector("header.navbar .navbar-toggle"));
+  FastClick.attach(document.querySelector("header.navbar .navbar-toggle"));
 
-    var timer = null;
-    window.addEventListener("resize", function() {
-        clearTimeout(timer);
-        timer = setTimeout(function() {
-            $tile2.tile(2);
-            $tile3.tile(3);
-            $tile4.tile(4);
-        }, 150);
-    });
+  var timer = null;
+  window.addEventListener("resize", function() {
+    clearTimeout(timer);
+    timer = setTimeout(function() {
+      $tile2.tile(2);
+      $tile3.tile(3);
+      $tile4.tile(4);
+    }, 150);
+  });
 
-    $("header.navbar .navbar-collapse a").on({
-        "touchstart": function() {
-            $(this).addClass("active");
-        },
-        "touchend": function() {
-            $("header.navbar .navbar-collapse a").removeClass("active");
-        }
-    });
+  $("header.navbar .navbar-collapse a").on({
+    "touchstart": function() {
+      $(this).addClass("active");
+    },
+    "touchend": function() {
+      $("header.navbar .navbar-collapse a").removeClass("active");
+    }
+  });
 
-    setNotificationHeader();
-
+  setNotificationHeader();
 });
+
+function displayBody() {
+  $('body').css('display', 'block');
+}
 
 function setNotificationHeader() {
   $.ajax({
@@ -53,27 +56,27 @@ function setNotificationHeader() {
 }
 
 function sendTracker(event, params) {
-    var lang = checkLang(location.hostname);
+  var lang = checkLang(location.hostname);
 
-    $.ajax('https://monaca.mobi/' + lang + '/api/tracker?event=' + event, {
-        type: 'POST',
-        data: params,
-        xhrFields: {
-            withCredentials: true
-        }
-    });
+  $.ajax('https://monaca.mobi/' + lang + '/api/tracker?event=' + event, {
+    type: 'POST',
+    data: params,
+    xhrFields: {
+      withCredentials: true
+    }
+  });
 }
 
 function downloadLogo(url) {
-    sendTracker("downloadLogoPackage", {
-        url: url
-    })
-    window.location.href = url;
+  sendTracker("downloadLogoPackage", {
+    url: url
+  });
+  window.location.href = url;
 }
 
 function checkLang(hostname) {
-    if (hostname.match(/3011/) || hostname.match(/ja/)) {
-        return 'ja';
-    }
-    return 'en';
+  if (hostname.match(/3011/) || hostname.match(/ja/)) {
+    return 'ja';
+  }
+  return 'en';
 }

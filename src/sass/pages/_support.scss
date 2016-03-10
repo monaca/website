@@ -38,9 +38,6 @@ body.support {
       h1 {
         text-align: center;
       }
-      p {
-        margin-bottom: 20px;
-      }
       &.tech {
         @include clearfix;
         p {
@@ -155,10 +152,11 @@ body.support {
           }
         }
         textarea {
-          margin-left: 130px;
+          margin-top: 5px;
+          width: 500px;
+          height: 200px;
         }
         input[type=text] {
-
           padding: 5px;
           border: 1px solid #ccc;
           border-radius: 4px;
@@ -173,7 +171,13 @@ body.support {
         }
 
       }
-
+      .agree-state-p {
+        margin-bottom: 0;
+        line-height: 1em;
+      }
+      .form-error {
+        margin-bottom: 0;
+      }
       .notification {
         margin-bottom: 40px;
         a {
@@ -251,7 +255,7 @@ body.support {
 
       > form > table {
         td {
-          padding: 4px 0 20px;
+          padding: 4px 0 25px;
           @media screen and (max-width: $break) {
             padding-bottom: 30px;
           }
@@ -360,8 +364,8 @@ body.support {
               border: 1px solid #333;
               border-radius: 8px;
               position: absolute;
-              top: -200px;
-              left: -34px;
+              top: -150px;
+              left: -50px;
               width: 270px;
               min-height: 100px;
               font-size: 13px;
@@ -489,13 +493,27 @@ body.support {
         overflow-y: auto;
         z-index: -100;
         .feedback-form {
+          #question-type-radio {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+          }
+          #question-type-error {
+            margin-left: 145px;
+          }
+          p.form-error {
+            color: #ff0000;
+          }
+          td {
+            vertical-align: top;
+          }
           select {
             background-color: #fff;
             border: 1px solid #9c9c9c;
             border-radius: 4px;
             color: #3f3e3d;
             height: 30px;
-            margin-bottom: 30px;
+            margin-bottom: 5px;
             padding: 0 7px;
             width: 50%;
             vertical-align: middle;
@@ -517,7 +535,7 @@ body.support {
             color: #666666;
             display: inline-block;
             font-size: 14px;
-            margin: 0 0 9px;
+            margin: 0 0 5px;
             outline: medium none;
             padding: 5px;
             height: 226px;
@@ -558,6 +576,10 @@ body.support {
           }
         }
 
+        .message-description {
+          font-size: 11px;
+        }
+
         h2 {
           font-weight: bold;
           text-align: left;
@@ -568,9 +590,8 @@ body.support {
         }
         .feedback-item .form-label-inline {
           text-align: right;
-          padding-right: 10px;
+          padding-right: 8px;
           width: 120px;
-          float: left;
           @media screen and (max-width: $break) {
             text-align: left;
             margin-left: 0;
@@ -581,7 +602,7 @@ body.support {
         .feedback-item.feedback-item-radio {
           padding-top: 42px;
           > ul {
-            margin-left: 100px;
+            margin-left: 105px;
             text-align: left;
             @media screen and (max-width: $break) {
               margin-left: 0px;
@@ -672,7 +693,7 @@ body.support {
               vertical-align: middle;
               width: auto;
               margin: 0;
-              padding: 0;
+              padding-bottom: 25px;
             }
             td.label {
               width: 140px;
