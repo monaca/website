@@ -490,7 +490,7 @@ body.lang-ja #signup-invited {
     }
     @media screen and (max-width: $break) {
       margin: 0 auto;
-      min-width: 100%;
+      /* min-width: 100%; */
     }
     @media screen and (max-width: $break-xs) {
       min-width: 358px;
