@@ -11,6 +11,10 @@
 </section>
 ```
 */
+body {
+  visibility: hidden;
+}
+
 section,
 div.section {
   margin-left: auto;

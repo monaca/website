@@ -1,7 +1,4 @@
 (function() {
-
-  // Application Settings
-
   var monacaApi = Object.create(null);
 
   var loginData = {
@@ -126,7 +123,6 @@
   };
 
   // Page Initialization;
-
   window.addEventListener('DOMContentLoaded', function() {
     var path = location.pathname;
     if (path.slice(-1) == '/') {
@@ -137,8 +133,6 @@
       f(loginData);
     }
   } , false);
-
-  // Helpers
 
   monacaApi.getUrlVars = function() {
     var vars = [], hash;
@@ -156,9 +150,5 @@
     return vars;
   };
 
-  // export
-
   window.monacaApi = monacaApi;
-
 })();
-
