@@ -364,9 +364,9 @@ body.support {
               border: 1px solid #333;
               border-radius: 8px;
               position: absolute;
-              top: -150px;
+              top: -130px;
               left: -50px;
-              width: 270px;
+              width: 250px;
               min-height: 100px;
               font-size: 13px;
               line-height: 16px;
@@ -381,6 +381,9 @@ body.support {
                 border-left: 8px solid transparent;
                 bottom: -8px;
                 left: 15px;
+              }
+              td {
+                padding-bottom: 0;
               }
             }
           }
@@ -502,7 +505,7 @@ body.support {
             margin-left: 145px;
           }
           p.form-error {
-            color: #ff0000;
+            color: #f55b56;
           }
           td {
             vertical-align: top;

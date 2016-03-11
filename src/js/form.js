@@ -64,6 +64,7 @@ $(function() {
           $('#' + col + '-error').html(data[key]);
         }
         $('#' + col + '-error').css('display', 'block');
+        location.href = '#';
       }
     }
   };
