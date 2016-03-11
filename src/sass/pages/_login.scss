@@ -3,7 +3,6 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   width: 420px;
-  display: block;
   /*display: none;*/
    display: block;
    opacity: 1;
@@ -12,14 +11,7 @@
    position: fixed;
    top: 55.5px;
    left: 50%;
-   @media screen and (max-width: $break) {
-    display: none;
-   }
-   @media screen and (max-width: $break-xs) {
-    display: none;
-   }
-
-  @include box-shadow(0 8px 15px rgba(0, 0, 0, 0.08));
+  /*@include box-shadow(0 8px 15px rgba(0, 0, 0, 0.08));*/
   .signuppopup-container {
     min-height: 300px;
     padding: 1px 16px 10px 16px;
@@ -46,6 +38,63 @@
       text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
       text-align: left;
     }
+    .btn-github {
+      background-color: #000000;
+      border-radius: 3px;
+      border-style: none;
+      color: #ffffff;
+      font-size: 17px;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      &:hover {
+        opacity: 0.7;
+        transition-duration: 0.6s;
+      }
+      .github-img {
+        background-image: url("/img/login/chara_github.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 48px;
+      }
+      .signup-label {
+        height: 50px;
+        line-height: 50px;
+        margin-left: 10px;
+      }
+      .vertical-line {
+        border-left: 1px solid #ffffff;
+        height: 36px;
+        margin-top: 7px;
+        width: 0;
+      }
+      div {
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .or-box {
+      font-size: 14px;
+      height: 54px;
+      line-height: 54px;
+      width: 100%;
+      .line-l {
+       float: left;
+      }
+      .line-r {
+        float: right;
+    }
+      .line-l,
+      .line-r {
+        border-top: 1px solid #999999;
+        height: 0;
+        margin: 27px 0 0 0;
+        width: calc(50% - 28px);
+      }
+    }
     .close {
       /*@include img-replacement('../0513-images/close-dark.png');*/
       background: rgba(0, 0, 0, 0) url(../img/login/close-dark.png) no-repeat scroll left top;
@@ -61,6 +110,7 @@
       }
     }
     .signup-form {
+      padding: 0;
       @extend %signup-form;
       ul li {
         margin-bottom: 10px;
@@ -97,15 +147,20 @@
         }
       }
       button {
-        padding: 0 24px;
-        margin: 12px 0 0 0;
+        padding: 22px 16px;
+        margin: 0 0 40px 0;
+        line-height: 0.1;
         float: right;
         font-size: 18px;
+        font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro W3","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","Helvetica Neue",Helvetica,Arial,sans-serif;
         @extend %flat-btn;
         background-color: #ff8b24;
         border: 1px solid #ec761f;
         color: white;
         font-weight: 600;
+        &:hover {
+          opacity: 0.9;
+        }
       }
       .error {
         clear: both;
@@ -169,11 +224,7 @@
     top: 0;
     width: 100%;
     z-index: 10;
-    @media screen and (max-width: $break) {
-        display: none;
-    }
 }
-
 
 #header-simple {
     margin: 120px 0 0 0;
@@ -210,6 +261,15 @@
           color: #666;
           font-size: 15px;
       }
+      a.en-new-account {
+          margin: 0;
+          background: url(../img/login/header_new_account_icon.png) no-repeat scroll left 15px, rgba(0, 0, 0, 0) url(../img/login/header_free_label_en.png) no-repeat scroll right 20px;
+          height: 30px;
+          padding: 20px 33px 0 24px;
+          line-height: 45px;
+          color: #666;
+          font-size: 15px;
+      }
       .hidden-break {
         @media screen and (max-width: $break) {
         display: none !important;
@@ -225,7 +285,7 @@
 
 #login {
   padding: 0;
-  margin: 0 0 40px 0;
+  margin: 0 auto 40px auto;
   .container {
     border: 1px solid #d9d9d9;
     border-radius: 6px;
@@ -233,12 +293,74 @@
     margin: 40px auto 15px;
     max-width: 358px;
     padding: 0  14px 6px 14px;
+    min-width: 358px;
     h2 {
       font-size: 16px;
       font-weight: normal;
       margin-top: 14px;
       text-shadow: 0 1px 0 white;
       text-align: left;
+    }
+    .btn-github {
+      background-color: #000000;
+      border-radius: 3px;
+      border-style: none;
+      color: #ffffff;
+      font-size: 17px;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      .github-img {
+        background-image: url("/img/login/chara_github.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 48px;
+      }
+      .signup-label {
+        height: 50px;
+        line-height: 50px;
+        margin-left: 10px;
+      }
+      .vertical-line {
+        border-left: 1px solid #ffffff;
+        height: 36px;
+        margin-top: 7px;
+        width: 0;
+      }
+      div {
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .or-box {
+      font-size: 14px;
+      height: 54px;
+      line-height: 54px;
+      width: 100%;
+      .line-l {
+       float: left;
+      }
+      .line-r {
+        float: right;
+    }
+      .line-l,
+      .line-r {
+        border-top: 1px solid #999999;
+        height: 0;
+        margin-top: 27px;
+        width: calc(50% - 28px);
+      }
+    }
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #cccccc;
+      margin: 1em 0;
+      padding: 0;
     }
     .login-form {
       margin-top: 6px;

@@ -346,7 +346,7 @@ article.main section {
 article.cases {
   display: none;
   font-size: 13px;
-  width: 620px;
+  width: 702px;
   padding: 35px 40px 40px 40px;
   background-color: #fff;
   border: 1px solid #e5e5e5;
@@ -417,6 +417,7 @@ article.cases {
     li {
       display: inline-block;
       margin-right: 10px;
+      float: left;
       &.last {
         margin: 0;
       }
@@ -429,7 +430,7 @@ article.cases {
   }
 
   .close {
-    background: url('../img/signup_popup_close.png') no-repeat right top;
+    background: url(/img/great-apps/signup_popup_close.png) no-repeat right top;
     position: absolute;
     top: -20px;
     right: -25px;
@@ -482,12 +483,16 @@ article.cases {
     h2 {
       font-size: 24px;
       text-align: left;
-      padding: 7px 0 0 0;
-      margin: 0 0 3px 0;
+      padding: 4px 0 0 0;
+      margin: 0 0 1px 0;
+      font-weight: bold;
       @media screen and (max-width: $break) {
         box-sizing: border-box;
         padding-right: 30px;
       }
+    }
+    .name {
+      margin: 0;
     }
     .date {
       margin-left: 8px;
@@ -513,6 +518,7 @@ article.cases {
       &:after{content:"."; display:block; height:0; font-size:0; clear:both; visibility:hidden;}
       p{
         line-height: 1.8;
+        margin: 0;
       }
     }
     blockquote {
