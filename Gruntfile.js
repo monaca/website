@@ -100,19 +100,35 @@ module.exports = function(grunt) {
         },
 
         uglify: {
-            en: {
-                files: {"<%= config.dist %>/js/all.js": ["<%= config.dist %>/js/all.js"]}
+            monaca: {
+                files: [{
+                    expand: true,
+                    src: '<%= config.distEn %>/js/all.js',
+                    ext: '.js'
+                }, {
+                    expand: true,
+                    src: '<%= config.distJa %>/js/all.js',
+                    ext: '.js'
+                }]
             },
-            ja: {
-                files: {"<%= config.distJa %>/js/all.js": ["<%= config.distJa %>/js/all.js"]}
-            }
+            vendor: {
+                files: [{
+                    expand: true,
+                    src: ['<%= config.distEn %>/js/**/*.js', '!<%= config.distEn %>/js/**/*.min.js'],
+                    ext: '.js'
+                }, {
+                    expand: true,
+                    src: ['<%= config.distJa %>/js/**/*.js', '!<%= config.distJa %>/js/**/*.min.js'],
+                    ext: '.js'
+                }]
+            },
         },
 
         compress: {
             options: {
                 mode: "gzip",
                 pretty: true,
-		level: 9
+                level: 9
             },
             html: {
                 files: [{
@@ -223,13 +239,13 @@ module.exports = function(grunt) {
             bootstrap: {
                 expand: true,
                 cwd: 'bower_components/bootstrap/dist/',
-                src: '**',
+                src: ['**', '!**/*.js', '**/*.min.js', '!**/*.css', '**/*.min.css'],
                 dest: '<%= config.dist %>/'
             },
             jquery: {
                 expand: true,
                 cwd: 'bower_components/jquery/dist/',
-                src: '**',
+                src: ['**', '!**/*.js', '**/*.min.js'],
                 dest: '<%= config.dist %>/js/'
             },
             fontawesome: {
@@ -372,14 +388,51 @@ module.exports = function(grunt) {
                     'docs/styleguide': ['docs/styleguide/']
                 }
             }
-        }
+        },
 
+        cssmin: {
+          dist: {
+            files: [{
+                expand: true,
+                cwd: '<%= config.distEn %>/css/',
+                src: ['**/*.css', '!**/*.min.css'],
+                ext: '.css'
+            }, {
+                expand: true,
+                cwd: '<%= config.distJa %>/css/',
+                src: ['**/*.css', '!**/*.min.css'],
+                ext: '.css'
+            }]
+          }
+        },
+
+        imagemin: {
+            en: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= config.distEn %>/img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: '<%= config.distEn %>/img/'
+                }]
+            },
+            ja: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= config.distJa %>/img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: '<%= config.distJa %>/img/'
+                }]
+            }
+        }
     });
+
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compress');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-styledocco');
 
@@ -406,10 +459,10 @@ module.exports = function(grunt) {
         'clean:dist',
         'sass:dist',
         'concat',
-        'uglify:en',
         'copy',
-        'uglify:ja',
+        'uglify',
         'assemble',
+        'cssmin'
     ]);
 
     grunt.registerTask('default', [
@@ -419,13 +472,35 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy:ja', [
         'build',
         'compress',
+        'imagemin:ja',
         'aws_s3:ja'
     ]);
 
     grunt.registerTask('deploy:en', [
         'build',
         'compress',
+        'imagemin:en',
         'aws_s3:en'
+    ]);
+
+    grunt.registerTask('debug:en', [
+        'clean:dist',
+        'sass:dist',
+        'concat',
+        'copy',
+        'assemble',
+        'connect:en',
+        'watch'
+    ]);
+
+    grunt.registerTask('debug:ja', [
+        'clean:dist',
+        'sass:dist',
+        'concat',
+        'copy',
+        'assemble',
+        'connect:ja',
+        'watch'
     ]);
 
     grunt.registerTask('styleguide', [
