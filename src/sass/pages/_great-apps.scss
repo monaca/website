@@ -38,7 +38,9 @@
 }
 
 article.main > div#modal-overlay {
+    position: absolute;
     z-index: 100;
+    top: 0;
 }
 
 #case {
