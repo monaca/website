@@ -37,10 +37,17 @@
     }
 }
 
+article.main > div#modal-overlay {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+}
+
 #case {
     margin-top: 0;
     padding: 50px 0 70px 0;
     width: auto;
+
     .container {
         box-sizing: border-box;
         font-size: 13px;
@@ -378,6 +385,8 @@ article.cases {
     border-radius: 4px;
     margin: auto;
     margin-bottom: 60px;
+    z-index: 101;
+
     &:after {
         content: ".";
         display: block;
