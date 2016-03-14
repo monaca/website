@@ -1,5 +1,6 @@
 (function () {
     window.monacaPages = window.monacaPages || [];
+
     monacaPages['/great-apps.html'] = function (loginData) {
         var loadedPage = 0;
         var isLoading = true;
@@ -24,13 +25,13 @@
          * Click Handlers
          */
         $('body').on('click', '.app-detail', getAppDetail);
-        $('body').on('click', '.arrow', function (evt) {
+        $('body').on('click', '.arrow', function () {
             var sign = $(this).is('.left') ? 1 : -1;
             var screen = $appDetail.find('.screen');
             var scroll = screen.scrollLeft();
 
             scroll -= sign * 200;
-            screen.animate({scrollLeft: scroll}, "slow", "swing");
+            screen.animate({scrollLeft: scroll}, 'slow', 'swing');
 
             return false;
         });
@@ -81,6 +82,9 @@
         function populateAppList(page) {
             var limit = 16;
 
+            var $loading = $('.icn-loading-cases');
+            $loading.show();
+
             var $xhr = getAppList({
                 isFeature: false,
                 page: page || 0,
@@ -97,6 +101,8 @@
                 if (response.result.length < limit) {
                     isFinalPage = true;
                 }
+
+                $loading.hide();
             });
         }
 
@@ -113,10 +119,7 @@
 
                 $li.addClass('borderradius');
 
-                $a.attr({
-                    href: '#',
-                    'class': 'casepopup app-detail'
-                });
+                $a.attr({'class': 'casepopup app-detail'});
                 $a.data('id', app.id);
 
                 $img.attr('src', app.icon);
@@ -179,8 +182,8 @@
                 createScreenshotList($detail, app.images);
                 createAppStoreList($detail, app.store);
 
-                $detail.show();
-                $overlay.show();
+                $detail.fadeIn();
+                $overlay.fadeIn();
             });
 
             return $xhr;
