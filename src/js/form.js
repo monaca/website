@@ -47,7 +47,7 @@ $(function() {
       this.toggleAllInput(false);
     },
     toggleAllInput: function(disabled) {
-      var elements = ['input', 'select', 'textarea'];
+      var elements = ['input', 'select', 'textarea', 'button'];
       for (var key in elements) {
         if (disabled) {
           $(elements[key]).attr('disabled', 'disabled');
@@ -66,6 +66,16 @@ $(function() {
         $('#' + col + '-error').css('display', 'block');
         location.href = '#';
       }
+    },
+    displayFormErrorForGlobal: function(data, html_id) {
+      this.resetError();
+      $('#' + html_id).html('');
+
+      for (var key in data) {
+        $('#' + html_id).append("・" + data[key] + "<br />");
+      }
+      $('#' + html_id).css('display', 'block');
+      location.href = '#';
     }
   };
 

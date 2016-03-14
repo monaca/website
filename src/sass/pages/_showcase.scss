@@ -1092,6 +1092,19 @@ body.showcase {
                 line-height: 20px;
                 margin: 0 auto 10px;
             }
+
+            .form-error {
+              color: #f55b56;
+            }
+            #estimate-form-errors, #unknown-error {
+              margin: 20px 0;
+              padding-left: 230px;
+
+              @media screen and (max-width: $break) {
+                padding-left: 0;
+              }
+            }
+
             form {
                 table {
                     .required {

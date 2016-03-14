@@ -34,7 +34,6 @@
       $("#send").click(function() {
         formUtil.disableAllInput();
         var sendData = createSendData();
-        console.log(sendData);
 
         $.ajax( {
           type: "POST",
