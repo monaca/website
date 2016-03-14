@@ -333,6 +333,13 @@ body.service {
                 text-decoration: none;
               }
             }
+            &.form-error, &.form-error-detail {
+              color: #f55b56;
+            }
+
+            &.form-error {
+              margin-left: 130px;
+            }
           }
         }
 
@@ -447,7 +454,7 @@ body.service {
                 }
               }
               &.label {
-                width: 115px;
+                width: 130px;
                 padding: 0 10px 0 0;
                 @media screen and (max-width: $break) {
                   text-align: left;
