@@ -275,21 +275,6 @@ body.service {
         font-size: 12px;
         overflow-y: auto;
         z-index: -100;
-        .form-error {
-          margin: 0 0 0 130px;
-          float: left;
-          text-align: left;
-          width: 100%;
-          box-sizing: border-box;
-          @media screen and (max-width: $break) {
-          margin: 0 0 10px 130px;
-          }
-        }
-        .form-error-detail {
-          text-align: left;
-          width: 100%;
-          box-sizing: border-box;
-        }
         .feedback-form {
           select {
             background-color: #fff;
@@ -336,9 +321,20 @@ body.service {
             &.form-error, &.form-error-detail {
               color: #f55b56;
             }
-
             &.form-error {
-              margin-left: 130px;
+              margin: 0 0 0 130px;
+              float: left;
+              text-align: left;
+              width: 100%;
+              box-sizing: border-box;
+              @media screen and (max-width: $break) {
+                margin: 0 0 10px 0;
+              }
+            }
+            &.form-error-detail {
+              text-align: left;
+              width: 100%;
+              box-sizing: border-box;
             }
           }
         }
