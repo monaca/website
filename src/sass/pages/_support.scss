@@ -38,6 +38,9 @@ body.support {
       h1 {
         text-align: center;
       }
+      p {
+        margin-bottom: 20px;
+      }
       &.tech {
         @include clearfix;
         p {
@@ -152,11 +155,10 @@ body.support {
           }
         }
         textarea {
-          margin-top: 5px;
-          width: 500px;
-          height: 200px;
+          margin-left: 130px;
         }
         input[type=text] {
+
           padding: 5px;
           border: 1px solid #ccc;
           border-radius: 4px;
@@ -171,13 +173,7 @@ body.support {
         }
 
       }
-      .agree-state-p {
-        margin-bottom: 0;
-        line-height: 1em;
-      }
-      .form-error {
-        margin-bottom: 0;
-      }
+
       .notification {
         margin-bottom: 40px;
         a {
@@ -253,9 +249,23 @@ body.support {
         }
       }
 
+      label.device-label {
+        display: inline-block;
+        width: 250px;
+        margin:0 0 10px 0;
+      }
+
+      .agree-state-p {
+        margin-bottom: 0;
+      }
+
+      .form-error {
+        color: #f55b56;
+      }
+
       > form > table {
         td {
-          padding: 4px 0 25px;
+          padding: 4px 0 20px;
           @media screen and (max-width: $break) {
             padding-bottom: 30px;
           }
@@ -269,11 +279,6 @@ body.support {
             line-height: 20px;
             font-weight: bold;
             color: #666;
-          }
-          > label.device-label {
-            display: inline-block;
-            width: 200px;
-            margin:0 0 10px 0;
           }
           > label.other-device-label {
             display: block;
@@ -302,7 +307,7 @@ body.support {
             }
           }
 
-          > textarea#support-text {
+          > textarea.support-text {
             box-sizing: border-box;
             display: block;
             width: 100%;
@@ -364,14 +369,19 @@ body.support {
               border: 1px solid #333;
               border-radius: 8px;
               position: absolute;
-              top: -130px;
-              left: -50px;
-              width: 250px;
+              bottom: 20px;
+              left: -80px;
+              width: 270px;
               min-height: 100px;
               font-size: 13px;
               line-height: 16px;
               color: #ccc;
               padding: 14px 15px;
+
+              .ticket-table td {
+                padding-bottom: 2px;
+              }
+
               /*@include box-shadow(0 1px 0 rgba(255, 255, 255, .2) inset, 0px 4px 8px rgba(0, 0, 0, 0.3));*/
               &:after {
                 content: '';
@@ -381,9 +391,6 @@ body.support {
                 border-left: 8px solid transparent;
                 bottom: -8px;
                 left: 15px;
-              }
-              td {
-                padding-bottom: 0;
               }
             }
           }
@@ -496,27 +503,13 @@ body.support {
         overflow-y: auto;
         z-index: -100;
         .feedback-form {
-          #question-type-radio {
-            display: flex;
-            justify-content: flex-start;
-            flex-direction: column;
-          }
-          #question-type-error {
-            margin-left: 145px;
-          }
-          p.form-error {
-            color: #f55b56;
-          }
-          td {
-            vertical-align: top;
-          }
           select {
             background-color: #fff;
             border: 1px solid #9c9c9c;
             border-radius: 4px;
             color: #3f3e3d;
             height: 30px;
-            margin-bottom: 5px;
+            margin-bottom: 30px;
             padding: 0 7px;
             width: 50%;
             vertical-align: middle;
@@ -538,7 +531,7 @@ body.support {
             color: #666666;
             display: inline-block;
             font-size: 14px;
-            margin: 0 0 5px;
+            margin: 0 0 9px;
             outline: medium none;
             padding: 5px;
             height: 226px;
@@ -579,10 +572,6 @@ body.support {
           }
         }
 
-        .message-description {
-          font-size: 11px;
-        }
-
         h2 {
           font-weight: bold;
           text-align: left;
@@ -593,8 +582,9 @@ body.support {
         }
         .feedback-item .form-label-inline {
           text-align: right;
-          padding-right: 8px;
+          padding-right: 10px;
           width: 120px;
+          float: left;
           @media screen and (max-width: $break) {
             text-align: left;
             margin-left: 0;
@@ -605,7 +595,7 @@ body.support {
         .feedback-item.feedback-item-radio {
           padding-top: 42px;
           > ul {
-            margin-left: 105px;
+            margin-left: 100px;
             text-align: left;
             @media screen and (max-width: $break) {
               margin-left: 0px;
@@ -696,7 +686,7 @@ body.support {
               vertical-align: middle;
               width: auto;
               margin: 0;
-              padding-bottom: 25px;
+              padding: 0;
             }
             td.label {
               width: 140px;
