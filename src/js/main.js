@@ -8,6 +8,9 @@ $(function() {
   $tile3.tile(3);
   $tile4.tile(4);
 
+  var msec = 400;
+
+
   FastClick.attach(document.querySelector("header.navbar .navbar-toggle"));
 
   var timer = null;
@@ -29,8 +32,39 @@ $(function() {
     }
   });
 
+  $('#show_signuppopup').click(function() {
+    $('#signuppopup').fadeIn(msec)
+      .find('input#form_email')
+      .focus();
+    $("#modal-overlay").fadeIn(msec).one('click', function() {
+      closePopup(msec, 'signuppopup');
+    });
+  });
+
+  $('#show_loginpopup').click(function() {
+    $('#loginpopup').fadeIn(msec)
+      .find('input#form_email')
+      .focus();
+    $("#modal-overlay").fadeIn(msec).one('click', function() {
+      closePopup(msec, 'loginpopup');
+    });
+  });
+
+  $('#close_signupbackpopup').click(function() {
+    closePopup(msec, 'signuppopup');
+  });
+
+  $('#close_loginpopup').click(function() {
+    closePopup(msec, 'loginpopup');
+  });
+
   setNotificationHeader();
 });
+
+function closePopup(msec, popupId) {
+  $('#'+popupId).fadeOut(msec);
+  $('#modal-overlay').fadeOut(msec);
+}
 
 function displayBody() {
   $('body').css('visibility', 'visible');
