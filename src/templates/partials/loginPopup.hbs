@@ -1,6 +1,6 @@
 <div id="loginpopup">
   <div class="loginpopup-container">
-    <h3>ログイン</h3>
+<h3>{{#is language "ja"}}ログイン{{else}}Login{{/is}}</h3>
 
     <div style="width: 100%; text-align: center;">
       <div id="github-login" class="btn-github">
@@ -20,22 +20,22 @@
       <ul>
         <li class="error" style="padding-top: 0;"></li>
         <li class="email">
-          <input type="text" name="form[email]" maxlength="255" placeholder="メールアドレス" class="email" id="form_email" />
+  <input type="text" name="form[email]" maxlength="255" placeholder="{{#is language "ja"}}メールアドレス{{else}}E-mail address{{/is}}" class="email" id="form_email" />
         </li>
         <li>
-          <input type="password" name="form[password]" maxlength="30" placeholder="パスワード" class="password" id="form_password" />
+          <input type="password" name="form[password]" maxlength="30" placeholder="{{#is language "ja"}}パスワード{{else}}Password{{/is}}" class="password" id="form_password" />
         </li>
         <li class="autologin-check">
           <input type="checkbox" name="form[remember_id]" value="1" id="remember_email" checked="checked" />
-          <label for="remember_email">次回から自動的にログイン</label>
+          <label for="remember_email">{{#is language "ja"}}次回から自動的にログイン{{else}}Keep my account logged in{{/is}}</label>
         </li>
         <li>
-          <button id="execute_login" type="submit" class="btn-blue">ログイン</button>
+<button id="execute_login" type="submit" class="btn-blue">{{#is language "ja"}}ログイン{{else}}Login{{/is}}</button>
         </li>
       </ul>
     </form>
     <div class="bottom">
-      <a href="/ja/lost/password">パスワードをお忘れですか？</a>
+      <a href="/login/lost_password.html">{{#is language "ja"}}パスワードをお忘れですか？{{else}}Forgot password?{{/is}}</a>
     </div>
   </div>
 </div>

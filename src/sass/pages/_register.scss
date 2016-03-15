@@ -337,12 +337,17 @@
         }
       }
       ul li {
-        margin-bottom: 2px;
+        margin-bottom: 11px;
       }
 
       .autologin-check {
         display: flex;
         justify-content: center;
+      }
+
+      .form-error {
+        color: #f55b56;
+        text-align: left;
       }
 
       input {
@@ -433,10 +438,10 @@
     }
     a#link-safari {
       background-position: 11px 0;
-      background-image: url(../img/login/icon_safari.png);
+      background-image: url(/img/login/icon_safari.png);
     }
     a#link-chrome {
-      background-image: url(../img/login/icon_chrome.png);
+      background-image: url(/img/login/icon_chrome.png);
     }
   }
 }

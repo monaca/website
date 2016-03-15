@@ -1,7 +1,7 @@
 <div id="signuppopup">
 
   <div id="signup-ok" class="signuppopup-container">
-    <h3>アカウント作成</h3>
+    <h3>{{#is language "ja"}}アカウント作成{{else}}Sign Up{{/is}}</h3>
     <div style="width: 100%; text-align: center;">
       <div id="signup-github" class="btn-github">
         <div class="github-img"></div>
@@ -18,19 +18,21 @@
     <a id="close_signupbackpopup" class="close"><img src="/img/login/close-dark.png"></a>
     <form class="signup-form" id="TryNowForm">
       <ul>
-        <li class="error" style="padding-top: 0;"></li>
+        <p class="form-error" style="padding-top: 0;" id="signup-popup-error"></p>
         <li class="email">
-          <input type="text" name="form[email]" maxlength="255" placeholder="メールアドレス" class="email" id="form_email" />
+          <input type="text" name="form[email]" maxlength="255" placeholder="{{#is language "ja"}}メールアドレス{{else}}E-mail address{{/is}}" class="email" id="signup_popup_email" />
         </li>
         <li>
-          <input type="password" name="form[password]" maxlength="30" placeholder="パスワード" class="password" id="form_password" />
+          <input type="password" name="form[password]" maxlength="30" placeholder="{{#is language "ja"}}Password{{else}}パスワード{{/is}}" class="password" id="signup_popup_password" />
         </li>
         <li class="" style="font-size: 14px;">
           <label for="agree_policy">
-            <a href="" target="_blank">Monacaの利用規約</a>に同意の上、アカウントの作成をお願いします。</label>
+            {{#is language "ja"}}<a href="/terms-of-service/index.html" target="_blank">Monacaの利用規約</a>に同意の上、アカウントの作成をお願いします。
+            {{else}}<a href="/terms-of-service/index.html" target="_blank">By clicking the button below you agree to terms of use and privacy policy</a>{{/is}}
+          </label>
         </li>
         <li>
-          <button id="create_account" type="button">今すぐ試す</button>
+          <button id="popup_signup_btn" type="button">{{#is language "ja"}}今すぐ試す{{else}}Sign Up{{/is}}</button>
           <span class="loading"></span>
         </li>
       </ul>

@@ -72,7 +72,7 @@ $(function() {
       $('#' + html_id).html('');
 
       for (var key in data) {
-        $('#' + html_id).append("・" + data[key] + "<br />");
+        $('#' + html_id).append("- " + data[key] + "<br />");
       }
       $('#' + html_id).css('display', 'block');
       location.href = '#';

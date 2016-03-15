@@ -127,12 +127,106 @@
   // Page Initialization;
   window.addEventListener('DOMContentLoaded', function() {
     var path = location.pathname;
+    var popup_csrf_token = '';
+    var msec = 400;
+
     if (path.slice(-1) == '/') {
       path += "index.html";
     }
+
+    $('#show_signuppopup').click(function() {
+      getCsrfToken(monacaApi.getBaseUrl() + "/" + window.LANG + "/api/register");
+
+      $('#signuppopup').fadeIn(msec)
+        .find('input#form_email')
+        .focus();
+      $("#modal-overlay").fadeIn(msec).one('click', function() {
+        closePopup(msec, 'signuppopup');
+      });
+    });
+
+    $('#show_loginpopup').click(function() {
+      getCsrfToken(monacaApi.getBaseUrl() + "/" + window.LANG + "/api/csrf_token");
+
+      $('#loginpopup').fadeIn(msec)
+        .find('input#form_email')
+        .focus();
+      $("#modal-overlay").fadeIn(msec).one('click', function() {
+        closePopup(msec, 'loginpopup');
+      });
+    });
+
+    $('#close_signupbackpopup').click(function() {
+      closePopup(msec, 'signuppopup');
+    });
+
+    $('#close_loginpopup').click(function() {
+      closePopup(msec, 'loginpopup');
+    });
+
+    $('#popup_login_btn').click(function() {
+
+    });
+
+    $('#popup_signup_btn').click(function() {
+      formUtil.disableAllInput();
+      var sendData = {
+        'register[email]':       $('#signup_popup_email').val(),
+        'register[password]':    $('#signup_popup_password').val(),
+        'register[_csrf_token]': popup_csrf_token
+      };
+
+      $.ajax({
+        type: "POST",
+        url: monacaApi.getBaseUrl() + "/" + window.LANG + "/api/register",
+        xhrFields: {
+          withCredentials: true
+        },
+        data: sendData,
+        dataType: "json",
+        success: function (msg) {
+          formUtil.enableAllInput();
+
+          if (msg.result == 'submitOK') {
+            console.log('register success!');
+            location.href="/register/thankyou.html"
+          } else if (msg.result && msg.result.formError) {
+            formUtil.displayFormErrorForGlobal(msg.result.formError, 'signup-popup-error');
+          } else {
+            formUtil.displayFormErrorFor
+          }
+        },
+        error: function (msg) {
+          formUtil.enableAllInput();
+          //displayUnknownError();
+        }
+      });
+
+    });
+
+
     var f = monacaPages[path];
     if (f) {
       f(loginData);
+    }
+
+    function getCsrfToken(url) {
+      $.ajax({
+        type: "GET",
+        url: url,
+        xhrFields: {
+          withCredentials: true
+        },
+        dataType: "json",
+        success: function (msg) {
+          if (msg.result && msg.result.initOK) {
+            popup_csrf_token = msg.result.initOK._csrf_token;
+          } else if (msg.result && msg.result._csrf_token) {
+            popup_csrf_token = msg.result._csrf_token;
+          }
+        },
+        error: function (msg) {}
+      });
     }
   } , false);
 

@@ -16,7 +16,6 @@
         },
         dataType: "json",
         success: function(msg) {
-          console.log(msg);
           if (msg.result && msg.result.initOK) {
             initFormData = msg.result.initOK;
             displayForm(initFormData);
