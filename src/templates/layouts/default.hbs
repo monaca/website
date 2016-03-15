@@ -134,6 +134,10 @@
       window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
     </script>
     <script src="{{site.monaca_api}}/{{language}}/login_io?callback=monacaApi.loginCheck"></script>
-
+    <script>
+      if (!monacaApi.executedLoginCheck) {
+        monacaApi.loginCheck({});
+      }
+    </script>
   </body>
 </html>

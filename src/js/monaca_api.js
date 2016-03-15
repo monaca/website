@@ -1,5 +1,6 @@
 (function() {
   var monacaApi = Object.create(null);
+  monacaApi.executedLoginCheck = false;
 
   var loginData = {
     preReady:     false,
@@ -56,6 +57,7 @@
   };
 
   monacaApi.loginCheck = function(status) {
+    this.executedLoginCheck = true;
     loginData.status = status;
     loginData.setPreReady();
 
