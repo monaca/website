@@ -361,13 +361,16 @@ body.lang-ja #signup-invited {
 }
 
 
-.register {
+body.register {
   .navbar {
     margin: 0 0 0 0;
     min-height: 0;
   }
   footer.common {
     border: none;
+  }
+  #main-wrap {
+  background-color: #3859a0;
   }
 }
 
