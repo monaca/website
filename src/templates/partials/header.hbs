@@ -118,8 +118,8 @@ component: navbar
                 {{/is}}
 
                 <!-- 未ログインの場合 -->
-                <li><a href="{{i18n "urlSignup"}}" class="login">{{i18n "signup"}}</a></li>
-                <li><a href="{{i18n "urlLogin"}}" class="login">{{i18n "login"}}</a></li>
+                <li><a id="show_signuppopup" class="login">{{i18n "signup"}}</a></li>
+                <li><a id="show_loginpopup" class="login">{{i18n "login"}}</a></li>
                 {{#is language "en"}}
                 <li><a href="https://ja.monaca.io/" class="hidden-xs">日本語</a></li>
                 {{/is}}

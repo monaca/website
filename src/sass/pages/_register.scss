@@ -196,26 +196,123 @@
   }
 }
 
-#signuppopup {
+#modal-overlay {
+  background: #000 none repeat scroll 0 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: 0.1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 990;
+}
+
+
+#signuppopup, #loginpopup {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 10px;
   width: 420px;
   display: none;
+
+  opacity: 1;
+  z-index: 999;
+  margin-left: -211px;
+  position: fixed;
+  top: 55.5px;
+  left: 50%;
   /*@include box-shadow(0 8px 15px rgba(0, 0, 0, 0.08));*/
 
-  .signuppopup-container {
+  .signuppopup-container, .loginpopup-container {
     min-height: 300px;
     padding: 1px 16px 10px 16px;
+
+    a {
+      color: #666;
+      font-weight: normal;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
     h3 {
       color: #333;
       font-size: 20px;
       padding: 20px 0 14px 0;
       font-weight: 400;
       text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+      text-align: left;
+    }
+
+    .en {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .btn-github {
+      background-color: #000000;
+      border-radius: 3px;
+      border-style: none;
+      color: #ffffff;
+      font-size: 17px;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      &:hover {
+        opacity: 0.7;
+        transition-duration: 0.6s;
+      }
+      .github-img {
+        background-image: url("/img/login/chara_github.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 48px;
+      }
+      .signup-label {
+        height: 50px;
+        line-height: 50px;
+        margin-left: 10px;
+      }
+      .vertical-line {
+        border-left: 1px solid #ffffff;
+        height: 36px;
+        margin-top: 7px;
+        width: 0;
+      }
+      div {
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .or-box {
+      font-size: 14px;
+      height: 54px;
+      line-height: 54px;
+      width: 100%;
+      .line-l {
+        float: left;
+      }
+      .line-r {
+        float: right;
+      }
+      .line-l,
+      .line-r {
+        border-top: 1px solid #999999;
+        height: 0;
+        margin: 27px 0 0 0;
+        width: calc(50% - 28px);
+      }
     }
     .close {
       /*@include img-replacement('../0513-images/close-dark.png');*/
+      background: rgba(0, 0, 0, 0) url(../img/login/close-dark.png) no-repeat scroll left top;
       position: absolute;
       top: 14px;
       right: 16px;
@@ -227,11 +324,27 @@
         cursor: pointer;
       }
     }
-    .signup-form {
+
+    .signup-form, .login-form {
+      padding: 0;
       @extend %signup-form;
+      ul li {
+        margin-bottom: 10px;
+        color: #666;
+        label {
+          font-weight: normal;
+          text-align: left;
+        }
+      }
       ul li {
         margin-bottom: 2px;
       }
+
+      .autologin-check {
+        display: flex;
+        justify-content: center;
+      }
+
       input {
         &[type="text"],
         &[type="password"] {
@@ -247,26 +360,33 @@
           height: 45px;
         }
         &[type="text"] {
-          background-image: url(../0513-images/login-user-icon.png);
+          background-image: url(/img/login/login-user-icon.png);
           background-repeat: no-repeat;
           background-position: 8px 9px;
         }
 
         &[type="password"] {
-          background-image: url(../0513-images/login-password-icon.png);
+          background-image: url(/img/login/login-password-icon.png);
           background-repeat: no-repeat;
           background-position: 10px 9px;
         }
+
       }
       button {
-        margin: 12px 0 0 0;
+        padding: 22px 16px;
+        margin: 0 0 40px 0;
+        line-height: 0.1;
         float: right;
         font-size: 18px;
+        font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro W3","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","Helvetica Neue",Helvetica,Arial,sans-serif;
         @extend %flat-btn;
         background-color: #ff8b24;
         border: 1px solid #ec761f;
         color: white;
         font-weight: 600;
+        &:hover {
+          opacity: 0.9;
+        }
       }
       .error {
         clear: both;
@@ -275,7 +395,7 @@
         font-size: 14px;
       }
       .loading {
-        background: url(../0513-images/loading-gif.gif) no-repeat left top;
+        background: url(/img/login/loading-gif.gif) no-repeat left top;
         width: 16px;
         height: 16px;
         margin: 14px 16px 0 0;
@@ -291,6 +411,18 @@
     padding: 15px 15px 15px;
     text-align: center;
     min-height: 0;
+    color: #666;
+
+    p {
+      margin: 10px 0 5px 0;
+      text-align: left;
+      font-size: 16px;
+    }
+    .license {
+      display: block;
+      text-align: center;
+      font-size: 16px;
+    }
     a.link {
       background-repeat: no-repeat;
       background-position: 10px 0;
@@ -301,13 +433,12 @@
     }
     a#link-safari {
       background-position: 11px 0;
-      background-image: url(../img/icon_safari.png);
+      background-image: url(../img/login/icon_safari.png);
     }
     a#link-chrome {
-      background-image: url(../img/icon_chrome.png);
+      background-image: url(../img/login/icon_chrome.png);
     }
   }
-
 }
 
 

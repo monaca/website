@@ -1,0 +1,47 @@
+<div id="signuppopup">
+
+  <div id="signup-ok" class="signuppopup-container">
+    <h3>アカウント作成</h3>
+    <div style="width: 100%; text-align: center;">
+      <div id="signup-github" class="btn-github">
+        <div class="github-img"></div>
+        <div class="vertical-line"></div>
+        <div class="signup-label">Sign Up With GitHub</div>
+      </div>
+      <div class="or-box">
+        <hr class="line-l" />
+        or
+        <hr class="line-r" />
+      </div>
+    </div>
+
+    <a id="close_signupbackpopup" class="close"><img src="/img/login/close-dark.png"></a>
+    <form class="signup-form" id="TryNowForm">
+      <ul>
+        <li class="error" style="padding-top: 0;"></li>
+        <li class="email">
+          <input type="text" name="form[email]" maxlength="255" placeholder="メールアドレス" class="email" id="form_email" />
+        </li>
+        <li>
+          <input type="password" name="form[password]" maxlength="30" placeholder="パスワード" class="password" id="form_password" />
+        </li>
+        <li class="" style="font-size: 14px;">
+          <label for="agree_policy">
+            <a href="" target="_blank">Monacaの利用規約</a>に同意の上、アカウントの作成をお願いします。</label>
+        </li>
+        <li>
+          <button id="create_account" type="button">今すぐ試す</button>
+          <span class="loading"></span>
+        </li>
+      </ul>
+    </form>
+  </div>
+
+  <!--div class="signuppopup-container" id="signup-ng">
+    <a href="http://www.google.com/chrome/" id="link-chrome" class="link" target="_blank">Google Chrome</a>
+    <a href="http://www.apple.com/safari/" id="link-safari" class="link" target="_blank">Safari</a>
+    <p>
+      お使いのブラウザはMonacaの開発環境に対応していません。Google ChromeもしくはSafariブラウザをご利用ください。</p>
+    <a class="license" href="/ja/register/start">会員登録は行っていただけます。</a>
+  </div>-->
+</div>
