@@ -1,3 +1,173 @@
+html[lang="en"] body.service {
+  min-width: 1170px;
+  .main {
+      h2 {
+      color: #3e5c7f;
+      font-size: 24px;
+      line-height: 1.1em;
+      margin-bottom: calc(1.1em + 8px);
+    }
+    p {
+      color: #98a4b2;
+      font-size: 14px;
+      line-height: 1.6em;
+      margin-bottom: 62px;
+    }
+    .container {
+      margin: 0 auto;
+      width: 980px;
+      min-width: 0;
+      padding: 0;
+    }
+    .keyvisual {
+      background-color: #03a9f4;
+      height: auto;
+      margin: 0 auto 100px;
+      min-height: 220px;
+      padding-top: 50px;
+      h1 {
+        color: #fff;
+        font-size: 36px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      p {
+        color: #fff;
+        font-size: 16px;
+        line-height: 1.2;
+        margin: 0 auto;
+        text-align: center;
+        width: 640px;
+      }
+    }
+    .column-2 {
+      margin: 0 auto;
+      width: 980px;
+      h2.row2 {
+        margin: 0 0 8px 0;
+      }
+      li {
+        float: left;
+        margin-bottom: 20px;
+        margin-right: 4.2735%;
+        width: 47.8632%;
+      }
+      .box-1.community-forum {
+        p:nth-of-type(1) {
+          margin-bottom: 15px;
+        }
+        p:nth-of-type(2) {
+          color: #3e5c7f;
+          font-size: 15px;
+          margin-bottom: 42px;
+          text-indent: 0.1em;
+        }
+        .box-try {
+          padding: 0;
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          a {
+            margin-right: 10px;
+            min-width: 140px;
+            &:hover {
+              background: #609eff;
+              border: solid 1px #609eff;
+            }
+          }
+
+        }
+      }
+      .box-1 {
+        background-color: #fff;
+        border: medium none;
+        margin: 0 43px 100px;
+        padding: 0;
+        position: relative;
+        text-align: left;
+        width: 404px;
+        .box-try {
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          padding: 0;
+          a {
+            font-size: 14px;
+            font-weight: 700;
+            height: 40px;
+            line-height: 40px;
+            margin: 0;
+            min-width: 170px;
+            padding: 0 20px;
+            &:hover {
+              background: #609eff;
+              border: solid 1px #609eff;
+            }
+            img {
+              color: #fff;
+              margin-right: 5px;
+              margin-top: 1px;
+              vertical-align: text-top;
+              width: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .additional-container {
+    border-top: 1px solid #ddd;
+    margin: 0 auto;
+    padding: 50px 40px;
+    position: relative;
+    width: 980px;
+  }
+  .additional-container.docs {
+      h2 {
+          margin-bottom: 15px;
+      }
+      p {
+        margin: 0 auto 15px;
+        width: 600px;
+      }
+      ul {
+        margin: 0 auto;
+        width: 600px;
+        li {
+          display: inline-block;
+          margin-right: 20px;
+        }
+      }
+    }
+    .additional-container.trial {
+      padding: 50px 80px;
+      position: relative;
+      text-align: left;
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      p {
+        margin-bottom: 0;
+      }
+      .box-try {
+        bottom: 30%;
+        margin-bottom: -25px;
+        position: absolute;
+        right: 80px;
+        a {
+          font-size: 18px;
+          height: 50px;
+          line-height: 50px;
+          font-weight: bold;
+          margin: 0;
+          min-width: 170px;
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+
 body.service {
   header {
     background-color: #222;
@@ -724,9 +894,9 @@ body.service {
     width: 90%;
     &:first-child {
       margin-bottom: 7px;
-      }
     }
   }
+}
 }
 
 section#support {
@@ -1347,11 +1517,11 @@ body.lang-en section#support {
       }
       img {
         float: none;
-          }
-        }
       }
     }
   }
+}
+}
 }
 
 html[lang="en"] {
