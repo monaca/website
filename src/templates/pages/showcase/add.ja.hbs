@@ -9,30 +9,27 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
       <h1>事例を登録する</h1>
       <p>あなたのアプリを事例ページで宣伝しませんか?<br />
       (*印は必須項目です)</p>
-      <div class="error">
-      ・開発者名を入力して下さい
-      <br>
-      ・少なくともどちらか一方のURLが必須です
-      <br>
-      </div>
 
-      <form action="/ja/showcase/add" method="post">
+      <div class="form-error" id="estimate-form-errors"></div>
+      <div class="form-error" id="unknown-error">エラーが発生しました。ページをリロードしてやり直して下さい。</div>
+
+      <form>
         <table>
           <tr>
             <th>開発者名<span class="required">*</span></th>
             <td>
-              <input type="text" name="form[name]" id="form_name" /><br />
+              <input type="text" name="form[name]" id="name" /><br />
               <span class="annotation">アプリはこのお名前とともに紹介されます。</span>
             </td>
           </tr>
           <tr>
             <th>AppStoreでのアプリのURL</th>
-            <td><input type="text" name="form[url_appstore]" class="wide" id="form_url_appstore" /><br />
+            <td><input type="text" name="form[url_appstore]" class="wide" id="url-appstore" /><br />
             <span class="annotation">例： http://itunes.apple.com/jp/app/monaca/id550941371</span></td>
           </tr>
           <tr>
             <th>Google Playストアでの<br />アプリのURL</th>
-            <td><input type="text" name="form[url_googleplay]" class="wide" id="form_url_googleplay" /><br />
+            <td><input type="text" name="form[url_googleplay]" class="wide" id="url-googleplay" /><br />
             <span class="annotation">例： https://play.google.com/store/apps/details?id=mobi.monaca.debugger</span></td>
           </tr>
           <tr>
@@ -43,33 +40,11 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
           </tr>
           <tr>
             <th></th>
-            <td><button type="submit" class="btn-black">事例を登録する</button></td>
+            <td><input class="btn-black" id="send" type="button" value="事例を登録する" /></td>
           </tr>
         </table>
-        <input type="hidden" name="form[_csrf_token]" value="d4cb1262641c18d9e25294f53303c8b1" id="form__csrf_token" />
       </form>
     </div>
   </section>
 </div>
 
-<script>
-$(function() {
-    var cases = $(".cases li");
-    var selectors = $(".cases-category li");
-
-    selectors.click(function() {
-        selectors.removeClass("active");
-        $(this).addClass("active");
-
-        var cat = this.dataset["category"];
-
-        cases.each(function() {
-            if ((cat === "all") || (cat === this.dataset["category"])) {
-                $(this).show();
-            } else {
-                $(this).hide()
-            }
-        });
-    });
-});
-</script>

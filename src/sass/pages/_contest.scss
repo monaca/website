@@ -95,7 +95,7 @@ section.ninja {
   }
 
   .keyvisual {
-    padding: 50px 0 0 0;
+    padding: 0;
     width: 100%;
     height: 530px;
     position: relative;
@@ -109,10 +109,7 @@ section.ninja {
       margin: 0 auto;
       img {
         display: block;
-        margin-bottom: 0 auto;
-        @-moz-document url-prefix() {
-          margin-top: -50px;
-        }
+        margin-bottom: 0;
       }
     }
     .keyvisual-cont {
@@ -554,11 +551,6 @@ p {
 }
 .closed-info-criteria {
   margin: -50px 0 -50px -52px;
-}
-@-moz-document url-prefix() {
-  .keyvisual h1 img {
-    margin-top: -49px;
-  }
 }
 .btn-area {
   text-align: center;

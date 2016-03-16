@@ -106,11 +106,16 @@
         <meta property="og:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
         <meta name="twitter:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
     {{/compare}}
+
+    <script src="https://use.typekit.net/tky7gag.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 
 <body class="{{class}}">
 
     {{> header }}
+    {{> signupPopup }}
+    {{> loginPopup }}
     {{> notificationHeader }}
     <article class="main" role="main">
 
@@ -130,7 +135,11 @@
       window.LANG = "{{language}}";
       window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
     </script>
-    <script src="{{site.monaca_api}}/login_io?callback=monacaApi.loginCheck"></script>
-
+    <script src="{{site.monaca_api}}/{{language}}/login_io?callback=monacaApi.loginCheck"></script>
+    <script>
+      if (!monacaApi.executedLoginCheck) {
+        monacaApi.loginCheck({});
+      }
+    </script>
   </body>
 </html>

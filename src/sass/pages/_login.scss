@@ -1,180 +1,3 @@
-#signuppopup {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  width: 420px;
-  display: block;
-  /*display: none;*/
-   display: block;
-   opacity: 1;
-   z-index: 11;
-   margin-left: -211px;
-   position: fixed;
-   top: 55.5px;
-   left: 50%;
-   @media screen and (max-width: $break) {
-    display: none;
-   }
-   @media screen and (max-width: $break-xs) {
-    display: none;
-   }
-
-  @include box-shadow(0 8px 15px rgba(0, 0, 0, 0.08));
-  .signuppopup-container {
-    min-height: 300px;
-    padding: 1px 16px 10px 16px;
-    a {
-      color: #666;
-      font-weight: normal;
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-     .en {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    h3 {
-      color: #333;
-      font-size: 20px;
-      padding: 20px 0 14px 0;
-      font-weight: 400;
-      text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-      text-align: left;
-    }
-    .close {
-      /*@include img-replacement('../0513-images/close-dark.png');*/
-      background: rgba(0, 0, 0, 0) url(../img/login/close-dark.png) no-repeat scroll left top;
-      position: absolute;
-      top: 14px;
-      right: 16px;
-      width: 19px;
-      height: 19px;
-      opacity: 1;
-      &:hover {
-        opacity: 0.8;
-        cursor: pointer;
-      }
-    }
-    .signup-form {
-      @extend %signup-form;
-      ul li {
-        margin-bottom: 10px;
-        color: #666;
-        label {
-          font-weight: normal;
-          text-align: left;
-        }
-      }
-      input {
-        &[type="text"],
-        &[type="password"] {
-          width: 387px;
-          display: block;
-          box-shadow: none;
-          border: 1px solid #ddd;
-          font-size: 16px;
-          /*@include box-sizing();*/
-          border-radius: 3px;
-          line-height: 1;
-          padding: 15px 0 10px 38px;
-          height: 45px;
-        }
-        &[type="text"] {
-          background-image: url(../img/login/login-user-icon.png);
-          background-repeat: no-repeat;
-          background-position: 8px 9px;
-        }
-
-        &[type="password"] {
-          background-image: url(../img/login/login-password-icon.png);
-          background-repeat: no-repeat;
-          background-position: 10px 9px;
-        }
-      }
-      button {
-        padding: 0 24px;
-        margin: 12px 0 0 0;
-        float: right;
-        font-size: 18px;
-        @extend %flat-btn;
-        background-color: #ff8b24;
-        border: 1px solid #ec761f;
-        color: white;
-        font-weight: 600;
-      }
-      .error {
-        clear: both;
-        padding: 20px 0 0 0;
-        display: none;
-        font-size: 14px;
-      }
-      .loading {
-        background: url(../img/login/loading-gif.gif) no-repeat left top;
-        width: 16px;
-        height: 16px;
-        margin: 14px 16px 0 0;
-        float: right;
-        display: none;
-      }
-    }
-  }
-
-  #signup-ng {
-    /*@include box-sizing();
-    @include all-a(#666,underline);*/
-    padding: 15px 15px 15px;
-    text-align: center;
-    min-height: 0;
-    color: #666;
-    p {
-      margin: 10px 0 5px 0;
-      text-align: left;
-      font-size: 16px;
-    }
-    .license {
-      display: block;
-      text-align: center;
-      font-size: 16px;
-    }
-    a.link {
-      background-repeat: no-repeat;
-      background-position: 10px 0;
-      display: inline-block;
-      font-size: 11px;
-      padding-top: 67px;
-      width: 86px; height: 20px;
-    }
-    a#link-safari {
-      background-position: 11px 0;
-      background-image: url(../img/login/icon_safari.png);
-    }
-    a#link-chrome {
-      background-image: url(../img/login/icon_chrome.png);
-    }
-  }
-}
-#modal-overlay {
-    background: #000 none repeat scroll 0 0;
-    /*display: none;*/
-    display: block;
-    height: 100%;
-    left: 0;
-    opacity: 0.1;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    @media screen and (max-width: $break) {
-        display: none;
-    }
-}
-
-
 #header-simple {
     margin: 120px 0 0 0;
     h1 {
@@ -210,6 +33,15 @@
           color: #666;
           font-size: 15px;
       }
+      a.en-new-account {
+          margin: 0;
+          background: url(../img/login/header_new_account_icon.png) no-repeat scroll left 15px, rgba(0, 0, 0, 0) url(../img/login/header_free_label_en.png) no-repeat scroll right 20px;
+          height: 30px;
+          padding: 20px 33px 0 24px;
+          line-height: 45px;
+          color: #666;
+          font-size: 15px;
+      }
       .hidden-break {
         @media screen and (max-width: $break) {
         display: none !important;
@@ -225,7 +57,7 @@
 
 #login {
   padding: 0;
-  margin: 0 0 40px 0;
+  margin: 0 auto 40px auto;
   .container {
     border: 1px solid #d9d9d9;
     border-radius: 6px;
@@ -233,12 +65,74 @@
     margin: 40px auto 15px;
     max-width: 358px;
     padding: 0  14px 6px 14px;
+    min-width: 358px;
     h2 {
       font-size: 16px;
       font-weight: normal;
       margin-top: 14px;
       text-shadow: 0 1px 0 white;
       text-align: left;
+    }
+    .btn-github {
+      background-color: #000000;
+      border-radius: 3px;
+      border-style: none;
+      color: #ffffff;
+      font-size: 17px;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      .github-img {
+        background-image: url("/img/login/chara_github.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 48px;
+      }
+      .signup-label {
+        height: 50px;
+        line-height: 50px;
+        margin-left: 10px;
+      }
+      .vertical-line {
+        border-left: 1px solid #ffffff;
+        height: 36px;
+        margin-top: 7px;
+        width: 0;
+      }
+      div {
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .or-box {
+      font-size: 14px;
+      height: 54px;
+      line-height: 54px;
+      width: 100%;
+      .line-l {
+       float: left;
+      }
+      .line-r {
+        float: right;
+    }
+      .line-l,
+      .line-r {
+        border-top: 1px solid #999999;
+        height: 0;
+        margin-top: 27px;
+        width: calc(50% - 28px);
+      }
+    }
+    hr {
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #cccccc;
+      margin: 1em 0;
+      padding: 0;
     }
     .login-form {
       margin-top: 6px;
@@ -266,6 +160,13 @@
       }
       .checkbox label {
             background: url(../img/login/checkbox.png) no-repeat scroll left center;
+      }
+      .checkbox {
+          float: left;
+          padding-top: 10px;
+          @media screen and (max-width: $break) {
+            padding: 5px 0 0 0;
+        }
       }
     }
     .bottom {
