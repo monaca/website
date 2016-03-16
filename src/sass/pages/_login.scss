@@ -161,6 +161,13 @@
       .checkbox label {
             background: url(../img/login/checkbox.png) no-repeat scroll left center;
       }
+      .checkbox {
+          float: left;
+          padding-top: 10px;
+          @media screen and (max-width: $break) {
+            padding: 5px 0 0 0;
+        }
+      }
     }
     .bottom {
       a {
