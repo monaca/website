@@ -121,6 +121,10 @@ header.navbar {
             margin-left: 0;
             margin-right: 0;
         }
+        @media screen and (min-width: 641px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
     .navbar-nav {
         .dashboard {

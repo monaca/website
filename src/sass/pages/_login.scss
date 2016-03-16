@@ -157,6 +157,9 @@
       }
       .checkbox input[type="checkbox"]:checked + label {
             background: url(../img/login/checkmark.png) no-repeat scroll 3px center, rgba(0, 0, 0, 0) url(../img/login/checkbox.png) no-repeat scroll left center;
+            @media screen and (max-width: $break) {
+              background: url(../img/login/checkmark.png) no-repeat scroll 3px 15px, rgba(0, 0, 0, 0) url(../img/login/checkbox.png) no-repeat scroll left 14px;
+          }
       }
       .checkbox label {
             background: url(../img/login/checkbox.png) no-repeat scroll left center;
