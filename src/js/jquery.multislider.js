@@ -228,4 +228,3 @@ var MultiSlider = (function() {
 
     return MultiSlider;
 })();
-
