@@ -118,7 +118,7 @@ body.support {
       font-size: 12px;
     }
     > .container {
-      margin-bottom: 0px;
+      margin-bottom: 46px;
       width: 700px;
       min-width: 100%;
       @media screen and (max-width: $break) {
@@ -252,6 +252,12 @@ body.support {
         }
       }
 
+      label.device-label {
+        display: inline-block;
+        width: 250px;
+        margin:0 0 10px 0;
+      }
+
       > form > table {
         td {
           padding: 4px 0 25px;
@@ -268,11 +274,6 @@ body.support {
             line-height: 20px;
             font-weight: bold;
             color: #666;
-          }
-          > label.device-label {
-            display: inline-block;
-            width: 200px;
-            margin:0 0 10px 0;
           }
           > label.other-device-label {
             display: block;
@@ -363,7 +364,7 @@ body.support {
               border: 1px solid #333;
               border-radius: 8px;
               position: absolute;
-              top: -130px;
+              bottom: 10px;
               left: -50px;
               width: 250px;
               min-height: 100px;

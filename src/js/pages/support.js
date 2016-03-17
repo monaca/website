@@ -24,8 +24,6 @@
           displayUnknownError();
         },
         error: function(msg) {
-          console.log('error!');
-          console.log(msg);
           displayUnknownError();
         }
       });
@@ -43,7 +41,6 @@
           data: sendData,
           dataType: "json",
           success: function(msg) {
-            console.log(msg);
             formUtil.enableAllInput();
 
             if (msg.result == 'submitOK') {
@@ -55,8 +52,6 @@
             }
           },
           error: function(msg) {
-            console.log("error!");
-            console.log(msg);
             formUtil.enableAllInput();
             displayUnknownError();
           }
@@ -64,7 +59,6 @@
 
         return false;
       });
-
     });
 
     function displayForm(data) {
@@ -99,7 +93,6 @@
 
       return sendData;
     }
-
   };
 
   monacaPages["/support/technical/index.html"] = function (loginData) {
@@ -115,7 +108,7 @@
 
     loginData.onPreReady(function() {
       if (!loginData.status.isLogin) {
-        displayLoginError();
+        displayLoginError(tag);
       }
     });
 
@@ -135,8 +128,6 @@
         },
         dataType: "json",
         success: function(msg) {
-          console.log(JSON.stringify(msg));
-
           if (msg.result && msg.result.initOK) {
             initFormData = msg.result.initOK;
             setTicket(initFormData);
@@ -145,16 +136,14 @@
           }
 
           if (msg.result == 'loginError') {
-            displayLoginError();
+            displayLoginError(tag);
           } else if (msg.result == 'planError') {
-            displayPlanError();
+            displayPlanError(tag);
           } else {
             displayUnknownError();
           }
         },
         error: function(msg) {
-          console.log('error!');
-          console.log(JSON.stringify(msg));
           displayUnknownError();
         }
       });
@@ -224,17 +213,23 @@
       $('.for-'+erase_tag).css('display', 'none');
     }
 
-    function displayLoginError() {
+    function displayLoginError(tag) {
       $('#login-error-container').css('display', 'block');
       $('#plan-error-container').css('display', 'none');
+      displayFormParts(tag);
       displayBody();
+
+      $("#exec-login-for-support").click(function() {
+        location.href = '/login/?url=' + encodeURIComponent('/support/technical/?tag=' + tag);
+      });
     }
 
-    function displayPlanError()  {
+    function displayPlanError(tag)  {
       $('#login-error-container').css('display', 'none');
       $('#plan-error-container').css('display', 'block');
       $('#form-container').css('display', 'none');
       $('#support-index').css('display', 'block');
+      displayFormParts(tag);
       displayBody();
     }
 
@@ -243,7 +238,6 @@
       $('#form-container').css('display', 'block');
       $('#csrf-token-error').css('display', 'block');
       displayFormParts(tag);
-      $('#form-container').css('display', 'block');
       displayBody();
     }
 

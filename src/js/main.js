@@ -60,10 +60,16 @@ function setNotificationHeader() {
   });
 }
 
-function sendTracker(event, params) {
-  var lang = checkLang(location.hostname);
+function isIdeAvailable() {
+  var ua = navigator.userAgent.toLowerCase();
+  if (ua.indexOf('chrome') == -1 && ua.indexOf('safari') == -1 && ua.indexOf('gecko') == -1) {
+    return false
+  }
+  return true;
+}
 
-  $.ajax('https://monaca.mobi/' + lang + '/api/tracker?event=' + event, {
+function sendTracker(event, params) {
+  $.ajax('https://monaca.mobi/' + window.LANG + '/api/tracker?event=' + event, {
     type: 'POST',
     data: params,
     xhrFields: {
@@ -77,11 +83,4 @@ function downloadLogo(url) {
     url: url
   });
   window.location.href = url;
-}
-
-function checkLang(hostname) {
-  if (hostname.match(/3011/) || hostname.match(/ja/)) {
-    return 'ja';
-  }
-  return 'en';
 }

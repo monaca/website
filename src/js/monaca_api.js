@@ -134,11 +134,44 @@
       path += "index.html";
     }
 
+    if (!isIdeAvailable()) {
+      $('#signup-ok').remove();
+    } else {
+      $('#signup-ng').remove();
+    }
+
+    $('.exec-logout').click(function() {
+      $.ajax({
+        type: "POST",
+        url: monacaApi.getBaseUrl() + "/" + window.LANG + "/api/account/logout",
+        xhrFields: {
+          withCredentials: true
+        },
+        dataType: "json",
+        success: function (msg) {
+          location.href = '/';
+        },
+        error: function (msg) {
+          location.href = '/';
+        }
+      });
+
+    });
+
+    $('.go-to-dashboard').click(function() {
+      location.href = MONACA_API_URL + '/' + LANG + '/dashboard';
+    });
+
+    $('.btn-github').click(function() {
+      location.href = MONACA_GITHUB_OAUTH_URL;
+    });
+
     $('#show_signuppopup').click(function() {
+      formUtil.resetError();
       getCsrfToken(monacaApi.getBaseUrl() + "/" + window.LANG + "/api/register");
 
       $('#signuppopup').fadeIn(msec)
-        .find('input#form_email')
+        .find('input#signup_popup_email')
         .focus();
       $("#modal-overlay").fadeIn(msec).one('click', function() {
         closePopup(msec, 'signuppopup');
@@ -146,10 +179,10 @@
     });
 
     $('#show_loginpopup').click(function() {
-      getCsrfToken(monacaApi.getBaseUrl() + "/" + window.LANG + "/api/csrf_token");
-
+      formUtil.resetError();
+      getCsrfToken(monacaApi.getBaseUrl() + "/" + window.LANG + "/api/account/login");
       $('#loginpopup').fadeIn(msec)
-        .find('input#form_email')
+        .find('input#login_popup_email')
         .focus();
       $("#modal-overlay").fadeIn(msec).one('click', function() {
         closePopup(msec, 'loginpopup');
@@ -165,7 +198,41 @@
     });
 
     $('#popup_login_btn').click(function() {
+      formUtil.disableAllInput();
+      var sendData = {
+        'form[email]':       $('#login_popup_email').val(),
+        'form[password]':    $('#login_popup_password').val(),
+        'form[_csrf_token]': popup_csrf_token
+      };
 
+      if ($('#login_popup_remember_email').prop('checked')) {
+        sendData['form[remember_id]'] = 1;
+      }
+
+      $.ajax({
+        type: "POST",
+        url: monacaApi.getBaseUrl() + "/" + window.LANG + "/api/account/login",
+        xhrFields: {
+          withCredentials: true
+        },
+        data: sendData,
+        dataType: "json",
+        success: function (msg) {
+          formUtil.enableAllInput();
+
+          if (msg.result == 'loginOK') {
+            location.href = MONACA_API_URL + '/' + LANG + '/dashboard';
+          } else if (msg.result && msg.result.formError) {
+            formUtil.displayFormErrorForGlobal(msg.result.formError, 'login-popup-error');
+          } else {
+            $('#login-popup-unknown-error').css('display', 'block');
+          }
+        },
+        error: function (msg) {
+          formUtil.enableAllInput();
+          $('#login-popup-unknown-error').css('display', 'block');
+        }
+      });
     });
 
     $('#popup_signup_btn').click(function() {
@@ -187,21 +254,20 @@
         success: function (msg) {
           formUtil.enableAllInput();
 
-          if (msg.result == 'submitOK') {
-            console.log('register success!');
-            location.href="/register/thankyou.html"
+          if (msg.result && msg.result.submitOK) {
+            location.href = "/register/thankyou.html";
           } else if (msg.result && msg.result.formError) {
             formUtil.displayFormErrorForGlobal(msg.result.formError, 'signup-popup-error');
           } else {
-            formUtil.displayFormErrorFor
+            formUtil.resetError();
+            $('#signup-popup-unknown-error').css('display', 'block');
           }
         },
         error: function (msg) {
           formUtil.enableAllInput();
-          //displayUnknownError();
+          $('#signup-popup-unknown-error').css('display', 'block');
         }
       });
-
     });
 
 

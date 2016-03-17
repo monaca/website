@@ -159,7 +159,7 @@
       }
       .line-r {
         float: right;
-    }
+      }
       .line-l,
       .line-r {
         border-top: 1px solid #999999;
@@ -508,6 +508,10 @@ body.register {
   #main-wrap {
   background-color: #3859a0;
   }
+
+  h1 {
+    margin-top: 0;
+  }
 }
 
 #main-wrap {
@@ -516,6 +520,10 @@ body.register {
 }
 
 #signup-start {
+  .form-error {
+    margin-bottom: 20px;
+    color: #f55b56;
+  }
   background: url(/img/start/SignUp_01_03.png) no-repeat left 48px bottom 20%;
   margin: 0 auto;
   padding: 0 5%;
@@ -671,6 +679,11 @@ body.register {
     }
   }
   .signup-form {
+    .form−error {
+      margin-bottom: 0;
+      color: #f55b56;
+      border: solid 1px blue;
+    }
     .submit {
       margin: 12px 0;
       .btn-orange {

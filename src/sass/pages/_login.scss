@@ -134,8 +134,14 @@
       margin: 1em 0;
       padding: 0;
     }
+    .form-error {
+      margin-top: 0;
+      margin-bottom: 5px;
+      color: #f55b56;
+    }
+
     .login-form {
-      margin-top: 6px;
+      margin-top: 0;
       padding: 0;
       li {
           margin: 0 0 4px;
@@ -182,6 +188,12 @@
         }
       }
     }
+  }
+}
+
+#lostpassword {
+  .form-error, .required {
+    color: #f55b56;
   }
 }
 

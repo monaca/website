@@ -17,20 +17,21 @@
 
     <a id="close_loginpopup" class="close"><img src="/img/login/close-dark.png"></a>
     <form class="login-form">
+      <p class="form-error" id="login-popup-error"></p>
+      <p class="form-error" id="login-popup-unknown-error">{{#is language "ja"}}エラーが発生しました。ページをリロードしてやり直して下さい。{{else}}Please reload this page and try again.{{/is}}</p>
       <ul>
-        <li class="error" style="padding-top: 0;"></li>
         <li class="email">
-  <input type="text" name="form[email]" maxlength="255" placeholder="{{#is language "ja"}}メールアドレス{{else}}E-mail address{{/is}}" class="email" id="form_email" />
+          <input type="text" name="form[email]" maxlength="255" placeholder="{{#is language "ja"}}メールアドレス{{else}}E-mail address{{/is}}" class="email" id="login_popup_email" />
         </li>
         <li>
-          <input type="password" name="form[password]" maxlength="30" placeholder="{{#is language "ja"}}パスワード{{else}}Password{{/is}}" class="password" id="form_password" />
+          <input type="password" name="form[password]" maxlength="30" placeholder="{{#is language "ja"}}パスワード{{else}}Password{{/is}}" class="password" id="login_popup_password" />
         </li>
         <li class="autologin-check">
-          <input type="checkbox" name="form[remember_id]" value="1" id="remember_email" checked="checked" />
+          <input type="checkbox" name="form[remember_id]" value="1" id="login_popup_remember_email" checked="checked" />
           <label for="remember_email">{{#is language "ja"}}次回から自動的にログイン{{else}}Keep my account logged in{{/is}}</label>
         </li>
         <li>
-<button id="execute_login" type="submit" class="btn-blue">{{#is language "ja"}}ログイン{{else}}Login{{/is}}</button>
+          <button id="popup_login_btn" type="button" class="btn-blue">{{#is language "ja"}}ログイン{{else}}Login{{/is}}</button>
         </li>
       </ul>
     </form>

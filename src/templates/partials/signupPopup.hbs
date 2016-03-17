@@ -17,8 +17,9 @@
 
     <a id="close_signupbackpopup" class="close"><img src="/img/login/close-dark.png"></a>
     <form class="signup-form" id="TryNowForm">
+      <p class="form-error" id="signup-popup-error"></p>
+      <p class="form-error" id="signup-popup-unknown-error">{{#is language "ja"}}エラーが発生しました。ページをリロードしてやり直して下さい。{{else}}Please reload this page and try again.{{/is}}</p>
       <ul>
-        <p class="form-error" style="padding-top: 0;" id="signup-popup-error"></p>
         <li class="email">
           <input type="text" name="form[email]" maxlength="255" placeholder="{{#is language "ja"}}メールアドレス{{else}}E-mail address{{/is}}" class="email" id="signup_popup_email" />
         </li>
@@ -39,11 +40,14 @@
     </form>
   </div>
 
-  <!--div class="signuppopup-container" id="signup-ng">
+  <div class="signuppopup-container" id="signup-ng">
     <a href="http://www.google.com/chrome/" id="link-chrome" class="link" target="_blank">Google Chrome</a>
     <a href="http://www.apple.com/safari/" id="link-safari" class="link" target="_blank">Safari</a>
     <p>
-      お使いのブラウザはMonacaの開発環境に対応していません。Google ChromeもしくはSafariブラウザをご利用ください。</p>
-    <a class="license" href="/ja/register/start">会員登録は行っていただけます。</a>
-  </div>-->
+      {{#is language "ja"}}お使いのブラウザはMonacaの開発環境に対応していません。Google ChromeもしくはSafariブラウザをご利用ください。
+      {{else}}Your browser is not supported by Monaca IDE. Please install the latest version of Google Chrome or Safari for better experience.
+      {{/is}}
+    </p>
+    <p><a class="license" href="/register/start.html">{{#is language "ja"}}会員登録は行っていただけます。{{else}}You can still continue signing up.{{/is}}</a></p>
+  </div>
 </div>
