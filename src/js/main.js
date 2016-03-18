@@ -69,7 +69,7 @@ function isIdeAvailable() {
 }
 
 function sendTracker(event, params) {
-  $.ajax('https://monaca.mobi/' + window.LANG + '/api/tracker?event=' + event, {
+  $.ajax(window.MONACA_API_URL +'/' + window.LANG + '/api/tracker?event=' + event, {
     type: 'POST',
     data: params,
     xhrFields: {
