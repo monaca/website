@@ -24,12 +24,12 @@
           <input type="text" name="form[email]" maxlength="255" placeholder="{{#is language "ja"}}メールアドレス{{else}}E-mail address{{/is}}" class="email" id="signup_popup_email" />
         </li>
         <li>
-          <input type="password" name="form[password]" maxlength="30" placeholder="{{#is language "ja"}}Password{{else}}パスワード{{/is}}" class="password" id="signup_popup_password" />
+          <input type="password" name="form[password]" maxlength="30" placeholder="{{#is language "ja"}}パスワード{{else}}Password{{/is}}" class="password" id="signup_popup_password" />
         </li>
         <li class="" style="font-size: 14px;">
           <label for="agree_policy">
             {{#is language "ja"}}<a href="/terms-of-service/index.html" target="_blank">Monacaの利用規約</a>に同意の上、アカウントの作成をお願いします。
-            {{else}}<a href="/terms-of-service/index.html" target="_blank">By clicking the button below you agree to terms of use and privacy policy</a>{{/is}}
+            {{else}}By clicking the button below you agree to <a href="/terms-of-service/index.html" target="_blank">terms of use and privacy policy</a>.{{/is}}
           </label>
         </li>
         <li>

@@ -118,45 +118,42 @@ component: navbar
                     </li>
                 {{/is}}
 
-                <!-- 未ログインの場合 -->
-                <li id="show_signuppopup_li"><a id="show_signuppopup" class="login">{{i18n "signup"}}</a></li>
-                <li id="show_loginpopup_li"><a id="show_loginpopup" class="login">{{i18n "login"}}</a></li>
-                {{#is language "en"}}
-                <li><a href="https://ja.monaca.io/" class="hidden-xs">日本語</a></li>
-                {{/is}}
+                <li id="show_signuppopup_li"><a href="javascript:void(0)" id="show_signuppopup" class="login">{{i18n "signup"}}</a></li>
+                <li id="show_loginpopup_li"><a href="javascript:void(0)" id="show_loginpopup" class="login">{{i18n "login"}}</a></li>
                 
-
-                <!-- ログイン済みの場合　ここから -->
-                {{#is language "ja"}}
-                <li class="nav-dashboard pc">
-                <a class="nav-title dashboard go-to-dashboard">ダッシュボード</a>
-                </li>
-                <li class="nav-user dropdown pc">
-                    <span class="nav-title"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"></span>
-                    <ul class="dropdown-menu">
-                        <li><a class="nav-title settings" href="https://monaca.mobi/ja/account/edit">アカウント設定</a></li>
-                        <li><a class="nav-title exec-logout">ログアウト</a></li>
-                    </ul>
-                </li>
-                <li class="sp"><a class="go-to-dashboard">ダッシュボード</a></li>
-                <li class="sp"><a href="https://monaca.mobi/ja/account/edit"  class="settings"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"> アカウント設定</a></li>
-                <li class="sp"><a class="exec-logout">ログアウト</a></li>
-                {{else}}
-                <li class="nav-dashboard pc">
-                <a class="nav-title dashboard" href="https://monaca.mobi/ja/dashboard">Dashboard</a>
-                </li>
-                <li class="nav-user dropdown pc">
-                    <span class="nav-title"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"></span>
-                    <ul class="dropdown-menu">
-                        <li><a class="nav-title settings" href="https://monaca.mobi/en/account/edit">Manage</a></li>
-                        <li><a class="nav-title exec-logout">Logout</a></li>
-                    </ul>
-                </li>
-                <li class="sp"><a href="https://monaca.mobi/en/dashboard">Dashboard</a></li>
-                <li class="sp"><a href="https://monaca.mobi/en/account/edit"  class="settings"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm">Manage</a></li>
-                <li class="sp"><a class="exec-logout">Logout</a></li>
+                {{#is language "en"}}
+                    <li><a href="https://ja.monaca.io/" class="hidden-xs">日本語</a></li>
                 {{/is}}
-                <!-- ログイン済みの場合　ここまで -->
+
+                {{#is language "ja"}}
+                    <li class="nav-dashboard pc">
+                    <a href="javascript:void(0)" class="nav-title dashboard go-to-dashboard">ダッシュボード</a>
+                    </li>
+                    <li class="nav-user dropdown pc">
+                        <span class="nav-title"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"></span>
+                        <ul class="dropdown-menu">
+                            <li><a class="nav-title settings" href="https://monaca.mobi/ja/account/edit">アカウント設定</a></li>
+                            <li><a href="javascript:void(0)" class="nav-title exec-logout">ログアウト</a></li>
+                        </ul>
+                    </li>
+                    <li class="sp"><a class="go-to-dashboard">ダッシュボード</a></li>
+                    <li class="sp"><a href="https://monaca.mobi/ja/account/edit"  class="settings"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"> アカウント設定</a></li>
+                    <li class="sp"><a href="javascript:void(0)" class="exec-logout">ログアウト</a></li>
+                {{else}}
+                    <li class="nav-dashboard pc">
+                    <a class="nav-title dashboard" href="https://monaca.mobi/ja/dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-user dropdown pc">
+                        <span class="nav-title"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"></span>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:void(0)" class="nav-title settings" href="https://monaca.mobi/en/account/edit">Manage</a></li>
+                            <li><a href="javascript:void(0)" class="nav-title exec-logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class="sp"><a href="https://monaca.mobi/en/dashboard">Dashboard</a></li>
+                    <li class="sp"><a href="https://monaca.mobi/en/account/edit"  class="settings"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm">Manage</a></li>
+                    <li class="sp"><a href="javascript:void(0)" class="exec-logout">Logout</a></li>
+                {{/is}}
             </ul>
         </div>
     </div>
