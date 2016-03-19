@@ -444,7 +444,8 @@ body.pricing.compare article.main {
     }
     .container {
         box-sizing: content-box;
-        max-width: 1070px;
+        max-width: 870px;
+        min-width: 0;
         margin: 0 auto;
         padding-left: 5%;
         padding-right: 5%;
@@ -456,7 +457,7 @@ body.pricing.compare article.main {
     .compare-header {
         float: left;
         padding-top: 25px;
-        width: 322px;
+        width: 200px;
         @media screen and (max-width: $break-xs) {
             width: 150px;
         }
@@ -508,7 +509,7 @@ body.pricing.compare article.main {
         }
         @media screen and (min-width: $break-xs + 1px) {
             br {
-                display: none;
+                // display: none;
             }
         }
     }
@@ -516,7 +517,7 @@ body.pricing.compare article.main {
         float: right;
         overflow: auto;
         margin-bottom: 50px;
-        width: calc(100% - 342px);
+        width: calc(100% - 200px);
         @media screen and (max-width: $break-xs) {
             width: calc(100% - 157px);
         }
@@ -533,7 +534,7 @@ body.pricing.compare article.main {
             box-shadow: 4px 0 3px -3px rgba(0,0,0,$shadow-opacity) inset, -4px 0 3px -3px rgba(0,0,0,$shadow-opacity) inset;
         }
         table {
-            width: 725px;
+            width: 625px;
             margin: 0 0 78px;
             &:last-child {
                 margin-bottom: 0;
