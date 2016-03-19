@@ -7,8 +7,6 @@
     ready:        false,
     profile:      null,
     status :      null,
-    onElements:   [],
-    offElements:  [],
     preListeners: [],
     listeners:    [],
     autoDisplay:  true,
@@ -65,27 +63,11 @@
       loginData.setReady();
     }
 
-    var el = document.querySelector(".navbar-nav");
-    var children = $(el).children();
-    var n = children.size();
-
-    for (var i = n - 8; i < n - 5; i++) {
-      loginData.offElements.push(children[i]);
-    }
-
-    for (var i = n - 5; i < n; i++) {
-      loginData.onElements.push(children[i]);
-    }
-
     if (status.isLogin) {
-      loginData.offElements.forEach(function(elem) {
-        elem.remove();
-      });
+      $(".navbar-nav .before-login").remove();
       this.loadLoginData();
     } else {
-      loginData.onElements.forEach(function(elem) {
-        elem.remove();
-      });
+      $(".navbar-nav .after-login").remove();
     }
   };
   
@@ -133,11 +115,10 @@
     if (path.slice(-1) == '/') {
       path += "index.html";
     }
-
-    if (!isIdeAvailable()) {
-      $('#signup-ok').remove();
-    } else {
+    if (isIdeAvailable()) {
       $('#signup-ng').remove();
+    } else {
+      $('#signup-ok').remove();
     }
 
     $('.exec-logout').click(function() {
@@ -155,7 +136,6 @@
           location.href = '/';
         }
       });
-
     });
 
     $('.go-to-dashboard').click(function() {
