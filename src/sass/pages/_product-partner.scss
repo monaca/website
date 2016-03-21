@@ -235,6 +235,10 @@ body.product-partner {
           width: 320px;
           padding: 30px 20px;
 
+          ul li:last-child {
+            margin-bottom: 0;
+          }
+
           h5 {
             font-size: 14px;
             font-weight: bold;
