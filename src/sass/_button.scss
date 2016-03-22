@@ -44,7 +44,7 @@
     -moz-user-select: none;
     user-select: none;
     height: 40px;
-    line-height: 41px;
+    line-height: 40px;
     text-decoration: none;
     -webkit-font-smoothing: antialiased;
     transition-property: background-color, border-color, color;
@@ -232,4 +232,8 @@ Use with "btn" class
     &:active {
         opacity: 1;
     }
+}
+
+.submit-btn {
+  width: 200px;
 }

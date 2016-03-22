@@ -1,0 +1,139 @@
+---
+title: Submit Your App | HTML5 cross-platform mobile app development with Monaca
+class: contest
+description: Cloud powered HTML5 hybrid app development environment. Code and build iOS/Android/Windows apps cross-platform.
+viewport: width=1200px
+---
+
+<section id="ninja-submit" class="subpage">
+  <div class="keyvisual"></div>
+
+  <div class="container">
+    <form action="/en/contest/submit" method="post">
+      <p class="error" style="margin-bottom: 30px;"></p>
+
+      <table>
+        <tr>
+          <th>Your Name<span class="required">*</span></th>
+          <td><input type="text" name="form[name]" id="form_name" /><br />
+          <ul class="error-list">
+            <li>Required.</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <th style="padding-top:21px;">Where You Live<span class="required">*</span></th>
+          <td>
+          States, City, etc.<br />
+          <input type="text" name="form[location_city]" id="form_location_city" /><br />
+          <ul class="error-list">
+            <li>Required.</li>
+          </ul>
+          <br />
+          Country<br />
+          <input type="text" name="form[location_country]" id="form_location_country" />
+          <ul class="error-list">
+            <li>Required.</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>App Name<span class="required">*</span></th>
+          <td><input type="text" name="form[projectname]" id="form_projectname" /><br />
+          <ul class="error-list">
+            <li>Required.</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Brief Description of the App<span class="required">*</span><br />
+          <span style="font-size: 70%">700 characters maximum</span></th>
+          <td><textarea rows="4" cols="30" name="form[description]" id="form_description"></textarea><br />
+          <ul class="error-list">
+            <li>Required.</li>
+          </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Product(s) Used</th>
+          <td>
+            <ul class="checkbox_list">
+              <li><input name="form[product][]" type="checkbox" value="monaca" id="form_product_monaca" />&nbsp;<label for="form_product_monaca">Monaca</label></li>
+              <li><input name="form[product][]" type="checkbox" value="onsen" id="form_product_onsen" />&nbsp;<label for="form_product_onsen">Onsen UI</label></li>
+            </ul>
+            <ul class="error-list">
+              <li>Please choose at least 1 product</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>App Store URL</th>
+          <td><input type="text" name="form[url_appstore]" class="wide" id="form_url_appstore" /><br />
+          <span class="annotation">Example: http://itunes.apple.com/jp/app/monaca/id550941371</span><br />
+          </td>
+        </tr>
+        <tr>
+          <th>Google Play URL</th>
+          <td><input type="text" name="form[url_googleplay]" class="wide" id="form_url_googleplay" /><br />
+          <span class="annotation">Example: https://play.google.com/store/apps/details?id=mobi.monaca.debugger</span><br />
+          </td>
+        </tr>
+        <tr>
+          <th>Twitter Name</th>
+          <td><input type="text" name="form[twitter]" id="form_twitter" /><br />
+          </td>
+        </tr>
+        <tr>
+          <th>Blog, Website</th>
+          <td><input type="text" name="form[website]" id="form_website" /><br />
+          </td>
+        </tr>
+        <tr>
+          <th>Any comments for the Monaca team</th>
+          <td><textarea rows="4" cols="30" name="form[comment]" id="form_comment"></textarea><br />
+          </td>
+        </tr>
+        <tr>
+          <th>&nbsp;</th>
+          <td>
+            <input type="checkbox" name="form[agree_policy]" value="1" id="agree_policy" /><label for="agree_policy">Agree to <a href="terms/" target="_blank">the terms and conditions</a>.</label>
+            <br>
+            <ul class="error-list submit-error">
+              <li>Please agree to the terms and conditions.</li>
+            </ul>
+          </td>
+        </tr>
+        </table>
+        <p class="btns">
+          <button type="submit" class="btn btn-blue btn-big">Submit</button>
+        </p>
+        <input type="hidden" name="form[_csrf_token]" value="e5074d297dad042e99854c2709f71f68" id="form__csrf_token" />
+    </form>
+  </div>
+</section>
+
+<script src="/js/jquery.smoothScroll.js"></script>
+
+<script src="/js/moment.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script>
+
+  $(window).load(function() {
+   var fadeInSpeed = 400;
+   $('div.product-partner span#github-published_at').hide();
+   $.ajax({
+    url: 'https://api.github.com/repos/monaca/Localkit/releases',
+    dataType: 'jsonp',
+    success: function(res) {
+     $("div.product-partner span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
+     $('div.product-partner span#github-published_at a strong').text(res.data[0].name);
+     var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
+     $('div.product-partner span#github-published_at span').text(dateJa);
+     $('div.product-partner span#github-published_at').fadeIn(fadeInSpeed);
+   },
+   error: function() {
+     $('div.product-partner span#github-published_at').hide();
+   }
+ });
+ });
+</script>

@@ -11,6 +11,10 @@
 </section>
 ```
 */
+body {
+  visibility: hidden;
+}
+
 section,
 div.section {
   margin-left: auto;
@@ -619,7 +623,7 @@ Goes 2 to 1-column in responsive
     font-family: Open Sans,'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic ProN W3','Hiragino Kaku Gothic ProN','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
     height: 64px;
     line-height: 64px;
-    padding: 0 40px;
+    padding: 0 auto;
     margin: 0 10px;
     min-width: 240px;
   }
@@ -635,6 +639,11 @@ Goes 2 to 1-column in responsive
     }
   }
 }
+
+.form-error {
+  display: none;
+}
+
 #notificationHeader {
   margin-bottom: -80px;
   background-color: #e5e477;
