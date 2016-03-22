@@ -29,14 +29,18 @@ module.exports = function(grunt) {
             distEn: 'dist/en'
         };
 
-    var site_yaml_filename = grunt.file.exists(config.src + '/data/site_dev.yml') ? 'site_dev.yml' : 'site.yml';
+    // Load site.yml
+    if (grunt.option('site-config')) {
+      var site_yaml = grunt.file.readYAML(grunt.option('site-config'));
+    } else {
+      var site_yaml = grunt.file.readYAML(config.src + '/data/site.yml');
+    }
 
-    var site_yaml = grunt.file.readYAML(config.src + '/data/' + site_yaml_filename);
-
-    process.stdout.write( JSON.stringify( site_yaml ) );
+    // Display information
+    grunt.log.writeln('Title:        ' + site_yaml.title);
+    grunt.log.writeln('API Endpoint: ' + site_yaml.monaca_api);
 
     grunt.initConfig({
-
         config: config,
         
 	sass: {
@@ -168,7 +172,7 @@ module.exports = function(grunt) {
                 flatten: true,
                 layout: '<%= config.src %>/templates/layouts/default.hbs',
                 data: ['<%= config.src %>/data/i18n/*.{json,yml}'],
-                site: site_yaml ,
+                site: site_yaml,
                 partials: '<%= config.src %>/templates/partials/*.hbs',
                 plugins: ['assemble-middleware-sitemap'],
                 i18n: {
