@@ -16,6 +16,32 @@ header.navbar {
         @media screen and (max-width: $break) {
             padding: 0;
         }
+        .header-accordion {
+          background-color: #222;
+          max-height: 0;
+          overflow: hidden;
+          -webkit-transition: max-height 420ms;
+          -moz-transition: max-height 420ms;
+          -o-transition: max-height 420ms;
+          transition: max-height 420ms;
+          -webkit-transform: translate3d(0, 0, 0);
+          -moz-transform: translate3d(0, 0, 0);
+          -ms-transform: translate3d(0, 0, 0);
+          -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+        .header-accordion.on {
+          max-height: 750px;
+        }
+        .header-accordion.on:lang(ja) {
+          max-height: 1300px;
+        }
+        .header-accordion.loggedin.on {
+          max-height: 850px;
+        }
+        .header-accordion.loggedin.on:lang(ja) {
+          max-height: 1420px;
+        }
     }
     .navbar-header {
         margin: 0;
@@ -95,8 +121,26 @@ header.navbar {
             margin-left: 0;
             margin-right: 0;
         }
+        @media screen and (min-width: 641px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
     .navbar-nav {
+        .dashboard {
+            text-decoration: underline;
+        }
+        .nav-title {
+            color: #80d4ff;
+            display: inline-block;
+            font-size: 14px;
+            height: 50px;
+            line-height: 51px;
+            padding: 0 13px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
         > li > a {
             color: #ffffff;
             padding: 16px 13px 14px;
@@ -112,11 +156,42 @@ header.navbar {
                 }
             }
         }
+        .pc {
+            display: block;
+                @media screen and (max-width: $break) {
+                    display: none;
+                }
+        }
+        .sp {
+            display: none;
+            @media screen and (max-width: $break) {
+                    display: block;
+                    a {
+                        text-align: left;
+                        text-decoration: underline;
+                        color: #80d4ff;
+                        font-weight: bold;
+                        img {
+                            margin: 0 5px 0 0;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+        }
+        .nav-user {
+            background: url("../img/common/user-menu-triangle.png") no-repeat scroll right center;
+            .user-icon {
+                vertical-align: -7px;
+            }
+        }
         .dropdown:hover > .dropdown-toggle {
             background-color: #2c2c2c;
             color: #7cdaff;
         }
         @media screen and (max-width: $break) {
+            .nav-dashboard {
+                text-align: left;
+            }
             .dropdown-toggle {
                 color: white;
             }
@@ -157,6 +232,16 @@ header.navbar {
                     background-color: rgba(0, 0, 0, 0.5);
                 }
             }
+            li a.nav-title {
+                color: #80d4ff;
+                font-weight: bold;
+            }
+        }
+    }
+    .nav-user {
+        .dropdown-menu {
+            @extend .dropdown-menu;
+            left: -110px;
         }
     }
     //bootstrap init
@@ -178,6 +263,7 @@ header.navbar {
         }
     }
 }
+
 // Desktop header toolbar: margin fix
 @media screen and (min-width: $break) {
     html[lang=en] {
@@ -185,6 +271,18 @@ header.navbar {
             @media screen and (max-width: 860px) {
                 padding-left: 10px;
                 padding-right: 10px;
+            }
+        }
+        .navbar-nav {
+            .nav-title {
+                 @media screen and (max-width: 860px) {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+                @media screen and (max-width: 820px) {
+                    padding-left: 2px;
+                    padding-right: 2px;
+                }
             }
         }
     }
@@ -213,7 +311,37 @@ header.navbar {
             }
         }
     }
+
+html[lang=ja] {
+    .navbar-nav {
+        .nav-title {
+            @media screen and (max-width: 1170px) {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            @media screen and (max-width: 1070px) {
+                font-size: 13px;
+                .opt {
+                    display: none;
+                }
+            }
+            @media screen and (max-width: 960px) {
+                font-size: 12px;
+            }
+            @media screen and (max-width: 900px) {
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+            @media screen and (max-width: 820px) {
+                padding-left: 2px;
+                padding-right: 2px;
+                }
+            }
+        }
+    }
 }
+
+
 
 
 #language-switch-container {

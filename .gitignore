@@ -25,3 +25,7 @@ docs/styleguide/button.css.map
 docs/styleguide/common.css.map
 
 .DS_Store
+
+src/data/site_dev.yml
+
+

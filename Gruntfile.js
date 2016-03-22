@@ -21,17 +21,25 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     var isWindows = /^win/.test(process.platform);
-
-    grunt.initConfig({
-
-        config: {
+  
+    var config = {
             src: 'src',
             dist: 'dist/en',
             distJa: 'dist/ja',
             distEn: 'dist/en'
-        },
+        };
 
-        sass: {
+    var site_yaml_filename = grunt.file.exists(config.src + '/data/site_dev.yml') ? 'site_dev.yml' : 'site.yml';
+
+    var site_yaml = grunt.file.readYAML(config.src + '/data/' + site_yaml_filename);
+
+    process.stdout.write( JSON.stringify( site_yaml ) );
+
+    grunt.initConfig({
+
+        config: config,
+        
+	sass: {
             options: {
                 outputStyle: "compressed",
                 sourceMap: true,
@@ -95,8 +103,14 @@ module.exports = function(grunt) {
                     '<%= config.src %>/js/**/*.js'
                 ],
                 dest: '<%= config.dist %>/js/all.js',
-                separator: ";"
-            }
+                separator: ";",
+
+            },
+            // options : {
+            //   process : function(content,path) {
+            //     return grunt.template.process(content,{ data : site_yaml } );
+            //   } 
+            // }
         },
 
         uglify: {
@@ -153,7 +167,8 @@ module.exports = function(grunt) {
             options: {
                 flatten: true,
                 layout: '<%= config.src %>/templates/layouts/default.hbs',
-                data: '<%= config.src %>/data/**/*.{json,yml}',
+                data: ['<%= config.src %>/data/i18n/*.{json,yml}'],
+                site: site_yaml ,
                 partials: '<%= config.src %>/templates/partials/*.hbs',
                 plugins: ['assemble-middleware-sitemap'],
                 i18n: {

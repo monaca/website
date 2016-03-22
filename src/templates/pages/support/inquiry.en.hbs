@@ -1,0 +1,78 @@
+---
+title: Monaca - Hybrid mobile development cloud for cross-platform app
+class: support
+description: Cloud powered HTML5 hybrid app development environment. Code and build iOS/Android/Windows apps cross-platform.
+---
+
+<section id="support-inquiry" class="subpage">
+  <div class="container">
+    <h1>Contact Us</h1>
+
+    <div id="content">
+      <form class="feedback-form" id="contactForm">
+        <div class="feedback-item feedback-item-radio">
+          <h2>Type of Inquiry:<span style="color:red"></span></h2>
+          <ul id="question-type-radio"></ul>
+          <p class="form-error" id="question-type-error"></p>
+        </div>
+
+        <div class="feedback-item">
+          <h2>Your Name:</h2>
+          <table>
+            <tr>
+              <td class="label">
+                Your Name<span class="required">*</span>
+              </td>
+              <td>
+                <input type="text" name="inquiry[name]" id="name" class="name" />
+                <p class="form-error" id="name-error"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">
+                E-mail address<span class="required">*</span>
+              </td>
+              <td>
+                <input type="text" name="inquiry[email]" id="email" class="email" />
+                <p class="form-error" id="email-error"></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="feedback-item feedback-text">
+          <h2>Please enter your request in detail:</h2>
+          <table>
+            <tr>
+              <td class="label">Subject<span class="required">*</span></td>
+              <td class="form-item">
+                <select name="inquiry[subject]" id="subject"></select>
+                <p class="form-error" id="subject-error"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Applicable product<span class="required">*</span></td>
+              <td class="form-item">
+                <select id="product-type" name="inquiry[product_type]"></select>
+                <p class="form-error" id="product-type-error"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">Message<span class="required">*</span></td>
+              <td>
+                <p class="message-description">Please enter your inquiry in detail. To report an issue or ask technical questions, please use <a href='/support/technical/'>technical support</a>.</p>
+                <textarea rows="4" cols="30" name="inquiry[message]" id="message" placeholder="Please input description here."></textarea>
+                <p class="form-error" id="message-error"></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="form-footer">
+          <input id="send" name="submit" class="btn-blue submit-btn" type="button" value="Submit"/>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
