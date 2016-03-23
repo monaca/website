@@ -130,10 +130,10 @@
         },
         dataType: "json",
         success: function (msg) {
-          location.href = '/';
+          location.reload();
         },
         error: function (msg) {
-          location.href = '/';
+          location.reload();
         }
       });
     });
