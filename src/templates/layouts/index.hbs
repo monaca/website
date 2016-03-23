@@ -6,7 +6,7 @@
     <title>
         {{title}}
     </title>
-    <meta name="description" content="{{#is language "ja"}}Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。{{else}}Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.{{/is}}">
+    <meta name="description" content="{{#is language "ja"}}Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。{{else is language "en"}}Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services. {{else}}Monaca rende molto più semplice lo sviluppo di applicazioni mobile ibride basate su PhoneGap/Cordova grazie ai suoi strumenti di sviluppo e servizi cloud-powered.{{/is}}">
     {{#is language "ja"}}<meta name="keywords" content="Monaca,HTML5,Cordova,PhoneGap,MEAP">{{/is}}
 
     <script>
@@ -35,7 +35,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="{{title}}">
     <meta property="og:image" content="https://monaca.io/img/ogp.png">
-    <meta property="og:description" content="{{#is language "ja"}}Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。{{else}}Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.{{/is}}">
+    <meta property="og:description" content="{{#is language "ja"}}Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。{{else is language "en"}}Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services. {{else}}Monaca rende molto più semplice lo sviluppo di applicazioni mobile ibride basate su PhoneGap/Cordova grazie ai suoi strumenti di sviluppo e servizi cloud-powered.{{/is}}">
 
     <meta property="fb:admins" content="597508315" >
     <meta name="twitter:site" content="@monaca_io">
@@ -43,7 +43,7 @@
     <meta name="twitter:creator" content="@monaca_io">
     <meta name="twitter:image" content="https://monaca.io/img/ogp.png">
     <meta property="twitter:title" content="{{title}}">
-    <meta property="twitter:description" content="{{#is language "ja"}}Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。{{else}}Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.{{/is}}">
+    <meta property="twitter:description" content="{{#is language "ja"}}Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。{{else is language "en"}}Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services. {{else}}Monaca rende molto più semplice lo sviluppo di applicazioni mobile ibride basate su PhoneGap/Cordova grazie ai suoi strumenti di sviluppo e servizi cloud-powered.{{/is}}">
 
     <script src="https://use.typekit.net/tky7gag.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -69,10 +69,18 @@
 
         window.MONACA_API_URL = "{{site.monaca_api}}";
         window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
-        window.LANG = "{{language}}";
+        {{#is language "ja"}}
+            window.LANG = "ja";
+        {{else}}
+            window.LANG = "en";
+        {{/is}}
         window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
     </script>
-    <script src="{{site.monaca_api}}/{{language}}/login_io?callback=monacaApi.loginCheck"></script>
+    {{#is language "ja"}}
+        <script src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
+    {{else}}
+        <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
+    {{/is}}
     <script>
       if (!monacaApi.executedLoginCheck) {
         monacaApi.loginCheck({});
