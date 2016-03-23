@@ -915,60 +915,7 @@ html[lang=ja] body.home {
                 margin-top: 50px;
             }
         }
-        .box-buy {
-              text-align: center;
-              padding: 80px 0;
-              position: absolute;
-              top: 43%;
-              left: 11.8%;
-              .btn {
-                font-size: 24px;
-                height: 67px;
-                line-height: 67px;
-                padding: 0 20px;
-                min-width: 240px;
-                @media screen and (max-width: 1080px) {
-                    font-size: 24px;
-                    height: 61px;
-                    line-height: 59px;
-                    min-width: 220px;
-                }
-                @media screen and (max-width: 900px) {
-                    font-size: 20px;
-                    height: 61px;
-                    line-height: 59px;
-                    min-width: 220px;
-                }
-                @media screen and (max-width: 810px) {
-                    font-size: 20px;
-                    height: 61px;
-                    line-height: 59px;
-                    min-width: 200px;
-                }
-                @media screen and (max-width: 320px) {
-                      font-size: 20px;
-                      padding: 0 30px;
-                      max-width: 82%;
-                  }
-              }
-            .btn-darkgray {
-                margin: 90px 0 0 10px;
-                font-size: 24px;
-                @media screen and (max-width: 1080px) {
-                    margin: 70px 0 0 10px;
-                    font-size: 20px;
-                }
-                @media screen and (max-width: 980px) {
-                    margin: 55px 0 0 10px;
-                }
-                @media screen and (max-width: 900px) {
-                    margin: 40px 0 0 10px;
-                }
-                @media screen and (max-width: 810px) {
-                    margin: 30px 0 0 10px;
-                }
-            }
-        }
+
         .box-try {
             text-align: left;
             padding: 60px 0 0;
@@ -992,6 +939,10 @@ html[lang=ja] body.home {
                     }
                 }
             }
+        }
+        .box-buy{
+            left: 13%;
+            top: 60%;
         }
     }
     .sp-keyvisual {
