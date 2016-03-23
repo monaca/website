@@ -113,6 +113,29 @@ component: navbar
                     </li>
                 {{/is}}
 
+                <li class="dropdown">
+                    <a href="#" class="hidden-xs">
+                        <img src={{i18n "langIcon"}}> {{i18n "fullLang"}}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li {{#is language "en"}} style="display: none" {{/is}}>
+                            <a href="https://monaca.io/" class="hidden-xs">
+                                <img src="/img/icon/en.png"> English
+                            </a>
+                        </li>
+                        <li {{#is language "ja"}} style="display: none" {{/is}}>
+                            <a href="https://ja.monaca.io/" class="hidden-xs">
+                                <img src="/img/icon/ja.png"> 日本語
+                            </a>
+                        </li>
+                        <li {{#is language "it"}} style="display: none" {{/is}}>
+                            <a href="https://monaca.io/it/" class="hidden-xs">
+                                <img src="/img/icon/it.png"> Italiano
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
                 <li id="show_signuppopup_li"><a href="javascript:void(0)" id="show_signuppopup" class="login before-login">{{i18n "signup"}}</a></li>
                 <li id="show_loginpopup_li"><a href="javascript:void(0)" id="show_loginpopup" class="login before-login">{{i18n "login"}}</a></li>
 
@@ -145,29 +168,6 @@ component: navbar
                     <li class="sp after-login"><a href="https://monaca.mobi/en/account/edit" class="settings"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm">Manage</a></li>
                     <li class="sp after-login"><a href="javascript:void(0)" class="exec-logout">Logout</a></li>
                 {{/is}}
-
-                <li class="dropdown">
-                    <a href="#" class="hidden-xs">
-                        <img src={{i18n "langIcon"}}> {{i18n "fullLang"}}
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li {{#is language "en"}} style="display: none" {{/is}}>
-                            <a href="https://monaca.io/" class="hidden-xs">
-                                <img src="/img/icon/en.png"> English
-                            </a>
-                        </li>
-                        <li {{#is language "ja"}} style="display: none" {{/is}}>
-                            <a href="https://ja.monaca.io/" class="hidden-xs">
-                                <img src="/img/icon/ja.png"> 日本語
-                            </a>
-                        </li>
-                        <li {{#is language "it"}} style="display: none" {{/is}}>
-                            <a href="https://monaca.io/it/" class="hidden-xs">
-                                <img src="/img/icon/it.png"> Italiano
-                            </a>
-                        </li>
-                    </ul>
-                </li>
             </ul>
         </div>
     </div>
