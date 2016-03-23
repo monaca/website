@@ -1,0 +1,73 @@
+---
+title: Monaca - HTML5モバイルアプリ開発プラットフォーム
+class: support
+description: クラウド上のアプリ開発環境。iOS/Android/Windows向けHTML5ハイブリッドアプリに対応。
+---
+
+<section id="support-inquiry" class="subpage">
+  <div class="container">
+    <h1>お問い合わせ</h1>
+    <div id="content">
+      <form class="feedback-form" id="contactForm">
+        <div class="feedback-item feedback-item-radio">
+          <h2>お問い合わせの種類：<span style="color:red"></span></h2>
+          <ul id="question-type-radio"></ul>
+          <p class="form-error" id="question-type-error"></p>
+        </div>
+        <div class="feedback-item">
+          <h2>あなたの情報：</h2>
+          <table>
+            <tr>
+              <td class="label">
+                お名前<span class="required">*</span>
+              </td>
+              <td>
+                <input type="text" name="inquiry[name]" id="name" class="name" />
+                <p class="form-error" id="name-error"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">
+                メールアドレス<span class="required">*</span>
+              </td>
+              <td>
+                <input type="text" name="inquiry[email]" id="email" class="email" />
+                <p class="form-error" id="email-error"></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="feedback-item feedback-text">
+          <h2>お問い合わせ内容：</h2>
+          <table>
+            <tr>
+              <td class="label">件名<span class="required">*</span></td>
+              <td class="form-item">
+                <select name="inquiry[subject]" id="subject"></select>
+                <p class="form-error" id="subject-error"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">対象製品<span class="required">*</span></td>
+              <td class="form-item">
+                <select id="product-type" name="inquiry[product_type]"></select>
+                <p class="form-error" id="product-type-error"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">内容<span class="required">*</span></td>
+              <td>
+                <p class="message-description">お問い合わせ内容を詳細に記述してください。不具合等の報告、技術的な質問は<a href='/support/technical/'>こちらから</a>お問い合わせください。</p>
+                <textarea rows="4" cols="30" name="inquiry[message]" id="message" placeholder="ここに内容を記入してください"></textarea>
+                <p class="form-error" id="message-error"></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="form-footer">
+          <input id="send" name="submit" class="btn-blue submit-btn" type="button" value="送信する"/>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

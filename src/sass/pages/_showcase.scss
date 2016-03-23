@@ -178,7 +178,7 @@ body.showcase {
         -moz-box-sizing: content-box;
         box-sizing: content-box;
         margin: 0 auto;
-        padding: 110px 0px 0;
+        padding: 50px 0px 0;
         text-align: left;
         width: 1080px;
         header {
@@ -222,9 +222,11 @@ body.showcase {
         p {
             color: #666;
             max-height: 100%;
-            /* width: auto; */
             max-width: initial;
             max-width: auto;
+            @media screen and (max-width: $break) {
+                padding: 0 3%;
+            }
         }
         em {
             color: #333;
@@ -349,7 +351,7 @@ body.showcase {
                         position: absolute;
                         left: 0em;
                         top: 0;
-                        
+
                         /*
                         text-indent: -1em;
                         padding-left: -1em;
@@ -505,7 +507,7 @@ body.showcase.jnb {
             margin: 0 0 15px;
             &:nth-of-type(2) {
                 margin-bottom: 0;
-            }   
+            }
         }
     }
     article.main .effect {
@@ -604,7 +606,7 @@ body.showcase.tvasahi {
             margin: 0 650px 15px 0;
             &:nth-of-type(2) {
                 margin-bottom: 0;
-            }   
+            }
         }
     }
     article.main .backstory {
@@ -659,7 +661,7 @@ body.showcase.tokyocalendar {
             margin: 0 650px 15px 0;
             &:nth-of-type(2) {
                 margin-bottom: 0;
-            }   
+            }
         }
     }
     article.main .backstory {
@@ -699,7 +701,7 @@ body.showcase.estcorporation {
             margin: 0 650px 15px 0;
             &:nth-of-type(2) {
                 margin-bottom: 0;
-            }   
+            }
         }
     }
     article.main .backstory {
@@ -746,7 +748,7 @@ body.showcase.fusionnagaike {
             margin: 0 650px 15px 0;
             &:nth-of-type(2) {
                 margin-bottom: 0;
-            }   
+            }
         }
     }
     article.main .backstory {
@@ -793,7 +795,7 @@ body.showcase.nijibox {
             letter-spacing: -0.01em;
             &:nth-of-type(2) {
                 margin-bottom: 0;
-            }   
+            }
         }
     }
     article.main .backstory {
@@ -836,7 +838,7 @@ body.showcase.naganobank {
             margin: 0 650px 15px 0;
             &:nth-of-type(2) {
                 margin-bottom: 0;
-            }   
+            }
         }
     }
     article.main .app-info.backstory-tablet {
@@ -888,7 +890,7 @@ body.showcase.doshisha {
             margin: 0 520px 15px 0;
             &:nth-of-type(2) {
                 margin-bottom: 0;
-            }   
+            }
         }
     }
     article.main .info-cont {
@@ -958,7 +960,7 @@ body.showcase.flexion {
             margin: 0 650px 15px 0;
             &:nth-of-type(2) {
                 margin-bottom: 0;
-            }   
+            }
         }
     }
     article.main .app-info.backstory {
@@ -1011,7 +1013,7 @@ body.showcase.proroutemarumitsu {
             margin: 0 650px 15px 0;
             &:nth-of-type(2) {
                 margin-bottom: 0;
-            }   
+            }
         }
     }
     article.main .backstory {
@@ -1035,6 +1037,153 @@ body.showcase.proroutemarumitsu {
         .name {
             font-weight: 700;
             color: #444;
+        }
+    }
+}
+
+body.showcase {
+    .container {
+        min-width: auto;
+    }
+    #case_add {
+        padding: 0;
+        .error {
+            color: #e5492c;
+            padding-left: 230px;
+            margin-bottom: 20px;
+            @media screen and (max-width: $break-xs) {
+                padding-left: 0;
+                margin-bottom: 0;
+            }
+            @media screen and (max-width: $break) {
+                padding-left: 0;
+                margin-bottom: 0;
+            }
+        }
+        .container {
+            margin: 0 auto 50px auto;
+            width: 720px;
+            min-width: 720px;
+            display: table;
+            box-sizing: border-box;
+            @media screen and (max-width: $break-xs) {
+                min-width: auto;
+                width: 100%;
+            }
+            @media screen and (max-width: $break) {
+                padding: 0 3%;
+                min-width: 100%;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            h1 {
+                border: medium none;
+                color: #2472b3;
+                font-size: 36px;
+                line-height: 36px;
+                margin: 80px 0 50px;
+                padding: 0;
+                text-align: center;
+                @media screen and (max-width: $break) {
+                    font-size: 24px;
+                }
+            }
+            p {
+                line-height: 20px;
+                margin: 0 auto 10px;
+            }
+
+            .form-error {
+              color: #f55b56;
+            }
+            #estimate-form-errors, #unknown-error {
+              margin: 20px 0;
+              padding-left: 230px;
+
+              @media screen and (max-width: $break) {
+                padding-left: 0;
+              }
+            }
+
+            form {
+                table {
+                    .required {
+                        color: #f55b56;
+                        padding-left: 3px;
+                    }
+                    tr {
+                        th {
+                            width: 34.72%;
+                            @media screen and (max-width: $break) {
+                                width: 3%;
+                            }
+                        }
+                        td {
+                            width: 65.27%;
+                            font-size: 11px;
+                            line-height: 1.4;
+                            padding: 0 0 25px;
+                            .btn-black {
+                                line-height: 2px;
+                                padding: 20px 14px;
+                            }
+                            input.wide {
+                                width: 85%;
+                            }
+                            input[type="text"],
+                            input[type="password"],
+                            input[type="email"],
+                            input[type="url"],
+                            textarea {
+                                background: #fff none repeat scroll 0 0;
+                                border: 1px solid #cccccc;
+                                border-radius: 4px;
+                                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+                                color: #666666;
+                                display: inline-block;
+                                font-size: 14px;
+                                margin: -5px 0 2px;
+                                outline: medium none;
+                                padding: 3px;
+                            }
+                            .annotation {
+                                color: #999;
+                                word-break: break-word;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    header.navbar {
+        @media screen and (max-width: $break-xs) {
+            min-width: 0;
+        }
+        @media screen and (max-width: $break) {
+            min-width: 0;
+        }
+    }
+        @media screen and (max-width: $break-xs) {
+            min-width: 0;
+        }
+        @media screen and (max-width: $break) {
+            min-width: 0;
+        }
+    article.main {
+            @media screen and (max-width: $break-xs) {
+                width: auto;
+            }
+            @media screen and (max-width: $break) {
+                width: auto;
+            }
+    section {
+            @media screen and (max-width: $break-xs) {
+                width: auto;
+            }
+            @media screen and (max-width: $break) {
+              width: auto;
+            }
         }
     }
 }
