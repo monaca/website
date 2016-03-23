@@ -905,10 +905,43 @@ html[lang=ja] body.home {
             /*@include background(linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0) 80%, rgba(0,100,200,0.05)));*/
             background-color: #e5e5e5;
         }
+        &[data-index="2"] { //Caravan
+            /*@include background(linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0) 80%, rgba(0,100,200,0.05)));*/
+            background: url(../img/index/bg_keyvisual_repeat.jpg);
+        }
         .carousel-container {
             padding-bottom: percentage(540px/1170px);
             @media screen and (max-width: 1199px) {
                 margin-top: 50px;
+            }
+        }
+        .box-buy {
+            text-align: left;
+            padding: 60px 0 0;
+            position: absolute;
+            top: 45%;
+            left: 11.5%;
+            .btn {
+                padding: 10px 20px;
+                margin: 0 20px 20px 0;
+                min-width: 240px;
+                height: 61px;
+                @media screen and (max-width: 900px) {
+                    font-size: 20px;
+                    height: 61px;
+                    line-height: 59px;
+                    min-width: 220px;
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+            .btn-darkgray {
+                margin: 90px 0 0 10px;
+                font-size: 24px;
+                @media screen and (max-width: 900px) {
+                    margin: 30px 0 0 10px;
+                }
             }
         }
         .box-try {
@@ -935,6 +968,9 @@ html[lang=ja] body.home {
                 }
             }
         }
+    }
+    .sp-keyvisual {
+        margin: 0 0 -10px 0;
     }
     .keyvisual.visible-xs {
         background: url(../img/index/keyvisual_sp.jpg) no-repeat center bottom, url(../img/index/keyvisual_bg.png) repeat-x left bottom;

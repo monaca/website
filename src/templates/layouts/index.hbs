@@ -28,6 +28,7 @@
         }
     </script>
 
+
     <link rel="shortcut icon" href="/img/favicon.ico">
 
     <meta property="og:url" content="{{#is language "ja"}}https://ja.monaca.io/{{else}}https://monaca.io/{{/is}}">
@@ -43,12 +44,17 @@
     <meta name="twitter:image" content="https://monaca.io/img/ogp.png">
     <meta property="twitter:title" content="{{title}}">
     <meta property="twitter:description" content="{{#is language "ja"}}Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。{{else is language "en"}}Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services. {{else}}Monaca rende molto più semplice lo sviluppo di applicazioni mobile ibride basate su PhoneGap/Cordova grazie ai suoi strumenti di sviluppo e servizi cloud-powered.{{/is}}">
+
+    <script src="https://use.typekit.net/tky7gag.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 </head>
 <body class="{{class}}">
 
     {{> header }}
 
     <div class="main" role="main">
+        {{> loginPopup }}
+        {{> signupPopup }}
         {{> notificationHeader }}
         {{> body }}
 
@@ -60,8 +66,25 @@
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/all.js"></script>
     <script>
-        window.LANG = "{{language}}";
+
+        window.MONACA_API_URL = "{{site.monaca_api}}";
+        window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
+        {{#is language "ja"}}
+            window.LANG = "ja";
+        {{else}}
+            window.LANG = "en";
+        {{/is}}
         window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
+    </script>
+    {{#is language "ja"}}
+        <script src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
+    {{else}}
+        <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
+    {{/is}}
+    <script>
+      if (!monacaApi.executedLoginCheck) {
+        monacaApi.loginCheck({});
+      }
     </script>
 </body>
 </html>

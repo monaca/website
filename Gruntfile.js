@@ -21,17 +21,29 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     var isWindows = /^win/.test(process.platform);
-
-    grunt.initConfig({
-
-        config: {
+  
+    var config = {
             src: 'src',
             dist: 'dist/en',
             distJa: 'dist/ja',
             distEn: 'dist/en'
-        },
+        };
 
-        sass: {
+    // Load site.yml
+    if (grunt.option('site-config')) {
+      var site_yaml = grunt.file.readYAML(grunt.option('site-config'));
+    } else {
+      var site_yaml = grunt.file.readYAML(config.src + '/data/site.yml');
+    }
+
+    // Display information
+    grunt.log.writeln('Title:        ' + site_yaml.title);
+    grunt.log.writeln('API Endpoint: ' + site_yaml.monaca_api);
+
+    grunt.initConfig({
+        config: config,
+        
+	sass: {
             options: {
                 outputStyle: "compressed",
                 sourceMap: true,
@@ -95,8 +107,14 @@ module.exports = function(grunt) {
                     '<%= config.src %>/js/**/*.js'
                 ],
                 dest: '<%= config.dist %>/js/all.js',
-                separator: ";"
-            }
+                separator: ";",
+
+            },
+            // options : {
+            //   process : function(content,path) {
+            //     return grunt.template.process(content,{ data : site_yaml } );
+            //   } 
+            // }
         },
 
         uglify: {
@@ -153,7 +171,8 @@ module.exports = function(grunt) {
             options: {
                 flatten: true,
                 layout: '<%= config.src %>/templates/layouts/default.hbs',
-                data: '<%= config.src %>/data/**/*.{json,yml}',
+                data: ['<%= config.src %>/data/i18n/*.{json,yml}'],
+                site: site_yaml,
                 partials: '<%= config.src %>/templates/partials/*.hbs',
                 plugins: ['assemble-middleware-sitemap'],
                 i18n: {
