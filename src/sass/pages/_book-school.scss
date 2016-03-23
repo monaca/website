@@ -712,4 +712,20 @@ body.book-school {
     .common {
         margin: 90px auto 0 auto;
     }
+    .container.box-try {
+        padding: 0;
+        @media screen and (max-width: $break) {
+            a{
+                width: 90%;
+                &:first-child {
+                margin-bottom: 20px;
+                }
+            }
+        }
+        @media screen and (max-width: $break-xs) {
+            a {
+                font-size: 16px;
+            }
+        }
+    }
 }
