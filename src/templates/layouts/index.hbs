@@ -10,21 +10,24 @@
     {{#is language "ja"}}<meta name="keywords" content="Monaca,HTML5,Cordova,PhoneGap,MEAP">{{/is}}
 
     <script>
-        var cb = function(href) {
-            var l = document.createElement("link"); l.rel = "stylesheet";
-            l.href = href;
-            var h = document.getElementsByTagName("head")[0]; h.appendChild(l);
-        };
+        var loadResources = function() {
+            var res = ["/css/bootstrap.min.css", "/css/style.css", "/css/codemirror.css", "//fonts.googleapis.com/css?family=Open+Sans:400,700"];
+            var headElement = document.getElementsByTagName("head")[0];
+            var l = document.createElement("link");
 
-        cb("/css/bootstrap.min.css");
-        cb("/css/style.css");
-        cb("//fonts.googleapis.com/css?family=Open+Sans:400,700");
+            for (var i = 0; i < res.length; i++) {
+                var linkElement = document.createElement("link");
+                linkElement.rel = "stylesheet";
+                linkElement.href = res[i];
+                headElement.appendChild(linkElement);
+            }
+        };
 
         var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
         if (raf) {
-            raf(cb);
+            raf(loadResources);
         } else {
-            window.addEventListener('load', cb);
+            window.addEventListener('load', loadResources);
         }
     </script>
 
