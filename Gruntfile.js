@@ -415,11 +415,13 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: '<%= config.distEn %>/css/',
                 src: ['**/*.css', '!**/*.min.css'],
+                dest: '<%= config.distEn %>/css/',
                 ext: '.css'
             }, {
                 expand: true,
                 cwd: '<%= config.distJa %>/css/',
                 src: ['**/*.css', '!**/*.min.css'],
+                dest: '<%= config.distJa %>/css/',
                 ext: '.css'
             }]
           }
