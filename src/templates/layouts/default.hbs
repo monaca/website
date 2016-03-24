@@ -107,8 +107,16 @@
         <meta name="twitter:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
     {{/compare}}
 
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/all.js"></script>
+
     <script src="https://use.typekit.net/tky7gag.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>
+        if (location.href.indexOf('/contest/') > 0) {
+            try{Typekit.load({ async: true });}catch(e){}
+        }
+    </script>
 </head>
 
 <body class="{{class}}">
@@ -124,12 +132,6 @@
     </article>
 
     {{> footer }}
-
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/all.js"></script>
-    <script src="/js/jquery.form.min.js"></script>
-    <script src="/js/_signuppopup.js"></script>
 
     <script>
       window.MONACA_API_URL = "{{site.monaca_api}}";
