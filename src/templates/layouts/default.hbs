@@ -39,21 +39,24 @@
     {{/compare}}
 
     <script>
-        var cb = function(href) {
-            var l = document.createElement("link"); l.rel = "stylesheet";
-            l.href = href;
-            var h = document.getElementsByTagName("head")[0]; h.appendChild(l);
-        };
+        var loadResources = function() {
+            var res = ["/css/bootstrap.min.css", "/css/style.css", "/css/codemirror.css", "//fonts.googleapis.com/css?family=Open+Sans:400,700"];
+            var headElement = document.getElementsByTagName("head")[0];
+            var l = document.createElement("link");
 
-        cb("/css/bootstrap.min.css");
-        cb("/css/style.css");
-        cb("//fonts.googleapis.com/css?family=Open+Sans:400,700");
+            for (var i = 0; i < res.length; i++) {
+                var linkElement = document.createElement("link");
+                linkElement.rel = "stylesheet";
+                linkElement.href = res[i];
+                headElement.appendChild(linkElement);
+            }
+        };
 
         var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
         if (raf) {
-            raf(cb);
+            raf(loadResources);
         } else {
-            window.addEventListener('load', cb);
+            window.addEventListener('load', loadResources);
         }
     </script>
 
@@ -134,12 +137,20 @@
     {{> footer }}
 
     <script>
-      window.MONACA_API_URL = "{{site.monaca_api}}";
-      window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
-      window.LANG = "{{language}}";
-      window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
+        window.MONACA_API_URL = "{{site.monaca_api}}";
+        window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
+        {{#is language "ja"}}
+            window.LANG = "ja";
+        {{else}}
+            window.LANG = "en";
+        {{/is}}
+        window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
     </script>
-    <script src="{{site.monaca_api}}/{{language}}/login_io?callback=monacaApi.loginCheck"></script>
+    {{#is language "ja"}}
+        <script src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
+    {{else}}
+        <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
+    {{/is}}
     <script>
       if (!monacaApi.executedLoginCheck) {
         monacaApi.loginCheck({});
