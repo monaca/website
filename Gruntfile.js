@@ -327,7 +327,7 @@ module.exports = function(grunt) {
                 downloadConcurrency: 5,
                 gzipRename: 'ext',
                 params: {
-                    CacheControl: 'max-age=3600'
+                    CacheControl: 'max-age=300'
                 }
             },
             ja: {
