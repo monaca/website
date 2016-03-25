@@ -479,7 +479,7 @@ body.showcase.hitachitool {
         }
     }
 }
-body.jnb {
+body.showcase.jnb {
     article.main header {
         background-image: url(/img/jnb/icn_jnb_ja.png);
 
@@ -488,11 +488,8 @@ body.jnb {
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 70%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(40%,rgba(0,0,0,0.7)), color-stop(70%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
-
     }
     article.main {
         .info dl dt {
@@ -525,7 +522,7 @@ body.jnb {
         }
     }
 }
-body.proto {
+body.showcase.proto {
     article.main header {
         background-image: url(/img/proto/icn_proto_ja.png);
         em {
@@ -542,10 +539,8 @@ body.proto {
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0) 70%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(40%,rgba(0,0,0,0.7)), color-stop(70%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 
     }
     article.main .info .info-cont h1 {
@@ -583,7 +578,7 @@ body.proto {
         }
     }
 }
-body.tvasahi {
+body.showcase.tvasahi {
     article.main header {
         background-image: url(/img/tvasahi/icn_tvasahi_ja.png);
 
@@ -592,10 +587,8 @@ body.tvasahi {
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(40%,rgba(0,0,0,0.7)), color-stop(70%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 
     }
     article.main .app-info {
@@ -638,7 +631,7 @@ body.tvasahi {
         }
     }
 }
-body.tokyocalendar {
+body.showcase.tokyocalendar {
     article.main header {
         background-image: url(/img/tokyocalendar/icn_tokyo_calendar_ja.png);
 
@@ -648,10 +641,8 @@ body.tokyocalendar {
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(40%,rgba(0,0,0,0.7)), color-stop(70%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
     }
     article.main .app-info {
         padding: 90px 0 40px;
@@ -678,7 +669,7 @@ body.tokyocalendar {
         }
     }
 }
-body.estcorporation {
+body.showcase.estcorporation {
     article.main header {
         background-image: url(/img/estcorporation/icn_est_corporation_ja.png);
 
@@ -688,10 +679,8 @@ body.estcorporation {
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(40%,rgba(0,0,0,0.7)), color-stop(70%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
     }
     article.main .app-info {
         padding: 90px 0 40px;
@@ -721,7 +710,7 @@ body.estcorporation {
         }
     }
 }
-body.fusionnagaike {
+body.showcase.fusionnagaike {
     article.main header {
         background-image: url(/img/fusionnagaike/icn_fusion_ja.png);
         padding-left: 255px;
@@ -730,10 +719,8 @@ body.fusionnagaike {
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(40%,rgba(0,0,0,0.7)), color-stop(70%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
     }
     article.main {
         .info dl dt {
@@ -768,7 +755,7 @@ body.fusionnagaike {
         }
     }
 }
-body.nijibox {
+body.showcase.nijibox {
     article.main header {
         background-image: url(/img/nijibox/icn_nijibox_ja.png);
     }
@@ -776,10 +763,8 @@ body.nijibox {
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(40%,rgba(0,0,0,0.7)), color-stop(70%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
     }
     article.main {
         .info dl dt {
@@ -815,7 +800,7 @@ body.nijibox {
         }
     }
 }
-body.naganobank {
+body.showcase.naganobank {
     article.main header {
         background-image: url(/img/naganobank/icn_app_n_tab_ja.png);
 
@@ -825,10 +810,8 @@ body.naganobank {
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(40%,rgba(0,0,0,0.7)), color-stop(70%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
     }
     article.main .app-info {
         padding: 90px 0 40px;
@@ -862,7 +845,7 @@ body.naganobank {
         }
     }
 }
-body.doshisha {
+body.showcase.doshisha {
     article.main header {
         background-image: url(/img/doshisha/icn_app_doshisha_ja.png);
 
@@ -872,10 +855,8 @@ body.doshisha {
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(40%,rgba(0,0,0,0.7)), color-stop(70%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
     }
     article.main {
         .info dl dt {
@@ -931,7 +912,7 @@ body.doshisha {
         }
     }
 }
-body.flexion {
+body.showcase.flexion {
     article.main header {
         background-image: url(/img/flexion/icn_app_teamon_ja.png);
 
@@ -983,7 +964,7 @@ body.flexion {
         }
     }
 }
-body.proroutemarumitsu {
+body.showcase.proroutemarumitsu {
     article.main header {
         background-image: url(/img/proroutemarumitsu/icn_app_proroute_ja.png);
     }
@@ -991,10 +972,8 @@ body.proroutemarumitsu {
         background: -moz-linear-gradient(left,  rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.4) 70%, rgba(0,0,0,0) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.7)), color-stop(40%,rgba(0,0,0,0.7)), color-stop(70%,rgba(0,0,0,0.4)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(left,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* IE10+ */
         background: linear-gradient(to right,  rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 40%,rgba(0,0,0,0.4) 70%,rgba(0,0,0,0) 100%); /* W3C */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
     }
     article.main .info .info-cont {
         h1 img {
@@ -1041,7 +1020,7 @@ body.proroutemarumitsu {
     }
 }
 
-body.showcase {
+body.showcase.showcase {
     .container {
         min-width: auto;
     }
