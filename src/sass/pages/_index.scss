@@ -941,8 +941,11 @@ html[lang=ja] body.home {
             }
         }
         .box-buy{
-            left: 13%;
+            left: 15%;
             top: 60%;
+            @media screen and (max-width: 900px) {
+              top: 56%;
+            }
         }
     }
     .sp-keyvisual {
