@@ -1,5 +1,7 @@
 {
     "lang": "ja",
+    "fullLang": "日本語",
+    "langIcon": "/img/icon/ja.png",
     "products": "製品",
     "monacaCloud": "Monacaクラウド",
     "monacaEnterprise": "Monacaエンタープライズ",

@@ -192,7 +192,7 @@ module.exports = function(grunt) {
                 partials: '<%= config.src %>/templates/partials/*.hbs',
                 plugins: ['assemble-middleware-sitemap'],
                 i18n: {
-                    languages: ["en", "ja"],
+                    languages: ["en", "ja", "it"],
                     templates: ["<%= config.src %>/templates/pages/*.hbs"],
                 },
                 sitemap: {
@@ -215,7 +215,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "<%= config.src %>/templates/pages/",
-                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs'],
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.it.hbs'],
                     dest: '<%= config.dist %>/'
                 }, {
                     expand: true,
@@ -240,7 +240,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "<%= config.src %>/templates/pages/",
-                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs'],
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.it.hbs'],
                     dest: '<%= config.distJa %>/'
                 }, {
                     expand: true,
@@ -251,7 +251,21 @@ module.exports = function(grunt) {
                         return dest + src.replace('.ja.hbs', '.html');
                     }
                 }]
-            }
+            },
+            it: {
+                options: {
+                    language: "it"
+                },
+                files: [{
+                    expand: true,
+                    cwd: "<%= config.src %>/templates/pages/",
+                    src: 'index.it.hbs',
+                    dest: '<%= config.dist %>/it/',
+                    rename: function(dest, src) {
+                        return dest + src.replace('.it.hbs', '.html');
+                    }
+                }]
+            },
         },
 
         copy: {
@@ -447,7 +461,7 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-assemble');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
