@@ -291,6 +291,41 @@ section.ninja {
   .contactus {
     text-align: center;
   }
+
+  .btn-area {
+    text-align: center;
+    margin-top: 50px;
+    .btn-big {
+      text-align: center;
+      width: 180px;
+      height: 56px;
+      line-height: 56px;
+      font-family: "ff-good-headline-web-pro-con",sans-serif;
+      font-weight: 900;
+      font-style: italic;
+      font-size: 26px;
+      letter-spacing: 0.03em;
+    }
+    .btn-green {
+      background-color: #8bcc37;
+      border: 1px solid #8bcc37;
+      &:hover {
+        background-color: #578022;
+        border: 1px solid #578022;
+      }
+    }
+  }
+  button.btn-blue, .btn-blue {
+    &:hover {
+      background-color: #1c3966;
+      border: 1px solid #1c3966;
+      transition: .4s ease-in-out;
+      -webkit-transition: .4s ease-in-out;
+      -moz-transition: .4s ease-in-out;
+      -ms-transition: .4s ease-in-out;
+    }
+  }
+
 }
 
 #ninja-submit {
@@ -420,72 +455,72 @@ section.ninja {
     padding-top: 58px;
   }
   h2 {
-   font-family: "ff-good-headline-web-pro-con",sans-serif;
-   color: #000;
-   font-size: 70px;
-   font-weight: 900;
-   font-style: italic;
-   line-height: 70px;
- }
- .kanmuri {
-  background: url(/img/ninja/title_ninja.png) no-repeat center top;
-  padding-top: 123px;
-  margin-bottom: 45px;
-}
-p {
-  margin: 0 140px;
-  color: #666666;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.8;
-}
-.results-wrapper {
-  @extend .keyvisual;
-  margin-top: 70px;
-  padding-top: 0;
-  .medal-winner {
+    font-family: "ff-good-headline-web-pro-con",sans-serif;
+    color: #000;
+    font-size: 70px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 70px;
+  }
+  .kanmuri {
+    background: url(/img/ninja/title_ninja.png) no-repeat center top;
+    padding-top: 123px;
     margin-bottom: 45px;
   }
-  .mocdal-excellence {
-    margin-bottom: 25px;
+  p {
+    margin: 0 140px;
+    color: #666666;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8;
   }
-  .main-visual {
-    margin:0 0 50px -38px;
-  }
-  .title {
-    margin: 0 0 30px 214px;
-    img {
-      float: left;
+  .results-wrapper {
+    @extend .keyvisual;
+    margin-top: 70px;
+    padding-top: 0;
+    .medal-winner {
+      margin-bottom: 45px;
     }
-    h3 {
-      font-family: 'Open Sans Condensed', sans-serif;
-      text-align: left;
-      font-size: 50px;
-      line-height: 1em;
-      margin: 0 0 10px 120px;
-      padding-top: 4px;
-      color: #2472b3;
+    .mocdal-excellence {
+      margin-bottom: 25px;
     }
-    h4 {
-      font-family: 'Open Sans', sans-serif;
-      color:  #888;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 1;
-      text-align: left;
-      margin-left: 122px;
-      span {
-        font-weight: 400;
+    .main-visual {
+      margin:0 0 50px -38px;
+    }
+    .title {
+      margin: 0 0 30px 214px;
+      img {
+        float: left;
+      }
+      h3 {
+        font-family: 'Open Sans Condensed', sans-serif;
+        text-align: left;
+        font-size: 50px;
+        line-height: 1em;
+        margin: 0 0 10px 120px;
+        padding-top: 4px;
+        color: #2472b3;
+      }
+      h4 {
+        font-family: 'Open Sans', sans-serif;
+        color:  #888;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1;
+        text-align: left;
+        margin-left: 122px;
+        span {
+          font-weight: 400;
+        }
+      }
+    }
+    .announce {
+      margin: 0 0 100px 0;
+      img {
+        margin-bottom: 40px;
       }
     }
   }
-  .announce {
-    margin: 0 0 100px 0;
-    img {
-      margin-bottom: 40px;
-    }
-  }
-}
 }
 
 #ninja-submit-success {
@@ -551,39 +586,6 @@ p {
 }
 .closed-info-criteria {
   margin: -50px 0 -50px -52px;
-}
-.btn-area {
-  text-align: center;
-  margin-top: 50px;
-  .btn-big {
-    text-align: center;
-    width: 180px;
-    height: 56px;
-    line-height: 56px;
-    font-family: "ff-good-headline-web-pro-con",sans-serif;
-    font-weight: 900;
-    font-style: italic;
-    font-size: 26px;
-    letter-spacing: 0.03em;
-  }
-  .btn-green {
-    background-color: #8bcc37;
-    border: 1px solid #8bcc37;
-    &:hover {
-      background-color: #578022;
-      border: 1px solid #578022;
-    }
-  }
-}
-button.btn-blue, .btn-blue {
-  &:hover {
-    background-color: #1c3966;
-    border: 1px solid #1c3966;
-    transition: .4s ease-in-out;
-    -webkit-transition: .4s ease-in-out;
-    -moz-transition: .4s ease-in-out;
-    -ms-transition: .4s ease-in-out;
-  }
 }
 
 .fb-like, .twitter-share-button {
