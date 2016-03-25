@@ -113,28 +113,30 @@ component: navbar
                     </li>
                 {{/is}}
 
-                <li class="dropdown">
-                    <a href="#" class="hidden-xs">
-                        <img src={{i18n "langIcon"}}> {{i18n "fullLang"}}
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li {{#is language "en"}} style="display: none" {{/is}}>
-                            <a href="https://monaca.io/" class="hidden-xs">
-                                <img src="/img/icon/en.png"> English
-                            </a>
-                        </li>
-                        <li {{#is language "ja"}} style="display: none" {{/is}}>
-                            <a href="https://ja.monaca.io/" class="hidden-xs">
-                                <img src="/img/icon/ja.png"> 日本語
-                            </a>
-                        </li>
-                        <li {{#is language "it"}} style="display: none" {{/is}}>
-                            <a href="https://monaca.io/it/" class="hidden-xs">
-                                <img src="/img/icon/it.png"> Italiano
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+                {{#is class "home"}}
+                    <li class="dropdown">
+                        <a href="#" class="hidden-xs">
+                            <img src={{i18n "langIcon"}}> {{i18n "fullLang"}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li {{#is language "en"}} style="display: none" {{/is}}>
+                                <a href="https://monaca.io/" class="hidden-xs">
+                                    <img src="/img/icon/en.png"> English
+                                </a>
+                            </li>
+                            <li {{#is language "ja"}} style="display: none" {{/is}}>
+                                <a href="https://ja.monaca.io/" class="hidden-xs">
+                                    <img src="/img/icon/ja.png"> 日本語
+                                </a>
+                            </li>
+                            <li {{#is language "it"}} style="display: none" {{/is}}>
+                                <a href="https://monaca.io/it/" class="hidden-xs">
+                                    <img src="/img/icon/it.png"> Italiano
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                {{/is}}
 
                 <li id="show_signuppopup_li"><a href="javascript:void(0)" id="show_signuppopup" class="login before-login">{{i18n "signup"}}</a></li>
                 <li id="show_loginpopup_li"><a href="javascript:void(0)" id="show_loginpopup" class="login before-login">{{i18n "login"}}</a></li>
