@@ -143,7 +143,7 @@ header.navbar {
         }
         > li > a {
             color: #ffffff;
-            padding: 16px 13px 14px;
+            padding: 16px 10px 14px;
             -webkit-font-smoothing: antialiased;
             &:hover {
                 color: #7cdaff;
@@ -269,13 +269,14 @@ header.navbar {
     html[lang=en] {
         .navbar-nav > li > a {
             @media screen and (max-width: 860px) {
-                padding-left: 10px;
-                padding-right: 10px;
+                font-size: 14px;
+                padding-left: 8px;
+                padding-right: 8px;
             }
         }
         .navbar-nav {
             .nav-title {
-                 @media screen and (max-width: 860px) {
+                @media screen and (max-width: 860px) {
                     padding-left: 10px;
                     padding-right: 10px;
                 }
@@ -286,115 +287,95 @@ header.navbar {
             }
         }
     }
-    html[lang=ja] {
-        .navbar-nav > li > a {
-            @media screen and (max-width: 1170px) {
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-            @media screen and (max-width: 1070px) {
-                font-size: 13px;
-                .opt {
-                    display: none;
-                }
-            }
-            @media screen and (max-width: 960px) {
-                font-size: 12px;
-            }
-            @media screen and (max-width: 900px) {
-                padding-left: 4px;
-                padding-right: 4px;
-            }
-            @media screen and (max-width: 820px) {
-                padding-left: 2px;
-                padding-right: 2px;
+}
+html[lang=ja] {
+    .navbar-nav > li > a {
+        @media screen and (max-width: $width) {
+            font-size: 12px;
+            padding: 16px 10px 14px;
+        }
+        @media screen and (max-width: 1000px) {
+            font-size: 11px;
+            padding: 16px 6px 14px;
+        }
+        @media screen and (max-width: 860px) {
+            font-size: 10px;
+            padding: 16px 4px 14px;
+        }
+        @media screen and (max-width: 1170px) {
+            //padding-left: 8px;
+            //padding-right: 8px;
+        }
+        @media screen and (max-width: 1070px) {
+            //font-size: 13px;
+            .opt {
+                display: none;
             }
         }
-    }
-
-html[lang=ja] {
-    .navbar-nav {
-        .nav-title {
-            @media screen and (max-width: 1170px) {
-                padding-left: 8px;
-                padding-right: 8px;
-            }
-            @media screen and (max-width: 1070px) {
-                font-size: 13px;
-                .opt {
-                    display: none;
-                }
-            }
-            @media screen and (max-width: 960px) {
-                font-size: 12px;
-            }
-            @media screen and (max-width: 900px) {
-                padding-left: 4px;
-                padding-right: 4px;
-            }
-            @media screen and (max-width: 820px) {
-                padding-left: 2px;
-                padding-right: 2px;
-                }
-            }
+        @media screen and (max-width: 960px) {
+            //font-size: 12px;
+        }
+        @media screen and (max-width: 900px) {
+            //padding-left: 4px;
+            //padding-right: 4px;
+        }
+        @media screen and (max-width: 820px) {
+            //padding-left: 2px;
+            //padding-right: 2px;
         }
     }
 }
 
-
-
-
 #language-switch-container {
-  z-index: 9;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: rgba(0, 0, 0, 0.1);
+    z-index: 9;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.1);
 
-  #language-switch {
-    width: 536px;
-    margin: 200px auto 0;
-    padding: 32px;
-    color: white;
-    background-color: #3c4758;
-    z-index: 10;
-    font-size: 20px;
-    @media screen and (max-width: $break) {
-      width: 92%;
-      box-sizing: border-box;
-      padding: 32px percentage(30px/640px);
+    #language-switch {
+        width: 536px;
+        margin: 200px auto 0;
+        padding: 32px;
+        color: white;
+        background-color: #3c4758;
+        z-index: 10;
+        font-size: 20px;
+        @media screen and (max-width: $break) {
+            width: 92%;
+            box-sizing: border-box;
+            padding: 32px percentage(30px/640px);
+        }
     }
-  }
 
-  a.btn-lang-switch {
-    @extend %flat-btn;
-    color: white;
-    background-color: #468fff;
-    border: none;
-    font-weight: 600;
-    height: 45px;
-    font-size: 20px;
-    line-height: 46px;
-    &:hover {
-        opacity: 0.8;
+    a.btn-lang-switch {
+        @extend %flat-btn;
+        color: white;
+        background-color: #468fff;
+        border: none;
+        font-weight: 600;
+        height: 45px;
+        font-size: 20px;
+        line-height: 46px;
+        &:hover {
+            opacity: 0.8;
+        }
     }
-  }
 
-  p {
-    margin: 0 0 32px 0;
-  }
+    p {
+        margin: 0 0 32px 0;
+    }
 
-  p.language-switch-button-container {
-    margin: 10px 0;
-    text-align: center;
-  }
-
-  .close {
-    float: right;
-    margin-top: -8px;
-    margin-right: -8px;
-  }
+    p.language-switch-button-container {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .close {
+        float: right;
+        margin-top: -8px;
+        margin-right: -8px;
+    }
 }
 
