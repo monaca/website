@@ -94,12 +94,11 @@ body.academic {
           &:last-child {
             border-bottom: none;
           }
-          &.features-block01 {
-            margin-top: 42px;
-          }
 
          &.features-block02 {
-            margin-top: 22px;
+            img{
+              margin-left: 13px;
+            }
 
             p {
               width: 377px;
@@ -107,20 +106,28 @@ body.academic {
           }
 
           &.features-block03 {
-            margin-top: 42px;
-            padding-bottom: 58px;
-
             img {
               margin-left: 5px;
             }
           }
 
           &.features-block04 {
-            padding-bottom: 56px;
+            img{
+              margin-left: 25px;
+            }
+          }
+
+          &.features-block05{
+            img{
+              margin-left: 5px;
+            }
           }
 
           .feature-cont {
             text-align: left;
+            display: table-cell;
+            vertical-align: middle;
+            max-width: 387px;
           }
           .feature-cont h2 {
             font-weight: normal;
@@ -134,19 +141,16 @@ body.academic {
           }
           .feature-cont.cont04 {
             width: 410px;
-            padding-top: 28px;
-          }
-
-          &.imgleft img {
-            float: left;
           }
 
           &.imgleft .feature-cont {
-            float: right;
             width: 370px;
           }
-          &.imgright img {
-            float: right;
+
+          .thumb{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: left;
           }
         }
       }
@@ -191,7 +195,7 @@ body.academic {
           }
         }
         ul.shocase-list-block {
-          margin-left: 71px;
+          margin-left: 167.5px;
           margin-top: 20px;
           margin-bottom: 20px;
           li {
