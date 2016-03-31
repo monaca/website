@@ -21,7 +21,7 @@ module.exports = function(grunt) {
     require('load-grunt-tasks')(grunt);
 
     var isWindows = /^win/.test(process.platform);
-  
+
     var config = {
             src: 'src',
             dist: 'dist/en',
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         config: config,
-        
+
 	sass: {
             options: {
                 outputStyle: "compressed",
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
             // options : {
             //   process : function(content,path) {
             //     return grunt.template.process(content,{ data : site_yaml } );
-            //   } 
+            //   }
             // }
         },
 
@@ -192,7 +192,7 @@ module.exports = function(grunt) {
                 partials: '<%= config.src %>/templates/partials/*.hbs',
                 plugins: ['assemble-middleware-sitemap'],
                 i18n: {
-                    languages: ["en", "ja", "it"],
+                    languages: ["en", "ja", "it", "de"],
                     templates: ["<%= config.src %>/templates/pages/*.hbs"],
                 },
                 sitemap: {
@@ -215,7 +215,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "<%= config.src %>/templates/pages/",
-                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.it.hbs'],
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.it.hbs', '!**/*.de.hbs'],
                     dest: '<%= config.dist %>/'
                 }, {
                     expand: true,
@@ -240,7 +240,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "<%= config.src %>/templates/pages/",
-                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.it.hbs'],
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.it.hbs', '!**/*.de.hbs'],
                     dest: '<%= config.distJa %>/'
                 }, {
                     expand: true,
@@ -266,6 +266,20 @@ module.exports = function(grunt) {
                     }
                 }]
             },
+            de: {
+                options: {
+                    language: "de"
+                },
+                files: [{
+                    expand: true,
+                    cwd: "<%= config.src %>/templates/pages/",
+                    src: 'index.de.hbs',
+                    dest: '<%= config.dist %>/de/',
+                    rename: function(dest, src) {
+                        return dest + src.replace('.de.hbs', '.html');
+                    }
+                }]
+            }
         },
 
         copy: {
