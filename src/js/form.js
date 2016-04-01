@@ -71,8 +71,12 @@ $(function() {
       this.resetError();
       $('#' + html_id).html('');
 
+      var exists_list = {};
       for (var key in data) {
-        $('#' + html_id).append("- " + data[key] + "<br />");
+        if (!exists_list[data[key]]) {
+          $('#' + html_id).append("- " + data[key] + "<br />");
+        }
+        exists_list[data[key]] = true;
       }
       $('#' + html_id).css('display', 'block');
       location.href = '#';
