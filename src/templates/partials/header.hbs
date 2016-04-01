@@ -30,16 +30,12 @@ component: navbar
                 </li>
 
                 {{#is language "ja"}}
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">料金</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/prices.html">ご利用料金</a></li>
-                            <li><a href="https://monaca.mobi/ja/pricing">Monacaクラウド・プラン比較</a></li>
-                        </ul>
+                    <li>
+                        <a href="/pricing.html">料金</a>
                     </li>
                 {{else}}
                     <li>
-                        <a href="https://monaca.mobi/en/pricing">Pricing</a>
+                        <a href="/pricing.html">{{i18n "pricing"}}</a>
                     </li>
                 {{/is}}
 
@@ -54,12 +50,13 @@ component: navbar
                     </li>
                 {{else}}
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources</a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{i18n "resources"}}</a>
                         <ul class="dropdown-menu">
-                            <li><a href="http://monaca.mobi/en/headline">Updates</a></li>
+                            <li><a href="/headline/">Updates</a></li>
                             <li><a href="http://docs.monaca.mobi/en/" target="_blank">Docs <i class="glyphicon glyphicon-new-window">&nbsp;</i></a></li>
-                            <li><a href="http://monaca.mobi/en/showcase">Showcase</a></li>
+                            <li><a href="/great-apps.html">Showcase</a></li>
                             <li><a href="https://community.onsen.io/">Forum</a></li>
+                            <li><a href="/product-partner/">Partners</a></li>
                         </ul>
                     </li>
                     <li>
@@ -73,18 +70,16 @@ component: navbar
                         <ul class="dropdown-menu">
                             <li><a href="/dev-support.html">サポート・サービス概要</a></li>
                             <li><a href="/service/training.html">トレーニング</a></li>
-                            <li><a href="/service/index.html">サポート受付</a></li>
                             <li><a href="/book/support/">Monaca公式ガイドブック</a></li>
                             <li><a href="/book/001/">書籍「Monacaで学ぶはじめてのプログラミング」</a></li>
                             <li><a href="/development.html">アプリ開発依頼</a></li>
-                            <li><a href="/logos.html">ロゴの利用について</a></li>
                         </ul>
                     </li>
                 {{else}}
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Service</span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{i18n "services"}}</a>
                         <ul class="dropdown-menu">
-                            <li><a href="/service/index.html">Support and Service</a></li>
+                            <li><a href="/service/index.html">{{i18n "support"}} {{i18n "andServices"}}</a></li>
                             <li><a href="/logos.html">Logo Guideline</a></li>
                         </ul>
                     </li>
@@ -94,8 +89,8 @@ component: navbar
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">活用事例</a>
                         <ul class="dropdown-menu">
-                            <li><a href="http://monaca.mobi/ja/showcase">アプリ事例</a></li>
-                            <li><a href="/showcase/index.html">導入事例</a></li>
+                            <li><a href="/great-apps.html">アプリ事例</a></li>
+                            <li><a href="/showcase/">導入事例</a></li>
                         </ul>
                     </li>
                     <li><a href="http://docs.monaca.mobi/" target="_blank">ドキュメント</a></li>
@@ -103,28 +98,79 @@ component: navbar
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">お知らせ</a>
                         <ul class="dropdown-menu">
                             <li><a href="http://blog.asial.co.jp/category/21" target="_brank">ブログ <i class="glyphicon glyphicon-new-window"></i></a></li>
-                            <li><a href="http://monaca.mobi/ja/headline">ニュース・更新情報</a></li>
-                            <li><a href="http://monaca.mobi/ja/headline/fault">障害・不具合情報</a></li>
+                            <li><a href="/headline/">ニュース・更新情報</a></li>
+                            <li><a href="/headline/fault.html">障害・不具合情報</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">お問い合わせ</a>
                         <ul class="dropdown-menu">
                             <li><a href="/service/index.html">サポート受付</a></li>
-                            <li><a href="https://monaca.mobi/ja/support/inquiry">お問い合わせ</a></li>
-                            <li><a href="/development.html">アプリ開発依頼</a></li>
+                            <li><a href="/support/inquiry.html">お問い合わせ</a></li>
+                            <li><a href="http://ja.stackoverflow.com/questions/tagged/monaca" target="_brank">コミュニティ <i class="glyphicon glyphicon-new-window"></i></a></li>
+                            <li><a href="/logos.html">ロゴの利用について</a></li>
                             <li><a href="/careers.html">採用情報</a></li>
                         </ul>
                     </li>
                 {{/is}}
 
-                <li><a href="{{i18n "urlSignup"}}" class="login">{{i18n "signup"}}</a></li>
-                <li><a href="{{i18n "urlLogin"}}" class="login">{{i18n "login"}}</a></li>
-
-                {{#is language "en"}}
-                    <li><a href="https://ja.monaca.io/" class="hidden-xs">日本語</a></li>
+                {{#is class "home"}}
+                    <li class="dropdown">
+                        <a href="#" class="hidden-xs">
+                            <img src={{i18n "langIcon"}}> {{i18n "fullLang"}}
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li {{#is language "en"}} style="display: none" {{/is}}>
+                                <a href="https://monaca.io/" class="hidden-xs">
+                                    <img src="/img/icon/en.png"> English
+                                </a>
+                            </li>
+                            <li {{#is language "ja"}} style="display: none" {{/is}}>
+                                <a href="https://ja.monaca.io/" class="hidden-xs">
+                                    <img src="/img/icon/ja.png"> 日本語
+                                </a>
+                            </li>
+                            <li {{#is language "it"}} style="display: none" {{/is}}>
+                                <a href="https://monaca.io/it/" class="hidden-xs">
+                                    <img src="/img/icon/it.png"> Italiano
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 {{/is}}
 
+                <li id="show_signuppopup_li"><a href="javascript:void(0)" id="show_signuppopup" class="login before-login">{{i18n "signup"}}</a></li>
+                <li id="show_loginpopup_li"><a href="javascript:void(0)" id="show_loginpopup" class="login before-login">{{i18n "login"}}</a></li>
+
+                {{#is language "ja"}}
+                    <li class="nav-dashboard pc after-login">
+                    <a href="javascript:void(0)" class="nav-title dashboard go-to-dashboard">ダッシュボード</a>
+                    </li>
+                    <li class="nav-user dropdown pc after-login">
+                        <span class="nav-title"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"></span>
+                        <ul class="dropdown-menu">
+                            <li><a class="nav-title settings" href="https://monaca.mobi/ja/account/edit">アカウント設定</a></li>
+                            <li><a href="javascript:void(0)" class="nav-title exec-logout">ログアウト</a></li>
+                        </ul>
+                    </li>
+                    <li class="sp after-login"><a href="javascript:void(0)" class="go-to-dashboard">ダッシュボード</a></li>
+                    <li class="sp after-login"><a href="https://monaca.mobi/ja/account/edit" class="settings"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"> アカウント設定</a></li>
+                    <li class="sp after-login"><a href="javascript:void(0)" class="exec-logout">ログアウト</a></li>
+                {{else}}
+                    <li class="nav-dashboard pc after-login">
+                        <a href="javascript:void(0)" class="nav-title dashboard go-to-dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-user dropdown pc after-login">
+                        <span class="nav-title"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"></span>
+                        <ul class="dropdown-menu">
+                            <li><a class="nav-title settings" href="https://monaca.mobi/en/account/edit">Manage</a></li>
+                            <li><a href="javascript:void(0)" class="nav-title exec-logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li class="sp after-login"><a href="javascript:void(0)" class="go-to-dashboard">Dashboard</a></li>
+                    <li class="sp after-login"><a href="https://monaca.mobi/en/account/edit" class="settings"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm">Manage</a></li>
+                    <li class="sp after-login"><a href="javascript:void(0)" class="exec-logout">Logout</a></li>
+                {{/is}}
             </ul>
         </div>
     </div>

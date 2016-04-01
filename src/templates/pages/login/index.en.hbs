@@ -1,0 +1,60 @@
+---
+title: Login | HTML5 cross-platform mobile app development with Monaca
+class: login
+description: Cloud powered HTML5 hybrid app development environment. Code and build iOS/Android/Windows apps cross-platform.
+---
+
+<div id="loginpage">
+  <header id="header-simple">
+    <div class="container">
+      <h1 class="logo"><a href="/">Monaca</a></h1>
+    </div>
+  </header>
+
+  <section id="login">
+    <div class="container">
+      <h2>Login</h2>
+      <div style="width: 100%; text-align: center;">
+        <div id="signup-github" class="btn-github">
+          <div class="github-img"></div>
+          <div class="vertical-line"></div>
+          <div class="signup-label">Sign Up With GitHub</div>
+        </div>
+        <div class="or-box">
+          <hr class="line-l" />
+          or
+          <hr class="line-r" />
+        </div>
+      </div>
+      <form class="login-form">
+        <p class="form-error" id="login-form-error"></p>
+        <p class="form-error" id="login-form-unknown-error">Please reload this page and try again.</p>
+
+        <ul>
+          <li class="email">
+            <input type="text" name="form[email]" maxlength="255" placeholder="E-mail address" class="email" id="form_email" />
+          </li>
+          <li>
+            <input type="password" name="form[password]" maxlength="30" placeholder="Password" class="password" id="form_password" />
+          </li>
+          <li class="checkbox">
+            <input type="checkbox" name="form[remember_id]" value="1" id="form_remember_email" checked="checked" />
+            <label for="form_remember_email">Keep my account logged in</label>
+          </li>
+          <li>
+            <button id="form-login-btn" type="button" class="btn-blue">Login</button>
+          </li>
+        </ul>
+      </form>
+
+      <div class="bottom">
+        <a href="/login/lost_password.html">Forgot password?</a>
+      </div>
+    </div>
+  </section>
+  <footer id="footer-simple">
+    <div class="container">
+      <p class="copyright">Copyright © 2016<a rel="nofollow" target="_blank" href="http://www.asial.co.jp/">Asial Corporation</a>. All rights reserved.</p>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,761 @@
+/* Login, Signup */
+%signup-container {
+  h2 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 14px;
+    text-shadow: 0 1px 0 white;
+  }
+  /*$_signup-width: $_signup-container-width - ($_container-side-padding + $_box-border-width) * 2;
+  $width: $_signup-width;
+  width: $width;*/
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: block;
+  @media screen and (max-width: $break) {
+    box-sizing: border-box;
+    width: 94%;
+  }
+}
+
+%signup-form {
+  padding: 18px 0 0 0;
+  ul {
+    .error {
+      color: #e94d53;
+      font-size: 12px;
+      text-align: left;
+    }
+    li {
+      margin: 0 0 4px 0;
+      &.right {
+        text-align: right;
+      }
+    }
+  }
+  input {
+    &:disabled {
+      opacity: .5;
+    }
+    &.email {
+      background-image: url(/img/start/signup_popup_mail_icon.png);
+      background-repeat: no-repeat;
+      background-position: 7px 7px;
+    }
+    &.password {
+      background-image: url(/img/start/signup_popup_password_icon.png);
+      background-repeat: no-repeat;
+      background-position: 7px 7px;
+    }
+    &:disabled + label {
+      opacity: .5;
+    }
+  }
+  button {
+    &:disabled {
+      opacity: .5;
+      &:hover {
+        /*@include box-shadow(none);*/
+        cursor: default;
+      }
+    }
+  }
+  .checkbox {
+    @extend #checkbox; /* _forms.scss */
+    font-size: 14px;
+    label {
+      padding: 2px 0 3px 26px;
+      vertical-align: middle;
+      min-height: 16px;
+      @media screen and (max-width: $break) {
+        padding: 12px 0 10px 28px;
+      }
+    }
+    input {
+      display: none;
+      margin: 0 -20px 10px 10px;
+    }
+  }
+  .error {
+    font-size: 12px;
+    /*color: $_red;*/
+    a {
+      /*color: $_red;*/
+    }
+  }
+}
+
+#login {
+  .container {
+    @extend %signup-container;
+  }
+  .login-form {
+    @extend %signup-form;
+    button {
+      float: right;
+    }
+  }
+  .bottom {
+    padding: 14px 0 10px;
+    margin-top: 66px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    clear: both;
+    a {
+      font-size: 12px;
+      /*color: $_light-gray;*/
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+#signup, #signup-invited, #signup-start, #login {
+  .container {
+    .btn-github {
+      background-color: #000000;
+      border-radius: 3px;
+      border-style: none;
+      color: #ffffff;
+      font-size: 17px;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      &:hover {
+        opacity: 0.7;
+        transition-duration: 0.6s;
+      }
+      .github-img {
+        background-image: url("/img/login/chara_github.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 48px;
+      }
+      .signup-label {
+        height: 50px;
+        line-height: 50px;
+        margin-left: 10px;
+      }
+      .vertical-line {
+        border-left: 1px solid #ffffff;
+        height: 36px;
+        margin-top: 7px;
+        width: 0;
+      }
+      div {
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .or-box {
+      font-size: 14px;
+      height: 54px;
+      line-height: 54px;
+      width: 100%;
+      .line-l {
+       float: left;
+      }
+      .line-r {
+        float: right;
+      }
+      .line-l,
+      .line-r {
+        border-top: 1px solid #999999;
+        height: 0;
+        margin: 27px 0 0 0;
+        width: calc(50% - 28px);
+      }
+    }
+    @extend %signup-container;
+    .btn-blue {
+      margin-top: 5px;
+    }
+    border-radius: 6px;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+    border: 1px solid #d9d9d9;
+    padding-bottom: 6px;
+    margin: 40px auto 15px;
+    max-width: 358px;
+    @media screen and (max-width: $break) {
+      margin-top: 0;
+    }
+  }
+  .signup-form, .login-form {
+    @extend %signup-form;
+    .checkbox {
+      margin-bottom: 16px;
+    }
+    input[type=text], input[type=password], input[type=email], input[type=url] {
+      box-sizing: border-box;
+      width: 100%;
+    }
+    margin-top: 6px;
+    padding: 0;
+  }
+}
+
+#modal-overlay {
+  background: #000 none repeat scroll 0 0;
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: 0.1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 990;
+}
+
+
+#signuppopup, #loginpopup {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 420px;
+  display: none;
+
+  opacity: 1;
+  z-index: 999;
+  margin-left: -211px;
+  position: fixed;
+  top: 55.5px;
+  left: 50%;
+  /*@include box-shadow(0 8px 15px rgba(0, 0, 0, 0.08));*/
+
+  .signuppopup-container, .loginpopup-container {
+    min-height: 300px;
+    padding: 1px 16px 10px 16px;
+
+    a {
+      color: #666;
+      font-weight: normal;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    h3 {
+      color: #333;
+      font-size: 20px;
+      padding: 20px 0 14px 0;
+      font-weight: 400;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+      text-align: left;
+    }
+
+    .en {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .btn-github {
+      background-color: #000000;
+      border-radius: 3px;
+      border-style: none;
+      color: #ffffff;
+      font-size: 17px;
+      height: 50px;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      cursor: pointer;
+      
+      &:hover {
+        opacity: 0.7;
+        transition-duration: 0.6s;
+      }
+      .github-img {
+        background-image: url("/img/login/chara_github.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 50px;
+        width: 48px;
+      }
+      .signup-label {
+        height: 50px;
+        line-height: 50px;
+        margin-left: 10px;
+      }
+      .vertical-line {
+        border-left: 1px solid #ffffff;
+        height: 36px;
+        margin-top: 7px;
+        width: 0;
+      }
+      div {
+        float: left;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    .or-box {
+      font-size: 14px;
+      height: 54px;
+      line-height: 54px;
+      width: 100%;
+      .line-l {
+        float: left;
+      }
+      .line-r {
+        float: right;
+      }
+      .line-l,
+      .line-r {
+        border-top: 1px solid #999999;
+        height: 0;
+        margin: 27px 0 0 0;
+        width: calc(50% - 28px);
+      }
+    }
+    .close {
+      /*@include img-replacement('../0513-images/close-dark.png');*/
+      background: rgba(0, 0, 0, 0) url(../img/login/close-dark.png) no-repeat scroll left top;
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      width: 19px;
+      height: 19px;
+      opacity: 1;
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    }
+
+    .signup-form, .login-form {
+      padding: 0;
+      @extend %signup-form;
+      ul li {
+        margin-bottom: 10px;
+        color: #666;
+        label {
+          font-weight: normal;
+          text-align: left;
+        }
+      }
+      ul li {
+        margin-bottom: 11px;
+      }
+
+      .autologin-check {
+        display: flex;
+        justify-content: left;
+      }
+
+      .form-error {
+        color: #f55b56;
+        text-align: left;
+      }
+
+      input {
+        &[type="text"],
+        &[type="password"] {
+          width: 387px;
+          display: block;
+          box-shadow: none;
+          border: 1px solid #ddd;
+          font-size: 16px;
+          /*@include box-sizing();*/
+          border-radius: 3px;
+          line-height: 1;
+          padding: 15px 0 10px 38px;
+          height: 45px;
+        }
+        &[type="text"] {
+          background-image: url(/img/login/login-user-icon.png);
+          background-repeat: no-repeat;
+          background-position: 8px 9px;
+        }
+
+        &[type="password"] {
+          background-image: url(/img/login/login-password-icon.png);
+          background-repeat: no-repeat;
+          background-position: 10px 9px;
+        }
+
+      }
+      button {
+        padding: 22px 16px;
+        margin: 0 0 10px 0;
+        line-height: 0.1;
+        float: right;
+        font-size: 18px;
+        font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic ProN","Hiragino Kaku Gothic Pro W3","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","Helvetica Neue",Helvetica,Arial,sans-serif;
+        @extend %flat-btn;
+        background-color: #ff8b24;
+        border: 1px solid #ec761f;
+        color: white;
+        font-weight: 600;
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+      .error {
+        clear: both;
+        padding: 20px 0 0 0;
+        display: none;
+        font-size: 14px;
+      }
+      .loading {
+        background: url(/img/login/loading-gif.gif) no-repeat left top;
+        width: 16px;
+        height: 16px;
+        margin: 14px 16px 0 0;
+        float: right;
+        display: none;
+      }
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+    }
+
+  }
+
+  #signup-ng {
+    /*@include box-sizing();
+    @include all-a(#666,underline);*/
+    padding: 15px 15px 15px;
+    text-align: center;
+    min-height: 0;
+    color: #666;
+
+    p {
+      margin: 10px 0 5px 0;
+      text-align: left;
+      font-size: 16px;
+    }
+    .license {
+      display: block;
+      text-align: center;
+      font-size: 16px;
+    }
+    a.link {
+      background-repeat: no-repeat;
+      background-position: 10px 0;
+      display: inline-block;
+      font-size: 11px;
+      padding-top: 67px;
+      width: 86px; height: 20px;
+    }
+    a#link-safari {
+      background-position: 11px 0;
+      background-image: url(/img/login/icon_safari.png);
+    }
+    a#link-chrome {
+      background-image: url(/img/login/icon_chrome.png);
+    }
+  }
+}
+
+
+#signup-invited {
+  background: url(/img/welcome_monaca_main_en.png) no-repeat center 40px;
+  padding: 200px 0 40px;
+  @media screen and (max-width: $break) {
+    background-position: left 40px;
+  }
+  .container {
+    background-image: url(/img/linen_bg.png);
+    margin-top: 0;
+    @media screen and (max-width: $break) {
+      background-size: 250px 250px;
+    }
+  }
+  .signup-form {
+    .submit {
+      margin-bottom: 18px;
+      .btn-orange {
+        font-weight: 700;
+        width: 130px;
+      }
+    }
+    .login {
+      border-top: 1px solid #ccc;
+      clear: both;
+      line-height: 120%;
+      margin: 0;
+      padding: 10px 0 14px 0;
+      text-align: right;
+      p {
+        color: #333;
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom: 8px;
+        text-align: left;
+        text-shadow: 0 1px 1px #fff;
+      }
+      .btn {
+        font-weight: 700;
+        padding: 0;
+        width: 130px;
+      }
+    }
+  }
+}
+
+body.lang-ja #signup-invited {
+ background-image: url(/img/welcome_monaca_main_ja.png);
+}
+
+
+body.register {
+  .navbar {
+    margin: 0 0 0 0;
+    min-height: 0;
+  }
+  footer.common {
+    border: none;
+  }
+  #main-wrap {
+  background-color: #3859a0;
+  padding-bottom: 10px;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
+#signup-start {
+  .form-error {
+    margin-bottom: 20px;
+    color: #f55b56;
+  }
+  background: url(/img/start/SignUp_01_03.png) no-repeat left 48px bottom 20%;
+  margin: 0 auto;
+  padding: 0 5%;
+  position: relative;
+  width: 960px;
+  /*
+  height: 600px;
+  */
+  @media screen and (max-width: $break-lg) {
+    width: auto;
+  }
+  @media screen and (max-width: 960px) {
+    background-size: 35%;
+  }
+  @media screen and (max-width: $break) {
+    padding: 0 3%;
+    background: none;
+    width: auto;
+    height: auto;
+      h3 {
+        font-size: 28px;
+        line-height: 40px;
+        margin-top: 34px;
+      }
+      h4 {
+        font-size: 30px;
+        line-height: 40px;
+        margin-top: 0;
+      }
+    }
+
+  h3 {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro W3", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 45px;
+    line-height: 60px;
+    margin: 0 auto;
+    padding-top: 110px;
+    text-align: center;
+    color: #fff;
+    font-weight: normal;
+    letter-spacing: 0;
+    @media screen and (max-width: $break) {
+      margin: 0 0 8px;
+      line-height: 43px;
+      font-size: 33px;
+    }
+  }
+  h4 {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro W3", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 50px;
+    color: #fff;
+    margin: 5px 0 40px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 36px;
+    letter-spacing: 0;
+    @media screen and (max-width: $break) {
+      margin: 0 0 20px;
+      line-height: 28px;
+      font-size: 24px;
+    }
+  }
+  h3.en {
+    padding-top: 80px;
+    font-family: Lato, Helvetica, 'MS UI Gothic', sans-serif;
+    font-size: 60px;
+    font-weight: 100;
+    letter-spacing: 0.04em;
+    line-height: 60px;
+    text-align: center;
+    @media screen and (max-width: $break) {
+      font-size: 44px;
+      line-height: 1.2em;
+    }
+  }
+  h4.en {
+    color: #fff;
+    font-family: Lato,Helvetica,sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    letter-spacing: 0.04em;
+    line-height: 48px;
+    text-align: center;
+    @media screen and (max-width: $break) {
+      font-size: 26px;
+      line-height: 1.2em;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+  .container {
+    padding: 0 14px;
+    background-image: url(/img/linen_bg.png);
+    /*
+    position: absolute;
+    margin: 0 auto;
+    top: 190px;
+    right: 84px;
+    */
+    margin-left: 518px;
+    height: auto;
+    min-width: 358px;
+    @media screen and (max-width: 960px) {
+      background-size: 250px 250px;
+      margin-left: calc(100% - 442px);
+      /*
+      position: static;
+      top: auto;
+      right: auto;
+      */
+    }
+    @media screen and (max-width: $break) {
+      margin: 0 auto;
+      /* min-width: 100%; */
+    }
+    @media screen and (max-width: $break-xs) {
+      min-width: 358px;
+    }
+    label {
+      font-weight: normal;
+    }
+    .terms {
+        text-align: left;
+        color: #666;
+        a {
+          color: #666;
+          text-decoration: underline;
+          &:hover {
+            text-decoration: none;
+          }
+      }
+    }
+    h2 {
+      text-align: left;
+    }
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"],
+    form input[type="url"],
+    form textarea {
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+      color: #666666;
+      display: inline-block;
+      font-size: 14px;
+      margin: 0 0 9px;
+      outline: medium none;
+      padding: 11px 0 11px 46px;
+      @media screen and (max-width: $break) {
+        font-size: 16px;
+      }
+    }
+  }
+  .signup-form {
+    .form−error {
+      margin-bottom: 0;
+      color: #f55b56;
+      border: solid 1px blue;
+    }
+    .submit {
+      margin: 12px 0;
+      .btn-orange {
+        font-weight: 700;
+        width: 130px;
+      }
+    }
+    .login {
+      border-top: 1px solid #ccc;
+      clear: both;
+      line-height: 120%;
+      margin: 0;
+      padding: 10px 0 14px 0;
+      text-align: right;
+      p {
+        color: #333;
+        font-size: 14px;
+        line-height: 14px;
+        margin-bottom: 8px;
+        text-align: left;
+        text-shadow: 0 1px 1px #fff;
+      }
+      .btn {
+        font-weight: 700;
+        padding: 0;
+        width: 130px;
+      }
+    }
+  }
+  .copyright {
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 50px;
+    @media screen and (max-width: $break) {
+      font-size: 10px;
+      margin: 30px 0 0 0;
+      padding: 0 10px 10px 0;
+    }
+    a {
+      color: #fff;
+    }
+  }
+}
+
+#signup-start .signup-form .submit .btn-orange {
+  width: 200px;
+}
+
+
+#signuppopup .signup-form .checkbox {
+  float: left;
+  padding-top: 14px;
+}
+
+#login .login-form button,
+#signup .signup-form button {
+  font-size: 16px;
+  font-weight: bold;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 20px;
+  margin: 4px 0 14px;
+}
+
+#login .error,
+#signup .error {
+  padding-bottom: 6px;
+  line-height: 16px;
+}

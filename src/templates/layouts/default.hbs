@@ -39,23 +39,28 @@
     {{/compare}}
 
     <script>
-        var cb = function(href) {
-            var l = document.createElement("link"); l.rel = "stylesheet";
-            l.href = href;
-            var h = document.getElementsByTagName("head")[0]; h.appendChild(l);
-        };
+        var loadResources = function() {
+            var res = ["/css/codemirror.css", "//fonts.googleapis.com/css?family=Open+Sans:400,700"];
+            var headElement = document.getElementsByTagName("head")[0];
+            var l = document.createElement("link");
 
-        cb("/css/bootstrap.min.css");
-        cb("/css/style.css");
-        cb("//fonts.googleapis.com/css?family=Open+Sans:400,700");
+            for (var i = 0; i < res.length; i++) {
+                var linkElement = document.createElement("link");
+                linkElement.rel = "stylesheet";
+                linkElement.href = res[i];
+                headElement.appendChild(linkElement);
+            }
+        };
 
         var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
         if (raf) {
-            raf(cb);
+            raf(loadResources);
         } else {
-            window.addEventListener('load', cb);
+            window.addEventListener('load', loadResources);
         }
     </script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <link rel="shortcut icon" href="/img/favicon.ico">
 
@@ -106,11 +111,24 @@
         <meta property="og:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
         <meta name="twitter:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
     {{/compare}}
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/all.js"></script>
+
+    <script src="https://use.typekit.net/tky7gag.js"></script>
+    <script>
+        if (location.href.indexOf('/contest/') > 0) {
+            try{Typekit.load({ async: true });}catch(e){}
+        }
+    </script>
 </head>
 
 <body class="{{class}}">
 
     {{> header }}
+    {{> signupPopup }}
+    {{> loginPopup }}
     {{> notificationHeader }}
     <article class="main" role="main">
 
@@ -120,12 +138,25 @@
 
     {{> footer }}
 
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/all.js"></script>
     <script>
-      window.LANG = "{{language}}";
-      window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
-    </script>		
+        window.MONACA_API_URL = "{{site.monaca_api}}";
+        window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
+        {{#is language "ja"}}
+            window.LANG = "ja";
+        {{else}}
+            window.LANG = "en";
+        {{/is}}
+        window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
+    </script>
+    {{#is language "ja"}}
+        <script src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
+    {{else}}
+        <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
+    {{/is}}
+    <script>
+      if (!monacaApi.executedLoginCheck) {
+        monacaApi.loginCheck({});
+      }
+    </script>
   </body>
 </html>
