@@ -337,11 +337,11 @@ module.exports = function(grunt) {
             options: {
                 accessKeyId: grunt.option('aws-key'),
                 secretAccessKey: grunt.option('aws-secret'),
-                uploadConcurrency: 5,
-                downloadConcurrency: 5,
+                uploadConcurrency: 10,
+                downloadConcurrency: 10,
                 gzipRename: 'ext',
                 params: {
-                    CacheControl: 'max-age=300'
+                    CacheControl: 'max-age=120'
                 }
             },
             ja: {
