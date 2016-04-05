@@ -148,7 +148,7 @@
 
     $('#show_signuppopup').click(function() {
       formUtil.resetError();
-      getCsrfToken(monacaApi.getBaseUrl() + "/" + window.LANG + "/api/register");
+      setCsrfToken("signuppopup-csrf-token", monacaApi.getBaseUrl() + "/" + window.LANG + "/api/register");
 
       $('#signuppopup').fadeIn(msec)
         .find('input#signup_popup_email')
@@ -160,7 +160,7 @@
 
     $('#show_loginpopup').click(function() {
       formUtil.resetError();
-      getCsrfToken(monacaApi.getBaseUrl() + "/" + window.LANG + "/api/account/login");
+      setCsrfToken("loginpopup-csrf-token", monacaApi.getBaseUrl() + "/" + window.LANG + "/api/account/login");
       $('#loginpopup').fadeIn(msec)
         .find('input#login_popup_email')
         .focus();
@@ -177,86 +177,28 @@
       closePopup(msec, 'loginpopup');
     });
 
-    $('#popup_login_btn').click(function() {
-      formUtil.disableAllInput();
-      var sendData = {
-        'form[email]':       $('#login_popup_email').val(),
-        'form[password]':    $('#login_popup_password').val(),
-        'form[_csrf_token]': popup_csrf_token
-      };
-
-      if ($('#login_popup_remember_email').prop('checked')) {
-        sendData['form[remember_id]'] = 1;
-      }
-
-      $.ajax({
-        type: "POST",
-        url: monacaApi.getBaseUrl() + "/" + window.LANG + "/api/account/login",
-        xhrFields: {
-          withCredentials: true
-        },
-        data: sendData,
-        dataType: "json",
-        success: function (msg) {
-          formUtil.enableAllInput();
-
-          if (msg.result == 'loginOK') {
-            location.href = MONACA_API_URL + '/' + LANG + '/dashboard';
-          } else if (msg.result && msg.result.formError) {
-            formUtil.displayFormErrorForGlobal(msg.result.formError, 'login-popup-error');
-          } else {
-            $('#login-popup-unknown-error').css('display', 'block');
-          }
-        },
-        error: function (msg) {
-          formUtil.enableAllInput();
-          $('#login-popup-unknown-error').css('display', 'block');
-        }
-      });
-    });
-
     $('#popup_signup_btn').click(function() {
-      formUtil.disableAllInput();
-      var sendData = {
-        'register[email]':       $('#signup_popup_email').val(),
-        'register[password]':    $('#signup_popup_password').val(),
-        'register[_csrf_token]': popup_csrf_token
-      };
-
-      $.ajax({
-        type: "POST",
-        url: monacaApi.getBaseUrl() + "/" + window.LANG + "/api/register",
-        xhrFields: {
-          withCredentials: true
-        },
-        data: sendData,
-        dataType: "json",
-        success: function (msg) {
-          formUtil.enableAllInput();
-
-          if (msg.result && msg.result.submitOK) {
-            location.href = "/register/thankyou.html";
-          } else if (msg.result && msg.result.formError) {
-            formUtil.displayFormErrorForGlobal(msg.result.formError, 'signup-popup-error');
-          } else {
-            formUtil.resetError();
-            $('#signup-popup-unknown-error').css('display', 'block');
-          }
-        },
-        error: function (msg) {
-          formUtil.enableAllInput();
-          $('#signup-popup-unknown-error').css('display', 'block');
-        }
-      });
+      $("#signup-popup-form").attr('action', window.MONACA_API_URL + "/" + window.LANG + "/register/start");
+      $("#signup-popup-form").submit();
     });
 
+    $('#popup_login_btn').click(function() {
+      $("#login-popup-form").attr('action', window.MONACA_API_URL + "/" + window.LANG + "/login");
+      $("#login-popup-form").submit();
+    });
 
     var f = monacaPages[path];
     if (f) {
       f(loginData);
     }
 
-    function getCsrfToken(url) {
+    function setCsrfToken(elementId, url) {
+      getCsrfToken(url, function(token) {
+        $("#"+elementId).val(token);
+      });
+    }
+
+    function getCsrfToken(url, callback) {
       $.ajax({
         type: "GET",
         url: url,
@@ -269,6 +211,9 @@
             popup_csrf_token = msg.result.initOK._csrf_token;
           } else if (msg.result && msg.result._csrf_token) {
             popup_csrf_token = msg.result._csrf_token;
+          }
+          if (popup_csrf_token && callback) {
+            callback(popup_csrf_token);
           }
         },
         error: function (msg) {}

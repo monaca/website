@@ -193,7 +193,7 @@ var MultiSlider = (function() {
         if (leapNum === 0) return;
 
         this.leapBy(parseInt(leapNum));
-        this.start();
+        // this.start();
     }
 
     MultiSlider.prototype.next = function() {
@@ -228,4 +228,3 @@ var MultiSlider = (function() {
 
     return MultiSlider;
 })();
-

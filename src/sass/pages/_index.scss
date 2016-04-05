@@ -821,35 +821,7 @@ html[lang=ja] body.home {
                 margin-top: 50px;
             }
         }
-        .box-buy {
-            text-align: left;
-            padding: 60px 0 0;
-            position: absolute;
-            top: 45%;
-            left: 11.5%;
-            .btn {
-                padding: 10px 20px;
-                margin: 0 20px 20px 0;
-                min-width: 240px;
-                height: 61px;
-                @media screen and (max-width: 900px) {
-                    font-size: 20px;
-                    height: 61px;
-                    line-height: 59px;
-                    min-width: 220px;
-                    span {
-                        font-size: 18px;
-                    }
-                }
-            }
-            .btn-darkgray {
-                margin: 90px 0 0 10px;
-                font-size: 24px;
-                @media screen and (max-width: 900px) {
-                    margin: 30px 0 0 10px;
-                }
-            }
-        }
+
         .box-try {
             text-align: left;
             padding: 60px 0 0;
@@ -872,6 +844,13 @@ html[lang=ja] body.home {
                         font-size: 18px;
                     }
                 }
+            }
+        }
+        .box-buy{
+            left: 15%;
+            top: 60%;
+            @media screen and (max-width: 900px) {
+              top: 56%;
             }
         }
     }
@@ -932,7 +911,7 @@ html[lang=ja] body.home {
     .box-awards {
         ul {
             li {
-                width: 20%;
+                width: 19%;
                 @media screen and (max-width: $break-xs) {
                     display: inline;
                     width: 10%;

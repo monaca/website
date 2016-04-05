@@ -192,7 +192,7 @@ module.exports = function(grunt) {
                 partials: '<%= config.src %>/templates/partials/*.hbs',
                 plugins: ['assemble-middleware-sitemap'],
                 i18n: {
-                    languages: ["en", "ja", "it", "de"],
+                    languages: ["en", "ja", "it", "es", "de"],
                     templates: ["<%= config.src %>/templates/pages/*.hbs"],
                 },
                 sitemap: {
@@ -215,7 +215,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "<%= config.src %>/templates/pages/",
-                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.it.hbs', '!**/*.de.hbs'],
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.de.hbs', '!**/*.es.hbs', '!**/*.it.hbs'],
                     dest: '<%= config.dist %>/'
                 }, {
                     expand: true,
@@ -240,7 +240,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "<%= config.src %>/templates/pages/",
-                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.it.hbs', '!**/*.de.hbs'],
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.es.hbs', '!**/*.it.hbs', '!**/*.de.hbs'],
                     dest: '<%= config.distJa %>/'
                 }, {
                     expand: true,
@@ -249,6 +249,20 @@ module.exports = function(grunt) {
                     dest: '<%= config.distJa %>/',
                     rename: function(dest, src) {
                         return dest + src.replace('.ja.hbs', '.html');
+                    }
+                }]
+            },
+            es: {
+                options: {
+                    language: "es"
+                },
+                files: [{
+                    expand: true,
+                    cwd: "<%= config.src %>/templates/pages/",
+                    src: 'index.es.hbs',
+                    dest: '<%= config.dist %>/es/',
+                    rename: function(dest, src) {
+                        return dest + src.replace('.es.hbs', '.html');
                     }
                 }]
             },
@@ -351,11 +365,11 @@ module.exports = function(grunt) {
             options: {
                 accessKeyId: grunt.option('aws-key'),
                 secretAccessKey: grunt.option('aws-secret'),
-                uploadConcurrency: 5,
-                downloadConcurrency: 5,
+                uploadConcurrency: 10,
+                downloadConcurrency: 10,
                 gzipRename: 'ext',
                 params: {
-                    CacheControl: 'max-age=300'
+                    CacheControl: 'max-age=120'
                 }
             },
             ja: {

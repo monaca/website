@@ -113,7 +113,7 @@ header.navbar {
     .navbar-collapse {
         border-top: none;
         box-shadow: none;
-        float: right;
+        float: none;
         @media screen and (max-width: $break - 1px) {
             background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.16), #2c2c2c);
             background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.16), #2c2c2c 60%);
@@ -143,6 +143,7 @@ header.navbar {
         }
         > li > a {
             color: #ffffff;
+            padding: 16px 12px 14px;
             padding: 16px 10px 14px;
             -webkit-font-smoothing: antialiased;
             &:hover {
@@ -271,7 +272,7 @@ header.navbar {
             @media screen and (max-width: 860px) {
                 font-size: 14px;
                 padding-left: 8px;
-                padding-right: 8px;
+                padding-right:8px;
             }
         }
         .navbar-nav {
@@ -378,4 +379,3 @@ html[lang=ja] {
         margin-right: -8px;
     }
 }
-

@@ -9,6 +9,9 @@ viewport: width=640
 <div id="carousel-showcase" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
         <div class="item active">
+            <a href="/showcase/teu.html"><img src="/img/showcase/keyvisual_13.jpg" alt="クラウド開発環境の利点を最大限活用した効率的な授業運営を実現"></a>
+        </div>
+        <div class="item">
             <a href="/showcase/proroutemarumitsu.html"><img src="/img/showcase/keyvisual_12.jpg" alt="創業明治33年の老舗企業がアプリでお客様とのコミュニケーション変革に挑む"></a>
         </div>
         <div class="item">
@@ -59,10 +62,17 @@ viewport: width=640
         <li data-target="#carousel-showcase" data-slide-to="9"></li>
         <li data-target="#carousel-showcase" data-slide-to="10"></li>
         <li data-target="#carousel-showcase" data-slide-to="11"></li>
+        <li data-target="#carousel-showcase" data-slide-to="12"></li>
     </ol>
 </div>
 
 <ul class="cases">
+    <li data-category="education">
+        <a href="teu.html"><img src="/img/showcase/btn_teu.png" alt="" class="thumb"></a>
+        <p class="title"><a href="teu.html">東京工科大学メディア学部</a></p>
+        <p class="category">教育機関</p>
+        <p>クラウド開発環境の利点を最大限活用した効率的な授業運営を実現</p>
+    </li>
     <li data-category="apparel">
         <a href="proroutemarumitsu.html"><img src="/img/showcase/btn_proroute.png" alt="" class="thumb"></a>
         <p class="title"><a href="proroutemarumitsu.html">株式会社プロルート丸光</a></p>
@@ -103,7 +113,7 @@ viewport: width=640
         <a href="estcorporation.html"><img src="/img/showcase/btn_est_corporation.png" alt="" class="thumb"></a>
         <p class="title"><a href="estcorporation.html">株式会社EST corporation</a></p>
         <p class="category">メディア</p>
-        <p>HTML5ハイブリッド開発で開発人員増にも柔軟に対応、開発工数20%、テスト工数50%削減を実現</p>
+        <p>オフショアでのネイティブ開発からの転換！社内のモバイルアプリ開発未経験者が1か月でリリース</p>
     </li>
     <li data-category="media">
         <a href="tokyocalendar.html"><img src="/img/showcase/btn_tc.png" alt="" class="thumb"></a>
@@ -147,11 +157,11 @@ viewport: width=640
 $(function() {
     var cases = $(".cases li");
     var selectors = $(".cases-category li");
-    
+
     selectors.click(function() {
         selectors.removeClass("active");
         $(this).addClass("active");
-        
+
         var cat = this.dataset["category"];
 
         cases.each(function() {

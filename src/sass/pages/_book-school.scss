@@ -708,6 +708,59 @@ body.book-school {
             }
         }
     }
+    #how-to-buy{
+      .box-try {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        @media screen and (max-width: $break-lg) {
+            width: 60%;
+        }
+        @media screen and (max-width: $break) {
+            width: 100%;
+        }
+        .btn-darkgray {
+          @media screen and(max-width: $break-lg) {
+            width: 100%;
+          }
+          @media screen and(max-width: $break) {
+            font-size: 16px;
+          }
+        }
+        .btn-disable {
+          background-color: #c9cdd1;
+          position: relative;
+          z-index: 1;
+          &:hover {
+            background-color: #c9cdd1;
+            color: #ffffff;
+            cursor: default;
+          }
+          &:active {
+            background-color: #c9cdd1;
+            color: #ffffff;
+            box-shadow: inset 0 3px 5px rgba(0,0,0,0);
+          }
+          @media screen and(max-width: $break-lg) {
+            display: block;
+            margin-bottom: 20px;
+          }
+          @media screen and(max-width: $break) {
+            font-size: 16px;
+          }
+          &:after {
+            content: "Coming soon";
+            color: #000;
+            margin-left: -50%;
+            opacity: 1;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            z-index: 10;
+            width: 100%;
+          }
+        }
+      }
+    }
     /* book-outline */
     .common {
         margin: 90px auto 0 auto;

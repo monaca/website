@@ -29,7 +29,8 @@ layout: src/templates/layouts/index.hbs
             <li class="item" data-index="2">
             <a href="/book/001">
             <img src="/img/index/keyvisual_book.png" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/>
-            <div class="box-buy">
+            </a>
+            <div class="box-try box-buy">
                 <a class="btn btn-darkgray" href="/book/001/">詳細はこちら</a>
             </div>
             </li>
@@ -240,7 +241,7 @@ window.addEventListener("load", function() {
 
     $(function() {
         slider = new MultiSlider(document.getElementById("keyvisual"));
-        slider.start();
+        // slider.start();
     });
 })
 </script>
