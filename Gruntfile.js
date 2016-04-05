@@ -192,7 +192,7 @@ module.exports = function(grunt) {
                 partials: '<%= config.src %>/templates/partials/*.hbs',
                 plugins: ['assemble-middleware-sitemap'],
                 i18n: {
-                    languages: ["en", "ja", "it", "es", "de"],
+                    languages: ["en", "ja", "es", "de", "it"],
                     templates: ["<%= config.src %>/templates/pages/*.hbs"],
                 },
                 sitemap: {
@@ -215,7 +215,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "<%= config.src %>/templates/pages/",
-                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.de.hbs', '!**/*.es.hbs', '!**/*.it.hbs'],
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.es.hbs', '!**/*.de.hbs', '!**/*.it.hbs'],
                     dest: '<%= config.dist %>/'
                 }, {
                     expand: true,
@@ -266,20 +266,6 @@ module.exports = function(grunt) {
                     }
                 }]
             },
-            it: {
-                options: {
-                    language: "it"
-                },
-                files: [{
-                    expand: true,
-                    cwd: "<%= config.src %>/templates/pages/",
-                    src: 'index.it.hbs',
-                    dest: '<%= config.dist %>/it/',
-                    rename: function(dest, src) {
-                        return dest + src.replace('.it.hbs', '.html');
-                    }
-                }]
-            },
             de: {
                 options: {
                     language: "de"
@@ -291,6 +277,20 @@ module.exports = function(grunt) {
                     dest: '<%= config.dist %>/de/',
                     rename: function(dest, src) {
                         return dest + src.replace('.de.hbs', '.html');
+                    }
+                }]
+            },
+            it: {
+                options: {
+                    language: "it"
+                },
+                files: [{
+                    expand: true,
+                    cwd: "<%= config.src %>/templates/pages/",
+                    src: 'index.it.hbs',
+                    dest: '<%= config.dist %>/it/',
+                    rename: function(dest, src) {
+                        return dest + src.replace('.it.hbs', '.html');
                     }
                 }]
             }
