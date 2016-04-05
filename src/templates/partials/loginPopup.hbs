@@ -16,7 +16,7 @@
     </div>
 
     <a id="close_loginpopup" class="close"><img src="/img/login/close-dark.png"></a>
-    <form class="login-form">
+    <form class="login-form" method="post" id="login-popup-form">
       <p class="form-error" id="login-popup-error"></p>
       <p class="form-error" id="login-popup-unknown-error">{{#is language "ja"}}エラーが発生しました。ページをリロードしてやり直して下さい。{{else}}Please reload this page and try again.{{/is}}</p>
       <ul>
@@ -34,6 +34,7 @@
           <button id="popup_login_btn" type="button" class="btn-blue">{{#is language "ja"}}ログイン{{else}}Login{{/is}}</button>
         </li>
       </ul>
+      <input type="hidden" name="form[_csrf_token]" value="" id="loginpopup-csrf-token" />
     </form>
     <div class="bottom">
       <a href="/login/lost_password.html">{{#is language "ja"}}パスワードをお忘れですか？{{else}}Forgot password?{{/is}}</a>
