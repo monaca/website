@@ -1,0 +1,25 @@
+{
+    "lang": "es",
+    "fullLang": "Español",
+    "langIcon": "/img/icon/es.png",
+    "products": "Productos",
+    "monacaCloud": "Monaca Cloud",
+    "monacaEnterprise": "Monaca Enterprise",
+    "monacaDebugger": "Monaca Debugger",
+    "monacaAcademic": "Monaca Academic Plan",
+    "pricing": "Precios",
+    "resources": "Recursos",
+    "services": "Servicios",
+    "partners": "Socios",
+    "support": "Soporte",
+    "andServices": " y Servicios",
+    "login": "Iniciar sesión",
+    "signup": "Crear cuenta",
+    "signupFree": "Regístrate Ahora <span class='small'>(gratis)</span>",
+
+    "urlPricing": "https://monaca.mobi/en/pricing",
+    "urlBlog": "https://monaca.mobi/en/blog",
+    "urlSupport": "https://monaca.mobi/en/support/index",
+    "urlLogin": "https://monaca.mobi/en/login",
+    "urlSignup": "https://monaca.mobi/en/register/start"
+}
