@@ -249,37 +249,6 @@ article.main > div#modal-overlay {
         }
     }
 
-    .bnr-ninjabnr {
-        position: absolute;
-        left: calc(50% - 160px);
-        bottom: -49px;
-        width: 320px;
-        height: 120px;
-        padding: 0;
-        .bnr-ninjabnr-more,
-        .bnr-ninjabnr-more-on {
-            position: absolute;
-            right: 210px;
-            bottom: 11px;
-            width: 76px;
-            opacity: 1.0;
-            @include transition(opacity 0.3s linear);
-        }
-        .bnr-ninjabnr-more-on {
-            opacity: 0.0;
-        }
-        &:hover {
-            img {
-                opacity: 1.0;
-            }
-            .bnr-ninjabnr-more {
-                opacity: 0.0;
-            }
-            .bnr-ninjabnr-more-on {
-                opacity: 1.0;
-            }
-        }
-    }
 
     ul.caseicon {
         list-style: none;
