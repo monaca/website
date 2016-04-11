@@ -240,7 +240,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "<%= config.src %>/templates/pages/",
-                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.es.hbs', '!**/*.de.hbs', '!**/*.it.hbs', '!**/*.it.hbs'],
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.es.hbs', '!**/*.de.hbs', '!**/*.it.hbs', '!**/*.ru.hbs'],
                     dest: '<%= config.distJa %>/'
                 }, {
                     expand: true,
