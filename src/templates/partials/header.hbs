@@ -145,6 +145,11 @@ component: navbar
                                     <img src="/img/icon/it.png"> Italiano
                                 </a>
                             </li>
+                            <li {{#is language "ru"}} style="display: none" {{/is}}>
+                                <a href="https://monaca.io/ru/" class="hidden-xs">
+                                    <img src="/img/icon/ru.png"> Русский
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 {{/is}}
