@@ -215,7 +215,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "<%= config.src %>/templates/pages/",
-                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs6ef', '!**/*.es.hbs', '!**/*.de.hbs', '!**/*.it.hbs', '!**/*.ru.hbs'],
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.es.hbs', '!**/*.de.hbs', '!**/*.it.hbs', '!**/*.ru.hbs'],
                     dest: '<%= config.dist %>/'
                 }, {
                     expand: true,
