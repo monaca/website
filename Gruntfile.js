@@ -192,7 +192,7 @@ module.exports = function(grunt) {
                 partials: '<%= config.src %>/templates/partials/*.hbs',
                 plugins: ['assemble-middleware-sitemap'],
                 i18n: {
-                    languages: ["en", "ja", "es", "de", "it"],
+                    languages: ["en", "ja", "es", "de", "it", "ru"],
                     templates: ["<%= config.src %>/templates/pages/*.hbs"],
                 },
                 sitemap: {
@@ -215,7 +215,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "<%= config.src %>/templates/pages/",
-                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.es.hbs', '!**/*.de.hbs', '!**/*.it.hbs'],
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.es.hbs', '!**/*.de.hbs', '!**/*.it.hbs', '!**/*.ru.hbs'],
                     dest: '<%= config.dist %>/'
                 }, {
                     expand: true,
@@ -240,7 +240,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: "<%= config.src %>/templates/pages/",
-                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.es.hbs', '!**/*.it.hbs', '!**/*.de.hbs'],
+                    src: ['**/*.hbs', '!**/*.en.hbs', '!**/*.ja.hbs', '!**/*.es.hbs', '!**/*.de.hbs', '!**/*.it.hbs', '!**/*.ru.hbs'],
                     dest: '<%= config.distJa %>/'
                 }, {
                     expand: true,
@@ -291,6 +291,20 @@ module.exports = function(grunt) {
                     dest: '<%= config.dist %>/it/',
                     rename: function(dest, src) {
                         return dest + src.replace('.it.hbs', '.html');
+                    }
+                }]
+            },
+            ru: {
+                options: {
+                    language: "ru"
+                },
+                files: [{
+                    expand: true,
+                    cwd: "<%= config.src %>/templates/pages/",
+                    src: 'index.ru.hbs',
+                    dest: '<%= config.dist %>/ru/',
+                    rename: function(dest, src) {
+                        return dest + src.replace('.ru.hbs', '.html');
                     }
                 }]
             }
