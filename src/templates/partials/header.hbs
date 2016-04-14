@@ -53,7 +53,7 @@ component: navbar
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{i18n "resources"}}</a>
                         <ul class="dropdown-menu">
                             <li><a href="/headline/">Updates</a></li>
-                            <li><a href="http://docs.monaca.mobi/en/" target="_blank">Docs <i class="glyphicon glyphicon-new-window">&nbsp;</i></a></li>
+                            <li><a href="https://docs.monaca.io/en/" target="_blank">Docs <i class="glyphicon glyphicon-new-window">&nbsp;</i></a></li>
                             <li><a href="/great-apps.html">Showcase</a></li>
                             <li><a href="https://community.onsen.io/">Forum</a></li>
                             <li><a href="/product-partner/">Partners</a></li>
@@ -93,7 +93,7 @@ component: navbar
                             <li><a href="/showcase/">導入事例</a></li>
                         </ul>
                     </li>
-                    <li><a href="http://docs.monaca.mobi/" target="_blank">ドキュメント</a></li>
+                    <li><a href="https://docs.monaca.io/ja/" target="_blank">ドキュメント</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">お知らせ</a>
                         <ul class="dropdown-menu">
@@ -135,9 +135,19 @@ component: navbar
                                     <img src="/img/icon/es.png"> Español
                                 </a>
                             </li>
+                            <li {{#is language "de"}} style="display: none" {{/is}}>
+                                <a href="https://monaca.io/de/" class="hidden-xs">
+                                    <img src="/img/icon/de.png"> Deutsch
+                                </a>
+                            </li>
                             <li {{#is language "it"}} style="display: none" {{/is}}>
                                 <a href="https://monaca.io/it/" >
                                     <img src="/img/icon/it.png"> Italiano
+                                </a>
+                            </li>
+                            <li {{#is language "ru"}} style="display: none" {{/is}}>
+                                <a href="https://monaca.io/ru/" class="hidden-xs">
+                                    <img src="/img/icon/ru.png"> Русский
                                 </a>
                             </li>
                         </ul>
