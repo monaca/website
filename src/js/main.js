@@ -68,6 +68,14 @@ function isIdeAvailable() {
   return true;
 }
 
+function isSafari() {
+  var ua = navigator.userAgent.toLowerCase();
+  if (ua.indexOf('chrome') === -1 && ua.indexOf('safari') !== -1) {
+    return true;
+  }
+  return false;
+}
+
 function sendTracker(event, params) {
   $.ajax(window.MONACA_API_URL +'/' + window.LANG + '/api/tracker?event=' + event, {
     type: 'POST',
