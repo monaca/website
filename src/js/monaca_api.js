@@ -147,6 +147,11 @@
     });
 
     $('#show_signuppopup').click(function() {
+      if (isSafari()) {
+        location.href=window.MONACA_API_URL + "/" + window.LANG + "/register/start";
+        return;
+      }
+
       formUtil.resetError();
       setCsrfToken("signuppopup-csrf-token", monacaApi.getBaseUrl() + "/" + window.LANG + "/api/register");
 
@@ -159,6 +164,11 @@
     });
 
     $('#show_loginpopup').click(function() {
+      if (isSafari()) {
+        location.href=window.MONACA_API_URL + "/" + window.LANG + "/login";
+        return;
+      }
+
       formUtil.resetError();
       setCsrfToken("loginpopup-csrf-token", monacaApi.getBaseUrl() + "/" + window.LANG + "/api/account/login");
       $('#loginpopup').fadeIn(msec)
