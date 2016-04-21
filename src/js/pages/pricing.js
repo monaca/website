@@ -13,8 +13,6 @@
     document.getElementById('pricing-container').style.display = 'block';
 
     $('#btn-trial').click(function(){
-        console.log(monacaApi);
-
       if (loginData.status.isLogin) {
         location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/pricing?type=1';
       } else {
