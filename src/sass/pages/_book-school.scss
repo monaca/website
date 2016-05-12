@@ -1,4 +1,10 @@
 body.book-school {
+    h3{
+      font-size: 30px;
+      font-weight: 300;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
     h2 {
         font-size: 40px;
         font-weight: 400;
@@ -21,6 +27,38 @@ body.book-school {
         }
         .txt-80 {
             font-size: 80%;
+        }
+        .errata {
+            right: 43px;
+            bottom: 5px;
+            width: 100%;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #34454b;
+            text-align: right;
+            clear: both;
+            margin-bottom: 5px;
+            @media screen and(max-width: $break) {
+                position: static;
+                text-align: center;
+                margin: 8px;
+            }
+            @media screen and(max-width: $break-xs) {
+                position: static;
+                text-align: center;
+                margin: 18px 0 -10px;
+                font-size: 13px;
+            }
+            a {
+                color: #34454b;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .glyphicon {
+                font-size: 1rem;
+            }
         }
         .official-badge {
             position: absolute;
