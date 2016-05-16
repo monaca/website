@@ -125,7 +125,7 @@ body.pricing article.main {
                     span {
                         font-weight: 700;
                         color: #25384c;
-                        margin-left: 0.3em;    
+                        margin-left: 0.3em;
                     }
                 }
             }
@@ -172,7 +172,7 @@ body.pricing article.main {
                 width: 546px;
             }
             @media screen and (max-width: $break-xs) {
-                margin: 0 auto 70px; 
+                margin: 0 auto 70px;
                 padding: 0 11px;
                 width: 284px;
             }
@@ -231,7 +231,7 @@ body.pricing article.main {
                         float: left;
                         border-right: 1px solid #ccc;
                         &:after {
-                            display: none;   
+                            display: none;
                         }
                         @media screen and (max-width: 1070px) {
                             float: none;
@@ -241,7 +241,7 @@ body.pricing article.main {
                         li {
                             width: 100%;
                             text-align: left;
-                            margin-bottom: 8.6px;
+                            margin-bottom: 8.6px !important;
                             &:nth-child(3) {
                                 margin-bottom: 0;
                             }
