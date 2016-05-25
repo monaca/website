@@ -1,6 +1,6 @@
 body.company {
   section {
-    padding: 40px 0 0 0;
+    padding: 0 0 0 0;
     border: none;
   }
   #company, #companyTeam {
@@ -16,6 +16,7 @@ body.company {
         width: 80%;
       }
       @media screen and (max-width: $break) {
+        padding: 0 0 40px 0;
         min-width: 90%;
         width: 90%;
       }
@@ -47,6 +48,9 @@ body.company {
       margin: 80px 0 50px;
       padding: 0;
       text-align: center;
+      @media screen and (max-width: $break) {
+          margin: 40px 0 50px;
+        }
       }
       h3 {
         font-size: 12px;
@@ -153,8 +157,9 @@ body.company {
           width: 22%;
       }
       @media screen and (max-width: $break) {
-          margin-right: 2%;
-          width: 31%;
+          margin-right: 3%;
+          width: 30%;
+          height: 180px;
         }
       dt{
         font-size:16px;
@@ -164,10 +169,15 @@ body.company {
         font-size:12px;
         }
       }
+      li:nth-child(3n) {
+        @media screen and (max-width: $break) {
+          margin-right: 0;
+        }
+      }
       li:nth-child(4n) {
         margin-right: 0;
         @media screen and (max-width: $break) {
-          margin-right: 2%;
+          margin-right: 3%;
         }
       }
 
