@@ -167,7 +167,6 @@ body.showcase-index {
     }
 }
 
-
 body.showcase {
     min-width: 1170px;
     -webkit-text-size-adjust: 100%;
@@ -1087,6 +1086,24 @@ body.showcase.teu {
 }
 
 body.showcase.jmac {
+    article.main {
+    .backstory {
+            padding: 90px 0 40px;
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+            p {
+                line-height: 1.85;
+                margin-bottom: 7px;
+            }
+            .alignleft, .alignright {
+                width: percentage(500px/1080px);
+            }
+
+        }
+    }
     article.main header {
         background-image: url(/img/jmac/icn_app_jmac_ja.png);
     }
