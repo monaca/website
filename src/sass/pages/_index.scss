@@ -99,7 +99,7 @@ html body.home {
             .btn {
                 font-size: 24px;
                 line-height: 63px;
-                padding: 0 12px;
+                padding: 0 6px;
                 margin: 0 20px 20px 0;
                 min-width: 210px;
                 span {
@@ -781,11 +781,11 @@ html body.home {
             line-height: 67px;
             padding: 0 40px;
             @media screen and (max-width: $break-xs){
-              padding: 0 18px;
+              padding: 0 12px;
             }
             @media screen and (max-width: 320px) {
                 font-size: 20px;
-                padding: 0 18px;
+                padding: 0 12px;
                 max-width: 82%;
             }
         }
@@ -930,12 +930,19 @@ html[lang=en] body.home {
     }
 }
 html[lang=ru] body.home{
+    .keyvisual {
+      h1 {
+        @media screen and (min-width: $break + 1px) and (max-width: 830px){
+          font-size: 42px;
+        }
+      }
+    }
     .box-try {
         .btn {
             font-family: Arial;
             font-size: 24px;
             @media screen and (max-width: $break-xs){
-              font-size: 14px;
+              font-size: 15px;
             }
             span {
                 font-size: 20px;
