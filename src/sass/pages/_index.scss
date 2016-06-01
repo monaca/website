@@ -99,7 +99,7 @@ html body.home {
             .btn {
                 font-size: 24px;
                 line-height: 63px;
-                padding: 0 20px;
+                padding: 0 12px;
                 margin: 0 20px 20px 0;
                 min-width: 210px;
                 span {
@@ -780,9 +780,12 @@ html body.home {
             height: 67px;
             line-height: 67px;
             padding: 0 40px;
+            @media screen and (max-width: $break-xs){
+              padding: 0 18px;
+            }
             @media screen and (max-width: 320px) {
                 font-size: 20px;
-                padding: 0 30px;
+                padding: 0 18px;
                 max-width: 82%;
             }
         }
@@ -924,5 +927,48 @@ html[lang=en] body.home {
     .keyvisual {
         background: url(../img/index/keyvisual_en.jpg) no-repeat center bottom, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
         background-color: #126faa;
+    }
+}
+html[lang=ru] body.home{
+    .box-try {
+        .btn {
+            font-family: Arial;
+            font-size: 24px;
+            @media screen and (max-width: $break-xs){
+              font-size: 14px;
+            }
+            span {
+                font-size: 20px;
+                @media screen and (max-width: $break-xs){
+                  font-size: 12px;
+                }
+            }
+            @media screen and (max-width: $break-xs) {
+                margin: 0 auto 20px;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+      }
+}
+html[lang=de] body.home{
+  .keyvisual {
+    h1 {
+      @media screen and (max-width: $break-xs) {
+        font-size: 28px;
+      }
+    }
+  }
+  .box-try {
+      .btn {
+        @media screen and (max-width: 320px){
+          font-size: 19px;
+        }
+        span {
+            @media screen and (max-width: 320px){
+              font-size: 18px;
+            }
+        }
+      }
     }
 }
