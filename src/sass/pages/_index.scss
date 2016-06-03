@@ -942,12 +942,17 @@ html[lang=ru] body.home{
             font-family: Arial;
             font-size: 24px;
             @media screen and (max-width: $break-xs){
-              font-size: 15px;
+              font-size: 17px;
+              line-height: 46px;
             }
             span {
                 font-size: 20px;
                 @media screen and (max-width: $break-xs){
-                  font-size: 12px;
+                  display: block;
+                  line-height: 1px;
+                }
+                @media screen and (max-width: $break-xs){
+                  font-size: 17px;
                 }
             }
             @media screen and (max-width: $break-xs) {
