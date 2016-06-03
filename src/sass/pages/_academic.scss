@@ -37,14 +37,18 @@ body.academic {
         line-height: 0;
         position: relative;
         width: 100%;
-        a {
-          display: block;
+        .box-try {
+          padding: 0;
           position: absolute;
           top: 319px;
           left: 50%;
-          margin-left: -395px;
-          border-radius: 4px;
-          background-color: #FFF;
+          margin-left: -405px;
+          a {
+            background-color: #468fff;
+          }
+          .btn-blue:hover {
+            background-color: #5f9eff;
+          }
         }
       }
       .container {
@@ -156,7 +160,7 @@ body.academic {
       }
       .showcase {
         width: 933px;
-        margin: 0 auto 67px;
+        margin: 0 auto 50px;
         border: 1px solid #e0e0e0;
         border-radius: 4px;
         text-align: left;
@@ -316,5 +320,11 @@ body.academic {
       .btn-academic.btn-academic02 {
         margin-bottom: 80px;
       }
-}
+  }
+  .box-try {
+    padding-top: 40px;
+    .btn {
+      padding: 0 25px;
+    }
+  }
 }
