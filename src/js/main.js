@@ -41,6 +41,16 @@ function displayBody() {
   $('body').css('visibility', 'visible');
 }
 
+function showLoading(content_id, loading_id) {
+  $('#' + content_id).css('visibility', 'hidden');
+  $('#' + loading_id).css('display', 'block');
+}
+
+function hideLoading(content_id, loading_id) {
+    $('#' + content_id).css('visibility', 'visible');
+    $('#' + loading_id).css('display', 'none');
+}
+
 function setNotificationHeader() {
   $.ajax({
     type: 'GET',

@@ -6,6 +6,8 @@
     var initFormData;
 
     loginData.autoDisplay = false;
+    displayBody();
+    showLoading("support-inquiry", "loading");
 
     loginData.onReady(function() {
       $.ajax({
@@ -16,6 +18,8 @@
         },
         dataType: "json",
         success: function(msg) {
+          hideLoading("support-inquiry", "loading");
+
           if (msg.result && msg.result.initOK) {
             initFormData = msg.result.initOK;
             displayForm(initFormData);
@@ -24,6 +28,7 @@
           displayUnknownError();
         },
         error: function(msg) {
+          hideLoading("support-inquiry", "loading");
           displayUnknownError();
         }
       });
@@ -101,6 +106,8 @@
     var initFormData;
 
     loginData.autoDisplay = false;
+    displayBody();
+    showLoading("support-tech", "loading");
 
     if (tag != 'bugs') {
       tag = 'technical';
@@ -114,6 +121,7 @@
 
     loginData.onReady(function() {
       if (!loginData.status.isLogin) {
+        hideLoading("support-tech", "loading");
         return;
       }
 
@@ -128,6 +136,8 @@
         },
         dataType: "json",
         success: function(msg) {
+          hideLoading("support-tech", "loading");
+
           if (msg.result && msg.result.initOK) {
             initFormData = msg.result.initOK;
             setTicket(initFormData);
@@ -144,6 +154,7 @@
           }
         },
         error: function(msg) {
+          hideLoading("support-tech", "loading");
           displayUnknownError();
         }
       });
