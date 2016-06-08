@@ -327,6 +327,7 @@ html[lang=ja] {
 }
 html[lang=ru] {
   .navbar-nav > li > a {
+    font-family: Open Sans;
     @media screen and (max-width: 913px) {
       font-size: 14px;
     }
@@ -336,6 +337,9 @@ html[lang=ru] {
     @media screen and (max-width: 802px) {
       font-size: 12px;
     }
+  }
+  .navbar-nav > li > .dropdown-menu > li > a {
+    font-family: Open Sans;
   }
 }
 html[lang=de] {

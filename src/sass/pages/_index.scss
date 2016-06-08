@@ -949,26 +949,26 @@ html[lang=ru] body.home{
     }
     .box-try {
         .btn {
-            font-family: Arial;
-            font-size: 24px;
+            font-family: Open Sans;
+            height: 80px;
+            font-size: 22px;
+            line-height: 26px;
+            padding: 13px 20px 0px;
             @media screen and (max-width: $break-xs){
-              font-size: 17px;
+              font-size: 19px;
               line-height: 46px;
+              padding: 4px 20px 0px;
+              margin: 0 auto 20px;
+              width: 100%;
+              max-width: 300px;
             }
             span {
                 font-size: 20px;
+                display: block;
                 @media screen and (max-width: $break-xs){
-                  display: block;
                   line-height: 1px;
+                  font-size: 19px;
                 }
-                @media screen and (max-width: $break-xs){
-                  font-size: 17px;
-                }
-            }
-            @media screen and (max-width: $break-xs) {
-                margin: 0 auto 20px;
-                width: 100%;
-                max-width: 300px;
             }
         }
       }
