@@ -17,9 +17,9 @@
     "signup": "Зарегистрироваться",
     "signupFree": "Бесплатная регистрация <span class='small'>(gratis)</span>",
 
-    "urlPricing": "https://monaca.mobi/en/pricing",
-    "urlBlog": "https://monaca.mobi/en/blog",
-    "urlSupport": "https://monaca.mobi/en/support/index",
-    "urlLogin": "https://monaca.mobi/en/login",
-    "urlSignup": "https://monaca.mobi/en/register/start"
+    "urlPricing": "/pricing.html",
+    "urlBlog": "https://onsen.io/blog/",
+    "urlSupport": "/support.html",
+    "urlLogin": "/login/",
+    "urlSignup": "/register/start.html"
 }
