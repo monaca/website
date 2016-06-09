@@ -951,24 +951,50 @@ html[lang=ru] body.home{
         .btn {
             font-family: Open Sans;
             height: 80px;
-            font-size: 22px;
-            line-height: 26px;
-            padding: 13px 20px 0px;
+            padding: 0px 25px 0px;
             @media screen and (max-width: $break-xs){
-              font-size: 19px;
-              line-height: 46px;
-              padding: 4px 20px 0px;
-              margin: 0 auto 20px;
-              width: 100%;
-              max-width: 300px;
+              height: 70px;
+              padding: 0;
             }
-            span {
-                font-size: 20px;
-                display: block;
-                @media screen and (max-width: $break-xs){
-                  line-height: 1px;
-                  font-size: 19px;
-                }
+            .upper {
+              font-size: 22px;
+              height: 22px;
+              line-height: 22px;
+              margin-top: 14px;
+              @media screen and (max-width: $break-xs) {
+                font-size: 19px;
+                height: 20px;
+                line-height: 20px;
+                margin-top: 12px;
+              }
+            }
+            .upper2 {
+              @media screen and (max-width: 360px) {
+                  font-size: 16px;
+                  height: 17px;
+                  line-height: 17px;
+                  margin-top: 15px;
+              }
+            }
+            .lower {
+              font-size: 20px;
+              height: 20px;
+              line-height: 20px;
+              margin-top: 6px;
+              @media screen and (max-width: $break-xs){
+                font-size: 18px;
+                height: 18px;
+                line-height: 18px;
+                margin-top: 4px;
+              }
+            }
+            .lower2 {
+              @media screen and (max-width: 360px) {
+                  font-size: 17px;
+                  height: 17px;
+                  line-height: 17px;
+                  margin-top: 5px;
+              }
             }
         }
       }
