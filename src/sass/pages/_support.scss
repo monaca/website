@@ -7,6 +7,7 @@ body.support {
     h1 {
       font-weight: 400;
       margin-bottom: 10px;
+      padding-top: 150px;
       text-align: left;
       text-shadow: 0 0 10px rgba(255, 255, 255, 1);
       @media screen and (max-width: $break) {
@@ -29,7 +30,7 @@ body.support {
   }
   article.main {
     section {
-      padding-top: 0px;
+      /* padding-top: 0px; */
       padding-bottom: 80px;
       border: none;
       &:first-child {
@@ -66,7 +67,7 @@ body.support {
         }
       }
       &.forum {
-        background: url(../img/support/img_4.jpg) no-repeat center 330px;
+        background: url(../img/support/img_4.jpg) no-repeat center 360px;
         min-height: 670px;
         .glyphicon-menu-right {
           font-size: 0.4rem;
