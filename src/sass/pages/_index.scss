@@ -99,7 +99,7 @@ html body.home {
             .btn {
                 font-size: 24px;
                 line-height: 63px;
-                padding: 0 6px;
+                //padding: 0 6px;
                 margin: 0 20px 20px 0;
                 min-width: 210px;
                 span {
@@ -932,6 +932,16 @@ html[lang=en] body.home {
 html[lang=ru] body.home{
     .keyvisual {
       h1 {
+        padding-top: 150px;
+        @media screen and (min-width: 958px) and (max-width: 1018px) {
+          font-size: 53px;
+        }
+        @media screen and (min-width: 940px) and (max-width: 957px) {
+          font-size: 52px;
+        }
+        @media screen and (min-width: 831px) and (max-width: 939px) {
+          font-size: 46px;
+        }
         @media screen and (min-width: $break + 1px) and (max-width: 830px){
           font-size: 42px;
         }
@@ -939,26 +949,52 @@ html[lang=ru] body.home{
     }
     .box-try {
         .btn {
-            font-family: Arial;
-            font-size: 24px;
+            font-family: Open Sans;
+            height: 80px;
+            padding: 0px 25px 0px;
             @media screen and (max-width: $break-xs){
-              font-size: 17px;
-              line-height: 46px;
+              height: 70px;
+              padding: 0;
             }
-            span {
-                font-size: 20px;
-                @media screen and (max-width: $break-xs){
-                  display: block;
-                  line-height: 1px;
-                }
-                @media screen and (max-width: $break-xs){
+            .upper {
+              font-size: 22px;
+              height: 22px;
+              line-height: 22px;
+              margin-top: 14px;
+              @media screen and (max-width: $break-xs) {
+                font-size: 19px;
+                height: 20px;
+                line-height: 20px;
+                margin-top: 12px;
+              }
+            }
+            .upper2 {
+              @media screen and (max-width: 360px) {
+                  font-size: 16px;
+                  height: 17px;
+                  line-height: 17px;
+                  margin-top: 15px;
+              }
+            }
+            .lower {
+              font-size: 20px;
+              height: 20px;
+              line-height: 20px;
+              margin-top: 6px;
+              @media screen and (max-width: $break-xs){
+                font-size: 18px;
+                height: 18px;
+                line-height: 18px;
+                margin-top: 4px;
+              }
+            }
+            .lower2 {
+              @media screen and (max-width: 360px) {
                   font-size: 17px;
-                }
-            }
-            @media screen and (max-width: $break-xs) {
-                margin: 0 auto 20px;
-                width: 100%;
-                max-width: 300px;
+                  height: 17px;
+                  line-height: 17px;
+                  margin-top: 5px;
+              }
             }
         }
       }
@@ -966,6 +1002,7 @@ html[lang=ru] body.home{
 html[lang=de] body.home{
   .keyvisual {
     h1 {
+      padding-top: 125px;
       @media screen and (max-width: $break-xs) {
         font-size: 28px;
       }
