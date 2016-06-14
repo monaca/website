@@ -167,7 +167,6 @@ body.showcase-index {
     }
 }
 
-
 body.showcase {
     min-width: 1170px;
     -webkit-text-size-adjust: 100%;
@@ -1068,6 +1067,76 @@ body.showcase.teu {
     }
     article.main .effect {
         background: url(/img/teu/bg_effect.jpg) no-repeat center top;
+    }
+    article.main figure figcaption {
+        margin-bottom: 40px;
+    }
+    article.main .interview {
+        h1 {
+            margin-bottom: 14px;
+        }
+        .alignleft, .alignright {
+            width: 285px;
+        }
+        .name {
+            font-weight: 700;
+            color: #444;
+        }
+    }
+}
+
+body.showcase.jmac {
+    article.main {
+    .backstory {
+            padding: 90px 0 40px;
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+            p {
+                line-height: 1.85;
+                margin-bottom: 7px;
+            }
+            .alignleft, .alignright {
+                width: percentage(500px/1080px);
+            }
+
+        }
+    }
+    article.main header {
+        background-image: url(/img/jmac/icn_app_jmac_ja.png);
+    }
+    article.main .info .info-header h1 {
+        background: rgba(0,0,0,0.7);
+    }
+    article.main .info .info-cont {
+        h1 img {
+            margin-bottom: 10px;
+        }
+        dl dt {
+            width: 120px;
+        }
+    }
+
+    article.main .app-info {
+        padding: 90px 0 40px;
+        background: url(/img/jmac/img_1.jpg) no-repeat right bottom;
+        min-height: 621px;
+        div p {
+            margin: 0 650px 15px 0;
+            &:nth-of-type(2) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    article.main .backstory {
+        img {
+            margin-top: 0;
+        }
+    }
+    article.main .effect {
+        background: url(/img/jmac/bg_effect.jpg) no-repeat center top;
     }
     article.main figure figcaption {
         margin-bottom: 40px;
