@@ -145,9 +145,8 @@ body.pricing article.main {
                 li {
                     font-size: 14px;
                     line-height: 1.1;
-                    width: 100%;
-                    margin-right: 0;
-                    margin-bottom: 12.6px;
+                    width: 90%;
+                    margin: 0 auto 12.6px;
                     float: none;
                     span {
                         color: #575e66;
@@ -155,7 +154,7 @@ body.pricing article.main {
                 }
             }
             .features.free {
-                margin-top: 100.6px;
+                margin-top: 68.6px;
             }
             a {
                 width: 100%;
@@ -419,7 +418,6 @@ body.pricing article.main {
                 }
                 .box-try {
                     padding: 0;
-                    width: 175px;
                     display: inline-block;
                     float: right;
                     @media screen and (max-width: 1070px) {
@@ -427,8 +425,8 @@ body.pricing article.main {
                     }
                     a {
                         margin: 0;
-                        min-width: 175px;
                         height: 38px;
+                        min-width: 175px;
                         font-size: 14px;
                         line-height: 38px;
                         padding: 0;
@@ -706,7 +704,69 @@ html[lang=en] {
         }
         .amount,
         .period {
-            font-family: "Lato";
+            font-family: "Lato" !important;
+        }
+    }
+}
+
+html[lang=ja] {
+    body.pricing article.main {
+    .container {
+        ul.plan.enterprise {
+             .box-1 {
+                 .col-1 {
+                    margin-top: 10px;
+                 }
+                 .col-2 {
+                    p {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        text-align: left;
+                    }
+                 }
+             }
+        }
+        ul.plan {
+            .lato {
+                font-family: "Lato";
+            }
+            .annual {
+                .amount {
+                    font-size: 40px;
+                    font-family: "Lato";
+                    }
+                .period {
+                    font-size: 16px;
+                    }
+                }
+            }
+            .features {
+                li {
+                    text-align: left;
+                }
+            }
+            .additional-plan {
+                .box {
+                    p {
+                        line-height: 1.6em;
+                        width: 280px;
+                        @media screen and (max-width: $break-xs) {
+                            text-align: left;
+                            font-size: 13px;
+                        }
+                    }
+                    .box-try {
+                        a {
+                            padding: 0 10px;
+                            min-width: 0;
+                            box-sizing: border-box;
+                            @media screen and (max-width: $break-xs) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
