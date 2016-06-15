@@ -204,6 +204,7 @@ body.pricing article.main {
                 .col-1 {
                     width: 250px;
                     margin-right: 50px;
+                    margin-top: 25px;
                     float: left;
                     @media screen and (max-width: 1070px) {
                         float: none;
@@ -295,16 +296,17 @@ body.pricing article.main {
         ul.other-plan {
             width: 740px;
             margin: 0 auto 70px;
+            display: flex;
+            justify-content: center;
             @media screen and (max-width: 1070px) {
-                width: 502px;
+                width: 340px;
+                display: block;
             }
             @media screen and (max-width: $break-xs) {
-                width: 360px;
+                width: 90%;
                 margin-right: auto;
                 margin-left: auto;
             }
-            display: flex;
-            justify-content: center;
 
             .box-1 {
                 width: 340px;
@@ -347,7 +349,7 @@ body.pricing article.main {
                 width: 502px;
             }
             @media screen and (max-width: $break-xs) {
-                width: 360px;
+                width: 90%;
             }
             h2 {
                 font-size: 18px;
@@ -393,7 +395,7 @@ body.pricing article.main {
             .box {
                 border: 1px solid #dcdcdc;
                 border-radius: 4px;
-                padding: 15px 20px;
+                padding: 20px 20px 15px;
                 background-color: #f0f0f0;
                 text-align: left;
                 @media screen and (max-width: 1070px) {
@@ -412,13 +414,19 @@ body.pricing article.main {
                         width: 100%;
                         text-align: center;
                         margin-bottom: 10px;
+                        line-height:1.4;
                     }
                 }
                 .box-try {
                     padding: 0;
                     width: 175px;
                     display: inline-block;
+                    float: right;
+                    @media screen and (max-width: 1070px) {
+                        float: none;
+                    }
                     a {
+                        margin: 0;
                         min-width: 175px;
                         height: 38px;
                         font-size: 14px;
@@ -683,6 +691,22 @@ body.pricing.compare article.main {
             font-size: 12px;
             padding: 10px 12px;
             text-align: left;
+        }
+    }
+}
+
+html[lang=en] {
+    body.pricing article.main {
+    .container {
+        ul.column-4 {
+            .box-1 {
+                height: 500px;
+                }
+            }
+        }
+        .amount,
+        .period {
+            font-family: "Lato";
         }
     }
 }
