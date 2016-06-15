@@ -145,16 +145,13 @@ body.pricing article.main {
                 li {
                     font-size: 14px;
                     line-height: 1.1;
-                    width: 90%;
+                    width: 100%;
                     margin: 0 auto 12.6px;
                     float: none;
                     span {
                         color: #575e66;
                     }
                 }
-            }
-            .features.free {
-                margin-top: 68.6px;
             }
             a {
                 width: 100%;
@@ -273,7 +270,7 @@ body.pricing article.main {
                         }
                         &:nth-of-type(2) {
                             margin-left: 170px;
-                            margin-top: 32px;
+                            margin-top: 50px;
                             @media screen and (max-width: 1070px) {
                                 text-align: center;
                                 margin-right: auto;
@@ -702,6 +699,9 @@ html[lang=en] {
                 }
             }
         }
+        .features.free {
+            margin-top: 100.6px;
+        }
         .amount,
         .period {
             font-family: "Lato" !important;
@@ -714,6 +714,7 @@ html[lang=ja] {
     .container {
         ul.plan.enterprise {
              .box-1 {
+                padding: 20px 20px 15px;
                  .col-1 {
                     margin-top: 10px;
                  }
@@ -729,20 +730,23 @@ html[lang=ja] {
         ul.plan {
             .lato {
                 font-family: "Lato";
+                font-size: 17px;
             }
             .annual {
                 .amount {
                     font-size: 40px;
                     font-family: "Lato";
+                    span {
+                        letter-spacing: -1.5px;
+                        }
                     }
                 .period {
+                    margin: 0 0 0 -5px;
                     font-size: 16px;
                     }
                 }
-            }
-            .features {
-                li {
-                    text-align: left;
+                .features.free {
+                    margin-top: 68.6px;
                 }
             }
             .additional-plan {
