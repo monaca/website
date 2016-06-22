@@ -328,13 +328,13 @@ html[lang=ja] {
 html[lang=ru] {
   .navbar-nav > li > a {
     font-family: Open Sans;
-    @media screen and (max-width: 913px) {
+    @media screen and (max-width: 1000px) {
       font-size: 14px;
     }
-    @media screen and (max-width: 838px) {
+    @media screen and (max-width: 900px) {
       font-size: 13px;
     }
-    @media screen and (max-width: 802px) {
+    @media screen and (max-width: 850px) {
       font-size: 12px;
     }
   }
@@ -344,35 +344,29 @@ html[lang=ru] {
 }
 html[lang=de] {
   .navbar-nav > li > a {
-    @media screen and (max-width: 941px) {
-      font-size: 15px;
-    }
-    @media screen and (max-width: 902px) {
+    @media screen and (max-width: 1000px) {
       font-size: 14px;
     }
-    @media screen and (max-width: 863px) {
+    @media screen and (max-width: 900px) {
       font-size: 13px;
     }
-    @media screen and (max-width: 824px) {
+    @media screen and (max-width: 850px) {
       font-size: 12px;
     }
-    @media screen and (max-width: 784px) {
+    @media screen and (max-width: 800px) {
       font-size: 11px;
     }
   }
 }
 html[lang=es] {
   .navbar-nav > li > a {
-    @media screen and (max-width: 922px) {
-      font-size: 15px;
-    }
-    @media screen and (max-width: 884px) {
+    @media screen and (max-width: 1000px) {
       font-size: 14px;
     }
-    @media screen and (max-width: 847px) {
+    @media screen and (max-width: 900px) {
       font-size: 13px;
     }
-    @media screen and (max-width: 808px) {
+    @media screen and (max-width: 850px) {
       font-size: 11px;
     }
   }
