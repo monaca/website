@@ -89,8 +89,8 @@ body.pricing article.main {
                     font-size: 24px;
                     line-height: 1;
                     position: relative;
-                    bottom: 16px;
-                    margin-left: 15px;
+                    bottom: 18px;
+                    margin: 0 -0.1em 0 15px;
                 }
                 .amount {
                     font-size: 50px;
@@ -173,7 +173,7 @@ body.pricing article.main {
                 width: 284px;
             }
             h2 {
-                margin-bottom: 15px;
+                margin-bottom: 10px;
             }
             .currency {
                 margin-left: -10px;
@@ -706,6 +706,13 @@ html[lang=en] {
         .period {
             font-family: "Lato" !important;
         }
+        ul.plan {
+            .annual {
+                .amount {
+                    margin-right: -0.1em;
+                } 
+            } 
+        }
     }
 }
 
@@ -737,7 +744,7 @@ html[lang=ja] {
                     font-size: 40px;
                     font-family: "Lato";
                     span {
-                        letter-spacing: -1.5px;
+                        margin: 0 -0.05em;
                         }
                     }
                 .period {
