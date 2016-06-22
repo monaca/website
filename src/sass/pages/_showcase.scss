@@ -1155,6 +1155,67 @@ body.showcase.jmac {
     }
 }
 
+body.showcase.kdl {
+    article.main header {
+        padding: 10px 0 0 155px;
+        background-image: url(/img/kdl/icn_app_kdl_ja.png);
+        img {
+            width: 200px;
+        }
+    }
+    article.main .info .info-header h1 {
+        background: rgba(0,0,0,0.7);
+    }
+    article.main .info .info-cont {
+        h1 {
+            margin:15px 0 0 10px;
+            width: 108px;
+            float: left;
+        }
+        dl, p {
+            margin-left: 148px;
+        }
+        dl dt {
+            width: 70px;
+        }
+    }
+
+    article.main .app-info {
+        padding: 90px 0 40px;
+        background: url(/img/kdl/img_1.jpg) no-repeat right bottom;
+        min-height: 621px;
+        div p {
+            margin: 0 650px 15px 0;
+            &:nth-of-type(2) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    article.main .backstory {
+        img {
+            margin-top: 0;
+        }
+    }
+    article.main .effect {
+        background: url(/img/kdl/bg_effect.jpg) no-repeat center top;
+    }
+    article.main figure figcaption {
+        margin-bottom: 40px;
+    }
+    article.main .interview {
+        h1 {
+            margin-bottom: 14px;
+        }
+        .alignleft, .alignright {
+            width: 285px;
+        }
+        .name {
+            font-weight: 700;
+            color: #444;
+        }
+    }
+}
+
 body.showcase.showcase {
     .container {
         min-width: auto;
