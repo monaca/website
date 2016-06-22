@@ -1157,15 +1157,18 @@ body.showcase.jmac {
 
 body.showcase.kdl {
     article.main header {
-        padding: 10px 0 0 125px;
+        padding: 10px 0 0 155px;
         background-image: url(/img/kdl/icn_app_kdl_ja.png);
+        img {
+            width: 200px;
+        }
     }
     article.main .info .info-header h1 {
         background: rgba(0,0,0,0.7);
     }
     article.main .info .info-cont {
         h1 {
-            margin:15px 0 0;
+            margin:15px 0 0 10px;
             width: 108px;
             float: left;
         }
