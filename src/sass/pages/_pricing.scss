@@ -89,8 +89,8 @@ body.pricing article.main {
                     font-size: 24px;
                     line-height: 1;
                     position: relative;
-                    bottom: 16px;
-                    margin-left: 15px;
+                    bottom: 18px;
+                    margin: 0 -0.1em 0 15px;
                 }
                 .amount {
                     font-size: 50px;
@@ -146,16 +146,12 @@ body.pricing article.main {
                     font-size: 14px;
                     line-height: 1.1;
                     width: 100%;
-                    margin-right: 0;
-                    margin-bottom: 12.6px;
+                    margin: 0 auto 12.6px;
                     float: none;
                     span {
                         color: #575e66;
                     }
                 }
-            }
-            .features.free {
-                margin-top: 100.6px;
             }
             a {
                 width: 100%;
@@ -177,7 +173,7 @@ body.pricing article.main {
                 width: 284px;
             }
             h2 {
-                margin-bottom: 15px;
+                margin-bottom: 10px;
             }
             .currency {
                 margin-left: -10px;
@@ -204,6 +200,7 @@ body.pricing article.main {
                 .col-1 {
                     width: 250px;
                     margin-right: 50px;
+                    margin-top: 25px;
                     float: left;
                     @media screen and (max-width: 1070px) {
                         float: none;
@@ -273,7 +270,7 @@ body.pricing article.main {
                         }
                         &:nth-of-type(2) {
                             margin-left: 170px;
-                            margin-top: 32px;
+                            margin-top: 50px;
                             @media screen and (max-width: 1070px) {
                                 text-align: center;
                                 margin-right: auto;
@@ -295,16 +292,17 @@ body.pricing article.main {
         ul.other-plan {
             width: 740px;
             margin: 0 auto 70px;
+            display: flex;
+            justify-content: center;
             @media screen and (max-width: 1070px) {
-                width: 502px;
+                width: 340px;
+                display: block;
             }
             @media screen and (max-width: $break-xs) {
-                width: 360px;
+                width: 90%;
                 margin-right: auto;
                 margin-left: auto;
             }
-            display: flex;
-            justify-content: center;
 
             .box-1 {
                 width: 340px;
@@ -347,7 +345,7 @@ body.pricing article.main {
                 width: 502px;
             }
             @media screen and (max-width: $break-xs) {
-                width: 360px;
+                width: 90%;
             }
             h2 {
                 font-size: 18px;
@@ -393,7 +391,7 @@ body.pricing article.main {
             .box {
                 border: 1px solid #dcdcdc;
                 border-radius: 4px;
-                padding: 15px 20px;
+                padding: 20px 20px 15px;
                 background-color: #f0f0f0;
                 text-align: left;
                 @media screen and (max-width: 1070px) {
@@ -412,15 +410,20 @@ body.pricing article.main {
                         width: 100%;
                         text-align: center;
                         margin-bottom: 10px;
+                        line-height:1.4;
                     }
                 }
                 .box-try {
                     padding: 0;
-                    width: 175px;
                     display: inline-block;
+                    float: right;
+                    @media screen and (max-width: 1070px) {
+                        float: none;
+                    }
                     a {
-                        min-width: 175px;
+                        margin: 0;
                         height: 38px;
+                        min-width: 175px;
                         font-size: 14px;
                         line-height: 38px;
                         padding: 0;
@@ -683,6 +686,102 @@ body.pricing.compare article.main {
             font-size: 12px;
             padding: 10px 12px;
             text-align: left;
+        }
+    }
+}
+
+html[lang=en] {
+    body.pricing article.main {
+    .container {
+        ul.column-4 {
+            .box-1 {
+                height: 500px;
+                }
+            }
+        }
+        .features.free {
+            margin-top: 100.6px;
+        }
+        .amount,
+        .period {
+            font-family: 'Lato', 'Helvetica Neue', Helvetica, Verdana, sans-serif !important;
+        }
+        ul.plan {
+            .annual {
+                .amount {
+                    margin-right: -0.1em;
+                } 
+            } 
+        }
+    }
+}
+
+html[lang=ja] {
+    body.pricing article.main {
+    .container {
+        ul.plan.enterprise {
+             .box-1 {
+                padding: 20px 20px 15px;
+                 .col-1 {
+                    margin-top: 10px;
+                 }
+                 .col-2 {
+                    p {
+                        font-size: 16px;
+                        line-height: 1.5;
+                        text-align: left;
+                    }
+                 }
+             }
+        }
+        ul.plan {
+            .lato {
+                font-family: 'Lato', 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+                font-size: 17px;
+            }
+            .annual {
+                margin-left: 1em;
+                &.basic {
+                    margin-left: 0;
+                }
+                .amount {
+                    font-size: 40px;
+                    font-family: 'Lato', 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+                    span {
+                        margin: 0 -0.05em;
+                        }
+                    }
+                .period {
+                    margin: 0 0 0 -5px;
+                    font-size: 16px;
+                    }
+                }
+                .features.free {
+                    margin-top: 68.6px;
+                }
+            }
+            .additional-plan {
+                .box {
+                    p {
+                        line-height: 1.6em;
+                        width: 280px;
+                        @media screen and (max-width: $break-xs) {
+                            text-align: left;
+                            font-size: 13px;
+                        }
+                    }
+                    .box-try {
+                        a {
+                            padding: 0 10px;
+                            min-width: 0;
+                            box-sizing: border-box;
+                            @media screen and (max-width: $break-xs) {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
