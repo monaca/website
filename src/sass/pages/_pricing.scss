@@ -740,6 +740,10 @@ html[lang=ja] {
                 font-size: 17px;
             }
             .annual {
+                margin-left: 1em;
+                &.basic {
+                    margin-left: 0;
+                }
                 .amount {
                     font-size: 40px;
                     font-family: 'Lato', 'Helvetica Neue', Helvetica, Verdana, sans-serif;
