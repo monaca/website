@@ -178,6 +178,51 @@ body.cloud {
         width: auto;
       }
     }
+
+    .a-type {
+      .box-uservoices {
+        width: 1170px;
+        @media screen and (max-width: 1300px) {
+          padding-left: 5%;
+          padding-right: 5%;
+          width: auto;
+        }
+        @media screen and (max-width: $break-lg) {
+          .column-3 {
+            margin: 0 auto;
+            width: 46.875%;
+            box-sizing: border-box;
+            @media screen and (max-width: $break) {
+              width: 100%;
+            }
+            li {
+              margin: 0 0 20%;
+              width: 100%;
+              box-sizing: border-box;
+            }
+          }
+        }
+      }
+    }
+
+    .b-type {
+      .box-uservoices {
+        width: 1170px;
+        @media screen and (max-width: 1300px) {
+          padding-left: 5%;
+          padding-right: 5%;
+          width: auto;
+        }
+        @media screen and (max-width: $break-lg) {
+          .column-3 {
+            li {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
     .box-try {
       padding: 20px 0 40px;
       .btn {
@@ -207,6 +252,6 @@ html[lang=en] body.cloud {
       background-image: url(../img/cloud/img_1_en.jpg);
       background-position: center bottom;
       background-position: center bottom 40px;
-    } 
+    }
   }
 }
