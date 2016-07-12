@@ -45,9 +45,17 @@ body.debugger {
     }
     article.main {
         section {
+            h1 {
+                padding-left: 5%;
+                padding-right: 5%;
+                box-sizing: border-box;
+            }
             h2 {
                 color: #666;
                 font-size: 30px;
+                padding-left: 5%;
+                padding-right: 5%;
+                box-sizing: border-box;
             }
             p {
                 text-align: left;
