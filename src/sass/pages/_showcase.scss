@@ -16,7 +16,8 @@ body.showcase-index {
         @media screen and (max-width: $break-xs) {
             padding-left: 5%;
             padding-right: 5%;
-            width: auto;
+            width: 100%;
+            box-sizing: border-box;
         }
         > h1 {
             font-size: 50px;
@@ -180,6 +181,12 @@ body.showcase {
         padding: 100px 0px 0;
         text-align: left;
         width: 1080px;
+        @media screen and (max-width: $break) {
+            padding-left: 5%;
+            padding-right: 5%;
+            width: 100%;
+            box-sizing: border-box;
+        }
         header {
             background: none no-repeat left top;
             font-size: 26px;
@@ -207,6 +214,9 @@ body.showcase {
         }
         h1 {
             margin-bottom: 34px;
+            @media screen and (max-width: $break) {
+                margin-bottom: 5%;
+            }
             text-align: left;
             max-height: 100%;
         }
@@ -270,12 +280,20 @@ body.showcase {
                 vertical-align: bottom;
                 width: 1078px;
                 height: 448px;
+                @media screen and (max-width: $break) {
+                    width: 100%;
+                    height: auto;
+                }
             }
             .info-header {
                 width: 1078px;
                 height: 448px;
                 position: relative;
-                h1 {
+                @media screen and (max-width: $break) {
+                    width: 100%;
+                    height: auto;
+                }
+                h1.pc-copy {
                     background-color: rgba(0, 0, 0, 0.7);
                     width: 100%;
                     margin: 0;
@@ -285,6 +303,29 @@ body.showcase {
                     position: absolute;
                     left: 0;
                     bottom: 0;
+                    @media screen and (max-width: $break) {
+                        display: none;
+                    }
+                    @media screen and (max-width: $break-xs) {
+                        display: none;
+                    }
+                }
+            }
+            h1.sp-copy {
+                display: none;
+                @media screen and (max-width: $break) {
+                    padding: 4%;
+                    margin: 0;
+                    font-size: 36px;
+                    display: block;
+                    color: #fff;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    width: 100%;
+                    border: none;
+                    box-sizing: border-box;
+                }
+                @media screen and (max-width: $break-xs) {
+                    font-size: 24px;
                 }
             }
             .info-cont {
@@ -375,6 +416,9 @@ body.showcase {
                 line-height: 1.85;
                 margin-bottom: 30px;
                 margin-left: 34px;
+                @media screen and (max-width: $break) {
+                    margin-left: 0;
+                }
             }
             figure {
                 width: percentage(365px/1080px);
@@ -412,10 +456,19 @@ body.showcase {
         }
         .nowrap {
             overflow: hidden;
+            @media screen and (max-width: $break-xs) {
+                overflow: visible;
+            }
         }
     }
     .container {
         min-width: 1080px;
+        @media screen and (max-width: $break) {
+            width: 100%;
+        }
+        @media screen and (max-width: $break-xs) {
+            width: 100%;
+        }
     }
     .ls-900 {
         letter-spacing: -0.9em;
@@ -1089,6 +1142,9 @@ body.showcase.jmac {
     article.main {
     .backstory {
             padding: 90px 0 40px;
+            @media screen and (max-width: $break-xs) {
+                padding: 0 0 40px;
+            }
             &:after {
                 content: "";
                 clear: both;
@@ -1116,17 +1172,48 @@ body.showcase.jmac {
         }
         dl dt {
             width: 120px;
+            @media screen and (max-width: $break-xs) {
+                width: 20%;
+                float: left;
+            }
         }
+        dd {
+                @media screen and (max-width: $break) {
+                width: 78%;
+                float: left;
+                }
+            }
     }
 
     article.main .app-info {
         padding: 90px 0 40px;
         background: url(/img/jmac/img_1.jpg) no-repeat right bottom;
         min-height: 621px;
-        div p {
+            @media screen and (max-width: $break) {
+                background: none;
+            }
+            @media screen and (max-width: $break-xs) {
+                background: none;
+            }
+        div {
+            .sp-img {
+                display: none;
+                @media screen and (max-width: $break) {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            p {
             margin: 0 650px 15px 0;
+            @media screen and (max-width: $break) {
+                margin: 0 0 15px 0;
+            }
+            @media screen and (max-width: $break-xs) {
+                margin: 0 0 15px 0;
+            }
             &:nth-of-type(2) {
                 margin-bottom: 0;
+                }
             }
         }
     }
@@ -1134,9 +1221,35 @@ body.showcase.jmac {
         img {
             margin-top: 0;
         }
+        .pc-img {
+            display: block;
+            @media screen and (max-width: $break) {
+                display: none;
+            }
+            @media screen and (max-width: $break-xs) {
+                display: none;
+            }
+        }
+        .sp-img {
+            display: none;
+            @media screen and (max-width: $break) {
+                display: block;
+                margin: 8% auto 8%;
+            }
+        }
     }
     article.main .effect {
         background: url(/img/jmac/bg_effect.jpg) no-repeat center top;
+        @media screen and (max-width: $break) {
+            background: -moz-linear-gradient(top, #136dac 0%, #0e578a 100%);
+            background: -webkit-linear-gradient(top, #136dac 0%,#0e578a 100%);
+            background: linear-gradient(to bottom, #136dac 0%,#0e578a 100%);
+        }
+        @media screen and (max-width: $break-xs) {
+            background: -moz-linear-gradient(top, #136dac 0%, #0e578a 100%);
+            background: -webkit-linear-gradient(top, #136dac 0%,#0e578a 100%);
+            background: linear-gradient(to bottom, #136dac 0%,#0e578a 100%);
+        }
     }
     article.main figure figcaption {
         margin-bottom: 40px;
@@ -1147,10 +1260,39 @@ body.showcase.jmac {
         }
         .alignleft, .alignright {
             width: 285px;
+            @media screen and (max-width: $break) {
+                display: none;
+            }
+            @media screen and (max-width: $break-xs) {
+                display: none;
+            }
         }
         .name {
             font-weight: 700;
             color: #444;
+        }
+    }
+    .sp-interview {
+        display: none;
+        @media screen and (max-width: $break) {
+            display: block;
+            width: 100%;
+            dl {
+                width: 285px;
+                float: left;
+            }
+            dl:nth-of-type(2) {
+                float: right;
+            }
+        }
+        @media screen and (max-width: $break-xs) {
+            dl {
+                margin: 0 auto 5%;
+                float: none;
+            }
+            dl:nth-of-type(2) {
+                float: none;
+            }
         }
     }
 }
@@ -1219,6 +1361,14 @@ body.showcase.kdl {
 body.showcase.showcase {
     .container {
         min-width: auto;
+        @media screen and (max-width: $break) {
+            min-width: 0;
+            width: 100%;
+        }
+        @media screen and (max-width: $break-xs) {
+            min-width: 0;
+            width: 100%;
+        }
     }
     #case_add {
         padding: 0;
