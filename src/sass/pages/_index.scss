@@ -451,7 +451,11 @@ html body.home {
             margin-bottom: 40px;
             z-index: 1;
             @media screen and (max-width: $break) {
+                font-size: 30px;
                 font-weight: 400;
+            }
+            @media screen and (max-width: $break-xs) {
+                top: 20px;
             }
         }
         ul {

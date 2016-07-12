@@ -589,6 +589,14 @@ body.pricing.compare article.main {
                 text-align: center;
                 vertical-align: middle;
                 width: 25%;
+                .sp {
+                    display: none;
+                }
+                @media screen and (max-width: $break-xs) {
+                    .sp {
+                        display: block;
+                    }
+                }
                 i {
                     background: url(/img/pricing/icn_check_gray.svg) no-repeat center center;
                     display: inline-block;
@@ -710,8 +718,8 @@ html[lang=en] {
             .annual {
                 .amount {
                     margin-right: -0.1em;
-                } 
-            } 
+                }
+            }
         }
     }
 }
