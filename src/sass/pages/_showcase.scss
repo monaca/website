@@ -115,6 +115,9 @@ body.showcase-index {
                 @media screen and (max-width: $break-xs) {
                     font-size: 16px;
                 }
+                .ml {
+                    margin-left: -7px;
+                }
             }
             .title {
                 color: #08c;
@@ -1212,6 +1215,114 @@ body.showcase.kdl {
         .name {
             font-weight: 700;
             color: #444;
+        }
+    }
+}
+
+body.showcase.netmarketing {
+    article.main {
+    .backstory {
+            padding: 90px 0 40px;
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+            p {
+                line-height: 1.85;
+                margin-bottom: 7px;
+            }
+            .alignleft, .alignright {
+                width: percentage(500px/1080px);
+            }
+
+        }
+    }
+    article.main header {
+        padding: 10px 0 16px 125px;
+        background-image: url(/img/netmarketing/icn_app_netmarketing_ja.png);
+    }
+    article.main .info .info-header h1 {
+        background: rgba(0,0,0,0.7);
+        .ml {
+            margin-left: -25px;
+        }
+    }
+    article.main .info .info-cont {
+        h1 img {
+            margin-bottom: 10px;
+        }
+        dl dt {
+            width: 120px;
+        }
+    }
+
+    .developer {
+        img {
+            float: left;
+            vertical-align: bottom;
+        }
+        em {
+            margin: 20px 0 0 20px;
+            float: left;
+        }
+        a {
+            margin: 20px 0 0;
+            float: left;
+        }
+    }
+
+    article.main .app-info {
+        padding: 90px 0 40px;
+        background: url(/img/netmarketing/img_1.jpg) no-repeat right bottom;
+        min-height: 621px;
+        div p {
+            margin: 0 650px 15px 0;
+            &::first-letter {
+                margin: 0 0 0 -5px;
+            }
+            &:nth-of-type(2) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    article.main .backstory {
+        img {
+            margin-top: 0;
+        }
+        .nowrap {
+            p {
+                &:first-letter {
+                    margin: 0 0 0 -5px;
+                }
+            }
+        }
+    }
+    article.main .effect {
+        background: url(/img/netmarketing/bg_effect.jpg) no-repeat center top;
+    }
+    article.main figure figcaption {
+        margin-bottom: 40px;
+    }
+    article.main .interview {
+        h1 {
+            margin-bottom: 14px;
+        }
+        .alignleft, .alignright {
+            width: 285px;
+        }
+        .name {
+            font-weight: 700;
+            color: #444;
+        }
+        .qa {
+            p {
+                &:nth-of-type(2) {
+                    &:first-letter {
+                        margin-left: -5px;
+                    }
+                }
+            }
         }
     }
 }
