@@ -20,6 +20,9 @@ body.solution-partner {
       padding: 0;
       width: 1170px;
       z-index: 101;
+      @media screen and (max-width: $break) {
+        width: 100%;
+      }
     }
     .partner {
       p {
@@ -170,7 +173,8 @@ body.solution-partner {
         width: 590px;
         margin: 0px 20px 0px 90px;
         @media screen and (max-width: $break) {
-          margin: 0 0 0 4%;
+          padding: 0;
+          margin: 0;
           width: 100%;
           box-sizing: border-box;
         }
@@ -183,6 +187,8 @@ body.solution-partner {
         text-align: left;
         margin-bottom: 6px;
         @media screen and (max-width: $break) {
+          padding: 0 0 0 17%;
+          margin: 0 0 7%;
           font-size: 20px;
           width: 100%;
           box-sizing: border-box;
@@ -245,8 +251,16 @@ body.solution-partner {
         width: 430px;
         padding: 0px;
         @media screen and (max-width: $break) {
+          margin: 0 0 10%;
           width: 100%;
           box-sizing: border-box;
+        }
+        .bold-headline {
+          @media screen and (max-width: $break) {
+            width: 100%;
+            box-sizing: border-box;
+            float: none;
+          }
         }
     }
     .partner-content-right {
@@ -258,6 +272,7 @@ body.solution-partner {
           float: none;
           width: 100%;
           box-sizing: border-box;
+          border-top: 1px solid #e5e5e5;
         }
     }
 
@@ -265,20 +280,72 @@ body.solution-partner {
         width: 260px;
         margin: 0px;
         padding: 0px;
+        @media screen and (max-width: $break) {
+          padding: 5% 0 0;
+          width: 100%;
+        }
     }
     .partner-work-item {
         width: 260px;
         margin: 0px;
         padding: 17px 0px 20px 0px;
         border-top: solid 1px #e5e5e5;
+        @media screen and (max-width: $break) {
+          padding: 4% 0 0;
+          margin: 0 0 5%;
+          width: 100%;
+          position: relative;
+          box-sizing: border-box;
+        }
+        .preparation {
+            position: relative;
+            display: inline-block;
+            padding: 90px 0;
+            text-align: center;
+            background-color: #F2F2F2;
+            border-radius: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            color: #c3c3c3;
+            @media screen and (max-width: $break) {
+              padding: 5% 0;
+            }
+          &:after,
+          &:before {
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 0;
+          }
+          &:after {
+            top: -20px;
+            left: 5px;
+            border: 10px solid transparent;
+            border-bottom: 15px solid #F2F2F2; /*13px*/
+          }
+          &:before {
+            top: -20px;
+            left: 5px;
+            border: 10px solid transparent;
+            border-bottom: 10px solid #ffffff; /*10px*/
+            }
+          }
         &:after{
           content: "";
           clear: both;
           display: block;
         }
+        .bold-headline-title {
+          @media screen and (max-width: $break) {
+            padding: 2% 0 0;
+            margin: 0 0 0 70px;
+            height: 60px;
+            box-sizing: border-box;
+          }
+        }
     }
     .work-item-prof {
-    color: #666;
+        color: #666;
         font-size: 13px;
         line-height: 140%;
         margin: 7px 0px 0px 0px;
@@ -294,10 +361,17 @@ body.solution-partner {
         width: 60px;
         margin: 0px 0px 0px 0px;
         padding: 0px;
+        @media screen and (max-width: $break) {
+          position: absolute;
+          top: 4%;
+        }
     }
     .work-item-info {
         margin: 0px 0px 0px 68px;
         padding: 0px;
+        @media screen and (max-width: $break) {
+          margin: 0;
+        }
         a {
           line-height: 160%;
        }
@@ -311,6 +385,9 @@ body.solution-partner {
         margin: 30px 0px 0px 0px;
         padding: 0px;
         border-radius: 2px;
+        @media screen and (max-width: $break) {
+          width: 100%;
+        }
     }
     .partner-contact-list {
         margin: 11px 15px 11px 15px;
@@ -371,11 +448,31 @@ body.solution-partner {
         margin: -7px 0px 0px 0px;
     }
     .bold-headline {
-    color: #2472b3;
+        margin-right:12px;
+        color: #2472b3;
         font-weight: bold;
+        float: left;
+        @media screen and (max-width: $break) {
+          margin: 0;
+          width: 20%;
+        }
     }
+    .detail-text {
+      @media screen and (max-width: $break) {
+        float: left;
+        width: 80%;
+      }
+    }
+    .two-line {
+      float: left;
+      width: 90%;
+      @media screen and (max-width: $break) {
+        width: 80%;
+      }
+    }
+
     .bold-headline-title {
-    color: #2472b3;
+        color: #2472b3;
         font-weight: bold;
         font-size: 14px;
         line-height: 17.8px;
@@ -566,22 +663,40 @@ body.solution-partner {
     }
   }
   .inquiry {
-    background-color: #f9f9f9;
-    padding: 30px;
+    border-top: 1px solid #ddd;
+    padding: 70px;
+    @media screen and (max-width: $break) {
+      padding: 10% 0;
+    }
   }
   .btn-area {
     text-align: center;
     clear: both;
   }
   .btn-big {
+    height: auto;
+    min-height: 54px;
+    min-width: 210px;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 22px;
     height: 43px;
-    line-height: 43px;
+    line-height: 1.2;
     margin: 0 7px;
-    padding: 0 36px;
+    padding: 12px 36px;
     vertical-align: text-bottom;
     display: inline-block;
+    @media screen and (max-width: $break) {
+      padding: 0 0;
+      margin: 0;
+      height: auto;
+      min-height: 48px;
+      width: 100%;
+      font-size: 16px;
+      line-height: 3;
+      &:first-child {
+        margin: 0 0 5%;
+      }
+    }
   }
 }
 .partner-ribbon1 { background: url(/img/partner/ribbon01.png) no-repeat; }
