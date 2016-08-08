@@ -73,7 +73,7 @@ body.book-support {
             }
         }
         .right-column {
-            width: calc(100% - 500px);
+            width: calc(100% - 450px);
             margin: 0 23px 0 0;
             padding-top: 35px;
             float: right;
@@ -91,7 +91,7 @@ body.book-support {
                 color: #34454b;
                 text-align: left;
                 margin-bottom: 10px;
-                @media screen and (max-width: 900px) {
+                @media screen and (max-width: 950px) {
                     font-size: 27px;
                 }
                 @media screen and (max-width: $break) {
@@ -109,8 +109,14 @@ body.book-support {
                 line-height: 1.2;
                 margin-bottom: 30px;
                 text-align: left;
-                @media screen and (max-width: 900px) {
+                @media screen and (max-width: 1100px){
+                  font-size: 48px;
+                }
+                @media screen and (max-width: 1000px) {
                     font-size: 45px;
+                }
+                @media screen and (max-width: 900px) {
+                    font-size: 43px;
                 }
                 @media screen and (max-width: $break) {
                     text-align: center;
