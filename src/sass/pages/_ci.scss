@@ -405,7 +405,7 @@ html body.ci {
                 padding-top: 25px;
                 width: 200px;
                 @media screen and (max-width: $break-xs) {
-                    width: 110px;
+                    // width: 110px;
                 }
                 h3 {
                     box-sizing: content-box;
@@ -495,7 +495,7 @@ html body.ci {
                 margin-bottom: 70px;
                 width: calc(100% - 200px);
                 @media screen and (max-width: $break-xs) {
-                    width: calc(100% - 117px);
+                    // width: calc(100% - 117px);
                 }
                 $shadow-opacity: 0.18;
                 &.leftshadow {
@@ -519,7 +519,7 @@ html body.ci {
                         width: 520px;
                     }
                     @media screen and (max-width: $break-xs) {
-                        width: 420px;
+                        // width: 400px;
                     }
                     thead {
                         th {
@@ -677,6 +677,30 @@ html body.ci {
 
 
 html[lang=en] body.ci {
+    .box-plan {
+        div.compare-box{
+            .compare-header {
+                @media screen and (max-width: $break-xs) {
+                    width: 90px;
+                }
+            }
+            .compare-cont {
+                @media screen and (max-width: $break-xs) {
+                    width: calc(100% - 95px);
+                }
+                table {
+                    @media screen and (max-width: $break-xs) {
+                        width: 440px;
+                    }
+                    td {
+                        @media screen and (max-width: $break-xs) {
+                            height: 60px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 html[lang=ja] body.ci {
     .section.subfeatures {
@@ -695,6 +719,9 @@ html[lang=ja] body.ci {
     .box-plan {
         div.compare-box{
             .compare-header {
+                @media screen and (max-width: $break-xs) {
+                    width: 110px;
+                }
                 h3 {
                     padding: 10px 25px 2px 0px;
                     @media screen and (max-width: $break-xs) {
@@ -709,7 +736,22 @@ html[lang=ja] body.ci {
                 li {
                     height: 61px;
                     @media screen and (max-width: $break-xs) {
-                        height: 68px;
+                        height: 71px;
+                    }
+                }
+            }
+            .compare-cont {
+                @media screen and (max-width: $break-xs) {
+                    width: calc(100% - 117px);
+                }
+                table {
+                    @media screen and (max-width: $break-xs) {
+                        width: 396px;
+                    }
+                    td {
+                        @media screen and (max-width: $break-xs) {
+                            height: 70px;
+                        }
                     }
                 }
             }
