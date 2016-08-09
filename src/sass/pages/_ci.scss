@@ -39,8 +39,7 @@ html body.ci {
             font-size: 36px;
             margin-bottom: 14px;
             @media screen and (max-width: $break) {
-                line-height: 2.1rem;
-                font-size: 32px;
+                font-size: 34px;
             }
         }
         a {
@@ -406,7 +405,7 @@ html body.ci {
                 padding-top: 25px;
                 width: 200px;
                 @media screen and (max-width: $break-xs) {
-                    width: 150px;
+                    width: 110px;
                 }
                 h3 {
                     box-sizing: content-box;
@@ -423,6 +422,7 @@ html body.ci {
                     text-align: right;
                     @media screen and (max-width: $break-xs) {
                         padding-right: 15px;
+                        font-size: 1.0rem;
                     }
                 }
                 div {
@@ -434,11 +434,11 @@ html body.ci {
                     align-items: flex-end;
                     box-pack: end;
                     justify-content: flex-end;
-                    font-size: 0.88rem;
+                    font-size: 0.9rem;
                     padding: 0px 25px 24px 0px;
                     @media screen and (max-width: $break-xs) {
-                        font-size: 0.75rem;
-                        padding-bottom: 27px;
+                        font-size: 0.9rem;
+                        padding-bottom: 25px;
                     }
                 }
                 ul {
@@ -449,10 +449,15 @@ html body.ci {
                     display: table-row;
                     color: #575e66;
                     height: 61px;
-                    
                     @media screen and (max-width: $break-xs) {
-                        height: 74px;
+                        height: 66px;
                         font-size: 0.68rem;
+                    }
+                    .hidden-xs {
+                        display: none!important;
+                        @media screen and (max-width: $break-xs) {
+                            display: inline!important;
+                        }
                     }
                 }
                 i {
@@ -490,7 +495,7 @@ html body.ci {
                 margin-bottom: 70px;
                 width: calc(100% - 200px);
                 @media screen and (max-width: $break-xs) {
-                    width: calc(100% - 157px);
+                    width: calc(100% - 117px);
                 }
                 $shadow-opacity: 0.18;
                 &.leftshadow {
@@ -514,7 +519,7 @@ html body.ci {
                         width: 520px;
                     }
                     @media screen and (max-width: $break-xs) {
-                        width: 380px;
+                        width: 420px;
                     }
                     thead {
                         th {
@@ -522,15 +527,15 @@ html body.ci {
                             height: 102px;
                             padding-top: 8px;
                             @media screen and (max-width: $break-xs) {
-                                font-size: 0.86rem;
+                                font-size: 1.0rem;
                             }
                             span {
                                 color: #25384c;
                                 display: block;
-                                font-size: 0.88rem;
+                                font-size: 0.9rem;
                                 margin-top: 3px;
                                 @media screen and (max-width: $break-xs) {
-                                    font-size: 0.75rem;
+                                    font-size: 0.9rem;
                                 }
                             }
                             &:nth-child(1) {
@@ -698,7 +703,7 @@ html[lang=ja] body.ci {
                 div {
                     padding: 0px 25px 27px 0px;
                     @media screen and (max-width: $break-xs) {
-                        padding-bottom: 29px;
+                        padding-bottom: 27px;
                     }
                 }
                 li {
@@ -708,26 +713,6 @@ html[lang=ja] body.ci {
                     }
                 }
             }
-            .compare-cont {
-                table {
-                    thead {
-                        th {
-                            font-size: 1.3rem;
-                            @media screen and (max-width: $break-xs) {
-                                font-size: 0.86rem;
-                            }
-                            span {
-                                font-size: 0.8rem;
-                                @media screen and (max-width: $break-xs) {
-                                    font-size: 0.75rem;
-                                }
-                            }
-                        }
-                        
-                    }
-                }
-            }
-
         }
     }
 }
