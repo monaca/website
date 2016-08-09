@@ -605,8 +605,8 @@ html body.ci {
                         vertical-align: middle;
                     }
                     td {
-                        vertical-align: top;
-                        padding: 14px;
+                        vertical-align: middle;
+                        //padding: 14px;
                         span {
                             text-align: left;
                         }
@@ -717,7 +717,7 @@ html[lang=ja] body.ci {
                                 font-size: 0.86rem;
                             }
                             span {
-                                font-size: 0.75rem;
+                                font-size: 0.8rem;
                                 @media screen and (max-width: $break-xs) {
                                     font-size: 0.75rem;
                                 }
