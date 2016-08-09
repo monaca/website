@@ -345,6 +345,17 @@ body.solution-partner {
     padding: 0;
     width: 790px;
     border: none;
+    @media screen and (max-width: $break) {
+        margin: 50px auto;
+        width: 90%;
+        line-height: 1.1;
+      }
+    .break {
+      display: none;
+      @media screen and (max-width: $break) {
+        display: block;
+      }
+    }
   }
   h2 {
     font-size: 30px;
@@ -383,10 +394,34 @@ body.solution-partner {
       .contents {
         width: 790px;
         margin: 0 auto;
+        @media screen and (max-width: $break) {
+          width: 100%;
+        }
+        .btn-area {
+          .btn-blue {
+            margin: 0 10px;
+            padding: 0 15px;
+            font-size: 17px;
+            @media screen and (max-width: $break) {
+              padding: 4% 0;
+              margin: 0 auto;
+              width: 70%;
+              line-height: 0.2;
+              box-sizing: border-box;
+              &:nth-of-type(1) {
+                margin: 0 auto 3%;
+              }
+            }
+          }
+        }
       }
       .logo-partner {
         margin: 50px 0 30px 0;
         float: left;
+        @media screen and (max-width: $break) {
+          margin: 50px 0 10px 0;
+          float: none;
+        }
       }
       .outline-text {
         margin: 0 0 30px 0;
@@ -394,16 +429,27 @@ body.solution-partner {
             margin: 0 0 10px 0;
             float: right;
             width: 480px;
+            @media screen and (max-width: $break) {
+              margin: 0 auto;
+              float: none;
+              width: 90%;
+            }
           }
       }
   }
   .merit {
     width: 790px;
     margin: 0 auto;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
   }
   .merit-item {
     position: relative;
     background: url(/img/partner/line_dotted_vertical.png) repeat-y center top;
+    @media screen and (max-width: $break) {
+      background: none;
+    }
     &:before {
       content: " ";
       width: 790px;
@@ -412,6 +458,9 @@ body.solution-partner {
       left: 0;
       top: -1px;
       background: url(/img/partner/line_dotted_horizon.png) no-repeat 0 0;
+      @media screen and (max-width: $break) {
+        width: 100%;
+      }
     }
     li {
       box-sizing: border-box;
@@ -420,6 +469,9 @@ body.solution-partner {
       text-align: center;
       background-position: 0 0;
       float: left;
+      @media screen and (max-width: $break) {
+        width: 100%;
+      }
     }
     p {
       text-align: left;
