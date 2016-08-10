@@ -349,7 +349,7 @@ body.solution-partner {
     width: 790px;
     border: none;
     @media screen and (max-width: $break) {
-        margin: 50px auto;
+        margin: 13px auto 40px;
         width: 90%;
         line-height: 1.1;
       }
@@ -407,14 +407,21 @@ body.solution-partner {
             padding: 0 15px;
             font-size: 17px;
             @media screen and (max-width: $break) {
-              padding: 4% 0;
+              padding: 6% 0;
               margin: 0 auto;
-              width: 70%;
-              line-height: 0.5;
+              width: 300px;
+              font-size: 24px;
+              line-height: 0;
               box-sizing: border-box;
               &:nth-of-type(1) {
                 margin: 0 auto 3%;
               }
+            }
+            @media screen and (max-width: $break-lg) {
+              width: 70%;
+            }
+            @media screen and (max-width: $break-xs) {
+              width: 300px;
             }
           }
         }
@@ -423,7 +430,7 @@ body.solution-partner {
         margin: 50px 0 30px 0;
         float: left;
         @media screen and (max-width: $break) {
-          margin: 50px 0 10px 0;
+          margin: 50px 0 10px 3%;
           float: none;
         }
       }
@@ -457,6 +464,12 @@ body.solution-partner {
     @media screen and (max-width: $break) {
       background: none;
     }
+    @media screen and (max-width: $break-lg) {
+      background: url(/img/partner/line_dotted_vertical.png) repeat-y center top;
+    }
+    @media screen and (max-width: $break-xs) {
+      background: none;
+    }
     &:before {
       content: " ";
       width: 790px;
@@ -481,6 +494,14 @@ body.solution-partner {
         width: 100%;
         box-sizing: border-box;
       }
+      @media screen and (max-width: $break-lg) {
+        padding: 5% 7%;
+        width: 50%;
+        box-sizing: border-box;
+      }
+      @media screen and (max-width: $break-xs) {
+        width: 100%;
+      }
     }
     p {
       text-align: left;
@@ -491,7 +512,16 @@ body.solution-partner {
       }
     }
     &.free-item {
-      /*background: url(/img/partner/line_dotted_bg.png) no-repeat right 0;*/
+      background: url(/img/partner/line_dotted_bg.png) no-repeat right 0;
+      @media screen and (max-width: $break) {
+        background: none;
+      }
+      @media screen and (max-width: $break-lg) {
+        background: url(/img/partner/line_dotted_vertical_bottom.png) repeat-y center top;
+      }
+      @media screen and (max-width: $break-xs) {
+        background: none;
+      }
     }
   }
   .notes {
@@ -547,13 +577,20 @@ body.solution-partner {
       padding: 0 4px;
       font-size: 17px;
       @media screen and (max-width: $break) {
-        padding: 5% 0;
+        padding: 6% 0;
         margin: 0 auto 5%;
-        width: 100%;
-        line-height: 0.5;
+        width: 300px;
+        line-height: 0;
+        font-size: 24px;
         &:nth-of-type(2) {
           margin: 0 auto;
         }
+      }
+      @media screen and (max-width: $break-lg) {
+        width: 70%;
+      }
+      @media screen and (max-width: $break-xs) {
+        width: 300px;
       }
     }
   }
@@ -612,11 +649,26 @@ body.solution-partner {
   @media screen and (max-width: $break) {
     border-top: dotted 1px #ccc;
   }
+  @media screen and (max-width: $break-lg) {
+    border-top: none;
+  }
+  @media screen and (max-width: $break-xs) {
+    border-top: dotted 1px #ccc;
+  }
 }
 .partner-ribbon6 {
   @media screen and (max-width: $break) {
     border-top: dotted 1px #ccc;
     border-bottom: dotted 1px #ccc;
     background: #f9f9f9;
+  }
+  @media screen and (max-width: $break-lg) {
+    border-top: none;
+    border-bottom: none;
+    background: #fff;
+  }
+  @media screen and (max-width: $break-xs) {
+    border-top: dotted 1px #ccc;
+    border-bottom: dotted 1px #ccc;
   }
 }
