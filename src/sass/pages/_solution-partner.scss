@@ -23,6 +23,9 @@ body.solution-partner {
       @media screen and (max-width: $break) {
         width: 100%;
       }
+      @media screen and (max-width: $break-lg) {
+        width: 100%;
+      }
     }
     .partner {
       p {
@@ -348,6 +351,10 @@ body.solution-partner {
     padding: 0;
     width: 790px;
     border: none;
+    @media screen and (max-width: $break-lg) {
+        margin: 13px auto 40px;
+        width: 90%;
+      }
     @media screen and (max-width: $break) {
         margin: 13px auto 40px;
         width: 90%;
@@ -397,6 +404,10 @@ body.solution-partner {
       .contents {
         width: 790px;
         margin: 0 auto;
+        @media screen and (max-width: $break-lg) {
+          width: 90%;
+          box-sizing: border-box;
+        }
         @media screen and (max-width: $break) {
           width: 100%;
           box-sizing: border-box;
@@ -418,10 +429,18 @@ body.solution-partner {
               }
             }
             @media screen and (max-width: $break-lg) {
+              padding: 4% 0;
+              margin: 0 auto 3%;
+              font-size: 26px;
               width: 70%;
+              line-height: 0 !important;
             }
             @media screen and (max-width: $break-xs) {
+              padding: 6% 0;
+              font-size: 24px;
+              margin: 0 auto;
               width: 300px;
+              line-height: 0;
             }
           }
         }
@@ -440,11 +459,20 @@ body.solution-partner {
             margin: 0 0 10px 0;
             float: right;
             width: 480px;
+            @media screen and (max-width: $break-lg) {
+              width: 55%;
+              &:nth-of-type(2) {
+                margin: 0 0 7% 0;
+              }
+            }
             @media screen and (max-width: $break) {
               margin: 0 auto;
               float: none;
               width: 90%;
               box-sizing: box-sizing;
+              &:nth-of-type(2) {
+                margin: 0 auto;
+              }
             }
           }
       }
@@ -452,6 +480,11 @@ body.solution-partner {
   .merit {
     width: 790px;
     margin: 0 auto;
+    @media screen and (max-width: $break-lg) {
+      padding: 0 5%;
+      width: 100%;
+      box-sizing: border-box;
+    }
     @media screen and (max-width: $break) {
       padding: 0 5%;
       width: 100%;
@@ -478,6 +511,9 @@ body.solution-partner {
       left: 0;
       top: -1px;
       background: url(/img/partner/line_dotted_horizon.png) no-repeat 0 0;
+      @media screen and (max-width: $break-lg) {
+        width: 100%;
+      }
       @media screen and (max-width: $break) {
         width: 100%;
         box-sizing: border-box;
@@ -507,6 +543,9 @@ body.solution-partner {
       text-align: left;
       width: 315px;
       margin: 0 auto 10px;
+      @media screen and (max-width: $break-lg) {
+        width: 100%;
+      }
       @media screen and (max-width: $break) {
         width: 100%;
       }
@@ -545,6 +584,11 @@ body.solution-partner {
     width: 790px;
     margin: 0 auto 100px;
     text-align: left;
+    @media screen and (max-width: $break-lg) {
+      padding: 0 5%;
+      width: 100%;
+      box-sizing: border-box;
+    }
     @media screen and (max-width: $break) {
         padding: 0 5%;
         width: 100%;
@@ -587,10 +631,19 @@ body.solution-partner {
         }
       }
       @media screen and (max-width: $break-lg) {
+        padding: 4% 0;
+        margin: 0 auto 3%;
+        font-size: 26px;
+        width: 70%;
+        line-height: 0 !important;
         width: 70%;
       }
       @media screen and (max-width: $break-xs) {
+        padding: 6% 0;
+        margin: 0 auto 5%;
         width: 300px;
+        line-height: 0;
+        font-size: 24px;
       }
     }
   }
