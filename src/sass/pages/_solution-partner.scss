@@ -20,6 +20,9 @@ body.solution-partner {
       padding: 0;
       width: 1170px;
       z-index: 101;
+      @media screen and (max-width: $break) {
+        width: 100%;
+      }
     }
     .partner {
       p {
@@ -396,6 +399,7 @@ body.solution-partner {
         margin: 0 auto;
         @media screen and (max-width: $break) {
           width: 100%;
+          box-sizing: border-box;
         }
         .btn-area {
           .btn-blue {
@@ -406,7 +410,7 @@ body.solution-partner {
               padding: 4% 0;
               margin: 0 auto;
               width: 70%;
-              line-height: 0.2;
+              line-height: 0.5;
               box-sizing: border-box;
               &:nth-of-type(1) {
                 margin: 0 auto 3%;
@@ -433,6 +437,7 @@ body.solution-partner {
               margin: 0 auto;
               float: none;
               width: 90%;
+              box-sizing: box-sizing;
             }
           }
       }
@@ -441,7 +446,9 @@ body.solution-partner {
     width: 790px;
     margin: 0 auto;
     @media screen and (max-width: $break) {
+      padding: 0 5%;
       width: 100%;
+      box-sizing: border-box;
     }
   }
   .merit-item {
@@ -460,6 +467,7 @@ body.solution-partner {
       background: url(/img/partner/line_dotted_horizon.png) no-repeat 0 0;
       @media screen and (max-width: $break) {
         width: 100%;
+        box-sizing: border-box;
       }
     }
     li {
@@ -471,15 +479,19 @@ body.solution-partner {
       float: left;
       @media screen and (max-width: $break) {
         width: 100%;
+        box-sizing: border-box;
       }
     }
     p {
       text-align: left;
       width: 315px;
       margin: 0 auto 10px;
+      @media screen and (max-width: $break) {
+        width: 100%;
+      }
     }
     &.free-item {
-      background: url(/img/partner/line_dotted_bg.png) no-repeat right 0;
+      /*background: url(/img/partner/line_dotted_bg.png) no-repeat right 0;*/
     }
   }
   .notes {
@@ -503,6 +515,11 @@ body.solution-partner {
     width: 790px;
     margin: 0 auto 100px;
     text-align: left;
+    @media screen and (max-width: $break) {
+        padding: 0 5%;
+        width: 100%;
+        box-sizing: border-box;
+      }
     dt {
       font-size: 16px;
       line-height: 22px;
@@ -525,6 +542,20 @@ body.solution-partner {
   .inquiry {
     background-color: #f9f9f9;
     padding: 30px;
+    .btn-blue {
+      margin: 0 10px;
+      padding: 0 4px;
+      font-size: 17px;
+      @media screen and (max-width: $break) {
+        padding: 5% 0;
+        margin: 0 auto 5%;
+        width: 100%;
+        line-height: 0.5;
+        &:nth-of-type(2) {
+          margin: 0 auto;
+        }
+      }
+    }
   }
   .btn-area {
     text-align: center;
@@ -541,13 +572,51 @@ body.solution-partner {
     display: inline-block;
   }
 }
-.partner-ribbon1 { background: url(/img/partner/ribbon01.png) no-repeat; }
-.partner-ribbon2 { background: url(/img/partner/ribbon02.png) no-repeat; }
-.partner-ribbon3 { background: url(/img/partner/ribbon03.png) no-repeat; }
-.partner-ribbon4 { background: url(/img/partner/ribbon04.png) no-repeat; }
-.partner-ribbon5 { background: url(/img/partner/ribbon05.png) no-repeat; }
+.partner-ribbon1 {
+  background: url(/img/partner/ribbon01.png) no-repeat;
+  @media screen and (max-width: $break) {
+    background-size: 30px;
+  }
+}
+.partner-ribbon2 {
+  background: url(/img/partner/ribbon02.png) no-repeat;
+  @media screen and (max-width: $break) {
+    background-size: 30px;
+  }
+}
+.partner-ribbon3 {
+  background: url(/img/partner/ribbon03.png) no-repeat;
+  @media screen and (max-width: $break) {
+    background-size: 30px;
+  }
+}
+.partner-ribbon4 {
+  background: url(/img/partner/ribbon04.png) no-repeat;
+  @media screen and (max-width: $break) {
+    background-size: 30px;
+  }
+}
+.partner-ribbon5 {
+  background: url(/img/partner/ribbon05.png) no-repeat;
+  @media screen and (max-width: $break) {
+    background-size: 30px;
+  }
+}
 .partner-ribbon6 {
   h3 {
     font-weight: bold;
+  }
+}
+.partner-ribbon2,
+.partner-ribbon4 {
+  @media screen and (max-width: $break) {
+    border-top: dotted 1px #ccc;
+  }
+}
+.partner-ribbon6 {
+  @media screen and (max-width: $break) {
+    border-top: dotted 1px #ccc;
+    border-bottom: dotted 1px #ccc;
+    background: #f9f9f9;
   }
 }
