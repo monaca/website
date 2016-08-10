@@ -139,7 +139,8 @@ html body.ci {
     }
     div.section.benefits {
         @extend .fixed-bg;
-        background-image: url(/img/ci/bg_benefits_2.png);
+        background-image: url(/img/ci/bg_benefits_2.jpg);
+        background-color: #70baff;
         color: #fff;
         width: 100%;
         /*text-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);*/
@@ -198,7 +199,7 @@ html body.ci {
             }
             &:nth-child(1) {
                 margin-right:30px;
-                @media screen and (max-width: 1169px) {
+                @media screen and (max-width: 1383px) {
                 }
                 @media screen and (max-width: $break-xl) {
                     margin-left: 30px;
@@ -210,7 +211,7 @@ html body.ci {
             &:nth-child(2) {
                 margin-right: 30px;
                 margin-left: 30px;
-                @media screen and (max-width: 1169px) {
+                @media screen and (max-width: 1383px) {
                 }
                 @media screen and (max-width: $break-xl) {
                 }
@@ -219,7 +220,7 @@ html body.ci {
             }
             &:nth-child(3) {
                 margin-left: 30px;
-                @media screen and (max-width: 1169px) {
+                @media screen and (max-width: 1383px) {
                 }
                 @media screen and (max-width: $break-xl) {
                     margin-right: 30px;
@@ -236,7 +237,7 @@ html body.ci {
             &:nth-child(4) {
                 margin-right: 30px;
                 margin-left: 205px;
-                @media screen and (max-width: 1169px) {
+                @media screen and (max-width: 1383px) {
                 }
                 @media screen and (max-width: $break-xl) {
                     margin-left: 30px;
@@ -246,7 +247,7 @@ html body.ci {
             }
             &:nth-child(5) {
                 margin-left: 30px;
-                @media screen and (max-width: 1169px) {
+                @media screen and (max-width: 1383px) {
                 }
                 @media screen and (max-width: $break-xl) {
                 }
@@ -265,9 +266,9 @@ html body.ci {
                 &:nth-child(even){
                     margin-right: 15px;
                     margin-left: 7px;
-                    }
+                }
             }
-            @media screen and (max-width: 779px) and (min-width: 752px) {
+            @media screen and (max-width: 781px) and (min-width: 752px) {
                 padding-left: 3%;
                 padding-right: 3%;
                 margin-right: 0px;
@@ -283,7 +284,7 @@ html body.ci {
                 height: 300px;
             }
         }
-        @media (max-width: 1279px) and (min-width: 768px) {
+        @media (max-width: 1383px) and (min-width: 768px) {
             max-width: 1169px;
             padding-left: 5%;
             padding-right: 5%;
@@ -436,21 +437,29 @@ html body.ci {
                     justify-content: flex-end;
                     font-size: 0.9rem;
                     padding: 0px 25px 24px 0px;
+                    text-align: right;
                     @media screen and (max-width: $break-xs) {
-                        font-size: 0.9rem;
-                        padding-bottom: 25px;
+                        font-size: 0.68rem;
+                        padding-right: 15px;
                     }
+                    // .hidden-xs {
+                    //     display: none!important;
+                    //     @media screen and (max-width: $break-xs) {
+                    //         display: inline!important;
+                    //     }
+                    // }
                 }
                 ul {
                     display: table;
                     width: 100%;
+                    margin-bottom: 80px;
                 }
                 li {
                     display: table-row;
                     color: #575e66;
                     height: 61px;
                     @media screen and (max-width: $break-xs) {
-                        height: 66px;
+                        height: 61px;
                         font-size: 0.68rem;
                     }
                     .hidden-xs {
@@ -492,7 +501,7 @@ html body.ci {
             .compare-cont {
                 float: right;
                 overflow: auto;
-                margin-bottom: 70px;
+                margin-bottom: 32px;
                 width: calc(100% - 200px);
                 @media screen and (max-width: $break-xs) {
                     // width: calc(100% - 117px);
@@ -638,7 +647,7 @@ html body.ci {
                         /*border-bottom: 2px solid #2990ea;*/
                     }
                     .compare-cont-comment td {
-                        height: 120px;
+                        height: 80px;
                         padding: 0 25px;
                         p:last-child {
                             margin-bottom: 0;
@@ -648,7 +657,7 @@ html body.ci {
             }
             .compare-contact {
                 clear: both;
-                margin-bottom: 90px;
+                margin-bottom: 30px;
                 padding-bottom: 30px;
                 position: relative;
                 &:after {
@@ -665,6 +674,13 @@ html body.ci {
     }
     .compare-trial {
         margin: 0px 0 70px 0;
+        p {
+            margin-bottom: 30px;
+            @media screen and (max-width: $break-xs) {
+                margin: 0 16px 0;
+                margin-bottom: 30px;
+            }
+        }
         .btn {
             font-size: 22px;
             height: 64px;
@@ -681,12 +697,17 @@ html[lang=en] body.ci {
         div.compare-box{
             .compare-header {
                 @media screen and (max-width: $break-xs) {
-                    width: 90px;
+                    width: 100px;
+                }
+                div {
+                    @media screen and (max-width: $break-xs) {
+                        padding-bottom: 29px;
+                    }
                 }
             }
             .compare-cont {
                 @media screen and (max-width: $break-xs) {
-                    width: calc(100% - 95px);
+                    width: calc(100% - 105px);
                 }
                 table {
                     @media screen and (max-width: $break-xs) {
@@ -730,7 +751,7 @@ html[lang=ja] body.ci {
                 div {
                     padding: 0px 25px 27px 0px;
                     @media screen and (max-width: $break-xs) {
-                        padding-bottom: 27px;
+                        padding-bottom: 30px;
                     }
                 }
                 li {
@@ -742,7 +763,7 @@ html[lang=ja] body.ci {
             }
             .compare-cont {
                 @media screen and (max-width: $break-xs) {
-                    width: calc(100% - 117px);
+                    width: calc(100% - 115px);
                 }
                 table {
                     @media screen and (max-width: $break-xs) {
