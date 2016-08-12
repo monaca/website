@@ -70,7 +70,7 @@
     for (var i = 0; i < result.length; i++) {
       var entry = result[i];
       element.append(
-        '<div id="entry_"' + entry.id + '" class="headline-entry">' +
+        '<div id="entry_' + entry.id + '" class="headline-entry">' +
         '  <dl>' +
         '    <dt>' + entry.date + '</dt>' +
         '    <dd>' +
@@ -115,7 +115,7 @@
       } 
       var detailsClass = shouldOpen ? '' : 'display: none;';
       element.append(
-        '<div id="entry_"' + entry.id + '" class="headline-entry">' +
+        '<div id="entry_' + entry.id + '" class="headline-entry">' +
         '  <div class="headline-entry-toggle"><img src="/img/headline/' + icon + '" /></div>' +
         '  <dl>' +
         '    <dt>' + entry.date + '</dt>' +
