@@ -39,8 +39,6 @@ description: Take advantage of Monaca mobile development cloud and tools without
 	<a class="btn btn-green localkit_download_for_mac" href="https://monaca.mobi/download/localkit-mac">Download for Mac OS X</a>
 </div>
 
-
-<script src="/js/moment.js"></script>
 <script src="/js/jquery.min.js"></script>
 <script>
 
@@ -48,13 +46,11 @@ $(window).load(function() {
 	var fadeInSpeed = 400;
 	$('div.keyvisual span#github-published_at').hide();
 	$.ajax({
-		url: 'https://api.github.com/repos/monaca/Localkit/releases',
-		dataType: 'jsonp',
+		url: 'https://ide.monaca.mobi/api/public/versions',
+		dataType: 'json',
 		success: function(res) {
-			$("div.keyvisual span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
-			$('div.keyvisual span#github-published_at a strong').text(res.data[0].name);
-			var dateJa = moment(res.data[0].published_at).format('ll');
-			$('div.keyvisual span#github-published_at span').text(dateJa);
+			$("div.keyvisual span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a>'));
+			$('div.keyvisual span#github-published_at a strong').text(res.result.localkit);
 			$('div.keyvisual span#github-published_at').fadeIn(fadeInSpeed);
 		},
 		error: function() {
