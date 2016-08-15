@@ -195,7 +195,7 @@ html body.ci {
                 margin-bottom: 0;
                 max-width: none;
                 overflow: hidden;
-                font-size: 13px;
+                font-size: 15px;
             }
             &:nth-child(1) {
                 margin-right:30px;
@@ -647,10 +647,14 @@ html body.ci {
                         /*border-bottom: 2px solid #2990ea;*/
                     }
                     .compare-cont-comment td {
-                        height: 80px;
-                        padding: 0 25px;
-                        p:last-child {
-                            margin-bottom: 0;
+                        padding: 10px;
+
+                        ul {
+                            list-style: circle inside;
+                            li {
+                                text-align: left;
+                                font-size: 12px;
+                            }
                         }
                     }
                 }
