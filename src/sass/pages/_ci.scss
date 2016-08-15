@@ -72,6 +72,7 @@ html body.ci {
                 padding-bottom: 16px;
             }
             .btn {
+                @extend %btn;
                 font-size: 22px;
                 line-height: 64px;
                 //padding: 0 6px;
@@ -79,19 +80,23 @@ html body.ci {
                 min-width: 240px;
                 font-weight: 400;
                 font-family: Helvetica, Arial, sans-serif;
+                height: 64px;
                 @media screen and (max-width: $break-xs) {
                     margin: 0 auto 16px;
                     width: 100%;
                     max-width: 300px;
                 }
             }
-        }
-        .btn-gray {
-            background-color: rgba(0,0,0,0.02);
-            border: 1px solid #575e66;
-            color: #575e66;
-            text-shadow: none;
-            .btn {
+            .btn-line-gray {
+                background-color: rgba(0,0,0,0.02);
+                border: 1px solid #575e66;
+                color: #575e66;
+                text-shadow: none;
+                &:hover {
+                    background-color: lighten(rgba(204,204,204,0.1), 7);
+                    border: 1px solid #8a9199;
+                    color: #8a9199;
+                }
             }
         }
     }
