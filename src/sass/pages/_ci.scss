@@ -639,20 +639,6 @@ html body.ci {
                             }
                         }
                     }
-                    td.colspan-endtd{
-                        padding: 0px;
-                        border-right: 0px;
-                        div.colspan-endline{
-                            border-right: 1px solid #c2c2c2;
-                            margin: 0px;
-                            padding: 10px 10px;
-                            ul {
-                                li {
-                                    font-size: 0.75rem;
-                                }
-                            }
-                        }
-                    }
                 }
             }
             .compare-contact {
@@ -703,31 +689,49 @@ html[lang=en] body.ci {
     .section.subfeatures {
         ol li {
             &:nth-child(1) {
+                @media screen and (max-width: 460px) {
+                    margin-bottom: 25px;
+                }
                 @media screen and (max-width: 320px) {
                     margin-bottom: 30px;
                 }
             }
             &:nth-child(2) {
+                @media screen and (max-width: 460px) {
+                    margin-bottom: 60px;
+                }
                 @media screen and (max-width: 320px) {
-                    margin-bottom: 70px;
+                    margin-bottom: 75px;
                 }
             }
             &:nth-child(3) {
+                @media screen and (max-width: 460px) {
+                    margin-bottom: 40px;
+                }
                 @media screen and (max-width: 320px) {
                     margin-bottom: 70px;
                 }
             }
             &:nth-child(4) {
+                @media screen and (max-width: 460px) {
+                    margin-bottom: 60px;
+                }
                 @media screen and (max-width: 320px) {
                     margin-bottom: 100px;
                 }
             }
             &:nth-child(5) {
+                @media screen and (max-width: 460px) {
+                    margin-bottom: 70px;
+                }
                 @media screen and (max-width: 320px) {
-                    margin-bottom: 90px;
+                    margin-bottom: 100px;
                 }
             }
             &:nth-child(6) {
+                @media screen and (max-width: 460px) {
+                    margin-bottom: 30px;
+                }
                 @media screen and (max-width: 320px) {
                     margin-bottom: 80px;
                 }
@@ -789,33 +793,51 @@ html[lang=ja] body.ci {
                 line-height: 2.0;
             }
             &:nth-child(1) {
-                @media screen and (max-width: 320px) {
+                @media screen and (max-width: 460px) {
                     margin-bottom: 70px;
+                }
+                @media screen and (max-width: 340px) {
+                    margin-bottom: 120px;
                 }
             }
             &:nth-child(2) {
-                @media screen and (max-width: 320px) {
+                @media screen and (max-width: 460px) {
+                    margin-bottom: 30px;
+                }
+                @media screen and (max-width: 340px) {
                     margin-bottom: 70px;
                 }
             }
             &:nth-child(3) {
-                @media screen and (max-width: 320px) {
-                    margin-bottom: 65px;
+                @media screen and (max-width: 460px) {
+                    margin-bottom: 25px;
+                }
+                @media screen and (max-width: 340px) {
+                    margin-bottom: 60px;
                 }
             }
             &:nth-child(4) {
-                @media screen and (max-width: 320px) {
+                @media screen and (max-width: 460px) {
+                    margin-bottom: 40px;
+                }
+                @media screen and (max-width: 340px) {
                     margin-bottom: 65px;
                 }
             }
             &:nth-child(5) {
-                @media screen and (max-width: 320px) {
-                    margin-bottom: 110px;
+                @media screen and (max-width: 500px) {
+                    margin-bottom: 90px;
+                }
+                @media screen and (max-width: 340px) {
+                    margin-bottom: 140px;
                 }
             }
             &:nth-child(6) {
-                @media screen and (max-width: 320px) {
-                    margin-bottom: 65px;
+                @media screen and (max-width: 460px) {
+                    margin-bottom: 10px;
+                }
+                @media screen and (max-width: 340px) {
+                    margin-bottom: 80px;
                 }
             }
             @media (max-width: 1383px) and (min-width: 780px){
@@ -828,7 +850,7 @@ html[lang=ja] body.ci {
                 height: 300px;
             }
             @media screen and (max-width: 320px) {
-                height: 300px;
+                height: 320px;
             }
         }
     }
