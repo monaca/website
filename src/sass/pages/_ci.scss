@@ -627,17 +627,25 @@ html body.ci {
                         }
                     }
                     .compare-cont-comment td {
-                        padding: 10px;
+                        height: 120px;
+                        padding: 0 25px;
+                        border-right: none;
                         ul {
                             list-style: circle inside;
                             padding: 10px 5px;
+                            border-right: none;
                             li {
                                 text-align: left;
-                                font-size: 12px;
+                                font-size: 0.75rem;
                                 color: #8d98a6;
                                 line-height: 1.8;
                             }
                         }
+                    }
+                    .compare-cont-comment td.comment-next-line {
+                        padding: 0;
+                        border: none;
+                        border-left: 1px solid #c2c2c2;
                     }
                 }
             }
