@@ -563,6 +563,8 @@ html body.ci {
                         padding: 0 24px;
                         text-align: center;
                         width: 25%;
+                        border-collapse: separate;
+                        border-spacing: 0;
                         .sp {
                             display: none;
                         }
@@ -637,6 +639,20 @@ html body.ci {
                             }
                         }
                     }
+                    td.colspan-endtd{
+                        padding: 0px;
+                        border-right: 0px;
+                        div.colspan-endline{
+                            border-right: 1px solid #c2c2c2;
+                            margin: 0px;
+                            padding: 10px 10px;
+                            ul {
+                                li {
+                                    font-size: 0.75rem;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .compare-contact {
@@ -670,7 +686,7 @@ html body.ci {
             height: 64px;
             line-height: 64px;
             width: 100%;
-            max-width: 240px;
+            max-width: 260px;
         }
     }
 }
@@ -688,7 +704,7 @@ html[lang=en] body.ci {
         ol li {
             &:nth-child(1) {
                 @media screen and (max-width: 320px) {
-                    margin-bottom: 70px;
+                    margin-bottom: 30px;
                 }
             }
             &:nth-child(2) {
@@ -703,7 +719,7 @@ html[lang=en] body.ci {
             }
             &:nth-child(4) {
                 @media screen and (max-width: 320px) {
-                    margin-bottom: 65px;
+                    margin-bottom: 100px;
                 }
             }
             &:nth-child(5) {
