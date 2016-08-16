@@ -589,6 +589,8 @@ body.pricing.compare article.main {
                 text-align: center;
                 vertical-align: middle;
                 width: 25%;
+                border-collapse: separate;
+                border-spacing: 0;
                 .sp {
                     display: none;
                 }
@@ -646,9 +648,25 @@ body.pricing.compare article.main {
             .compare-cont-comment td {
                 height: 120px;
                 padding: 0 25px;
+                border-right: none;
                 p:last-child {
                     margin-bottom: 0;
                 }
+                ul {
+                    list-style: circle inside;
+                    padding: 10px 5px;
+                    li {
+                        text-align: left;
+                        font-size: 0.75rem;
+                        color: #8d98a6;
+                        line-height: 1.8;
+                    }
+                }
+            }
+            .compare-cont-comment td.comment-next-line {
+                padding: 0;
+                border: none;
+                border-left: 1px solid #c2c2c2;
             }
         }
     }
