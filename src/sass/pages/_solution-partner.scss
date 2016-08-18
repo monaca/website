@@ -18,8 +18,17 @@ body.solution-partner {
       box-sizing: border-box;
       margin: 0 auto;
       padding: 0;
-      width: 100%;
+      width: 1170px;
       z-index: 101;
+      @media screen and (max-width: $break-xl) {
+        width: 90%;
+      }
+      @media screen and (max-width: $break-lg) {
+        width: 100%;
+      }
+      @media screen and (max-width: $break) {
+        width: 100%;
+      }
     }
     .partner {
       p {
