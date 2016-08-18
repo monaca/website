@@ -18,14 +18,8 @@ body.solution-partner {
       box-sizing: border-box;
       margin: 0 auto;
       padding: 0;
-      width: 1170px;
+      width: 100%;
       z-index: 101;
-      @media screen and (max-width: $break) {
-        width: 100%;
-      }
-      @media screen and (max-width: $break-lg) {
-        width: 100%;
-      }
     }
     .partner {
       p {
@@ -418,17 +412,7 @@ body.solution-partner {
             padding: 0 15px;
             font-size: 17px;
             width: 250px;
-            @media screen and (max-width: $break) {
-              padding: 6% 0;
-              margin: 0 auto;
-              width: 300px;
-              font-size: 24px;
-              line-height: 0;
-              box-sizing: border-box;
-              &:nth-of-type(1) {
-                margin: 0 auto 3%;
-              }
-            }
+            box-sizing: border-box;
             @media screen and (max-width: $break-lg) {
               padding: 4% 0;
               margin: 0 auto 3%;
@@ -436,12 +420,23 @@ body.solution-partner {
               width: 70%;
               line-height: 0 !important;
             }
+            @media screen and (max-width: $break) {
+              padding: 4% 0;
+              margin: 0 auto;
+              width: 300px;
+              font-size: 24px;
+              line-height: 0;
+              box-sizing: border-box;
+            }
             @media screen and (max-width: $break-xs) {
               padding: 6% 0;
               font-size: 24px;
               margin: 0 auto;
-              width: 90%;
+              width: 80%;
               line-height: 0;
+              &:nth-of-type(2) {
+                margin: 0 auto 3%;
+              }
             }
           }
         }
@@ -450,7 +445,7 @@ body.solution-partner {
         margin: 50px 0 30px 0;
         float: left;
         @media screen and (max-width: $break) {
-          margin: 50px 0 10px -1%;
+          margin: 50px 0 10px 4.5%;
           float: none;
         }
       }
@@ -601,13 +596,17 @@ body.solution-partner {
       font-weight: bold;
       color: #333;
       margin-bottom: 5px;
-    }
-    dt span {
-      font-size: 20px;
-      color: #2472b3;
-      margin-right: 0.2em;
+      padding-left: 1.6em;
+      text-indent:-1.6em;
+      &:before {
+        content: "Q:";
+        color: #2472b3;
+        font-size: 20px;
+        margin-right: 0.2em;
+      }
     }
     dd {
+      padding-left: 1.6em;
       font-size: 16px;
       line-height: 22px;
       color: #666;
@@ -622,16 +621,6 @@ body.solution-partner {
       padding: 0 4px;
       font-size: 17px;
       width: 250px;
-      @media screen and (max-width: $break) {
-        padding: 6% 0;
-        margin: 0 auto 3%;
-        width: 300px;
-        line-height: 0;
-        font-size: 24px;
-        &:nth-of-type(2) {
-          margin: 0 auto;
-        }
-      }
       @media screen and (max-width: $break-lg) {
         padding: 4% 0;
         margin: 0 auto 3%;
@@ -639,13 +628,27 @@ body.solution-partner {
         width: 70%;
         line-height: 0 !important;
         width: 70%;
+        &:nth-of-type(2) {
+          margin: 0 auto;
+        }
+      }
+      @media screen and (max-width: $break) {
+        padding: 4% 0;
+        margin: 0 auto;
+        width: 288px;
+        font-size: 24px;
+        line-height: 0;
+        box-sizing: border-box;
       }
       @media screen and (max-width: $break-xs) {
         padding: 6% 0;
-        margin: 0 auto 5%;
-        width: 100%;
+        margin: 0 auto;
+        width: 90%;
         line-height: 0;
         font-size: 24px;
+        &:nth-of-type(1) {
+          margin: 0 auto 3%;
+        }
       }
     }
   }
