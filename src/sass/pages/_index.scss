@@ -629,6 +629,13 @@ html body.home {
             margin: 0 auto 45px;
             width: 1170px;
             display: block;
+            &:hover {
+                opacity: 0.6;
+                transition: .4s ease-in-out;
+                -webkit-transition: .4s ease-in-out;
+                -moz-transition: .4s ease-in-out;
+                -ms-transition: .4s ease-in-out;
+            }
             @media screen and (max-width: 1300px){
                 width: 100%;
             }
