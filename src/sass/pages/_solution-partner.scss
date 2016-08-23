@@ -6,7 +6,6 @@ body.solution-partner {
     }
     header {
       border-bottom: 1px solid #080808;
-      height: 50px;
       position: relative;
       z-index: 100;
       .navbar {
@@ -448,7 +447,7 @@ body.solution-partner {
               width: 80%;
               line-height: 0;
               &:nth-of-type(1) {
-                margin: 0 auto 5%;
+                margin: 0 auto 2%;
               }
               &:nth-of-type(2) {
                 margin: 0 auto 3%;
@@ -662,7 +661,7 @@ body.solution-partner {
         line-height: 0;
         font-size: 24px;
         &:nth-of-type(1) {
-          margin: 0 auto 7%;
+          margin: 0 auto 4%;
         }
       }
     }
