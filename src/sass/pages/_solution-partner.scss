@@ -46,18 +46,9 @@ body.solution-partner {
         padding: 0;
         width: 790px;
         border: none;
-        @media screen and (max-width: $break-xl) {
-          width: 90%;
-        }
-        @media screen and (max-width: $break) {
-          width: 100%;
-        }
-        p {
+        p{
           max-width: 100%;
           color: #666;
-          @media screen and (max-width: $break) {
-            padding: 0;
-          }
         }
         a {
           color: $_link-color;
@@ -73,14 +64,8 @@ body.solution-partner {
     .list-container {
         @extend .outline-list;
         margin-bottom: 50px;
-        @media screen and (max-width: $break) {
-          width: 100%;
-        }
         .link-list {
             margin: 0 0 30px 40px;
-            @media screen and (max-width: $break) {
-              margin: 0 0 8% 0;
-            }
             li {
                 display: inline-block;
                 min-width: 280px;
@@ -88,20 +73,12 @@ body.solution-partner {
                 font-size: 16px;
                 line-height: 2.5;
                 color: #2472b3;
-                @media screen and (max-width: $break) {
-                  margin: 0 0 6%;
-                  min-width: 100%;
-                  line-height: 1.5;
-                }
             }
             a {
                 color: #2472b3;
                 text-decoration: none;
                 padding: 6px 18px;
                 border-radius: 20px;
-                @media screen and (max-width: $break) {
-                  padding: 6px 0;
-                }
 
                 &:hover {
                     color: #fff;
@@ -125,9 +102,6 @@ body.solution-partner {
             border-bottom: 1px solid #ececec;
             padding: 34px 0 34px 30px;
             overflow: hidden;
-            @media screen and (max-width: $break) {
-              padding: 34px 0 0 30px;
-            }
 
             div {
                  height: 90px;
@@ -141,10 +115,6 @@ body.solution-partner {
         width: 790px;
         border: solid 1px #e5e5e5;
         border-radius: 4px;
-        @media screen and (max-width: $break) {
-          padding: 5%;
-          width: 100%;
-        }
         a {
           text-decoration: underline;
           color: $_link-color;
@@ -158,10 +128,6 @@ body.solution-partner {
         margin: 0px;
         padding: 0px 0px 14px 0px;
         border-bottom: solid 1px #e5e5e5;
-        @media screen and (max-width: $break) {
-          width: 100%;
-          box-sizing: border-box;
-        }
         &:after{
           content: "";
           clear: both;
@@ -171,22 +137,10 @@ body.solution-partner {
     .partner-logo {
         float: left;
         margin: 0px 0px 0px 0px;
-        @media screen and (max-width: $break) {
-          img {
-            width: 35px;
-            height: auto;
-          }
-        }
     }
     .partner-info {
         width: 590px;
         margin: 0px 20px 0px 90px;
-        @media screen and (max-width: $break) {
-          padding: 0;
-          margin: 0;
-          width: 100%;
-          box-sizing: border-box;
-        }
     }
     .partner-name {
         width: 590px;
@@ -195,13 +149,6 @@ body.solution-partner {
         line-height: 120%;
         text-align: left;
         margin-bottom: 6px;
-        @media screen and (max-width: $break) {
-          padding: 0 0 0 17%;
-          margin: 0 0 7%;
-          font-size: 20px;
-          width: 100%;
-          box-sizing: border-box;
-        }
     }
     .partner-location {
         color: #666;
@@ -209,10 +156,6 @@ body.solution-partner {
         line-height: 18px;
         text-align: left;
         width: 610px;
-        @media screen and (max-width: $break) {
-          width: 100%;
-          box-sizing: border-box;
-        }
     }
 
 
@@ -220,10 +163,6 @@ body.solution-partner {
         width: 730px;
         margin: 0px;
         padding: 0px;
-        @media screen and (max-width: $break) {
-          width: 100%;
-          box-sizing: border-box;
-        }
         &:after{
           content: "";
           clear: both;
@@ -235,11 +174,6 @@ body.solution-partner {
         width: 430px;
         margin: 0px 40px 0px 0px;
         padding: 0px;
-        @media screen and (max-width: $break) {
-          float: none;
-          width: 100%;
-          box-sizing: border-box;
-        }
     }
     .partner-abstract {
     color: #666;
@@ -248,113 +182,39 @@ body.solution-partner {
         width: 430px;
         margin: 21px 0px 36px 0px;
         padding: 0px;
-        @media screen and (max-width: $break) {
-          width: 100%;
-          box-sizing: border-box;
-        }
     }
     .partner-field {
-        color: #666;
+    color: #666;
         font-size: 13px;
         line-height: 160%;
         width: 430px;
         padding: 0px;
-        @media screen and (max-width: $break) {
-          margin: 0 0 10%;
-          width: 100%;
-          box-sizing: border-box;
-        }
-        .bold-headline {
-          @media screen and (max-width: $break) {
-            width: 100%;
-            box-sizing: border-box;
-            float: none;
-          }
-        }
     }
     .partner-content-right {
         float: right;
         width: 260px;
         margin: 0px;
         padding: 0px;
-        @media screen and (max-width: $break) {
-          float: none;
-          width: 100%;
-          box-sizing: border-box;
-          border-top: 1px solid #e5e5e5;
-        }
     }
 
     .partner-works {
         width: 260px;
         margin: 0px;
         padding: 0px;
-        @media screen and (max-width: $break) {
-          padding: 5% 0 0;
-          width: 100%;
-        }
     }
     .partner-work-item {
         width: 260px;
         margin: 0px;
         padding: 17px 0px 20px 0px;
         border-top: solid 1px #e5e5e5;
-        @media screen and (max-width: $break) {
-          padding: 4% 0 0;
-          margin: 0 0 5%;
-          width: 100%;
-          position: relative;
-          box-sizing: border-box;
-        }
-        .preparation {
-            position: relative;
-            display: inline-block;
-            padding: 90px 0;
-            text-align: center;
-            background-color: #F2F2F2;
-            border-radius: 0px;
-            width: 100%;
-            box-sizing: border-box;
-            color: #c3c3c3;
-            @media screen and (max-width: $break) {
-              padding: 5% 0;
-            }
-          &:after,
-          &:before {
-            content: "";
-            position: absolute;
-            height: 0;
-            width: 0;
-          }
-          &:after {
-            top: -20px;
-            left: 5px;
-            border: 10px solid transparent;
-            border-bottom: 15px solid #F2F2F2; /*13px*/
-          }
-          &:before {
-            top: -20px;
-            left: 5px;
-            border: 10px solid transparent;
-            border-bottom: 10px solid #ffffff; /*10px*/
-            }
-          }
         &:after{
           content: "";
           clear: both;
           display: block;
         }
-        .bold-headline-title {
-          @media screen and (max-width: $break) {
-            padding: 2% 0 0;
-            margin: 0 0 0 70px;
-            height: 60px;
-            box-sizing: border-box;
-          }
-        }
     }
     .work-item-prof {
-        color: #666;
+    color: #666;
         font-size: 13px;
         line-height: 140%;
         margin: 7px 0px 0px 0px;
@@ -370,17 +230,10 @@ body.solution-partner {
         width: 60px;
         margin: 0px 0px 0px 0px;
         padding: 0px;
-        @media screen and (max-width: $break) {
-          position: absolute;
-          top: 4%;
-        }
     }
     .work-item-info {
         margin: 0px 0px 0px 68px;
         padding: 0px;
-        @media screen and (max-width: $break) {
-          margin: 0;
-        }
         a {
           line-height: 160%;
        }
@@ -394,9 +247,6 @@ body.solution-partner {
         margin: 30px 0px 0px 0px;
         padding: 0px;
         border-radius: 2px;
-        @media screen and (max-width: $break) {
-          width: 100%;
-        }
     }
     .partner-contact-list {
         margin: 11px 15px 11px 15px;
@@ -433,11 +283,6 @@ body.solution-partner {
         font-size: 12px;
         line-height: 14px;
         height: 14px;
-        @media screen and (max-width: $break) {
-          width: 100%;
-          max-width: 100%;
-          box-sizing: border-box;
-        }
         a {
             text-decoration: none;
             color: #2472b3;
@@ -457,31 +302,11 @@ body.solution-partner {
         margin: -7px 0px 0px 0px;
     }
     .bold-headline {
-        margin-right:12px;
-        color: #2472b3;
+    color: #2472b3;
         font-weight: bold;
-        float: left;
-        @media screen and (max-width: $break) {
-          margin: 0;
-          width: 20%;
-        }
     }
-    .detail-text {
-      @media screen and (max-width: $break) {
-        float: left;
-        width: 80%;
-      }
-    }
-    .two-line {
-      float: left;
-      width: 90%;
-      @media screen and (max-width: $break) {
-        width: 80%;
-      }
-    }
-
     .bold-headline-title {
-        color: #2472b3;
+    color: #2472b3;
         font-weight: bold;
         font-size: 14px;
         line-height: 17.8px;
@@ -504,23 +329,10 @@ body.solution-partner {
       }
     }
 
-.partner-list {
-    .container {
-      width: auto;
-      line-height: 1.8;
-      .sp-br {
-        display: none;
-      }
-      @media screen and (max-width: $break) {
-        .sp-br {
-          display: block;
-        }
-        padding-right: 5%;
-        padding-left: 5%;
-        width: 100%;
-        box-sizing: border-box;
-      }
-    }
+
+  .container {
+    width: auto;
+    line-height: 1.8;
   }
 
   h1,h2,h3,h4,h5,h6,ul,li,dl,dt,dd,div,section,article {
@@ -556,19 +368,6 @@ body.solution-partner {
         display: block;
       }
     }
-    @media screen and (max-width: $break) {
-      margin: 7% auto;
-      width: 100%;
-      font-size: 30px;
-      line-height: 1.3;
-    }
-  }
-  h1.ti-partner {
-    @media screen and (max-width: $break) {
-        margin: 13px auto 40px;
-        width: 90%;
-        line-height: 1.1;
-      }
   }
   h2 {
     font-size: 30px;
@@ -618,10 +417,10 @@ body.solution-partner {
         .btn-area {
           .btn-blue {
             margin: 0 10px;
+            padding: 0 15px;
             font-size: 17px;
             width: 250px;
             box-sizing: border-box;
-            line-height: 1.5;
             @media screen and (max-width: $break-lg) {
               padding: 4% 0;
               font-size: 26px;
@@ -832,12 +631,12 @@ body.solution-partner {
   .inquiry {
     background-color: #f9f9f9;
     padding: 30px;
+    line-height: 0;
     .btn-blue {
       margin: 0 10px;
       padding: 0 4px;
       font-size: 17px;
       width: 250px;
-      line-height: 3;
       @media screen and (max-width: $break-lg) {
         padding: 4% 0;
         width: 290px;
@@ -865,38 +664,21 @@ body.solution-partner {
           margin: 0 auto 4%;
         }
       }
-    /*border-top: 1px solid #ddd;
-    padding: 70px;*/
+    }
   }
-}
   .btn-area {
     text-align: center;
     clear: both;
   }
   .btn-big {
-    height: auto;
-    min-height: 54px;
-    min-width: 210px;
     font-weight: normal;
-    font-size: 22px;
+    font-size: 18px;
     height: 43px;
-    line-height: 1.2;
+    line-height: 43px;
     margin: 0 7px;
-    padding: 12px 36px;
+    padding: 0 36px;
     vertical-align: text-bottom;
     display: inline-block;
-    @media screen and (max-width: $break) {
-      padding: 0 0;
-      margin: 0;
-      height: auto;
-      min-height: 48px;
-      width: 100%;
-      font-size: 16px;
-      line-height: 3;
-      &:first-child {
-        margin: 0 0 5%;
-      }
-    }
   }
 }
 .partner-ribbon1 {
