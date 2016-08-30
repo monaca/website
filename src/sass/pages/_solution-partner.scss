@@ -225,7 +225,7 @@ body.solution-partner {
         width: 590px;
         margin: 0px 20px 0px 90px;
         @media screen and (max-width: $break) {
-          padding: 2% 0 0 0;
+          padding: 0;
           margin: 0;
           width: 100%;
           box-sizing: border-box;
@@ -239,13 +239,16 @@ body.solution-partner {
         text-align: left;
         margin-bottom: 6px;
         @media screen and (max-width: $break) {
-          padding: 0 0 0 10%;
+          padding: 0 0 0 5%;
           margin: 0 0 7%;
           height: 70px;
           display:table-cell;
           vertical-align: middle;
           font-size: 20px;
           box-sizing: border-box;
+        }
+        @media screen and (min-width: 320px) and (max-width: 374px) {
+          font-size: 18px;
         }
     }
     .partner-location {
@@ -255,6 +258,7 @@ body.solution-partner {
         text-align: left;
         width: 610px;
         @media screen and (max-width: $break) {
+          margin: 3% 0 0;
           width: 100%;
           box-sizing: border-box;
         }
@@ -418,8 +422,18 @@ body.solution-partner {
         margin: 0px 0px 0px 0px;
         padding: 0px;
         @media screen and (max-width: $break) {
+          height: 60px;
           position: absolute;
-          top: 4%;
+          top: 16px;
+        }
+        @media screen and (min-width: 320px) and (max-width: 374px) {
+          top: 10px;
+        }
+        @media screen and (min-width: 375px) and (max-width: 413px) {
+          top: 12px;
+        }
+        @media screen and (min-width: 414px) and (max-width: 500px) {
+          top: 13px;
         }
     }
     .work-item-info {
@@ -886,6 +900,14 @@ body.solution-partner {
       margin-bottom: 30px;
     }
   }
+
+  .partner-list {
+    .inquiry {
+      @media screen and (max-width: $break) {
+        margin: 0 auto 5%;
+      }
+    }
+  }
   .inquiry {
     background-color: #f9f9f9;
     padding: 30px;
@@ -922,8 +944,6 @@ body.solution-partner {
           margin: 0 auto 4%;
         }
       }
-    /*border-top: 1px solid #ddd;
-    padding: 70px;*/
   }
 }
   .btn-area {
