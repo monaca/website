@@ -1002,6 +1002,9 @@ body.lang-en section#support {
   position: relative;
   z-index: 0;
   border: none;
+  @media screen and (max-width: $break) {
+    width: 100%;
+  }
   h3 {
     font-size: 30px;
     line-height: 1.2;
@@ -1049,25 +1052,58 @@ body.lang-en section#support {
   padding-top: 0;
   box-sizing: border-box;
   overflow: hidden;
+  @media screen and (max-width: $break) {
+    margin: 0 0 10%;
+      height: auto;
+    }
   .training-wrapper {
     width: 100%;
     height: 400px;
     background-color: #0092bf;
+    @media screen and (max-width: $break) {
+      height: auto;
+    }
     .training-contents {
       position: relative;
       width: 1170px;
       margin: 0 auto;
+      @media screen and (max-width: $break) {
+        width: 100%;
+      }
       &:after {
         content: url(/img/service/woman.png);
         position: absolute;
         right: -95px;
         top: -26px;
         z-index: 200;
+        @media screen and (max-width: $break) {
+          content: none;
+        }
       }
       .title {
         margin: 0 -339px;
         z-index: 0;
+        @media screen and (max-width: $break) {
+          margin: 0;
+        }
       }
+      .pc {
+          display: block;
+            @media screen and (max-width: $break) {
+            display: none;
+          }
+        }
+        .sp {
+          display: none;
+          @media screen and (max-width: $break) {
+            display: block;
+            width: 100%;
+            img {
+              width: 100%;
+              display: block;
+            }
+          }
+        }
     }
   }
 }
@@ -1076,9 +1112,20 @@ body.lang-en section#support {
   width: 1170px;
   margin: 0 auto;
   position: relative;
+  @media screen and (max-width: $break) {
+    padding: 0 5%;
+    width: 100%;
+    box-sizing: border-box;
+  }
   .text {
     width: 580px;
-    margin: 44px 400px 80px 95px;
+    margin: 44px 50px 80px 95px;
+    float: left;
+    @media screen and (max-width: $break) {
+      margin: 0 0 7% 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
     p {
       margin-bottom: 15px;
     }
@@ -1087,30 +1134,91 @@ body.lang-en section#support {
     }
     .left-pic {
       margin-right: 30px;
+      @media screen and (max-width: $break) {
+        margin-right: 4%;
+        width: 48%;
+        display: block;
+        float: left;
+        box-sizing: border-box;
+      }
+    }
+    .right-pic {
+      @media screen and (max-width: $break) {
+        width: 48%;
+        display: block;
+        float: left;
+        box-sizing: border-box;
+      }
     }
   }
-  iframe {
-    float: right;
+  .iframe-content {
     margin: 0px 95px 60px 0;
+    width: 350px;
+    height: 650px;
+    position: relative;
+    float: left;
     z-index: 100;
+    @media screen and (max-width: $break) {
+      margin: 0 auto 10%;
+      width: 100%;
+      height: auto;
+      min-height: 440px;
+      max-height: 650px;
+      display: block;
+      box-sizing: border-box;
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
+
 }
 .training-table {
   border-collapse: collapse;
-  border: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+  border-top: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
   color: #666;
   table-layout: fixed;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
+  @media screen and (max-width: $break) {
+    margin: 0 0 5%;
+    border-left: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+  }
   &.mb0 {
     margin-bottom: 0;
+    @media screen and (max-width: $break) {
+      margin: 0 0 5%;
+    }
   }
   h3 {
     margin-bottom: 0;
   }
+  tr.last {
+    th {
+      border-bottom: 1px solid #dbdbdb;
+    }
+    td {
+      border-bottom: 1px solid #dbdbdb;
+    }
+  }
   th, td {
-    border: 1px solid #dbdbdb;
+    border-collapse: collapse;
+    border-left: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
     padding: 25px;
     vertical-align: middle;
+    @media screen and (max-width: $break) {
+      border: none;
+      border-bottom: 1px solid #dbdbdb;
+    }
     .btn-mini {
       font-size: 11px;
       font-weight: bold;
@@ -1130,6 +1238,12 @@ body.lang-en section#support {
       -webkit-user-select: none;
       -ms-user-select: none;
       text-decoration: none;
+      @media screen and (max-width: $break) {
+        padding: 8% 0;
+        width: 220px;
+        line-height: 0;
+        font-size: 18px;
+      }
       &:hover {
         opacity: 0.8;
       }
@@ -1148,11 +1262,18 @@ body.lang-en section#support {
   }
   .course-title {
     width: 234px;
+    @media screen and (max-width: $break) {
+      width: 100%;
+      display: block;
+    }
     h4 {
       font-size: 18px;
       line-height: 1.4;
       color: #363636;
       margin-bottom: 10px;
+      @media screen and (max-width: $break) {
+        font-size: 24px;
+      }
       a {
         text-decoration: underline;
         &:hover {
@@ -1164,6 +1285,10 @@ body.lang-en section#support {
   .theme {
     width: 590px;
     padding-bottom: 19px;
+    @media screen and (max-width: $break) {
+      width: 100%;
+      display: block;
+    }
     h5 {
       font-size: 14px;
       line-height: 1.4;
@@ -1215,9 +1340,16 @@ body.lang-en section#support {
   }
   .theme-short {
     width: 530px;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
   }
   .price {
     width: 180px;
+    @media screen and (max-width: $break) {
+      width: 100%;
+      display: block;
+    }
     ul {
       list-style: none;
       li {
@@ -1243,6 +1375,9 @@ body.lang-en section#support {
   }
   .price-long {
     width: 240px;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
   }
 }
 
@@ -1253,6 +1388,9 @@ body.lang-en section#support {
   background-color: #e5e5e5;
   border: 1px solid #dcdcdc;
   margin-top: 0px;
+  @media screen and (max-width: $break) {
+    border-bottom: 1px solid #dcdcdc;
+  }
   h3 {
     font-size: 20px;
     padding-bottom: 10px;
@@ -1300,9 +1438,15 @@ body.lang-en section#support {
   }
   .theme {
     width: 580px;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
   }
   .price {
     width: 220px;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
   }
 }
 .table-cap {
@@ -1328,7 +1472,7 @@ body.lang-en section#support {
     margin-left: -10px;
     position: absolute;
     left: 50%;
-    top: -40px;
+    top: -39px;
   }
   li {
     margin-bottom: 5px;
@@ -1346,10 +1490,20 @@ body.lang-en section#support {
   margin: 0 auto 80px;
   box-sizing: border-box;
   padding: 0 95px;
+  @media screen and (max-width: $break) {
+    padding: 0 5%;
+    width: 100%;
+    box-sizing: border-box;
+  }
   &.divider {
     border-bottom: 1px solid #dcdcdc;
     margin-bottom: 100px;
     padding-bottom: 100px;
+    @media screen and (max-width: $break) {
+      padding-bottom: 0;
+      margin-bottom: 10%;
+      border: none;
+    }
   }
   p {
     margin: 0;
@@ -1392,6 +1546,9 @@ body.lang-en section#support {
 .gray-bg-container {
   @extend .training-table-container;
   margin-bottom: 120px;
+  @media screen and (max-width: $break) {
+    margin-bottom: 14%;
+  }
 
   .gray-bg {
     width: 800px;
@@ -1402,6 +1559,9 @@ body.lang-en section#support {
     border-radius: 4px;
     text-align: left;
     color: #666;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
     li {
       font-size: 16px;
       line-height: 2;
@@ -1420,12 +1580,19 @@ body.lang-en section#support {
       position: absolute;
       left: 90px;
       bottom: -27px;
+      @media screen and (max-width: $break) {
+        left: 30px;
+        bottom: -37px;
+      }
     }
   }
   .trainee-voice {
     @extend .gray-bg;
     border-radius: 0 4px 4px 4px;
     position: relative;
+    @media screen and (max-width: $break) {
+      padding: 10% 0 5%;
+    }
 
     div {
       text-align: center;
@@ -1434,6 +1601,12 @@ body.lang-en section#support {
       width: 730px;
       font-size: 20px;
       font-weight: normal;
+      @media screen and (max-width: $break) {
+        padding: 0;
+        margin: 0 0 5%;
+        width: 96%;
+        height: auto;
+      }
       span {
         display: inline-block;
         padding: 4px 0 4px 60px;
@@ -1444,6 +1617,18 @@ body.lang-en section#support {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
+        @media screen and (max-width: $break) {
+          padding: 0 0 0 10%;
+          margin: 0 auto;
+          background-size: 20px;
+          box-sizing: border-box;
+          line-height: 1.4;
+          display: block;
+          width: 80%;
+          -webkit-transform: none;
+          -ms-transform: none;
+          transform: none;
+        }
       }
     }
   }
@@ -1459,6 +1644,9 @@ body.lang-en section#support {
     width: 800px;
     margin: 0 auto;
     text-align: center;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
   }
 }
 .corporate-container {
@@ -1471,6 +1659,9 @@ body.lang-en section#support {
   }
   p {
     margin: 0 400px 30px 0;
+    @media screen and (max-width: $break) {
+      margin: 0;
+    }
   }
   .training-results {
     width: 800px;
@@ -1480,6 +1671,9 @@ body.lang-en section#support {
     padding: 50px 0;
     box-sizing: border-box;
     text-align: center;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
     li {
       display: inline-block;
       margin: 0 40px 60px 0;
@@ -1501,6 +1695,9 @@ body.lang-en section#support {
   p {
     margin: 0 auto;
     width: 700px;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
   }
   .training-results {
     width: 700px;
@@ -1510,6 +1707,9 @@ body.lang-en section#support {
     padding: 50px 0 25px;
     box-sizing: border-box;
     text-align: center;
+    @media screen and (max-width: $break) {
+      width: 100%;
+    }
     li {
       display: inline-block;
       margin: 0 30px 25px 0;
