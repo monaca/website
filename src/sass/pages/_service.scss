@@ -187,6 +187,12 @@ body.service {
     padding: 0;
     width: 1170px;
     z-index: 101;
+    @media screen and (max-width: 1170px) {
+      width: 95%;
+    }
+    @media screen and (max-width: $break-lg) {
+      width: 90%;
+    }
     @media screen and (max-width: $break) {
       width: 100%;
     }
@@ -1052,14 +1058,28 @@ body.lang-en section#support {
   padding-top: 0;
   box-sizing: border-box;
   overflow: hidden;
+  @media screen and (max-width: 1170px) {
+    height: auto;
+  }
+  @media screen and (max-width: $break-lg) {
+    height: auto;
+  }
   @media screen and (max-width: $break) {
-    margin: 0 0 10%;
+      margin: 0 0 10%;
       height: auto;
     }
   .training-wrapper {
     width: 100%;
     height: 400px;
     background-color: #0092bf;
+    @media screen and (max-width: 1170px) {
+      height: auto;
+      background: none;
+    }
+    @media screen and (max-width: $break-lg) {
+      height: auto;
+      background: none;
+    }
     @media screen and (max-width: $break) {
       height: auto;
     }
@@ -1067,6 +1087,12 @@ body.lang-en section#support {
       position: relative;
       width: 1170px;
       margin: 0 auto;
+      @media screen and (max-width: 1170px) {
+        width: 100%;
+      }
+      @media screen and (max-width: $break-lg) {
+        width: 100%;
+      }
       @media screen and (max-width: $break) {
         width: 100%;
       }
@@ -1076,6 +1102,12 @@ body.lang-en section#support {
         right: -95px;
         top: -26px;
         z-index: 200;
+        @media screen and (max-width: 1170px) {
+          content: none;
+        }
+        @media screen and (max-width: $break-lg) {
+          content: none;
+        }
         @media screen and (max-width: $break) {
           content: none;
         }
@@ -1083,6 +1115,12 @@ body.lang-en section#support {
       .title {
         margin: 0 -339px;
         z-index: 0;
+        @media screen and (max-width: 1170px) {
+          margin: 0;
+        }
+        @media screen and (max-width: $break-lg) {
+          margin: 0;
+        }
         @media screen and (max-width: $break) {
           margin: 0;
         }
@@ -1112,6 +1150,15 @@ body.lang-en section#support {
   width: 1170px;
   margin: 0 auto;
   position: relative;
+  @media screen and (max-width: 1170px) {
+    width: 945px;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: $break-lg) {
+    padding: 0 5%;
+    width: 100%;
+    box-sizing: border-box;
+  }
   @media screen and (max-width: $break) {
     padding: 0 5%;
     width: 100%;
@@ -1121,10 +1168,21 @@ body.lang-en section#support {
     width: 580px;
     margin: 44px 50px 80px 95px;
     float: left;
+    @media screen and (max-width: 1170px) {
+      margin: 44px 50px 80px 35px;
+      width: 510px;
+    }
+    @media screen and (max-width: $break-lg) {
+      margin: 5% auto 7% 0;
+      width: 100%;
+      box-sizing: border-box;
+      float: none;
+    }
     @media screen and (max-width: $break) {
       margin: 0 0 7% 0;
       width: 100%;
       box-sizing: border-box;
+      float: left;
     }
     p {
       margin-bottom: 15px;
@@ -1134,6 +1192,12 @@ body.lang-en section#support {
     }
     .left-pic {
       margin-right: 30px;
+      @media screen and (max-width: 1170px) {
+        width: 46%;
+        display: block;
+        float: left;
+        box-sizing: border-box;
+      }
       @media screen and (max-width: $break) {
         margin-right: 4%;
         width: 48%;
@@ -1143,6 +1207,12 @@ body.lang-en section#support {
       }
     }
     .right-pic {
+      @media screen and (max-width: 1170px) {
+        width: 46%;
+        display: block;
+        float: left;
+        box-sizing: border-box;
+      }
       @media screen and (max-width: $break) {
         width: 48%;
         display: block;
@@ -1158,6 +1228,18 @@ body.lang-en section#support {
     position: relative;
     float: left;
     z-index: 100;
+    @media screen and (max-width: 1170px) {
+      margin: 0px 0 60px 0;
+    }
+    @media screen and (max-width: $break-lg) {
+      margin: 5% auto 10%;
+      width: 100%;
+      height: auto;
+      min-height: 440px;
+      max-height: 650px;
+      display: block;
+      box-sizing: border-box;
+    }
     @media screen and (max-width: $break) {
       margin: 0 auto 10%;
       width: 100%;
@@ -1166,6 +1248,21 @@ body.lang-en section#support {
       max-height: 650px;
       display: block;
       box-sizing: border-box;
+    }
+    @media screen and (min-width: 320px) and (max-width: 374px) {
+      height: auto;
+      min-height: 440px;
+      max-height: 650px;
+    }
+    @media screen and (min-width: 375px) and (max-width: 413px) {
+      height: auto;
+      min-height: 460px;
+      max-height: 650px;
+    }
+    @media screen and (min-width: 414px) and (max-width: 500px) {
+      height: auto;
+      min-height: 460px;
+      max-height: 650px;
     }
     iframe {
       position: absolute;
@@ -1185,6 +1282,17 @@ body.lang-en section#support {
   color: #666;
   table-layout: fixed;
   /*margin-bottom: 10px;*/
+  @media screen and (max-width: 1170px) {
+    margin: 0 auto;
+    width: 100%;
+  }
+  @media screen and (max-width: $break-lg) {
+    margin: 0 0 5%;
+    border-left: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
+    border-right: 1px solid #dbdbdb;
+    width: 100%;
+  }
   @media screen and (max-width: $break) {
     margin: 0 0 5%;
     border-left: 1px solid #dbdbdb;
@@ -1193,6 +1301,9 @@ body.lang-en section#support {
   }
   &.mb0 {
     margin-bottom: 0;
+    @media screen and (max-width: $break-lg) {
+      margin: 0 0 5%;
+    }
     @media screen and (max-width: $break) {
       margin: 0 0 5%;
     }
@@ -1215,6 +1326,10 @@ body.lang-en section#support {
     border-right: 1px solid #dbdbdb;
     padding: 25px;
     vertical-align: middle;
+    @media screen and (max-width: $break-lg) {
+      border: none;
+      border-bottom: 1px solid #dbdbdb;
+    }
     @media screen and (max-width: $break) {
       border: none;
       border-bottom: 1px solid #dbdbdb;
@@ -1238,11 +1353,20 @@ body.lang-en section#support {
       -webkit-user-select: none;
       -ms-user-select: none;
       text-decoration: none;
-      @media screen and (max-width: $break) {
-        padding: 8% 0;
+      @media screen and (max-width: $break-lg) {
+        padding: 3% 0;
         width: 220px;
         line-height: 0;
         font-size: 18px;
+      }
+      @media screen and (max-width: $break) {
+        padding: 4% 0;
+        width: 220px;
+        line-height: 0;
+        font-size: 18px;
+      }
+      @media screen and (max-width: $break-xs) {
+        padding: 6% 0;
       }
       &:hover {
         opacity: 0.8;
@@ -1261,7 +1385,15 @@ body.lang-en section#support {
     }
   }
   .course-title {
+    word-break: break-all;
     width: 234px;
+    @media screen and (max-width: 1170px) {
+      width: 20%;
+    }
+    @media screen and (max-width: $break-lg) {
+      width: 100%;
+      display: block;
+    }
     @media screen and (max-width: $break) {
       width: 100%;
       display: block;
@@ -1285,6 +1417,13 @@ body.lang-en section#support {
   .theme {
     width: 590px;
     padding-bottom: 19px;
+    @media screen and (max-width: 1170px) {
+      width: 60%;
+    }
+    @media screen and (max-width: $break-lg) {
+      width: 100%;
+      display: block;
+    }
     @media screen and (max-width: $break) {
       width: 100%;
       display: block;
@@ -1340,12 +1479,25 @@ body.lang-en section#support {
   }
   .theme-short {
     width: 530px;
+    @media screen and (max-width: 1170px) {
+      width: 20%;
+    }
+    @media screen and (max-width: $break-lg) {
+      width: 100%;
+    }
     @media screen and (max-width: $break) {
       width: 100%;
     }
   }
   .price {
     width: 180px;
+    @media screen and (max-width: 1170px) {
+      width: 120px;
+    }
+    @media screen and (max-width: $break-lg) {
+      width: 100%;
+      display: block;
+    }
     @media screen and (max-width: $break) {
       width: 100%;
       display: block;
@@ -1375,6 +1527,12 @@ body.lang-en section#support {
   }
   .price-long {
     width: 240px;
+    @media screen and (max-width: 1170px) {
+      width: 20%;
+    }
+    @media screen and (max-width: $break-lg) {
+      width: 100%;
+    }
     @media screen and (max-width: $break) {
       width: 100%;
     }
@@ -1388,6 +1546,10 @@ body.lang-en section#support {
   background-color: #e5e5e5;
   border: 1px solid #dcdcdc;
   margin-top: 0px;
+  @media screen and (max-width: $break-lg) {
+    border-bottom: 1px solid #dcdcdc;
+    width: 100%;
+  }
   @media screen and (max-width: $break) {
     border-bottom: 1px solid #dcdcdc;
   }
@@ -1438,12 +1600,21 @@ body.lang-en section#support {
   }
   .theme {
     width: 580px;
+    @media screen and (max-width: 1170px) {
+      width: 60%;
+    }
+    @media screen and (max-width: $break-lg) {
+      width: 100%;
+    }
     @media screen and (max-width: $break) {
       width: 100%;
     }
   }
   .price {
     width: 220px;
+    @media screen and (max-width: $break-lg) {
+      width: 100%;
+    }
     @media screen and (max-width: $break) {
       width: 100%;
     }
@@ -1490,6 +1661,15 @@ body.lang-en section#support {
   margin: 0 auto 80px;
   box-sizing: border-box;
   padding: 0 95px;
+  @media screen and (max-width: 1170px) {
+    width: 945px;
+    box-sizing: border-box;
+  }
+  @media screen and (max-width: $break-lg) {
+    padding: 0 5%;
+    width: 100%;
+    box-sizing: border-box;
+  }
   @media screen and (max-width: $break) {
     padding: 0 5%;
     width: 100%;
@@ -1499,6 +1679,11 @@ body.lang-en section#support {
     border-bottom: 1px solid #dcdcdc;
     margin-bottom: 100px;
     padding-bottom: 100px;
+    @media screen and (max-width: $break-lg) {
+      padding-bottom: 0;
+      margin-bottom: 10%;
+      border: none;
+    }
     @media screen and (max-width: $break) {
       padding-bottom: 0;
       margin-bottom: 10%;
@@ -1546,6 +1731,9 @@ body.lang-en section#support {
 .gray-bg-container {
   @extend .training-table-container;
   margin-bottom: 120px;
+  @media screen and (max-width: $break-lg) {
+    margin-bottom: 14%;
+  }
   @media screen and (max-width: $break) {
     margin-bottom: 14%;
   }
@@ -1559,6 +1747,9 @@ body.lang-en section#support {
     border-radius: 4px;
     text-align: left;
     color: #666;
+    @media screen and (max-width: $break-lg) {
+      width: 100%;
+    }
     @media screen and (max-width: $break) {
       width: 100%;
     }
