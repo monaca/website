@@ -25,6 +25,45 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
           <img class="right-pic" src="/img/service/pic_outline_02.png" alt="">
         </div>
         <div class="iframe-content">
+        <script>
+          var getDevice = (function(){
+          var ua = navigator.userAgent;
+          if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
+              $(document).ready(function () {
+                hsize = $(window).height();
+                if(hsize > 740) {
+                  $(".iframe-content").css("height", "500px");
+                } else {
+                  $(".iframe-content").css("height", "450px");
+                }
+              });
+          }else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
+              $(document).ready(function () {
+                hsize = $(window).height();
+                $(".iframe-content").css("height", "450px");
+              });
+          }else{
+              $(document).ready(function () {
+                wsize = $(window).width();
+                hsize = $(window).height();
+                if(hsize < 970) {
+                  $(".iframe-content").css("height", "450px");
+                } else {
+                  $(".iframe-content").css("height", "650px");
+                }
+              });
+              $(window).resize(function () {
+                wsize = $(window).width();
+                hsize = $(window).height();
+                if(hsize < 970) {
+                  $(".iframe-content").css("height", "450px");
+                } else {
+                  $(".iframe-content").css("height", "650px");
+                }
+              });
+          }
+      })();
+        </script>
           <iframe frameborder="0" src="https://phiyoko.com/ad/widget.php"></iframe>
         </div>
       </div>
@@ -226,7 +265,7 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
       -->
       <tr>
         <th id="vs-1" class="course-title">
-          <h4>アプリ開発入門（Visual Studio版）</h4>
+          <h4>アプリ開発入門<br class="break-xs">（Visual Studio版）</h4>
         </th>
         <td class="theme">
           <p>開発環境のセットアップを行った後に、おみくじアプリやカメラアプリなどの簡単なサンプルアプリの制作を通じて、デバッグ、ビルドまでを実際に体験していただき、アプリ開発の一連の流れとMonaca for Visual Studioの使い方を学びます。</p>
@@ -249,7 +288,7 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
       <table class="training-table mb0 table-purple">
       <tr class="last">
         <th id="vs-2" class="course-title">
-          <h4>アプリ開発実践（Visual Studio版）</h4>
+          <h4>アプリ開発実践<br class="break-xs">（Visual Studio版）</h4>
         </th>
         <td class="theme">
           <p>シンプルなTODOアプリを題材として、業務アプリを構築するうえで必要な基礎知識である画面遷移やCRUD処理の方法について学びます。また、Azureモバイルサービスと連携して、データをクラウドデータベース上で 管理する方法も合わせて学習します。</p>
@@ -426,22 +465,22 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
 
 <script>
   $(window).load(function() {
-  	var fadeInSpeed = 400;
-  	$('div.service span#github-published_at').hide();
-  	$.ajax({
-  		url: 'https://api.github.com/repos/monaca/Localkit/releases',
-  		dataType: 'jsonp',
-  		success: function(res) {
-  			$("div.service span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
-  			$('div.service span#github-published_at a strong').text(res.data[0].name);
-  			var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
-  			$('div.service span#github-published_at span').text(dateJa);
-  			$('div.service span#github-published_at').fadeIn(fadeInSpeed);
-  		},
-  		error: function() {
-  			$('div.service span#github-published_at').hide();
-  		}
-  	});
+    var fadeInSpeed = 400;
+    $('div.service span#github-published_at').hide();
+    $.ajax({
+        url: 'https://api.github.com/repos/monaca/Localkit/releases',
+        dataType: 'jsonp',
+        success: function(res) {
+            $("div.service span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
+            $('div.service span#github-published_at a strong').text(res.data[0].name);
+            var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
+            $('div.service span#github-published_at span').text(dateJa);
+            $('div.service span#github-published_at').fadeIn(fadeInSpeed);
+        },
+        error: function() {
+            $('div.service span#github-published_at').hide();
+        }
+    });
   });
 </script>
 

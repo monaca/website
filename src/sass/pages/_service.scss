@@ -1229,40 +1229,19 @@ body.lang-en section#support {
     float: left;
     z-index: 100;
     @media screen and (max-width: 1170px) {
-      margin: 0px 0 60px 0;
+      margin: 0px;
     }
     @media screen and (max-width: $break-lg) {
-      margin: 5% auto 10%;
+      margin: 5% auto 0;
       width: 100%;
-      height: auto;
-      min-height: 440px;
-      max-height: 650px;
       display: block;
       box-sizing: border-box;
     }
     @media screen and (max-width: $break) {
-      margin: 0 auto 10%;
+      margin: 0 auto 5%;
       width: 100%;
-      height: auto;
-      min-height: 440px;
-      max-height: 650px;
       display: block;
       box-sizing: border-box;
-    }
-    @media screen and (min-width: 320px) and (max-width: 374px) {
-      height: auto;
-      min-height: 440px;
-      max-height: 650px;
-    }
-    @media screen and (min-width: 375px) and (max-width: 413px) {
-      height: auto;
-      min-height: 460px;
-      max-height: 650px;
-    }
-    @media screen and (min-width: 414px) and (max-width: 500px) {
-      height: auto;
-      min-height: 460px;
-      max-height: 650px;
     }
     iframe {
       position: absolute;
@@ -1397,6 +1376,12 @@ body.lang-en section#support {
     @media screen and (max-width: $break) {
       width: 100%;
       display: block;
+    }
+    .break-xs {
+      display: none;
+      @media screen and (max-width: $break-xs) {
+        display: block;
+      }
     }
     h4 {
       font-size: 18px;
