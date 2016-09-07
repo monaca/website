@@ -1418,7 +1418,7 @@ body.lang-en section#support {
     width: 590px;
     padding-bottom: 19px;
     @media screen and (max-width: 1170px) {
-      width: 60%;
+      width: 50%;
     }
     @media screen and (max-width: $break-lg) {
       width: 100%;
@@ -1492,7 +1492,7 @@ body.lang-en section#support {
   .price {
     width: 180px;
     @media screen and (max-width: 1170px) {
-      width: 120px;
+      width: 200px;
     }
     @media screen and (max-width: $break-lg) {
       width: 100%;
@@ -1784,7 +1784,6 @@ body.lang-en section#support {
     @media screen and (max-width: $break) {
       padding: 10% 0 5%;
     }
-
     div {
       text-align: center;
       line-height: 1.6;
@@ -1792,7 +1791,17 @@ body.lang-en section#support {
       width: 730px;
       font-size: 20px;
       font-weight: normal;
+      @media screen and (max-width: $break-lg) {
+        margin: 0 0 20px 80px;
+        width: 500px;
+      }
       @media screen and (max-width: $break) {
+        padding: 0;
+        margin: 0 0 5%;
+        width: 96%;
+        height: auto;
+      }
+      @media screen and (max-width: $break-xs) {
         padding: 0;
         margin: 0 0 5%;
         width: 96%;
@@ -1808,6 +1817,11 @@ body.lang-en section#support {
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
+        .pc {
+          @media screen and (max-width: $break-lg) {
+            display: none;
+          }
+        }
         @media screen and (max-width: $break) {
           padding: 0 0 0 10%;
           margin: 0 auto;
