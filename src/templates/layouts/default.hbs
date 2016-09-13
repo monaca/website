@@ -130,7 +130,9 @@
 
 <body class="{{class}}">
 
+    {{#unless hideHeader}}
     {{> header }}
+    {{/unless}}
     {{> signupPopup }}
     {{> loginPopup }}
     {{> notificationHeader }}
@@ -140,7 +142,9 @@
 
     </article>
 
+    {{#unless hideFooter}}
     {{> footer }}
+    {{/unless}}
 
     <script>
         window.MONACA_API_URL = "{{site.monaca_api}}";
