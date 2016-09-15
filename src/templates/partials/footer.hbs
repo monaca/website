@@ -1,4 +1,106 @@
 <footer class="common">
+  {{#is language "en"}}
+  <div>
+    <div>
+      <h3>Develop</h3>
+      <ul>
+        <li><a href="/cloud.html"><img src="/img/home/logo_cloud_black.png" /></a></li>
+        <li><a href="/debugger.html"><img src="/img/home/logo_debugger_black.png" /></a></li>
+        <li><a href="/cli.html"><img src="/img/home/logo_cli.png" /></a></li>
+        <li><a href="/visualstudio.html"><img src="/img/home/logo_vs_color.png" /></a></li>
+        <li><a href="/localkit.html"><img src="/img/home/logo_localkit_black.png" /></a></li>
+        <li><a href="/enterprise.html"><img src="/img/home/logo_enterprise_black.png" /></a></li>
+      </ul>
+    </div>
+    <div>
+      <div>
+        <h3>Integrate</h3>
+        <ul>
+          {{#is language "ja"}}
+            <li><a href="https://ja.onsen.io/">Onsen UI</a></li>
+          {{else}}
+            <li><a href="https://onsen.io/">Onsen UI</a></li>
+          {{/is}}
+          
+          <li><a href="/ci.html">Monaca CI</a></li>
+          
+          {{#is language "ja"}}
+            <li><a href="https://docs.monaca.io/ja/reference/power_plugins/">Monaca Power Plugin</a></li>
+          {{else}}
+            <li><a href="https://docs.monaca.io/en/reference/power_plugins/">Monaca Power Plugin</a></li>
+          {{/is}}
+
+          <li><a href="/product-partner/">Product Partner</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Resources</h3>
+        <ul>
+          {{#is language "ja"}}
+            <li><a href="https://docs.monaca.io/ja/">Documents</a></li>
+          {{else}}
+            <li><a href="https://docs.monaca.io/en/">Documents</a></li>
+          {{/is}}
+
+          
+          <li><a href="/pricing.html">Pricing</a></li>
+          <li><a href="/great-apps.html">Showcase</a></li>
+
+          {{#is language "ja"}}
+            <li><a href="https://ja.onsen.io/blog/">Monaca x Onsen UI Blog</a></li>
+          {{else}}
+            <li><a href="https://onsen.io/blog/">Monaca x Onsen UI Blog</a></li>
+          {{/is}}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Support</h3>
+        <ul>
+          <li><a href="/headline/">News & Updates</a></li>
+          <li><a href="https://community.onsen.io/">Community Forum</a></li>
+          <li><a href="/service/index.html">Support & Services</a></li>
+          <li><a href="/logos.html">Logo Guideline</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Other</h3>
+        <ul>
+          <li><a href="/terms-of-service/">Terms</a></li>
+          <li><a href="/about-us.html">About Us</a></li>
+          <li><a href="/terms-of-service/policy.html">Privacy Policy</a></li>
+          <li><a href="https://ja.monaca.io/">日本語</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="social-media">
+      <ul>
+          {{#is language "ja"}}
+            <li><a class="twitter" href="https://twitter.com/monaca_ja"></a></li>
+          {{else}}
+            <li><a class="twitter" href="https://twitter.com/monaca_io"></a></li>
+          {{/is}}
+
+          <li><a class="github" href="https://github.com/monaca"></a></li>
+          <li><a class="facebook" href="https://www.facebook.com/monaca.io"></a></li>
+          <li><a class="stackoverflow" href="http://stackoverflow.com/questions/tagged/monaca"></a></li>
+        </ul>
+    </div>
+
+    <div class="copyright">
+      {{#is language "ja"}}
+        <p>Copyright &copy; 2016 <a href="/"><img class="monaca" src="/img/footer/logo_monaca_onsen_1.png" /></a><img src="/img/footer/logo_monaca_onsen_2.png" /><a href="https://ja.onsen.io"><img class="onsenui" src="/img/footer/logo_monaca_onsen_3.png" /></a> All rights reserved.</p>
+      {{else}}
+        <p>Copyright &copy; 2016 <a href="/"><img class="monaca" src="/img/footer/logo_monaca_onsen_1.png" /></a><img src="/img/footer/logo_monaca_onsen_2.png" /><a href="https://onsen.io"><img class="onsenui" src="/img/footer/logo_monaca_onsen_3.png" /></a> All rights reserved.</p>
+      {{/is}}
+    </div>
+  </div>
+  
+
+  {{else}}
     <ul>
         {{#is language "ja"}}
             <li><a href="https://docs.monaca.io/ja/">ドキュメント</a></li>
@@ -31,6 +133,8 @@
     </p>
 
     <p class="copyright">Copyright &copy; 2016 <a href="http://www.asial.co.jp/en" target="_blank">Asial Corporation</a>. All rights reserved.</p>
+
+    {{/is}}
 </footer>
 
 <div id="modal-overlay"></div>

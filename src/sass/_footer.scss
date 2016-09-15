@@ -49,3 +49,211 @@ footer.common {
         vertical-align: middle;
     }
 }
+
+html[lang=en] > body > footer {
+  @media screen and (max-width: 1300px) {
+    width: 1070px;
+  }
+
+  @media screen and (max-width: 1170px) {
+    width: 100%;
+  }
+
+  border-top: none;
+}
+
+html[lang=en] > body > footer > div {
+  padding: 60px 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  text-align: left;
+  border-top: none;
+
+  .copyright {
+    border-top: 1px solid #e5e5e5;
+    padding-top: 20px;
+    margin: 0;
+    width: 100%;
+
+    p {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 0 50px;
+
+      @media screen and(max-width: 520px){
+        flex-direction: column;
+        padding-bottom: 10px;
+      }
+    }
+
+    img {
+      padding: 0;
+
+      &.monaca {
+        padding-left: 10px;
+      }
+      
+      &.onsenui {
+        padding-right: 10px;
+      }
+    }
+  }
+
+  .social-media {
+    text-align: center;
+    width: 1170px;
+    margin: 40px 0;
+
+    ul, ul > li {
+      margin: 0;
+    }
+
+    ul > li {
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a {
+      display: block;
+      height: 35px;
+      width: 34px;
+    }
+
+    a.twitter {
+      background: url(/img/footer/ico_twitter.png) no-repeat;
+
+      &:hover {
+        background: url(/img/footer/ico_twitter_hover.png) no-repeat;
+      }
+    }
+
+    a.github {
+      background: url(/img/footer/ico_github.png) no-repeat;
+
+      &:hover {
+        background: url(/img/footer/ico_github_hover.png) no-repeat;
+      }
+    }
+
+    a.facebook {
+      background: url(/img/footer/ico_facebook.png) no-repeat;
+
+      &:hover {
+        background: url(/img/footer/ico_facebook_hover.png) no-repeat;
+      }
+    }
+
+    a.stackoverflow {
+      background: url(/img/footer/ico_stackoverflow.png) no-repeat;
+
+      &:hover {
+        background: url(/img/footer/ico_stackoverflow_hover.png) no-repeat;
+      }
+    }
+  }
+
+  li {
+    margin: 10px 0;
+  }
+
+  h3 {
+    width: 100%;
+    color:  #333333;
+    font-size: 18px;
+    line-height: 33px;
+    text-align: left;
+    margin-bottom: 26px;
+  }
+
+  > div:nth-child(1) {
+    max-width: 420px;
+    padding-right: 36px;
+    border-right: 1px solid #e5e5e5;
+
+    > ul {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      align-items: flex-start;
+
+      @media screen and (max-width: 490px) {
+        flex-direction: column;
+      }
+
+      > li {
+        min-width: 173px;
+        margin-right: 18px;
+      }
+    }
+
+    @media screen and (max-width: 1090px) {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 50px;
+      border-right: none;
+    }
+  }
+
+  > div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: calc(100% - 420px - 40px);
+    margin-left: 18px;
+
+    @media screen and (max-width: 1090px) {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 50px;
+      margin-left: 0;
+    }
+
+    > div {
+      width: calc(100%/4 - 18px);
+      margin-right: 18px;
+
+      @media screen and (max-width: 640px) {
+        width: 200px;
+        margin: 0;
+      }
+
+      @media screen and (max-width: 540px) {
+        width: 50%;
+      }
+
+      @media screen and (max-width: 490px) {
+        width: 100%;
+      }
+
+      &:last-child {
+        @media screen and (max-width: 490px) {
+          width: 1170px;
+        }
+
+        margin-right: 0;
+      }
+
+      > ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        flex-direction: column;
+
+        li {
+          color:  #999999;
+          font-size: 12px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
