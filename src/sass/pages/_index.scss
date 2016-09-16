@@ -1057,14 +1057,55 @@ html[lang=en] body.home {
 
             &.content-visual {
               position: relative;
-              flex-grow: 1;
-              
-               > iframe.android {
-                position: absolute;
-                transform: scale(0.5);
-                transform-origin: 9% 27.2%;
-                width: calc(60.5% + 34px);
-                height: 135.9%;
+
+              &.phone-display {
+                width: 401px;
+
+                @media screen and(max-width: 430px) {
+                    width: 100%;
+                }
+
+                > iframe.ios {
+                  position: absolute;
+                  transform: scale(0.5);
+                  transform-origin: 0 0;
+                  top: 60px;
+                  left: 13px;
+                  width: 263px;
+                  height: 462px;
+
+                  @media screen and(max-width: 950px) {
+                    top: 70px;
+                    left: 15px;
+                    width: 298px;
+                    height: 524px;
+                  }
+
+                  @media screen and(max-width: 430px) {
+                    display: none;
+                  }
+                }
+
+                > iframe.android {
+                  position: absolute;
+                  transform: scale(0.5);
+                  transform-origin: 0 0;
+                  top: 39px;
+                  left: 193px;
+                  width: 292px;
+                  height: 479px;
+
+                  @media screen and(max-width: 950px) {
+                    top: 45px;
+                    left: 220px;
+                    width: 333px;
+                    height: 546px;
+                  }
+
+                  @media screen and(max-width: 430px) {
+                    display: none;
+                  }
+                }
               }
             }
 
@@ -1123,7 +1164,6 @@ html[lang=en] body.home {
               }
 
               @media screen and(max-width: 950px) {
-                padding: 0 50px;
                 width: 100%;
 
                 p {
@@ -1144,7 +1184,6 @@ html[lang=en] body.home {
               }
 
               @media screen and(max-width: 950px) {
-                padding: 0 50px;
                 width: 100%;
 
                 p {
