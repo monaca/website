@@ -1053,6 +1053,18 @@ html[lang=en] body.home {
             width: calc(50% - 50px);
 
             &.content {
+              order: 1;
+            }
+
+            &.content-visual {
+              order: 2;
+
+              @media screen and(max-width: 950px) {
+                margin-top: 30px;
+              }
+            }
+    
+            &.content {
               text-align: left;
 
               > img {
@@ -1089,7 +1101,6 @@ html[lang=en] body.home {
 
               @media screen and(max-width: 950px) {
                 padding-right: 0;
-                margin-bottom: 40px;
               }
 
               @media screen and(max-width: 950px) {

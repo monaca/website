@@ -51,6 +51,9 @@ footer.common {
 }
 
 html[lang=en] > body > footer {
+  padding-bottom: 0;
+  border-top: none;
+
   @media screen and (max-width: 1300px) {
     width: 1070px;
   }
@@ -59,11 +62,13 @@ html[lang=en] > body > footer {
     width: 100%;
   }
 
-  border-top: none;
+  @media screen and (max-width: $break-xl) {
+      padding-bottom: 0;
+  }
 }
 
 html[lang=en] > body > footer > div {
-  padding: 60px 0 20px;
+  padding: 60px 0 0s;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -72,8 +77,8 @@ html[lang=en] > body > footer > div {
   border-top: none;
 
   .copyright {
+    padding: 0;
     border-top: 1px solid #e5e5e5;
-    padding-top: 20px;
     margin: 0;
     width: 100%;
 
@@ -87,6 +92,7 @@ html[lang=en] > body > footer > div {
       @media screen and(max-width: 520px){
         flex-direction: column;
         padding-bottom: 10px;
+        align-items: center;
       }
     }
 
