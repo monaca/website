@@ -906,7 +906,7 @@ html[lang=en] body.home {
       padding: 80px 100px;
       width: 100%;
 
-      @media screen and (max-width: 550px) {
+      @media screen and (max-width: 800px) {
         padding: 60px 0;
       }
 
@@ -964,6 +964,10 @@ html[lang=en] body.home {
           margin-right: 0;
         }
 
+        @media screen and (max-width: 490px) {
+          flex-direction: column;
+        }
+
         &:not([class="main-items"]) {
           @media screen and (max-width: 1070px) {
             width: 490px;
@@ -973,10 +977,9 @@ html[lang=en] body.home {
             }
           }
 
-           @media screen and (max-width: 500px) {
+          @media screen and (max-width: 490px) {
             width: 100%;
             margin-bottom: 50px;
-            flex-direction: column;
             margin-right: 0;
           }
         }
@@ -987,10 +990,6 @@ html[lang=en] body.home {
 
         img.sub-item {
           height: 45px;
-
-          /*@media screen and (max-width: 550px) {
-            height: 58px;
-          } */
         }
 
         max-width: 970px;
@@ -1033,6 +1032,10 @@ html[lang=en] body.home {
     div.section.powerup-overview {
       padding: 120px 70px 0;
 
+      @media screen and(max-width: 800px){
+        padding: 120px 5%;
+      }
+
       ul {
         li {
           display: flex;
@@ -1052,14 +1055,26 @@ html[lang=en] body.home {
           > div {
             width: calc(50% - 50px);
 
-            &.content {
-              order: 1;
+            &.content-visual {
+              position: relative;
+              flex-grow: 1;
+              
+               > iframe.android {
+                position: absolute;
+                transform: scale(0.5);
+                transform-origin: 9% 27.2%;
+                width: calc(60.5% + 34px);
+                height: 135.9%;
+              }
             }
 
-            &.content-visual {
-              order: 2;
+            @media screen and(max-width: 950px) {
+              &.content {
+                order: 1;
+              }
 
-              @media screen and(max-width: 950px) {
+              &.content-visual {
+                order: 2;
                 margin-top: 30px;
               }
             }
@@ -1083,6 +1098,10 @@ html[lang=en] body.home {
                 font-size: 14px;
                 line-height: 25px;
                 margin: 0 auto 30px;
+
+                @media screen and(max-width: 580px){
+                  padding: 0;
+                }
               }
 
               > div > a {
@@ -1153,11 +1172,27 @@ html[lang=en] body.home {
         margin-top: 200px;
         margin-bottom: 120px;
       }
+
+      @media screen and(max-width: 800px){
+        padding: 0 5%;
+
+        p {
+          margin-top: 120px;
+        }
+      }
     }
 
     div.integration-features {
       padding: 0 70px 0 45px;
       text-align: left;
+
+      @media screen and(max-width: 800px){
+        padding: 0 5%;
+
+        p {
+          margin: 0 0 50px;
+        }
+      }
 
       ul {
         display: flex;
@@ -1194,6 +1229,10 @@ html[lang=en] body.home {
             background-position-y: 4px;
             padding-right: 30px;
           }
+
+          @media screen and(max-width: 500px){
+            padding: 0;
+          }
         }
 
         .service-visual {
@@ -1205,21 +1244,41 @@ html[lang=en] body.home {
         &.remote-build-ci > .service-overview {
           background: url(/img/home/ico-04.png) no-repeat;
           background-size: 45px;
+
+          @media screen and(max-width: 500px){
+            background: none;
+            background-size: none;
+          }
         }
 
         &.debugging > .service-overview {
           background: url(/img/home/ico-05.png) no-repeat;
           background-size: 45px;
+
+          @media screen and(max-width: 500px){
+            background: none;
+            background-size: none;
+          }
         }
 
         &.power-plugins > .service-overview {
           background: url(/img/home/ico-06.png) no-repeat;
           background-size: 45px;
+
+          @media screen and(max-width: 500px){
+            background: none;
+            background-size: none;
+          }
         }
 
         &.backend-service > .service-overview {
           background: url(/img/home/ico-07.png) no-repeat;
           background-size: 45px;
+
+          @media screen and(max-width: 500px){
+            background: none;
+            background-size: none;
+          }
         }
 
         .service-visual {
@@ -1238,17 +1297,11 @@ html[lang=en] body.home {
           color:  #999999;
           font-size: 14px;
           line-height: 25px;
-        }
 
-/*        &:nth-child(odd) {
-          width: calc(50% - 75px);
-          padding: 0 65px 0 75px;
+          @media screen and(max-width: 580px){
+            padding: 0;
+          }
         }
-
-        &:nth-child(even) {
-          width: calc(50% - 40px);
-          padding: 0 0 0 115px;
-        }*/
       }
     }
 

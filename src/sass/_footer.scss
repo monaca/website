@@ -63,12 +63,12 @@ html[lang=en] > body > footer {
   }
 
   @media screen and (max-width: $break-xl) {
-      padding-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
 html[lang=en] > body > footer > div {
-  padding: 60px 0 0s;
+  padding: 60px 0 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -189,10 +189,6 @@ html[lang=en] > body > footer > div {
       flex-wrap: wrap;
       align-items: flex-start;
 
-      @media screen and (max-width: 490px) {
-        flex-direction: column;
-      }
-
       > li {
         min-width: 173px;
         margin-right: 18px;
@@ -204,6 +200,10 @@ html[lang=en] > body > footer > div {
       width: 100%;
       padding: 0 50px;
       border-right: none;
+    }
+
+    @media screen and (max-width: 800px) {
+      padding: 0 5%;
     }
   }
 
@@ -222,6 +222,10 @@ html[lang=en] > body > footer > div {
       margin-left: 0;
     }
 
+    @media screen and (max-width: 800px) {
+      padding: 0 5%;
+    }
+
     > div {
       width: calc(100%/4 - 18px);
       margin-right: 18px;
@@ -235,15 +239,7 @@ html[lang=en] > body > footer > div {
         width: 50%;
       }
 
-      @media screen and (max-width: 490px) {
-        width: 100%;
-      }
-
       &:last-child {
-        @media screen and (max-width: 490px) {
-          width: 1170px;
-        }
-
         margin-right: 0;
       }
 
