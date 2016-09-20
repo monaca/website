@@ -14,32 +14,39 @@ html body.cli {
       align-items: flex-start;
       min-height: 456px;
       transform: scaleY(1.0015);
+	  height: 510px;
 
       @media screen and (max-width: 1100px) {
-        height: 756px;
+        height: 856px;
       }
 
+	  div.pic {
+		padding-top: 22px;
+	  }
       > div {
-        padding: 0 20px;
+        padding: 10px 20px 0;
         width: 550px;
 
         h1 {
           color:  #000000;
-          font-size: 44px;
+          font-size: 40px;
           font-weight: 400;
           text-align: left;
           transform: scaleX(1.001);
-
-          @media screen and (max-width: 1300px) {
-            font-size: 40px;
-          }
+		  margin-bottom: 15px;
+		  line-height: 1.2em;
+			@media screen and (max-width: $break) {
+				font-size: 34px;
+			}
         }
 
         p {
           color:  #000000;
           font-size: 28px;
+			line-height: 34px;
           font-weight: 400;
           transform: scaleX(1.001);
+		  margin-bottom: 37px;
 
           @media screen and (max-width: 1300px) {
             font-size: 26px;
@@ -47,6 +54,10 @@ html body.cli {
         }
 
         div.try-it-out {
+		  margin-bottom: 80px;
+		  @media screen and (max-width: 1100px) {
+			margin-bottom: 30px;
+		  }
           h2 {
             color:  #000000;
             font-size: 22px;
@@ -57,17 +68,22 @@ html body.cli {
 
           ul {
             background-color:  #484d50;
-            max-width: 320px;
-            height: 75px;
-            padding: 15px;
+            max-width: 360px;
+            //height: 75px;
+            padding: 13px 25px 15px;
             list-style: none;
+			border-radius: 2px;
+		    @media screen and (max-width: 1100px) {
+			  max-width: 100%;
+			}
 
             li {
-              font-family: CourierPrime;
+              font-family: "Courier New", monospace;
               color:  #ffffff;
               font-size: 18px;
-              font-weight: 400;
+              font-weight: 600;
               transform: scaleY(1.0004);
+				vertical-align: middle;
             }
           }
         }
