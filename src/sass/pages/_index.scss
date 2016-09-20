@@ -817,9 +817,9 @@ html[lang=en] body.home {
         h1 {
           margin-top: 57px;
           font-size: 38px;
-          line-height: 68px;
+          line-height: 53px;
           font-weight: 300;
-          margin-bottom: 40px;
+          margin-bottom: 30px;
         }
 
         p {
@@ -1030,7 +1030,7 @@ html[lang=en] body.home {
     }
 
     div.section.powerup-overview {
-      padding: 120px 70px 0;
+      padding: 120px 70px 60px;
 
       @media screen and(max-width: 800px){
         padding: 120px 5%;
@@ -1062,7 +1062,7 @@ html[lang=en] body.home {
                 width: 401px;
 
                 @media screen and(max-width: 430px) {
-                    width: 100%;
+                    width: 270px;
                 }
 
                 > iframe.ios {
@@ -1106,6 +1106,34 @@ html[lang=en] body.home {
                     display: none;
                   }
                 }
+				.ios-min {
+				  display: none;
+				  @media screen and (max-width: 430px) {
+					  display: block;
+					  position: absolute;
+						top: 46px;
+						left: 10px;
+						width: 101px;
+						height: 178px;
+					  z-index: 1;
+				  }
+			  	}
+				.android-min {
+				  display: none;
+				  @media screen and (max-width: 430px) {
+					  display: block;
+					  position: absolute;
+						top: 30px;
+						left: 148px;
+						width: 113px;
+						height: 184px;
+					  z-index: 1;
+				  }
+			  	}
+				.phones {
+					position: relative;
+			    	z-index: 10;
+				}
               }
             }
 
@@ -1208,16 +1236,15 @@ html[lang=en] body.home {
         font-size: 36px;
         line-height: 57px;
         text-align: center;
-        margin-top: 200px;
+        margin-top: 150px;
         margin-bottom: 120px;
+		@media screen and (max-width: 950px) {
+		  margin: 80px auto 60px;
+		}
       }
 
       @media screen and(max-width: 800px){
         padding: 0 5%;
-
-        p {
-          margin-top: 120px;
-        }
       }
     }
 
