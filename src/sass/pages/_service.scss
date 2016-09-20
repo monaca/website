@@ -181,12 +181,15 @@ body.service {
     margin: 0;
   }
   header > .container {
-    border-bottom: medium none;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0;
-    width: 1170px;
-    z-index: 101;
+    // border-bottom: medium none;
+    // box-sizing: border-box;
+    // margin: 0 auto;
+    // padding: 0;
+    // width: 1170px;
+    // // z-index: 101;
+    // @media screen and (max-width: 1184px) {
+    //   width: auto;
+    // }
     @media screen and (max-width: 1170px) {
       width: 95%;
     }
