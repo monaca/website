@@ -775,6 +775,9 @@ body.service {
           width: 640px;
           box-sizing: border-box;
         }
+        @media screen and (max-width: $break) {
+          width: 570px;
+        }
         @media screen and (max-width: $break-xs) {
           width: 100%;
         }
@@ -791,26 +794,29 @@ body.service {
         position: relative;
         float: left;
         height: 716px;
+        &.box-02 {
+            padding: 57px 30px 30px 30px;
+          }
+        &.box-03 {
+            margin: 0 0 40px 0;
+          }
+        &.box-06 {
+            padding: 57px 30px 30px 30px;
+          }
         @media screen and (max-width: 1170px) and (min-width: 971px) {
           margin: 0 10px 40px 0;
           width: 290px;
+          height: 765px;
+          &.box-02 {
+            padding: 30px;
+          }
+        &.box-06 {
+            padding: 57px 30px 30px 30px;
+          }
         }
         @media screen and (max-width: $break-lg) {
           width: 300px;
           margin: 0 40px 40px 0;
-        }
-        @media screen and (max-width: $break) {
-          height: 846px;
-        }
-        @media screen and (max-width: $break-xs) {
-          padding: 10% 5% 5%;
-          width: 100%;
-          height: auto;
-        }
-        &.box-03 {
-            margin: 0 0 40px 0;
-          }
-        @media screen and (max-width: $break-lg) {
           &.box-03 {
             margin: 0 40px 40px 0;
           }
@@ -818,18 +824,32 @@ body.service {
             margin: 0 0 40px 0;
           }
           &.box-02 {
+            padding: 30px;
             margin: 0 0 40px 0;
           }
+        }
+        @media screen and (max-width: $break) {
+          width: 280px;
+          height: 846px;
+        }
+        @media screen and (max-width: $break-xs) {
+          padding: 10% 5% 5%;
+          width: 100%;
+          height: auto;
         }
         @media screen and (max-width: $break) {
           margin: 0 auto 40px;
           &.box-04,
           &.box-05 {
-            margin: 0 40px 40px 0;
+            margin: 0 10px 40px 0;
           }
-          &.box-02,
+          &.box-02 {
+            margin: 0 0 40px 0;
+            height: 710px;
+          }
           &.box-03 {
-            height: 630px;
+            margin: 0 10px 40px 0;
+            height: 710px;
           }
           &.box-05,
           &.box-06 {
@@ -941,6 +961,10 @@ body.service {
           position: absolute;
           bottom: 30px;
           @media screen and (max-width: $break){
+            width: 220px;
+          }
+          @media screen and (max-width: $break-xs){
+            width: 240px;
             position: relative;
             margin: 0 auto;
           }
@@ -1002,6 +1026,9 @@ body.service {
       font-size: 13px;
       line-height: 22px;
       margin: 0 0 10px 0;
+      @media screen and (max-width: $break) {
+        padding: 0;
+      }
     }
     .support-ticket-description{
       margin: 10px;
