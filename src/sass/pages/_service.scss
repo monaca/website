@@ -1887,6 +1887,11 @@ body.lang-en section#support {
     li {
       display: inline-block;
       margin: 0 30px 25px 0;
+      @media screen and (max-width: $break) {
+        margin: 0 2% 5% 0;
+        width: 30%;
+        box-sizing: border-box;
+      }
       &:last-child {
         margin-right: 0;
       }
