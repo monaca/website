@@ -8,12 +8,18 @@ header.navbar {
     width: 100%;
     z-index: 100;
     font-family: Open Sans, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
-    
+
     .container {
         padding: 0 55px;
-        
+
         @media screen and (max-width: $break-xl) {
             width: 100%;
+        }
+        @media screen and (max-width: 1175px) and (min-width: 1000px) {
+            padding: 0 30px;
+        }
+        @media screen and (max-width: 880px) and (min-width: $break) {
+            padding: 0 20px;
         }
         @media screen and (max-width: $break) {
             padding: 0;
