@@ -431,7 +431,7 @@ html body.home {
         a {
             color: #333;
             text-decoration: none;
-            padding: 65px 0 15px;
+            padding: 75px 0 0;
             display: block;
             &:hover {
                 background-color: #44a900;
@@ -709,13 +709,22 @@ html:not([lang=en]) body.home {
       font-family: Helvetica, Arial, sans-serif;
       font-size: 24px;
       margin-bottom: 22px;
+      @media screen and (max-width: 470px) {
+            font-size: 20px;
+        }
+        @media screen and (max-width: 390px) {
+            font-size: 18px;
+        }
+        @media screen and (max-width: 350px) {
+            font-size: 16px;
+        }
     }
 
     p {
       font-size: 16px;
       line-height: 1.6;
     }
-    
+
     section, .section {
       padding-top: 90px;
       padding-bottom: 40px;
@@ -1051,7 +1060,7 @@ html[lang=en] body.home {
           &:last-child {
             margin-bottom: auto;
           }
-          
+
           > div {
             width: calc(50% - 50px);
 
@@ -1147,7 +1156,7 @@ html[lang=en] body.home {
                 margin-top: 30px;
               }
             }
-    
+
             &.content {
               text-align: left;
 
