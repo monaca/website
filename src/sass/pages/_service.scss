@@ -768,8 +768,13 @@ body.service {
         }
       }
       .flex-container {
+        margin: 0 auto;
         width: 980px;
-        @media screen and (max-width: 1170px) and (min-width: 971px) {
+        @media screen and (max-width: 1170px) and (min-width: 1070px) {
+          margin: 0 auto;
+          width: 950px;
+        }
+        @media screen and (max-width: 1069px) and (min-width: 971px) {
           margin: 0 auto;
           width: 890px;
         }
@@ -806,7 +811,10 @@ body.service {
         &.box-06 {
             padding: 57px 30px 30px 30px;
           }
-        @media screen and (max-width: 1170px) and (min-width: 971px) {
+        @media screen and (max-width: 1170px) and (min-width: 1070px) {
+         margin: 0 20px 40px 0;
+        }
+        @media screen and (max-width: 1069px) and (min-width: 971px) {
           margin: 0 10px 40px 0;
           width: 290px;
           height: 765px;
