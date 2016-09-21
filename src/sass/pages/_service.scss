@@ -1,5 +1,8 @@
 html[lang="en"] body.service {
   min-width: 1170px;
+  @media screen and (max-width: $break-lg) {
+    width: 100%;
+  }
   .main {
       h2 {
       color: #3e5c7f;
@@ -18,6 +21,12 @@ html[lang="en"] body.service {
       width: 980px;
       min-width: 0;
       padding: 0;
+      @media screen and (max-width: 1170px) and (min-width: 971px) {
+        width: 100%;
+      }
+      @media screen and (max-width: $break-lg) {
+        width: 100%;
+      }
     }
     .keyvisual {
       background-color: #03a9f4;
@@ -179,6 +188,11 @@ body.service {
   }
   .navbar {
     margin: 0;
+    .navbar-header {
+      @media screen and (max-width: 970px) {
+        margin: 0;
+      }
+    }
   }
   header > .container {
     border-bottom: medium none;
@@ -187,8 +201,18 @@ body.service {
     padding: 0;
     width: 1170px;
     z-index: 101;
-    @media screen and (max-width: $break) {
+    @media screen and (max-width: 1170px) and (min-width: 971px) {
+      padding: 0 5%;
       width: 100%;
+      box-sizing: border-box;
+    }
+    @media screen and (max-width: $break-lg) {
+      padding: 0 5%;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .navbar-right {
+      margin-right: 0;
     }
   }
   section {
@@ -713,6 +737,17 @@ body.service {
       margin-bottom: 70px;
       width: 980px;
       min-width: 980px;
+      @media screen and (max-width: 1170px) and (min-width: 971px) {
+        padding: 0 5%;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      @media screen and (max-width: $break-lg) {
+          padding: 0 5%;
+          width: 100%;
+          box-sizing: border-box;
+          min-width: 0;
+        }
       @media screen and (max-width: $break) {
         width: 100%;
       }
@@ -727,18 +762,32 @@ body.service {
           box-sizing: border-box;
           padding-left: 10px;
         }
+        @media screen and (max-width: $break-xl) {
+          padding-left: 0;
+          font-size: 32px;
+        }
       }
       .flex-container {
+        margin: 0 auto;
         width: 980px;
-        display: -webkit-flex;
-        display: -moz-box;
-        display: -ms-flexbox;
-        justify-content: center;
-        -webkit-box-pack: center;
-        -moz-box-pack: center;
+        @media screen and (max-width: 1170px) and (min-width: 1070px) {
+          margin: 0 auto;
+          width: 950px;
+        }
+        @media screen and (max-width: 1069px) and (min-width: 971px) {
+          margin: 0 auto;
+          width: 890px;
+        }
+        @media screen and (max-width: $break-lg) {
+          margin: 0 auto;
+          width: 640px;
+          box-sizing: border-box;
+        }
         @media screen and (max-width: $break) {
-          display: block;
-          width: auto;
+          width: 570px;
+        }
+        @media screen and (max-width: $break-xs) {
+          width: 100%;
         }
       }
       section.support-index-box {
@@ -751,14 +800,81 @@ body.service {
         text-align: center;
         border-radius: 12px;
         position: relative;
+        float: left;
+        height: 716px;
+        &.box-02 {
+            padding: 57px 30px 30px 30px;
+          }
+        &.box-03 {
+            margin: 0 0 40px 0;
+          }
+        &.box-06 {
+            padding: 57px 30px 30px 30px;
+          }
+        @media screen and (max-width: 1170px) and (min-width: 1070px) {
+         margin: 0 20px 40px 0;
+        }
+        @media screen and (max-width: 1069px) and (min-width: 971px) {
+          margin: 0 10px 40px 0;
+          width: 290px;
+          height: 765px;
+          &.box-02 {
+            padding: 30px;
+          }
+        &.box-06 {
+            padding: 57px 30px 30px 30px;
+          }
+        }
+        @media screen and (max-width: $break-lg) {
+          width: 300px;
+          margin: 0 40px 40px 0;
+          &.box-03 {
+            margin: 0 40px 40px 0;
+          }
+          &.box-01 {
+            margin: 0 0 40px 0;
+          }
+          &.box-02 {
+            padding: 30px;
+            margin: 0 0 40px 0;
+          }
+        }
+        @media screen and (max-width: $break) {
+          width: 280px;
+          height: 846px;
+        }
+        @media screen and (max-width: $break-xs) {
+          padding: 10% 5% 5%;
+          width: 100%;
+          height: auto;
+        }
         @media screen and (max-width: $break) {
           margin: 0 auto 40px;
+          &.box-04,
+          &.box-05 {
+            margin: 0 10px 40px 0;
+          }
+          &.box-02 {
+            margin: 0 0 40px 0;
+            height: 710px;
+          }
+          &.box-03 {
+            margin: 0 10px 40px 0;
+            height: 710px;
+          }
+          &.box-05,
+          &.box-06 {
+            height: 560px;
+          }
         }
         &.box-01:before, &.box-02:before {
           content: url("/img/service/ico_support_tag_free.png");
           position: absolute;
           left: 111px;
           top: -14px;
+          @media screen and (max-width: $break) {
+            left: 38%;
+          }
         }
 
         &.box-04:before {
@@ -766,6 +882,9 @@ body.service {
           position: absolute;
           left: 106px;
           top: -16px;
+          @media screen and (max-width: $break) {
+            left: 38%;
+          }
         }
         &.box-05 {
           padding: 42px 30px 30px 30px;
@@ -781,6 +900,20 @@ body.service {
             &.row2-title {
               margin: 0 0 29px 0px;
             }
+          }
+        }
+        @media screen and (max-width: $break-xs) {
+          &.box-01,
+          &.box-02,
+          &.box-03,
+          &.box-04,
+          &.box-05,
+          &.box-06 {
+            margin: 0 0 40px 0;
+            height: auto;
+          }
+          &.box-05 {
+            padding: 10% 5% 5%;
           }
         }
         @media screen and (min-width: $break + 1px) {
@@ -811,6 +944,9 @@ body.service {
             color: #666;
             text-align: left;
             margin: 0 0 10px 0;
+            @media screen and (max-width: $break){
+              padding: 0;
+            }
             a {
               color: #666;
               text-decoration: none;
@@ -835,6 +971,14 @@ body.service {
           width: 240px;
           position: absolute;
           bottom: 30px;
+          @media screen and (max-width: $break){
+            width: 220px;
+          }
+          @media screen and (max-width: $break-xs){
+            width: 240px;
+            position: relative;
+            margin: 0 auto;
+          }
 
           > a {
             vertical-align: middle;
@@ -855,6 +999,9 @@ body.service {
           }
           > a.btn {
            @extend .btn-big;
+           @media screen and (max-width: $break){
+            width: 100%;
+           }
          }
        }
        section .box-00 {
@@ -868,8 +1015,17 @@ body.service {
      border-radius: 12px;
      width: 980px;
      text-align: left;
+     @media screen and (max-width: 1170px) and (min-width: 971px) {
+      width: 100%;
+     }
+     @media screen and (max-width: $break-lg) {
+      width: 100%;
+     }
      @media screen and (max-width: $break) {
-       border-radius: 0;
+       width: 100%;
+     }
+     @media screen and (max-width: $break-xs) {
+       padding: 30px 15px 15px;
      }
      > h3 {
       font-size: 15px;
@@ -881,6 +1037,9 @@ body.service {
       font-size: 13px;
       line-height: 22px;
       margin: 0 0 10px 0;
+      @media screen and (max-width: $break) {
+        padding: 0;
+      }
     }
     .support-ticket-description{
       margin: 10px;
