@@ -119,8 +119,6 @@ header.navbar {
         }
     }
     .navbar-collapse {
-        padding: 0px;
-
         .navbar-right {
             margin-right: 0;
         }
@@ -333,6 +331,9 @@ html[lang=en] {
 
 html[lang=ja] {
     .navbar-nav > li > a {
+       @media screen and (max-width: 1200px) {
+         font-size: 13px;
+       }
         @media screen and (max-width: $width) {
             font-size: 12px;
             padding: 16px 10px 14px;
@@ -341,7 +342,7 @@ html[lang=ja] {
             font-size: 11px;
             padding: 16px 6px 14px;
         }
-        @media screen and (max-width: 860px) {
+        @media screen and (max-width: 900px) {
             font-size: 10px;
             padding: 16px 4px 14px;
         }
