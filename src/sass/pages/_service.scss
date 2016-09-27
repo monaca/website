@@ -173,12 +173,20 @@ body.service {
   header {
     background-color: #222;
     border-bottom: 1px solid #080808;
-    height: 50px;
     position: relative;
     z-index: 100;
   }
   .navbar {
     margin: 0;
+  }
+  .navbar-right {
+    margin-right: 0;
+  }
+  .navbar-header {
+    margin: 0 0 0 10px;
+    @media screen and (max-width: 1170px) {
+      margin: 0;
+    }
   }
   header > .container {
     // border-bottom: medium none;
@@ -1246,6 +1254,10 @@ body.lang-en section#support {
       display: block;
       box-sizing: border-box;
     }
+    @media screen and (max-width: $break-xs) {
+      margin: 0 auto 5%;
+      width: 100%;
+    }
     iframe {
       position: absolute;
       top: 0;
@@ -1739,6 +1751,11 @@ body.lang-en section#support {
       width: 100%;
     }
     @media screen and (max-width: $break) {
+      padding: 0;
+      width: 100%;
+    }
+    @media screen and (max-width: $break-xs) {
+      padding: 20px;
       width: 100%;
     }
     li {
@@ -1780,20 +1797,21 @@ body.lang-en section#support {
       font-size: 20px;
       font-weight: normal;
       @media screen and (max-width: $break-lg) {
-        margin: 0 0 20px 80px;
-        width: 500px;
+        margin: 0 auto 20px;
+        width: 600px;
       }
       @media screen and (max-width: $break) {
         padding: 0;
-        margin: 0 0 5%;
+        margin: 0;
         width: 96%;
         height: auto;
       }
       @media screen and (max-width: $break-xs) {
         padding: 0;
-        margin: 0 0 5%;
+        margin: 0;
         width: 96%;
         height: auto;
+        text-align: left;
       }
       span {
         display: inline-block;
@@ -1806,9 +1824,12 @@ body.lang-en section#support {
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         .pc {
-          @media screen and (max-width: $break-lg) {
+          @media screen and (max-width: $break) {
             display: none;
           }
+        }
+        @media screen and (max-width: $break-lg) {
+          background-size: 30px;
         }
         @media screen and (max-width: $break) {
           padding: 0 0 0 10%;

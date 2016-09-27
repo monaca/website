@@ -420,7 +420,7 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
       <div><span>効果的に全体像がわかりました。</span></div>
       <div><span>分かりやすくて、テンポもよく良かったです。</span></div>
       <div><span>講座以外の質問にもご丁寧に回答していただきまして<br class="pc">ありがとうございました。</span></div>
-      <div><span>初心者に理解しやすい言葉を使っているので、内容についていくのに<br class="pc">負担が少なくて良かったです。</span></div>
+      <div><span>初心者に理解しやすい言葉を使っているので、<br class="pc">内容についていくのに負担が少なくて良かったです。</span></div>
     </div>
   </div>
 
@@ -485,23 +485,14 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
 </script>
 
 <script>
-  var getDevice = (function(){
-      var ua = navigator.userAgent;
-      if(ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0){
-          return 'sp';
-      }else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
-          return 'tab';
-      }else{
-          window.addEventListener("load", function() {
-          $('.trainee-voice').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 8000,
-            dots: false,
-            arrows: false
-          });
-        });
-      }
-  })();
+  window.addEventListener("load", function() {
+    $('.trainee-voice').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 8000,
+      dots: false,
+      arrows: false
+    });
+  });
 </script>
