@@ -1748,7 +1748,7 @@ body.lang-en section#support {
       width: 100%;
     }
     @media screen and (max-width: $break) {
-      padding: 0;
+      padding: 10px;
       width: 100%;
     }
     @media screen and (max-width: $break-xs) {
@@ -1773,9 +1773,8 @@ body.lang-en section#support {
       position: absolute;
       left: 90px;
       bottom: -27px;
-      @media screen and (max-width: $break) {
-        left: 30px;
-        bottom: -37px;
+      @media screen and (max-width: 1170px) {
+        left: 0;
       }
     }
   }
@@ -1794,7 +1793,7 @@ body.lang-en section#support {
       font-size: 20px;
       font-weight: normal;
       @media screen and (max-width: $break-lg) {
-        margin: 0 auto 20px;
+        margin: 0 auto;
         width: 600px;
       }
       @media screen and (max-width: $break) {
