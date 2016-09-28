@@ -359,6 +359,18 @@ html[lang=ja] {
             font-size: 10px;
             padding: 16px 6px 14px;
         }
+        @media screen and (max-width: 767px) {
+            font-size: 10px;
+            padding: 16px 16px 14px;
+        }
+        @media screen and (max-width: 676px) {
+            font-size: 10px;
+            padding: 16px 16px 14px;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 10px;
+            padding: 16px 16px 14px;
+        }
         // @media screen and (max-width: 1170px) {
         //     //padding-left: 8px;
         //     //padding-right: 8px;
