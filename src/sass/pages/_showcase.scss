@@ -171,8 +171,14 @@ body.showcase-index {
 body.showcase {
     min-width: 1170px;
     -webkit-text-size-adjust: 100%;
+    @media screen and (max-width: 1170px) {
+        min-width: 0;
+    }
     header.navbar {
         min-width: 1170px;
+        @media screen and (max-width: 1170px) {
+            min-width: 0;
+        }
     }
     article.main {
         -moz-box-sizing: content-box;
@@ -181,7 +187,7 @@ body.showcase {
         padding: 100px 0px 0;
         text-align: left;
         width: 1080px;
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1170px) {
             padding-left: 5%;
             padding-right: 5%;
             width: 100%;
@@ -217,6 +223,9 @@ body.showcase {
             border-bottom: none;
             text-align: left;
             width: 1080px;
+            @media screen and (max-width: 1170px) {
+                width: 100%;
+            }
         }
         h1 {
             margin-bottom: 34px;
@@ -286,7 +295,7 @@ body.showcase {
                 vertical-align: bottom;
                 width: 1078px;
                 height: 448px;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: 1170px) {
                     width: 100%;
                     height: auto;
                 }
@@ -295,7 +304,7 @@ body.showcase {
                 width: 1078px;
                 height: 448px;
                 position: relative;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: 1170px) {
                     width: 100%;
                     height: auto;
                 }
@@ -309,7 +318,7 @@ body.showcase {
                     position: absolute;
                     left: 0;
                     bottom: 0;
-                    @media screen and (max-width: $break) {
+                    @media screen and (max-width: 1070px) {
                         display: none;
                     }
                     @media screen and (max-width: $break-xs) {
@@ -319,7 +328,7 @@ body.showcase {
             }
             h1.sp-copy {
                 display: none;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: 1070px) {
                     padding: 4%;
                     margin: 0;
                     font-size: 36px;
@@ -499,6 +508,9 @@ body.showcase {
     }
     .container {
         min-width: 1080px;
+        @media screen and (max-width: 1170px) {
+            width: 100%;
+        }
         @media screen and (max-width: $break) {
             width: 100%;
         }
@@ -2332,10 +2344,7 @@ body.showcase.showcase {
         }
     }
     header.navbar {
-        @media screen and (max-width: $break-xs) {
-            min-width: 0;
-        }
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1170px) {
             min-width: 0;
         }
     }
@@ -2353,11 +2362,8 @@ body.showcase.showcase {
                 width: auto;
             }
     section {
-            @media screen and (max-width: $break-xs) {
-                width: auto;
-            }
             @media screen and (max-width: $break) {
-              width: auto;
+              width: 100%;
             }
         }
     }
