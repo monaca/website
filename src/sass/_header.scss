@@ -10,10 +10,9 @@ header.navbar {
     font-family: Open Sans, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
 
     .container {
-        padding: 0px 30px 0 30px;
+        padding: 0px 15px;
         width: 1170px;
         @media screen and (max-width: 1169px) and (min-width: $break + 1px) {
-            padding: 0 30px;
             width: 100%;
         }
         @media screen and (max-width: $break) {
