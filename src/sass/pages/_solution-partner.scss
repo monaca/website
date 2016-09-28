@@ -904,7 +904,7 @@ body.solution-partner {
   .partner-list {
     .inquiry {
       @media screen and (max-width: $break) {
-        margin: 0 auto 5%;
+        margin: 0 auto;
       }
     }
   }
@@ -931,7 +931,7 @@ body.solution-partner {
         margin: 0 auto;
         width: 280px;
         font-size: 24px;
-        line-height: 0;
+        line-height: 1!important;
         box-sizing: border-box;
       }
       @media screen and (max-width: $break-xs) {
