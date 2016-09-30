@@ -69,9 +69,19 @@ html[lang=en] > body > footer {
 
 html[lang=en] > body > footer > div {
   padding: 60px 0 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-align-items: flex-start;
+  -ms-align-items: flex-start;
   align-items: flex-start;
   text-align: left;
   border-top: none;
@@ -83,15 +93,29 @@ html[lang=en] > body > footer > div {
     width: 100%;
 
     p {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-justify-content: center;
+      -ms-justify-content: center;
       justify-content: center;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -webkit-align-items: flex-start;
+      -ms-align-items: flex-start;
       align-items: flex-start;
       padding: 0 50px;
 
       @media screen and(max-width: 520px){
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
         padding-bottom: 10px;
+        -webkit-align-items: center;
+        -ms-align-items: center;
         align-items: center;
       }
     }
@@ -184,9 +208,19 @@ html[lang=en] > body > footer > div {
     border-right: 1px solid #e5e5e5;
 
     > ul {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-justify-content: flex-start;
+      -ms-justify-content: flex-start;
       justify-content: flex-start;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -webkit-align-items: flex-start;
+      -ms-align-items: flex-start;
       align-items: flex-start;
 
       > li {
@@ -208,9 +242,19 @@ html[lang=en] > body > footer > div {
   }
 
   > div:nth-child(2) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
     justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-align-items: flex-start;
+    -ms-align-items: flex-start;
     align-items: flex-start;
     width: calc(100% - 420px - 40px);
     margin-left: 18px;
@@ -244,10 +288,22 @@ html[lang=en] > body > footer > div {
       }
 
       > ul {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-justify-content: flex-start;
+        -ms-justify-content: flex-start;
         justify-content: flex-start;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-align-items: flex-start;
+        -ms-align-items: flex-start;
         align-items: flex-start;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column;
 
         li {
