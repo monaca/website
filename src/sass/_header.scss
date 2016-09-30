@@ -62,6 +62,9 @@ header.navbar {
             img {
                 width: 110px;
             }
+            img:hover {
+              opacity: 0.5;
+            }
         }
         .navbar-toggle {
             background-color: rgba(0, 0, 0, 0.16);

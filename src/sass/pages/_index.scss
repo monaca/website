@@ -770,7 +770,7 @@ html[lang=en] body.home {
 
     > div.keyvisual {
       background-color: #2687ea;
-      
+
       display: -webkit-box;
       display: -webkit-flex;
       display: -moz-box;
@@ -957,7 +957,7 @@ html[lang=en] body.home {
       display: -moz-box;
       display: -ms-flexbox;
       display: flex;
-      
+
       -webkit-justify-content: center;
       -ms-justify-content: center;
       justify-content: center;
@@ -1075,7 +1075,7 @@ html[lang=en] body.home {
 
         > li {
           text-align: left;
-          
+
           display: -webkit-box;
           display: -webkit-flex;
           display: -moz-box;
@@ -1128,7 +1128,7 @@ html[lang=en] body.home {
           display: -moz-box;
           display: -ms-flexbox;
           display: flex;
-          
+
           -webkit-justify-content: center;
           -ms-justify-content: center;
           justify-content: center;
@@ -1154,6 +1154,7 @@ html[lang=en] body.home {
             width: calc(50% - 50px);
 
             &.content-visual {
+              margin: auto;
               position: relative;
 
               &.phone-display {
@@ -1167,10 +1168,14 @@ html[lang=en] body.home {
                   position: absolute;
                   transform: scale(0.5);
                   transform-origin: 0 0;
-                  top: 60px;
-                  left: 13px;
-                  width: 263px;
-                  height: 462px;
+                  top: 72px;
+                  left: 15px;
+                  width: 300px;
+                  height: 522px;
+                  // top: 60px;
+                  // left: 13px;
+                  // width: 263px;
+                  // height: 462px;
 
                   @media screen and(max-width: 950px) {
                     top: 70px;
@@ -1188,10 +1193,14 @@ html[lang=en] body.home {
                   position: absolute;
                   transform: scale(0.5);
                   transform-origin: 0 0;
-                  top: 39px;
-                  left: 193px;
-                  width: 292px;
-                  height: 479px;
+                  top: 44px;
+                  left: 220px;
+                  width: 338px;
+                  height: 549px;
+                  // top: 39px;
+                  // left: 193px;
+                  // width: 292px;
+                  // height: 479px;
 
                   @media screen and(max-width: 950px) {
                     top: 45px;
@@ -1252,6 +1261,9 @@ html[lang=en] body.home {
 
             &.content {
               text-align: left;
+              &.content-3 {
+                padding: 0 70px;
+              }
 
               > img {
                 width: 60px;
@@ -1281,14 +1293,25 @@ html[lang=en] body.home {
                 color:  #248bdb;
 
                 background: url('/img/home/ico-arrow.png') no-repeat right;
-                background-position-y: 4px;
+                background-position-y: 2px;
                 padding-right: 30px;
               }
             }
 
             &:nth-child(1) {
               padding-right: 50px;
-
+              &.content-1 {
+                // width: 50%;
+                padding: 0 70px;
+              }
+              &.content-3 {
+                // width: 50%;
+                padding-right: 0px;
+              }
+              &.content-5 {
+                // width: 50%;
+                padding: 0 70px;
+              }
               @media screen and(max-width: 950px) {
                 padding-right: 0;
               }
@@ -1307,8 +1330,17 @@ html[lang=en] body.home {
             }
 
             &:nth-child(2) {
-              padding-left: 50px;
-
+              // padding-left: 50px;
+              &.content-2 {
+                // width: 50%;
+              }
+              &.content-4 {
+                // width: 50%;
+                padding: 0 70px;
+              }
+              &.content-6 {
+                // width: 50%;
+              }
               @media screen and(max-width: 950px) {
                 padding-left: 0;
               }
@@ -1409,7 +1441,7 @@ html[lang=en] body.home {
 
           a {
             background: url('/img/home/ico-arrow.png') no-repeat right;
-            background-position-y: 4px;
+            background-position-y: 1px;
             padding-right: 30px;
           }
 
@@ -1740,7 +1772,3 @@ html[lang=de] body.home{
       }
     }
 }
-
-
-
-

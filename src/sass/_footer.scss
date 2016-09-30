@@ -126,7 +126,7 @@ html[lang=en] > body > footer > div {
       &.monaca {
         padding-left: 10px;
       }
-      
+
       &.onsenui {
         padding-right: 10px;
       }
@@ -161,6 +161,7 @@ html[lang=en] > body > footer > div {
 
       &:hover {
         background: url(/img/footer/ico_twitter_hover.png) no-repeat;
+        opacity: 0.5;
       }
     }
 
@@ -169,6 +170,7 @@ html[lang=en] > body > footer > div {
 
       &:hover {
         background: url(/img/footer/ico_github_hover.png) no-repeat;
+        opacity: 0.5;
       }
     }
 
@@ -177,6 +179,7 @@ html[lang=en] > body > footer > div {
 
       &:hover {
         background: url(/img/footer/ico_facebook_hover.png) no-repeat;
+        opacity: 0.5;
       }
     }
 
@@ -185,6 +188,7 @@ html[lang=en] > body > footer > div {
 
       &:hover {
         background: url(/img/footer/ico_stackoverflow_hover.png) no-repeat;
+        opacity: 0.5;
       }
     }
   }
@@ -226,6 +230,9 @@ html[lang=en] > body > footer > div {
       > li {
         min-width: 173px;
         margin-right: 18px;
+        :hover {
+          opacity: 0.5;
+        }
       }
     }
 
