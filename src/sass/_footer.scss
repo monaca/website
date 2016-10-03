@@ -161,7 +161,7 @@ html[lang=en] > body > footer > div {
 
       &:hover {
         background: url(/img/footer/ico_twitter_hover.png) no-repeat;
-        opacity: 0.5;
+        opacity: 0.7;
       }
     }
 
@@ -170,7 +170,7 @@ html[lang=en] > body > footer > div {
 
       &:hover {
         background: url(/img/footer/ico_github_hover.png) no-repeat;
-        opacity: 0.5;
+        opacity: 0.7;
       }
     }
 
@@ -179,7 +179,7 @@ html[lang=en] > body > footer > div {
 
       &:hover {
         background: url(/img/footer/ico_facebook_hover.png) no-repeat;
-        opacity: 0.5;
+        opacity: 0.7;
       }
     }
 
@@ -188,7 +188,7 @@ html[lang=en] > body > footer > div {
 
       &:hover {
         background: url(/img/footer/ico_stackoverflow_hover.png) no-repeat;
-        opacity: 0.5;
+        opacity: 0.7;
       }
     }
   }
@@ -230,8 +230,8 @@ html[lang=en] > body > footer > div {
       > li {
         min-width: 173px;
         margin-right: 18px;
-        :hover {
-          opacity: 0.5;
+        > a:hover {
+          opacity: 0.7;
         }
       }
     }

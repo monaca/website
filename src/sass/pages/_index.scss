@@ -880,6 +880,9 @@ html[lang=en] body.home {
           text-align: center;
           padding: 0;
         }
+        a:hover {
+          opacity: 0.7;
+        }
 
         @media screen and (max-width: 900px) {
           width: 100%;
@@ -1115,7 +1118,7 @@ html[lang=en] body.home {
     }
 
     div.section.powerup-overview {
-      padding: 120px 70px 60px;
+      padding: 120px 0px 60px;
 
       @media screen and(max-width: 800px){
         padding: 120px 5%;
@@ -1156,6 +1159,7 @@ html[lang=en] body.home {
             &.content-visual {
               margin: auto;
               position: relative;
+              width: 50%;
 
               &.phone-display {
                 width: 401px;
@@ -1261,8 +1265,12 @@ html[lang=en] body.home {
 
             &.content {
               text-align: left;
+              width: 50%;
               &.content-3 {
                 padding: 0 70px;
+                @media screen and (max-width: $break-xs) {
+                  padding: 0;
+                }
               }
 
               > img {
@@ -1303,6 +1311,9 @@ html[lang=en] body.home {
               &.content-1 {
                 // width: 50%;
                 padding: 0 70px;
+                @media screen and (max-width: $break-xs) {
+                  padding: 0;
+                }
               }
               &.content-3 {
                 // width: 50%;
@@ -1311,6 +1322,9 @@ html[lang=en] body.home {
               &.content-5 {
                 // width: 50%;
                 padding: 0 70px;
+                @media screen and (max-width: $break-xs) {
+                  padding: 0;
+                }
               }
               @media screen and(max-width: 950px) {
                 padding-right: 0;
@@ -1337,6 +1351,9 @@ html[lang=en] body.home {
               &.content-4 {
                 // width: 50%;
                 padding: 0 70px;
+                @media screen and (max-width: $break-xs) {
+                  padding: 0;
+                }
               }
               &.content-6 {
                 // width: 50%;
@@ -1383,7 +1400,7 @@ html[lang=en] body.home {
     }
 
     div.integration-features {
-      padding: 0 70px 0 45px;
+      padding: 0;
       text-align: left;
 
       @media screen and(max-width: 800px){
@@ -1423,8 +1440,29 @@ html[lang=en] body.home {
 
       li {
         min-height: 570px;
-        max-width: 467px;
+        // max-width: 467px;
         margin-bottom: 70px;
+        width: 50%;
+        &.content-left {
+          padding-left: 45px;
+          padding-right: 65px;
+          @media screen and (max-width: $break-xs) {
+            padding: 0;
+          }
+        }
+        &.content-right {
+          padding-left: 50px;
+          padding-right: 70px;
+          @media screen and (max-width: $break-xs) {
+            padding: 0;
+          }
+        }
+        &.power-plugins {
+          margin-bottom: 57px;
+        }
+        &.backend-service {
+          margin-bottom: 57px;
+        }
 
         @media screen and (max-width: 1050px) {
           max-width: 44%; // 467px / 1055px * 100
@@ -1512,6 +1550,7 @@ html[lang=en] body.home {
           color:  #999999;
           font-size: 14px;
           line-height: 25px;
+          margin-bottom: 25px; 
 
           @media screen and(max-width: 580px){
             padding: 0;
@@ -1543,6 +1582,9 @@ html[lang=en] body.home {
           display: inline-block;
           text-align: center;
         }
+      }
+      a:hover {
+        opacity: 0.7;
       }
     }
   }
