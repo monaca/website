@@ -94,9 +94,6 @@ body.solution-partner {
         }
         div{
           color: #666;
-          max-width: 790px;
-          text-align: left;
-          margin: auto;
         }
     }
     .list-container {
@@ -317,6 +314,7 @@ body.solution-partner {
           box-sizing: border-box;
         }
         .bold-headline {
+          float: none;
           @media screen and (max-width: $break) {
             width: 100%;
             box-sizing: border-box;
