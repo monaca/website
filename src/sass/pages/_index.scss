@@ -1347,6 +1347,10 @@ html[lang=en] body.home {
               // padding-left: 50px;
               &.content-2 {
                 // width: 50%;
+                padding: 0 40px;
+                @media screen and (max-width: $break-xs) {
+                  padding: 0;
+                }
               }
               &.content-4 {
                 // width: 50%;
@@ -1550,7 +1554,7 @@ html[lang=en] body.home {
           color:  #999999;
           font-size: 14px;
           line-height: 25px;
-          margin-bottom: 25px; 
+          margin-bottom: 25px;
 
           @media screen and(max-width: 580px){
             padding: 0;
