@@ -1,19 +1,26 @@
 body.showcase-index {
     min-width: 1200px;
-    @media screen and (max-width: $break-xs) {
+    @media screen and (max-width: 1170px) {
         min-width: 0;
     }
     header.navbar {
         min-width: 1200px;
-        @media screen and (max-width: $break-xs) {
+        @media screen and (max-width: 1170px) {
             min-width: 0;
+        }
+    }
+    .container {
+        min-width: 1080px;
+        @media screen and (max-width: 1170px) {
+            width: 100%;
+            min-width: auto;
         }
     }
     article.main {
         margin: 0 auto;
         padding-top: 140px;
         width: 1080px;
-        @media screen and (max-width: $break-xs) {
+        @media screen and (max-width: 1170px) {
             padding-left: 5%;
             padding-right: 5%;
             width: 100%;
@@ -50,7 +57,7 @@ body.showcase-index {
         border-bottom: 1px solid #d4d4d4;
         margin-bottom: 50px;
         text-align: center;
-        @media screen and (max-width: $break-xs) {
+        @media screen and (max-width: 1170px) {
             display: -webkit-box;
             display: flex;
             -webkit-box-pack: center;
@@ -88,6 +95,21 @@ body.showcase-index {
             text-align: left;
             width: percentage(320px/1080px);
             min-height: 360px;
+
+            @media screen and (max-width: 1170px) {
+                margin-right: 53px;
+                width: percentage(320px/1080px);
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+            @media screen and (max-width: 1070px) and (max-width: $break-lg) {
+                margin-right: 48px;
+                width: percentage(320px/1080px);
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
             @media screen and (min-width: $break-xs + 1px) {
                 margin-right: percentage(60px/1080px);
                 &:nth-child(3n) {
@@ -97,6 +119,9 @@ body.showcase-index {
             @media screen and (max-width: $break-xs) {
                 margin-right: percentage(40px/600px);
                 width: percentage(280px/600px);
+                &:nth-child(3n) {
+                    margin-right: percentage(40px/600px);
+                }
                 &:nth-of-type(even) {
                     margin-right: 0;
                 }
