@@ -13,7 +13,7 @@ body.showcase-index {
         min-width: 1080px;
         @media screen and (max-width: 1170px) {
             width: 100%;
-            min-width: auto;
+            min-width: 100%;
         }
     }
     article.main {
