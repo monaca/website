@@ -148,7 +148,10 @@ body.showcase-index {
                 line-height: 1.2;
                 margin-bottom: 2px;
                 @media screen and (max-width: $break-xs) {
-                    font-size: 24px;
+                    font-size: 20px;
+                }
+                @media screen and (max-width: 320px) {
+                    font-size: 18px;
                 }
                 a {
                     color: #08c;
@@ -161,6 +164,9 @@ body.showcase-index {
             .title-small {
                 font-size: 16px;
                 line-height: 24px;
+                @media screen and (max-width: $break-xs) {
+                    font-size: 16px;
+                }
             }
             .category {
                 color: #999;
