@@ -2347,6 +2347,19 @@ body.showcase.netmarketing {
         dl dt {
             width: 120px;
         }
+        dl {
+          margin-left: 128px;
+          @media screen and (max-width: $break) {
+              margin-left: 0;
+              padding-left: 0;
+          }
+        }
+        .note {
+          margin-left: 128px;
+          @media screen and (max-width: $break) {
+              margin-left: 0;
+          }
+        }
     }
 
     .developer {
@@ -2357,6 +2370,9 @@ body.showcase.netmarketing {
         em {
             margin: 20px 0 0 30px;
             float: left;
+            @media screen and (max-width: 500px) {
+                margin-left: 0;
+            }
         }
         a {
             margin: 20px 0 0;
@@ -2510,7 +2526,7 @@ body.showcase.unisys {
 
     article.main .info .info-cont {
         h1 {
-            margin: 0 0 0 10px;
+            margin: 0 10px 0 0px;
             width: 108px;
             float: left;
             @media screen and (max-width: $break) {
@@ -2531,14 +2547,23 @@ body.showcase.unisys {
         img {
             float: left;
             vertical-align: bottom;
+            @media screen and (max-width: 594px) {
+                float: none;
+            }
         }
         em {
             margin: 20px 0 0 30px;
             float: left;
+            @media screen and (max-width: 594px) {
+                margin-left: 0;
+            }
         }
         a {
             margin: 20px 0 0;
             float: left;
+            @media screen and (max-width: 594px) {
+                clear: both;
+            }
         }
     }
 
