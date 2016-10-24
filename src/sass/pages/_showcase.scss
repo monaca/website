@@ -538,7 +538,7 @@ body.showcase {
         }
     }
     .container {
-        min-width: 1080px;
+        // min-width: 1080px;
         @media screen and (max-width: 1170px) {
             width: 100%;
         }
@@ -605,6 +605,9 @@ body.showcase {
     }
     .glyphicon-new-window {
         font-size: 0.84rem;
+    }
+    .container.contact {
+      min-width: 100%;
     }
 }
 body.showcase.hitachitool {
@@ -898,16 +901,16 @@ body.showcase.tvasahi {
         min-height: 611px;
         .sp-img {
             display: none;
-             @media screen and (max-width: $break) {
+             @media screen and (max-width: 1048px) {
                 display: block;
              }
         }
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1048px) {
             background: none;
         }
         div p {
             margin: 0 650px 15px 0;
-            @media screen and (max-width: $break) {
+            @media screen and (max-width: 1048px) {
                 margin: 0 0 15px;
             }
             &:nth-of-type(2) {
@@ -934,7 +937,7 @@ body.showcase.tvasahi {
     }
     article.main .effect {
         background: url(/img/tvasahi/bg_effect.jpg) no-repeat center top;
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1048px) {
             background: -moz-linear-gradient(top, #136dac 0%, #0e578a 100%);
             background: -webkit-linear-gradient(top, #136dac 0%,#0e578a 100%);
             background: linear-gradient(to bottom, #136dac 0%,#0e578a 100%);
@@ -1025,7 +1028,7 @@ body.showcase.tokyocalendar {
         .sp-img {
             display: none;
         }
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1110px) {
             background: none;
             .sp-img {
                 display: block;
@@ -1033,7 +1036,7 @@ body.showcase.tokyocalendar {
         }
         div p {
             margin: 0 650px 15px 0;
-            @media screen and (max-width: $break) {
+            @media screen and (max-width: 1110px) {
                 margin: 0 0 15px 0;
             }
             &:nth-of-type(2) {
@@ -1120,7 +1123,7 @@ body.showcase.estcorporation {
         .sp-img {
             display: none;
         }
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1048px) {
             background: none;
             .sp-img {
                 display: block;
@@ -1128,7 +1131,7 @@ body.showcase.estcorporation {
         }
         div p {
             margin: 0 650px 15px 0;
-            @media screen and (max-width: $break) {
+            @media screen and (max-width: 1048px) {
                 margin: 0 0 15px 0;
             }
             &:nth-of-type(2) {
@@ -1219,7 +1222,7 @@ body.showcase.fusionnagaike {
         .sp-img {
             display: none;
         }
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1032px) {
             background: none;
             .sp-img {
                 display: block;
@@ -1228,7 +1231,7 @@ body.showcase.fusionnagaike {
         div {
                 p {
                 margin: 0 650px 15px 0;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: 1032px) {
                     margin: 0 0 15px 0;
                 }
                 &:nth-of-type(2) {
@@ -1322,7 +1325,7 @@ body.showcase.nijibox {
         .sp-img {
             display: none;
         }
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1195px) {
             background: none;
             .sp-img {
                 display: block;
@@ -1332,7 +1335,7 @@ body.showcase.nijibox {
         div p {
             margin: 0 650px 15px 0;
             letter-spacing: -0.01em;
-            @media screen and (max-width: $break) {
+            @media screen and (max-width: 1195px) {
                 margin: 0 0 15px 0;
             }
             &:nth-of-type(2) {
@@ -1419,19 +1422,19 @@ body.showcase.naganobank {
         padding: 90px 0 40px;
         background: url(/img/naganobank/img_1.jpg) no-repeat right bottom;
         min-height: 650px;
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1132px) {
             background: none;
         }
         div {
             .sp-img {
                 display: none;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: 1132px) {
                     display: block;
                 }
             }
             p {
                 margin: 0 650px 15px 0;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: 1132px) {
                     margin: 0 0 15px 0;
                 }
                 &:nth-of-type(2) {
@@ -1443,7 +1446,7 @@ body.showcase.naganobank {
     article.main .app-info.backstory-tablet {
         background: url(/img/naganobank/img_2.jpg) no-repeat right bottom;
         min-height: 650px;
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1132px) {
             background: none;
         }
     }
@@ -1647,19 +1650,22 @@ body.showcase.flexion {
         padding: 90px 0 40px;
         background: url(/img/flexion/img_1.jpg) no-repeat right 90px;
         min-height: 641px;
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1170px) {
                 background: none;
             }
         div {
                 .sp-img {
                     display: none;
+                    @media screen and (max-width: 1170px) {
+                        display: block;
+                    }
                     @media screen and (max-width: $break-xs) {
                         display: block;
                     }
                 }
                 p {
                 margin: 0 650px 15px 0;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: 1170px) {
                     margin: 0 0 15px 0;
                 }
                 &:nth-of-type(2) {
@@ -1765,19 +1771,19 @@ body.showcase.proroutemarumitsu {
         padding: 90px 0 40px;
         background: url(/img/proroutemarumitsu/img_1.jpg) no-repeat right bottom;
         min-height: 621px;
-        @media screen and (max-width: $break) {
+        @media screen and (max-width: 1130px) {
             background: none;
         }
         div {
             .sp-img {
                 display: none;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: 1130px) {
                     display: block;
                 }
             }
                 p {
                 margin: 0 650px 15px 0;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: 1130px) {
                     margin: 0 0 15px 0;
                 }
                 &:nth-of-type(2) {
@@ -2032,7 +2038,6 @@ body.showcase.jmac {
         dd {
                 @media screen and (max-width: $break) {
                 width: 78%;
-                // float: left;
                 }
             }
     }
@@ -2041,7 +2046,7 @@ body.showcase.jmac {
         padding: 90px 0 40px;
         background: url(/img/jmac/img_1.jpg) no-repeat right bottom;
         min-height: 621px;
-            @media screen and (max-width: $break) {
+            @media screen and (max-width: 1170px) {
                 background: none;
             }
             @media screen and (max-width: $break-xs) {
@@ -2050,14 +2055,14 @@ body.showcase.jmac {
         div {
             .sp-img {
                 display: none;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: 1170px) {
                     display: block;
                     margin: 0 auto;
                 }
             }
             p {
             margin: 0 650px 15px 0;
-            @media screen and (max-width: $break) {
+            @media screen and (max-width: 1170px) {
                 margin: 0 0 15px 0;
             }
             @media screen and (max-width: $break-xs) {
