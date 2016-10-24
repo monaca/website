@@ -2026,7 +2026,7 @@ body.showcase.jmac {
         dd {
                 @media screen and (max-width: $break) {
                 width: 78%;
-                float: left;
+                // float: left;
                 }
             }
     }
@@ -2346,6 +2346,15 @@ body.showcase.netmarketing {
         }
         dl dt {
             width: 120px;
+            @media screen and (max-width: 486px) {
+              width: 20%;
+              float: left;
+            }
+        }
+        dl dd {
+          @media screen and (max-width: 486px) {
+            width: 78%;
+          }
         }
         dl {
           margin-left: 128px;
@@ -2366,17 +2375,23 @@ body.showcase.netmarketing {
         img {
             float: left;
             vertical-align: bottom;
+            @media screen and (max-width: $break) {
+                float: none;
+            }
         }
         em {
             margin: 20px 0 0 30px;
             float: left;
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: $break) {
                 margin-left: 0;
             }
         }
         a {
             margin: 20px 0 0;
             float: left;
+            @media screen and (max-width: $break) {
+                clear: both;
+            }
         }
     }
 
@@ -2526,7 +2541,7 @@ body.showcase.unisys {
 
     article.main .info .info-cont {
         h1 {
-            margin: 0 10px 0 0px;
+            margin: 0 25px 0 0px;
             width: 108px;
             float: left;
             @media screen and (max-width: $break) {
@@ -2540,6 +2555,15 @@ body.showcase.unisys {
         }
         dl dt {
             width: 120px;
+            @media screen and (max-width: 486px) {
+              width: 29%;
+              float: left;
+            }
+        }
+        dl dd {
+          @media screen and (max-width: 486px) {
+            width: 67%;
+          }
         }
     }
 
@@ -2547,21 +2571,21 @@ body.showcase.unisys {
         img {
             float: left;
             vertical-align: bottom;
-            @media screen and (max-width: 594px) {
+            @media screen and (max-width: $break) {
                 float: none;
             }
         }
         em {
             margin: 20px 0 0 30px;
             float: left;
-            @media screen and (max-width: 594px) {
+            @media screen and (max-width: $break) {
                 margin-left: 0;
             }
         }
         a {
             margin: 20px 0 0;
             float: left;
-            @media screen and (max-width: 594px) {
+            @media screen and (max-width: $break) {
                 clear: both;
             }
         }
