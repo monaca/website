@@ -1,7 +1,6 @@
 ---
 title: Monaca導入事例：株式会社テレビ朝日
 class: showcase tvasahi
-viewport: width=1200px
 description: アプリ化で投稿数約３倍増！スクープ映像投稿アプリをiOS、Android同時開発
 keywords: Monaca,HTML5,Cordova,PhoneGap,クラウド,セキュリティ
 ---
@@ -14,8 +13,9 @@ keywords: Monaca,HTML5,Cordova,PhoneGap,クラウド,セキュリティ
 
 <section class="info">
     <div class="info-header">
-      <h1><span class="ls-50">ア</span><span class="ls-100">プリ</span><span class="ls-50">化で</span>投稿数<span class="ls50">約3</span>倍増！<br /><span class="ls-100">スクー</span>プ映像投稿<span class="ls-50">ア</span><span class="ls-100">プリ</span>をiOS<span class="ls-400">、</span>Android同時開発</h1>
+      <h1 class="pc-copy"><span class="ls-50">ア</span><span class="ls-100">プリ</span><span class="ls-50">化で</span>投稿数<span class="ls50">約3</span>倍増！<br /><span class="ls-100">スクー</span>プ映像投稿<span class="ls-50">ア</span><span class="ls-100">プリ</span>をiOS<span class="ls-400">、</span>Android同時開発</h1>
       <img src="/img/tvasahi/keyvisual.jpg" alt="" class="keyvisual">
+      <h1 class="sp-copy"><span class="ls-50">ア</span><span class="ls-100">プリ</span><span class="ls-50">化で</span>投稿数<span class="ls50">約3</span>倍増！<span class="ls-100">スクー</span>プ映像投稿<span class="ls-50">ア</span><span class="ls-100">プリ</span>をiOS<span class="ls-400">、</span>Android同時開発</h1>
     </div>
     <div class="info-cont">
         <h1><img src="/img/tvasahi/logo_tvasahi.png" alt="株式会社テレビ朝日" /></h1>
@@ -40,7 +40,7 @@ keywords: Monaca,HTML5,Cordova,PhoneGap,クラウド,セキュリティ
             <dt>Web</dt>
             <dd><a href="http://news.tv-asahi.co.jp/minkame/" target="_blank">http://news.tv-asahi.co.jp/minkame/ <i class="glyphicon glyphicon-new-window"></i></a></dd>
         </dl>
-    
+
         <p class="note">(平成27年4月現在)</p>
     </div>
 </section>
@@ -49,17 +49,18 @@ keywords: Monaca,HTML5,Cordova,PhoneGap,クラウド,セキュリティ
     <div>
         <h1><span class="ls-100">ア</span><span class="ls-150">プリ</span>の紹介</h1>
         <p>「みんながカメラマン」とは、株式会社テレビ朝日が運営する映像・写真投稿サービスです。視聴者が撮影した事件・事故、災害現場の様子や、ハプニングなどのスクープ映像を投稿し、採用されるとニュース番組などで放映されます。視聴者は「みんながカメラマン」アプリを使って、映像を撮ったその場から簡単に投稿を行うことができます。</p>
+        <img class="sp-img" src="/img/tvasahi/img_1.jpg" alt="">
     </div>
-    <!-- <img src="/img/jnb/img_1.jpg" alt="" class="" style="margin-top:0px;" /> -->
 </section>
 
 <section class="backstory">
-    <img src="/img/tvasahi/img_2.jpg" alt="" class="alignright nowrap" />
+    <img src="/img/tvasahi/img_2.jpg" alt="" class="alignright nowrap pc-img" />
     <div class="nowrap">
         <h1>Monaca採用の背景</h1>
         <p>当初「みんながカメラマン」ではWebサイトからのみ投稿を受け付けていましたが、より簡単に、素早く投稿していただけるように、2015年春にモバイルアプリをリリースするという計画がたちあがりました。限られた予算内でiOSとAndroidの両方に対応したアプリが必要だったため、開発環境としてはMonacaを採用しました。</p>
         <p>「みんながカメラマン」アプリの評価は高く、投稿数は従来の約3倍に増えました。さらに事故・事件の現場からすぐに映像が送られてくるため、スクープ性の高い映像が集まるようになり、現在では、2～3日に1本くらいのペースでニュース番組に採用されるまでになりました。</p>
     </div>
+    <img src="/img/tvasahi/img_2.jpg" alt="" class="sp-img" />
 </section>
 
 <section class="effect">
@@ -82,14 +83,21 @@ keywords: Monaca,HTML5,Cordova,PhoneGap,クラウド,セキュリティ
     <div class="nowrap qa">
         <p>「みんながカメラマン」アプリについて株式会社テレビ朝日の松田直樹氏にお話をおうかがいしました。</p>
         <h2>Q1.アプリの機能面で特に留意した点を教えてください。</h2>
-        <img src="/img/tvasahi/img_3.jpg" alt="直感的で簡単に操作できる画面" />
+        <img class="pc-img" src="/img/tvasahi/img_3.jpg" alt="直感的で簡単に操作できる画面" />
         <p>スクープ映像を素早く撮影現場からアップできるよう、シンプルにかつスムーズに動作するように留意しました。特に事件・事故現場での混乱の中でも間違えずに投稿できるように、直感的で簡単に操作できるような画面設計にしています。また、素早く投稿できるように投稿者の情報などはアプリ内に保存し、投稿の度に情報を入力する手間を省いています。</p>
+        <img class="sp-img" src="/img/tvasahi/img_3.jpg" alt="直感的で簡単に操作できる画面" />
 
         <h2>Q2.アプリの評判はいかがですか？</h2>
         <p>スクープ映像の投稿に特化し、シンプルで使い勝手の良さを追求した点が評価されています。また、同種の投稿アプリと比較しても動きは大変滑らかで、視聴者からの評判は高いです。社内の記者もスクープ映像の入稿用に使っているのですが、かなりハードに使っても安定して動作しているため、今では取材に欠かせないツールの一つにもなっています。</p>
 
         <h2>Q3.今後の取り組みついて教えて下さい。</h2>
         <p>「みんながカメラマン」アプリの登場によって、より多くの映像が視聴者から集まってくるようになりました。この流れを促進すべく、視聴者に投稿の動機付けにつながるような機能追加をしていきたいと考えています。幸い、iOS、Androidのそれぞれ向けにアプリの改修を行う必要がないため、限られた予算内でも積極的な機能追加ができると期待しています。</p>
+    </div>
+    <div class="sp-interview clearfix">
+        <dl>
+            <dt><img src="/img/tvasahi/img_portrait_matsuda.jpg" alt="" /></dt>
+            <dd><figcaption>株式会社テレビ朝日<br />技術局　設備センター　サイバーメディアシステムグループ　兼　総合ビジネス局　デジタル事業センター<br />松田 直樹 氏</figcaption></dd>
+        </dl>
     </div>
 </section>
 
