@@ -106,6 +106,9 @@ body.solution-partner {
         width: 790px;
         border: none;
         margin-bottom: 50px;
+        @media screen and (max-width: 850px) {
+          width: 90%;
+        }
         @media screen and (max-width: $break) {
           width: 100%;
         }
@@ -158,12 +161,20 @@ body.solution-partner {
             border-bottom: 1px solid #ececec;
             padding: 34px 0 34px 30px;
             overflow: hidden;
+            // @media screen and (max-width: 850px) {
+            //   padding: 30px 20px 30px 20px;
+            // }
             @media screen and (max-width: $break) {
               padding: 30px 0 30px 20px;
             }
 
             div {
                  height: 90px;
+                 @media screen and (max-width: 850px) {
+                   img {
+                     width: 85%;
+                   }
+                 }
                  @media screen and (max-width: $break) {
                   height: auto;
                   max-height: 90px;
@@ -182,6 +193,10 @@ body.solution-partner {
         width: 790px;
         border: solid 1px #e5e5e5;
         border-radius: 4px;
+        @media screen and (max-width: 850px) {
+          width: 90%;
+          padding: 5%;
+        }
         @media screen and (max-width: $break) {
           padding: 5%;
           width: 100%;
@@ -199,6 +214,9 @@ body.solution-partner {
         margin: 0px;
         padding: 0px 0px 14px 0px;
         border-bottom: solid 1px #e5e5e5;
+        @media screen and (max-width: 850px) {
+          width: 100%;
+        }
         @media screen and (max-width: $break) {
           width: 100%;
           box-sizing: border-box;
@@ -224,6 +242,9 @@ body.solution-partner {
     .partner-info {
         width: 590px;
         margin: 0px 20px 0px 90px;
+        @media screen and (max-width: 850px) {
+          width: auto;
+        }
         @media screen and (max-width: $break) {
           padding: 0;
           margin: 0;
@@ -238,6 +259,9 @@ body.solution-partner {
         line-height: 120%;
         text-align: left;
         margin-bottom: 6px;
+        @media screen and (min-width: $break + 1px) and (max-width: 850px) {
+          width: auto;
+        }
         @media screen and (max-width: $break) {
           padding: 0 0 0 5%;
           margin: 0 0 7%;
@@ -257,6 +281,9 @@ body.solution-partner {
         line-height: 18px;
         text-align: left;
         width: 610px;
+        @media screen and (max-width: 850px) {
+          width: auto;
+        }
         @media screen and (max-width: $break) {
           margin: 3% 0 0;
           width: 100%;
@@ -269,6 +296,9 @@ body.solution-partner {
         width: 730px;
         margin: 0px;
         padding: 0px;
+        @media screen and (max-width: 850px) {
+          width: 100%;
+        }
         @media screen and (max-width: $break) {
           width: 100%;
           box-sizing: border-box;
@@ -284,6 +314,9 @@ body.solution-partner {
         width: 430px;
         margin: 0px 40px 0px 0px;
         padding: 0px;
+        @media screen and (max-width: 850px) {
+          width: 50%;
+        }
         @media screen and (max-width: $break) {
           float: none;
           width: 100%;
@@ -297,6 +330,9 @@ body.solution-partner {
         width: 430px;
         margin: 21px 0px 36px 0px;
         padding: 0px;
+        @media screen and (max-width: 850px) {
+          width: 100%;
+        }
         @media screen and (max-width: $break) {
           width: 100%;
           box-sizing: border-box;
@@ -308,6 +344,9 @@ body.solution-partner {
         line-height: 160%;
         width: 430px;
         padding: 0px;
+        @media screen and (max-width: 850px) {
+          width: 100%;
+        }
         @media screen and (max-width: $break) {
           margin: 0 0 10%;
           width: 100%;
@@ -501,6 +540,9 @@ body.solution-partner {
         font-size: 12px;
         line-height: 14px;
         height: 14px;
+        @media screen and (max-width: 850px) {
+          width: 90%;
+        }
         @media screen and (max-width: $break) {
           width: 100%;
           max-width: 100%;
