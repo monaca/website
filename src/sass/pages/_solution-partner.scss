@@ -312,7 +312,7 @@ body.solution-partner {
         margin: 0px 40px 0px 0px;
         padding: 0px;
         @media screen and (max-width: 850px) {
-          width: 50%;
+          width: calc(100% - 300px);
         }
         @media screen and (max-width: $break) {
           float: none;
