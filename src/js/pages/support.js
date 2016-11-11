@@ -8,7 +8,9 @@
     loginData.autoDisplay = false;
     displayBody();
     showLoading("support-inquiry", "loading");
-
+    
+    if(!loginData.status.isLogin) document.getElementById('link_technical_to').href += '?tag=bugs';
+    
     loginData.onReady(function() {
       $.ajax({
         type: "GET",
