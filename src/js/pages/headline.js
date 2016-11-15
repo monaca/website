@@ -28,7 +28,7 @@
     getIssues( { lang : window.LANG , type : "fault" , limit : 50 } ,
       function(data) {
         appendIssues(
-          'en' , $(".headline-entries") , data
+          window.LANG , $(".headline-entries") , data
         );
 
         $(".headline-entry-toggle").on("click", "img", function() {
