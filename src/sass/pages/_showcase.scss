@@ -482,21 +482,28 @@ body.showcase {
             @media screen and (max-width: $break) {
                 display: block;
                 width: 100%;
-                dl {
-                    width: 285px;
-                    float: left;
-                }
-                dl:nth-of-type(2) {
-                    float: right;
+                div {
+                    display:flex;
+                    justify-content: center;
+                    dl {
+                        margin: 0 3% 0 0;
+                        width: 280px;
+                    }
+                    dl:nth-of-type(3) {
+                        margin: 0;
+                    }
                 }
             }
             @media screen and (max-width: $break-xs) {
-                dl {
-                    margin: 0 auto 5%;
-                    float: none;
-                }
-                dl:nth-of-type(2) {
-                    float: none;
+                div {
+                    display: block;
+                    dl {
+                        margin: 0 auto 5%;
+                        float: none;
+                    }
+                    dl:nth-of-type(2) {
+                        float: none;
+                    }
                 }
             }
         }
@@ -2838,7 +2845,7 @@ body.showcase.jtrust {
             display: block;
             width: 100%;
             dl {
-                width: 285px;
+                width: 185px;
                 float: left;
             }
             dl:nth-of-type(2) {
@@ -2848,6 +2855,7 @@ body.showcase.jtrust {
         @media screen and (max-width: $break-xs) {
             dl {
                 margin: 0 auto 5%;
+                width: 285px;
                 float: none;
             }
             dl:nth-of-type(2) {
