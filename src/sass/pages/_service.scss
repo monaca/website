@@ -1264,6 +1264,13 @@ body.lang-en section#support {
       left: 0;
       width: 100%;
       height: 100%;
+      @media screen and (max-width: 320px) {
+        -moz-transform: scale(0.8,0.8);
+        -webkit-transform: scale(0.8,0.8);
+        -o-transform: scale(0.8,0.8);
+        -ms-transform: scale(0.8,0.8);
+        left: -35px;
+      }
     }
   }
 
