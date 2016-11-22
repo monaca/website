@@ -87,7 +87,7 @@ body.logos article.main {
             border-bottom: 1px solid #ff4d35;
         }
         p.button{
-            margin-bottom: 60px;
+            margin-bottom: 80px;
         }
 
     }
@@ -100,46 +100,38 @@ body.logos article.main {
             margin: 0;
             padding: 0;
             img {
-                margin-bottom: 38px;
+                margin-bottom: 0;
                 width: 100%;
-            }
-        }
-        @media screen and (max-width: $break) {
-            img{
-                margin-bottom: 28px;
-            }
-            li {
-                img{
-                    margin-bottom: 28px;
-                }
             }
         }
     }
 
     section#productlogo {
-        @media screen and (max-width: 790px) {
-            li {
-                width: 48%;
-                margin-right: 20px;
-                img {
-                    
-                }
-            }
-            li:first-child {
-                margin-right: 30px;
-            }
-        }
-        li:first-child {
-            margin-right: 30px;
-        }
-        @media screen and (max-width: $break) {
-            li {
-                width: 100%;
-            }
-            li:first-child {
-                width: 100%;
-                margin-right: 0px;
-            }
+		ul {
+			margin-bottom: 20px;
+			li {
+				margin-bottom: 20px;
+				@media screen and (max-width: $break) {
+					margin-bottom: 10px;
+				}
+			}
+			li:nth-child(1), li:nth-child(3) {
+				margin-right: 30px;
+			}
+			@media screen and (max-width: 840px) {
+				li {
+					width: 48%;
+					&:nth-child(1) {
+						margin-right: 4%;
+					}
+					&:nth-child(3) {
+						margin-right: 4%;
+					}
+				}
+				li:first-child {
+					//margin-right: 30px;
+				}
+			}
         }
         .btn-red{
             border-radius: 3px;
