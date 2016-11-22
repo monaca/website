@@ -189,12 +189,15 @@ body.service {
     }
   }
   header > .container {
-    border-bottom: medium none;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0;
-    width: 1170px;
-    z-index: 101;
+    // border-bottom: medium none;
+    // box-sizing: border-box;
+    // margin: 0 auto;
+    // padding: 0;
+    // width: 1170px;
+    // // z-index: 101;
+    // @media screen and (max-width: 1184px) {
+    //   width: auto;
+    // }
     @media screen and (max-width: 1170px) {
       width: 95%;
     }
@@ -856,7 +859,7 @@ body.service {
             font-size: 16px;
             letter-spacing: 0;
             &:hover {
-              opacity: 0.9;
+              opacity: 1.0;
               user-select: none;
               -moz-user-select: none;
               -webkit-user-select: none;
@@ -1261,6 +1264,20 @@ body.lang-en section#support {
       left: 0;
       width: 100%;
       height: 100%;
+      // @media screen and (max-width: 450px) {
+      //   -moz-transform: scale(1.0,1.0);
+      //   -webkit-transform: scale(1.0,1.0);
+      //   -o-transform: scale(1.0,1.0);
+      //   -ms-transform: scale(1.0,1.0);
+      //   left: -15px;
+      // }
+      // @media screen and (max-width: 320px) {
+      //   -moz-transform: scale(0.8,0.8);
+      //   -webkit-transform: scale(0.8,0.8);
+      //   -o-transform: scale(0.8,0.8);
+      //   -ms-transform: scale(0.8,0.8);
+      //   left: -35px;
+      // }
     }
   }
 
@@ -1400,6 +1417,17 @@ body.lang-en section#support {
       line-height: 1.4;
       color: #363636;
       margin-bottom: 10px;
+
+      @media screen and (max-width: 970px) {
+        .br-hidden {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 350px) {
+        .br-hidden-1 {
+          display: inline;
+        }
+      }
       @media screen and (max-width: $break) {
         font-size: 24px;
       }
@@ -1773,8 +1801,9 @@ body.lang-en section#support {
       position: absolute;
       left: 90px;
       bottom: -27px;
-      @media screen and (max-width: 1170px) {
-        left: 0;
+      @media screen and (max-width: $break) {
+        left: -1px;
+        bottom: -27px;
       }
     }
   }
@@ -1783,7 +1812,15 @@ body.lang-en section#support {
     border-radius: 0 4px 4px 4px;
     position: relative;
     @media screen and (max-width: $break) {
-      padding: 10% 0 5%;
+      padding: 10% 5%;
+      min-width: 100%;
+      height: 100%;
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
     }
     div {
       text-align: center;
@@ -1800,14 +1837,20 @@ body.lang-en section#support {
         padding: 0;
         margin: 0;
         width: 96%;
-        height: auto;
+        text-align: left;
+        font-size: 18px;
       }
       @media screen and (max-width: $break-xs) {
         padding: 0;
         margin: 0;
-        width: 96%;
-        height: auto;
-        text-align: left;
+        width: 100%;
+      }
+      .slick-track {
+        @media screen and (max-width: $break) {
+          height: 100%;
+          display: inline-block;
+          vertical-align: middle;
+        }
       }
       span {
         display: inline-block;
@@ -1816,6 +1859,7 @@ body.lang-en section#support {
         background: url(/img/service/dubble_quote.png) no-repeat 0 0;
         position: relative;
         top: 50%;
+        // left: 1%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -1828,16 +1872,19 @@ body.lang-en section#support {
           background-size: 30px;
         }
         @media screen and (max-width: $break) {
+          top: 0;
           padding: 0 0 0 10%;
           margin: 0 auto;
           background-size: 20px;
           box-sizing: border-box;
           line-height: 1.4;
-          display: block;
-          width: 80%;
+          width: 100%;
+          height: 100%;
           -webkit-transform: none;
           -ms-transform: none;
           transform: none;
+          display: table-cell;
+          vertical-align: middle;
         }
       }
     }
