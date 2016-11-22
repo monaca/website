@@ -1839,15 +1839,24 @@ body.lang-en section#support {
         width: 96%;
         text-align: left;
         font-size: 18px;
+        height: 100%;
       }
       @media screen and (max-width: $break-xs) {
         padding: 0;
         margin: 0;
         width: 100%;
+        height: 100%;
       }
       .slick-track {
         @media screen and (max-width: $break) {
           height: 100%;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      .slick-slider {
+        @media screen and (max-width: $break) {
+          height: auto;
           display: inline-block;
           vertical-align: middle;
         }
@@ -1859,7 +1868,6 @@ body.lang-en section#support {
         background: url(/img/service/dubble_quote.png) no-repeat 0 0;
         position: relative;
         top: 50%;
-        // left: 1%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -1879,11 +1887,12 @@ body.lang-en section#support {
           box-sizing: border-box;
           line-height: 1.4;
           width: 100%;
+          min-width: 100%;
           height: 100%;
           -webkit-transform: none;
           -ms-transform: none;
           transform: none;
-          display: table-cell;
+          display: inline-block;
           vertical-align: middle;
         }
       }
