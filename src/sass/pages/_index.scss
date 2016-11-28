@@ -539,6 +539,31 @@ html body.home {
                 display: block;
             }
         }
+        .bnr-trial {
+           margin: 0 auto 45px;
+           width: 1170px;
+           display: block;
+           &:hover {
+             opacity: 0.6;
+             transition: .4s ease-in-out;
+             -webkit-transition: .4s ease-in-out;
+             -moz-transition: .4s ease-in-out;
+             -ms-transition: .4s ease-in-out;
+           }
+           @media screen and (max-width: 1300px){
+               width: 100%;
+           }
+           @media screen and (max-width: 1170px){
+               width: 100%;
+           }
+           @media screen and (max-width: $break) {
+               display: none;
+           }
+           img {
+               width: 100%;
+               display: block;
+           }
+        }
         li {
             padding-bottom: 70px;
             @media screen and (max-width: 1070px) and (min-width: $break-lg) {
