@@ -1812,7 +1812,7 @@ body.lang-en section#support {
     border-radius: 0 4px 4px 4px;
     position: relative;
     @media screen and (max-width: $break) {
-      padding: 10% 5%;
+      padding: 5% 5% 10%;
       min-width: 100%;
       height: 100%;
       &::before {
@@ -1850,8 +1850,9 @@ body.lang-en section#support {
       .slick-track {
         @media screen and (max-width: $break) {
           height: 100%;
-          display: inline-block;
-          vertical-align: middle;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
       .slick-slider {
