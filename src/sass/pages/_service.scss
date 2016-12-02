@@ -1776,7 +1776,7 @@ body.lang-en section#support {
       width: 100%;
     }
     @media screen and (max-width: $break) {
-      padding: 0;
+      padding: 10px;
       width: 100%;
     }
     @media screen and (max-width: $break-xs) {
@@ -1812,7 +1812,15 @@ body.lang-en section#support {
     border-radius: 0 4px 4px 4px;
     position: relative;
     @media screen and (max-width: $break) {
-      padding: 10% 5%;
+      padding: 5% 5% 10%;
+      min-width: 100%;
+      height: 100%;
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+      }
     }
     div {
       text-align: center;
@@ -1822,21 +1830,37 @@ body.lang-en section#support {
       font-size: 20px;
       font-weight: normal;
       @media screen and (max-width: $break-lg) {
-        margin: 0 auto 20px;
+        margin: 0 auto;
         width: 600px;
       }
       @media screen and (max-width: $break) {
         padding: 0;
         margin: 0;
         width: 96%;
-        height: auto;
+        text-align: left;
+        font-size: 18px;
+        height: 100%;
       }
       @media screen and (max-width: $break-xs) {
         padding: 0;
         margin: 0;
-        width: 96%;
-        height: auto;
-        text-align: left;
+        width: 100%;
+        height: 100%;
+      }
+      .slick-track {
+        @media screen and (max-width: $break) {
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .slick-slider {
+        @media screen and (max-width: $break) {
+          height: auto;
+          display: inline-block;
+          vertical-align: middle;
+        }
       }
       span {
         // display: inline-block;
@@ -1845,7 +1869,6 @@ body.lang-en section#support {
         background: url(/img/service/dubble_quote.png) no-repeat 0 0;
         position: relative;
         top: 50%;
-        // left: 1%;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -1858,15 +1881,20 @@ body.lang-en section#support {
           background-size: 30px;
         }
         @media screen and (max-width: $break) {
+          top: 0;
           padding: 0 0 0 10%;
           margin: 0 auto;
           background-size: 20px;
           box-sizing: border-box;
           line-height: 1.4;
           width: 100%;
+          min-width: 100%;
+          height: 100%;
           -webkit-transform: none;
           -ms-transform: none;
           transform: none;
+          display: table-cell;
+          vertical-align: middle;
         }
       }
     }
@@ -1888,45 +1916,8 @@ body.lang-en section#support {
     }
   }
 }
-.corporate-container {
-  @extend .training-table-container;
-  .corporate-wrapper {
-    margin-bottom: 60px;
-  }
-  img {
-    float: right;
-  }
-  p {
-    margin: 0 400px 30px 0;
-    @media screen and (max-width: $break) {
-      margin: 0;
-    }
-  }
-  .training-results {
-    width: 800px;
-    margin: 0 auto;
-    border-top: 1px solid #dbdbdb;
-    border-bottom: 1px solid #dbdbdb;
-    padding: 50px 0;
-    box-sizing: border-box;
-    text-align: center;
-    @media screen and (max-width: $break) {
-      width: 100%;
-    }
-    li {
-      display: inline-block;
-      margin: 0 40px 60px 0;
 
-      &:last-child {
-        margin-right: 0;
-      }
-      img {
-        float: none;
-      }
-    }
-  }
-}
-.corporate-container2 {
+.corporate-container {
   @extend .training-table-container;
   .corporate-wrapper {
     margin-bottom: 60px;
@@ -1952,6 +1943,11 @@ body.lang-en section#support {
     li {
       display: inline-block;
       margin: 0 30px 25px 0;
+      @media screen and (max-width: $break) {
+        margin: 0 2% 5% 0;
+        width: 30%;
+        box-sizing: border-box;
+      }
       &:last-child {
         margin-right: 0;
       }
