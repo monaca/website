@@ -2605,14 +2605,14 @@ body.showcase.unisys {
             }
         }
         em {
-            margin: 20px 0 0 30px;
+            margin: 10px 0 0 30px;
             float: left;
             @media screen and (max-width: $break) {
                 margin-left: 0;
             }
         }
         a {
-            margin: 20px 0 0;
+            margin: 10px 0 0;
             float: left;
             @media screen and (max-width: $break) {
                 clear: both;
@@ -2954,14 +2954,13 @@ body.showcase.kddi-web {
 
     .developer {
         img {
-            float: left;
             vertical-align: bottom;
             @media screen and (max-width: $break) {
                 float: none;
             }
         }
         em {
-            margin: 0 0 0 30px;
+            margin: 0;
             float: left;
             @media screen and (max-width: $break) {
                 margin-left: 0;
