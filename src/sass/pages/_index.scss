@@ -739,7 +739,7 @@ html:not([lang=en]) body.home {
   > div.main {
     h2 {
       font-family: Helvetica, Arial, sans-serif;
-      font-size: 40px;
+      font-size: 16px;
       padding-bottom: 22px;
     }
 
@@ -788,19 +788,46 @@ html:not([lang=en]) body.home {
         }
     }
     .box-uservoices {
+        .uservoice-organization {
+            font-size: 13px;
+        }
+        .uservoice-name {
+            font-size: 14px;
+        }
         li.flexion {
             .uservoice-user {
-                background: url(../img/index/photo_flexion.png) no-repeat 38px 25px;
+                padding:42px 0 0 80px;
+                background: url(../img/index/photo_flexion.png) no-repeat 5px 25px;
+                .uservoice-organization {
+                    @media screen and (min-width: 971px) {
+                        font-size: 10px;
+                    }
+                }
             }
         }
         li.nijibox {
             .uservoice-user {
-                background: url(../img/index/photo_nijibox.png) no-repeat 38px 25px;
+                padding:42px 0 0 80px;
+                background: url(../img/index/photo_nijibox.png) no-repeat 5px 25px;
+                .uservoice-name {
+                    @media screen and (min-width: 971px) {
+                        font-size: 13px;
+                    }
+                }
             }
         }
         li.jtrust {
             .uservoice-user {
-                background: url(../img/index/photo_jtrust.png) no-repeat 38px 25px;
+                padding:42px 0 0 80px;
+                background: url(../img/index/photo_jtrust.png) no-repeat 5px 25px;
+            }
+        }
+        .uservoice-balloon {
+            @media screen and (max-width: 1199px) and (min-width: 1107px) {
+                min-height: 185px;
+            }
+            @media screen and (max-width: 1011px) and (min-width: 971px) {
+                min-height: 214px;
             }
         }
     }
