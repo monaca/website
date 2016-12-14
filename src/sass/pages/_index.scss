@@ -752,6 +752,12 @@ html:not([lang=en]) body.home {
       padding-top: 90px;
       padding-bottom: 40px;
     }
+    .features,
+    .box-awards {
+        h2 {
+            font-size: 40px;
+        }
+    }
 
     .keyvisual {
       //background: url(../img/index/keyvisual_en.jpg) no-repeat center bottom, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
@@ -828,6 +834,9 @@ html:not([lang=en]) body.home {
             }
             @media screen and (max-width: 1011px) and (min-width: 971px) {
                 min-height: 214px;
+            }
+            &:after {
+                left: 25px;
             }
         }
     }
