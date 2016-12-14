@@ -787,6 +787,23 @@ html:not([lang=en]) body.home {
             font-size: 32px;
         }
     }
+    .box-uservoices {
+        li.flexion {
+            .uservoice-user {
+                background: url(../img/index/photo_flexion.png) no-repeat 38px 25px;
+            }
+        }
+        li.nijibox {
+            .uservoice-user {
+                background: url(../img/index/photo_nijibox.png) no-repeat 38px 25px;
+            }
+        }
+        li.jtrust {
+            .uservoice-user {
+                background: url(../img/index/photo_jtrust.png) no-repeat 38px 25px;
+            }
+        }
+    }
   }
 }
 
