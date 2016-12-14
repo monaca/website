@@ -739,7 +739,7 @@ html:not([lang=en]) body.home {
   > div.main {
     h2 {
       font-family: Helvetica, Arial, sans-serif;
-      font-size: 26px;
+      font-size: 40px;
       padding-bottom: 22px;
     }
 
@@ -776,6 +776,16 @@ html:not([lang=en]) body.home {
         line-height: 1.2;
         margin-bottom: 30px;
       }
+    }
+    .box-examples {
+        h2 {
+            font-size: 26px;
+        }
+    }
+    .box-uservoices {
+        h2 {
+            font-size: 32px;
+        }
     }
   }
 }
