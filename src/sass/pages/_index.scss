@@ -828,6 +828,7 @@ html:not([lang=en]) body.home {
                 background: url(../img/index/photo_jtrust.png) no-repeat 5px 25px;
             }
         }
+
         .uservoice-balloon {
             @media screen and (max-width: 1199px) and (min-width: 1107px) {
                 min-height: 185px;
@@ -837,6 +838,7 @@ html:not([lang=en]) body.home {
             }
             &:after {
                 left: 25px;
+                bottom: -11px;
             }
         }
     }
