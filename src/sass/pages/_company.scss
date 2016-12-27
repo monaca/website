@@ -101,7 +101,7 @@ body.company {
   }
   /* Key Visual */
 .monaca-team {
-  background: url(/img/company/About_Us_header_201612.png) no-repeat center bottom, url(/img/company/keyvisual_bg.png) repeat-x left bottom;
+  background: url(/img/company/About_Us_header_201603.png) no-repeat center bottom, url(/img/company/keyvisual_bg.png) repeat-x left bottom;
   background-color: #126AAA;
   height: 370px;
   margin: 0 auto;
@@ -175,31 +175,15 @@ body.company {
         }
       }
     }
-    ul#monacateamList {
-      li:last-child {
-        width: 640px;
-        text-align: left;
-        dt {
-          margin: 0 0 0 35px;
-        }
-        dd {
-          margin: 0 0 0 44px;
-        }
-        @media screen and (max-width: 1100px) {
-          width: 178px;
-          text-align:center;
-          dt,
-          dd {
-            margin: 0;
-          }
-        }
-        @media screen and (max-width: 810px) {
-          width: 27%;
-        }
-        @media screen and (max-width: $break-xs) {
-          width: 40%;
-        }
+    ul#onsenTeamList {
+      width: 646px;
+      @media screen and (max-width: 810px) {
+        width: 90%;
       }
+      @media screen and (max-width: $break) {
+        width: 90%;
+      }
+
     }
   }
   .monacaMember {
