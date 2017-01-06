@@ -504,7 +504,11 @@ body.showcase {
                 margin-bottom: 40px;
             }
             a {
-                margin: 0 15px;
+                margin: 0 10px;
+                @media screen and (max-width: $break-xs) {
+                    margin: 0 0 15px;
+                    display: inline-block;
+                }
             }
             .btn-big {
                 font-size: 24px;
@@ -1889,6 +1893,7 @@ body.showcase.proroutemarumitsu {
         .name {
             font-weight: 700;
             color: #444;
+            display: inline-block;
         }
         .sp-interview {
             display: none;
@@ -2014,6 +2019,7 @@ body.showcase.teu {
         .name {
             font-weight: 700;
             color: #444;
+            display: inline-block;
         }
         .sp-interview {
             display: none;
@@ -2185,6 +2191,7 @@ body.showcase.jmac {
         .name {
             font-weight: 700;
             color: #444;
+            display: inline-block;
         }
     }
     .sp-interview {
@@ -2319,6 +2326,7 @@ body.showcase.kdl {
         .name {
             font-weight: 700;
             color: #444;
+            display: inline-block;
         }
     }
     .sp-interview {
@@ -2489,6 +2497,7 @@ body.showcase.netmarketing {
         .name {
             font-weight: 700;
             color: #444;
+            display: inline-block;
         }
         .qa {
             p {
@@ -2681,6 +2690,7 @@ body.showcase.unisys {
         .name {
             font-weight: 700;
             color: #444;
+            display: inline-block;
         }
         .qa {
             p {
@@ -2846,6 +2856,7 @@ body.showcase.jtrust {
         .name {
             font-weight: 700;
             color: #444;
+            display: inline-block;
         }
         .qa {
             p {
@@ -3036,6 +3047,7 @@ body.showcase.kddi-web {
         .name {
             font-weight: 700;
             color: #444;
+            display: inline-block;
         }
         .qa {
             p {
@@ -3226,6 +3238,7 @@ body.showcase.clubood {
         .name {
             font-weight: 700;
             color: #444;
+            display: inline-block;
         }
         .qa {
             p {
