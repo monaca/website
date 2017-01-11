@@ -515,6 +515,13 @@ body.book-school {
             dl {
                 margin: 0 0 30px 0;
                 text-align: left;
+                &:last-child {
+                    dd {
+                        @media screen and (max-width: $break) {
+                            text-align: center;
+                        }
+                    }
+                }
             }
             a.btn-darkgray {
                 @media screen and (max-width: $break) {
