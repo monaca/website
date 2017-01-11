@@ -119,14 +119,24 @@ body.solution-partner {
             }
             li {
                 display: inline-block;
-                min-width: 280px;
+                min-width: 230px;
                 margin-right: 0.5em;
                 font-size: 16px;
                 line-height: 2.5;
                 color: #2472b3;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: $break-lg) {
                   margin: 0 0 6%;
-                  min-width: 100%;
+                  min-width: 30%;
+                  line-height: 1.5;
+                }
+                @media screen and (max-width: $break-xs) {
+                  margin: 0 0 6%;
+                  min-width: 30%;
+                  line-height: 1.5;
+                }
+                @media screen and (max-width: $break-xs) {
+                  margin: 0 0 6%;
+                  min-width: 47%;
                   line-height: 1.5;
                 }
             }
@@ -205,12 +215,38 @@ body.solution-partner {
         a:hover {
           text-decoration: none;
         }
+
+        .toggle {
+            text-decoration: none;
+            cursor: pointer;
+            position: absolute;
+            top: 58px;
+            right: 20px;
+            i:before {
+              font-family: 'Glyphicons Halflings';
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              content: "\e114";
+              color: #ccc;
+
+            }
+          }
+          .toggle.active {
+            i:before {
+              font-family: 'Glyphicons Halflings';
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              content: "\e113";
+              color: #ccc;
+            }
+          }
     }
     .partner-head {
         width: 730px;
         margin: 0px;
-        padding: 0px 0px 14px 0px;
-        border-bottom: solid 1px #e5e5e5;
+        padding: 0;
         @media screen and (max-width: 850px) {
           width: 100%;
         }
@@ -291,8 +327,10 @@ body.solution-partner {
 
     .partner-content {
         width: 730px;
-        margin: 0px;
+        margin: 14px 0 0;
         padding: 0px;
+        border-top: solid 1px #e5e5e5;
+        display: none;
         @media screen and (max-width: 850px) {
           width: 100%;
         }
@@ -616,6 +654,12 @@ body.solution-partner {
       h1 {
         font-size: 40px;
         line-height: 1.2;
+      }
+      h2 {
+        margin: 10px 0 20px;
+        font-size: 30px;
+        font-weight: normal;
+        color: #333;
       }
       width: auto;
       line-height: 1.8;
