@@ -100,26 +100,27 @@ body.solution-partner {
         color: #666;
         font-size: 14px;
         line-height: 22px;
-        margin: 0px auto 25px auto;
+        margin: 0px auto 70px auto;
         text-align: left;
         padding: 0;
         width: 790px;
         border: none;
         margin-bottom: 50px;
         @media screen and (max-width: 850px) {
+          margin: 0px auto 50px auto;
           width: 90%;
         }
         @media screen and (max-width: $break) {
           width: 100%;
         }
         .link-list {
-            margin: 0 0 30px 40px;
+            margin: 0 0 30px 0;
             @media screen and (max-width: $break) {
               margin: 0 0 8% 0;
             }
             li {
                 display: inline-block;
-                min-width: 230px;
+                min-width: 186px;
                 margin-right: 0.5em;
                 font-size: 16px;
                 line-height: 2.5;
@@ -194,7 +195,7 @@ body.solution-partner {
         }
     }
     .partner-item {
-        margin: 0px auto;
+        margin: 0px auto 30px;
         text-align: left;
         padding: 30px;
         width: 790px;
@@ -205,6 +206,7 @@ body.solution-partner {
           padding: 5%;
         }
         @media screen and (max-width: $break) {
+          margin: 0px auto 5%;
           padding: 5%;
           width: 100%;
         }
@@ -222,6 +224,9 @@ body.solution-partner {
             position: absolute;
             top: 58px;
             right: 20px;
+            @media screen and (max-width: $break) {
+              display: none;
+            }
             i:before {
               font-family: 'Glyphicons Halflings';
               font-style: normal;
@@ -570,7 +575,7 @@ body.solution-partner {
     p.btn-btt {
         width: 790px;
         max-width: 790px;
-        margin: 7px auto 50px;
+        margin: 0 auto 60px;
         text-align: right;
         font-size: 12px;
         line-height: 14px;
