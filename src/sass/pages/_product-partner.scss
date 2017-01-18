@@ -76,9 +76,9 @@ body.product-partner {
       -moz-box-pack: center;
 
       li {
-        width: 180px;
+        width: 200px;
         text-align: center;
-        margin-right: 30px;
+        margin-right: 40px;
 
         &:last-child {
           margin-right: 0;
@@ -94,7 +94,7 @@ body.product-partner {
             -moz-transition: .4s ease-in-out;
             -ms-transition: .4s ease-in-out;
            .cate-img {
-             background-position: 0 -180px;
+             background-position: 0 -200px;
            }
 
            p {
@@ -105,7 +105,7 @@ body.product-partner {
            }
          }
          p {
-           font-size: 19px;
+           font-size: 20px;
            line-height: 20px;
            padding: 6px 18px;
            display: inline;
@@ -119,12 +119,12 @@ body.product-partner {
        }
 
        .cate-img {
-         width: 180px;
-         height: 180px;
+         width: 200px;
+         height: 200px;
          margin: 0 auto 20px;
          background-position: 0 0;
          background-repeat: no-repeat;
-         background-size: 180px;
+         background-size: 200px;
 
          &:hover {
           background-position: 0 -200px;
@@ -145,9 +145,6 @@ body.product-partner {
        }
        .security-img {
          background-image: url(/img/product-partner/security_img.png);
-       }
-       .iot-img {
-         background-image: url(/img/product-partner/iot_img.png);
        }
       }
     }
