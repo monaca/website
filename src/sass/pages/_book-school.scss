@@ -16,6 +16,14 @@ body.book-school {
     a:hover {
         opacity: 0.85;
     }
+    a.btn-darkgray {
+        &:focus {
+            color: #fff;
+        }
+        &:active {
+            color: #ccc;
+        }
+    }
     .keyvisual {
         background: url(../img/book/support/bg_keyvisual_high_light.png) no-repeat center center, url(../img/book/support/bg_keyvisual_repeat.jpg) repeat left top;
         color: #ffffff;
@@ -507,6 +515,20 @@ body.book-school {
             dl {
                 margin: 0 0 30px 0;
                 text-align: left;
+                &:last-child {
+                    dd {
+                        @media screen and (max-width: $break) {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+            a.btn-darkgray {
+                @media screen and (max-width: $break) {
+                    height: 50px;
+                    line-height: 50px;
+                    width: 70%;
+                }
             }
         }
     }

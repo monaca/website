@@ -752,6 +752,12 @@ html:not([lang=en]) body.home {
       padding-top: 90px;
       padding-bottom: 40px;
     }
+    .features,
+    .box-awards {
+        h2 {
+            font-size: 40px;
+        }
+    }
 
     .keyvisual {
       //background: url(../img/index/keyvisual_en.jpg) no-repeat center bottom, url(../img/index/keyvisual_bg.png) repeat-x left bottom;
@@ -776,6 +782,65 @@ html:not([lang=en]) body.home {
         line-height: 1.2;
         margin-bottom: 30px;
       }
+    }
+    .box-examples {
+        h2 {
+            font-size: 26px;
+        }
+    }
+    .box-uservoices {
+        h2 {
+            font-size: 32px;
+        }
+    }
+    .box-uservoices {
+        .uservoice-organization {
+            font-size: 13px;
+        }
+        .uservoice-name {
+            font-size: 14px;
+        }
+        li.flexion {
+            .uservoice-user {
+                padding:42px 0 0 80px;
+                background: url(../img/index/photo_flexion.png) no-repeat 5px 25px;
+                .uservoice-organization {
+                    @media screen and (min-width: 971px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        li.nijibox {
+            .uservoice-user {
+                padding:42px 0 0 80px;
+                background: url(../img/index/photo_nijibox.png) no-repeat 5px 25px;
+                .uservoice-name {
+                    @media screen and (min-width: 971px) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+        li.jtrust {
+            .uservoice-user {
+                padding:42px 0 0 80px;
+                background: url(../img/index/photo_jtrust.png) no-repeat 5px 25px;
+            }
+        }
+
+        .uservoice-balloon {
+            @media screen and (max-width: 1199px) and (min-width: 1107px) {
+                min-height: 185px;
+            }
+            @media screen and (max-width: 1011px) and (min-width: 971px) {
+                min-height: 214px;
+            }
+            &:after {
+                left: 25px;
+                bottom: -11px;
+            }
+        }
     }
   }
 }

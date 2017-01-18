@@ -78,7 +78,7 @@ body.product-partner {
       li {
         width: 200px;
         text-align: center;
-        margin-right: 70px;
+        margin-right: 40px;
 
         &:last-child {
           margin-right: 0;
@@ -141,6 +141,9 @@ body.product-partner {
        }
        .analytics-img {
          background-image: url(/img/product-partner/analytics_img.png);
+       }
+       .security-img {
+         background-image: url(/img/product-partner/security_img.png);
        }
       }
     }

@@ -59,10 +59,10 @@
             window.addEventListener('load', loadResources);
         }
     </script>
-	{{#is language "ja"}}
-		<script type="text/javascript">var Kairos3Tracker="asial";</script>
-		<script type="text/javascript" charset="utf-8" src="//c.k3r.jp"></script>
-	{{/is}}
+  {{#is language "ja"}}
+    <script type="text/javascript">var Kairos3Tracker="asial";</script>
+    <script type="text/javascript" charset="utf-8" src="//c.k3r.jp"></script>
+  {{/is}}
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 
@@ -161,7 +161,6 @@
     {{else}}
         <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
     {{/is}}
-    <script src="//cdn.optimizely.com/js/7755472821.js"></script>
     <script>
       if (!monacaApi.executedLoginCheck) {
         monacaApi.loginCheck({});
