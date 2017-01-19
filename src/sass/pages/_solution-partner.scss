@@ -219,11 +219,21 @@ body.solution-partner {
         }
 
         .toggle {
-            text-decoration: none;
             cursor: pointer;
+            height: 100%;
             position: absolute;
-            top: 58px;
-            right: 20px;
+            right: 0;
+            text-decoration: none;
+            top: 0;
+            width: 100%;
+            border-radius: 4px;
+            &:hover {
+              background: rgba(36,114,179,0.1);
+              -webkit-transition: all 0.5s ease;
+              -moz-transition: all 0.5s ease;
+              -o-transition: all 0.5s ease;
+              transition: all  0.5s ease;
+            }
             @media screen and (max-width: $break) {
               display: none;
             }
@@ -234,10 +244,15 @@ body.solution-partner {
               font-size: 16px;
               content: "\e114";
               color: #ccc;
-
+              right: 20px;
+              position: absolute;
+              top: 58px;
             }
           }
           .toggle.active {
+            &:hover {
+                background: none;
+              }
             i:before {
               font-family: 'Glyphicons Halflings';
               font-style: normal;
