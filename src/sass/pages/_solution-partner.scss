@@ -295,8 +295,10 @@ body.solution-partner {
     .partner-info {
         width: 590px;
         margin: 0px 20px 0px 90px;
+        position: absolute;
         @media screen and (max-width: 850px) {
           width: auto;
+          position:relative;
         }
         @media screen and (max-width: $break) {
           padding: 0;
@@ -347,7 +349,7 @@ body.solution-partner {
 
     .partner-content {
         width: 730px;
-        margin: 14px 0 0;
+        margin: 24px 0 0;
         padding: 0px;
         border-top: solid 1px #e5e5e5;
         display: none;
@@ -621,6 +623,14 @@ body.solution-partner {
     .menuimg {
         margin: -7px 0px 0px 0px;
     }
+    .ti-works {
+        margin: 20px 0 5px;
+        width: 100%;
+        background: #2472B3;
+        color: #fff;
+        text-align: center;
+        font-size: 10px;
+    }
     .bold-headline {
         margin-right:12px;
         color: #2472b3;
@@ -632,6 +642,14 @@ body.solution-partner {
         }
     }
     .detail-text {
+      .company-url {
+        position: relative;
+        z-index: 99;
+        bottom: 0;
+        @media screen and (max-width: $break) {
+          position: absolute;
+        }
+      }
       @media screen and (max-width: $break) {
         float: left;
         width: 82%;
