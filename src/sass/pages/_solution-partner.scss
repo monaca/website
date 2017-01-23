@@ -349,9 +349,8 @@ body.solution-partner {
 
     .partner-content {
         width: 730px;
-        margin: 24px 0 0;
-        padding: 0px;
-        border-top: solid 1px #e5e5e5;
+        padding: 24px 0 0;
+        margin: 0px;
         display: none;
         @media screen and (max-width: 850px) {
           width: 100%;
@@ -368,9 +367,9 @@ body.solution-partner {
     }
     .partner-content-left {
         float: left;
-        width: 430px;
-        margin: 0px 40px 0px 0px;
-        padding: 0px;
+        width: 470px;
+        padding: 0px 40px 0px 0px;
+        border-top: solid 1px #e5e5e5;
         @media screen and (max-width: 850px) {
           width: calc(100% - 300px);
         }
@@ -423,6 +422,7 @@ body.solution-partner {
         width: 260px;
         margin: 0px;
         padding: 0px;
+        border-top: solid 1px #e5e5e5;
         @media screen and (max-width: $break) {
           float: none;
           width: 100%;
