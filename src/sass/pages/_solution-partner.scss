@@ -319,7 +319,7 @@ body.solution-partner {
         }
         @media screen and (max-width: $break) {
           padding: 0 0 0 5%;
-          margin: 0 0 7%;
+          margin: 0;
           height: 70px;
           display:table-cell;
           vertical-align: middle;
@@ -340,7 +340,7 @@ body.solution-partner {
           width: auto;
         }
         @media screen and (max-width: $break) {
-          margin: 3% 0 0;
+          margin: 1% 0 0;
           width: 100%;
           box-sizing: border-box;
         }
