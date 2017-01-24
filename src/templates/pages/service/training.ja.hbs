@@ -17,10 +17,11 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
 
       <div class="training-outline clearfix">
         <div class="text">
-          <p>10万ユーザーを突破した『人気国産アプリ開発ツールMonaca』を利用してアプリ開発を行う講座です。</p>
-          <p>Monacaを利用することで面倒な開発環境のセットアップなしにiOSやAndroidに対応したアプリを開発することができます。そのため、初心者・教育機関・開発効率を求めるプロの方々まで幅広く利用されています。</p>
-          <p>初心者の方が気軽に学べる『<a href="#monaca-1">Monaca超入門</a>』講座と初～中級者向けの『<a href="#monaca-2">HTML5モバイルアプリ開発基礎講座</a>』講座をご用意しております。</p>
-          <p class="last-sec">10万ユーザー突破を記念して『<a href="#monaca-1">Monaca超入門</a>』は特別価格で実施します。<br />また『<a href="#monaca-2">HTML5モバイルアプリ開発基礎講座</a>』にご参加いただいた方には、アシアル監修のMonaca公式ガイドブック『クラウドでできるHTML5ハイブリッドアプリ開発』を差し上げます。</p>
+          <p>人気国産アプリ開発ツール『Monaca』を利用してアプリ開発実習を行う講座です。</p>
+          <p>MonacaはWeb技術を利用してiOS/Androidの両方に対応したアプリを開発することができるツールです。<br>
+          開発効率を求めるプロから教育機関まで、全世界で16万人以上の方に幅広く利用されています。</p>
+
+
           <img class="left-pic" src="/img/service/pic_outline_01.png" alt="">
           <img class="right-pic" src="/img/service/pic_outline_02.png" alt="">
         </div>
@@ -34,20 +35,20 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
                 if(hsize > 740) {
                   $(".iframe-content").css("height", "500px");
                 } else {
-                  $(".iframe-content").css("height", "450px");
+                  $(".iframe-content").css("height", "500px");
                 }
               });
           }else if(ua.indexOf('iPad') > 0 || ua.indexOf('Android') > 0){
               $(document).ready(function () {
                 hsize = $(window).height();
-                $(".iframe-content").css("height", "450px");
+                $(".iframe-content").css("height", "460px");
               });
           }else{
               $(document).ready(function () {
                 wsize = $(window).width();
                 hsize = $(window).height();
                 if(hsize < 970) {
-                  $(".iframe-content").css("height", "450px");
+                  $(".iframe-content").css("height", "460px");
                 } else {
                   $(".iframe-content").css("height", "650px");
                 }
@@ -56,7 +57,7 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
                 wsize = $(window).width();
                 hsize = $(window).height();
                 if(hsize < 970) {
-                  $(".iframe-content").css("height", "450px");
+                  $(".iframe-content").css("height", "460px");
                 } else {
                   $(".iframe-content").css("height", "650px");
                 }
@@ -68,38 +69,8 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
         </div>
       </div>
 
-      <div class="training-table-container divider">
-        <h3 id="monaca-2">はじめてのHTML5モバイルアプリ開発講座</h3>
-        <table class="training-table">
-          <tr class="last">
-            <th id="monaca-1" class="course-title">
-              <h4>Monaca超入門講座</h4>
-              <a class="btn-blue btn-mini" href="http://www.slideshare.net/AsialCorp/html5-37267669" target="_blank">講座資料を見る</a>
-            </th>
-            <td class="theme">
-              <h5>テーマ：「はじめてのHTML5モバイルアプリ」</h5>
-              <p>HTMLやJavaScriptに関する解説やMonacaの基本的な使い方をレクチャーいたします。またおみくじアプリの作成を通じて実際にコードを書きながらプログラミングを学びます。</p>
-              <ul class="tag-container">
-                <li>ハイブリッドアプリの概要</li>
-                <li>Monacaの使い方</li>
-              </ul>
-            </td>
-            <td class="price">
-              <ul>
-                <li>金額：<span>3,240円</span></li>
-                <li>時間：<span>2時間</span></li>
-                <li>難易度：<span class="ico-star">★</span></li>
-              </ul>
-            </td>
-          </tr>
-
-        </table>
-
-      </div>
-
-
       <div class="training-table-container">
-        <h3>HTML5モバイルアプリ開発基礎講座</h3>
+        <h3>HTML5モバイルアプリ開発講座</h3>
         <table class="training-table">
         <!--
         <tr>
@@ -108,22 +79,21 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
       -->
       <tr>
         <th class="course-title">
-          <h4>RSSリーダー</h4>
-          <a class="btn-blue btn-mini" href="http://www.slideshare.net/AsialCorp/html5rss" target="_blank">講座資料を見る</a>
+          <h4>Monaca入門編</h4>
         </th>
         <td class="theme">
-          <h5>テーマ：「外部サーバーのデータを取得しよう」</h5>
-          <p>ブログやニュースサイトなどの新着記事を閲覧するRSSリーダーアプリを制作し、アプリから外部サーバーに対して通信を行うための技術を学びます。</p>
+          <h5>テーマ：「はじめてのHTML5モバイルアプリ」</h5>
+          <p>Monacaの使い方をメインとした講座です。セットアップから始まり、発展的な利用方法まで幅広く解説します。<br>
+          実習を交えながらHTML5モバイルアプリ開発の流れを学ぶことができます。</p>
           <ul class="tag-container">
-            <li>Ajax</li>
-            <li>RSS</li>
+            <li>Monaca</li>
+            <li>Cordova</li>
           </ul>
         </td>
         <td class="price">
           <ul>
-            <li>金額：<span>10,800円</span></li>
-            <li>時間：<span>2.5時間</span></li>
-            <li>難易度：<span class="ico-star">★★</span></li>
+            <li>金額：<span>5,400円</span></li>
+            <li>時間：<span>2時間</span></li>
           </ul>
         </td>
       </tr>
@@ -131,22 +101,22 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
       <table class="training-table">
       <tr>
         <th class="course-title">
-          <h4>TODOアプリ</h4>
-          <a class="btn-blue btn-mini" href="http://www.slideshare.net/AsialCorp/html5todo" target="_blank">講座資料を見る</a>
+          <h4>Onsen UI入門編</h4>
         </th>
         <td class="theme">
-          <h5>テーマ：「アプリ内にデータを保存しよう」</h5>
-          <p>シンプルなTODOアプリの制作を通して、アプリ内にデータを保存するための技術を学びます。</p>
+          <h5>テーマ：「HTML5モバイルアプリの画面作成」</h5>
+          <p>モバイルアプリの画面を簡単に作成することのできる、UIフレームワーク『Onsen UI』を使ったアプリ開発を学ぶ講座です。<br>
+          Onsen UIを使うことで、パフォーマンスが高く、マテリアルデザインやフラットデザインに準拠したより本格的なUIのアプリを開発することができます。</p>
           <ul class="tag-container">
-            <li>JSON</li>
+            <li>Onsen UI</li>
+            <li>SPA</li>
             <li>ローカルストレージ</li>
           </ul>
         </td>
         <td class="price">
           <ul>
-            <li>金額：<span>10,800円</span></li>
-            <li>時間：<span>2.5時間</span></li>
-            <li>難易度：<span class="ico-star">★★</span></li>
+            <li>金額：<span>5,400円</span></li>
+            <li>時間：<span>2時間</span></li>
           </ul>
         </td>
       </tr>
@@ -154,67 +124,22 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
       <table class="training-table">
       <tr>
         <th class="course-title">
-          <h4>クイズアプリ</h4>
-          <a class="btn-blue btn-mini" href="http://www.slideshare.net/AsialCorp/html5-37268688" target="_blank">講座資料を見る</a>
+          <h4>Web API編</h4>
         </th>
         <td class="theme">
-          <h5>テーマ：「バックエンド機能を利用しよう」</h5>
-          <p>４択問題を出題するクイズアプリを制作し、クラウドデータベースの利用方法を学びます。</p>
+          <h5>テーマ：「Web APIと地図ライブラリの利用」</h5>
+          <p>現在地周辺の地図と近隣の店舗情報を表示するアプリの制作を行います。Yahoo!の地図ライブラリの利用方法、端末の位置情報を取得する方法を学びます。<br>
+          店舗情報はWeb APIを利用して取得するため、アプリから外部サーバーに対して通信を行う技術（Ajax）についても学ぶことができます。</p>
           <ul class="tag-container">
-            <li>クラウドデータベース</li>
+            <li>Web API</li>
+            <li>Geolocation API(Cordova)</li>
+            <li>Ajax</li>
           </ul>
         </td>
         <td class="price">
           <ul>
-            <li>金額：<span>10,800円</span></li>
-            <li>時間：<span>2.5時間</span></li>
-            <li>難易度：<span class="ico-star">★★</span></li>
-          </ul>
-        </td>
-      </tr>
-      </table>
-      <table class="training-table">
-      <tr>
-        <th class="course-title">
-          <h4>地図アプリ</h4>
-          <a class="btn-blue btn-mini" href="http://www.slideshare.net/AsialCorp/html5-37268754" target="_blank">講座資料を見る</a>
-        </th>
-        <td class="theme">
-          <h5>テーマ：「GoogleMapをアプリで利用しよう」</h5>
-          <p>現在地周辺の地図と近隣の店舗情報を表示するアプリを制作し、Google Mapの機能や端末の位置情報を取得する方法を学びます。</p>
-          <ul class="tag-container">
-            <li>Geolocation API（PhoneGap）</li>
-            <li>Google Maps API</li>
-          </ul>
-        </td>
-        <td class="price">
-          <ul>
-            <li>金額：<span>10,800円</span></li>
-            <li>時間：<span>2.5時間</span></li>
-            <li>難易度：<span class="ico-star">★★</span></li>
-          </ul>
-        </td>
-      </tr>
-      </table>
-      <table class="training-table">
-      <tr>
-        <th class="course-title">
-          <h4>お絵かきアプリ</h4>
-          <a class="btn-blue btn-mini" href="http://www.slideshare.net/AsialCorp/html5-37268796" target="_blank">講座資料を見る</a>
-        </th>
-        <td class="theme">
-          <h5>テーマ：「タッチ座標を取得してお絵かきしよう」</h5>
-          <p>画面をタッチして自由に絵を描くことのできるお絵かきアプリを制作し、モバイル端末の独自イベントとHTML5のキャンバスについて学びます。</p>
-          <ul class="tag-container">
-            <li>タッチイベント</li>
-            <li>キャンバス</li>
-          </ul>
-        </td>
-        <td class="price">
-          <ul>
-            <li>金額：<span>10,800円</span></li>
-            <li>時間：<span>2.5時間</span></li>
-            <li>難易度：<span class="ico-star">★★</span></li>
+            <li>金額：<span>5,400円</span></li>
+            <li>時間：<span>2時間</span></li>
           </ul>
         </td>
       </tr>
@@ -222,29 +147,27 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
       <table class="training-table">
       <tr class="last">
         <th class="course-title">
-          <h4>音楽プレイヤー</h4>
-          <a class="btn-blue btn-mini" href="http://www.slideshare.net/AsialCorp/html5-37268817" target="_blank">講座資料を見る</a>
+          <h4>クラウドデータベース編</h4>
         </th>
         <td class="theme">
-          <h5>テーマ：「アプリで音を鳴らそう」</h5>
-          <p>アプリ内に入っている音楽ファイルを再生するプレイヤーアプリを制作し、アプリで音を鳴らす方法とHTML5のprogress要素について学びます。</p>
+          <h5>テーマ：「クラウドデータベースにデータを保存する」</h5>
+          <p>アプリ内で利用するデータをmBaaS（mobile Backend as a Service）に保存する方法を学びます。<br>
+          ※mBaaSにはニフティクラウドmobile backendを利用しますが、ご要望に応じてMicrosoft Azure, kintone, IBM Bluemix 等への変更も可能です。</p>
           <ul class="tag-container">
-            <li>Media API（PhoneGap）</li>
-            <li>progress要素</li>
+            <li>mBaaS</li>
           </ul>
         </td>
         <td class="price">
           <ul>
-            <li>金額：<span>10,800円</span></li>
-            <li>時間：<span>2.5時間</span></li>
-            <li>難易度：<span class="ico-star">★★</span></li>
+            <li>金額：<span>5,400円</span></li>
+            <li>時間：<span>2時間</span></li>
           </ul>
         </td>
       </tr>
-    </table>
+      </table>
     <ul class="table-cap">
-      <li>※ モバイルアプリ開発環境<span>「Monaca」に初めて触れる方は、まずはじめに「<a href="#monaca-1">Monaca超入門</a>」をご受講下さい。</span></li>
-      <li>※ 各講座は、<span>HTML、CSS、JavaScript、jQueryの基礎知識をお持ちの方が対象です。</span><br>未経験の方は、以下の「これからHTML, JavaScriptを始める方向けの基礎講座」を合わせてご受講下さい。</li>
+      <li>※ モバイルアプリ開発環境<span>「Monaca」に初めて触れる方は、まずはじめに「<a href="#monaca-1">Monaca入門</a>」をご受講下さい。</span></li>
+      <li>※ 各講座は、<span>HTML、CSS、JavaScriptの基礎知識をお持ちの方が対象です。</span><br>未経験の方は、以下の「これからHTML, JavaScriptを始める方向けの基礎講座」を合わせてご受講下さい。</li>
     </ul>
   </div>
   <div class="btn-container divider">
@@ -255,8 +178,7 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
   <div class="training-table-container">
     <h3>Visual Studioで作るiOS、Android両対応<br>HTML5モバイルアプリ開発講座</h3>
     <p>Visual Studioの拡張機能であるMonaca for Visual Studioを使った、iOS、Androidの両OSに対応したモバイルアプリ「HTML5モバイルアプリ」の開発方法をレクチャーします。</p>
-    <p>今回は、Monaca for Visual Studioの操作を一から学習したい方向けの「入門編」と、今後本格的にVisual Studioを用いたHTML5ハイブリッドアプリ開発に取り組みたい方向けの「実践編」の2種類の講座をご用意いたしました。</p>
-    <p class="last-sec">ご参加いただいた方には、アシアル監修のMonaca公式ガイドブック『クラウドでできるHTML5ハイブリッドアプリ開発』を差し上げます。</p>
+    <p class="last-sec">今回は、Monaca for Visual Studioの操作を一から学習したい方向けの「入門編」と、今後本格的にVisual Studioを用いたHTML5ハイブリッドアプリ開発に取り組みたい方向けの「実践編」の2種類の講座をご用意いたしました。</p>
     <table class="training-table mb0 table-purple">
         <!--
         <tr>
@@ -277,10 +199,7 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
         </td>
         <td class="price">
           <ul>
-            <li>金額：<span>10,800円</span></li>
-            <li>開催日時：<br><span>2015年10月23日(金)</span><br><span>9:30〜12:00(2.5時間)</span></li>
-            <li>定員：<span>20名</span></li>
-            <li>難易度：<span class="ico-star">★</span></li>
+            <li>詳細はお問い合わせください。</li>
           </ul>
         </td>
       </tr>
@@ -300,19 +219,11 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
         </td>
         <td class="price">
           <ul>
-            <li>金額：<span>21,600円</span></li>
-            <li>開催日時：<br><span>2015年10月23日(金)</span><br><span>13:00〜18:00(5時間)</span></li>
-            <li>定員：<span>20名</span></li>
-            <li>難易度：<span class="ico-star">★★</span></li>
+            <li>詳細はお問い合わせください。</li>
           </ul>
         </td>
       </tr>
     </table>
-
-    <ul class="table-cap">
-      <li>※ モバイルアプリ開発環境<span>「Monaca」に初めて触れる方は、午前中の「アプリ開発入門（Visual Studio版）」を必ずご受講下さい。</span></li>
-      <li>※ 入門編、実践編を両方ともお申込みいただきますと、通常よりもお得な金額で受講頂けます。<span>「入門編・実践編パック」</span>のチケットをご購入ください。</li>
-    </ul>
 
   </div>
   <div class="btn-container divider">
