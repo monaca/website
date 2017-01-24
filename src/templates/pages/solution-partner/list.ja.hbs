@@ -38,6 +38,21 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
     $("#detail-lateral .toggle").click(accordion);
 });
 </script>
+<script>
+  var ua = navigator.userAgent;
+  $(document).ready(function () {
+        wsize = $(window).width();
+        if(wsize < 768) {
+          $('.active+.partner-content').html('<div class="partner-content" style="display: none;">');
+        }
+      });
+      $(window).resize(function () {
+        wsize = $(window).width();
+        if(wsize < 768) {
+          $('.active+.partner-content').html('<div class="partner-content" style="display: none;">');
+          }
+        });
+</script>
 <section class="partner-item" id="detail-lateral">
   <div class="partner-head">
     <div class="partner-logo">
