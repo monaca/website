@@ -33,7 +33,11 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
 <script type="text/javascript">
   $(function() {
     function accordion() {
+        $("#detail-lateral .partner-content-left").hide();
+        $("#detail-lateral .partner-content-right").hide();
         $(this).toggleClass("active").next().slideToggle(400);
+        $("#detail-lateral .partner-content-left").fadeIn(1000);
+        $("#detail-lateral .partner-content-right").fadeIn(1000);
     }
     $("#detail-lateral .toggle").click(accordion);
 });
