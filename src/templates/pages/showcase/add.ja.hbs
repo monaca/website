@@ -33,6 +33,34 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
             <span class="annotation">例： https://play.google.com/store/apps/details?id=mobi.monaca.debugger</span></td>
           </tr>
           <tr>
+            <th>Cordovaバージョン: </th>
+            <td>
+              <select style="height: 25px;" name="form[cordova_version]" class="wide" id="cordova_version">
+                <option value="6.2">6.2</option>
+                <option value="5.2">5.2</option>
+                <option value="4.2">4.2</option>
+                <option value="3.5">3.5</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <th>使用したCordovaプラグイン<br /><font size="-3">(サードパーティー製Cordovaプラグイも含む)</font></th>
+            <td><input type="text" name="form[plugins]" class="wide" id="plugins" /><br />
+            <span class="annotation">例： BarCodeScanner, Cameraなど.</span></td>
+          </tr>
+          <tr>
+            <th>使用フレームワーク名とバージョン</th>
+            <td><input type="text" name="form[framework]" id="framework" class="wide"/>
+            <br /><span class="annotation">例： Onsen UI 2.0.5など</span><br/>            
+            </td>
+          </tr>
+          <tr>
+            <th>使用JavaScriptライブラリーとバージョン</th>
+            <td><input type="text" name="form[java_script]" id="java_script" class="wide"/>
+            <br /><span class="annotation">例： jQuery 3.1.1など</span><br/>            
+            </td>
+          </tr>
+          <tr>
             <th></th>
             <td><p>・アプリが事例ページに掲載されるかどうかは、Monacaチームによって判断されます。<br />
             ・アプリのスクリーンショットや紹介文はMonacaチームによって記述されます。<br />

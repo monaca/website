@@ -2,9 +2,11 @@
 
   window.monacaPages = window.monacaPages || [];
 
+  var limit = 50;
+
   monacaPages["/headline/index.html"] = function (loginData) {
 
-    getHeadline( { lang : window.LANG , type : "news_and_release" , limit : 50 } ,
+    getHeadline( { lang : window.LANG , type : "news_and_release" , limit : limit } ,
       function(data) {
         appendHeadline(
           $(".headline-entries") , data
@@ -25,7 +27,7 @@
   };
 
   monacaPages["/headline/fault.html"] = function (loginData) {
-    getIssues( { lang : window.LANG , type : "fault" , limit : 50 } ,
+    getIssues( { lang : window.LANG , type : "fault" , limit : limit } ,
       function(data) {
         appendIssues(
           window.LANG , $(".headline-entries") , data
@@ -44,7 +46,6 @@
       }
     );
   };
-
 
   function getHeadline(options,success,fail) {
     var lang = options.lang || 'en';
