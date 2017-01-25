@@ -1396,7 +1396,7 @@ body.lang-en section#support {
       margin: 0px;
     }
     @media screen and (max-width: $break-lg) {
-      margin: 5% auto 0;
+      margin: 5% auto 10%;
       width: 100%;
       display: block;
       box-sizing: border-box;
@@ -1408,6 +1408,10 @@ body.lang-en section#support {
       box-sizing: border-box;
     }
     @media screen and (max-width: $break-xs) {
+      margin: 0 auto 20%;
+      width: 100%;
+    }
+    @media screen and (max-width: 600px) {
       margin: 0 auto 5%;
       width: 100%;
     }
@@ -1466,7 +1470,7 @@ body.lang-en section#support {
       margin: 0 0 5%;
     }
     @media screen and (max-width: $break) {
-      margin: 0 0 5%;
+      margin: 5% 0 5%;
     }
   }
   h3 {
@@ -2091,21 +2095,28 @@ body.lang-en section#support {
     box-sizing: border-box;
     text-align: center;
     @media screen and (max-width: $break) {
+      padding: 30px 0 25px;
       width: 100%;
     }
     li {
       display: inline-block;
       margin: 0 30px 25px 0;
       @media screen and (max-width: $break) {
-        margin: 0 2% 5% 0;
-        width: 30%;
+        margin: 0 2% 0 0;
+        width: 20%;
         box-sizing: border-box;
       }
+      &:nth-of-type(2) {
+        width: 45%;
+      }
       &:last-child {
+        width: 15%;
         margin-right: 0;
       }
       img {
+        width: 100%;
         float: none;
+        vertical-align: middle;
       }
     }
   }
