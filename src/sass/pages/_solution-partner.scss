@@ -378,6 +378,7 @@ body.solution-partner {
           float: none;
           width: 100%;
           box-sizing: border-box;
+          display: none !important;
         }
     }
     .partner-abstract {
@@ -429,6 +430,7 @@ body.solution-partner {
           width: 100%;
           box-sizing: border-box;
           border-top: 1px solid #e5e5e5;
+          display: none !important;
         }
     }
 
