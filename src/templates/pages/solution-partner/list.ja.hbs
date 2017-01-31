@@ -30,18 +30,15 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
 
 <!-- Start -->
 <!-- ラテラル・シンキング株式会社 -->
+
 <script type="text/javascript">
-  $(function() {
-    function accordion() {
-        $("#detail-lateral .partner-content-left").hide();
-        $("#detail-lateral .partner-content-right").hide();
-        $(this).toggleClass("active").next().slideToggle(400);
-        $("#detail-lateral .partner-content-left").fadeIn(1000);
-        $("#detail-lateral .partner-content-right").fadeIn(1000);
-    }
-    $("#detail-lateral .toggle").click(accordion);
-});
-</script>
+        $(function() {
+          function accordion() {
+              $(this).toggleClass("active").next().slideToggle(300);
+          }
+          $("#detail-lateral .toggle").click(accordion);
+      });
+      </script>
 
 <section class="partner-item" id="detail-lateral">
   <div class="partner-head">
