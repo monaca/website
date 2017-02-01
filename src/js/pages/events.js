@@ -2,7 +2,7 @@
 
   window.monacaPages = window.monacaPages || [];
 
-  var limit = 2;
+  var limit = 4;
 
   monacaPages["/events/index.html"] = function (loginData) {
 
@@ -21,7 +21,7 @@
     $(".events-more").click(function(){
         getEvents( { lang : window.LANG , type : "news_and_release",  limit : limit , age:"new", entry_num: $(".new").size() } ,
           function(data) {
-            appendMoreEvents( $(".events-entries")  , data, "new");    
+            appendEvents( $(".events-entries")  , data, "new");    
           }
         );      
     }); 
@@ -29,7 +29,7 @@
     $(".events-more-old").click(function(){
         getEvents( { lang : window.LANG , type : "news_and_release",  limit : limit , age:"old", entry_num: $(".old").size()} ,
           function(data) {
-            appendMoreEvents( $(".events-entries-old")  , data, "old");    
+            appendEvents( $(".events-entries-old")  , data, "old");    
           }
         );     
     }); 
@@ -52,7 +52,7 @@
     $(".events-more").click(function(){
         getTrainings( { lang : window.LANG , type : "news_and_release",  limit : limit , age:"new", entry_num: $(".new").size() } ,
           function(data) {
-            appendMoreTrainings( window.LANG ,$(".events-entries")  , data, "new");    
+            appendTrainings( window.LANG ,$(".events-entries")  , data, "new");    
           }
         );      
     }); 
@@ -60,7 +60,7 @@
      $(".events-more-old").click(function(){
         getTrainings( { lang : window.LANG , type : "news_and_release",  limit : limit , age:"old", entry_num: $(".old").size() } ,
           function(data) {
-            appendMoreTrainings( window.LANG , $(".events-entries-old")  , data, "old");    
+            appendTrainings( window.LANG , $(".events-entries-old")  , data, "old");    
           }
         );      
     });
@@ -89,49 +89,16 @@
     } );
   }
 
-  function appendEvents( element, data , age) {  
-
-    var result = data.result;
-
-    
-    for (var i = 0; i < result.length; i++) {
-      var entry = result[i];
-
-     var categoryTag = '<span class="status-solved">セミナー</span>';
-      if (entry.category == 1) {
-        categoryTag = '<span class="status-fixing">展示会</br>カンファレンス</span>';
-      } else if (entry.category == 2) {
-        categoryTag = '<span class="status-reported">ワークショップ</span>';
-      }   
-
-      var d = new Date(entry.date);
-      var text = '<div id="entry_' + entry.id + '" class="events-entry">' +
-        '  <dl class="'+age+'">' +
-        '    <dt>' + entry.date + '</br>'+entry.location+'</dt>' +
-        '    <dd>' +
-               categoryTag +
-        '      <span class="events-entry-comment"><a href="'+entry.url+'">' + entry.title + '</a></u></br>主催: '+entry.organizer+'</span>' +
-        '    </dd>' +
-        '  </dl>' + '</div>' ;
-      
-        element.append(text);
-        
-    }
-  } 
-
-  function appendMoreEvents( element , data, age ) {  
+  function appendEvents( element , data, age ) {  
  
     var result = data.result;
-
   
-    if(result.length === 0){
+    if(result.length < limit){
       if(age === "new"){
         $(".events-more").hide();
       }else{
         $(".events-more-old").hide();
       }
-      
-      return;
     }
 
     var list= element.html();      
@@ -187,34 +154,12 @@
 
     var result = data.result;
 
-    for (var i = 0; i < result.length; i++) {
-      var entry = result[i];
-
-      var d = new Date(entry.date);
-      var text = '<div id="entry_' + entry.id + '" class="events-entry">' +
-        '  <dl class="'+age+'">'+
-        '    <dt>' + entry.date + '</br>'+entry.location+'</dt>' +
-        '    <dd>' +
-        '      <span class="events-entry-comment"><a href="'+entry.url+'">' +entry.title + '</a></u><div align="right">¥'+entry.price+'</div>主催: '+entry.organizer+'</span>' +
-        '    </dd>' +
-        '  </dl>' + '</div>' ;
-
-        element.append(text);
-    }   
-  }
-
-  function appendMoreTrainings( lang, element , data , age) {
-
-    var result = data.result;
-
-    if(result.length === 0){
+    if(result.length < limit){
       if(age === "new"){
         $(".events-more").hide();
       }else{
         $(".events-more-old").hide();
       }
-      
-      return;
     }
 
     var list= element.html(); 

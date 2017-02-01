@@ -16,10 +16,31 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
       <form>
         <table>
           <tr>
+            <th>会社名</th>
+            <td>
+              <input type="text" name="form[company]" id="company" /><br />
+              <span class="annotation">アプリはこの会社名とともに紹介されます。</span>
+            </td>
+          </tr>
+          <tr>
+            <th>氏名<span class="required">*</span></th>
+            <td>
+              <input type="text" name="form[developer]" id="developer" /><br />
+              <span class="annotation">アプリはこのお名前とともに紹介されます。</span>
+            </td>
+          </tr>
+          <tr>
             <th>開発者名<span class="required">*</span></th>
             <td>
               <input type="text" name="form[name]" id="name" /><br />
               <span class="annotation">アプリはこのお名前とともに紹介されます。</span>
+            </td>
+          </tr>
+          <tr>
+            <th>連絡先メールアドレス<span class="required">*</span></th>
+            <td>
+              <input class="wide" type="text" name="form[email]" id="email" /><br />
+              <span class="annotation">ご連絡のため、メールアドレスは必要です。</span>
             </td>
           </tr>
           <tr>
@@ -45,19 +66,19 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
           </tr>
           <tr>
             <th>使用したCordovaプラグイン<br /><font size="-3">(サードパーティー製Cordovaプラグイも含む)</font></th>
-            <td><input type="text" name="form[plugins]" class="wide" id="plugins" /><br />
+            <td><textarea class="tarea" name="form[plugins]" id="plugins" ></textarea><br />
             <span class="annotation">例： BarCodeScanner, Cameraなど.</span></td>
           </tr>
           <tr>
-            <th>使用フレームワーク名とバージョン</th>
-            <td><input type="text" name="form[framework]" id="framework" class="wide"/>
-            <br /><span class="annotation">例： Onsen UI 2.0.5など</span><br/>            
+            <th><div style="vertical-align:top; position:relative;">使用フレームワーク名と<br/>バージョン</div></th>
+            <td><textarea class="tarea" name="form[framework]" id="framework" ></textarea>
+            <br/><span class="annotation">例： Onsen UI 2.0.5など</span><br/>            
             </td>
           </tr>
           <tr>
-            <th>使用JavaScriptライブラリーとバージョン</th>
-            <td><input type="text" name="form[java_script]" id="java_script" class="wide"/>
-            <br /><span class="annotation">例： jQuery 3.1.1など</span><br/>            
+            <th>使用JavaScriptライブラリーと<br/>バージョン</th>
+            <td><textarea class="tarea" name="form[java_script]" id="java_script"></textarea>
+                <br /><span class="annotation">例： jQuery 3.1.1など</span><br/>            
             </td>
           </tr>
           <tr>
