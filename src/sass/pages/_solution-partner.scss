@@ -604,6 +604,7 @@ body.solution-partner {
           width: 90%;
         }
         @media screen and (max-width: $break) {
+          padding: 0;
           width: 100%;
           max-width: 100%;
           box-sizing: border-box;
