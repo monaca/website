@@ -425,6 +425,7 @@ body.solution-partner {
         margin: 0px;
         padding: 0px;
         border-top: solid 1px #e5e5e5;
+        position: relative;
         @media screen and (max-width: $break) {
           float: none;
           width: 100%;
