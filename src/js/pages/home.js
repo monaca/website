@@ -72,7 +72,7 @@
         '  <dl>' +
         '    <dt>' + entry.date + '</dt>' +
         '    <dd>' +
-        '      <span class="headline-entry-comment-news"><a href="/headline/index.html#entry_'+entry.id+'">' + entry.body + '</a></span>' +
+        '      <span class="headline-entry-comment-news"><a href="/headline/index.html#entry_'+entry.id+'" target="_blank">' + entry.body + '</a></span>' +
         '    </dd>' +
         '  </dl>' +
         '</div>'
