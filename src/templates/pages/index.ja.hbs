@@ -58,24 +58,28 @@ layout: src/templates/layouts/index.hbs
 <a href="/visualstudio.html" class="visible-xs sp-keyvisual"><img src="/img/index/keyvisual_vs_sp.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/></a>
 
 
-    <div class="container section features box-full" >
-        <div id="events-list">
-            <h4 align="left" style="margin-top: 10px; font-size: 24px; margin-bottom: 20px;">
-                <a href="/events/index.html">イベント・トレーニング情報</a>
-            </h4>
-            <div class="events-entries">
+    <div id="grid" class="container section features box-full " >
+        <div class="panel-grid">
+            <div id="news-list" class="panel-grid-cell">
+                <h4 class="panel-header">
+                  <span class="header_left">ニュース・更新情報</span><span class="header_right"> <a href="/headline/index.html"><span class="htext">一覧を見る</span><span class="himg"><img src="/img/careers/arrow_gray.png" alt="アプリ開発依頼"></span></a></span>
+                  <div style="clear: both;"></div>
+                </h4>
+                
+                <div class="headline-entries">
 
+                </div>
+             </div>  
+            <div id="events-list" class="panel-grid-cell">
+                <h4 class="panel-header">
+                    <span class="header_left">イベント・トレーニング情報 </span><span class="header_right"><a href="/events/index.html"><span class="htext">一覧を見る</span><span class="himg"><img src="/img/careers/arrow_gray.png" alt="アプリ開発依頼"></span></a> </span>
+                    <div style="clear: both;"></div>
+                </h4>
+                <table class="events-entries">
+
+                </table>
             </div>
         </div>
-        <div id="news-list">
-            <h4 align="left" style="margin-top: 10px; font-size: 24px; margin-bottom: 20px;">
-               <a href="/headline/index.html"> ニュース・更新情報</a>
-            </h4>
-            
-            <div class="headline-entries">
-
-            </div>
-         </div>   
     </div>
 
 <div class="container products box-full">

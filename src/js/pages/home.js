@@ -2,7 +2,7 @@
 
   window.monacaPages = window.monacaPages || [];
 
-  var limit = 3;
+  var limit = 2;
 
   monacaPages["/index.html"] = function (loginData) {
     //Calling a function to get the list of news from the server. The false value of the "all" paramater tells the server
@@ -29,20 +29,7 @@
     //Caling a function to get the list of events. The number of events is defined by the limit parameter
     getEntry( { lang : window.LANG , type : "news_and_release" , limit : limit} ,
       function(data) {
-        appendEntry(
-          $(".events-entries") , data
-        );
-
-        $(".events-entry-toggle").on("click", "img", function() {
-          $img = $(this);
-          $entries = $img.parent().parent().find(".events-sub-entries");
-          if ($entries.css("display") == "none") {
-            $img.attr("src", "/img/headline/ico_tri_downward.png");
-          } else {
-            $img.attr("src", "/img/headline/ico_tri_leftward.png");
-          }
-          $entries.slideToggle();
-        });
+        appendEntry( $(".events-entries") , data);
       }
     );
 
@@ -85,7 +72,7 @@
         '  <dl>' +
         '    <dt>' + entry.date + '</dt>' +
         '    <dd>' +
-        '      <span class="headline-entry-comment-news">' + entry.body + '</span>' +
+        '      <span class="headline-entry-comment-news"><a href="/headline/index.html#entry_'+entry.id+'">' + entry.body + '</a></span>' +
         '    </dd>' +
         '  </dl>' +
         '</div>'
@@ -121,27 +108,39 @@
       return;
     }
 
+    var list= element.html();      
+
     for (var i = 0; i < result.length; i++) {
       var entry = result[i];
+      
 
-     var categoryTag = '<span class="status-solved">セミナー</span>';
-      if (entry.category == 1) {
-        categoryTag = '<span class="status-fixing">展示会</br>カンファレンス</span>';
-      } else if (entry.category == 2) {
-        categoryTag = '<span class="status-reported">ワークショップ</span>';
-      }   
-
+      var categoryTag = '<span class="category-on">';
+      var today = new Date();
       var d = new Date(entry.date);
-      var text = '<div id="entry_' + entry.id + '" class="events-entry">' +
-        '  <dl>' +
-        '    <dt>' + entry.date + '</br>'+entry.location+'</dt>' +
-        '    <dd>' +
-               categoryTag +
-        '      <span class="events-entry-comment"><a href="'+entry.url+'">' + entry.title + '</a></u></br>主催: '+entry.organizer+'</span>' +
-        '    </dd>' +
-        '  </dl>' + '</div>' ;
-        element.append(text);
+
+      if(d.getTime()<today.getTime()){
+         categoryTag = '<span class="category-finished">';
+      }
+
+      if (entry.category == 0) {
+        categoryTag += 'セミナー</span>';
+      }else if (entry.category == 1) {
+        categoryTag += '展示会カンファレンス</span>';
+      } else if (entry.category == 2) {
+        categoryTag += 'ワークショップ</span>';
+      }
+
+      
+      var text = '<tr id="entry_' + entry.id + '" class="events-entry">'+
+            '<th><span>' + entry.date +  '</span></th>' +
+            '<td class="status_column">' + categoryTag +  '</td>' +
+            '<td class="events-entry-comment"><span class="event-entry-comment-body"><a href="'+entry.url+'" target="_blank">' + entry.title + '</a></span></td>' +
+            '</tr>';
+
+        list+=text;  
     }
+
+     element.html(list); 
   } 
 
 
