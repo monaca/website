@@ -1,0 +1,54 @@
+---
+title: 特定商取引法に基づく表記 | MonacaでHTML5モバイルアプリ開発
+class: terms-of-service
+description: クラウド上のアプリ開発環境。iOS/Android/Windows向けHTML5ハイブリッドアプリに対応。
+viewport: width=1200px
+---
+
+<div id="main-wrap">
+  <section id="law" class="subpage">
+    <div class="container">
+      <h1><span>特定商取引法に基づく表記</span></h1>
+
+      <table class="law-table">
+        <tr><th>店舗名</th><td>アシアルECショップ (Asial EC Shop)</td><tr>
+        <tr><th>販売業者</th><td>アシアル株式会社</td><tr>
+        <tr><th>運営責任者</th><td>代表取締役 田中正裕</td><tr>
+        <tr><th>所在地</th><td>東京都文京区本郷2-15-13 お茶の水ウイングビル10階</td><tr>
+        <tr><th>運営URL</th><td>https://ja.monaca.io</td><tr>
+        <tr><th>メールアドレス</th><td>info@asial.co.jp</td><tr>
+        <tr><th>電話番号</th><td>03-5875-6862　（受付時間：11:00～19:00）</td><tr>
+        <tr><th>販売価格</th><td>商品毎に記載</td><tr>
+        <tr><th>お支払い方法</th><td>クレジットカード</td><tr>
+        <tr><th>引き渡し方法<br/>引き渡し時期</th><td>弊社では、原則として代金先払いとさせていただいております。<br/>入金確認後、即時のお引き渡しになります。</td><tr>
+      </table>
+    </div>
+  </section>
+
+  <script src="/js/jquery.smoothScroll.js"></script>
+
+  <script src="/js/moment.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script>
+
+    $(window).load(function() {
+     var fadeInSpeed = 400;
+     $('div.terms-of-service span#github-published_at').hide();
+     $.ajax({
+      url: 'https://api.github.com/repos/monaca/Localkit/releases',
+      dataType: 'jsonp',
+      success: function(res) {
+       $("div.terms-of-service span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
+       $('div.terms-of-service span#github-published_at a strong').text(res.data[0].name);
+       var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
+       $('div.terms-of-service span#github-published_at span').text(dateJa);
+       $('div.terms-of-service span#github-published_at').fadeIn(fadeInSpeed);
+     },
+     error: function() {
+       $('div.terms-of-service span#github-published_at').hide();
+     }
+   });
+   });
+  </script>
+
+
