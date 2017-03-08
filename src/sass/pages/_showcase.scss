@@ -3399,6 +3399,12 @@ body.showcase.fujitec {
             margin-top: 0;
         }
     }
+    .fujitec-img {
+        img {
+            margin: 0 auto;
+            display: block;
+        }
+    }
     article.main .effect {
         background: url(/img/fujitec/bg_effect.jpg) no-repeat center top;
         @media screen and (max-width: 1070px) {
