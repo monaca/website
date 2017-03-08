@@ -8,31 +8,38 @@ layout: src/templates/layouts/index.hbs
     <a href="/development.html"><h2>アプリ開発の相談・見積依頼はこちら  <img src="/img/careers/arrow.png" alt="アプリ開発依頼"></h2></a>
 </div>
 <div class="recruit-md visible-lg">
-    <a class="badge" href="/development.html">アプリ開発のご依頼はこちら　無料相談</a>
+    <a id="add-badge-css" class="badge" href="/development.html">アプリ開発のご依頼はこちら　無料相談</a>
 </div>
 
 <div id="keyvisual" class="keyvisual carousel-1 box-full hidden-xs">
     <div class="carousel-container">
         <ul class="carousel-items">
-            <li class="item" data-index="0">
-                <img src="/img/index/keyvisual.png" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/>
-                <div class="box-try">
-                    <a href="/support/inquiry.html" class="btn btn-line-white">お問い合わせ</a>
-                    <a href="/register/start.html" class="btn btn-green">今すぐ試す<span class="small">(無料)</span></a>
+            <li id="keyvisual-box"class="item" data-index="0">
+                <img id="keyvisual-img" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/>
+                <div id="keyvisual-title">
+                    <h2>HTMLハイブリッドアプリで<div>アプリ開発を加速します</div></h2>
+                    <!--img src="/img/index/keyvisual.jpg" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/-->
+                    <img src="/img/index/ico_platforms.png" />
+                    <div class="box-try">
+                        <a href="/support/inquiry.html" class="btn btn-line-white">お問い合わせ</a>
+                        <a href="/register/start.html" class="btn btn-green">今すぐ試す<span class="small">(無料)</span></a>
+                    </div>
                 </div>
             </li>
             <li class="item" data-index="1">
             <a href="/visualstudio.html">
-                <img src="/img/index/keyvisual_vs.png" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/>
+                <img id="keyvisual_vs-img" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/>
+                <!--img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/-->
             </a>
             </li>
-            <li class="item" data-index="2">
-            <a href="/book/001">
+            <li id="keyvisual_book_el" class="item" data-index="2">
+            <!--a href="/book/001">
+            <img id="keyvisual_book-img" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/>
             <img src="/img/index/keyvisual_book.png" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/>
             </a>
             <div class="box-try box-buy">
                 <a class="btn btn-darkgray" href="/book/001/">詳細はこちら</a>
-            </div>
+            </div-->
             </li>
         </ul>
     </div>
@@ -55,7 +62,7 @@ layout: src/templates/layouts/index.hbs
 </div></div>
 
 
-<a href="/visualstudio.html" class="visible-xs sp-keyvisual"><img src="/img/index/keyvisual_vs_sp.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/></a>
+<a href="/visualstudio.html" class="visible-xs sp-keyvisual"><img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/></a>
 
 <div class="container products box-full">
 
@@ -232,12 +239,17 @@ layout: src/templates/layouts/index.hbs
     <a href="/register/start.html" class="btn btn-green">今すぐ試す<span class='small'>(無料)</span></a>
 </div>
 
-
 <script>
 var slider;
+var keyvisual_book = "";
+keyvisual_book += '<a href="/book/001"><img src="/img/index/keyvisual_book.png" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/></a><div class="box-try box-buy"><a class="btn btn-darkgray" href="/book/001/">詳細はこちら</a></div>';
 
 window.addEventListener("load", function() {
     "use strict";
+
+    document.getElementById("keyvisual-img").src = "/img/index/keyvisual_ja.jpg";
+    document.getElementById("keyvisual_vs-img").src = "/img/index/keyvisual_vs.jpg";
+    document.getElementById("keyvisual_book_el").innerHTML = keyvisual_book;
 
     setTimeout(function() {
         document.getElementById("examples-img").src = "img/index/examples_img.png";
