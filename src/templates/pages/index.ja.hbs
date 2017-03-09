@@ -15,10 +15,9 @@ layout: src/templates/layouts/index.hbs
     <div class="carousel-container">
         <ul class="carousel-items">
             <li id="keyvisual-box"class="item" data-index="0">
-                <img id="keyvisual-img" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/>
+                <span id="keyvisual-ja-el"><!--img src="/img/index/keyvisual_ja.jpg" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/--></span>
                 <div id="keyvisual-title">
                     <h2>HTMLハイブリッドアプリで<div>アプリ開発を加速します</div></h2>
-                    <!--img src="/img/index/keyvisual.jpg" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/-->
                     <img src="/img/index/ico_platforms.png" />
                     <div class="box-try">
                         <a href="/support/inquiry.html" class="btn btn-line-white">お問い合わせ</a>
@@ -27,14 +26,12 @@ layout: src/templates/layouts/index.hbs
                 </div>
             </li>
             <li class="item" data-index="1">
-            <a href="/visualstudio.html">
-                <img id="keyvisual_vs-img" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/>
+            <a id="keyvisual-vs-el" href="/visualstudio.html">
                 <!--img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/-->
             </a>
             </li>
-            <li id="keyvisual_book_el" class="item" data-index="2">
+            <li id="keyvisual-book-el" class="item" data-index="2">
             <!--a href="/book/001">
-            <img id="keyvisual_book-img" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/>
             <img src="/img/index/keyvisual_book.png" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/>
             </a>
             <div class="box-try box-buy">
@@ -241,15 +238,16 @@ layout: src/templates/layouts/index.hbs
 
 <script>
 var slider;
-var keyvisual_book = "";
-keyvisual_book += '<a href="/book/001"><img src="/img/index/keyvisual_book.png" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/></a><div class="box-try box-buy"><a class="btn btn-darkgray" href="/book/001/">詳細はこちら</a></div>';
+var keyvisual_ja_el = '<img src="/img/index/keyvisual_ja.jpg" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/>';
+var keyvisual_vs_el = '<img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携" />';
+var keyvisual_book_el = '<a href="/book/001"><img src="/img/index/keyvisual_book.png" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/></a><div class="box-try box-buy"><a class="btn btn-darkgray" href="/book/001/">詳細はこちら</a></div>';
 
 window.addEventListener("load", function() {
     "use strict";
 
-    document.getElementById("keyvisual-img").src = "/img/index/keyvisual_ja.jpg";
-    document.getElementById("keyvisual_vs-img").src = "/img/index/keyvisual_vs.jpg";
-    document.getElementById("keyvisual_book_el").innerHTML = keyvisual_book;
+    document.getElementById("keyvisual-ja-el").innerHTML = keyvisual_ja_el;
+    document.getElementById("keyvisual-vs-el").innerHTML = keyvisual_vs_el;
+    document.getElementById("keyvisual-book-el").innerHTML = keyvisual_book_el;
 
     setTimeout(function() {
         document.getElementById("examples-img").src = "img/index/examples_img.png";
