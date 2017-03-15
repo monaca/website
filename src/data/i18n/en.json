@@ -165,7 +165,7 @@
     "priceTaxIncluded": "* Tax included",
     "priceContact": "Contact Us",
     "priceAcademicTitle": "Monaca Academic Plan",
-    "priceAcademicBody": "Monaca Cloud offers special plans and discounts for educational institutions such as universities and technical colleges. Get more details on the <a href=\"/academic.html\">Monaca Academic Plan page</a>.",
+    "priceAcademicBody": "Monaca Cloud offers special plans and discounts for educational institutions such as universities and technical colleges. Get more details on the <a href=\"https://edu.monaca.io/\" target=\"_blank\">Monaca Academic Plan page</a>.",
     "priceAcademicBasic": "<em>Free</em>",
     "priceAcademicEducationAddition": "Only for educational institutions",
     "priceAcademicEducation": "<em>980</em>yen/mo<br/>(9,800yen/yr)",
