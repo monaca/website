@@ -1,24 +1,27 @@
-body.important-info {
+body.important-info #main-container {
 
-    #main-container {
-        margin-top: 130px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: $break + 33px;
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $break + 133px;
 
-        section, section p {
-            padding: 0;
-            margin: 0;
-            width: 100%;
-            max-width: 100%;
-        }
-        section { padding-bottom: 40px; }
-        section:not(.q-and-a) { border-bottom: 1px solid #dddddd; }
-        h2, h3, p, ul { text-align: left; }
-        h2, h3 { font-weight: 600; }
-        p { line-height: 1.8em; color: #333333; }
-        table, p { margin-bottom: 24px; }
+    section, section p {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
     }
+    h1, h2, h3, p, ul, table, caption { color: #333333; }
+    h2, h3, p, ul { text-align: left; }
+    h2, h3, caption { font-weight: 600; }
+    table, p { margin-bottom: 24px; }
+    td span, small {
+        color: #8d98a6;
+        font-size: .65rem;
+    }
+
+    section { padding-bottom: 40px; }
+    section:not(.q-and-a) { border-bottom: 1px solid #dddddd; }
 
     h1 {
         font-size: 38px;
@@ -38,24 +41,47 @@ body.important-info {
         margin-bottom: 16px;
     }
 
+    p { line-height: 1.8em; }
 
     table {
+        font-size: 12px;
         margin-top: 16px;
+        width: 100%;
+
+        caption {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
 
         thead {
             background-color: #f6f6f4;
         }
+
+        tbody th {
+            font-size: .81rem;
+        }
     
         th, td {
             border: solid 1px #dddddd;
-            padding: 8px 20px 8px;
+            padding: 8px 16px 8px;
             vertical-align: middle;
             text-align: center;
         }
 
+        th p img {
+            margin-left: 5px;
+            vertical-align: -4px;
+            @media screen and (max-width: $break-xs) {
+                vertical-align: -3px;
+            }
+        }
     }
 
-    button {
-        margin: 48px 0 32px;
+    ul {
+        list-style-type: disc;
+        margin-left: 24px;
+        padding: 16px 0;
     }
+
+    button { margin: 48px 0 32px; }
 }

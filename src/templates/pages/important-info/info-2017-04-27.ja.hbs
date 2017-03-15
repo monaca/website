@@ -5,13 +5,16 @@ description: 2017年4月27日よりMonacaの料金プランが改定されるこ
 ---
 
 <div id="main-container">
-
     <h1>Monaca料金プラン変更のお知らせ</h1>
         <p>この度、2017年4月27日よりMonacaの料金プランが改定されることになりましたのでお知らせします。<br />
         現在、Monacaの有償プランのアカウントはプラン変更なしに、引き続き現料金プランのままご利用いただくこともできます。
         </p>
 
-    <section>
+    <section id="about-new-plan">
+        <style scoped="scoped">
+            #about-new-plan tbody th { width: 150px; }
+            #about-new-plan tbody td:last-child { width: 450px; }
+        </style>
         <h2>Monaca料金プランの改定について</h2>
             <p>Monacaではこれまで、ご利用の開発者の皆様に快適にモバイルアプリ開発を行ってまいりました。お陰様をもちまして、登録開発者数も17万人を超え、多くの個人開発者、企業におけるアプリ開発にご利用いただけるようになりました。<br />今後の個人利用から企業導入までの多様なニーズに応えるため、個人向け料金プランと企業向けの料金プランを分けることになりました。
             </p>
@@ -21,15 +24,15 @@ description: 2017年4月27日よりMonacaの料金プランが改定されるこ
         <h3>新設されるプラン</h3>
         <table>
             <thead>
-                <tr><th rowspan="2" style="min-width:168px;">プラン名</th><th colspan="2" style="min-width:230px;">料金</th><th rowspan="2">内容</th></tr>
+                <tr><th rowspan="2">プラン名</th><th colspan="2">料金</th><th rowspan="2">内容</th></tr>
                 <tr><th>月</th><th>年</th></tr>
             </thead>
             <tbody>
-                <tr><td><p>Monaca Free</p></td><td colspan="2">無料</td>
+                <tr><th><p>Freeプラン</p></th><td colspan="2"><b>無料</b></td>
                     <td><p>個人開発者を対象としたプランです。従来のBasicプラン同様に無料でアプリ開発を行うことが可能です。<br />Basicプランとは一部提供機能が変更になります。<br />※現Basicプランユーザの皆様は、2017年4月27日以降はFreeプランに自動的に移行されます。</p></td></tr>
-                <tr><td><p>Monaca Pro</p></td><td>2,160円</td><td>21,600円</td>
+                <tr><th><p>Proプラン</p></th><td><b>2,160円</b></td><td><b>21,600円</b></td>
                     <td><p>高度なアプリ開発を行う個人開発者を対象としたプランです。従来、Goldプラン以上ではないとご利用いただけなかった、Monaca Localkitやカスタムプラグインなど、高度なアプリ開発機能がご利用いただけます。</p></td></tr>
-                <tr><td><p>Monaca Business</p></td><td>7,560円〜</td><td>75,600円〜</td>
+                <tr><th><p>Businessプラン</p></th><td><b>7,560円〜</b></td><td><b>75,600円〜</b></td>
                     <td><p>企業やチームでの導入のためのプランです。従来のMonacaクラウド全機能に加え、開発者アカウントの管理機能など管理機能が提供されます。また、オプションでMonacaエンタープライズプラグインのご利用も可能です。</p></td></tr>
             </tbody>
         </table>
@@ -37,11 +40,11 @@ description: 2017年4月27日よりMonacaの料金プランが改定されるこ
         <h3>価格変更となるプラン</h3>
         <table>
             <thead>
-                <tr><th rowspan="2" style="min-width:168px;">プラン名</th><th colspan="2" style="min-width:260px;">料金&nbsp;/&nbsp;月</th><th rowspan="2">内容</th></tr>
-                <tr><th>現在</th><th>価格変更後</th></tr>
+                <tr><th rowspan="2">プラン名</th><th colspan="2">料金&nbsp;/&nbsp;月</th><th rowspan="2">内容</th></tr>
+                <tr><th>変更後</th><th>現在(変更前)</th></tr>
             </thead>
             <tbody>
-                <tr><td><p>Monaca Enterprise</p></td><td>162,000円〜</td><td>108,000円〜</td>
+                <tr><th><p>Enterpriseプラン</p></th><td><b>108,000円〜</b></td><td><span>162,000円〜</span></td>
                     <td><p>Monaca Enterpriseプランのご利用料金が大幅に値下がりとなりました。</p></td></tr>
             </tbody>
         </table>
@@ -52,7 +55,7 @@ description: 2017年4月27日よりMonacaの料金プランが改定されるこ
             <ul>
                 <li>Basicプラン</li>
                 <li>Personalプラン</li>
-               <li>Goldプラン</li>
+                <li>Goldプラン</li>
                 <li>Platinumプラン</li>
             </ul>
         </p>
@@ -66,12 +69,116 @@ description: 2017年4月27日よりMonacaの料金プランが改定されるこ
         </p>
 
         <p>この度の料金プランの改定について、ご理解を賜りますよう、お願い申しあげます。</p>
-
     </section>
 
-    <section>
+    <section id="new-plan-compare-in-detail">
+        <style scoped="scoped">
+            #new-plan-compare-in-detail tbody th { width: 205px; }
+            #new-plan-compare-in-detail td { width: 139px; }
+        </style>
         <h2>新料金プランの機能比較</h2>
-        <p>// 詳細の表、Educationも入れる</p>
+        <table>
+            <caption>開発ツール / 機能</caption>
+            <thead>
+                <tr><th>サービス名</th><th>Free<br />プラン</th><th>Pro<br />プラン</th><th>Business<br />プラン</th><th>Enterprise<br />プラン</th><th>Education<br />プラン</th></tr>
+            </thead>
+            <tbody>
+                <tr><th><p>クラウドIDE<img src="/img/pricing/icn_q.png" class="btn-tooltip" data-placement="top" title="" data-original-title="シンタックスハイライト / チェック、 リモートインスペクター / コンソール、ライブプレビュー、プロジェクトインポート / エクスポート機能 など"></p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>CLI<br />(Command Line Tool)</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>Monaca Localkit</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>Monaca for Visual Studio<br />(VS 全エディション対応)</p></th><td>Community版のみ</td><td>〇</td><td>〇</td><td>〇</td><td>Community版のみ</td></tr>
+                <tr><th><p>プロジェクト数</p></th><td>3</td><td>10</td><td>100<span>/ユーザー</span></td><td>100<span>/ユーザー</span></td><td>20</td></tr>
+                <tr><th><p>Monaca デバッガー</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>Monaca デバッガー接続数</p></th><td>1</td><td>2</td><td>無制限</td><td>無制限</td><td>5</td></tr>
+                <!--tr><th><p>ファイル履歴（現在）</p></th><td>1<span>件</span></td><td>1<span>ヶ月間（最大20件）</span></td><td>3<span>ヶ月間（最大50件）</span></td><td>6<span>ヶ月間（最大50件）</span></td><td>？</td></tr-->
+                <tr><th><p>ソースコードバックアップ</p></th><td>1<span>バージョン</span></td><td>50<span>バージョン</span></td><td>50<span>バージョン</span></td><td>50<span>バージョン</span></td><td>50<span>バージョン</span></td></tr>
+                <tr><th><p>ソースコードバックアップ<br />保存期間</p></th><td>1<span>日</span></td><td>1<span>ヶ月</span></td><td>1<span>ヶ月</span></td><td>1<span>ヶ月</span></td><td>1<span>ヶ月</span></td></tr>
+                <tr><th><p>クラウドビルド制限</p></th><td>3<span>/日</span></td><td>無制限</td><td>無制限</td><td>無制限</td><td>無制限</td></tr>
+                <tr><th><p>デバッグビルド</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>アドホックビルド</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>リリースビルド</p></th><td>〇</td><td>〇</td><td>〇<br /><small>※試用期間を除く</small></td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>In-houseビルド</p></th><td></td><td></td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>iOSアップロード</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>カスタムプラグイン</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>プラグインバージョン選択</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>エクスポート</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>Cordovaバージョン選択</p></th><td>最新版のみ</td><td>最新版のみ<br />オプションで<br />ステイできる</td><td>旧版も選択可能</td><td>旧版も選択可能</td><td>最新版のみ</td></tr>
+                <tr><th><p>ストレージ</p></th><td>250<span>MB</span></td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+            </tbody>
+        </table>
+
+        <table>
+            <caption>バージョン管理 (GitHub)</caption>
+            <tbody>
+                <tr><th><p>Github サポート</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>GitHub publicレポジトリ</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>GitHub privateレポジトリ</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>GitHub organization<br />レポジトリ</p></th><td></td><td></td><td>〇</td><td>〇</td><td></td></tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>チーム管理</caption>
+            <tbody>
+                <tr><th><p>アカウント管理</p></th><td></td><td></td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>サポートチケット管理</p></th><td></td><td></td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>アクセス制限（IP制限）</p></th><td></td><td></td><td></td><td>〇</td><td></td></tr>
+                <tr><th><p>プロジェクト共有先制限</p></th><td></td><td></td><td></td><td>〇</td><td></td></tr>
+                <tr><th><p>テンプレート共有</p></th><td></td><td></td><td></td><td>〇</td><td></td></tr>
+                <tr><th><p>プラグイン共有</p></th><td></td><td></td><td></td><td>〇</td><td></td></tr>
+                <tr><th><p>企業向けプランユーザーに<br />プロジェクト共有する（開発者）</p></th><td></td><td></td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>企業向けプランユーザーに<br />プロジェクト共有する（テスター）</p></th><td></td><td></td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>個人向けプランユーザーに<br />プロジェクト共有する（開発者）</p></th><td></td><td></td><td></td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>個人向けプランユーザーに<br />プロジェクト共有する（テスター）</p></th><td></td><td></td><td>〇</td><td>〇</td><td>〇</td></tr>
+
+            </tbody>
+        </table>
+        <table>
+            <caption>バックエンドサービス</caption>
+            <tbody>
+                <tr><th><p>プッシュ通知</p></th><td>1000<span>/月</span></td><td>1000<span>/月</span></td><td>100,000<span>/月</span></td><td>100,000<span>/月</span></td><td>1000<span>/月</span></td></tr>
+                <tr><th><p>APIコール数</p></th><td>10,000<span>/月</span></td><td>10,000<span>/月</span></td><td>5,000,000<span>/月</span></td><td>5,000,000<span>/月</span></td><td>10,000<span>/月</span></td></tr>
+                <tr><th><p>バックエンド数</p></th><td>3</td><td>10</td><td>無制限</td><td>無制限</td><td>10</td></tr>
+                <tr><th><p>マネジメントAPIの使用可否</p></th><td></td><td></td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>ユーザー管理（??）</p></th><td></td><td></td><td>〇</td><td>〇</td><td>?</td></tr>
+                <tr><th><p>データコレクション<br/>（クラウドデータベース）（??）</p></th><td></td><td></td><td>〇</td><td>〇</td><td>?</td></tr>
+                <tr><th><p>プロジェクト自動退避（??）</p></th><td>〇</td><td></td><td></td><td></td><td>?</td></tr>
+                <tr><th><p>自動退避された<br />プロジェクトの復旧（??）</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><td>?</td></tr>
+                <tr><th><p>バーストサポート（??）</p></th><td></td><td>10req/s</td><td>20req/s</td><td>20req/s</td><td>?</td></tr>
+                <tr><th><p>サーバーマネジメントAPI（??）</p></th><td></td><td></td><td>〇</td><td>〇</td><td>?</td></tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>サポート & サービス</caption>
+            <tbody>
+                <tr><th><p>コミュニティフォーラム(??)</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>コミュニティサポート</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td></tr>
+                <tr><th><p>製品サポート</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>技術サポート</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>無料サポートチケット</p></th><td></td><td>0<span>枚</span></td><td>1<span>枚/30分</span></td><td>エントリー<span>/3時間</span></td><td></td></tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>オプション</caption>
+            <tbody>
+                <tr><th><p>サポートチケット(都度購入)</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>サポートチケット(事前購入)</p></th><td></td><td></td><td>〇</td><td>〇</td><td></td></tr>
+                <tr><th><p>Monaca独自プラグイン<br />(?)</p></th><td></td><td></td><td>〇<br /><span>※プロジェクト単位<br />課金</span></td><td>〇<br /><span>※プロジェクト単位<br />課金</span></td><td></td></tr>
+                <tr><th><p>Monaca独自プラグイン<br />(?)</p></th><td></td><td></td><td></td><td>無制限<br /><span>※同一企業内利用</span></td><td></td></tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>継続的インテグレーション（CI）</caption>
+            <tbody>
+                <tr><th><p>GitHubパブリックレポジトリ</p></th><td>10<span>ビルド/月<span></td><td>10<span>ビルド/月<span></td><td>30<span>ビルド/月<br />＋<br />追加チケット<br />$</span>50<span>/</span>50<span>回</span></td><td>30<span>ビルド/月<br />＋<br />追加チケット<br />$</span>50<span>/</span>50<span>回</span></td><td>10<span>ビルド/月<span></td></tr>
+                <tr><th><p>GitHubプライベートレポジトリ</p></th><td></td><td>10<span>ビルド/月<span></td><td>30<span>ビルド/月<br />＋<br />追加チケット<br />$</span>50<span>/</span>50<span>回</span></td><td>30<span>ビルド/月<br />＋<br />追加チケット<br />$</span>50<span>/</span>50<span>回</span></td><td>10<span>ビルド/月<span></td></tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>その他</caption>
+            <tbody>
+                <tr><th><p>カスタマイズ対応</p></th><td></td><td></td><td></td><td>SSO<br />サイトライセンス的な提供<br />専用ビルドサーバー<br />一部オンプレ提供</td><td></td></tr>
+            </tbody>
+        </table>
     </section>
 
     <section>
