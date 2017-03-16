@@ -11,7 +11,6 @@ $(function() {
    */
 
   // 0: invisible, 1: visible
-  var visibleFlag = 1;
   var jaFlag = 1;
   var enFlag = 0;
 
@@ -33,30 +32,23 @@ $(function() {
   importantInfoEnEl += ' をさせて頂きます。';
   importantInfoEnEl += '</h2></a></div>';
 
-  if (visibleFlag == 1) {
-    if (jaFlag == 1) {
-      // ja
-      $('#important-info-ja-el').append(importantInfoJaEl);
-      
-      // Change CSS
-      $('body.pricing article.main .container').css('padding-top', '50px');
-      $('html[lang=ja] body.ci .subfeatures').css('margin-bottom', '24px');
-    }
+  if (jaFlag == 1) {
+    // ja
+    $('#important-info-ja-el').append(importantInfoJaEl);
 
-    if(enFlag == 1) {
-      // en
-      $('#important-info-en-el').append(importantInfoEnEl);
+    // Change CSS
+    $('html[lang=ja] body.pricing article.main .container').css('padding-top', '50px');
+    $('html[lang=ja] body.ci .subfeatures').css('margin-bottom', '24px');
+  }
 
-      // Change CSS
-      $('body.pricing article.main .container').css('padding-top', '50px');
-      $('html[lang=en] body.ci .subfeatures').css('margin-bottom', '24px');
+  if(enFlag == 1) {
+    // en
+    $('#important-info-en-el').append(importantInfoEnEl);
 
-    } else {
-
-      $('body.pricing article.main .container').css('padding-top', '50px');
-      $('html body.ci .subfeatures').css('margin-bottom', '90px');
-
-    }
+    // Change CSS
+    $('html[lang=en] body.pricing article.main .container').css('padding-top', '50px');
+    $('html[lang=en] body.ci .subfeatures').css('margin-bottom', '24px');
 
   }
+
 });
