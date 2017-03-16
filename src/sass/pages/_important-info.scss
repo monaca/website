@@ -3,7 +3,14 @@ body.important-info #main-container {
     margin-top: 130px;
     margin-left: auto;
     margin-right: auto;
-    max-width: $break + 133px;
+    max-width: $width;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    @media screen and (max-width: $width) {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
 
     section, section p {
         padding: 0;
@@ -15,6 +22,7 @@ body.important-info #main-container {
     h2, h3, p, ul { text-align: left; }
     h2, h3, caption { font-weight: 600; }
     table, p { margin-bottom: 24px; }
+    ul, ol { padding: 16px 0; }
     td span, small {
         color: #8d98a6;
         font-size: .65rem;
@@ -71,16 +79,48 @@ body.important-info #main-container {
         th p img {
             margin-left: 5px;
             vertical-align: -4px;
-            @media screen and (max-width: $break-xs) {
-                vertical-align: -3px;
-            }
         }
     }
 
-    ul {
+
+    section:not(.q-and-a) ul {
         list-style-type: disc;
-        margin-left: 24px;
-        padding: 16px 0;
+        margin-left: 24px; 
+    }
+
+    .q-and-a ul ol {
+        border-bottom: 1px solid #dddddd;
+
+        li {
+            padding: 3px 0;
+
+            span { display: table; }
+
+            span:first-child {
+                border-radius: 3px;
+                margin-right: 8px;
+                width: 40px;
+                float: left;
+                text-align: center;
+            }
+
+            &:first-child p {
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            &:first-child p {
+                color: #43587e;
+                span:first-child {
+                    color: #ffffff;
+                    background-color: #43587e;
+                }
+            }
+
+            &:nth-child(2) span:first-child {
+                background-color: #dddddd;
+            }
+        }
     }
 
     button { margin: 48px 0 32px; }

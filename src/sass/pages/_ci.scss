@@ -695,6 +695,7 @@ html[lang=en] body.ci {
         }
     }
     .section.subfeatures {
+        margin-bottom: 90px;
         ol li {
             &:nth-child(1) {
                 @media screen and (max-width: 460px) {
@@ -790,6 +791,7 @@ html[lang=en] body.ci {
 }
 html[lang=ja] body.ci {
     .section.subfeatures {
+        margin-bottom: 90px;
         ol li {
             h4.subtitle {
                 font-size: 17px;
