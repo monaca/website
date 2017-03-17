@@ -20,6 +20,7 @@
       }
     });
 
+    displayNewPlanInfo(loginData.status.inJapan);
     displayBody();
   };
 
@@ -45,7 +46,34 @@
     } else {
       $('.personal-plan').remove();
     }
-
+    displayNewPlanInfo(loginData.status.inJapan);
     displayBody();
   };
+
+
+  function displayNewPlanInfo(inJapan) {
+    var importantInfoJaEl = '<div class="cmn-important-info"><a href="/important-info/info-new-plan.html" target="_blamk"><h2>';
+    importantInfoJaEl += '<span class="cmn-label color-red">重要</span>';
+    importantInfoJaEl += 'Monacaの一部のプランを対象に';
+    importantInfoJaEl += '<br class="visible-xs"> ';
+    importantInfoJaEl += '<span class="cmn-ipt-udt-linktext">料金プランの変更</span>';
+    importantInfoJaEl += ' をさせて頂きます。';
+    importantInfoJaEl += '</h2></a></div>';
+
+    var display = 'none';
+  
+    if (inJapan) {
+      // ja
+      $('#important-info-ja-el').append(importantInfoJaEl);
+  
+      // Change CSS
+      $('html[lang=ja] body.pricing article.main .container').css('padding-top', '50px');
+      $('html[lang=ja] body.ci .subfeatures').css('margin-bottom', '24px');
+      display = 'block';
+    }
+
+    if (document.getElementById('important-info-ja-el')) {
+      document.getElementById('important-info-ja-el').style.display = display;
+    }
+  }
 })();
