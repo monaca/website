@@ -16,12 +16,12 @@ body.important-info #main-container {
         padding: 0;
         margin: 0;
         width: 100%;
-        max-width: 100%;
+        max-width: $width;
     }
     h1, h2, h3, p, ul, table, caption { color: #333333; }
     h2, h3, p, ul { text-align: left; }
     h2, h3, caption { font-weight: 600; }
-    table, p { margin-bottom: 24px; }
+    p, .scroll { margin-bottom: 24px; }
     ul, ol { padding: 16px 0; }
     td span, small {
         color: #8d98a6;
@@ -53,7 +53,6 @@ body.important-info #main-container {
 
     table {
         font-size: 12px;
-        margin-top: 16px;
         width: 100%;
 
         caption {
@@ -80,6 +79,26 @@ body.important-info #main-container {
             margin-left: 5px;
             vertical-align: -4px;
         }
+    }
+
+    .scroll{
+        overflow: auto;
+        margin-top: 16px;
+
+        @media screen and (max-width: 1170px) {
+            border-right: 1px solid #ddd;
+            box-shadow: -5px 0 15px -10px #222 inset;
+        }
+
+    }
+    .scroll::-webkit-scrollbar {
+        height: 5px;
+    }
+    .scroll::-webkit-scrollbar-track{
+        background: #F1F1F1;
+    }
+    .scroll::-webkit-scrollbar-thumb {
+        background: #BCBCBC;
     }
 
 
