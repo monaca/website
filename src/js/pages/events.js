@@ -22,7 +22,7 @@
 
   monacaPages["/events/train.html"] = function () {
     if (window.LANG == 'en') return;
-    
+
     getTrainings({lang: window.LANG, limit: limit},
       function (data) {
         appendTrainings(window.LANG, $(".events-entries"), data);
@@ -129,7 +129,7 @@
     var list = element.html();
     for (var i = 0; i < result.length; i++) {
       var entry = result[i];
-      var status =  createStatusTag(entry);
+      var status = createStatusTag(entry);
       var text = '<tr id="entry_' + entry.id + '" class="events-entry">' +
         '<th>' + entry.date + '</br>' + entry.location + '</th>' +
         '<td class="status_column">' + status + '</td>' +
@@ -171,13 +171,12 @@
    * Create Status Tag
    * @param entry
    */
-  function createStatusTag(entry){
+  function createStatusTag(entry) {
     var today = new Date();
-
     if ((new Date(entry.date)).getTime() < today.getTime()) {
-      var status = '<span class="status-finished">終了しました</span>';
+      return '<span class="status-finished">終了しました</span>';
     } else {
-      var status = '<span class="status-on">申込受付中</span>';
+      return '<span class="status-on">申込受付中</span>';
     }
   }
 
@@ -186,9 +185,9 @@
    * @param entry
    * @returns {*}
    */
-  function formatPrice(entry){
+  function formatPrice(entry) {
     if (!entry.price) {
-      return  "無料";
+      return "無料";
     } else {
       return '¥' + numberWithCommas(entry.price);
     }
