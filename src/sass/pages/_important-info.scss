@@ -21,6 +21,7 @@ body.important-info #main-container {
     h1, h2, h3, p, ul, table, caption { color: #333333; }
     h2, h3, p, ul { text-align: left; }
     h2, h3, caption { font-weight: 600; }
+    h3, caption { font-size: 16px; }
     p, .scroll { margin-bottom: 24px; }
     ul, ol { padding: 16px 0; }
     td span, small {
@@ -44,7 +45,6 @@ body.important-info #main-container {
     }
 
     h3 {
-        font-size: 16px;
         margin-top: 40px;
         margin-bottom: 16px;
     }
@@ -54,11 +54,10 @@ body.important-info #main-container {
     table {
         font-size: 12px;
         width: 100%;
-        margin-top: 16px;
 
         caption {
-            font-size: 16px;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            margin-top: 24px;
         }
 
         thead {
@@ -87,7 +86,7 @@ body.important-info #main-container {
 
         @media screen and (max-width: 1170px) {
             border-right: 1px solid #ddd;
-            box-shadow: -5px 0 15px -10px #222 inset;
+            box-shadow: -5px -5px 10px -10px #222 inset;
         }
 
     }
