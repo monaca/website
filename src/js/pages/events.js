@@ -5,7 +5,7 @@
   monacaPages["/events/index.html"] = function () {
     if (window.LANG == 'en') return;
 
-    getEvents({lang: window.LANG, limit: limit},
+    getEvents({lang: window.LANG, limit: limit, all: true},
       function (data) {
         appendEvents($(".events-entries"), data);
       }
@@ -23,7 +23,7 @@
   monacaPages["/events/training.html"] = function () {
     if (window.LANG == 'en') return;
 
-    getTrainings({lang: window.LANG, limit: limit},
+    getTrainings({lang: window.LANG, limit: limit, all: true},
       function (data) {
         appendTrainings(window.LANG, $(".events-entries"), data);
       }
@@ -47,13 +47,14 @@
     var lang = options.lang || 'en';
     var limit = options.limit || 50;
     var entry_num = options.entry_num || 0;
+    var all = options.all || true;
 
     $.ajax({
       type: "GET",
       url: monacaApi.getBaseUrl() + "/" + lang + "/api/event/list",
       dataType: "JSON",
       contentType: "text/plain",
-      data: {limit: limit, entry_num: entry_num},
+      data: {limit: limit, entry_num: entry_num, all: all},
       xhrFields: {withCredentials: true},
       success: success,
       fail: fail
@@ -99,13 +100,14 @@
     var lang = options.lang || 'en';
     var limit = options.limit || 50;
     var entry_num = options.entry_num || 0;
+    var all = options.all || true;
 
     $.ajax({
       type: "GET",
       url: monacaApi.getBaseUrl() + "/" + lang + "/api/training/list",
       dataType: "JSON",
       contentType: "text/plain",
-      data: {limit: limit, entry_num: entry_num},
+      data: {limit: limit, entry_num: entry_num, all: all},
       xhrFields: {
         withCredentials: true
       },

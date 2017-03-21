@@ -11,7 +11,7 @@
       }
     );
 
-    getEventList({lang: window.LANG, limit: limit},
+    getEventList({lang: window.LANG, limit: limit, all: true},
       function (data) {
         appendEvent($(".events-entries"), data);
       }
@@ -81,13 +81,14 @@
   function getEventList(options, success, fail) {
     var lang = options.lang || 'en';
     var limit = options.limit || 50;
+    var all = options.all || true;
 
     $.ajax({
       type: "GET",
       url: monacaApi.getBaseUrl() + "/" + lang + "/api/event/list",
       dataType: "JSON",
       contentType: "text/plain",
-      data: {limit: limit},
+      data: {limit: limit, all: all},
       xhrFields: {
         withCredentials: true
       },
