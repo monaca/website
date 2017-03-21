@@ -3,6 +3,8 @@
   var limit = 10;
 
   monacaPages["/events/index.html"] = function () {
+    if (window.LANG == 'en') return;
+
     getEvents({lang: window.LANG, limit: limit},
       function (data) {
         appendEvents($(".events-entries"), data);
@@ -19,6 +21,8 @@
   };
 
   monacaPages["/events/train.html"] = function () {
+    if (window.LANG == 'en') return;
+    
     getTrainings({lang: window.LANG, limit: limit},
       function (data) {
         appendTrainings(window.LANG, $(".events-entries"), data);
