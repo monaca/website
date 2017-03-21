@@ -2,6 +2,8 @@
   window.monacaPages = window.monacaPages || [];
 
   monacaPages["/index.html"] = function () {
+    if (window.LANG == 'en') return;
+    
     var limit = 3;
     getHeadline({lang: window.LANG, type: "news_and_release", limit: limit, all: false},
       function (data) {
