@@ -125,6 +125,20 @@ body.terms-of-service {
     margin-top: 0;
     margin-bottom: 080px;
   }
+
+  .law-table {
+    margin: auto;
+    border: solid 1px #bbb;
+    border-collapse: collapse;
+
+    td, th {
+      border: solid 1px #bbb;
+      padding: 15px;
+    }
+    th {
+      text-align: center;
+    }
+  }
 }
 
 #privacy {

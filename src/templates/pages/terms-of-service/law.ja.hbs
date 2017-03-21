@@ -1,0 +1,78 @@
+---
+title: 特定商取引法に基づく表記 | MonacaでHTML5モバイルアプリ開発
+class: terms-of-service
+description: クラウド上のアプリ開発環境。iOS/Android/Windows向けHTML5ハイブリッドアプリに対応。
+viewport: width=1200px
+---
+
+<div id="main-wrap">
+  <section id="law" class="subpage">
+    <div class="container">
+      <h1><span>特定商取引法に基づく表記</span></h1>
+
+      <table class="law-table">
+        <tr><th>店舗名</th><td>Monaca</td><tr>
+        <tr><th>販売業者</th><td>アシアル株式会社</td><tr>
+        <tr><th>運営責任者</th><td>代表取締役 田中正裕</td><tr>
+        <tr><th>所在地</th><td>東京都文京区本郷2-15-13 お茶の水ウイングビル10階</td><tr>
+        <tr><th>運営URL</th><td>https://ja.monaca.io</td><tr>
+        <tr><th>メールアドレス</th><td>info@asial.co.jp</td><tr>
+        <tr><th>電話番号</th><td>03-5875-6862　（受付時間：11:00～19:00）</td><tr>
+        <tr><th>販売価格</th><td>商品毎に記載</td><tr>
+        <tr><th>お支払い方法</th><td>クレジットカード払い<br />請求書払い(エンタープライズプランのみ)</td><tr>
+        <tr><th>商品代金以外の必要料金</th><td>なし</td><tr>
+        <tr>
+            <th>代金の支払い時期</th>
+　　　　　　<td>
+                クレジットカード払いの場合<br />
+                月額料金: 初回は有料プラン申し込み時(トライアル中にお申し込みの場合はトライアル終了日翌日)、翌月以降は毎月1日<br />
+                年額料金: 初回は有料プラン申し込み時、翌年は有料プラン申し込み月から1年後の翌月1日、以降は前回課金から1年後の同月1日<br />
+                その他: 購入申し込み完了後、ご指定のクレジットカード会社へ請求<br />
+                <br />
+                請求書払いの場合<br />
+                お申込み手続き完了後、登録先の住所へ請求書をお送りしますので、請求書記載の期日までにお支払いください。
+            </td>
+        <tr>
+        <tr>
+          <th>引き渡し方法<br/>引き渡し時期</th>
+          <td>クレジットカード払いの場合<br />
+              購入申込手続完了後、即時のお引き渡しになります。<br /><br />
+              請求書払いの場合<br />
+              購入申込手続完了後、3営業日以内のお引き渡しになります。
+          </td>
+        <tr>
+        <tr>
+          <th>返品・キャンセル</th><td>購入申込手続後のお客様都合によるキャンセル、返品には応じられません。</td>
+        <tr>
+
+      </table>
+    </div>
+  </section>
+
+  <script src="/js/jquery.smoothScroll.js"></script>
+
+  <script src="/js/moment.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script>
+
+    $(window).load(function() {
+     var fadeInSpeed = 400;
+     $('div.terms-of-service span#github-published_at').hide();
+     $.ajax({
+      url: 'https://api.github.com/repos/monaca/Localkit/releases',
+      dataType: 'jsonp',
+      success: function(res) {
+       $("div.terms-of-service span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
+       $('div.terms-of-service span#github-published_at a strong').text(res.data[0].name);
+       var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
+       $('div.terms-of-service span#github-published_at span').text(dateJa);
+       $('div.terms-of-service span#github-published_at').fadeIn(fadeInSpeed);
+     },
+     error: function() {
+       $('div.terms-of-service span#github-published_at').hide();
+     }
+   });
+   });
+  </script>
+
+

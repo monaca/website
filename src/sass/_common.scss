@@ -996,3 +996,93 @@ Goes 2 to 1-column in responsive
 		}
 	}
 }
+
+/*
+# Important Information
+# for New Plan in 201704
+
+```
+<div class="container box-try">
+    <a href="#" class="btn btn-green">Try it!</a>
+</div>
+```
+*/
+.cmn-important-info {
+  background-color: #fae8e8;
+  width: 100%;
+  margin-top: 50px;
+  z-index: 50;
+  &:hover {
+    background-color: #fac8c8;
+    transition: .2s ease-in-out;
+    -webkit-transition: .4s ease-in-out;
+    -moz-transition: .4s ease-in-out;
+    -ms-transition: .4s ease-in-out;
+  }
+  &:active {
+    background-color: #fac8c8;
+  }
+
+  a {
+    text-decoration: none;
+
+    h2{
+      color: #a42d2d !important;
+      font-family: Helvetica,Arial,sans-serif;
+      font-size: 16px !important;
+      padding: 24px 0 22px;
+      margin: 0 !important;
+      span.cmn-ipt-udt-linktext { color: #337ab7 !important; }
+      @media screen and (max-width: $break) {
+        line-height: 1.4em;
+      }
+    }
+
+    &:hover {
+      text-decoration: none;
+      h2 span.cmn-ipt-udt-linktext { text-decoration: underline; }
+    }
+  }
+}
+
+.cmn-info-middle {
+  @media screen and (max-width: $width) {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  .cmn-important-info {
+    border: solid 1px #a42d2d;
+    margin-bottom: 50px;
+  }
+}
+            
+/*
+# Label
+
+```
+<h1><span class="label color-red">Red</span>Example h1</h1>
+```
+*/
+.cmn-label { 
+  box-sizing: border-box;
+  border-radius: 0.2em;
+  padding: 0.56em 0.8em 0.28em;
+  margin: 0 0.84em 0 0;
+  text-align: center;
+  font-size: 0.75em;
+  font-weight: 700;
+  line-height: 1;
+  display: inline;
+  white-space: nowrap;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.15em;
+  background-color: #666666;
+  color: #ffffff;
+
+  &.color-red { background-color: #d35052; }
+  &.color-green { background-color: #6eb063; color: #e0f1e5; }
+  &.color-white-greenline { background-color: #ffffff; color: #6eb063; border: solid 2px #6eb063; }
+  &.color-yellow { background-color: #e5c43c; color: #66571b; }
+  &.color-lightgray { background-color: #e3e3e3; color: #666666; }
+}

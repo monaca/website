@@ -162,7 +162,7 @@
     "priceTaxIncluded": "※税込価格",
     "priceContact": "お問い合わせ",
     "priceAcademicTitle": "Monaca Educationプラン",
-    "priceAcademicBody": "Monacaクラウドでは大学、専門学校等の教育機関向け専用プラン及び割引プランをご用意しています。詳細は<a href=\"/academic.html\">Monaca Educationプランページ</a>をご覧ください。",
+    "priceAcademicBody": "Monacaクラウドでは大学、専門学校等の教育機関向け専用プラン及び割引プランをご用意しています。詳細は<a href=\"https://edu.monaca.io/\" target=\"_blank\">Monaca Educationプランページ</a>をご覧ください。",
     "priceAcademicBasic": "<em>無料</em>",
     "priceAcademicEducationAddition": "教育機関専用プラン",
     "priceAcademicEducation": "<em>980</em>円/月<br/>（9,800円/年）",

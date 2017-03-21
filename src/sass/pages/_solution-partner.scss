@@ -100,33 +100,44 @@ body.solution-partner {
         color: #666;
         font-size: 14px;
         line-height: 22px;
-        margin: 0px auto 25px auto;
+        margin: 0px auto 70px auto;
         text-align: left;
         padding: 0;
         width: 790px;
         border: none;
         margin-bottom: 50px;
         @media screen and (max-width: 850px) {
+          margin: 0px auto 50px auto;
           width: 90%;
         }
         @media screen and (max-width: $break) {
           width: 100%;
         }
         .link-list {
-            margin: 0 0 30px 40px;
+            margin: 0 0 30px 0;
             @media screen and (max-width: $break) {
               margin: 0 0 8% 0;
             }
             li {
                 display: inline-block;
-                min-width: 280px;
+                min-width: 186px;
                 margin-right: 0.5em;
                 font-size: 16px;
                 line-height: 2.5;
                 color: #2472b3;
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: $break-lg) {
                   margin: 0 0 6%;
-                  min-width: 100%;
+                  min-width: 30%;
+                  line-height: 1.5;
+                }
+                @media screen and (max-width: $break-xs) {
+                  margin: 0 0 6%;
+                  min-width: 30%;
+                  line-height: 1.5;
+                }
+                @media screen and (max-width: $break-xs) {
+                  margin: 0 0 6%;
+                  min-width: 47%;
                   line-height: 1.5;
                 }
             }
@@ -184,7 +195,7 @@ body.solution-partner {
         }
     }
     .partner-item {
-        margin: 0px auto;
+        margin: 0px auto 15px;
         text-align: left;
         padding: 30px;
         width: 790px;
@@ -195,6 +206,7 @@ body.solution-partner {
           padding: 5%;
         }
         @media screen and (max-width: $break) {
+          margin: 0px auto 5%;
           padding: 5%;
           width: 100%;
         }
@@ -205,12 +217,56 @@ body.solution-partner {
         a:hover {
           text-decoration: none;
         }
+
+        .toggle {
+            cursor: pointer;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            text-decoration: none;
+            top: 0;
+            width: 100%;
+            border-radius: 4px;
+            &:hover {
+              background: rgba(81, 176, 255, 0.1);
+              -webkit-transition: all 0.5s ease;
+              -moz-transition: all 0.5s ease;
+              -o-transition: all 0.5s ease;
+              transition: all  0.5s ease;
+            }
+            @media screen and (max-width: $break) {
+              display: none;
+            }
+            i:before {
+              font-family: 'Glyphicons Halflings';
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              content: "\e114";
+              color: #ccc;
+              right: 20px;
+              position: absolute;
+              top: 58px;
+            }
+          }
+          .toggle.active {
+            &:hover {
+                background: none;
+              }
+            i:before {
+              font-family: 'Glyphicons Halflings';
+              font-style: normal;
+              font-weight: normal;
+              font-size: 16px;
+              content: "\e113";
+              color: #ccc;
+            }
+          }
     }
     .partner-head {
         width: 730px;
         margin: 0px;
-        padding: 0px 0px 14px 0px;
-        border-bottom: solid 1px #e5e5e5;
+        padding: 0;
         @media screen and (max-width: 850px) {
           width: 100%;
         }
@@ -239,8 +295,10 @@ body.solution-partner {
     .partner-info {
         width: 590px;
         margin: 0px 20px 0px 90px;
+        position: absolute;
         @media screen and (max-width: 850px) {
           width: auto;
+          position:relative;
         }
         @media screen and (max-width: $break) {
           padding: 0;
@@ -261,7 +319,7 @@ body.solution-partner {
         }
         @media screen and (max-width: $break) {
           padding: 0 0 0 5%;
-          margin: 0 0 7%;
+          margin: 0;
           height: 70px;
           display:table-cell;
           vertical-align: middle;
@@ -282,7 +340,7 @@ body.solution-partner {
           width: auto;
         }
         @media screen and (max-width: $break) {
-          margin: 3% 0 0;
+          margin: 1% 0 0;
           width: 100%;
           box-sizing: border-box;
         }
@@ -291,8 +349,9 @@ body.solution-partner {
 
     .partner-content {
         width: 730px;
+        padding: 24px 0 0;
         margin: 0px;
-        padding: 0px;
+        display: none;
         @media screen and (max-width: 850px) {
           width: 100%;
         }
@@ -306,11 +365,12 @@ body.solution-partner {
           display: block;
         }
     }
+
     .partner-content-left {
         float: left;
-        width: 430px;
-        margin: 0px 40px 0px 0px;
-        padding: 0px;
+        width: 470px;
+        padding: 0px 40px 0px 0px;
+        border-top: solid 1px #e5e5e5;
         @media screen and (max-width: 850px) {
           width: calc(100% - 300px);
         }
@@ -318,6 +378,7 @@ body.solution-partner {
           float: none;
           width: 100%;
           box-sizing: border-box;
+          display: none !important;
         }
     }
     .partner-abstract {
@@ -363,11 +424,14 @@ body.solution-partner {
         width: 260px;
         margin: 0px;
         padding: 0px;
+        border-top: solid 1px #e5e5e5;
+        position: relative;
         @media screen and (max-width: $break) {
           float: none;
           width: 100%;
           box-sizing: border-box;
           border-top: 1px solid #e5e5e5;
+          display: none !important;
         }
     }
 
@@ -532,7 +596,7 @@ body.solution-partner {
     p.btn-btt {
         width: 790px;
         max-width: 790px;
-        margin: 7px auto 50px;
+        margin: 0 auto 60px;
         text-align: right;
         font-size: 12px;
         line-height: 14px;
@@ -541,6 +605,7 @@ body.solution-partner {
           width: 90%;
         }
         @media screen and (max-width: $break) {
+          padding: 0;
           width: 100%;
           max-width: 100%;
           box-sizing: border-box;
@@ -563,6 +628,14 @@ body.solution-partner {
     .menuimg {
         margin: -7px 0px 0px 0px;
     }
+    .ti-works {
+        margin: 20px 0 5px;
+        width: 100%;
+        background: #2472B3;
+        color: #fff;
+        text-align: center;
+        font-size: 10px;
+    }
     .bold-headline {
         margin-right:12px;
         color: #2472b3;
@@ -574,6 +647,14 @@ body.solution-partner {
         }
     }
     .detail-text {
+      .company-url {
+        position: relative;
+        z-index: 99;
+        bottom: 0;
+        @media screen and (max-width: $break) {
+          position: absolute;
+        }
+      }
       @media screen and (max-width: $break) {
         float: left;
         width: 82%;
@@ -616,6 +697,12 @@ body.solution-partner {
       h1 {
         font-size: 40px;
         line-height: 1.2;
+      }
+      h2 {
+        margin: 10px 0 20px;
+        font-size: 30px;
+        font-weight: normal;
+        color: #333;
       }
       width: auto;
       line-height: 1.8;
