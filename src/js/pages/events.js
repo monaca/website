@@ -20,7 +20,7 @@
     });
   };
 
-  monacaPages["/events/train.html"] = function () {
+  monacaPages["/events/training.html"] = function () {
     if (window.LANG == 'en') return;
 
     getTrainings({lang: window.LANG, limit: limit},
