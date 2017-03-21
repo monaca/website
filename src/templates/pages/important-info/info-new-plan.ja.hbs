@@ -7,7 +7,7 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
 <div id="main-container">
     <h1>Monaca料金プラン変更のお知らせ</h1>
         <p>この度、2017年4月27日（予定）よりMonacaの料金プランを改定させていただくことになりましたので、お知らせします。<br />
-        現在ご利用いただいているMonacaの有償プランのアカウントは、プラン変更なしに引き続き現料金プランのままご利用いただくことができます。
+        <span style="font-weight: 700; color: #CC0000;">現在ご利用いただいているMonacaの有償プランのアカウントは、プラン変更なしに引き続き現料金プランのままご利用いただくことができます。</span>
         </p>
 
     <section id="about-new-plan">
@@ -16,7 +16,7 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
             #about-new-plan tbody td:last-child { width: 550px; max-width: 550px; min-width: 550px; }
         </style>
         <h2>Monaca料金プランの改定について</h2>
-            <p>Monacaではこれまで、ご利用の開発者の皆様に快適にモバイルアプリ開発を行ってまいりました。お陰をもちまして、登録開発者数も17万人を超え、多くの個人開発者、企業におけるアプリ開発にご利用いただけるようになりました。<br />今後の個人利用から企業導入までの多様なニーズに応えるため、個人向け料金プランと企業向けの料金プランを分けることになりました。
+            <p>Monacaはこれまで、ご利用の開発者の皆様に快適にモバイルアプリ開発を行っていただけるようサービスの提供を行ってまいりました。お陰をもちまして、登録開発者数も17万人を超え、多くの個人および企業におけるアプリ開発にご利用いただけるようになりました。<br />今後の個人利用から企業導入までの多様なニーズに応えるため、個人向け料金プランと企業向けの料金プランを分けることになりました。
             </p>
             <p>主な料金プランの改定内容は以下の通りです。
             </p>
@@ -34,7 +34,7 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
                 <tr><th><p>Proプラン</p></th><td><b>2,160円</b></td><td><b>21,600円</b></td>
                     <td><p>高度なアプリ開発を行う個人開発者を対象としたプランです。従来、Goldプラン以上ではないとご利用いただけなかった、Monaca Localkitやカスタムプラグインなど、高度なアプリ開発機能がご利用いただけます。</p></td></tr>
                 <tr><th><p>Businessプラン</p></th><td><b>7,560円〜</b></td><td><b>75,600円〜</b></td>
-                    <td><p>企業やチームでの導入のためのプランです。従来のMonacaクラウド全機能に加え、開発者アカウントの管理機能など管理機能が提供されます。また、オプションでMonacaエンタープライズプラグインのご利用も可能です。</p></td></tr>
+                    <td><p>企業やチームでの導入のためのプランです。従来のMonacaクラウド全機能に加え、開発者アカウントの管理やCIチケット管理など管理機能が提供されます。また、オプションでMonacaエンタープライズプラグインのご利用も可能です。</p></td></tr>
             </tbody>
         </table>
         </div>
@@ -94,6 +94,12 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
                 <tr><th>Freeプラン</th><th>Proプラン</th><th>Businessプラン</th><th>Enterpriseプラン</th><!--th>Educationプラン</th--></tr>
             </thead>
             <tbody>
+                <tr><th><p>2週間の無料トライアル</p></th>
+                    <td></td>
+                    <td>〇</td>
+                    <td>〇<br /><small>※トライアル中のリリースビルドは不可</small></td>
+                    <td></td>
+                    <!--td>980<span>円</span></td--></tr>
                 <tr><th><p>月額</p></th>
                     <td></td>
                     <td>2,160<span>円</span></td>
@@ -125,6 +131,12 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
                     <td>10,800<span>円</span></td>
                     <!--td></td--></tr>
 
+                <tr><th><p></p></th>
+                    <td></td>
+                    <td>21,600<span>円</span></td>
+                    <td>75,600<span>円</span></td>
+                    <td>1,080,000<span>円</span></td>
+
                 <tr><th><p>クレジットカード払い</p></th>
                     <td></td>
                     <td>〇</td>
@@ -155,14 +167,14 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
                 <tr><th><p>クラウドビルド制限</p></th><td>3<span>/日</span></td><td>無制限</td><td>無制限</td><td>無制限</td><!--td>無制限</td--></tr>
                 <tr><th><p>デバッグビルド</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
                 <tr><th><p>アドホックビルド</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
-                <tr><th><p>リリースビルド</p></th><td>〇</td><td>〇</td><td>〇<br /><small>※試用期間を除く</small></td><td>〇</td><!--td>〇</td--></tr>
-                <tr><th><p>In-houseビルド</p></th><td></td><td></td><td>〇</td><td>〇</td><!--td></td--></tr>
+                <tr><th><p>リリースビルド</p></th><td>〇</td><td>〇</td><td>〇<br /><small>※トライアル期間を除く</small></td><td>〇</td><!--td>〇</td--></tr>
+                <tr><th><p>In-Houseビルド</p></th><td></td><td></td><td>〇</td><td>〇</td><!--td></td--></tr>
                 <tr><th><p>iOSアップロード</p></th><td></td><td>〇<br /><span>※プロジェクト単位課金</span></td><td>〇<br /><span>※プロジェクト単位課金</span></td><td>〇<br /><span>※プロジェクト単位課金</span></td><!--td>〇</td--></tr>
                 <tr><th><p>カスタムプラグイン</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td></td--></tr>
                 <tr><th><p>プラグインバージョン選択</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td></td--></tr>
                 <tr><th><p>エクスポート</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
                 <tr><th><p>Cordovaバージョン</p></th><td>最新2バージョンのみ</td><td>最新2バージョンのみ<!--br />オプションでステイ可能--></td><td>旧版も利用可能</td><td>旧版も利用可能</td><!--td>最新版のみ</td--></tr>
-                <tr><th><p>ストレージ</p></th><td>250<span>MB</span></td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
+                <tr><th><p>ストレージ</p></th><td>250<span>MB</span></td><td>1<span>GB</span></td><td>10<span>GB/開発者</span></td><td>10<span>GB/開発者</span></td><!--td>〇</td--></tr>
             </tbody>
         </table>
 
@@ -203,7 +215,7 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
                 <tr><th><p>マネジメントAPIの使用可否</p></th><td></td><td></td><td>〇</td><td>〇</td><!--td></td--></tr>
                 <tr><th><p>ユーザー管理</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr>
                 <tr><th><p>データコレクション<br/>（クラウドデータベース）</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr>
-                <tr><th><p>プロジェクト自動退避</p></th><td>〇</td><td></td><td></td><td></td><!--td>?</td--></tr>
+                <tr><th><p>プロジェクト自動退避 ※1</p></th><td>〇</td><td></td><td></td><td></td><!--td>?</td--></tr>
                 <tr><th><p>自動退避された<br />プロジェクトの復旧</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr>
                 <tr><th><p>バーストサポート</p></th><td></td><td>10req/s</td><td>20req/s</td><td>20req/s</td><!--td>?</td--></tr>
                 <tr><th><p>サーバーマネジメントAPI</p></th><td></td><td></td><td>〇</td><td>〇</td><!--td>?</td--></tr>
@@ -216,17 +228,16 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
                 <tr><th><p>コミュニティフォーラム</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
                 <tr><th><p>コミュニティサポート</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
                 <tr><th><p>製品サポート</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td></td--></tr>
-                <tr><th><p>技術サポート</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td></td--></tr>
-                <tr><th><p>無料サポートチケット</p></th><td></td><td>0<span>枚</span></td><td>1<span>枚/30分</span></td><td>エントリー<span>/3時間</span></td><!--td></td--></tr>
-                <tr><th><p>サポートチケットの追加</p></th><td></td><td>都度購入</td><td>事前購入</td><td>事前購入</td><!--td></td--></tr>
+                <tr><th><p>技術サポート ※2</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td></td--></tr>
+                <!--tr><th><p>無料サポートチケット</p></th><td></td><td>0<span>枚</span></td><td>1<span>枚/30分</span></td><td>エントリー<span>/3時間</span></td><td></td></tr>
+                <tr><th><p>サポートチケットの追加</p></th><td></td><td>都度購入</td><td>事前購入</td><td>事前購入</td><td></td></tr-->
             </tbody>
         </table>
 
         <table>
             <caption>継続的インテグレーション（CI）</caption>
             <tbody>
-                <tr><th><p>GitHubパブリックレポジトリ</p></th><td>10<span>ビルド/月<span></td><td>10<span>ビルド/月<span></td><td>30<span>ビルド/月<br />＋<br />追加チケット<br /></span>5,000<span>円/</span>50<span>回</span></td><td>30<span>ビルド/月<br />＋<br />追加チケット<br /></span>5,000<span>円/</span>50<span>回</span></td><!--td>10<span>ビルド/月<span></td--></tr>
-                <tr><th><p>GitHubプライベートレポジトリ</p></th><td></td><td>10<span>ビルド/月<span></td><td>30<span>ビルド/月<br />＋<br />追加チケット<br /></span>5,000<span>円/</span>50<span>回</span></td><td>30<span>ビルド/月<br />＋<br />追加チケット<br /></span>5,000<span>円/</span>50<span>回</span></td><!--td>10<span>ビルド/月<span></td--></tr>
+                <tr><th><p>利用可能回数</p></th><td>10<span>ビルド/月<span></td><td>10<span>ビルド/月<span></td><td>30<span>ビルド/月<br />＋<br />追加チケット<br /></span>5,000<span>円/</span>50<span>回</span></td><td>30<span>ビルド/月<br />＋<br />追加チケット<br /></span>5,000<span>円/</span>50<span>回</span></td><!--td>10<span>ビルド/月<span></td--></tr>
             </tbody>
         </table>
 
@@ -237,6 +248,11 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
             </tbody>
         </table>
         </div>
+
+        <p style="font-size: 90%;">
+            ※1 Freeプランの場合、180日以上ログインしていない利用者の方を対象にプロジェクトデータ一式がアーカイブストレージに移動され、ダッシュボードから利用できなくなります。<br /> 
+            ※2 技術サポートの詳細につきましては、決まり次第こちらのページに記載致します。
+        </p>
     </section>
 
     <!-- Q&Aよくあるご質問と回答を戻すときに、section style="border-bottom: none; margin-bottom: 60px;"のstyleをけしてください。 -->
