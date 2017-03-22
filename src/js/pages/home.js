@@ -28,7 +28,7 @@
     var lang = options.lang || 'en';
     var news_type = options.type || 'news_and_release';
     var limit = options.limit || 3;
-    var all = options.all || true;
+    var all = options.all || false; // false means that get only Mongoinformation $show_home is true
 
     $.ajax({
       type: "GET",
