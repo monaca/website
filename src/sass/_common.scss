@@ -253,7 +253,7 @@ article.main section {
           >.events-entry-comment {
               width: 100%;
               vertical-align: middle;
-              padding: 8px 20px;
+              padding: 8px 8px;
 
               .event-entry-comment-body{
               display: block;
@@ -270,7 +270,7 @@ article.main section {
 
           }
           >.status_column {
-              width: 150px;
+              width: 110px;
               vertical-align: middle;
           }
           > td {
@@ -288,7 +288,7 @@ article.main section {
                   padding-top: 4px;
               }
               > span.category-on, > span.category-finished, > span.status-on, > span.status-finished {
-                  width: 150px;
+                  width: 110px;
                   text-align: center;
                   font-size: 12px;
                   padding: 6px 10px;

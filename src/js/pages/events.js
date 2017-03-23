@@ -162,7 +162,7 @@
     if (entry.category == 0) {
       categoryTag += 'セミナー</span>';
     } else if (entry.category == 1) {
-      categoryTag += '展示会カンファレンス</span>';
+      categoryTag += "展示会</span>";
     } else if (entry.category == 2) {
       categoryTag += 'ワークショップ</span>';
     }
