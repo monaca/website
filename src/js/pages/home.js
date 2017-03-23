@@ -35,7 +35,7 @@
       url: monacaApi.getBaseUrl() + "/" + lang + "/api/news/list",
       dataType: "JSON",
       contentType: "text/plain",
-      data: {type: news_type, limit: limit, all: all},
+      data: {type: news_type, limit: limit, all: all, referer: 'monaca-io-top'},
       xhrFields: {
         withCredentials: true
       },
@@ -56,6 +56,7 @@
       $("#news-list").hide();
       return;
     }
+
     for (var i = 0; i < result.length; i++) {
       var entry = result[i];
       element.append(
@@ -64,7 +65,7 @@
         '    <dt>' + entry.date + '</dt>' +
         '    <dd>' +
         '      <span class="headline-entry-comment-news">' +
-        '<a href="/headline/index.html#entry_' + entry.id + '" target="_blank">' + entry.body + '</a></span>' +
+        '<a href="/headline/index.html#entry_' + entry.id + '" target="_blank">' + entry.title + '</a></span>' +
         '    </dd>' +
         '  </dl>' +
         '</div>'
