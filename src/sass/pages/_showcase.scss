@@ -3491,6 +3491,9 @@ body.showcase.showcase {
             width: 100%;
         }
     }
+    .tarea{
+        width: 85%;
+    }
     #case_add {
         padding: 0;
         .error {
@@ -3563,6 +3566,7 @@ body.showcase.showcase {
                             @media screen and (max-width: $break) {
                                 width: 3%;
                             }
+                            vertical-align: text-top;
                         }
                         td {
                             width: 65.27%;
