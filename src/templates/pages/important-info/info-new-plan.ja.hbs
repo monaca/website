@@ -174,6 +174,8 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
                 <tr><th><p>エクスポート</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
                 <tr><th><p>Cordovaバージョン</p></th><td>最新2バージョンのみ</td><td>最新2バージョンのみ<!--br />オプションでステイ可能--></td><td>旧版も利用可能</td><td>旧版も利用可能</td><!--td>最新版のみ</td--></tr>
                 <tr><th><p>ストレージ</p></th><td>250<span>MB</span></td><td>1<span>GB</span></td><td>10<span>GB/開発者</span></td><td>10<span>GB/開発者</span></td><!--td>〇</td--></tr>
+                <tr><th><p>プロジェクト自動退避 ※1</p></th><td>〇</td><td></td><td></td><td></td><!--td>?</td--></tr>
+                <tr><th><p>自動退避された<br />プロジェクトの復旧</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr>
             </tbody>
         </table>
 
@@ -208,28 +210,37 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
         <table>
             <caption>バックエンドサービス</caption>
             <tbody>
-                <tr><th><p>プッシュ通知</p></th><td>1000<span>/月</span></td><td>1000<span>/月</span></td><td>100,000<span>/月</span></td><td>100,000<span>/月</span></td><!--td>1000<span>/月</span></td--></tr>
-                <tr><th><p>APIコール数</p></th><td>10,000<span>/月</span></td><td>10,000<span>/月</span></td><td>5,000,000<span>/月</span></td><td>5,000,000<span>/月</span></td><!--td>10,000<span>/月</span></td--></tr>
+                <tr><th><p>プッシュ通知</p></th><td>1,000<span>/月</span></td><td>1,000<span>/月</span></td><td>100,000<span>/月</span></td><td>100,000<span>/月</span></td><!--td>1000<span>/月</span></td--></tr>
+                <tr><th><p>APIコール数</p></th><td>100,000<span>/月</span></td><td>100,000<span>/月</span></td><td>5,000,000<span>/月</span></td><td>5,000,000<span>/月</span></td><!--td>10,000<span>/月</span></td--></tr>
                 <tr><th><p>バックエンド数</p></th><td>3</td><td>10</td><td>無制限</td><td>無制限</td><!--td>10</td--></tr>
-                <tr><th><p>マネジメントAPIの使用可否</p></th><td></td><td></td><td>〇</td><td>〇</td><!--td></td--></tr>
-                <tr><th><p>ユーザー管理</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr>
-                <tr><th><p>データコレクション<br/>（クラウドデータベース）</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr>
-                <tr><th><p>プロジェクト自動退避 ※1</p></th><td>〇</td><td></td><td></td><td></td><!--td>?</td--></tr>
-                <tr><th><p>自動退避された<br />プロジェクトの復旧</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr>
-                <tr><th><p>バーストサポート</p></th><td></td><td>10req/s</td><td>20req/s</td><td>20req/s</td><!--td>?</td--></tr>
+                <!--tr><th><p>ユーザー管理</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr>
+                <tr><th><p>データコレクション<br/>（クラウドデータベース）</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr-->
                 <tr><th><p>サーバーマネジメントAPI</p></th><td></td><td></td><td>〇</td><td>〇</td><!--td>?</td--></tr>
             </tbody>
         </table>
 
         <table>
-            <caption>サポート & サービス</caption>
+            <caption id="support-and-service">サポート & サービス</caption>
             <tbody>
                 <tr><th><p>コミュニティフォーラム</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
-                <tr><th><p>コミュニティサポート</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
-                <tr><th><p>製品サポート</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td></td--></tr>
-                <tr><th><p>技術サポート ※2</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td></td--></tr>
-                <!--tr><th><p>無料サポートチケット</p></th><td></td><td>0<span>枚</span></td><td>1<span>枚/30分</span></td><td>エントリー<span>/3時間</span></td><td></td></tr>
-                <tr><th><p>サポートチケットの追加</p></th><td></td><td>都度購入</td><td>事前購入</td><td>事前購入</td><td></td></tr-->
+                <tr><th><p>技術サポート</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td></td--></tr>
+                <tr><th><p>無料サポートチケット</p></th><td></td><td>0<span>枚</span></td><td>1<span>枚/30分</span></td><td>1<span>枚/30分</span></td></tr>
+                <tr><th><p>サポートチケットの追加</p></th><td></td><td>都度購入<br /><span>1枚</span>10,000<span>円/</span>30<span>分</span>
+                </td><td>事前購入<br /><span>1枚</span>10,000<span>円/</span>30<span>分</span></td><td>事前購入<br /><span>1枚</span>10,000<span>円/</span>30<span>分</span></td></tr>
+                <tr><th rowspan="3"><p>サポートチケットまとめ買い</p></th>
+                    <td></td><td></td><td colspan="2"><div style="display: flex; justify-content: center;">
+                        <div style="text-align: left;">
+                        10チケットパック:  <br />
+                        50チケットパック:  <br />
+                        100チケットパック: 
+                        </div>
+                        <div style="text-align: left; margin-left: 10px;">
+                        108,000<span>円</span><br />
+                        486,000<span>円</span><br />
+                        864,000<span>円</span>
+                        </div>
+                    </div></td>
+                </tr>
             </tbody>
         </table>
 
@@ -249,8 +260,7 @@ description: 2017年4月27日（予定）よりMonacaの料金プランを改定
         </div>
 
         <p style="font-size: 90%;">
-            ※1 Freeプランの場合、180日以上ログインしていない利用者の方を対象にプロジェクトデータ一式がアーカイブストレージに移動され、ダッシュボードから利用できなくなります。<br /> 
-            ※2 技術サポートの詳細につきましては、決まり次第こちらのページに記載致します。
+            ※1 Freeプランの場合、180日以上ログインしていない利用者の方を対象にプロジェクトデータ一式がアーカイブストレージに移動され、ダッシュボードから利用できなくなります。
         </p>
     </section>
 
