@@ -188,7 +188,7 @@
    * @returns {*}
    */
   function formatPrice(entry) {
-    if (!entry.price) {
+    if (!entry.price || Number(entry.price) === 0) {
       return "無料";
     } else {
       return '¥' + numberWithCommas(entry.price);
