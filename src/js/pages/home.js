@@ -88,7 +88,7 @@
       url: monacaApi.getBaseUrl() + "/" + lang + "/api/event/list",
       dataType: "JSON",
       contentType: "text/plain",
-      data: {limit: limit, all: all},
+      data: {limit: limit, all: all, referer: 'monaca-io-top'},
       xhrFields: {
         withCredentials: true
       },
