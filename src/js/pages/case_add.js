@@ -77,9 +77,16 @@
 
     function createSendData() {
       var sendData = {
-        "form[name]":           $('#name').val(),
-        "form[url_appstore]":   $('#url-appstore').val(),
-        "form[url_googleplay]": $('#url-googleplay').val(),
+        "form[name]":          　$('#name').val(),
+        "form[url_appstore]":  　$('#url-appstore').val(),
+        "form[url_googleplay]":  $('#url-googleplay').val(),
+        "form[cordova_version]": $('#cordova_version').val(),
+        "form[plugins]":         $('#plugins').val(),
+        "form[framework]":       $('#framework').val(),
+        "form[java_script]":     $('#java_script').val(),
+        "form[company]":         $('#company').val(),
+        "form[developer]":       $('#developer').val(),
+        "form[email]":           $('#email').val(),
         "form[_csrf_token]":    initFormData['_csrf_token'],
       };
       return sendData;

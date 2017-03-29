@@ -59,10 +59,10 @@
             window.addEventListener('load', loadResources);
         }
     </script>
-	{{#is language "ja"}}
-		<script type="text/javascript">var Kairos3Tracker="asial";</script>
-		<script type="text/javascript" charset="utf-8" src="//c.k3r.jp"></script>
-	{{/is}}
+  {{#is language "ja"}}
+    <script type="text/javascript">var Kairos3Tracker="asial";</script>
+    <script type="text/javascript" charset="utf-8" src="//c.k3r.jp"></script>
+  {{/is}}
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 
@@ -130,7 +130,9 @@
 
 <body class="{{class}}">
 
+    {{#unless hideHeader}}
     {{> header }}
+    {{/unless}}
     {{> signupPopup }}
     {{> loginPopup }}
     {{> notificationHeader }}
@@ -140,7 +142,9 @@
 
     </article>
 
+    {{#unless hideFooter}}
     {{> footer }}
+    {{/unless}}
 
     <script>
         window.MONACA_API_URL = "{{site.monaca_api}}";

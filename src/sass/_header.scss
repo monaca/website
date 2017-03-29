@@ -8,13 +8,16 @@ header.navbar {
     width: 100%;
     z-index: 100;
     font-family: Open Sans, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+
     .container {
-        width: $width;
-        @media screen and (max-width: $break-xl) {
+        padding: 0px 15px;
+        width: 1170px;
+        @media screen and (max-width: 1169px) and (min-width: $break + 1px) {
             width: 100%;
         }
         @media screen and (max-width: $break) {
-            padding: 0;
+          width: 100%;
+          padding: 0;
         }
         .header-accordion {
           background-color: #222;
@@ -53,6 +56,9 @@ header.navbar {
             }
             img {
                 width: 110px;
+            }
+            img:hover {
+              opacity: 0.7;
             }
         }
         .navbar-toggle {
@@ -111,6 +117,10 @@ header.navbar {
         }
     }
     .navbar-collapse {
+        .navbar-right {
+            margin-right: 0;
+        }
+
         border-top: none;
         box-shadow: none;
         float: none;
@@ -136,7 +146,13 @@ header.navbar {
             font-size: 13px;
             height: 50px;
             line-height: 51px;
-            padding: 0 4px;
+            padding: 0 13px 0 0;
+            @media screen and (max-width: 1000px) {
+              font-size: 11px;
+            }
+            @media screen and (max-width: 900px) {
+              font-size: 10px;
+            }
             &:hover {
                 text-decoration: none;
             }
@@ -212,6 +228,7 @@ header.navbar {
         @extend .dropdown-menu-dark;
         border-top: none;
         margin-top: -1px;
+        margin-left: -1px;
         padding: 15px 0 18px;
         left: 0;
         right: auto;
@@ -288,8 +305,39 @@ header.navbar {
         }
     }
 }
+
+html[lang=en] {
+    body > header.navbar {
+        background-color: #2687ea;
+        padding: 0 25px;
+    }
+
+    body > header.navbar > div.container {
+        max-width: 1170px;
+        padding: 35px 0 57px;
+
+        &.small {
+            padding: 0;
+        }
+    }
+
+    .navbar-collapse {
+        @media screen and (max-width: $break - 1px) {
+            background-image: none;
+            background-color: #2c2c2c;
+
+            > ul.navbar-nav {
+                margin: 0;
+            }
+        }
+    }
+}
+
 html[lang=ja] {
     .navbar-nav > li > a {
+       @media screen and (max-width: 1200px) {
+         font-size: 13px;
+       }
         @media screen and (max-width: $width) {
             font-size: 12px;
             padding: 16px 10px 14px;
@@ -298,9 +346,33 @@ html[lang=ja] {
             font-size: 11px;
             padding: 16px 6px 14px;
         }
+        @media screen and (max-width: 900px) {
+            font-size: 10px;
+            padding: 16px 10px 14px;
+        }
         @media screen and (max-width: 860px) {
             font-size: 10px;
-            padding: 16px 4px 14px;
+            padding: 16px 8px 14px;
+        }
+        @media screen and (max-width: 820px) {
+            font-size: 10px;
+            padding: 16px 7px 14px;
+        }
+        @media screen and (max-width: 790px) {
+            font-size: 10px;
+            padding: 16px 6px 14px;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 10px;
+            padding: 16px 16px 14px;
+        }
+        @media screen and (max-width: 676px) {
+            font-size: 10px;
+            padding: 16px 16px 14px;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 10px;
+            padding: 16px 16px 14px;
         }
         // @media screen and (max-width: 1170px) {
         //     //padding-left: 8px;

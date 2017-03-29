@@ -8,31 +8,35 @@ layout: src/templates/layouts/index.hbs
     <a href="/development.html"><h2>アプリ開発の相談・見積依頼はこちら  <img src="/img/careers/arrow.png" alt="アプリ開発依頼"></h2></a>
 </div>
 <div class="recruit-md visible-lg">
-    <a class="badge" href="/development.html">アプリ開発のご依頼はこちら　無料相談</a>
+    <a id="add-badge-css" class="badge" href="/development.html">アプリ開発のご依頼はこちら　無料相談</a>
 </div>
 
 <div id="keyvisual" class="keyvisual carousel-1 box-full hidden-xs">
     <div class="carousel-container">
         <ul class="carousel-items">
-            <li class="item" data-index="0">
-                <img src="/img/index/keyvisual.png" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/>
-                <div class="box-try">
-                    <a href="/support/inquiry.html" class="btn btn-line-white">お問い合わせ</a>
-                    <a href="/register/start.html" class="btn btn-green">今すぐ試す<span class="small">(無料)</span></a>
+            <li id="keyvisual-box"class="item" data-index="0">
+                <span id="keyvisual-ja-el"><!--img src="/img/index/keyvisual_ja.jpg" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/--></span>
+                <div id="keyvisual-title">
+                    <h2>HTMLハイブリッドアプリで<div>アプリ開発を加速します</div></h2>
+                    <img src="/img/index/ico_platforms.png" />
+                    <div class="box-try">
+                        <a href="/support/inquiry.html" class="btn btn-line-white">お問い合わせ</a>
+                        <a href="/register/start.html" class="btn btn-green">今すぐ試す<span class="small">(無料)</span></a>
+                    </div>
                 </div>
             </li>
             <li class="item" data-index="1">
-            <a href="/visualstudio.html">
-                <img src="/img/index/keyvisual_vs.png" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/>
+            <a id="keyvisual-vs-el" href="/visualstudio.html">
+                <!--img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/-->
             </a>
             </li>
-            <li class="item" data-index="2">
-            <a href="/book/001">
+            <li id="keyvisual-book-el" class="item" data-index="2">
+            <!--a href="/book/001">
             <img src="/img/index/keyvisual_book.png" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/>
             </a>
             <div class="box-try box-buy">
                 <a class="btn btn-darkgray" href="/book/001/">詳細はこちら</a>
-            </div>
+            </div-->
             </li>
         </ul>
     </div>
@@ -55,13 +59,37 @@ layout: src/templates/layouts/index.hbs
 </div></div>
 
 
-<a href="/visualstudio.html" class="visible-xs sp-keyvisual"><img src="/img/index/keyvisual_vs_sp.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/></a>
+<a href="/visualstudio.html" class="visible-xs sp-keyvisual"><img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/></a>
 
-<a href="/book/001" class="visible-xs sp-keyvisual"><img src="/img/index/keyvisual_book_sp.jpg" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/></a>
+
+<div id="grid" class="container section features box-full">
+    <div class="panel-grid">
+        <div id="news-list" class="panel-grid-cell">
+            <h4 class="panel-header">
+              <span class="header_left">ニュース・更新情報</span>
+              <span class="header_right">
+                <a href="/headline/index.html"><span class="htext">一覧を見る</span><span class="himg"><img src="/img/careers/arrow_gray.png"></span></a>
+              </span>
+              <div style="clear: both;"></div>
+            </h4>
+            <div class="headline-entries">
+            </div>
+        </div>  
+        <div id="events-list" class="panel-grid-cell">
+            <h4 class="panel-header">
+                <span class="header_left">イベント・トレーニング情報</span>
+                <span class="header_right">
+                  <a href="/events/index.html"><span class="htext">一覧を見る</span><span class="himg"><img src="/img/careers/arrow_gray.png"></span></a>
+                </span>
+                <div style="clear: both;"></div>
+            </h4>
+            <table class="events-entries">
+            </table>
+        </div>
+    </div>
+</div>
 
 <div class="container products box-full">
-
-    <a class="bnr-trial" href="https://form.k3r.jp/asial/trial" target="_blank"><img src="/img/index/bnr_trial.jpg" alt="Monaca法人向け有料プラン試用ライセンス受付中！"></a>
 
     <ul class="column-3">
         <li class="box-1" tile="3">
@@ -125,7 +153,7 @@ layout: src/templates/layouts/index.hbs
                 <dt class="sub">Monaca Educationプラン</dt>
                 <dd>教育や研究にMonacaをご利用いただく教育機関を対象にした専用プランを提供しています。</dd>
             </dl>
-            <p class="detail"><a href="/academic.html">詳細はこちら <i class="glyphicon glyphicon-menu-right"></i></a></p>
+            <p class="detail"><a href="https://edu.monaca.io/" target="_blank">詳細はこちら <i class="glyphicon glyphicon-menu-right"></i></a></p>
         </li>
         <li class="box-1">
             <span class="type bnr-1"><img src="/img/index/tag_support.png" alt="Support" /></span>
@@ -184,24 +212,34 @@ layout: src/templates/layouts/index.hbs
 
 <div class="container section box-uservoices">
     <h2>Monacaを使っているユーザーの声</h2>
-    <ul class="column-2">
-        <li>
+    <ul class="column-3">
+        <li class="flexion">
             <div class="uservoice-balloon" tile="2">
-                <q>使う言語がHTML5とJavaScriptなのでプログラマーがいなくてもアプリを作ることができて、 とても助かります。また、作ったアプリをすぐにデバッガーで確認できるのも嬉しいです。</q>
+                <q>MonacaがなければTeamOnアプリはリリースできていなかったと思います。</q>
             </div>
             <div class="uservoice-user">
-                <div class="uservoice-organization">株式会社ファンシーリンクス</div>
-                <div class="uservoice-name">アプリ開発担当者様</div>
+                <div class="uservoice-organization">株式会社フレクションコンサルティング</div>
+                <div class="uservoice-name">代表取締役社長　松明 陽 氏</div>
             </div>
         </li>
 
-        <li>
+        <li class="nijibox">
             <div class="uservoice-balloon" tile="2">
-                <q>ノンプログラマでも簡単なものなら基本のHTMLやJavaScriptの知識があればアプリを作成できるのは画期的。 非常に希望を持てます。iOSアプリも作成だけならWindows環境でできてしまうのは感動です。</q>
+                <q>初めてMonaca使った時、これがアプリ開発の新しいスタイルだと直感しました。</q>
             </div>
             <div class="uservoice-user">
-                <div class="uservoice-organization">株式会社ワンディッシュ</div>
-                <div class="uservoice-name">代表 村田大様</div>
+                <div class="uservoice-organization">株式会社ニジボックス</div>
+                <div class="uservoice-name">開発室 マネジャー　藤原 裕司 氏</div>
+            </div>
+        </li>
+
+        <li class="jtrust">
+            <div class="uservoice-balloon" tile="2">
+                <q>Monaca初挑戦のWebエンジニアが1ヶ月でiOS、Android両対応のIRアプリをリリースしました</q>
+            </div>
+            <div class="uservoice-user">
+                <div class="uservoice-organization">Ｊトラストシステム株式会社</div>
+                <div class="uservoice-name">取締役　松本 英樹 氏</div>
             </div>
         </li>
     </ul>
@@ -226,12 +264,18 @@ layout: src/templates/layouts/index.hbs
     <a href="/register/start.html" class="btn btn-green">今すぐ試す<span class='small'>(無料)</span></a>
 </div>
 
-
 <script>
 var slider;
+var keyvisual_ja_el = '<img src="/img/index/keyvisual_ja.jpg" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/>';
+var keyvisual_vs_el = '<img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携" />';
+var keyvisual_book_el = '<a href="/book/001"><img src="/img/index/keyvisual_book.png" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/></a><div class="box-try box-buy"><a class="btn btn-darkgray" href="/book/001/">詳細はこちら</a></div>';
 
 window.addEventListener("load", function() {
     "use strict";
+
+    document.getElementById("keyvisual-ja-el").innerHTML = keyvisual_ja_el;
+    document.getElementById("keyvisual-vs-el").innerHTML = keyvisual_vs_el;
+    document.getElementById("keyvisual-book-el").innerHTML = keyvisual_book_el;
 
     setTimeout(function() {
         document.getElementById("examples-img").src = "img/index/examples_img.png";

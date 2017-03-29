@@ -1,0 +1,145 @@
+body.important-info #main-container {
+
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $width;
+    padding-left: 4%;
+    padding-right: 4%;
+
+    @media screen and (max-width: $width) {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    section, section p {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: $width;
+    }
+    h1, h2, h3, p, ul, table, caption { color: #333333; }
+    h2, h3, p, ul { text-align: left; }
+    h2, h3, caption { font-weight: 600; }
+    h3, caption { font-size: 16px; }
+    p, .scroll { margin-bottom: 24px; }
+    ul, ol { padding: 16px 0; }
+    td span, small {
+        color: #8d98a6;
+        font-size: .65rem;
+    }
+
+    section { padding-bottom: 40px; }
+    section:not(.q-and-a) { border-bottom: 1px solid #dddddd; }
+
+    h1 {
+        font-size: 38px;
+        font-weight: 400;
+        margin-bottom: 56px;
+    }
+
+    h2 {
+        font-size: 22px;
+        margin-top: 48px;
+        margin-bottom: 24px;
+    }
+
+    h3 {
+        margin-top: 40px;
+        margin-bottom: 16px;
+    }
+
+    p { line-height: 1.8em; }
+
+    table {
+        font-size: 12px;
+        width: 100%;
+
+        caption {
+            margin-bottom: 12px;
+            margin-top: 24px;
+        }
+
+        thead {
+            background-color: #f6f6f4;
+        }
+
+        tbody th {
+            font-size: .81rem;
+        }
+    
+        th, td {
+            border: solid 1px #dddddd;
+            padding: 8px 16px 8px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        th p img {
+            margin-left: 5px;
+            vertical-align: -4px;
+        }
+    }
+
+    .scroll{
+        overflow: auto;
+
+        @media screen and (max-width: 1170px) {
+            border-right: 1px solid #ddd;
+            box-shadow: -5px -5px 10px -10px #222 inset;
+        }
+
+    }
+    .scroll::-webkit-scrollbar {
+        height: 5px;
+    }
+    .scroll::-webkit-scrollbar-track{
+        background: #F1F1F1;
+    }
+    .scroll::-webkit-scrollbar-thumb {
+        background: #BCBCBC;
+    }
+
+
+    section:not(.q-and-a) ul {
+        list-style-type: disc;
+        margin-left: 24px; 
+    }
+
+    .q-and-a ul ol {
+        border-bottom: 1px solid #dddddd;
+
+        li {
+            padding: 3px 0;
+
+            span { display: table; }
+
+            span:first-child {
+                border-radius: 3px;
+                margin-right: 8px;
+                width: 40px;
+                float: left;
+                text-align: center;
+            }
+
+            &:first-child p {
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            &:first-child p {
+                color: #43587e;
+                span:first-child {
+                    color: #ffffff;
+                    background-color: #43587e;
+                }
+            }
+
+            &:nth-child(2) span:first-child {
+                background-color: #dddddd;
+            }
+        }
+    }
+
+    button { margin: 48px 0 32px; }
+}

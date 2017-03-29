@@ -1,6 +1,5 @@
 body.pricing article.main {
     .container {
-        padding: 100px 0 0;
         color: #8d98a6;
         @media screen and (max-width: 1070px) {
             width: auto;
@@ -719,6 +718,7 @@ body.pricing.compare article.main {
 html[lang=en] {
     body.pricing article.main {
     .container {
+        padding: 100px 0 0;
         ul.column-4 {
             .box-1 {
                 height: 500px;
@@ -745,6 +745,7 @@ html[lang=en] {
 html[lang=ja] {
     body.pricing article.main {
     .container {
+        padding: 100px 0 0;
         ul.plan.enterprise {
              .box-1 {
                 padding: 20px 20px 15px;
