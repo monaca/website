@@ -74,7 +74,7 @@
   }
 
   /**
-   * Get event list
+   * Get Events and Trainings
    * @param options
    * @param success
    * @param fail
@@ -86,7 +86,7 @@
 
     $.ajax({
       type: "GET",
-      url: monacaApi.getBaseUrl() + "/" + lang + "/api/event/list",
+      url: monacaApi.getBaseUrl() + "/" + lang + "/api/event-training-list",
       dataType: "JSON",
       contentType: "text/plain",
       data: {limit: limit, all: all, referer: 'monaca-io-top'},
