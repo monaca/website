@@ -29,7 +29,7 @@ $(function() {
     }
   });
 
-  setNotificationHeader();
+  //setNotificationHeader();
 });
 
 function closePopup(msec, popupId) {
