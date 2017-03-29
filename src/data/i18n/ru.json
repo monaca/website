@@ -16,6 +16,7 @@
     "login": "Вход",
     "signup": "Зарегистрироваться",
     "signupFree": "Бесплатная регистрация <span class='small'>(gratis)</span>",
+    "monacaCi": "MonacaCI",
 
     "urlPricing": "/pricing.html",
     "urlBlog": "https://onsen.io/blog/",
