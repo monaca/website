@@ -185,11 +185,12 @@
             } else if (msg.result && msg.result.formError) {
               formUtil.displayFormError(msg.result.formError);
             } else {
+              console.log(msg);
               displayUnknownError(tag);
             }
           },
           error: function(msg) {
-            displayUnknownError(tag);
+            console.log(msg);
           }
         });
 
