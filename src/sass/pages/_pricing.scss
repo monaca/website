@@ -35,9 +35,70 @@ body.pricing article.main {
                 }
             }
         }
+
+        .plan-type-col-2 {
+            margin: 0 auto 24px;
+            width: 1070px;
+
+            @media screen and (max-width: 1070px) {
+                width: 524px;
+            }
+            @media screen and (max-width: $break-xs) {
+                width: 284px;
+            }
+
+            > li {
+                margin-bottom: 18px;
+                float: left;
+
+                @media screen and (max-width: 1070px) {
+                    float: none;
+                }
+
+                ul.plan {
+                    @media screen and (max-width: $break-xs) {
+                        > li {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+            
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+        }
+
+        .logindata-status-injapan {
+            > li ul.plan {
+                width: 524px;
+
+                .box-1 {
+                    margin: 0 5px 16px;
+                }
+            }
+        }
+        .logindata-status-inen {
+            >li ul.plan {
+                width: 1070px;
+
+                .box-1 {
+                    margin: 0 11px 16px;
+                }
+
+                @media screen and (max-width: 1070px) {
+                    > li:nth-child(5) {
+                        clear: both;
+                    }
+                }
+            }
+        }
+
         ul.plan {
             width: 1070px;
-            margin: 0 auto 33px;
+            margin: 0 auto 40px;
             padding: 0 11px;
             @media screen and (max-width: 1070px) {
                 width: 546px;
@@ -152,13 +213,16 @@ body.pricing article.main {
                     }
                 }
             }
-            a {
+            .detail-box {
                 width: 100%;
-                font-size: 14px;
-                line-height: 1;
                 position: absolute;
-                    bottom: 20px;
-                    left: 0;
+                bottom: 20px;
+                left: 0;
+                a {
+                    width: 100%;
+                    font-size: 14px;
+                   line-height: 1;
+               }
             }
         }
         ul.plan.enterprise {

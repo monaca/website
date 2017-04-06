@@ -5,11 +5,23 @@
   monacaPages["/pricing.html"] = function(loginData) {
     loginData.autoDisplay = false;
 
+
+
     if (loginData.status.inJapan) {
-      document.getElementById('personal-plan-box').style.display = 'block';
+      $('.plan-ja').css('display', 'block');
+      
+      $('.plan-type-col-2').removeClass('logindata-status-inen');
+      $('.plan-type-col-2').addClass('logindata-status-injapan');
+
+      $('body.pricing article.main .container ul.other-plan .box-1:nth-child(1)').css('margin-right', '0');
+
     } else {
-      document.getElementById('developer-plan-box').style.display = 'block';
+      $('.plan-en').css('display', 'block');
+
+      $('.plan-type-col-2').removeClass('logindata-status-injapan');
+      $('.plan-type-col-2').addClass('logindata-status-inen');
     }
+
     document.getElementById('pricing-container').style.display = 'block';
 
     $('#btn-trial').click(function(){
