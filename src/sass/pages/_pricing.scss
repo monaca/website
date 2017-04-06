@@ -36,15 +36,35 @@ body.pricing article.main {
             }
         }
 
+        .individuals-plan,
+        .enterprises-plan {
+            margin: 0 auto 8px;
+            width: 490px;
+            color: #fff;
+            padding: 8px 16px;
+
+            @media screen and (max-width: $break-xs) {
+                width: 240px;
+            }
+        }
+
+        .individuals-plan {
+            background-color: #999;
+        }
+
+        .enterprises-plan {
+            background-color: #2990ea;
+        }
+
         .plan-type-col-2 {
-            margin: 0 auto 24px;
+            margin: 0 auto;
             width: 1070px;
 
             @media screen and (max-width: 1070px) {
                 width: 524px;
             }
             @media screen and (max-width: $break-xs) {
-                width: 284px;
+                width: 274px;
             }
 
             > li {
@@ -63,7 +83,7 @@ body.pricing article.main {
                     }
                 }
             }
-            
+
             &:after {
                 content: "";
                 clear: both;
@@ -72,11 +92,26 @@ body.pricing article.main {
         }
 
         .logindata-status-injapan {
+            &:after {
+                width: 30px;
+                height: 1px;
+                background-color: #ccc;
+                position: relative;
+                left: 50%;
+                margin-left: -15px;
+                margin-bottom: 32px;
+            }
+
             > li ul.plan {
                 width: 524px;
 
                 .box-1 {
                     margin: 0 5px 16px;
+                }
+
+                .box-1.popular {
+                    border: 1px solid #d4d5d7;
+                    padding-top: 34px;
                 }
             }
         }
@@ -86,6 +121,11 @@ body.pricing article.main {
 
                 .box-1 {
                     margin: 0 11px 16px;
+                }
+
+                .box-1.popular {
+                    border: 2px solid #2990ea;
+                    padding-top: 33px;
                 }
 
                 @media screen and (max-width: 1070px) {
@@ -98,7 +138,7 @@ body.pricing article.main {
 
         ul.plan {
             width: 1070px;
-            margin: 0 auto 40px;
+            margin: 0 auto;
             padding: 0 11px;
             @media screen and (max-width: 1070px) {
                 width: 546px;
