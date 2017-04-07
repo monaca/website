@@ -49,7 +49,7 @@ body.pricing article.main {
         }
 
         .individuals-plan {
-            background-color: #999;
+            background-color: #395d84;
         }
 
         .enterprises-plan {
@@ -107,6 +107,7 @@ body.pricing article.main {
 
                 .box-1 {
                     margin: 0 5px 16px;
+                    height: 500px !important;
                 }
 
                 .box-1.popular {
@@ -121,6 +122,7 @@ body.pricing article.main {
 
                 .box-1 {
                     margin: 0 11px 16px;
+                    height: 470px;
                 }
 
                 .box-1.popular {
@@ -567,6 +569,9 @@ body.pricing.compare article.main {
         @media screen and (max-width: $break-xs) {
             width: 150px;
         }
+        &.compare-header-ja {
+            padding-top: 56px;
+        }
         h2 {
             box-sizing: content-box;
             color: #2472b3;
@@ -681,6 +686,19 @@ body.pricing.compare article.main {
                 th:nth-child(4) {
                     color: #4791de;
                 }
+                th.individuals-plan,
+                th.enterprises-plan {
+                    color: #ffffff;
+                    font-size: 1rem;
+                    height: auto;
+                    padding: 8px 0;
+                }
+                th.individuals-plan {
+                    border: 1px solid #395d84;
+                }
+                th.enterprises-plan {
+                    border: 1px solid #2990ea;
+                }
             }
             th, td {
                 border: 1px solid #c2c2c2;
@@ -772,7 +790,26 @@ body.pricing.compare article.main {
                 border-left: 1px solid #c2c2c2;
             }
         }
+        &.compare-cont-ja {
+            th, td {
+                font-size: 12px;
+                span,
+                small {
+                    font-size: 0.65rem;
+                }
+            }
+            thead th:nth-child(3) {
+                border-top: 1px solid #c2c2c2;
+                border-left: 1px solid #c2c2c2;
+                border-right: 1px solid #c2c2c2;
+            }
+            tr td:nth-child(3) {
+                border-left: 1px solid #c2c2c2;
+                border-right: 1px solid #c2c2c2;
+            }
+        }
     }
+
     .compare-contact {
         clear: both;
         margin-bottom: 30px;

@@ -7,7 +7,7 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
 <div class="container">
   <h1>プランの詳細比較</h1>
 
-  <div class="compare-header">
+  <div class="compare-header plan-en" style="display: none;">
     <h2>開発ツール / 機能</h2>
 
     <ul>
@@ -85,14 +85,14 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
     </ul>
   </div>
 
-  <div id="compare-cont" class="compare-cont">
+  <div id="compare-cont" class="compare-cont plan-en" style="display: none;">
     <table id="compare-cont-table">
       <thead>
-      <th>Basic<span>無料</span></th>
-      <th class="dev-plan">Developer<span>/月</span></th>
-      <th class="personal-plan">Personal<span>980円/月</span></th>
-      <th>Gold<span>5,000円/月</span></th>
-      <th>Platinum<span>8,000円/月</span></th>
+        <th>Basic<span>無料</span></th>
+        <th class="dev-plan">Developer<span>/月</span></th>
+        <th class="personal-plan">Personal<span>980円/月</span></th>
+        <th>Gold<span>5,000円/月</span></th>
+        <th>Platinum<span>8,000円/月</span></th>
       </thead>
 
       <tbody>
@@ -350,6 +350,534 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
         <td class="personal-plan compare-cont-support-dev">サポートチケットを都度購入</td>
         <td>1<span>チケット/月</span></td>
         <td>2<span>チケット/月</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- New Plan -->
+  <div class="compare-header compare-header-ja plan-ja" style="display: none;">
+    <h2>料金・決済方法</h2>
+    <ul>
+      <li><i>2週間の無料トライアル</i></li>
+      <li><i>月額ライセンス</i></li>
+      <li><i>6ヶ月ライセンス</i></li>
+      <li><i>年額ライセンス</i></li>
+      <li><i>開発者ライセンス数</i></li>
+      <li><i>追加開発者ライセンス（月額）</i></li>
+      <li><i>クレジットカード払い</i></li>
+      <li><i>請求書払い</i></li>
+    </ul>
+
+    <h2>開発ツール / 機能</h2>
+
+    <ul>
+      <li><i>クラウドIDE<img src="/img/pricing/icn_q.png" class="btn-tooltip" data-placement="top"
+                         title="シンタックスハイライト / チェック、 リモートインスペクター / コンソール、ライブプレビュー、プロジェクトインポート / エクスポート機能 など"/></i></li>
+      <li><i>CLI (Command Line Tool)</i></li>
+      <li><i>Monaca Localkit</i></li>
+      <li><i>Monaca for Visual Studio <br/>(VS 全エディション対応)</i></li>
+      <li><i>プロジェクト数<img src="/img/pricing/icn_q.png" class="btn-tooltip" data-placement="top"
+                         title="Basicプランユーザーは、アーカイブ機能を利用できません。"/></i></li>
+      <li><i>Monaca デバッガー</i></li>
+      <li><i>Monaca デバッガー接続数</i></li>
+      <li><i>ソースコードバックアップ</i></li>
+      <li><i>ソースコードバックアップ<br />保存期間</i></li>
+      <li><i>クラウドビルド制限</i></li>
+      <li><i>デバッグビルド</i></li>
+      <li><i>アドホックビルド</i></li>
+      <li><i>リリースビルド</i></li>
+      <li><i>In-Houseビルド</i></li>
+      <li><i>iOSアプリアップロード<img src="/img/pricing/icn_q.png" class="btn-tooltip" data-placement="top"
+                              title="MonacaのIDEからiTunes Connectに直接アプリをアップロードする機能です。"/></i></li>
+      <li><i>カスタムプラグイン</i></li>
+      <li><i>プラグインバージョン選択</i></li>
+      <li><i>エクスポート</i></li>
+      <li><i>Cordovaバージョン</i></li>
+      <li><i>ストレージ<img src="/img/pricing/icn_q.png" class="btn-tooltip" data-placement="top"
+                       title="ストレージはその月の最大使用量で計算されます。"/></i></li>
+      <li><i>プロジェクト自動退避<img src="/img/pricing/icn_q.png" class="btn-tooltip" data-placement="top"
+                              title="Freeプランの場合、180日以上ログインしていない利用者の方を対象にプロジェクトデータ一式がアーカイブストレージに移動され、ダッシュボードから利用できなくなります。"/></i></li>
+      <li><i>自動退避された<br />プロジェクトの復旧<img src="/img/pricing/icn_q.png" class="btn-tooltip" data-placement="top"
+                          title="Personalプラン以上の場合、サポートに依頼することで自動退避されたプロジェクトの復旧が可能です。"/></i></li>
+    </ul>
+
+    <h2>バージョン管理 (GitHub)</h2>
+    <ul>
+      <li><i>Github サポート</i></li>
+      <li><i>GitHub publicレポジトリ</i></li>
+      <li><i>GitHub private レポジトリ</i></li>
+      <li><i>GitHub organization レポジトリ</i></li>
+    </ul>
+
+    <h2>企業向けプラン機能</h2>
+    <ul>
+      <li><i>開発者アカウント管理</i></li>
+      <li><i>サポート/CIチケット管理</i></li>
+      <li><i>Monaca Enterpriseプラグイン</i></li>
+      <li><i>企業向けプランユーザーに<br />プロジェクト共有<br />（開発者権限）</i></li>
+      <li><i>企業向けプランユーザーに<br />プロジェクト共有<br />（テスター権限）</i></li>
+      <li><i>個人向けプランユーザーに<br />プロジェクト共有<br />（開発者権限）</i></li>
+      <li><i>個人向けプランユーザーに<br />プロジェクト共有<br />（テスター権限）</i></li>
+    </ul>
+
+    <h2>バックエンドサービス</h2>
+    <ul>
+      <li><i>プッシュ通知<img src="/img/pricing/icn_q.png" class="btn-tooltip" data-placement="top"
+                          title="Monacaバックエンドからプッシュ通知を送信できる回数となります。プッシュ通知回数は送信された端末数でカウントされます。"/></i></li>
+      <li><i>APIコール数<img src="/img/pricing/icn_q.png" class="btn-tooltip" data-placement="top"
+                              title="「Monaca バックエンドAPI」「バックエンドマネジメントAPI」を呼び出せる回数となります。"/></i></li>
+      <li><i>バックエンド数</i></li>
+      <li><i>データコレクション<br />（クラウドデータベース）</i></li>
+      <li><i>バックエンドマネジメントAPI</i></li>
+    </ul>
+
+    <!--h2 style="padding-top: 179px;"-->
+    <h2>サポート &amp; サービス</h2>
+    <ul>
+      <li><i>コミュニティフォーラム</i></li>
+      <li><i>技術サポート<img src="/img/pricing/icn_q.png" class="btn-tooltip" data-placement="top"
+                        title="私たちプロのチームがあなたのプログラムの問題を解決します。コードレビュー、設定のアドバイス、リモートデバッギング等を行います。"/></i></li>
+      <li><i>無料サポートチケット</i></li>
+      <li><i>サポートチケットの追加</i></li>
+      <li><i>サポートチケットまとめ買い</i></li>
+    </ul>
+
+    <h2>継続的インテグレーション<br />（CI）</h2>
+    <ul>
+      <li style="height: 72px;"><i>利用可能回数</i></li>
+    </ul>
+
+    <h2>その他</h2>
+    <ul>
+      <li style="height: 72px;"><i>カスタマイズ対応</i></li>
+    </ul>
+  </div>
+
+  <div id="compare-cont-ja" class="compare-cont compare-cont-ja plan-ja" style="display: none;">
+    <table id="compare-cont-table-ja">
+      <thead>
+          <tr>
+            <th class="individuals-plan" colspan="2">個人向けプラン</th><th class="enterprises-plan" colspan="2">企業向けプラン</th>
+          </tr>
+          <tr>
+            <th>Freeプラン<!-- span>無料</span--></th>
+            <th class="dev-plan">Developer<span>/月</span></th>
+            <th class="personal-plan">Proプラン<!-- span>2,160円/月</span--></th>
+            <th>Businessプラン<!-- span>7,560円/月</span--></th>
+            <th>Enterpriseプラン<!-- span>108,000円/月</span--></th>
+          </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <td></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i><br><span>※トライアル中の<br>リリースビルドは不可</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>無料</td>
+        <td class="personal-plan">2,160<span>円</span></td>
+        <td>7,560<span>円</span></td>
+        <td>108,000<span>円</span></td>
+      </tr>
+      <tr>
+        <td>無料</td>
+        <td class="personal-plan"></td>
+        <td>41,580<span>円</span></td>
+        <td>594,000<span>円</span></td>
+      </tr>
+      <tr>
+        <td>無料</td>
+        <td class="personal-plan">21,600<span>円</span></td>
+        <td>75,600<span>円</span></td>
+        <td>1,080,000<span>円</span></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="personal-plan"></td>
+        <td>1</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="personal-plan"></td>
+        <td>5,400<span>円</span></td>
+        <td>10,800<span>円</span></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="personal-plan"></td>
+        <td><i>Yes</i><br><span>※6ヶ月、年額の場合のみ</span></td>
+        <td><i>Yes</i></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <tr><!-- クラウドIDE -->
+        <td><i>Yes</i></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td>Community版のみ</td>
+        <td class="dev-plan">Community版のみ</td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td class="dev-plan">10</td>
+        <td class="personal-plan">10</td>
+        <td>100<span>/開発者</span></td>
+        <td>100<span>/開発者</span></td>
+      </tr>
+      <tr>
+        <td><i>Yes</i></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td class="dev-plan">5</td>
+        <td class="personal-plan">2</td>
+        <td>無制限</td>
+        <td>無制限</td>
+      </tr>
+      <tr><!-- ソースコードバックアップ -->
+        <td>1<span>バージョン</span></td>
+        <td class="dev-plan">50<span>バージョン</span></td>
+        <td class="personal-plan">50<span>バージョン</span></td>
+        <td>50<span>バージョン</span></td>
+        <td>50<span>バージョン</span></td>
+      </tr>
+      <tr><!-- ソースコードバックアップ保存期間 -->
+        <td>1<span>日</span></td>
+        <td class="dev-plan">1<span>ヶ月</span></td>
+        <td class="personal-plan">1<span>ヶ月</span></td>
+        <td>1<span>ヶ月</span></td>
+        <td>1<span>ヶ月</span></td>
+      </tr>
+      <tr><!-- クラウドビルド制限 -->
+        <td>3<span>/日</span></td>
+        <td class="dev-plan">無制限</td>
+        <td class="personal-plan">無制限</td>
+        <td>無制限</td>
+        <td>無制限</td>
+      </tr>
+      <tr><!-- デバッグビルド -->
+        <td><i>Yes</i></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr><!-- アドホックビルド -->
+        <td><i>Yes</i></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr><!-- リリースビルド -->
+        <td><i>Yes</i></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i><br /><span>※トライアル期間を除く</span></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr><!-- In-Houseビルド -->
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr><!-- iOSアップロード -->
+        <td></td>
+        <td class="dev-plan"><i>Yes</i><br /><span>※プロジェクト単位課金</span></td>
+        <td class="personal-plan"><i>Yes</i><br /><span>※プロジェクト単位課金</span></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr><!-- カスタムプラグイン -->
+        <td></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr><!-- プラグインバージョン選択 -->
+        <td></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr><!-- エクスポート -->
+        <td></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr><!-- Cordovaバージョン -->
+        <td>最新2バージョンのみ</td>
+        <td class="dev-plan">最新2バージョンのみ</td>
+        <td class="personal-plan">最新2バージョンのみ</td>
+        <td>旧版も利用可能</td>
+        <td>旧版も利用可能</td>
+      </tr>
+      <tr><!-- ストレージ -->
+        <td>250<span>MB</span></td>
+        <td class="dev-plan">1<span>GB</span></td>
+        <td class="personal-plan">1<span>GB</span></td>
+        <td>10<span>GB/開発者</span></td>
+        <td>10<span>GB/開発者</span></td>
+      </tr>
+      <tr><!-- プロジェクト自動退避 -->
+        <td><i>Yes</i></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr><!-- 自動退避されたプロジェクトの復旧 -->
+        <td></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      </tbody>
+    </table>
+
+    <table><!-- バージョン管理 (GitHub) -->
+      <tr>
+        <td><i>Yes</i></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td><i>Yes</i></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+    </table>
+
+    <table><!-- 企業向けプラン機能 -->
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td><i>Yes</i><br /><span>※プロジェクト単位課金</span></td>
+        <td>無制限<br /><span>※プロジェクト単位課金</span></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+    </table>
+
+    <table><!-- バックエンドサービス -->
+      <tr>
+        <td>1,000<span>/月</span></td>
+        <td class="dev-plan">1,000<span>/月</span></td>
+        <td class="personal-plan">1,000<span>/月</span></td>
+        <td>100,000<span>/月<span></span></td>
+        <td>100,000<span>/月</span></td>
+      </tr>
+      <tr>
+        <td>100,000<span>/月</span></td>
+        <td class="dev-plan">100,000<span>/月</span></td>
+        <td class="personal-plan">100,000<span>/月</span></td>
+        <td>5,000,000<span>/月<span></span></td>
+        <td>5,000,000<span>/月</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td class="dev-plan">10</td>
+        <td class="personal-plan">10</td>
+        <td>無制限</td>
+        <td>無制限</td>
+      </tr>
+      <tr>
+        <td><i>Yes</i></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+    </table>
+
+    <table><!-- サポート & サービス -->
+      <tr>
+        <td><i>Yes</i></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"><i>Yes</i></td>
+        <td class="personal-plan"><i>Yes</i></td>
+        <td><i>Yes</i></td>
+        <td><i>Yes</i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan">0<span>枚</span></td>
+        <td class="personal-plan">0<span>枚</span></td>
+        <td>1<span>枚/30分</span></td>
+        <td>1<span>枚/30分</span></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan">都度購入<br />1<span>枚</span>10,000<span>円/</span>30<span>分</span></td>
+        <td class="personal-plan">都度購入<br />1<span>枚</span>10,000<span>円/</span>30<span>分</span></td>
+        <td>事前購入<br />1<span>枚</span>10,000<span>円/</span>30<span>分</span></td>
+        <td>事前購入<br />1<span>枚</span>10,000<span>円/</span>30<span>分</span></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td colspan="2">
+          <div style="display: flex; justify-content: center;">
+            <div style="text-align: left;">
+              10チケットパック:<br />
+              50チケットパック:<br />
+              100チケットパック:
+            </div>
+            <div style="text-align: left; margin-left: 10px;">
+              108,000<span>円</span><br />
+              486,000<span>円</span><br />
+              864,000<span>円</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr style="height: 72px;">
+        <td>10<span>ビルド/月</span></td>
+        <td class="dev-plan">10<span>ビルド/月</span></td>
+        <td class="personal-plan">10<span>ビルド/月</span><br />
+            +<br />
+            追加チケット<br />
+            5,000円/50回
+        </td>
+        <td>30<span>ビルド/月</span><br />
+            +<br />
+            追加チケット<br />
+            5,000円/50回
+        </td>
+        <td>30<span>ビルド/月</span><br />
+            +<br />
+            追加チケット<br />
+            5,000円/50回
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr style="height: 72px;">
+        <td></td>
+        <td class="dev-plan"></td>
+        <td class="personal-plan"></td>
+        <td></td>
+        <td>専用ビルドサーバー一部<br />オンプレ提供など応相談</td>
       </tr>
     </table>
   </div>
