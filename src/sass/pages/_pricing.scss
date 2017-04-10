@@ -116,6 +116,14 @@ body.pricing article.main {
                 }
             }
         }
+
+        .hr-short {
+            &:after {
+                position: relative;
+                margin-bottom: 32px;
+            }
+        }
+
         .logindata-status-inen {
             >li ul.plan {
                 width: 1070px;
@@ -795,7 +803,7 @@ body.pricing.compare article.main {
                 font-size: 12px;
                 span,
                 small {
-                    font-size: 0.65rem;
+                    font-size: 0.7rem;
                 }
             }
             thead th:nth-child(3) {
