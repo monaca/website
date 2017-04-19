@@ -241,27 +241,45 @@ body.pricing article.main {
 
             .annual {
                 margin-bottom: 10px;
-                .currency, .amount, .period {
+                .currency, .currency-jpy, .amount, .amount-jpy, .period, .period-jpy {
                     display: inline-block;
                     line-height: 50px;
                     font-weight: 700;
                     color: #25384c;
                 }
-                .currency {
-                    font-size: 24px;
+                .currency,
+                .currency-jpy {
                     line-height: 1;
                     position: relative;
                     bottom: 18px;
                     margin: 0 -0.1em 0 15px;
                     margin: 0;
                 }
-                .amount {
-                    font-size: 42px;
+                .currency {
+                    font-size: 24px;
+                }
+                .currency-jpy {
+                    font-size: 18px;
+                }
+                .amount,
+                .amount-jpy {
                     margin-bottom: 0px;
+                }
+                .amount {
+                    font-size: 50px;  
+                }
+                .amount-jpy {
+                    font-size: 40px;
+                }
+                .period,
+                .period-jpy {
+                    line-height: 1;
                 }
                 .period {
                     font-size: 20px;
-                    line-height: 1;
+                }
+                .period-jpy {
+                    font-size: 18px;
                 }
                 .acutual {
                     font-size: 13px;
@@ -276,7 +294,7 @@ body.pricing article.main {
             .monthly {
                 margin-bottom: 36px;
                 .amount {
-                    font-size: 17px;
+                    font-size: 16px;
                     font-weight: 700;
                     line-height: 1.3;
                     color: #25384c;
@@ -836,7 +854,7 @@ body.pricing.compare article.main {
                 border-right: 2px solid #2990ea;
             }
             &.compare-cont-support tr:last-child td:nth-child(3) {
-                border-bottom: 2px solid #2990ea;
+                /* border-bottom: 2px solid #2990ea; */
             }
             .compare-cont-comment td {
                 height: 120px;
@@ -905,8 +923,13 @@ body.pricing.compare article.main {
         .btn {
             height: 50px;
             line-height: 49px;
-            width: 100%;
-            max-width: 200px;
+            width: auto;
+            margin-left: 4px;
+            margin-right: 4px;
+            @media screen and (max-width: $break-xs) {
+                width: 90%;
+                margin-bottom: 8px;
+            }
         }
     }
     .tooltip {
@@ -947,9 +970,22 @@ html[lang=en] {
         }
         ul.plan {
             .annual {
+                .amount-jpy,
                 .amount {
-                    margin-right: -0.1em;
+                    margin-right: -0.13em;
+                    margin-left: -0.12em;
                 }
+            }
+        }
+    }
+    body.pricing.compare article.main {
+        .compare-header {
+            h2 {
+                font-size: 14px;
+            }
+            i {
+                position: relative;
+                top: 0.15em;
             }
         }
     }
