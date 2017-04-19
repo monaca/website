@@ -5,7 +5,7 @@
       {
         "appID": "4N64RA4L97.universal.links.test01",
         "paths": [
-          "*".
+          "*",
           "/news/",
           "/news/*"
         ]
