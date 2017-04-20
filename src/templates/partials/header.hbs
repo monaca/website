@@ -36,12 +36,20 @@ component: navbar
                 </li>
 
                 {{#is language "ja"}}
-                    <li>
-                        <a href="/pricing.html">料金</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">料金</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/pricing.html">Monacaプラン一覧</a></li>
+                            <li><a href="https://monaca.mobi/ja/payment/activation_code_input" target="_blamk">アクティベーションコードを使用</a></li>
+                        </ul>
                     </li>
                 {{else}}
-                    <li>
-                        <a href="/pricing.html">{{i18n "pricing"}}</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">pricing</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/pricing.html">{{i18n "pricing"}}</a></li>
+                            <li><a href="https://monaca.mobi/en/payment/activation_code_input" target="_blamk">Use Activation Code</a></li>
+                        </ul>
                     </li>
                 {{/is}}
 

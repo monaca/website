@@ -4,48 +4,49 @@ class: home
 layout: src/templates/layouts/index.hbs
 ---
 
-<div class="recruit-xs visible-xs visible-sm visible-md">
+<!-- div class="recruit-xs visible-xs visible-sm visible-md">
     <a href="/development.html"><h2>アプリ開発の相談・見積依頼はこちら  <img src="/img/careers/arrow.png" alt="アプリ開発依頼"></h2></a>
-</div>
-<div class="recruit-md visible-lg">
+</div -->
+<!-- div class="recruit-md visible-lg">
     <a id="add-badge-css" class="badge" href="/development.html">アプリ開発のご依頼はこちら　無料相談</a>
-</div>
+</div -->
 
 <div id="keyvisual" class="keyvisual carousel-1 box-full hidden-xs">
     <div class="carousel-container">
         <ul class="carousel-items">
-            <li id="keyvisual-box"class="item" data-index="0">
+            <!-- li id="keyvisual-box" class="item" data-index="0" -->
+            <li id="keyvisual-box" data-index="0">
                 <span id="keyvisual-ja-el"><!--img src="/img/index/keyvisual_ja.jpg" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/--></span>
                 <div id="keyvisual-title">
                     <h2>HTMLハイブリッドアプリで<div>アプリ開発を加速します</div></h2>
                     <img src="/img/index/ico_platforms.png" />
                     <div class="box-try">
-                        <a href="/support/inquiry.html" class="btn btn-line-white">お問い合わせ</a>
-                        <a href="/register/start.html" class="btn btn-green">今すぐ試す<span class="small">(無料)</span></a>
+                        <a href="/register/start.html" class="btn btn-green">無料プランで始める</a>
+                        <a href="/enterprise.html" class="btn btn-line-white">企業向けプランはこちら</a>
                     </div>
                 </div>
             </li>
-            <li class="item" data-index="1">
-            <a id="keyvisual-vs-el" href="/visualstudio.html">
+            <!-- li class="item" data-index="1">
+            <a id="keyvisual-vs-el" href="/visualstudio.html" -->
                 <!--img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/-->
-            </a>
+            <!-- /a>
             </li>
-            <li id="keyvisual-book-el" class="item" data-index="2">
-            <!--a href="/book/001">
+            <li id="keyvisual-book-el" class="item" data-index="2" -->
+            <!-- a href="/book/001">
             <img src="/img/index/keyvisual_book.png" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/>
             </a>
             <div class="box-try box-buy">
                 <a class="btn btn-darkgray" href="/book/001/">詳細はこちら</a>
             </div-->
-            </li>
+            <!-- /li -->
         </ul>
     </div>
 
-    <div class="carousel-1-indicators">
+    <!-- div class="carousel-1-indicators">
         <span class="indicator" onclick="slider.leapTo(0)">○</span>
         <span class="indicator" onclick="slider.leapTo(1)">○</span>
         <span class="indicator" onclick="slider.leapTo(2)">○</span>
-    </div>
+    </div -->
 </div>
 
 <div class="keyvisual box-full visible-xs"><div>
@@ -59,7 +60,7 @@ layout: src/templates/layouts/index.hbs
 </div></div>
 
 
-<a href="/visualstudio.html" class="visible-xs sp-keyvisual"><img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/></a>
+<!-- a href="/visualstudio.html" class="visible-xs sp-keyvisual"><img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携"/></a -->
 
 
 <div id="grid" class="container section features box-full">
@@ -90,6 +91,38 @@ layout: src/templates/layouts/index.hbs
 </div>
 
 <div class="container products box-full">
+
+    <ul class="column-3">
+        <li class="box-1" tile="3">
+            <span class="type bnr-1">個人開発者向け</span>
+            <dl>
+                <dt>Monacaクラウド</dt>
+                <dd>Monacaクラウドは、クラウド型のアプリ開発環境です。アプリ開発に必要なのはブラウザだけ。今すぐ無料でご利用いただけます。</dd>
+            </dl>
+            <div class="btns">
+                <a class="btn btn-green" href="/register/start.html">今すぐ試す</a><a class="btn btn-blue" href="/cloud.html" target="_blamk">詳細はこちら</a>
+            </div>
+        </li>
+        <li class="box-1" tile="3">
+            <span class="type bnr-1">企業向け</span>
+            <dl>
+                <dt>Monaca Business / Enterprise</dt>
+                <dd>企業でのアプリ開発・運用にMonacaクラウドを機能強化したアプリ開発基盤です。よりセキュアなアプリを効率的に開発、運用できます。</dd>
+            </dl>
+            <div class="btns"><a class="btn btn-blue" href="/enterprise.html" target="_blamk">詳細はこちら</a></div>
+        </li>
+        <li class="box-1" tile="3">
+            <span class="type bnr-1">アプリ開発依頼</span>
+            <dl>
+                <dt>アプリ開発無料相談・<br />見積依頼</dt>
+                <dd>経験豊富なMonaca開発パートナー各社がお客様のプロジェクトを成功に導きます。まずはお気軽にご相談ください。</dd>
+            </dl>
+            <div class="btns"><a class="btn btn-blue" href="/development.html" target="_blamk">詳細はこちら</a></div>
+        </li>
+    </ul>
+</div>
+
+<!-- div class="container products box-full">
 
     <ul class="column-3">
         <li class="box-1" tile="3">
@@ -143,9 +176,9 @@ layout: src/templates/layouts/index.hbs
             <div class="btns"><a class="btn btn-blue" href="/enterprise.html">詳細はこちら</a></div>
         </li>
     </ul>
-</div>
+</div -->
 
-<div class="container programs box-full">
+<!-- div class="container programs box-full">
     <ul>
         <li class="box-1">
             <span class="type bnr-1"><img src="/img/index/tag_academic.png" alt="Academic" /></span>
@@ -164,7 +197,7 @@ layout: src/templates/layouts/index.hbs
             <p class="detail"><a href="/support.html">詳細はこちら <i class="glyphicon glyphicon-menu-right"></i></a></p>
         </li>
     </ul>
-</div>
+</div -->
 
 <div class="container section features box-full">
     <h2>Monacaの5つの特徴</h2>
@@ -173,7 +206,7 @@ layout: src/templates/layouts/index.hbs
             <h3>1.すぐに使えるHTML5ハイブリッドアプリ専用開発環境</h3>
 
             <p>Monacaを使うと、Web制作者・開発者が、既存のスキルセットですぐにiOSやAndroidに対応したモバイルアプリ開発を始められます。</p>
-            <img id="features-img-1" alt="" />
+            <img id="features-img-1" alt=""/>
         </li>
         <li>
             <h3>2.選べる開発スタイル／コーディング環境</h3>
@@ -265,17 +298,17 @@ layout: src/templates/layouts/index.hbs
 </div>
 
 <script>
-var slider;
+// var slider;
 var keyvisual_ja_el = '<img src="/img/index/keyvisual_ja.jpg" alt="HTML5ハイブリッドアプリでアプリ開発を加速します"/>';
-var keyvisual_vs_el = '<img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携" />';
-var keyvisual_book_el = '<a href="/book/001"><img src="/img/index/keyvisual_book.png" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/></a><div class="box-try box-buy"><a class="btn btn-darkgray" href="/book/001/">詳細はこちら</a></div>';
+// var keyvisual_vs_el = '<img src="/img/index/keyvisual_vs.jpg" alt="Visual Studioで、iOS、Android、Windows向けモバイルアプリ開発　Azureモバイルアプリサービスとも連携" />';
+// var keyvisual_book_el = '<a href="/book/001"><img src="/img/index/keyvisual_book.png" alt="「Monacaで学ぶはじめてのプログラミング～モバイルアプリ入門編〜」"/></a><div class="box-try box-buy"><a class="btn btn-darkgray" href="/book/001/">詳細はこちら</a></div>';
 
 window.addEventListener("load", function() {
     "use strict";
 
     document.getElementById("keyvisual-ja-el").innerHTML = keyvisual_ja_el;
-    document.getElementById("keyvisual-vs-el").innerHTML = keyvisual_vs_el;
-    document.getElementById("keyvisual-book-el").innerHTML = keyvisual_book_el;
+    // document.getElementById("keyvisual-vs-el").innerHTML = keyvisual_vs_el;
+    // document.getElementById("keyvisual-book-el").innerHTML = keyvisual_book_el;
 
     setTimeout(function() {
         document.getElementById("examples-img").src = "img/index/examples_img.png";
@@ -286,9 +319,10 @@ window.addEventListener("load", function() {
         document.getElementById("features-img-5").src = "img/index/img_5.jpg";
     }, 4000);
 
-    $(function() {
+    // slider stop
+    /* $(function() {
         slider = new MultiSlider(document.getElementById("keyvisual"));
         slider.start();
-    });
+    });*/
 })
 </script>
