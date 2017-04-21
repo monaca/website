@@ -52,6 +52,10 @@
       tableEl = document.getElementById("compare-cont-table-ja");
       contEl = document.getElementById("compare-cont-ja");
 
+      if (loginData.status.isLogin) {
+        $('.btn-trial').html('Proプラン14日間無料トライアル開始');
+      }
+
     } else {
       $('.plan-en').css('display', 'block');
       tableEl = document.getElementById("compare-cont-table");
