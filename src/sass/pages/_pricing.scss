@@ -5,6 +5,7 @@ body.pricing article.main {
             width: auto;
 
         }
+
         h1 {
             font-size: 40px;
             line-height: 1.1;
@@ -12,6 +13,13 @@ body.pricing article.main {
             color: #2472b3;
             margin-bottom: 15px;
         }
+
+        br.opt {
+            @media screen and (min-width: 640px) {
+                display: none;
+            }
+        }
+
         .trial {
             width: 100%;
             margin: 0 auto 40px;
@@ -35,9 +43,163 @@ body.pricing article.main {
                 }
             }
         }
+
+        .plan-type-col-2 {
+            .individuals-plan,
+            .enterprises-plan {
+                margin-top: 40px;
+            }
+            .box-try {
+                padding: 8px 0 16px;
+                .btn {
+                    height: 50px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 50px;
+
+                    &.enterprises-btn {
+                        @media screen and (max-width: $break-xs) {
+                            line-height: 24px;
+                            font-size: 18px;
+                            font-weight: 400;
+                            height: auto;
+                            padding: 10px 0;
+                        }
+                    }
+
+                    
+                }
+            }
+        }
+
+        .individuals-plan,
+        .enterprises-plan {
+            width: 490px;
+        }
+
+        .academic-plan {
+            width: 900px;
+        }
+
+        .individuals-plan,
+        .enterprises-plan,
+        .academic-plan {
+            margin: 0 auto 8px;
+            color: #fff;
+            padding: 8px 16px;
+
+            @media screen and (max-width: $break-xs) {
+                width: 240px;
+            }
+        }
+
+        .individuals-plan {
+            background-color: #395d84;
+        }
+
+        .enterprises-plan {
+            background-color: #2990ea;
+        }
+
+        .academic-plan {
+            background-color: #eee;
+            color: #333;
+        }
+
+        .plan-type-col-2 {
+            margin: 0 auto;
+            width: 1070px;
+
+            @media screen and (max-width: 1070px) {
+                width: 524px;
+            }
+            @media screen and (max-width: $break-xs) {
+                width: 274px;
+            }
+
+            > li {
+                margin-bottom: 18px;
+                float: left;
+
+                @media screen and (max-width: 1070px) {
+                    float: none;
+                }
+
+                ul.plan {
+                    @media screen and (max-width: $break-xs) {
+                        > li {
+                            clear: both;
+                        }
+                    }
+                }
+            }
+
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+        }
+
+        .logindata-status-injapan {
+            &:after {
+                width: 30px;
+                height: 1px;
+                background-color: #fff;
+                position: relative;
+                left: 50%;
+                margin-left: -15px;
+                margin-bottom: 0;
+                top: -48px;
+            }
+
+            > li ul.plan {
+                width: 524px;
+
+                .box-1 {
+                    margin: 0 5px 16px;
+                    height: 524px !important;
+                }
+
+                .box-1.popular {
+                    border: 1px solid #d4d5d7;
+                    padding-top: 34px;
+                }
+            }
+        }
+
+        .hr-short {
+            &:after {
+                position: relative;
+                margin-bottom: 32px;
+            }
+        }
+
+        .logindata-status-inen {
+            >li ul.plan {
+                width: 1070px;
+
+                .box-1 {
+                    margin: 0 11px 16px;
+                    height: 470px;
+                }
+
+                .box-1.popular {
+                    border: 2px solid #2990ea;
+                    padding-top: 33px;
+                }
+
+                @media screen and (max-width: 1070px) {
+                    > li:nth-child(5) {
+                        clear: both;
+                    }
+                }
+            }
+        }
+
         ul.plan {
             width: 1070px;
-            margin: 0 auto 33px;
+            margin: 0 auto 24px;
             padding: 0 11px;
             @media screen and (max-width: 1070px) {
                 width: 546px;
@@ -76,28 +238,48 @@ body.pricing article.main {
                 color: #3e5c7f;
                 margin-bottom: 50px;
             }
+
             .annual {
                 margin-bottom: 10px;
-                .currency, .amount, .period {
+                .currency, .currency-jpy, .amount, .amount-jpy, .period, .period-jpy {
                     display: inline-block;
                     line-height: 50px;
                     font-weight: 700;
                     color: #25384c;
                 }
-                .currency {
-                    font-size: 24px;
+                .currency,
+                .currency-jpy {
                     line-height: 1;
                     position: relative;
                     bottom: 18px;
                     margin: 0 -0.1em 0 15px;
+                    margin: 0;
+                }
+                .currency {
+                    font-size: 24px;
+                }
+                .currency-jpy {
+                    font-size: 18px;
+                }
+                .amount,
+                .amount-jpy {
+                    margin-bottom: 0px;
                 }
                 .amount {
-                    font-size: 50px;
-                    margin-bottom: 0px;
+                    font-size: 50px;  
+                }
+                .amount-jpy {
+                    font-size: 40px;
+                }
+                .period,
+                .period-jpy {
+                    line-height: 1;
                 }
                 .period {
                     font-size: 20px;
-                    line-height: 1;
+                }
+                .period-jpy {
+                    font-size: 18px;
                 }
                 .acutual {
                     font-size: 13px;
@@ -112,7 +294,7 @@ body.pricing article.main {
             .monthly {
                 margin-bottom: 36px;
                 .amount {
-                    font-size: 17px;
+                    font-size: 16px;
                     font-weight: 700;
                     line-height: 1.3;
                     color: #25384c;
@@ -152,13 +334,16 @@ body.pricing article.main {
                     }
                 }
             }
-            a {
+            .detail-box {
                 width: 100%;
-                font-size: 14px;
-                line-height: 1;
                 position: absolute;
-                    bottom: 20px;
-                    left: 0;
+                bottom: 20px;
+                left: 0;
+                a {
+                    width: 100%;
+                    font-size: 14px;
+                   line-height: 1;
+               }
             }
         }
         ul.plan.enterprise {
@@ -330,6 +515,7 @@ body.pricing article.main {
                     color: #3e5c7f;
                     margin-bottom: 10px;
                 }
+
                 p {
                     font-size: 14px;
                     line-height: 1.5;
@@ -338,7 +524,7 @@ body.pricing article.main {
             }
         }
         .additional-plan {
-            width: 600px;
+            width: 900px;
             margin: 0 auto 70px;
             @media screen and (max-width: 1070px) {
                 width: 502px;
@@ -346,13 +532,23 @@ body.pricing article.main {
             @media screen and (max-width: $break-xs) {
                 width: 90%;
             }
-            h2 {
-                font-size: 18px;
+            h2,
+            h3 {
                 font-weight: 700;
-                line-height: 1.1;
-                margin-bottom: 25px;
                 color: #3e5c7f;
             }
+
+            h2 {
+                font-size: 18px;
+                line-height: 1.1;
+                margin-bottom: 48px;
+            }
+
+            h3 {
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+
             table {
                 width: 100%;
                 border: 1px solid #dcdcdc;
@@ -364,7 +560,6 @@ body.pricing article.main {
                     padding: 10px;
                     border-bottom: 1px solid #dcdcdc;
                     &:nth-child(1) {
-                        width: 50%;
                         padding-left: 30px;
                     }
                 }
@@ -373,6 +568,7 @@ body.pricing article.main {
                     font-weight: 700;
                     color: #3e5c7f;
                     padding: 10px;
+                    border-bottom: 1px solid #dcdcdc;
                     &:nth-child(1) {
                         padding-left: 30px;
                     }
@@ -462,6 +658,9 @@ body.pricing.compare article.main {
         width: 200px;
         @media screen and (max-width: $break-xs) {
             width: 150px;
+        }
+        &.compare-header-ja {
+            padding-top: 56px;
         }
         h2 {
             box-sizing: content-box;
@@ -577,6 +776,19 @@ body.pricing.compare article.main {
                 th:nth-child(4) {
                     color: #4791de;
                 }
+                th.individuals-plan,
+                th.enterprises-plan {
+                    color: #ffffff;
+                    font-size: 1rem;
+                    height: auto;
+                    padding: 8px 0;
+                }
+                th.individuals-plan {
+                    border: 1px solid #395d84;
+                }
+                th.enterprises-plan {
+                    border: 1px solid #2990ea;
+                }
             }
             th, td {
                 border: 1px solid #c2c2c2;
@@ -642,7 +854,7 @@ body.pricing.compare article.main {
                 border-right: 2px solid #2990ea;
             }
             &.compare-cont-support tr:last-child td:nth-child(3) {
-                border-bottom: 2px solid #2990ea;
+                /* border-bottom: 2px solid #2990ea; */
             }
             .compare-cont-comment td {
                 height: 120px;
@@ -668,7 +880,26 @@ body.pricing.compare article.main {
                 border-left: 1px solid #c2c2c2;
             }
         }
+        &.compare-cont-ja {
+            th, td {
+                font-size: 12px;
+                span,
+                small {
+                    font-size: 0.7rem;
+                }
+            }
+            thead th:nth-child(3) {
+                border-top: 1px solid #c2c2c2;
+                border-left: 1px solid #c2c2c2;
+                border-right: 1px solid #c2c2c2;
+            }
+            tr td:nth-child(3) {
+                border-left: 1px solid #c2c2c2;
+                border-right: 1px solid #c2c2c2;
+            }
+        }
     }
+
     .compare-contact {
         clear: both;
         margin-bottom: 30px;
@@ -692,8 +923,13 @@ body.pricing.compare article.main {
         .btn {
             height: 50px;
             line-height: 49px;
-            width: 100%;
-            max-width: 200px;
+            width: auto;
+            margin-left: 4px;
+            margin-right: 4px;
+            @media screen and (max-width: $break-xs) {
+                width: 90%;
+                margin-bottom: 8px;
+            }
         }
     }
     .tooltip {
@@ -734,9 +970,22 @@ html[lang=en] {
         }
         ul.plan {
             .annual {
+                .amount-jpy,
                 .amount {
-                    margin-right: -0.1em;
+                    margin-right: -0.13em;
+                    margin-left: -0.12em;
                 }
+            }
+        }
+    }
+    body.pricing.compare article.main {
+        .compare-header {
+            h2 {
+                font-size: 14px;
+            }
+            i {
+                position: relative;
+                top: 0.15em;
             }
         }
     }

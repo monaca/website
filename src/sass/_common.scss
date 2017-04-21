@@ -611,6 +611,10 @@ Goes 2 to 1-column in responsive
       }
     }
     @media screen and (max-width: $break-lg) and (min-width: $break-xs) {
+      float: none;
+      margin: 0 auto 20px;
+      width: 100%;
+      height: auto !important;
       &:nth-child(2n) {
         margin-right: 0;
       }
