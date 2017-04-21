@@ -3481,10 +3481,6 @@ body.showcase.fujitec {
     }
 }
 
-
-
-
-//pscsrv
 body.showcase.pscsrv {
     article.main {
     .backstory {
@@ -3676,9 +3672,6 @@ body.showcase.pscsrv {
     }
 }
 
-
-//
-
 body.showcase.wfp {
     article.main {
     .backstory {
@@ -3869,6 +3862,212 @@ body.showcase.wfp {
     }
     }
 }
+
+body.showcase.shogi {
+    article.main {
+    .backstory {
+            padding: 90px 0 40px;
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+            img {
+                margin-top: 0;
+            }
+            .pc-img {
+                display: block;
+                @media screen and (max-width: 1070px) {
+                    display: none;
+                }
+            }
+            .sp-img {
+                    display: none;
+                    @media screen and (max-width: 1070px) {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+            p {
+                line-height: 1.85;
+                margin-bottom: 7px;
+            }
+            .alignleft, .alignright {
+                width: 345px;
+            }
+
+        }
+    }
+
+    article.main header {
+        padding: 10px 0 17px 125px;
+        background-image: url(/img/shogi/icn_app_shogi_ja.png);
+        @media screen and (max-width: $break-xs) {
+            padding: 0 0 0 75px;
+            background: url(/img/shogi/icn_app_shogi_ja.png) left center no-repeat;
+            background-size: 60px;
+            font-size: 20px;
+            background-position: left center;
+        }
+    }
+    article.main .info .info-header h1 {
+        background: rgba(0,0,0,0.7);
+        .ml {
+            margin-left: -25px;
+        }
+    }
+
+    article.main .info .info-cont {
+        h1 img {
+            margin-bottom: 10px;
+        }
+        dl dt {
+            width: 50px;
+        }
+    }
+
+    .developer {
+        img {
+            vertical-align: bottom;
+            @media screen and (max-width: $break) {
+                float: none;
+            }
+        }
+        em {
+            margin: 0;
+            float: left;
+            @media screen and (max-width: $break) {
+                margin-left: 0;
+            }
+        }
+        a {
+            margin: 0;
+            float: left;
+            @media screen and (max-width: $break) {
+                clear: both;
+            }
+        }
+    }
+
+    article.main .app-info {
+        padding: 70px 0 40px;
+        background: url(/img/shogi/img_1.jpg) no-repeat right bottom;
+        min-height: 610px;
+        @media screen and (max-width: 1070px) {
+            background: none;
+        }
+        div {
+            .sp-img {
+                display: none;
+                @media screen and (max-width: 1070px) {
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            p {
+                margin: 0 650px 15px 0;
+                @media screen and (max-width: 1070px) {
+                    margin: 0 0 15px 0;
+                }
+                &:nth-of-type(2) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    article.main .app-info.backstory-tablet {
+        background: url(/img/shogi/img_2.jpg) no-repeat right 170px;
+        min-height: 650px;
+        @media screen and (max-width: 1132px) {
+            background: none;
+        }
+        .sp-img {
+            display: none;
+            @media screen and (max-width: $break) {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+    article.main .backstory {
+        img {
+            margin-top: 0;
+        }
+    }
+    article.main .effect {
+        background: url(/img/shogi/bg_effect.jpg) no-repeat center top;
+        @media screen and (max-width: 1070px) {
+            background: -moz-linear-gradient(top, #136dac 0%, #0e578a 100%);
+            background: -webkit-linear-gradient(top, #136dac 0%,#0e578a 100%);
+            background: linear-gradient(to bottom, #136dac 0%,#0e578a 100%);
+        }
+      ul {
+        margin-right: 360px;
+        @media screen and (max-width: 1070px) {
+          margin-right: 0;
+        }
+      }
+    }
+    article.main figure figcaption {
+        margin-bottom: 40px;
+    }
+    article.main .interview {
+        h1 {
+            margin-bottom: 14px;
+        }
+        .alignleft, .alignright {
+            width: 285px;
+            @media screen and (max-width: $break) {
+                display: none;
+            }
+        }
+        .name {
+            font-weight: 700;
+            color: #444;
+            display: inline-block;
+        }
+        .qa {
+            p {
+                &:nth-of-type(2) {
+                    &:first-letter {
+                        margin-left: -5px;
+                    }
+                }
+            }
+        }
+        .sp-interview {
+        display: none;
+        @media screen and (max-width: $break) {
+            display: block;
+            width: 100%;
+            dl:nth-of-type(1) {
+                margin: 0 0 30px;
+                float: left;
+            }
+            dl:nth-of-type(2) {
+                margin: 0 0 50px;
+                float: right;
+            }
+        }
+        @media screen and (max-width: $break-xs) {
+            dl {
+                margin: 0 auto 5%;
+                width: 285px;
+                float: none;
+            }
+            dl:nth-of-type(1) {
+                margin: 0 auto 5%;
+                float: none;
+            }
+            dl:nth-of-type(2) {
+                margin: 0 auto 5%;
+                float: none;
+            }
+        }
+    }
+    }
+}
+
 
 body.showcase.showcase {
     .container {
