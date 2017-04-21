@@ -13,6 +13,10 @@
 
       $('body.pricing article.main .container ul.other-plan .box-1:nth-child(1)').css('margin-right', '0');
 
+      if (loginData.status.isLogin) {
+        $('.btn-trial').html('Proプラン14日間無料トライアル開始');
+      }
+
     } else {
       $('.plan-en').css('display', 'block');
 
