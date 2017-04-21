@@ -5,8 +5,6 @@
   monacaPages["/pricing.html"] = function(loginData) {
     loginData.autoDisplay = false;
 
-
-
     if (loginData.status.inJapan) {
       $('.plan-ja').css('display', 'block');
       
@@ -72,6 +70,19 @@
     } else {
       $('.personal-plan').remove();
     }
+
+    $('.btn-trial').click(function(){
+      if (loginData.status.isLogin) {
+        location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/pricing?type=1';
+      } else {
+        location.href = '/register/start.html';
+      }
+    });
+
+    $('.btn-enterprises-trial').click(function(){
+      location.href = '/enterprise.html';
+    });
+
     displayNewPlanInfo(loginData.status.inJapan);
     displayBody();
   };
