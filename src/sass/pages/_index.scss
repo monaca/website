@@ -1855,23 +1855,6 @@ html[lang=ja] body.home {
             }
         }
     }
-    .box-full {
-        .headline-entries > .headline-entry > dl > dt {
-            padding: 5px 0 0 10px;
-        }
-        .panel-grid {
-            @media screen and (max-width: $break) {
-                margin-left: 0;
-                margin-right: 0;
-            }
-        }
-        .panel-grid-cell {
-            @media screen and (max-width: $break) {
-                min-width: auto;
-                padding: 0px 0% 45px 0%;
-            }
-        }
-    }
 }
 
 html[lang=ru] body.home{
