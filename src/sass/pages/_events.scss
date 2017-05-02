@@ -307,12 +307,31 @@ body.events #news > .container.news-updates .events-entries > .events-entry > dl
 
 html body.home {
   .box-full {
+      .events-entries {
+        .events-entry {
+          position: relative;
+          display: block;
+          th {
+            padding: 0;
+          }
+          .events-entry-comment {
+            display: block;
+            padding: 0 0 8px 0px;
+          }
+        }
+      }
       .panel-header {
         color: #43587e;
       }
       .headline-entries > .headline-entry > dl > dt {
-          padding: 5px 0 0 10px;
+          padding: 5px 0 0 0;
           float: none;
+      }
+      .headline-entries > .headline-entry > dl {
+        dd {
+          padding-right: 0;
+          padding-left: 0;
+        }
       }
       .panel-grid {
           @media screen and (max-width: $break) {
