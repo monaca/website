@@ -312,7 +312,10 @@ html body.home {
           position: relative;
           display: block;
           th {
-            padding: 0;
+            padding: 5px 0 0 0;
+          }
+          td {
+            padding: 4px 0;
           }
           .events-entry-comment {
             display: block;
@@ -324,13 +327,12 @@ html body.home {
         color: #43587e;
       }
       .headline-entries > .headline-entry > dl > dt {
-          padding: 5px 0 0 0;
+          padding: 13px 0 0 0;
           float: none;
       }
       .headline-entries > .headline-entry > dl {
         dd {
-          padding-right: 0;
-          padding-left: 0;
+          padding: 0 0 13px 0;
         }
       }
       .panel-grid {
