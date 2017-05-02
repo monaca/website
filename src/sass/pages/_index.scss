@@ -1307,34 +1307,34 @@ html[lang=en] body.home {
                     display: none;
                   }
                 }
-				.ios-min {
-				  display: none;
-				  @media screen and (max-width: 430px) {
-					  display: block;
-					  position: absolute;
-						top: 46px;
-						left: 10px;
-						width: 101px;
-						height: 178px;
-					  z-index: 1;
-				  }
-			  	}
-				.android-min {
-				  display: none;
-				  @media screen and (max-width: 430px) {
-					  display: block;
-					  position: absolute;
-						top: 30px;
-						left: 148px;
-						width: 113px;
-						height: 184px;
-					  z-index: 1;
-				  }
-			  	}
-				.phones {
-					position: relative;
-			    	z-index: 10;
-				}
+                .ios-min {
+                  display: none;
+                  @media screen and (max-width: 430px) {
+                      display: block;
+                      position: absolute;
+                        top: 46px;
+                        left: 10px;
+                        width: 101px;
+                        height: 178px;
+                      z-index: 1;
+                  }
+                }
+                .android-min {
+                  display: none;
+                  @media screen and (max-width: 430px) {
+                      display: block;
+                      position: absolute;
+                        top: 30px;
+                        left: 148px;
+                        width: 113px;
+                        height: 184px;
+                      z-index: 1;
+                  }
+                }
+                .phones {
+                    position: relative;
+                    z-index: 10;
+                }
               }
             }
 
@@ -1483,9 +1483,9 @@ html[lang=en] body.home {
         text-align: center;
         margin-top: 150px;
         margin-bottom: 120px;
-		@media screen and (max-width: 950px) {
-		  margin: 80px auto 60px;
-		}
+        @media screen and (max-width: 950px) {
+          margin: 80px auto 60px;
+        }
       }
 
       @media screen and(max-width: 800px){
@@ -1852,6 +1852,23 @@ html[lang=ja] body.home {
                     display: inline;
                     width: 10%;
                 }
+            }
+        }
+    }
+    .box-full {
+        .headline-entries > .headline-entry > dl > dt {
+            padding: 5px 0 0 10px;
+        }
+        .panel-grid {
+            @media screen and (max-width: $break) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        .panel-grid-cell {
+            @media screen and (max-width: $break) {
+                min-width: auto;
+                padding: 0px 0% 45px 0%;
             }
         }
     }
