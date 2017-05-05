@@ -306,7 +306,8 @@ body.events #news > .container.news-updates .events-entries > .events-entry > dl
 }
 
 html body.home {
-  .box-full {
+  @media screen and (max-width: $break) {
+    .box-full {
       .events-entries {
         .events-entry {
           position: relative;
@@ -347,5 +348,6 @@ html body.home {
               padding: 0px 0% 45px 0%;
           }
       }
+    }
   }
 }
