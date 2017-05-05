@@ -328,8 +328,8 @@ html body.home {
         color: #43587e;
       }
       .headline-entries > .headline-entry > dl > dt {
-          padding: 13px 0 0 0;
-          float: none;
+        padding: 13px 0 0 0;
+        float: none;
       }
       .headline-entries > .headline-entry > dl {
         dd {
@@ -337,18 +337,25 @@ html body.home {
         }
       }
       .panel-grid {
-          @media screen and (max-width: $break) {
-              margin-left: 0;
-              margin-right: 0;
-          }
+        @media screen and (max-width: $break) {
+          margin-left: 0;
+          margin-right: 0;
+        }
       }
       .panel-grid-cell {
-          @media screen and (max-width: $break) {
-              min-width: auto;
-              padding: 0px 0% 45px 0%;
-              width: 480px;
-          }
+        @media screen and (max-width: $break) {
+          min-width: auto;
+          padding: 0px 0% 45px 0%;
+          width: 100%;
+        }
       }
+    }
+  }
+  @media screen and (max-width: $break-xs) {
+    #grid {
+      width: 370px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
