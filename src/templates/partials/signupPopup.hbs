@@ -38,7 +38,8 @@
       </li>
       <li>
         <button id="popup_signup_btn" class="btn-green btn-long" type="button">{{#is language "ja"}}今すぐ試す{{else}}Sign Up{{/is}}</button>
-        <button id="popup_signup_btn" class="btn-gray btn-long" type="button">{{#is language "ja"}}企業向けプランのサインアップはこちら{{else}}xxxxxxxx{{/is}}</button>
+        {{#is language "ja"}}<button id="popup_signup_btn" class="btn-gray btn-long" type="button" onclick="location.href='https://enterprise.monaca.mobi/register'">企業向けプランのサインアップはこちら</button>{{/is}}
+        <!-- <button id="popup_signup_btn" class="btn-gray btn-long" type="button">{{#is language "ja"}}企業向けプランのサインアップはこちら{{else}}xxxxxxxx{{/is}}</button> -->
         <span class="loading"></span>
       </li>
     </ul>
