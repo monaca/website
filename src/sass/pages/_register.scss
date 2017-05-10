@@ -190,6 +190,9 @@
       box-sizing: border-box;
       width: 100%;
     }
+    input[type=checkbox] {
+      margin-right: 4px;
+    }
     margin-top: 6px;
     padding: 0;
   }
@@ -351,6 +354,12 @@
         text-align: left;
       }
 
+      .forgotpass {
+        text-align: left;
+        margin-top: -8px;
+        margin-bottom: 15px;
+      }
+      
       input {
         &[type="text"],
         &[type="password"] {
@@ -376,6 +385,9 @@
           background-repeat: no-repeat;
           background-position: 10px 9px;
         }
+        &[type=checkbox] {
+          margin-right: 3px;
+        }
 
       }
       button {
@@ -392,6 +404,39 @@
         font-weight: 600;
         &:hover {
           opacity: 0.9;
+        }
+        &.btn-green {
+          background-color: #8bcc37;
+          border-color: #8bcc37;
+          &.btn-long {
+            width: 100%;
+          }
+        }
+        &.btn-gray {
+          background-color: #f8f8f8;
+          border: 1px solid #c8c8c8;
+          color: #666;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: -0.05em;
+          text-align: left;
+          position: relative;
+          &.btn-long {
+            width: 100%;
+          }
+          &:after {
+            display: block;
+            content: url("/img/careers/arrow_gray.png");
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            width: 18px;
+            height: 18px;
+            margin-top: -9px;
+          }
+          &:hover {
+            opacity: 0.7;
+          }
         }
       }
       .error {

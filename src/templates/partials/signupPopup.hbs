@@ -1,7 +1,7 @@
 <div id="signuppopup">
 
-  <div id="signup-ok" class="signuppopup-container">
-    <h3>{{#is language "ja"}}アカウント作成{{else}}Sign Up{{/is}}</h3>
+  <div id="signup-ok" class="signuppopup-container clearfix">
+    <h3>{{#is language "ja"}}Monaca Cloud IDE サインアップ{{else}}Sign Up{{/is}}</h3>
     <div style="width: 100%; text-align: center;">
       <div id="signup-github" class="btn-github">
         <div class="github-img"></div>
@@ -37,7 +37,8 @@
         </label>
       </li>
       <li>
-        <button id="popup_signup_btn" type="button">{{#is language "ja"}}今すぐ試す{{else}}Sign Up{{/is}}</button>
+        <button id="popup_signup_btn" class="btn-green btn-long" type="button">{{#is language "ja"}}今すぐ試す{{else}}Sign Up{{/is}}</button>
+        <button id="popup_signup_btn" class="btn-gray btn-long" type="button">{{#is language "ja"}}企業向けプランのサインアップはこちら{{else}}xxxxxxxx{{/is}}</button>
         <span class="loading"></span>
       </li>
     </ul>
