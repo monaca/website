@@ -58,14 +58,6 @@ body.devsupport {
         padding-top: 50px;
         p:first-child {
           margin-bottom: 100px;
-          @media screen and (max-width: $break-xs) {
-            margin-bottom: 70px;
-          }
-        }
-      }
-      &:nth-of-type(2) {
-        @media screen and (max-width: $break) {
-          padding-bottom: 0;
         }
       }
       @media screen and (max-width: $break) {

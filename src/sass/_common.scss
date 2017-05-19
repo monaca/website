@@ -633,7 +633,7 @@ Goes 2 to 1-column in responsive
 Goes 2 to 1-column in responsive
 
 ```
-<ul class="column-4" style="height:580px;" >
+<ul class="column-5" style="height:580px;" >
     <li class="box-1">
         <img src="http://lorempixel.com/g/640/300/animals/" />
     </li>
@@ -653,6 +653,43 @@ Goes 2 to 1-column in responsive
     margin-right: percentage(30px/1170px);
     width: percentage(270px/1170px);
     &:nth-child(4n) {
+      margin-right: 0;
+    }
+    @media screen and (max-width: $break) {
+      float: none;
+      margin: 0 auto 20px;
+      width: 100%;
+    }
+  }
+}
+
+/*
+# 5-column boxes
+
+Goes 2 to 1-column in responsive
+
+```
+<ul class="column-4" style="height:580px;" >
+    <li class="box-1">
+        <img src="http://lorempixel.com/g/640/300/animals/" />
+    </li>
+    <li class="box-1">
+        <img src="http://lorempixel.com/g/640/300/animals/" />
+    </li>
+    <li class="box-1">
+        <img src="http://lorempixel.com/g/640/300/animals/" />
+    </li>
+</ul>
+```
+*/
+
+.column-5 {
+  @include clearfix;
+  li {
+    float: left;
+    margin-right: percentage(30px/1170px);
+    width: percentage(210px/1170px);
+    &:nth-child(5n) {
       margin-right: 0;
     }
     @media screen and (max-width: $break) {
