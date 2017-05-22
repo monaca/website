@@ -81,6 +81,12 @@ html body.rpg-tkool {
     .section-vshort {
         padding: 60px 5% 0;
     }
+    footer.common ul {
+        display: none;
+    }
+    footer.common ul.rpg-footer {
+        display: block!important;
+    }
     .keyvisual {
         margin-top: 50px;
         height: auto;
@@ -90,7 +96,7 @@ html body.rpg-tkool {
             width: 100%;
             background: -moz-linear-gradient(top, rgba(0,0,0,0.24) 0%, rgba(0,0,0,0.68) 80%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
             background: -webkit-linear-gradient(top, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0.68) 80%,rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
-            background: linear-gradient(to bottom, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0.68) 80%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            //background: linear-gradient(to bottom, rgba(0,0,0,0.24) 0%,rgba(0,0,0,0.68) 80%,rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3d000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
             h2 {
                 padding-top: 90px;
@@ -300,6 +306,9 @@ html body.rpg-tkool {
         }
     }
     .pricing {
+        h2 {
+            margin-bottom: 45px;
+        }
         .m-table {
             width: 680px;
             margin: 0 auto 20px;
@@ -354,6 +363,38 @@ html body.rpg-tkool {
                 line-height: 24px;
                 text-indent: -0.6em;
                 margin-left: 0.6em;
+            }
+        }
+    }
+    .operating {
+        h2 {
+            margin-bottom: 45px;
+        }
+        ul {
+            width: 680px;
+            margin: 0 auto;
+            @media screen and (max-width: $break) {
+                width: 90%;
+            }
+            li {
+                text-align: left;
+                list-style: disc;
+                margin-bottom: 10px;
+                margin-left: 1em;
+                color: #61ad00;
+                @media screen and (max-width: $break) {
+                    margin-bottom: 20px;
+                }
+                span {
+                    font-size: 16px;
+                    font-weight: 800;
+                    color: #666;
+                    margin-left: 0.3em;
+                    @media screen and (max-width: $break) {
+                        display: block;
+                        margin-left: 0;
+                    }
+                }
             }
         }
     }
