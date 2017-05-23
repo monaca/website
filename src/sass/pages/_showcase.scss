@@ -4188,7 +4188,12 @@ body.showcase.ocj {
     article.main .app-info.backstory-pc {
         background: url(/img/ocj/img_2.png) no-repeat right 170px;
         min-height: 650px;
-        @media screen and (max-width: 1132px) {
+        @media screen and (max-width: $break-lg) {
+            background: url(/img/ocj/img_2.png) no-repeat right center;
+            background-size: 340px;
+            min-height: 450px;
+        }
+        @media screen and (max-width: $break) {
             background: none;
         }
         .sp-img {
@@ -4199,8 +4204,11 @@ body.showcase.ocj {
             }
         }
         p {
-            margin: 0 550px 15px 0;
-            @media screen and (max-width: 1070px) {
+            margin: 0 570px 15px 0;
+            @media screen and (max-width: $break-lg) {
+                margin: 0 350px 15px 0;
+            }
+            @media screen and (max-width: $break) {
                 margin: 0 0 15px 0;
             }
             &:nth-of-type(2) {
@@ -4263,11 +4271,12 @@ body.showcase.ocj {
             display: block;
             width: 100%;
             dl:nth-of-type(1) {
-                margin: 0 0 30px;
+                margin: 0 0 20px;
                 float: left;
+                width: 285px;
             }
             dl:nth-of-type(2) {
-                margin: 0 0 50px;
+                margin: 0 0 60px;
                 float: right;
             }
         }
