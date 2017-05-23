@@ -3570,21 +3570,34 @@ body.showcase.pscsrv {
     article.main .app-info {
         padding: 70px 0 40px;
         background: url(/img/pscsrv/img_1.jpg) no-repeat right bottom;
-        min-height: 621px;
-        @media screen and (max-width: 1070px) {
+        min-height: 610px;
+        @media screen and (max-width: 1130px) {
+            background: url(/img/pscsrv/img_1.jpg) no-repeat right center;
+            min-height: 450px;
+            background-size: 630px;
+        }
+        @media screen and (max-width: $break-lg) {
+            background: url(/img/pscsrv/img_1.jpg) no-repeat right center;
+            background-size: 340px;
+            min-height: 450px;
+        }
+        @media screen and (max-width: $break) {
             background: none;
         }
         div {
             .sp-img {
                 display: none;
-                @media screen and (max-width: 1070px) {
+                @media screen and (max-width: $break) {
                     display: block;
                     margin: 0 auto;
                 }
             }
             p {
                 margin: 0 650px 15px 0;
-                @media screen and (max-width: 1070px) {
+                @media screen and (max-width: $break-lg) {
+                    margin: 0 350px 15px 0;
+                }
+                @media screen and (max-width: $break) {
                     margin: 0 0 15px 0;
                 }
                 &:nth-of-type(2) {
@@ -3594,8 +3607,27 @@ body.showcase.pscsrv {
         }
     }
     article.main .backstory {
-        img {
-            margin-top: 0;
+        .pc-img {
+            display: block;
+            @media screen and (max-width: $break) {
+                display: none;
+            }
+        }
+        .sp-img {
+            display: none;
+            @media screen and (max-width: $break) {
+                display: block;
+                margin: 0 auto 10%;
+            }
+        }
+        p {
+            margin: 0 50px 15px 0;
+            @media screen and (max-width: $break) {
+                margin: 0 0 15px 0;
+            }
+            &:nth-of-type(2) {
+                margin-bottom: 0;
+            }
         }
     }
     article.main .effect {
@@ -3686,13 +3718,13 @@ body.showcase.wfp {
             }
             .pc-img {
                 display: block;
-                @media screen and (max-width: 1070px) {
+                @media screen and (max-width: $break-lg) {
                     display: none;
                 }
             }
             .sp-img {
                     display: none;
-                    @media screen and (max-width: 1070px) {
+                    @media screen and (max-width: $break-lg) {
                         display: block;
                         margin: 0 auto;
                     }
@@ -3759,7 +3791,7 @@ body.showcase.wfp {
     }
 
     article.main .app-info {
-        padding: 70px 0 40px;
+        padding: 50px 0 40px;
         background: url(/img/wfp/img_1.jpg) no-repeat right bottom;
         min-height: 800px;
         @media screen and (max-width: 1070px) {
@@ -3774,7 +3806,7 @@ body.showcase.wfp {
                 }
             }
             p {
-                margin: 0 650px 15px 0;
+                margin: 0 620px 15px 0;
                 @media screen and (max-width: 1070px) {
                     margin: 0 0 15px 0;
                 }
@@ -3787,6 +3819,16 @@ body.showcase.wfp {
     article.main .backstory {
         img {
             margin-top: 0;
+        }
+        p {
+            @media screen and (max-width: 1070px) {
+            }
+            @media screen and (max-width: $break) {
+                margin: 0 0 15px 0;
+            }
+            &:nth-of-type(2) {
+                margin-bottom: 0;
+            }
         }
     }
     article.main .effect {
@@ -3953,20 +3995,33 @@ body.showcase.shogi {
         padding: 70px 0 40px;
         background: url(/img/shogi/img_1.jpg) no-repeat right bottom;
         min-height: 610px;
-        @media screen and (max-width: 1070px) {
+        @media screen and (max-width: 1130px) {
+            background: url(/img/shogi/img_1.jpg) no-repeat right center;
+            min-height: 450px;
+            background-size: 630px;
+        }
+        @media screen and (max-width: $break-lg) {
+            background: url(/img/shogi/img_1.jpg) no-repeat right center;
+            background-size: 340px;
+            min-height: 450px;
+        }
+        @media screen and (max-width: $break) {
             background: none;
         }
         div {
             .sp-img {
                 display: none;
-                @media screen and (max-width: 1070px) {
+                @media screen and (max-width: $break) {
                     display: block;
                     margin: 0 auto;
                 }
             }
             p {
                 margin: 0 650px 15px 0;
-                @media screen and (max-width: 1070px) {
+                @media screen and (max-width: $break-lg) {
+                    margin: 0 350px 15px 0;
+                }
+                @media screen and (max-width: $break) {
                     margin: 0 0 15px 0;
                 }
                 &:nth-of-type(2) {
@@ -3978,14 +4033,34 @@ body.showcase.shogi {
     article.main .app-info.backstory-tablet {
         background: url(/img/shogi/img_2.jpg) no-repeat right 170px;
         min-height: 650px;
-        @media screen and (max-width: 1132px) {
+        @media screen and (max-width: 1130px) {
+            background: url(/img/shogi/img_2.jpg) no-repeat right center;
+            min-height: 450px;
+            background-size: 630px;
+        }
+        @media screen and (max-width: $break-lg) {
+            background-size: 330px;
+        }
+        @media screen and (max-width: $break) {
             background: none;
         }
         .sp-img {
             display: none;
             @media screen and (max-width: $break) {
                 display: block;
-                margin: 0 auto;
+                margin: 0 auto 10%;
+            }
+        }
+        p {
+            margin: 0 650px 15px 0;
+            @media screen and (max-width: $break-lg) {
+                margin: 0 350px 15px 0;
+            }
+            @media screen and (max-width: $break) {
+                margin: 0 0 15px 0;
+            }
+            &:nth-of-type(2) {
+                margin-bottom: 0;
             }
         }
     }
@@ -4160,7 +4235,7 @@ body.showcase.ocj {
     }
 
     article.main .app-info {
-        padding: 70px 0 40px;
+        padding: 50px 0 40px;
         background: url(/img/ocj/img_1.png) no-repeat right bottom;
         min-height: 610px;
         @media screen and (max-width: 1070px) {
@@ -4175,7 +4250,7 @@ body.showcase.ocj {
                 }
             }
             p {
-                margin: 0 650px 15px 0;
+                margin: 0 620px 15px 0;
                 @media screen and (max-width: 1070px) {
                     margin: 0 0 15px 0;
                 }
@@ -4206,7 +4281,7 @@ body.showcase.ocj {
         p {
             margin: 0 570px 15px 0;
             @media screen and (max-width: $break-lg) {
-                margin: 0 350px 15px 0;
+                margin: 0 370px 15px 0;
             }
             @media screen and (max-width: $break) {
                 margin: 0 0 15px 0;
