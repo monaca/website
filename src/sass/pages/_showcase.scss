@@ -3298,13 +3298,13 @@ body.showcase.fujitec {
             }
             .pc-img {
                 display: block;
-                @media screen and (max-width: 1070px) {
+                @media screen and (max-width: $break-lg) {
                     display: none;
                 }
             }
             .sp-img {
                     display: none;
-                    @media screen and (max-width: 1070px) {
+                    @media screen and (max-width: $break-lg) {
                         display: block;
                         margin: 0 auto;
                     }
@@ -3316,7 +3316,6 @@ body.showcase.fujitec {
             .alignleft, .alignright {
                 width: 345px;
             }
-
         }
     }
 
@@ -3371,23 +3370,26 @@ body.showcase.fujitec {
     }
 
     article.main .app-info {
-        padding: 70px 0 40px;
+        padding: 50px 0 40px;
         background: url(/img/fujitec/img_1.jpg) no-repeat right bottom;
         min-height: 621px;
         @media screen and (max-width: 1070px) {
+            background-size: 750px;
+        }
+        @media screen and (max-width: $break-lg) {
             background: none;
         }
         div {
             .sp-img {
                 display: none;
-                @media screen and (max-width: 1070px) {
+                @media screen and (max-width: $break-lg) {
                     display: block;
                     margin: 0 auto;
                 }
             }
             p {
-                margin: 0 650px 15px 0;
-                @media screen and (max-width: 1070px) {
+                margin: 0 590px 15px 0;
+                @media screen and (max-width: $break-lg) {
                     margin: 0 0 15px 0;
                 }
                 &:nth-of-type(2) {
@@ -3736,7 +3738,6 @@ body.showcase.wfp {
             .alignleft, .alignright {
                 width: 345px;
             }
-
         }
     }
 
@@ -3821,8 +3822,6 @@ body.showcase.wfp {
             margin-top: 0;
         }
         p {
-            @media screen and (max-width: 1070px) {
-            }
             @media screen and (max-width: $break) {
                 margin: 0 0 15px 0;
             }
@@ -4279,12 +4278,12 @@ body.showcase.ocj {
             }
         }
         p {
-            margin: 0 570px 15px 0;
+            margin: 0 550px 15px 0;
             @media screen and (max-width: $break-lg) {
                 margin: 0 370px 15px 0;
             }
             @media screen and (max-width: $break) {
-                margin: 0 0 15px 0;
+                margin: 0 0 35px 0;
             }
             &:nth-of-type(2) {
                 margin-bottom: 0;
