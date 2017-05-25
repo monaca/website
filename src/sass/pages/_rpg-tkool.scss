@@ -366,7 +366,8 @@ html body.rpg-tkool {
             }
         }
     }
-    .operating {
+    .requirement {
+      border-bottom: 1px solid #ccc;
         h2 {
             margin-bottom: 45px;
         }
@@ -405,7 +406,67 @@ html body.rpg-tkool {
         .box-try {
             padding: 0;
         }
-    }  
+    }
+    .rpgtkoolmv {
+        width: 940px;
+        min-width: initial;
+        @media screen and (max-width: 1300px) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        @media screen and (max-width: 1000px) {
+            width: 100%;
+        }
+        @media screen and (max-width: $break) {
+            width: 90%;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+        dl {
+            @media screen and (max-width: 1000px) {
+                margin-bottom: 60px;
+            }
+            @media screen and (max-width: $break) {
+                margin-bottom: 100px;
+            }
+        }
+        dt {
+            width: 30%;
+            @media screen and (max-width: 1000px) {
+                float: none;
+                width: 227px;
+            }
+        }
+        dd {
+            width: 564px;
+            float: left;
+            @media screen and (max-width: 1000px) {
+                width: 680px;
+                margin: 0 auto;
+                float: none;
+            }
+            @media screen and (max-width: $break) {
+                width: 100%;
+            }
+            p {
+                @media screen and (max-width: $break) {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        .box-try {
+            padding: 0;
+            @media screen and (max-width: 1000px) {
+                text-align: center;
+            }
+            .btn {
+                height: 50px;
+                line-height: 50px;
+                font-size: 16px;
+                padding: 0 20px;
+            }
+        }
+    }
 }
 .m-table {
     border: 1px solid #ccc;
