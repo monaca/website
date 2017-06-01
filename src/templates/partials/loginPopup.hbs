@@ -36,9 +36,11 @@
           </li>
         {{/is}}
         <li>
-          <button id="popup_login_btn" class="btn-green btn-long" type="button"><span class="loading-spinner spinner-w-green"></span><span class="btn-txt">{{#is language "ja"}}ログイン{{else}}Login{{/is}}</span></button>
-          {{#is language "ja"}}<button id="popup_login_btn" class="btn-gray btn-long" type="button" onclick="location.href='https://enterprise.monaca.mobi/register'">企業向けプランのサインアップはこちら</button>{{/is}}
-          <!-- <button id="popup_login_btn" class="btn-gray btn-long" type="button">{{#is language "ja"}}企業向けプランのサインアップはこちら{{else}}xxxxxxxx{{/is}}</button> -->
+          <button id="popup_login_btn" class="btn-green btn-long" type="button">
+            <span class="loading-spinner spinner-w-green"></span>
+            <span class="btn-txt">{{#is language "ja"}}ログイン{{else}}Login{{/is}}</span>
+          </button>
+          {{#is language "ja"}}<button id="popup_login_btn" class="btn-gray btn-long" type="button" onclick="location.href='https://enterprise.monaca.mobi/ja/'">企業向けプラン管理者のログインはこちら</button>{{/is}}
         </li>
       </ul>
       <input type="hidden" name="form[_csrf_token]" value="" id="loginpopup-csrf-token" />
