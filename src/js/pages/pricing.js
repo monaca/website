@@ -14,7 +14,7 @@
       $('body.pricing article.main .container ul.other-plan .box-1:nth-child(1)').css('margin-right', '0');
 
       if (loginData.status.isLogin) {
-        $('.btn-trial').html('Proプラン14日間無料トライアル開始');
+        $('.btn-trial').html(getProPlanTrialButtonLabel());
       }
 
     } else {
@@ -53,7 +53,7 @@
       contEl = document.getElementById("compare-cont-ja");
 
       if (loginData.status.isLogin) {
-        $('.btn-trial').html('Proプラン14日間無料トライアル開始');
+        $('.btn-trial').html(getProPlanTrialButonLabel());
       }
 
     } else {
@@ -125,5 +125,13 @@
       document.getElementById('important-info-ja-el').style.display = display;
     }
 
+  }
+
+  function getProPlanTrialButtonLabel() {
+    if (window.LANG == 'ja') {
+      return 'Proプラン14日間無料トライアル開始';
+    }
+
+    return 'Start a 14 day Pro Plan Free Trial';
   }
 })();
