@@ -35,7 +35,7 @@
     });
 
     $('.btn-enterprises-trial').click(function(){
-      location.href = '/enterprise.html';
+      location.href = 'https://enterprise.monaca.mobi/' + window.LANG + '/register';
     });
 
     displayNewPlanInfo(loginData.status.inJapan);
@@ -53,7 +53,7 @@
       contEl = document.getElementById("compare-cont-ja");
 
       if (loginData.status.isLogin) {
-        $('.btn-trial').html(getProPlanTrialButonLabel());
+        $('.btn-trial').html(getProPlanTrialButtonLabel());
       }
 
     } else {
@@ -88,7 +88,7 @@
     });
 
     $('.btn-enterprises-trial').click(function(){
-      location.href = '/enterprise.html';
+      location.href = 'https://enterprise.monaca.mobi/' + window.LANG + '/register';
     });
 
     displayNewPlanInfo(loginData.status.inJapan);
