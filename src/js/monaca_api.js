@@ -54,6 +54,7 @@
     }
   };
 
+  monacaApi.popupMsec = 400;
   monacaApi.loginCheck = function(status) {
     this.executedLoginCheck = true;
     loginData.status = status;
@@ -104,6 +105,23 @@
     if (loginData.profile != null) {
       $(".user-icon").attr("src",loginData.profile.gravatar);
     }
+  };
+
+  monacaApi.showSignupPopup = function() {
+    if (isSafari()) {
+      location.href=window.MONACA_API_URL + "/" + window.LANG + "/register/start";
+      return;
+    }
+
+    formUtil.resetError();
+    monacaApi.setCsrfToken("signuppopup-csrf-token", monacaApi.getBaseUrl() + "/" + window.LANG + "/api/register");
+
+    $('#signuppopup').fadeIn(monacaApi.popupMsec)
+      .find('input#signup_popup_email')
+      .focus();
+    $("#modal-overlay").fadeIn(monacaApi.popupMsec).one('click', function() {
+      closePopup(msec, 'signuppopup');
+    });
   };
 
   // Page Initialization;
@@ -232,6 +250,34 @@
       });
     }
   } , false);
+
+  monacaApi.setCsrfToken = function(elementId, url) {
+    monacaApi.getCsrfToken(url, function(token) {
+      $("#"+elementId).val(token);
+    });
+  }
+
+  monacaApi.getCsrfToken = function(url, callback) {
+    $.ajax({
+      type: "GET",
+      url: url,
+      xhrFields: {
+        withCredentials: true
+      },
+      dataType: "json",
+      success: function (msg) {
+        if (msg.result && msg.result.initOK) {
+          popup_csrf_token = msg.result.initOK._csrf_token;
+        } else if (msg.result && msg.result._csrf_token) {
+          popup_csrf_token = msg.result._csrf_token;
+        }
+        if (popup_csrf_token && callback) {
+          callback(popup_csrf_token);
+        }
+      },
+      error: function (msg) {}
+    });
+  }
 
   monacaApi.getUrlVars = function() {
     var vars = [], hash;

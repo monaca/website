@@ -30,7 +30,7 @@
       if (loginData.status.isLogin) {
         location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/pricing?type=1';
       } else {
-        location.href = '/register/start.html';
+        monacaApi.showSignupPopup();
       }
     });
 
