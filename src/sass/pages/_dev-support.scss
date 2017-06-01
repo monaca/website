@@ -4,9 +4,11 @@ body.devsupport {
     background: url(../img/devsupport/keyvisual.png) no-repeat center bottom, url(../img/devsupport/keyvisual_bg.png) repeat-x left bottom;
     padding-bottom: 0px;
     position: relative;
+    height: 500px;
     @media screen and (max-width: $break) {
         padding-bottom: 30px;
         background-size: cover;
+        height: auto;
     }
     @media screen and (max-width: $break-xs) {
         padding-bottom: 30px;
@@ -16,7 +18,7 @@ body.devsupport {
       font-weight: 400;
       line-height: 1.2;
       margin-bottom: 10px;
-      padding-top: 170px;
+      padding-top: 180px;
       text-align: left;
       text-shadow: 0 0 10px rgba(255, 255, 255, 1);
       @media screen and (max-width: $break) {
@@ -34,6 +36,19 @@ body.devsupport {
   section {
     h1 {
       margin-bottom: 40px;
+      font-size: 36px;
+      @media screen and (max-width: $break-xs) {
+        font-size: 26px;
+      }
+    }
+    h2 {
+      font-size: 27px;
+    }
+    ul {
+      margin: 0 auto;
+      @media screen and (max-width: $break-xs) {
+        width: 90%;
+      }
     }
   }
 
@@ -43,22 +58,14 @@ body.devsupport {
         padding-top: 50px;
         p:first-child {
           margin-bottom: 100px;
-          @media screen and (max-width: $break-xs) {
-            margin-bottom: 70px;
-          }
         }
       }
-      &:nth-of-type(2) {
-        @media screen and (max-width: $break) {
-          padding-bottom: 0;
-        }
+      @media screen and (max-width: $break) {
+        padding-bottom: 0;
       }
     }
   }
   
-  section.support {
-    border-bottom: none;
-  }
 
   section.menu {
     border-bottom: none;
@@ -83,27 +90,17 @@ body.devsupport {
           background-color: #f2f2f2;
           border: 1px solid #cccccc;
           font-size: 22px;
-          padding: 30px 0;
+          padding: 24px 0;
           text-align: center;
           @media screen and (max-width: $break) {
             padding: 20px 0;
-            &:last-child {
-              border-right: none;
-            }
           }
         }
       }
       tbody {
         tr {
-          height: 120px;
-          &:last-child th {
-            border-bottom: 1px solid #cccccc;
-          }
-          &.tech li {
-            display: inline-block;
-            white-space: nowrap;
-            width: 190px;
-            max-width: 33%;
+          th {
+            border: 1px solid #cccccc;
           }
           @media screen and (max-width: $break) {
             height: 100px;
@@ -111,19 +108,18 @@ body.devsupport {
         }
         th {
           font-size: 22px;
-          padding: 0 5px 0 0;
+          padding: 0;
           vertical-align: top;
-          width: 36%;
+          width: 25%;
           @media screen and (max-width: $break-xs) {
               font-weight: 700;
               width: 24%;
           }
           > span {
-            border-top: 1px solid #cccccc;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
             display: inline-block;
-            padding: 20px 5px;
+            padding: 20px 24px;
             width: 100%;
             height: 100%;
           }
@@ -134,11 +130,9 @@ body.devsupport {
           font-weight: 400;
           line-height: 1.6;
           padding: 20px;
-          width: 32%;
-          @media screen and (max-width: $break) {
-            &:last-child {
-              border-right: none;
-            }
+          width: 25%;
+          &:not(:first-child) {
+            text-align: right;
           }
           p {
             font-weight: 400;
@@ -177,6 +171,18 @@ body.devsupport {
           }
         }
       }
+
+      &.ticket {
+        tbody tr td {
+          width: 75%;
+          text-align: left;
+        }
+      }
+    }
+    p {
+      text-align: center;
+      padding: 14px;
+      margin-bottom: 80px;
     }
   }
 }

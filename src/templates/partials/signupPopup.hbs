@@ -1,7 +1,7 @@
 <div id="signuppopup">
 
-  <div id="signup-ok" class="signuppopup-container">
-    <h3>{{#is language "ja"}}アカウント作成{{else}}Sign Up{{/is}}</h3>
+  <div id="signup-ok" class="signuppopup-container clearfix">
+    <h3>{{#is language "ja"}}Monaca Cloud IDE サインアップ{{else}}Sign Up{{/is}}</h3>
     <div style="width: 100%; text-align: center;">
       <div id="signup-github" class="btn-github">
         <div class="github-img"></div>
@@ -30,15 +30,17 @@
         <input type="password" name="register[password_confirm]" maxlength="30" placeholder="{{#is language "ja"}}パスワード確認{{else}}Confirm password{{/is}}" class="password" id="signup_popup_password" />
       </li>
 
-      <li class="" style="font-size: 14px;">
+      <li class="policy" style="font-size: 14px;">
         <label for="agree_policy">
-          {{#is language "ja"}}<a href="/terms-of-service/index.html" target="_blank">Monacaの利用規約</a>に同意の上、アカウントの作成をお願いします。
+          {{#is language "ja"}}<a href="/terms-of-service/index.html" target="_blank">利用規約</a>に同意の上、アカウントの作成をお願いします。
           {{else}}By clicking the button below you agree to <a href="/terms-of-service/index.html" target="_blank">terms of use and privacy policy</a>.{{/is}}
         </label>
       </li>
       <li>
-        <button id="popup_signup_btn" type="button">{{#is language "ja"}}今すぐ試す{{else}}Sign Up{{/is}}</button>
-        <span class="loading"></span>
+        <button id="popup_signup_btn" class="btn-green btn-long loading" type="button"><span class="loading-spinner spinner-w-green"></span><span class="btn-txt">{{#is language "ja"}}今すぐ試す{{else}}Sign Up{{/is}}</span></button>
+        {{#is language "ja"}}<button id="popup_signup_btn" class="btn-gray btn-long" type="button" onclick="location.href='https://enterprise.monaca.mobi/register'">企業向けプランのサインアップはこちら</button>{{/is}}
+        <!-- <button id="popup_signup_btn" class="btn-gray btn-long" type="button">{{#is language "ja"}}企業向けプランのサインアップはこちら{{else}}xxxxxxxx{{/is}}</button> -->
+        <!-- <span class="loading"></span> -->
       </li>
     </ul>
     <input type="hidden" name="register[_csrf_token]" value="" id="signuppopup-csrf-token" />

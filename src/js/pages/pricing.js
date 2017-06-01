@@ -6,18 +6,36 @@
     loginData.autoDisplay = false;
 
     if (loginData.status.inJapan) {
-      document.getElementById('personal-plan-box').style.display = 'block';
+      $('.plan-ja').css('display', 'block');
+      
+      $('.plan-type-col-2').removeClass('logindata-status-inen');
+      $('.plan-type-col-2').addClass('logindata-status-injapan');
+
+      $('body.pricing article.main .container ul.other-plan .box-1:nth-child(1)').css('margin-right', '0');
+
+      if (loginData.status.isLogin) {
+        $('.btn-trial').html(getProPlanTrialButtonLabel());
+      }
+
     } else {
-      document.getElementById('developer-plan-box').style.display = 'block';
+      $('.plan-en').css('display', 'block');
+
+      $('.plan-type-col-2').removeClass('logindata-status-injapan');
+      $('.plan-type-col-2').addClass('logindata-status-inen');
     }
+
     document.getElementById('pricing-container').style.display = 'block';
 
-    $('#btn-trial').click(function(){
+    $('.btn-trial').click(function(){
       if (loginData.status.isLogin) {
         location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/pricing?type=1';
       } else {
         location.href = '/register/start.html';
       }
+    });
+
+    $('.btn-enterprises-trial').click(function(){
+      location.href = '/enterprise.html';
     });
 
     displayNewPlanInfo(loginData.status.inJapan);
@@ -26,9 +44,23 @@
 
   monacaPages["/pricing-detail.html"] = function(loginData) {
     loginData.autoDisplay = false;
+    var tableEl;
+    var contEl;
 
-    var tableEl = document.getElementById("compare-cont-table");
-    var contEl = document.getElementById("compare-cont");
+    if (loginData.status.inJapan) {
+      $('.plan-ja').css('display', 'block');
+      tableEl = document.getElementById("compare-cont-table-ja");
+      contEl = document.getElementById("compare-cont-ja");
+
+      if (loginData.status.isLogin) {
+        $('.btn-trial').html(getProPlanTrialButonLabel());
+      }
+
+    } else {
+      $('.plan-en').css('display', 'block');
+      tableEl = document.getElementById("compare-cont-table");
+      contEl = document.getElementById("compare-cont");
+    }
 
     contEl.addEventListener("scroll", setShadow);
     window.addEventListener("resize", setShadow);
@@ -46,6 +78,19 @@
     } else {
       $('.personal-plan').remove();
     }
+
+    $('.btn-trial').click(function(){
+      if (loginData.status.isLogin) {
+        location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/pricing?type=1';
+      } else {
+        location.href = '/register/start.html';
+      }
+    });
+
+    $('.btn-enterprises-trial').click(function(){
+      location.href = '/enterprise.html';
+    });
+
     displayNewPlanInfo(loginData.status.inJapan);
     displayBody();
   };
@@ -62,6 +107,8 @@
 
     var display = 'none';
   
+    /*
+
     if (inJapan) {
       // ja
       $('#important-info-ja-el').append(importantInfoJaEl);
@@ -72,8 +119,19 @@
       display = 'block';
     }
 
+    */
+
     if (document.getElementById('important-info-ja-el')) {
       document.getElementById('important-info-ja-el').style.display = display;
     }
+
+  }
+
+  function getProPlanTrialButtonLabel() {
+    if (window.LANG == 'ja') {
+      return 'Proプラン14日間無料トライアル開始';
+    }
+
+    return 'Start a 14 day Pro Plan Free Trial';
   }
 })();

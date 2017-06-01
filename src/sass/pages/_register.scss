@@ -82,6 +82,14 @@
       /*color: $_red;*/
     }
   }
+  .policy {
+    text-align: left;
+    text-indent: 0.1em;
+    margin-bottom: 25px;
+    a {
+      color: #337ab7;
+    }
+  }
 }
 
 #login {
@@ -189,6 +197,9 @@
     input[type=text], input[type=password], input[type=email], input[type=url] {
       box-sizing: border-box;
       width: 100%;
+    }
+    input[type=checkbox] {
+      margin-right: 4px;
     }
     margin-top: 6px;
     padding: 0;
@@ -351,6 +362,12 @@
         text-align: left;
       }
 
+      .forgotpass {
+        text-align: left;
+        margin-top: -8px;
+        margin-bottom: 20px;
+      }
+      
       input {
         &[type="text"],
         &[type="password"] {
@@ -376,6 +393,9 @@
           background-repeat: no-repeat;
           background-position: 10px 9px;
         }
+        &[type=checkbox] {
+          margin-right: 3px;
+        }
 
       }
       button {
@@ -390,8 +410,42 @@
         border: 1px solid #ec761f;
         color: white;
         font-weight: 600;
+        position: relative;
         &:hover {
           opacity: 0.9;
+        }
+        &.btn-green {
+          background-color: #8bcc37;
+          border-color: #8bcc37;
+          &.btn-long {
+            width: 100%;
+          }
+        }
+        &.btn-gray {
+          background-color: #f8f8f8;
+          border: 1px solid #d9d9d9;
+          color: #666;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: -0.05em;
+          text-align: left;
+          position: relative;
+          &.btn-long {
+            width: 100%;
+          }
+          &:after {
+            display: block;
+            content: url("/img/careers/arrow_gray.png");
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            width: 18px;
+            height: 18px;
+            margin-top: -9px;
+          }
+          &:hover {
+            opacity: 0.7;
+          }
         }
       }
       .error {
@@ -400,22 +454,17 @@
         display: none;
         font-size: 14px;
       }
-      .loading {
-        background: url(/img/login/loading-gif.gif) no-repeat left top;
-        width: 16px;
-        height: 16px;
-        margin: 14px 16px 0 0;
-        float: right;
-        display: none;
-      }
     }
-
     .bottom {
       position: absolute;
       bottom: 15px;
       left: 15px;
     }
-
+    .bottom-center {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 5px;
+    }
   }
 
   #signup-ng {
@@ -757,4 +806,41 @@ body.register {
 #signup .error {
   padding-bottom: 6px;
   line-height: 16px;
+}
+.loading-spinner {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -15px;
+}
+.spinner-w-green {
+  background: url(/img/login/spinner_w_green_30.gif) no-repeat left top;
+}
+.loading-spinner {
+	-webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -ms-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+  opacity: 0;
+  z-index: 0;
+}
+.loading .loading-spinner {
+  opacity: 1;
+  z-index: 10;
+}
+.btn-txt {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 1;
+  z-index: 10;
+}
+.loading .btn-txt {
+  opacity: 0;
+  z-index: 0;
 }
