@@ -95,6 +95,48 @@
     displayBody();
   };
 
+  monacaPages["/pricing-detail-old.html"] = function(loginData) {
+    loginData.autoDisplay = false;
+    var tableEl;
+    var contEl;
+
+    if (loginData.status.inJapan) {
+      $('.plan-ja').css('display', 'block');
+      tableEl = document.getElementById("compare-cont-table-ja");
+      contEl = document.getElementById("compare-cont-ja");
+
+      if (loginData.status.isLogin) {
+        $('.btn-trial').html(getProPlanTrialButtonLabel());
+      }
+
+    } else {
+      $('.plan-en').css('display', 'block');
+      tableEl = document.getElementById("compare-cont-table");
+      contEl = document.getElementById("compare-cont");
+    }
+
+    //contEl.addEventListener("scroll", setShadow);
+    //window.addEventListener("resize", setShadow);
+    //setShadow();
+
+    $('.btn-tooltip').tooltip();
+
+    function setShadow(event) {
+      (contEl.scrollLeft > 0) ? contEl.classList.add("leftshadow") : contEl.classList.remove("leftshadow");
+      (contEl.clientWidth + contEl.scrollLeft < tableEl.clientWidth) ? contEl.classList.add("rightshadow") : contEl.classList.remove("rightshadow");
+    }
+
+    if (loginData.status.inJapan) {
+      $('.dev-plan').remove();
+    } else {
+      $('.personal-plan').remove();
+    }
+
+    displayNewPlanInfo(loginData.status.inJapan);
+    displayBody();
+  };
+
+
 
   function displayNewPlanInfo(inJapan) {
     var importantInfoJaEl = '<div class="cmn-important-info"><a href="/important-info/info-new-plan.html" target="_blamk"><h2>';
