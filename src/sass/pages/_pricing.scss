@@ -66,8 +66,6 @@ body.pricing article.main {
                             padding: 10px 0;
                         }
                     }
-
-                    
                 }
             }
         }
@@ -331,6 +329,10 @@ body.pricing article.main {
                     float: none;
                     span {
                         color: #575e66;
+                        &.all-features {
+                            font-weight: bold;
+                            font-size: 15px;
+                        }
                     }
                 }
             }
