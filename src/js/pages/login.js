@@ -99,7 +99,8 @@
 
       var sendData = {
         'form[_csrf_token]': csrf_token,
-        'form[email]':       $('#lost-password-email').val()
+        'form[email]': $('#lost-password-email').val(),
+        'referrer_page': window.getQueryString('from') || ""
       };
 
       $.ajax({
