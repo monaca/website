@@ -1,7 +1,6 @@
 "use strict";
 
 $(function() {
-
 });
 
 var getQueryString = function ( field, url ) {
