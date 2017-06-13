@@ -203,6 +203,101 @@ body.showcase-index {
             padding: 0 45px;
         }
     }
+    .movie {
+        margin: 0 0 100px;
+        .headline {
+            padding: 20px 15px;
+            width: 225px;
+            height: 233px;
+            box-sizing: border-box;
+            border: solid 1px #d4d4d4;
+            background: #fafafa;
+            position: relative;
+            float: left;
+            @media screen and (max-width: 1170px) {
+                padding: 20px 0;
+                margin: 0 0 50px;
+                float: none;
+                width: 100%;
+                height: auto;
+                border: none;
+                background: none;
+                h2 {
+                    margin: 0;
+                    float: left;
+                    width: 50%;
+                    @media screen and (max-width: $break) {
+                        width: auto;
+                    }
+                }
+                .pc-break {
+                    display: none;
+                    }
+                }
+                .sp-cf {
+                    display: inline-block;
+                    min-height: 1%;
+                    display: block;
+                }
+                .sp-cf:after {
+                    content: ".";
+                    display: block;
+                    height: 0;
+                    clear: both;
+                    visibility: hidden;
+                }
+            }
+            a {
+                position: absolute;
+                bottom: 20px;
+                left: 10px;
+                @media screen and (max-width: 1170px) {
+                    position: relative;
+                    float: right;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+            .vimeo {
+                @media screen and (max-width: 1170px) {
+                    -webkit-justify-content: center;
+                    justify-content: center;
+
+                }
+                iframe {
+                    margin: 0 0 0 12px;
+                    float: right;
+                    @media screen and (max-width: 1170px) {
+                        margin: 0;
+                        float: none;
+                    }
+                    @media screen and (max-width: 927px) {
+                        display: none;
+                    }
+            }
+        }
+        .break-vimeo {
+            display: none;
+            @media screen and (max-width: 927px) {
+                display: block;
+                height: 0;
+                overflow: hidden;
+                padding: 30px 0 56.25%;
+                position: relative;
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 49% !important;
+                    height: 49% !important;
+                    float: right;
+                }
+                iframe:nth-child(odd) {
+                    left: 0;
+                }
+            }
+        }
+    }
 }
 
 body.showcase {
