@@ -51,6 +51,10 @@ body.headline {
                     @media screen and (max-width: $break-xs) {
                         text-align: center;
                     }
+
+                    > .wspc {
+                      margin-right: 1em;
+                    }
                 }
                 > .headline-entry {
                     border-bottom: 1px solid #ccc;
@@ -99,7 +103,7 @@ body.headline {
                                 margin-left: 70px;
                                 @media screen and (max-width: $break) {
                                     margin-left: 0;
-                                    
+
                                 }
                             }
                             > .headline-entry-comment-news {
@@ -238,7 +242,7 @@ body.headline {
                 height: 50px;
                 border-bottom: 1px solid #ccc;
                 margin-bottom: 50px;
-                &.attension { 
+                &.attension {
                     margin-bottom: 10px;
                 }
                 & > li {
@@ -274,7 +278,7 @@ body.headline {
                         margin-top: -4px;
                         > a {
                             color: #0062b2;
-                        } 
+                        }
                     }
                     &.attension > a {
                         color: #d40004;
