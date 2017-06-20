@@ -410,6 +410,12 @@ body.solution-partner {
           width: 100%;
           box-sizing: border-box;
         }
+        ul {
+          li {
+            padding-left:1em;
+            text-indent:-1em;
+          }
+        }
         .bold-headline {
           float: none;
           @media screen and (max-width: $break) {
