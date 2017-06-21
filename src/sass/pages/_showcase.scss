@@ -712,6 +712,16 @@ body.showcase {
                 line-height: 61px;
                 padding: 0 45px;
             }
+            .list-back {
+                margin: 40px auto 0;
+                width: 160px;
+                display: block;
+                font-size: 22px;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
         }
         .alignleft {
             float: left;
