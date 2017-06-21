@@ -257,6 +257,10 @@ body.showcase-index {
                     bottom: 0;
                     left: 0;
                 }
+                i {
+                    font-size: 11px;
+                    vertical-align: middle;
+                }
             }
             .vimeo {
                 @media screen and (max-width: 1170px) {
@@ -439,7 +443,7 @@ body.showcase {
             box-sizing: border-box;
             border: solid 1px #d4d4d4;
             border-radius: 5px;
-            color: #b1b9c3;
+            color: #999;
             float: right;
             @media screen and (max-width: $break) {
                 display: none;
