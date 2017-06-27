@@ -227,7 +227,15 @@ body.showcase-index {
                     float: left;
                     width: 50%;
                     @media screen and (max-width: $break) {
+                        margin: 0 0 4%;
                         width: auto;
+                        float: none;
+                    }
+                }
+                a {
+                    @media screen and (max-width: $break) {
+                        display: block;
+                        text-align: right;
                     }
                 }
                 .pc-break {
@@ -245,6 +253,12 @@ body.showcase-index {
                     height: 0;
                     clear: both;
                     visibility: hidden;
+                }
+                @media screen and (max-width: 920px) {
+                    margin: 0 0 20px;
+                }
+                @media screen and (max-width: $break) {
+                    margin: 0;
                 }
             }
             a {
@@ -4841,7 +4855,7 @@ $modal-bg-color: #333;
     position: absolute;
     z-index: 2;
     top: -35px;
-    right: -35px;
+    right: 0;
     display: inline-block;
     width: 35px;
     height: 35px;
