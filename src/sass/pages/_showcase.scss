@@ -396,7 +396,7 @@ body.showcase {
         text-align: left;
         width: 1080px;
         @media screen and (max-width: $break) {
-            padding: 100px 0px 0;
+            padding: 80px 0px 0;
         }
         @media screen and (max-width: 1170px) {
             padding-left: 5%;
@@ -477,7 +477,7 @@ body.showcase {
                 margin-top: 8px;
             }
         }
-        .pc-back {
+        .back-link {
             padding: 5px 0;
             margin: 0 0 10px 0;
             width: 130px;
@@ -490,20 +490,15 @@ body.showcase {
             color: #333;
             float: right;
             @media screen and (max-width: $break) {
-                display: none;
+                margin-bottom: 0 0 7%;
+                text-decoration: underline;
+                background: none;
+                border: none;
+                color: #337ab7;
             }
             &:hover {
                 opacity: .6;
                 text-decoration: none;
-            }
-        }
-        .sp-back {
-            margin-bottom: 3%;
-            display: none;
-            float: right;
-            text-decoration: underline;
-            @media screen and (max-width: $break) {
-                display: block;
             }
         }
         .info {
