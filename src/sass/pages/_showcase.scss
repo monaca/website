@@ -35,6 +35,12 @@ body.showcase-index {
                 font-size: 48px;
             }
         }
+        h2 {
+            margin: 0 0 10px;
+            font-size: 24px;
+            text-align: left;
+            font-weight: 400;
+        }
     }
     .carousel-indicators {
         margin: 40px 0 80px;
@@ -197,6 +203,177 @@ body.showcase-index {
             padding: 0 45px;
         }
     }
+    .movie {
+        margin: 0 0 100px;
+        .headline {
+            padding: 20px 15px;
+            width: 225px;
+            height: 233px;
+            box-sizing: border-box;
+            border: solid 1px #d4d4d4;
+            background: #fafafa;
+            position: relative;
+            float: left;
+            @media screen and (max-width: 1170px) {
+                padding: 20px 0;
+                margin: 0 0 50px;
+                float: none;
+                width: 100%;
+                height: auto;
+                border: none;
+                background: none;
+                h2 {
+                    margin: 0;
+                    float: left;
+                    width: 50%;
+                    @media screen and (max-width: $break) {
+                        margin: 0 0 4%;
+                        width: auto;
+                        float: none;
+                    }
+                }
+                a {
+                    @media screen and (max-width: $break) {
+                        display: block;
+                        text-align: right;
+                    }
+                }
+                .pc-break {
+                    display: none;
+                    }
+                }
+                .sp-cf {
+                    display: inline-block;
+                    min-height: 1%;
+                    display: block;
+                }
+                .sp-cf:after {
+                    content: ".";
+                    display: block;
+                    height: 0;
+                    clear: both;
+                    visibility: hidden;
+                }
+                @media screen and (max-width: 920px) {
+                    margin: 0 0 20px;
+                }
+                @media screen and (max-width: $break) {
+                    margin: 0;
+                }
+            }
+            a {
+                position: absolute;
+                bottom: 20px;
+                left: 10px;
+                @media screen and (max-width: 1170px) {
+                    position: relative;
+                    float: right;
+                    bottom: 0;
+                    left: 0;
+                }
+                i {
+                    font-size: 11px;
+                    vertical-align: middle;
+                }
+            }
+            .vimeo {
+                position: relative;
+                @media screen and (max-width: 1170px) {
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                }
+                @media screen and (max-width: 927px) {
+                    display: none;
+                }
+                button {
+                    padding: none;
+                    width: 415px;
+                    height: 233px;
+                    background: none;
+                    border: none;
+                    position: absolute;
+                    @media screen and (max-width: 1170px) {
+                        margin: 0;
+                        float: none;
+                    }
+                    @media screen and (max-width: 927px) {
+                        display: none;
+                    }
+                    iframe {
+                        margin: 0 0 0 12px;
+                        float: right;
+                        @media screen and (max-width: 1170px) {
+                            margin: 0;
+                            float: none;
+                        }
+                        @media screen and (max-width: 927px) {
+                            display: none;
+                        }
+                    }
+            }
+        }
+        .break-vimeo {
+            display: none;
+            position: relative;
+            @media screen and (max-width: 927px) {
+                display: block;
+                height: 0;
+                overflow: hidden;
+                padding: 30px 0 24%;
+                position: relative;
+                width: 49%;
+                float: right;
+                button {
+                    padding: none;
+                    width: 100%;
+                    height: 68%;
+                    background: none;
+                    border: none;
+                    position: absolute;
+                }
+                iframe {
+                    width: 100%;
+                }
+            }
+            @media screen and (max-width: 900px) {
+                padding: 30px 0 26%;
+                button {
+                    height: 70%;
+                }
+            }
+            @media screen and (max-width: $break) {
+                padding: 30px 0 30%;
+                button {
+                    height: 65%;
+                }
+            }
+            @media screen and (max-width: 700px) {
+                button {
+                    height: 71%;
+                }
+            }
+            @media screen and (max-width: $break-xs) {
+                button {
+                    height: 76%;
+                }
+            }
+            @media screen and (max-width: 414px) {
+                padding: 30px 0 40%;
+                button {
+                    height: 80%;
+                }
+            }
+            @media screen and (max-width: 320px) {
+                padding: 30px 0 50%;
+                button {
+                    height: 80%;
+                }
+            }
+        }
+        .mr {
+            margin: 0 1% 0 0;
+        }
+    }
 }
 
 body.showcase {
@@ -215,9 +392,12 @@ body.showcase {
         -moz-box-sizing: content-box;
         box-sizing: content-box;
         margin: 0 auto;
-        padding: 100px 0px 0;
+        padding: 70px 0px 0;
         text-align: left;
         width: 1080px;
+        @media screen and (max-width: $break) {
+            padding: 80px 0px 0;
+        }
         @media screen and (max-width: 1170px) {
             padding-left: 5%;
             padding-right: 5%;
@@ -232,6 +412,7 @@ body.showcase {
             padding: 10px 0 0 112px;
             @media screen and (max-width: $break) {
                 padding: 0 0 0 75px;
+                margin-bottom: 10px;
             }
             em {
                 color: #57a100;
@@ -294,6 +475,30 @@ body.showcase {
                 color: #666;
                 font-size: 14px;
                 margin-top: 8px;
+            }
+        }
+        .back-link {
+            padding: 5px 0;
+            margin: 0 0 10px 0;
+            width: 130px;
+            text-align: center;
+            display: block;
+            background: #f8f8f8;
+            box-sizing: border-box;
+            border: solid 1px #c8c8c8;
+            border-radius: 5px;
+            color: #333;
+            float: right;
+            @media screen and (max-width: $break) {
+                margin-bottom: 0 0 7%;
+                text-decoration: underline;
+                background: none;
+                border: none;
+                color: #337ab7;
+            }
+            &:hover {
+                opacity: .6;
+                text-decoration: none;
             }
         }
         .info {
@@ -515,6 +720,16 @@ body.showcase {
                 height: 60px;
                 line-height: 61px;
                 padding: 0 45px;
+            }
+            .list-back {
+                margin: 40px auto 0;
+                width: 160px;
+                display: block;
+                font-size: 22px;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
             }
         }
         .alignleft {
@@ -4181,6 +4396,9 @@ body.showcase.ocj {
     article.main header {
         padding: 10px 0 17px 125px;
         background-image: url(/img/ocj/icn_app_ocj_ja.png);
+        @media screen and (max-width: $break) {
+            padding: 0 0 17px 125px;
+        }
         @media screen and (max-width: $break-xs) {
             padding: 0 0 0 75px;
             background: url(/img/ocj/icn_app_ocj_ja.png) left center no-repeat;
@@ -4655,5 +4873,142 @@ body.showcase.showcase {
               width: 100%;
             }
         }
+    }
+}
+
+//vimeo
+$animation-speed: .3s;
+$animation-function: ease-out;
+$backdrop-color: rgba(0, 0, 0, .5);
+$modal-bg-color: #333;
+
+@keyframes modal-video {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modal-video-inner {
+    from {
+        transform: translate(0, 100px);
+    }
+
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+.modal-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $backdrop-color;
+    z-index: 1000000;
+    cursor: pointer;
+    opacity: 1;
+    animation-timing-function: $animation-function;
+    animation-duration: $animation-speed;
+    animation-name: modal-video;
+    -webkit-transition: opacity $animation-speed $animation-function;
+    -moz-transition: opacity $animation-speed $animation-function;
+    -ms-transition: opacity $animation-speed $animation-function;
+    -o-transition: opacity $animation-speed $animation-function;
+    transition: opacity $animation-speed $animation-function;
+}
+
+.modal-video-close {
+    opacity: 0;
+
+    & .modal-video-movie-wrap {
+        -webkit-transform: translate(0, 100px);
+        -moz-transform: translate(0, 100px);
+        -ms-transform: translate(0, 100px);
+        -o-transform: translate(0, 100px);
+        transform: translate(0, 100px);
+    }
+}
+
+.modal-video-body {
+    max-width: 940px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: table;
+}
+
+.modal-video-inner {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-video-movie-wrap {
+    width: 100%;
+    height: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    background-color: $modal-bg-color;
+    animation-timing-function: $animation-function;
+    animation-duration: $animation-speed;
+    animation-name: modal-video-inner;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-transition: -webkit-transform $animation-speed $animation-function;
+    -moz-transition: -moz-transform $animation-speed $animation-function;
+    -ms-transition: -ms-transform $animation-speed $animation-function;
+    -o-transition: -o-transform $animation-speed $animation-function;
+    transition: transform $animation-speed $animation-function;
+
+    & iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.modal-video-close-btn {
+    position: absolute;
+    z-index: 2;
+    top: -35px;
+    right: 0;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border: none;
+    background: transparent;
+
+    &:before {
+        transform: rotate(45deg);
+    }
+
+    &:after {
+        transform: rotate(-45deg);
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        margin-top: -1px;
+        background: #fff;
+        border-radius: 5px;
+        margin-top: -6px;
     }
 }
