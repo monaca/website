@@ -27,7 +27,8 @@
   };
 
   monacaPages["/headline/fault.html"] = function (loginData) {
-    getIssues( { lang : window.LANG , type : "fault" , limit : limit } ,
+    var category = window.getQueryString('category');
+    getIssues( { lang : window.LANG , type : "fault" , limit : limit, category : category} ,
       function(data) {
         appendIssues(
           window.LANG , $(".headline-entries") , data
@@ -86,13 +87,13 @@
   function getIssues(options,success,fail) {
     var lang = options.lang || 'en';
     var limit = options.limit || 50;
-    
+    var category = options.category || '';
     $.ajax( {
       type : "GET",
       url : monacaApi.getBaseUrl() + "/" + lang + "/api/issue/list",
       dataType : "JSON",
       contentType : "text/plain",
-      data : { limit : limit },
+      data : { limit : limit, category: category},
       xhrFields: {
         withCredentials: true
       },
