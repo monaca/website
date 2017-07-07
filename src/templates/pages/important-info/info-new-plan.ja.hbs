@@ -171,14 +171,14 @@ description: 2017年6月1日よりMonacaの料金プランを改定させてい�
                 <tr><th><p>デバッグビルド</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
                 <tr><th><p>アドホックビルド</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
                 <tr><th><p>リリースビルド</p></th><td>〇</td><td>〇</td><td>〇<br /><small>※トライアル期間を除く</small></td><td>〇</td><!--td>〇</td--></tr>
-                <tr><th><p>In-Houseビルド</p></th><td></td><td></td><td>〇</td><td>〇</td><!--td></td--></tr>
+                <tr><th><p>In-Houseビルド ※1</p></th><td></td><td></td><td>〇</td><td>〇</td><!--td></td--></tr>
                 <tr><th><p>iOSアップロード</p></th><td></td><td>〇<br /><span>※プロジェクト単位課金</span></td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
                 <tr><th><p>カスタムプラグイン</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td></td--></tr>
                 <tr><th><p>プラグインバージョン選択</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td></td--></tr>
                 <tr><th><p>エクスポート</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td>〇</td--></tr>
                 <tr><th><p>Cordovaバージョン</p></th><td>最新2バージョンのみ</td><td>最新2バージョンのみ<!--br />オプションでステイ可能--></td><td>旧版も利用可能</td><td>旧版も利用可能</td><!--td>最新版のみ</td--></tr>
-                <tr><th><p>ストレージ ※1</p></th><td>250<span>MB</span></td><td>1<span>GB</span></td><td>10<span>GB/開発者</span></td><td>10<span>GB/開発者</span></td><!--td>〇</td--></tr>
-                <tr><th><p>プロジェクト自動退避 ※2</p></th><td>〇</td><td></td><td></td><td></td><!--td>?</td--></tr>
+                <tr><th><p>ストレージ ※2</p></th><td>250<span>MB</span></td><td>1<span>GB</span></td><td>10<span>GB/開発者</span></td><td>10<span>GB/開発者</span></td><!--td>〇</td--></tr>
+                <tr><th><p>プロジェクト自動退避 ※333</p></th><td>〇</td><td></td><td></td><td></td><!--td>?</td--></tr>
                 <tr><th><p>自動退避された<br />プロジェクトの復旧</p></th><td></td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr>
             </tbody>
         </table>
@@ -214,8 +214,8 @@ description: 2017年6月1日よりMonacaの料金プランを改定させてい�
         <table>
             <caption>バックエンドサービス</caption>
             <tbody>
-                <tr><th><p>プッシュ通知 ※3</p></th><td>1,000<span>/月</span></td><td>1,000<span>/月</span></td><td>100,000<span>/月</span></td><td>100,000<span>/月</span></td><!--td>1000<span>/月</span></td--></tr>
-                <tr><th><p>APIコール数 ※4</p></th><td>100,000<span>/月</span></td><td>100,000<span>/月</span></td><td>5,000,000<span>/月</span></td><td>5,000,000<span>/月</span></td><!--td>10,000<span>/月</span></td--></tr>
+                <tr><th><p>プッシュ通知 ※4</p></th><td>1,000<span>/月</span></td><td>1,000<span>/月</span></td><td>100,000<span>/月</span></td><td>100,000<span>/月</span></td><!--td>1000<span>/月</span></td--></tr>
+                <tr><th><p>APIコール数 ※5</p></th><td>100,000<span>/月</span></td><td>100,000<span>/月</span></td><td>5,000,000<span>/月</span></td><td>5,000,000<span>/月</span></td><!--td>10,000<span>/月</span></td--></tr>
                 <tr><th><p>バックエンド数</p></th><td>3</td><td>10</td><td>無制限</td><td>無制限</td><!--td>10</td--></tr>
                 <!--tr><th><p>ユーザー管理</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr>
                 <tr><th><p>データコレクション<br/>（クラウドデータベース）</p></th><td>〇</td><td>〇</td><td>〇</td><td>〇</td><!--td>?</td--></tr-->
@@ -273,10 +273,11 @@ description: 2017年6月1日よりMonacaの料金プランを改定させてい�
         </div>
 
         <p style="font-size: 85%;">
-            ※1 ストレージは共有の領域に確保されます。専用ストレージは別途お見積り下さい。<br />
-            ※2 Freeプランの場合、180日以上ログインしていない利用者の方を対象にプロジェクトデータ一式がアーカイブストレージに移動され、ダッシュボードから利用できなくなります。<br />
-            ※3 Monacaバックエンドからプッシュ通知を送信できる回数となります。プッシュ通知回数は送信された端末数でカウントされます。<br />
-            ※4 「Monaca バックエンドAPI」「バックエンドマネジメントAPI」を呼び出せる回数となります。
+            ※1 旧プランのPersonalプランでは、In-Houseビルドはご利用いただけません。<br />
+            ※2 ストレージは共有の領域に確保されます。専用ストレージは別途お見積り下さい。<br />
+            ※3 Freeプランの場合、180日以上ログインしていない利用者の方を対象にプロジェクトデータ一式がアーカイブストレージに移動され、ダッシュボードから利用できなくなります。<br />
+            ※4 Monacaバックエンドからプッシュ通知を送信できる回数となります。プッシュ通知回数は送信された端末数でカウントされます。<br />
+            ※5 「Monaca バックエンドAPI」「バックエンドマネジメントAPI」を呼び出せる回数となります。
         </p>
     </section>
 
