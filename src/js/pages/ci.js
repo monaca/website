@@ -41,9 +41,9 @@
     }
 
     if (loginData.status.inJapan) {
-      $('.dev-plan').remove();
+      $('.foreign-plan').remove();
     } else {
-      $('.personal-plan').remove();
+      $('.japan-plan').remove();
     }
 
     displayBody();
