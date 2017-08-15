@@ -20,6 +20,24 @@
     });
   };
 
+  monacaPages["/service/training.html"] = function () {
+    if (window.LANG == 'en') return;
+
+    getEvents({lang: window.LANG, limit: limit, all: true},
+      function (data) {
+        appendEvents($(".events-entries"), data);
+      }
+    );
+
+    $(".events-more").click(function () {
+      getEvents({lang: window.LANG, limit: limit, entry_num: $(".events-entry").size()},
+        function (data) {
+          appendEvents($(".events-entries"), data);
+        }
+      );
+    });
+  };
+
   monacaPages["/events/training.html"] = function () {
     if (window.LANG == 'en') return;
 
