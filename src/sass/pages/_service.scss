@@ -1630,7 +1630,7 @@ body.lang-en section#support {
     box-sizing: border-box;
   }
   .text {
-    margin: 0 auto 50px;
+    margin: 0 auto 80px;
     padding: 0 95px;
     width: 1170px;
     @media screen and (max-width: 1170px) {
@@ -2191,6 +2191,9 @@ body.lang-en section#support {
     margin-bottom: 100px;
     padding-bottom: 100px;
   }
+}
+.btn-container.detail {
+  margin-bottom: 60px;
 }
 .btn-h56 {
   @extend %flat-btn;
