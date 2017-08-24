@@ -157,3 +157,24 @@ description: Monacaサポート＆サービス - クラウド上のアプリ開�
       });
     });
   </script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script type="text/javascript">
+  {{#is language "ja"}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#aside-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:ja"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{else}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#aside-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:en"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{/is}}
+</script>

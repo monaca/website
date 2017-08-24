@@ -42,6 +42,11 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
     <h1 class="for-technical">テクニカルサポート</h1>
     <h1 class="for-bugs">障害・不具合報告</h1>
 
+    <p>下のフォームにて検索キーワード(例:'Android Build', 'Monaca CLI')を入力し、お問い合わせに関する内容をMonacaドキュメントから探すことができます。解決しない場合は、以下のフォームをご記入ください</p>
+    <div class="aside-search" id="aside-search" style="padding-top: 10px; padding-bottom: 20px;">
+      <input type="search" id="technical-search-doc" placeholder="Question Keyword"><br />
+    </div>
+
     <p class="notification for-technical">テクニカルサポートは有償サービスです。利用には、Proプラン以上の加入とサポートチケットが必要です。</p>
     <hr class="for-technical">
 
@@ -197,3 +202,25 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
     </div>
   </div>
 </section>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script type="text/javascript">
+  {{#is language "ja"}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#technical-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:ja"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{else}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#technical-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:en"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{/is}}
+</script>
