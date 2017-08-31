@@ -41,8 +41,14 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
     <h1 class="for-technical">Advanced Technical support</h1>
     <h1 class="for-bugs">Report Issue</h1>
 
+    <p>For instant answers, input the keyword of your question in the textbox. For example: Android Build, Monaca CLI, Backend, etc. If you couldn't get the right answer, please fill in the form below. </p>
+    <div class="aside-search" id="aside-search" style="padding-top: 10px; padding-bottom: 20px;">
+      <input type="search" id="technical-search-doc" placeholder="Question Keyword"><br />
+    </div>
+
     <p class="notification for-technical">Technical support requires a valid subscription.<br>
     You need to have at least Personal Plan and a Support ticket to ask for support.</p>
+
     <hr class="for-technical">
     <p class="for-bugs">Before reporting a issue, please check <a href="/headline/fault.html">Status and Known Issues.</a></p>
 
@@ -196,3 +202,24 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
     </div>
   </div>
 </section>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script type="text/javascript">
+  {{#is language "ja"}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#technical-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:ja"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{else}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#technical-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:en"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{/is}}
+</script>

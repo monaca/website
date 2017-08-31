@@ -12,6 +12,12 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
 
     <div id="content">
       <form class="feedback-form" id="contactForm">
+
+        <p>For instant answers, input the keyword of your question in the textbox. For example: Android Build, Monaca CLI, Backend, etc. If you couldn't get the right answer, please fill in the form below. </p>
+        <div class="aside-search" id="aside-search" style="padding-top: 10px; padding-bottom: 20px;">
+          <input type="search" id="inquiry-search-doc" placeholder="Question Keyword"><br />
+        </div>
+        
         <div class="feedback-item feedback-item-radio">
           <h2>Type of Inquiry:<span style="color:red"></span></h2>
           <ul id="question-type-radio"></ul>
@@ -78,3 +84,24 @@ description: Cloud powered HTML5 hybrid app development environment. Code and bu
 
   </div>
 </section>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script type="text/javascript">
+  {{#is language "ja"}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#inquiry-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:ja"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{else}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#inquiry-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:en"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{/is}}
+</script>

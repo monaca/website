@@ -9,8 +9,13 @@ viewport: width=1200px
   <h1>Support &amp; Service</h1>
   <p>Need help or have a message for us? There are many ways to contact us.<br />
     Select from the options below and our Support Team will<br />gladly answer your questions.
-  </p>
+  </p><br>
+  <p>For instant answers, input the keyword of your question in the textbox. For example: Android Build, Monaca CLI, Backend, etc.</p>
+  <div class="aside-search" id="aside-search">
+    <input type="search" id="aside-search-doc" placeholder="Question Keyword"><br />
+  </div>
 </div>
+
 <div class="container service-container">
   <ul class="column-2">
     <li class="box-1" tile="2">
@@ -73,3 +78,24 @@ Our professional team will help you solve the issues in your program or provide 
     </div>
   </div>
 </div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script type="text/javascript">
+  {{#is language "ja"}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#aside-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:ja"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{else}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#aside-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:en"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{/is}}
+</script>

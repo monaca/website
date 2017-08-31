@@ -9,6 +9,11 @@ description: Monacaサポート＆サービス - クラウド上のアプリ開�
       <div class="container">
         <h1>サポート＆サービス</h1>
 
+        <p>下のフォームにて検索キーワード(例:'Android Build', 'Monaca CLI')を入力し、お問い合わせに関する内容をMonacaドキュメントから探すことができます。</p>
+        <div class="aside-search" id="aside-search" style="padding-top: 10px; padding-bottom: 40px;">
+          <input type="search" id="aside-search-doc" placeholder="キーワード"><br />
+        </div>
+
         <div class="flex-container clearfix">
           <section class="support-index-box box-04">
             <h2 class="row2-title">テクニカルサポート・<br>コードレビュー</h2>
@@ -157,3 +162,24 @@ description: Monacaサポート＆サービス - クラウド上のアプリ開�
       });
     });
   </script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script type="text/javascript">
+  {{#is language "ja"}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#aside-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:ja"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{else}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#aside-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:en"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{/is}}
+</script>
