@@ -84,15 +84,16 @@
       displayBody();
     }
 
-    function createSendData() {
+    function createSendData(with_token) {
       var sendData = {
         "inquiry[message]":      $('#message').val(),
         "inquiry[name]":         $('#name').val(),
         "inquiry[email]":        $('#email').val(),
-        "inquiry[_csrf_token]":  initFormData['_csrf_token'],
         "inquiry[subject]":      $('#subject').val(),
         "inquiry[product_type]": $('#product-type').val()
       };
+
+      if(with_token) sendData["inquiry[_csrf_token]"] = initFormData['_csrf_token'];
 
       $('#question-type-radio :radio:checked').each(function(){
         sendData['inquiry[question_type]'] = $(this).val();
@@ -167,7 +168,7 @@
 
       $("#send").click(function() {
         formUtil.disableAllInput();
-        var sendData = createSendData();
+        var sendData = createSendData(true);
         $.ajax({
           type: "POST",
           url: monacaApi.getBaseUrl() + "/" + window.LANG + "/support/technical_io/" + tag,
