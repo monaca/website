@@ -168,8 +168,7 @@
       $("#send").click(function() {
         formUtil.disableAllInput();
         var sendData = createSendData();
-
-        $.ajax( {
+        $.ajax({
           type: "POST",
           url: monacaApi.getBaseUrl() + "/" + window.LANG + "/support/technical_io/" + tag,
           xhrFields: {
@@ -258,15 +257,15 @@
     function createSendData() {
       var sendData = {
         "tag": tag,
-        "support[support_type]":    $('#support-type').val(),
-        "support[message]":         $('#message').val(),
-        "support[project_id]":      $('#project-id').val(),
+        "support[support_type]": $('#support-type').val(),
+        "support[message]": $('#message').val(),
+        "support[project_id]": $('#project-id').val(),
         "support[device_os_other]": $('#device-os-other').val(),
-        "support[user_name]":       loginData.getProfileColumn('name'),
-        "support[user_email]":      loginData.getProfileColumn('email'),
-        "support[_csrf_token]":     initFormData['_csrf_token'],
-        "support[subject]":         $('#subject').val(),
-        "support[product_type]":    $('#product-type').val()
+        "support[user_name]": loginData.getProfileColumn('name'),
+        "support[user_email]": loginData.getProfileColumn('email'),
+        "support[_csrf_token]": initFormData['_csrf_token'],
+        "support[subject]": $('#subject').val(),
+        "support[product_type]": $('#product-type').val()
       };
 
       if ($('#agree-support').filter(':checked')) {
