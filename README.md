@@ -8,7 +8,6 @@ This repository contains assets and other public materials that are published on
 $ git clone https://github.com/monaca/website.git
 $ cd website
 $ npm install
-$ npm install -g grunt-cli
 ```
 
 ## Directory structure
@@ -48,7 +47,7 @@ Assemble templates.
 ### Build Website
 
 ```
-grunt build
+npm run build
 ```
 
 1. Copy assets in `/src/assets` into `/dist`.
@@ -61,14 +60,14 @@ grunt build
 To launch both English and Japanese Website in the local environment: 
 
 ```
-grunt server
+npm run server
 ```
 
 or type like this for each languages:
 
 ```
-grunt server:ja
-grunt server:en
+npm run server:ja
+npm run server:en
 ```
 
 _server command don't watch assets directory. Please run `build` manually after you moved any filed in assets folder._
