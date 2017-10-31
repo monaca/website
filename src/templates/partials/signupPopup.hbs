@@ -3,16 +3,16 @@
   <div id="signup-ok" class="signuppopup-container clearfix">
     <h3>{{#is language "ja"}}Monaca Cloud IDE サインアップ{{else}}Sign Up{{/is}}</h3>
     <div style="width: 100%; text-align: center;">
-      <div id="signup-github" class="btn-github">
-        <div class="github-img"></div>
-        <div class="vertical-line"></div>
-        <div class="signup-label">Sign Up With GitHub</div>
-      </div>
-      <div class="or-box">
-        <hr class="line-l" />
-        or
-        <hr class="line-r" />
-      </div>
+      {{#is language "ja"}}
+        <button class="btn-blue btn-long" type="button" onclick="location.href='https://enterprise.monaca.mobi/ja/register'" style="margin-top:10px;height:46px;width:100%;">
+        <span class="btn-txt">企業向けのサインアップはこちら</span>
+        </button>
+        <div class="or-box">
+          <hr class="line-l" />
+          or
+          <hr class="line-r" />
+        </div>
+      {{/is}}
     </div>
 
     <a id="close_signupbackpopup" class="close"><img src="/img/login/close-dark.png"></a>
@@ -37,17 +37,20 @@
         </label>
       </li>
       <li>
-        <button id="popup_signup_btn" class="btn-green btn-long" type="button">
+        <button id="popup_signup_btn" class="btn-green btn-long" type="button" style="float:none;margin-bottom:0;">
           <span class="loading-spinner spinner-w-green"></span>
           <span class="btn-txt">{{#is language "ja"}}今すぐ試す{{else}}Sign Up{{/is}}</span>
         </button>
-        {{#is language "ja"}}<button id="popup_signup_btn" class="btn-gray btn-long" type="button" onclick="location.href='https://enterprise.monaca.mobi/ja/register'">企業向けプランのサインアップはこちら</button>{{/is}}
-        <!-- <button id="popup_signup_btn" class="btn-gray btn-long" type="button">{{#is language "ja"}}企業向けプランのサインアップはこちら{{else}}xxxxxxxx{{/is}}</button> -->
-        <!-- <span class="loading"></span> -->
       </li>
     </ul>
     <input type="hidden" name="register[_csrf_token]" value="" id="signuppopup-csrf-token" />
   </form>
+
+  <div id="signup-github" class="btn-github">
+        <div class="github-img"></div>
+        <div class="vertical-line"></div>
+        <div class="signup-label">Sign Up With GitHub</div>
+      </div>
   </div>
 
   <div class="signuppopup-container" id="signup-ng">
