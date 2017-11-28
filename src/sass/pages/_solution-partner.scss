@@ -425,6 +425,17 @@ body.solution-partner {
           }
         }
     }
+    #detail-reedex {
+        .partner-field {
+          ul {
+            margin-bottom: 10px;
+            li {
+              padding-left: 1em;
+              text-indent:0em;
+            }
+          }
+        }
+      }
     .partner-content-right {
         float: right;
         width: 260px;
@@ -461,6 +472,12 @@ body.solution-partner {
           width: 100%;
           position: relative;
           box-sizing: border-box;
+        }
+        ul {
+          li {
+            padding-left:1em;
+            text-indent:-1em;
+          }
         }
         .preparation {
             position: relative;
