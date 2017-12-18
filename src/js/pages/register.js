@@ -2,7 +2,6 @@
   window.monacaPages = window.monacaPages || [];
 
   monacaPages["/register/start.html"] = function(loginData) {
-    $('#show_signuppopup_li').remove();
     formUtil.resetError();
     loginData.autoDisplay = false;
     var csrt_token;
