@@ -74,7 +74,11 @@ module.exports = function(grunt) {
 
         watch: {
             options: {
-                livereload: '<%= connect.options.livereload %>'
+                livereload: {
+                    port: '<%= connect.options.livereload %>',
+                    key: grunt.file.read('node_modules/grunt-contrib-connect/tasks/certs/server.key'),
+                    cert: grunt.file.read('node_modules/grunt-contrib-connect/tasks/certs/server.crt')
+                }
             },
             assemble: {
                 files: ['<%= config.src %>/{content,data,templates}/**/*.{md,hbs,yml,json}'],
