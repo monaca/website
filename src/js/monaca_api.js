@@ -167,12 +167,6 @@
       closePopup(msec, 'loginpopup');
     });
 
-    $('#popup_signup_btn').click(function() {
-      $('#popup_signup_btn').addClass('loading');
-      $("#signup-popup-form").attr('action', window.MONACA_API_URL + "/" + window.LANG + "/register/start");
-      $("#signup-popup-form").submit();
-    });
-
     $('#popup_login_btn').click(function() {
       $('#popup_login_btn').addClass('loading');
       $("#login-popup-form").attr('action', window.MONACA_API_URL + "/" + window.LANG + "/login");
