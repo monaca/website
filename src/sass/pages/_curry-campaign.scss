@@ -1,0 +1,55 @@
+
+body.curry-campaign{
+
+  .keyvisual {
+    background:url(../img/curry-campaign/keyvisual.png) no-repeat center bottom,url(../img/curry-campaign/bg_keyvisual.png) repeat-x;
+    height: 640px;
+    position: relative;
+    h1 {
+          padding-top: 70px;
+          text-align:center;
+          .logo {
+            text-align:center;
+        }
+      }
+    }
+  }
+
+  article.main {
+    section {
+      h1 {
+        margin-bottom: 30px;
+      }
+      &.about {
+        background:url(../img/curry-campaign/about_monacurry.png) no-repeat 700px 240px;
+        h1 {
+          line-height: 1.4;
+          text-align: left;
+        }
+        p {
+          margin-left: 0;
+          width: 575px;
+          text-align: left;
+        }
+      }
+      &.campaign {
+        h1 {
+          margin: 0 0 50px;
+          border-top: solid 1px #e5e5e5;
+          position: relative;
+          img {
+            margin-top: -33px;
+            display: block;
+            width: 348px;
+            height: 45px;
+            position: absolute;
+          }
+        }
+        p {
+          margin-left: 0;
+          width: 575px;
+          text-align: left;
+        }
+      }
+    }
+  }
