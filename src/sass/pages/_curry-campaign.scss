@@ -2,34 +2,93 @@
 body.curry-campaign{
 
   .keyvisual {
-    background:url(../img/curry-campaign/keyvisual.png) no-repeat center bottom,url(../img/curry-campaign/bg_keyvisual.png) repeat-x;
-    height: 640px;
+    background:url(/img/curry-campaign/bg.jpg) no-repeat center bottom;
+    //background-size: cover;
+    height: auto;
     position: relative;
     h1 {
-          padding-top: 70px;
-          text-align:center;
-          .logo {
-            text-align:center;
-        }
+      padding-top: 100px;
+      text-align:center;
+      @media screen and (max-width: $break) {
+        padding-top: 75px;
+      }
+      .logo {
+        text-align:center;
+      }  
+    }
+    .curry {
+      margin-bottom: -130px;
+      @media screen and (max-width: 1070px) {
+        margin-bottom: -90px;
+      }
+      @media screen and (max-width: $break) {
+        margin-bottom: -40px;
       }
     }
   }
 
   article.main {
     section {
+      padding-right: 50px;
+      padding-left: 50px;
+      @media screen and (max-width: $break) {
+        padding-right: 5%;
+        padding-left: 5%;
+      }
       h1 {
         margin-bottom: 30px;
       }
+      @media screen and (max-width: $break) {
+        p {
+          padding: 0;
+        }
+      }
       &.about {
-        background:url(../img/curry-campaign/about_monacurry.png) no-repeat 700px 240px;
+        background:url(/img/curry-campaign/img_01.png) no-repeat right center;
+        @media screen and (max-width: 1070px) {
+          background: none;
+        }
         h1 {
           line-height: 1.4;
           text-align: left;
         }
         p {
           margin-left: 0;
-          width: 575px;
+          margin-right: 480px;
+          //width: 575px;
           text-align: left;
+          @media screen and (max-width: 1070px) {
+            width: 100%;
+          }
+        }
+        img.sp-img {
+          display: none;
+          @media screen and (max-width: 1070px) {
+            display: block;
+            margin: 0 auto;
+          }
+        }
+      }
+      &.curry {
+        h1 {
+          text-align: left;
+        }
+        p {
+          max-width: initial;
+          text-align: left;
+        }
+      }
+      &.sponsors {
+        .logos01 {
+          @media screen and (max-width: 1070px) {
+            display: none;
+          }
+        }
+        .logos02 {
+          display: none;
+          @media screen and (max-width: 1070px) {
+            display: block;
+          }
         }
       }
       &.campaign {
@@ -40,16 +99,132 @@ body.curry-campaign{
           img {
             margin-top: -33px;
             display: block;
-            width: 348px;
+            //width: 348px;
             height: 45px;
             position: absolute;
           }
         }
+        h2 {
+          font-size: 30px;
+          font-weight: 700;
+          text-align: left;
+        }
         p {
           margin-left: 0;
-          width: 575px;
+          //width: 575px;
           text-align: left;
+        }
+        li {
+          width: 35%;
+          padding: 0;
+          border: none;
+          background: initial;
+          &:first-child {
+            width: 60%;
+            text-align: left;
+            @media screen and (max-width: 1070px) {
+              width: 650px;
+              height: 550px!important;
+            }
+            @media screen and (max-width: $break) {
+              width: 100%;
+              height: 500px!important;
+            }
+          }
+          &:nth-child(2) {
+            @media screen and (max-width: $break) {
+              height: 350px!important;
+            }
+          }
+          @media screen and (max-width: 1070px) {
+            float: none;
+            margin-right: auto;
+            margin-left: auto;
+            width: 650px;
+          }
+          @media screen and (max-width: $break) {
+            width: 100%;
+            h2 {
+              font-size: 24px;
+            }
+            h3 {
+              font-size: 18px;
+            }
+            h4 {
+              font-size: 16px;
+            }
+            p {
+              padding: 0;
+            }
+          }
+          h3 {
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            background-color: #0054ac;
+            border-radius: 5px;
+          }
+          h4 {
+            font-weight: 700;
+            margin-bottom: 15px;
+          }
+          h5 {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 10px;
+          }
+          .quiz {
+            margin-bottom: 20px;
+            width: 100%;
+          }
+          .btn {
+            width: 80%;
+            padding: 20px;
+            height: 64px;
+            font-size: 24px;
+            line-height: 24px;
+          }
+        }
+      }
+      &.partner {
+        ul {
+          li {
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            @media screen and (max-width: $break) {
+              margin-bottom: 60px;
+              border-bottom: 1px solid #ccc;
+              padding-bottom: 60px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+          dl {
+            dt {
+              text-align: left;
+              font-size: 15px;
+              line-height: 1.3em;
+              margin-bottom: 15px;
+              color: #555;
+              span {
+                //font-size: 12px;
+                //line-height: 2em;
+                //margin-bottom: 2px;
+              }
+            }
+            dd {
+              text-align: left;
+              margin-bottom: 20px;
+            }
+          }
+          img {
+            width: 100%;
+          }
         }
       }
     }
   }
+}
