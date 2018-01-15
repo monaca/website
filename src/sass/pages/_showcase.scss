@@ -664,6 +664,7 @@ body.showcase {
             h2 {
                 color: #57a100;
                 font-size: 20px;
+                margin-top: 35px;
                 margin-bottom: 8px;
                 text-indent: -1.7em;
                 margin-left: 1.7em;
@@ -5300,6 +5301,9 @@ body.showcase.ctp {
         h1 {
             margin-bottom: 14px;
         }
+        p {
+          margin-bottom: 15px;
+        }
         .alignleft, .alignright {
             width: 285px;
             @media screen and (max-width: $break) {
@@ -5325,6 +5329,8 @@ body.showcase.ctp {
         @media screen and (max-width: $break) {
             display: block;
             width: 100%;
+            margin-right: auto;
+            margin-left: auto;
             dl:nth-of-type(1) {
                 margin: 0 0 20px;
                 float: left;
@@ -5333,6 +5339,7 @@ body.showcase.ctp {
             dl:nth-of-type(2) {
                 margin: 0 0 60px;
                 float: right;
+                width: 285px;
             }
         }
         @media screen and (max-width: $break-xs) {
