@@ -53,8 +53,10 @@ body.curry-campaign{
           text-align: left;
         }
         p {
-          margin-left: 0;
-          margin-right: 480px;
+          //margin-left: 0;
+          //margin-right: 480px;
+          //margin-bottom: 15px;
+          margin: 0 480px 15px 0;
           //width: 575px;
           text-align: left;
           @media screen and (max-width: 1070px) {
@@ -222,6 +224,34 @@ body.curry-campaign{
           }
           img {
             width: 100%;
+          }
+        }
+      }
+      &.notice {
+        h2 {
+          font-size: 18px;
+          margin: 30px 0 10px;
+          text-align: left;
+        }
+        p {
+          margin-bottom: 15px;
+        }
+        li {
+          text-align: left;
+          margin-left: 1.5em;
+          margin-bottom: 10px;
+          list-style: disc;
+          list-style-position: outside;
+          color: #666;
+        }
+        .privacy {
+          li {
+            list-style: none;
+            text-indent: -1.5em;
+            i {
+              text-indent: 0;
+              margin-right: 0.2em;
+            }
           }
         }
       }
