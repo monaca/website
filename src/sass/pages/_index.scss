@@ -1850,6 +1850,12 @@ html[lang=ja] body.home {
             }
         }
     }
+    .section.campaign-banner {
+        padding-top: 20px!important;
+        @media screen and (max-width: $break) {
+            padding: 5px 0 0!important;
+        }
+    }
     .box-awards {
         ul {
             li {
