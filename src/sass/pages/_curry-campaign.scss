@@ -71,6 +71,31 @@ body.curry-campaign{
           }
         }
       }
+      &.signup {
+        background-color: #f2f2f2;
+        padding: 60px 0 70px;
+        text-align: center;
+        p {
+            color: #666;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+            max-width: initial;
+            width: 80%;
+            @media screen and (max-width: $break-xs) {
+                font-size: 20px;
+            }
+        }
+        a {
+            margin: 0 20px;
+        }
+        .btn-big {
+          font-size: 24px;
+          height: 60px;
+          line-height: 61px;
+          padding: 0 45px;
+        }
+      }
       &.curry {
         h1 {
           text-align: left;
@@ -110,6 +135,19 @@ body.curry-campaign{
         }
       }
       &.campaign {
+        ul {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          li {
+            &:first-child {
+              width: 60%;
+              @media screen and (max-width: $break) {
+                width: 100%;
+              }
+            }
+          }
+        }
         h1 {
           margin: 0 0 50px;
           border-top: solid 1px #e5e5e5;
@@ -137,23 +175,7 @@ body.curry-campaign{
           padding: 0;
           border: none;
           background: initial;
-          &:first-child {
-            width: 60%;
-            text-align: left;
-            @media screen and (max-width: 1070px) {
-              width: 650px;
-              height: 550px!important;
-            }
-            @media screen and (max-width: $break) {
-              width: 100%;
-              //height: 500px!important;
-            }
-          }
-          &:nth-child(2) {
-            @media screen and (max-width: $break) {
-              height: 350px!important;
-            }
-          }
+
           @media screen and (max-width: 1070px) {
             float: none;
             margin-right: auto;
