@@ -89,7 +89,7 @@
     <meta name="twitter:site" content="@monaca_io">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@monaca_io">
-    <meta name="twitter:image" content="https://monaca.io/img/ogp.png">
+    <meta name="twitter:image" content="{{#compare image "typeof" "string"}}{{image}}{{else}}https://monaca.io/img/ogp.png{{/compare}}">
     <meta property="twitter:title" content="
         {{#compare title "typeof" "string"}}
             {{#is language "ja"}}
