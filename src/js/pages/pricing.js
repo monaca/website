@@ -30,7 +30,7 @@
       if (loginData.status.isLogin) {
         location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/pricing?type=1';
       } else {
-        monacaApi.showSignupPopup();
+        location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/signup';
       }
     });
 
@@ -83,7 +83,7 @@
       if (loginData.status.isLogin) {
         location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/pricing?type=1';
       } else {
-        location.href = '/register/start.html';
+        location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/signup';
       }
     });
 
