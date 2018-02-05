@@ -263,25 +263,25 @@ body.product-partner {
 
           .form, .homepage, .mail, .tel {
             font-size: 13px;
-            line-height: 1.4;
+            line-height: 1.5;
             margin-bottom: 14px;
             padding-left: 26px;
             color: #44b6ff;
           }
 
           .form {
-            background: url(/img/product-partner/ico_mail_form.png) no-repeat left center;
+            background: url(/img/product-partner/ico_mail_form.png) no-repeat left top;
           }
 
           .homepage {
-            background: url(/img/product-partner/ico_url.png) no-repeat left center;
+            background: url(/img/product-partner/ico_url.png) no-repeat left top;
           }
           .mail {
-            background: url(/img/product-partner/ico_mail.png) no-repeat left center;
+            background: url(/img/product-partner/ico_mail.png) no-repeat left top;
           }
 
           .tel {
-            background: url(/img/product-partner/ico_tel.png) no-repeat left center;
+            background: url(/img/product-partner/ico_tel.png) no-repeat left top;
           }
         }
       }
