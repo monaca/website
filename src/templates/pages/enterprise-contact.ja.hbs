@@ -1,0 +1,142 @@
+---
+title: Contact Us | Monaca
+class: enterprise-contact
+description: Contact Monaca about our plans
+---
+
+<div class="keyvisual box-full">
+    <div>
+        <h2>企業向け</h2>
+        <h1>Monaca Enterpriseプラン</h1>
+
+        <p>Ask us any questions about Monaca Enterpise here</p>
+    </div>
+</div>
+
+<section class="main-content">
+    <div class="form-area">
+        <h1>お問い合わせ</h1>
+        <p>Contact us...</p>
+
+        <form id="enterprise-contact-form">
+            <div class="form-group">
+                <label for="companyName" class="required">会社名/組織名</label>
+                <input type="text" id="companyName" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="personName" class="required">ご担当者名</label>
+                <input type="text" id="personName" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="required">メールアドレス</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phoneNumber" class="required">電話番号</label>
+                <input type="tel" id="phoneNumber" class="form-control" placeholder="123-456-789" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">ご住所</label>
+                <input type="text" id="address" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="department">部署</label>
+                <input type="text" id="department" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="message">ご質問等</label>
+                <textarea type="text" id="message" class="form-control"></textarea>
+            </div>
+
+            <p class="form-error" style="display: none"></p>
+
+            <div class="form-group">
+                <button type="submit" class="submit-enquiry-button m-btn m-btn-blue">送信</button>
+            </div>
+        </form>
+
+        <p class="form-submit-success" style="display: none">
+            Thank you for submitting your enquiry. We will respond soon.
+        </p>
+    </div>
+
+    <div class="form-aside">
+        <div class="plan-details">
+            <h2>Enterpriseプラン</h2>
+            <div class="price annual">
+                <div class="amount">108<span>,</span>000</div>
+                <div class="period">円/月</div>
+            </div>
+            <div class="price monthly">
+                <div><span class="period">6ヶ月:</span> <span class="amount">594,000円</span></div>
+                <div><span class="period">年額:</span> <span class="amount">1,080,000円</span></div>
+                <div class="licence-info">(5開発ライセンス込)</div>
+            </div>
+            <ul class="features">
+                <li>Businessプランの全機能</li>
+                <li>エンタープライズプラグイン<br><span>（組織内無制限利用）</span></li>
+                <li>請求書払い</li>
+                <li>カスタマイズ対応</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<script>
+    $('#enterprise-contact-form').on('submit', function(ev) {
+        ev.preventDefault();
+
+        var $formError = $('.form-error');
+        var $submitButton = $('.submit-enquiry-button');
+
+        if($submitButton.attr('disabled')) return;
+
+        $submitButton.attr('disabled', 'disabled');
+        $formError.hide();
+
+        var sendData = {
+            'inquiry[company]':       $('#companyName').val(),
+            'inquiry[name]':          $('#personName').val(),
+            'inquiry[email]':         $('#email').val(),
+            'inquiry[phone_number]':  $('#phoneNumber').val(),
+            'inquiry[address]':       $('#address').val(),
+            'inquiry[department]':    $('#department').val(),
+            'inquiry[message]':       $('#message').val(),
+            'inquiry[subject]':       'general_plan_inquiry',
+            'inquiry[product_type]':  'enterprise',
+            'inquiry[question_type]': 'enterprise'
+        };
+
+        $.ajax({
+            type: "POST",
+            url: monacaApi.getBaseUrl() + "/" + window.LANG + "/support/inquiry_io",
+            xhrFields: {
+                withCredentials: true
+            },
+            data: sendData,
+            dataType: "json",
+            success: function(msg) {
+                if (msg.result == 'submitOK') {
+                    $('#enterprise-contact-form').hide();
+                    $('.form-submit-success').show();
+                } else if (msg.status === 'error' && msg.title) {
+                    $formError.text(msg.title).show();
+                } else {
+                    $formError.text('Unknown error').show();
+                }
+
+                $submitButton.removeAttr('disabled');
+            },
+            error: function(msg) {
+                $formError.text('Unknown error').show();
+                $submitButton.removeAttr('disabled');
+            }
+        });
+    });
+</script>
