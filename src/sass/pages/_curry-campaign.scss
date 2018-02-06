@@ -253,6 +253,7 @@ body.curry-campaign{
           li {
             border: none;
             background-color: transparent;
+            margin-bottom: 50px;
             padding: 0;
             @media screen and (max-width: $break) {
               margin-bottom: 60px;
@@ -293,6 +294,11 @@ body.curry-campaign{
           }
           img {
             width: 100%;
+          }
+          .btn {
+            @media screen and (max-width: 970px) {
+              width: 80%;
+            }
           }
         }
       }
