@@ -1,5 +1,11 @@
 .enterprise-contact {
+  $page-width: 1080px;
+
   text-align: left;
+
+  .box-full>div {
+    width: $page-width;
+  }
 
   .keyvisual {
     display: flex;
@@ -34,7 +40,8 @@
   .main-content {
     display: flex;
     justify-content: space-between;
-    padding: 2rem 50px;
+    width: $page-width;
+    padding: 2rem 80px 100px 50px;
   }
 
   .form-area {
@@ -54,6 +61,7 @@
 
     label {
       font-weight: normal;
+      margin-bottom: 10px;
 
       &.required::after {
         content: '*';
@@ -62,7 +70,15 @@
     }
 
     textarea {
-      height: 130px;
+      height: 126px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
   }
 
@@ -70,6 +86,12 @@
     margin: 1rem 0;
     font-size: 90%;
     color: red;
+  }
+
+  .form-control {
+    &[type=text] {
+      margin-bottom: 10px;
+    }
   }
 
   .submit-enquiry-button {
@@ -89,8 +111,8 @@
   }
 
   .form-aside {
-    width: 340px;
-    padding: 0 50px;
+    width: 400px;
+    padding: 0 80px;
   }
 
   .plan-details {
