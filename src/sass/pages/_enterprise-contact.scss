@@ -1,0 +1,209 @@
+.enterprise-contact {
+  $page-width: 1080px;
+
+  text-align: left;
+
+  .box-full>div {
+    width: $page-width;
+  }
+
+  .keyvisual {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    padding-top: 50px;
+
+    background: url(../img/tokyocalendar/bg_effect.jpg) center no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    h1, h2 {
+      font-weight: 700;
+      font-size: 250%;
+    }
+
+    h1 {
+      font-size: 250%;
+      margin: .5rem 0 1.5rem;
+    }
+
+    h2 {
+      font-size: 175%;
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    width: $page-width;
+    padding: 2rem 80px 100px 50px;
+  }
+
+  .form-area {
+    width: 400px;
+
+    h1 {
+      font-size: 150%;
+      font-weight: 700;
+      text-align: left;
+      margin: 0;
+    }
+
+    p {
+      margin: 1rem 0 2rem;
+      padding: 0;
+    }
+
+    label {
+      font-weight: normal;
+      margin-bottom: 10px;
+
+      &.required::after {
+        content: '*';
+        color: #f55b56;
+      }
+    }
+
+    textarea {
+      height: 126px;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  .form-error {
+    margin: 1rem 0;
+    font-size: 90%;
+    color: red;
+  }
+
+  .form-control {
+    &[type=text] {
+      margin-bottom: 10px;
+    }
+  }
+
+  .submit-enquiry-button {
+    position: relative;
+
+    &:disabled::after {
+      position: absolute;
+      right: calc(-20px - .5rem);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      content: ' ';
+      background-image: url(/img/common/loading_large.gif);
+      background-size: contain;
+    }
+  }
+
+  .form-aside {
+    width: 400px;
+    padding: 0 80px;
+  }
+
+  .plan-details {
+    padding: 35px 25px;
+    border: 1px solid #ccc;
+    text-align: center;
+    border-radius: 2px;
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 100%;
+      font-weight: 700;
+      color: #9d7712;
+    }
+
+    .amount {
+      font-weight: 700;
+      font-family: 'Lato', 'Helvetica Neue', Helvetica, Verdana, sans-serif;
+    }
+
+    .annual {
+      &.price {
+        margin: .5rem 0;
+      }
+
+      .amount, .period {
+        display: inline-block;
+      }
+
+      .amount {
+        font-size: 225%;
+
+        span {
+          margin: 0 -0.05em;
+        }
+      }
+
+      .period {
+        margin: 0 0 0 -5px;
+        font-weight: 700;
+      }
+    }
+
+    .monthly {
+      font-size: 90%;
+
+      .period {
+        color: #8d98a6;
+      }
+
+      .licence-info {
+        font-size: 80%;
+      }
+    }
+
+    .features {
+      margin-top: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 90%;
+
+      li {
+        margin-top: 1rem;
+      }
+
+      span {
+        font-weight: normal;
+        color: #8d98a6;
+      }
+    }
+  }
+
+  @media screen and (max-width: $break) {
+    .main-content {
+      flex-wrap: wrap;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+
+    .form-area, .form-aside {
+      width: 100%;
+      flex: 1 0 auto;
+    }
+
+    .form-aside {
+      margin-top: 3rem;
+      padding: 0;
+    }
+
+    .submit-enquiry-button:disabled {
+      width: calc(100% - .5rem - 20px);
+    }
+  }
+}
