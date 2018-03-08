@@ -48,7 +48,7 @@ $(window).load(function() {
 	var fadeInSpeed = 400;
 	$('div.keyvisual span#github-published_at').hide();
 	$.ajax({
-		url: 'https://api.github.com/repos/monaca/Localkit/releases',
+		url: 'https://ide.monaca.mobi/api/public/versions',
 		dataType: 'json',
 		success: function(res) {
       $("div.keyvisual span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a>'));
