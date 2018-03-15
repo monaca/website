@@ -11,15 +11,17 @@ html[lang=ja] header.navbar {
     background-color: rgba(255, 255, 255, 0);
 
     .navbar-nav li a {
-        color: $nav-item-color;
+        color: #dddddd;
         font-size: 12px;
         white-space: nowrap;
+        transition: $header-transition;
 
         &.btn {
-            border: 1px solid #ffffff;
-            color: #ffffff;
+            border: 1px solid #fff;
+            color: #fff;
             padding: 6px 10px;
             margin-left: 16px;
+            font-weight: 700;
             transition: $header-transition;
         }
 
@@ -61,6 +63,63 @@ html[lang=ja] header.navbar {
                 }
                 &:last-child {
                     transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $break) {
+        .dropdown {
+            padding: 16px 0; // Increase hoverable area
+
+            &:hover {
+                .dropdown-toggle {
+                    background-color: inherit;
+                    color: #dddddd;
+                }
+            }
+
+            .dropdown-menu {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 0;
+                padding: 0;
+                top: 52px;
+                border-radius: 4px;
+                border-top-left-radius: 4px; // Override...
+                border-top-right-radius: 4px;
+                background-color: #fff;
+                & > li {
+                    :hover {
+                        background-color: #eee;
+                    }
+                    &> a {
+                        color: $nav-item-color;
+                    }
+
+                    &:first-child a {
+                        border-top-left-radius: 4px;
+                        border-top-right-radius: 4px;
+                    }
+
+                    &:last-child a {
+                        border-bottom-left-radius: 4px;
+                        border-bottom-right-radius: 4px;
+                    }
+                }
+
+                &:before {
+                    content: ' ';
+                    display: block;
+                    position: absolute;
+                    border-bottom: 6px dashed;
+                    border-right: 6px solid transparent;
+                    border-left: 6px solid transparent;
+                    color: #fff;
+                    top: -6px;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
         }
@@ -150,7 +209,7 @@ html[lang=ja] header.navbar {
                 min-height: 100vh;
 
                 float: right;
-                background-color: #ffffff;
+                background-color: #fff;
 
                 .navbar-right {
                     margin: 0;
@@ -185,7 +244,7 @@ html[lang=ja] header.navbar {
                 &.orange {
                     background-color: #fa6800;
                     border-color: transparent;
-                    color: #ffffff;
+                    color: #fff;
                 }
             }
         }
@@ -326,7 +385,7 @@ header.navbar {
             }
             .icon-bar-left, .icon-bar-right {
                 position: absolute;
-                background-color: #ffffff;
+                background-color: #fff;
                 transition: transform 140ms cubic-bezier(.34, .94, .69, 1);
                 transform-origin: bottom center;
                 float: left;
@@ -407,7 +466,7 @@ header.navbar {
             }
         }
         > li > a {
-            color: #ffffff;
+            color: #fff;
             padding: 16px 10px 14px;
             -webkit-font-smoothing: antialiased;
             &:hover {
@@ -469,7 +528,7 @@ header.navbar {
             }
             .dropdown:hover > .dropdown-toggle {
                 background-color: transparent;
-                color: #ffffff;
+                color: #fff;
             }
         }
     }
@@ -518,7 +577,7 @@ header.navbar {
         top: 4px;
         transform: scale(0.9);
         &:before {
-            content: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M1408 928v320q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h704q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113v-320q0-14 9-23t23-9h64q14 0 23 9t9 23zm384-864v512q0 26-19 45t-45 19-45-19l-176-176-652 652q-10 10-23 10t-23-10l-114-114q-10-10-10-23t10-23l652-652-176-176q-19-19-19-45t19-45 45-19h512q26 0 45 19t19 45z"/></svg>');
+            content: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M1408 928v320q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h704q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113v-320q0-14 9-23t23-9h64q14 0 23 9t9 23zm384-864v512q0 26-19 45t-45 19-45-19l-176-176-652 652q-10 10-23 10t-23-10l-114-114q-10-10-10-23t10-23l652-652-176-176q-19-19-19-45t19-45 45-19h512q26 0 45 19t19 45z"/></svg>');
         }
     }
     @media screen and (max-width: $break) {
