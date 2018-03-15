@@ -1,22 +1,25 @@
 $nav-item-color: #999999;
 $small-header-bg: rgba(0, 0, 0, .96);
+$header-transition: all .4s ease;
 
 html[lang=ja] header.navbar {
     display: flex;
     align-items: center;
     min-height: 60px;
-    transition: all .4s ease;
+    transition: $header-transition;
     background-color: rgba(255, 255, 255, 0);
 
     .navbar-nav li a {
         color: $nav-item-color;
         font-size: 12px;
+        white-space: nowrap;
 
         &.btn {
             border: 1px solid #ffffff;
             color: #ffffff;
             padding: 6px 10px;
             margin-left: 16px;
+            transition: $header-transition;
         }
 
         & .caret {
@@ -172,8 +175,18 @@ html[lang=ja] header.navbar {
 
             &.btn {
                 border: 1px solid $nav-item-color;
-                color: $nav-item-color;
+                color: #666666;
+
+                &.orange {
+                    background-color: #fa6800;
+                    border-color: transparent;
+                    color: #ffffff;
+                }
             }
+        }
+
+        .monaca-logo .cls-1 {
+            fill: #00629D;
         }
     }
 
@@ -224,6 +237,11 @@ header.navbar {
     width: 100%;
     z-index: 100;
     font-family: Open Sans, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+
+    .monaca-logo {
+        width: 110px;
+        transition: $header-transition;
+    }
 
     &:not(.navbar-fixed-top) {
         position: absolute;
