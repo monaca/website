@@ -1,6 +1,7 @@
 $nav-item-color: #999999;
-$small-header-bg: rgba(0, 0, 0, .96);
+$small-header-bg: rgba(255, 255, 255, .96);
 $header-transition: all .4s ease;
+$close-toggle-bg: #666666;
 
 html[lang=ja] header.navbar {
     display: flex;
@@ -27,6 +28,10 @@ html[lang=ja] header.navbar {
         }
     }
 
+    .navbar-toggle > span {
+        border-radius: 0 !important;
+    }
+
     .navbar-menu-toolbar {
         display: none;
 
@@ -49,7 +54,7 @@ html[lang=ja] header.navbar {
                 margin-top: 0;
                 width: 24px;
                 height: 2px;
-                background-color: #666666;
+                background-color: $close-toggle-bg;
 
                 &:first-child {
                     transform: rotate(45deg);
@@ -183,6 +188,10 @@ html[lang=ja] header.navbar {
                     color: #ffffff;
                 }
             }
+        }
+
+        .navbar-toggle > span {
+            background-color: $close-toggle-bg;
         }
 
         .monaca-logo .cls-1 {
