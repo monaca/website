@@ -1,27 +1,29 @@
-$nav-item-color: #999999;
-$small-header-bg: rgba(255, 255, 255, .96);
+$menu-item-color: #999;
+$nav-item-bright-color: #ddd;
+$nav-item-dark-color: #444;
+$small-header-bg: rgba($color: white, $alpha: .96);
 $header-transition: all .4s ease;
-$close-toggle-bg: #666666;
+$close-toggle-bg: #666;
 
 html[lang=ja] header.navbar {
     display: flex;
     align-items: center;
     min-height: 60px;
     transition: $header-transition;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: transparent;
 
     .navbar-nav li a {
-        color: #dddddd;
+        color: $nav-item-bright-color;
         font-size: 12px;
         white-space: nowrap;
         transition: $header-transition;
+        font-weight: 700;
 
         &.btn {
             border: 1px solid #fff;
             color: #fff;
             padding: 6px 10px;
             margin-left: 16px;
-            font-weight: 700;
             transition: $header-transition;
         }
 
@@ -68,44 +70,49 @@ html[lang=ja] header.navbar {
         }
     }
 
+    // Big screen nav
     @media screen and (min-width: $break) {
-        .dropdown {
-            padding: 16px 0; // Increase hoverable area
+        .navbar-nav > li {
+            padding: 8px 0; // Increase hoverable area
+            margin-right: 8px;
 
-            &:hover {
-                .dropdown-toggle {
-                    background-color: inherit;
-                    color: #dddddd;
-                }
+            & > a {
+                border-radius: 4px;
+                padding: 8px; // Increase hoverable area
             }
+
+            &:hover > a, &:focus > a {
+                background-color: rgba($color: white, $alpha: 0.1) !important;
+                color: $nav-item-bright-color !important;
+            }
+        }
+
+        .dropdown {
 
             .dropdown-menu {
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
                 margin: 0;
-                padding: 0;
+                padding: 10px 0;
                 top: 52px;
                 border-radius: 4px;
                 border-top-left-radius: 4px; // Override...
                 border-top-right-radius: 4px;
                 background-color: #fff;
+
+                display: block;
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity .15s ease;
+
+
                 & > li {
                     :hover {
                         background-color: #eee;
                     }
                     &> a {
-                        color: $nav-item-color;
-                    }
-
-                    &:first-child a {
-                        border-top-left-radius: 4px;
-                        border-top-right-radius: 4px;
-                    }
-
-                    &:last-child a {
-                        border-bottom-left-radius: 4px;
-                        border-bottom-right-radius: 4px;
+                        color: $nav-item-dark-color;
                     }
                 }
 
@@ -113,25 +120,33 @@ html[lang=ja] header.navbar {
                     content: ' ';
                     display: block;
                     position: absolute;
-                    border-bottom: 6px dashed;
-                    border-right: 6px solid transparent;
-                    border-left: 6px solid transparent;
+                    border-bottom: 8px dashed;
+                    border-right: 8px solid transparent;
+                    border-left: 8px solid transparent;
                     color: #fff;
-                    top: -6px;
+                    top: -8px;
                     left: 50%;
                     transform: translateX(-50%);
+                }
+            }
+
+            &:hover, &:focus {
+                .dropdown-menu {
+                    pointer-events: auto;
+                    opacity: 1;
                 }
             }
         }
     }
 
+    // Small screen menu
     @media screen and (max-width: $break) {
         .btn {
             display: none;
         }
 
         li > a {
-            border-bottom: 1px solid rgba(0, 0, 0, .1) !important;
+            border-bottom: 1px solid rgba($color: black, $alpha: .1) !important;
             padding: 16px 20px !important;
         }
 
@@ -139,7 +154,7 @@ html[lang=ja] header.navbar {
             display: block;
             width: 100%;
             height: 60px;
-            border-bottom: 1px solid rgba(0, 0, 0, .2);
+            border-bottom: 1px solid rgba($color: black, $alpha: .2);
         }
 
         .dropdown {
@@ -157,11 +172,11 @@ html[lang=ja] header.navbar {
                 height: inherit;
 
                 & > a {
-                    color: $nav-item-color;
+                    color: $menu-item-color;
                     background-color: #eee;
 
                     &:hover, &:focus {
-                        color: $nav-item-color;
+                        color: $menu-item-color;
                         background-color: #ddd;
                     }
                 }
@@ -174,7 +189,7 @@ html[lang=ja] header.navbar {
             }
 
             .caret {
-                color: #666666;
+                color: #666;
                 transition: transform .15s ease-in;
             }
 
@@ -213,6 +228,10 @@ html[lang=ja] header.navbar {
 
                 .navbar-right {
                     margin: 0;
+
+                    li > a {
+                        color: $nav-item-dark-color;
+                    }
                 }
             }
         }
@@ -234,18 +253,25 @@ html[lang=ja] header.navbar {
         background-color: $small-header-bg;
         min-height: 60px;
 
-        .navbar-nav > li > a {
-            color: $nav-item-color;
+        .navbar-nav > li {
+            > a {
+                color: $nav-item-dark-color;
 
-            &.btn {
-                border: 1px solid $nav-item-color;
-                color: #666666;
+                &.btn {
+                    border: 1px solid rgba($color: black, $alpha: .1);
+                    color: $nav-item-dark-color;
 
-                &.orange {
-                    background-color: #fa6800;
-                    border-color: transparent;
-                    color: #fff;
+                    &.orange {
+                        background-color: #fa6800;
+                        border-color: #fa6800;
+                        color: #fff;
+                    }
                 }
+            }
+
+            &:hover > a, &:focus > a {
+                background-color: rgba($color: white, $alpha: 0.1) !important;
+                color: $nav-item-dark-color !important;
             }
         }
 
@@ -287,14 +313,6 @@ html[lang=ja] header.navbar {
                     line-height: 21px;
                 }
             }
-        }
-    }
-
-    @media screen and (min-width: $break) {
-        .navbar-nav > li > a {
-            padding: 0;    
-            margin-left: 8px;
-            margin-right: 16px;
         }
     }
 }
