@@ -1,3 +1,12 @@
+footer.ja-common {
+  .columns {
+    display: flex;
+    .column {
+      flex-grow: 1;
+    }
+  }
+}
+
 footer.common {
     border-top: 1px solid #ddd;
     color: #666;
