@@ -20,54 +20,20 @@ html[lang=ja] header.navbar {
             background-color: rgba(0, 0, 0, 0.16);
             border-radius: 0;
             border: none;
-            height: 50px;
+            height: 60px;
             margin: 0;
             padding: 0 0 0 15px;
             position: relative;
             text-align: left;
-            width: 52px;
             .icon-bar {
-                opacity: 0;
-                transition: opacity 140ms;
-            }
-            .icon-bar-left, .icon-bar-right {
-                position: absolute;
-                background-color: #fff;
-                transition: transform 140ms cubic-bezier(.34, .94, .69, 1);
-                transform-origin: bottom center;
-                float: left;
-                width: 14px;
-                height: 2px;
-            }
-            .icon-bar-left {
-                top: 24px;
-                left: 15px;
-                border-radius: 1px 0 0 1px;
-                transform: rotate(-45deg);
-            }
-            .icon-bar-right {
-                top: 24px;
-                right: 15px;
-                border-radius: 0 1px 1px 0;
-                transform: rotate(45deg);
+                width: 24px;
             }
             .icon-bar + .icon-bar {
                 clear: both;
-                margin-top: 10px;
+                margin-top: 7px;
             }
             &.collapsed {
                 background-color: transparent;
-                .icon-bar {
-                    opacity: 1;
-                }
-                .icon-bar-left {
-                    transform: rotate(0);
-                    width: 12px;
-                }
-                .icon-bar-right {
-                    transform: rotate(0);
-                    width: 12px;
-                }
             }
         }
     }
