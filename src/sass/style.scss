@@ -4,6 +4,7 @@
 
 //  Reset CSS and variables have been to _init.scss
 @import "init";
+@import "init-v2"; // Some pages started using a new design (named v2) as of March 2018
 @import "icon";
 @import "common";
 @import "button";
