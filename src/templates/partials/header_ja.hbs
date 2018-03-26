@@ -62,7 +62,7 @@ component: navbar
                 <ul class="nav navbar-nav navbar-right">
 
                     {{#is language "ja"}}
-                        <li class="dropdown">
+                        <li class="navbar-nav__menu dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">特徴<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/features/html5.html">HTML5 アプリのメリット</a></li>
@@ -70,15 +70,15 @@ component: navbar
                                 <li><a href="/dev-support.html">サポート体制</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <li class="navbar-nav__menu dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">実績<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/showcase/">導入事例</a></li>
                                 <li><a href="/great-apps.html">アプリ一覧</a></li>
                             </ul>
                         </li>
-                        <li><a href="/pricing.html">料金プラン</a></li>
-                        <li class="dropdown">
+                        <li class="navbar-nav__menu"><a href="/pricing.html">料金プラン</a></li>
+                        <li class="navbar-nav__menu dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">導入支援<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/support/inquiry.html">お問い合わせ</a></li>
@@ -92,7 +92,7 @@ component: navbar
                                 <li><a href="https://edu.monaca.io/" target="_blank">教育機関でのご利用</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown">
+                        <li class="navbar-nav__menu dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">開発リソース<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="https://docs.monaca.io/ja/" target="_blank">ドキュメント</a></li>
@@ -106,8 +106,8 @@ component: navbar
                             </ul>
                         </li>
 
-                        <li><a href="/pricing.html" class="btn">ログイン</a></li>
-                        <li><a href="/pricing.html" class="btn orange">無料トライアル</a></li>
+                        <li class="login"><a href="/pricing.html" class="btn">ログイン</a></li>
+                        <li class="trial"><a href="/pricing.html" class="btn orange">無料トライアル</a></li>
 
     {{!-- 
 
