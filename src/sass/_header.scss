@@ -230,7 +230,7 @@ html[lang=ja] header.navbar {
                 width: auto;
                 height: 40px;
                 transition: $header-transition;
-                @media screen and (max-width: $v2-break-tablet) {
+                @media screen and (max-width: 960px) {
                     height: 24px;
                 }
             }
