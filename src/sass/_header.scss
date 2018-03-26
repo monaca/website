@@ -246,8 +246,7 @@ html[lang=ja] header.navbar {
         padding: 0;
 
         &.collapsing {
-            height: 100vh !important;
-            transition: none !important;
+            display: none;
         }
 
         @media screen and (min-width: $v2-break-tablet + 1px) {
