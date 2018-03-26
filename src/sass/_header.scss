@@ -246,6 +246,19 @@ html[lang=ja] header.navbar {
         transition: none !important;
         padding: 0;
 
+        &.collapse:not(.in) {
+            .opt {
+                @media screen and (max-width: 870px) {
+                    display: none;
+                }
+            }
+            .caret {
+                @media screen and (max-width: 1020px) {
+                    display: none;
+                }
+            }
+        }
+
         &.collapsing {
             display: none;
         }
