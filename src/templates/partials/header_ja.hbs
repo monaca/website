@@ -292,27 +292,25 @@ component: navbar
 
 <script>
     (function() {
-        if (document.documentElement.getAttribute('lang') === 'ja') {
-            document.addEventListener('scroll', function(event) {
-                var header = document.querySelector('.navbar-fixed-top')
+        document.addEventListener('scroll', function(event) {
+            var header = document.querySelector('.navbar-fixed-top')
 
-                if (header) {
-                    var klass = 'scrolling';
-                    if (document.documentElement.scrollTop > 30) {
-                        header.classList.add(klass);
-                    } else {
-                        header.classList.remove(klass);
-                    }
+            if (header) {
+                var klass = 'scrolling';
+                if (document.documentElement.scrollTop > 30) {
+                    header.classList.add(klass);
+                } else {
+                    header.classList.remove(klass);
                 }
-            });
+            }
+        });
 
-            var buttons = Array.prototype.slice.call(document.querySelectorAll('.navbar-toggle'));
-            buttons.forEach(function(button) {
-                button.onclick = function(event) {
-                    var isShown = !!document.querySelector('#navbar-menu.collapse.in');
-                    document.documentElement.style.overflowY = isShown ? 'auto' : 'hidden';
-                };
-            });
-        }
+        var buttons = Array.prototype.slice.call(document.querySelectorAll('.navbar-toggle'));
+        buttons.forEach(function(button) {
+            button.onclick = function(event) {
+                var isShown = !!document.querySelector('#navbar-menu.collapse.in');
+                document.documentElement.style.overflowY = isShown ? 'auto' : 'hidden';
+            };
+        });
     }())
 </script>
