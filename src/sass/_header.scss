@@ -3,7 +3,7 @@ $nav-item-bright-color: #ddd;
 $nav-item-dark-color: #444;
 $small-header-bg: rgba($color: white, $alpha: .96);
 $header-transition: all .4s ease;
-$close-toggle-bg: #666;
+$close-toggle-bg: #444;
 
 html[lang=ja] .navbar-inverse {
     border-color: transparent;
@@ -123,10 +123,6 @@ html[lang=ja] header.navbar {
                 padding-left: 16px;
                 text-align: left;
             }
-            .dropdown:hover > .dropdown-toggle {
-                background-color: transparent;
-                color: #fff;
-            }
         }
     }
     .dropdown-menu {
@@ -231,12 +227,21 @@ html[lang=ja] header.navbar {
         padding: 0;
 
         &.collapse:not(.in) {
-            .opt {
+            .navbar-nav li.navbar-nav__menu {
+                padding-right: 8px;
+            }
+            .navbar-nav li.login a.btn {
+                font-size: 14px;
+            }
+            .navbar-nav li.trial a.btn {
+                font-size: 16px;
+            }
+            .navbar-nav li .opt {
                 @media screen and (max-width: 870px) {
                     display: none;
                 }
             }
-            .caret {
+            .navbar-nav li .caret {
                 @media screen and (max-width: 1020px) {
                     display: none;
                 }
@@ -265,7 +270,7 @@ html[lang=ja] header.navbar {
                 height: 100%;
                 padding: 0;
                 margin: 0;
-                margin-right: 20px;
+                margin-right: 17px;
                 border: none;
     
                 &:hover, &:focus {
@@ -312,15 +317,6 @@ html[lang=ja] header.navbar {
                     margin-left: 5px;
                 }
             }
-        }
-        .navbar-nav li.navbar-nav__menu {
-            padding-right: 8px;
-        }
-        .navbar-nav li.login a.btn {
-            font-size: 14px;
-        }
-        .navbar-nav li.trial a.btn {
-            font-size: 16px;
         }
     
         // .navbar-nav > li > a {
@@ -494,7 +490,7 @@ html[lang=ja] header.navbar {
             .caret {
                 position: absolute;
                 top: 50%;
-                right: 28px;
+                right: 24px;
             }
             
             &:hover .dropdown-toggle {
@@ -522,7 +518,10 @@ html[lang=ja] header.navbar {
             }
 
             .caret {
-                color: #666;
+                border-top: 5px dashed;
+                border-right: 5px solid transparent;
+                border-left: 5px solid transparent;
+                color: #444;
                 transition: transform .15s ease-in;
             }
 
