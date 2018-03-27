@@ -46,8 +46,7 @@ html[lang=ja] header.navbar {
         box-shadow: none;
         float: none;
         @media screen and (max-width: $v2-break-tablet - 1px) {
-            background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.16), #2c2c2c);
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.16), #2c2c2c 60%);
+            background-color: rgba(0, 0, 0, .7);
             float: none;
             margin-left: 0;
             margin-right: 0;
