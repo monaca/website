@@ -390,7 +390,7 @@ html[lang=ja] header.navbar {
     // Big screen nav
     @media screen and (min-width: $v2-break-tablet + 1px) {
         .navbar-nav > li {
-            padding: 8px 0; // Increase hoverable area
+            padding: 16px 0; // Increase hoverable area
             margin-right: 0;
 
             & > a {
@@ -411,8 +411,8 @@ html[lang=ja] header.navbar {
                 left: 50%;
                 transform: translateX(-50%);
                 margin: 0;
-                padding: 10px 0;
-                top: 52px;
+                padding: 7px 0 10px 0;
+                top: 61px; // dropdown-menu (white) should intersects with the header (white) when scrolling
                 border-radius: 4px;
                 border-top-left-radius: 4px; // Override...
                 border-top-right-radius: 4px;
@@ -425,11 +425,25 @@ html[lang=ja] header.navbar {
 
 
                 & > li {
-                    :hover {
-                        background-color: #eee;
+                    height: auto;
+
+                    > a {
+                        color: #333;
+                        padding: 0 14px;
+                        letter-spacing: -0.08em;
+                        line-height: 37px;
+
+                        &:hover {
+                            background-color: #eee;
+                        }
                     }
-                    &> a {
-                        color: $nav-item-dark-color;
+
+                    &.section-header::before {
+                        content: ' ';
+                        display: block;
+                        height: 1px;
+                        margin: 7px 0;
+                        background-color: #e5e5e5;
                     }
                 }
 
