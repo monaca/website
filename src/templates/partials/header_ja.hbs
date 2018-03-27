@@ -292,6 +292,10 @@ component: navbar
 
 <script>
     (function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            // Remove expanding/collapsing delay of side menu
+            jQuery.fn.collapse.Constructor.TRANSITION_DURATION = 0;
+        });
         document.addEventListener('scroll', function(event) {
             var header = document.querySelector('.navbar-fixed-top')
 
