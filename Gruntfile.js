@@ -239,7 +239,8 @@ module.exports = function(grunt) {
                         relativedest: '<%= config.distJa %>',
                         homepage: 'http://ja.monaca.io',
                         exclude: ["google4c5ba612e05a835b", "error404", "error500"]
-                    }
+                    },
+                    currentYear: new Date().getFullYear()
                 },
                 files: [{
                     expand: true,

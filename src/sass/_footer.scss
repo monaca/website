@@ -1,12 +1,3 @@
-footer.ja-common {
-  .columns {
-    display: flex;
-    .column {
-      flex-grow: 1;
-    }
-  }
-}
-
 footer.common {
     border-top: 1px solid #ddd;
     color: #666;
@@ -329,5 +320,109 @@ html[lang=en] > body > footer > div {
         }
       }
     }
+  }
+}
+
+html[lang=ja] footer.v2-section--footer {
+  margin: 0 auto;
+  max-width: 1024px;
+  //background-color: cyan;
+  text-align: left;
+
+  > .v2-section--footer__sitemap-wrapper {
+    margin: 100px 32px 0 32px;
+
+    // In PC mode
+    @media screen and (min-width: $v2-break-tablet + 1) {
+      > .v2-section--footer__sitemap {
+        display: flex;
+        flex-flow: row nowrap;
+        
+        > .v2-section--footer__sitemap-block {
+          flex: 1;
+          width: 25%;
+          
+          > .v2-section--footer__sitemap-category {
+            padding: 0 32px 24px 32px;
+            background-color: white; //debug
+            
+            > .v2-section--footer__sitemap-category-header {
+              padding: 5px 0;
+              font-size: 16px;
+              font-weight: 700;
+              color: #333;
+            }
+            
+            > .v2-section--footer__sitemap-item {
+              padding: 6px 0;
+              line-height: 16px;
+              font-size: 14px;
+              font-weight: 400;
+
+              > a {
+                color: #6e7780;
+              }
+
+              &.section-header:before {
+                  content: ' ';
+                  display: block;
+                  height: 1px;
+                  margin: 3px 0 14px 0;
+                  background-color: #e5e5e5;
+              }
+            }
+          }
+
+          > .v2-section--footer__language-switch {
+            padding: 11px 0 0 32px;
+            font-size: 16px;
+            font-weight: 400;
+
+            > a {
+              color: #6e7780;
+            }
+          }
+        }
+      }
+    }
+    // In smartphone/tablet mode
+    @media screen and (max-width: $v2-break-tablet) {
+      > .v2-section--footer__sitemap {
+        > .v2-section--footer__sitemap-block {
+          background-color: purple;
+          
+          > .v2-section--footer__sitemap-category {
+            box-sizing: border-box;
+            border: 1px solid black;
+            
+            > .v2-section--footer__sitemap-category-header {
+              font-size: 16px;
+              font-weight: 700;
+            }
+            
+            > .v2-section--footer__sitemap-item {
+              font-size: 14px;
+              font-weight: 400;
+
+              > a {
+                color: #6e7780;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  > .v2-section--footer__copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 85px 32px 0 32px;
+    height: 60px;
+    //background-color: orange;
+    color: #6e7780;
+    font-family: monospace;
+    letter-spacing: -0.04em;
   }
 }
