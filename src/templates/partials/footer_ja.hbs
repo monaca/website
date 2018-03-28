@@ -3,24 +3,24 @@
     <div class="v2-section--footer__sitemap">
       <div class="v2-section--footer__sitemap-block">
         <div class="v2-section--footer__sitemap-category">
-          <div class="v2-section--footer__sitemap-category-header">特徴</div>
+          <div class="v2-section--footer__sitemap-category-header">特徴<span class="caret"></span></div>
           <div class="v2-section--footer__sitemap-item"><a href="/features/html5.html">HTML5 アプリのメリット</a></div>
           <div class="v2-section--footer__sitemap-item"><a href="/features/">Monaca のメリット</a></div>
           <div class="v2-section--footer__sitemap-item"><a href="/dev-support.html">サポート体制</a></div>
         </div>
         <div class="v2-section--footer__sitemap-category">
-          <div class="v2-section--footer__sitemap-category-header">実績</div>
+          <div class="v2-section--footer__sitemap-category-header">実績<span class="caret"></span></div>
           <div class="v2-section--footer__sitemap-item"><a href="/showcase/">導入事例</a></div>
           <div class="v2-section--footer__sitemap-item"><a href="/great-apps.html">アプリ一覧</a></div>
         </div>
         <div class="v2-section--footer__sitemap-category">
-          <div class="v2-section--footer__sitemap-category-header">料金プラン</div>
+          <div class="v2-section--footer__sitemap-category-header">料金プラン<span class="caret"></span></div>
           <div class="v2-section--footer__sitemap-item"><a href="/pricing.html">プラン一覧</a></div>
         </div>
       </div>
       <div class="v2-section--footer__sitemap-block">
         <div class="v2-section--footer__sitemap-category">
-          <div class="v2-section--footer__sitemap-category-header">導入支援</div>
+          <div class="v2-section--footer__sitemap-category-header">導入支援<span class="caret"></span></div>
           <div class="v2-section--footer__sitemap-item"><a href="/support/inquiry.html">お問い合わせ</a></div>
           <div class="v2-section--footer__sitemap-item"><a href="/faq.html">よくあるご質問</a></div>
           <div class="v2-section--footer__sitemap-item section-header"><a href="/events/">イベント情報</a></div>
@@ -34,7 +34,7 @@
       </div>
       <div class="v2-section--footer__sitemap-block">
         <div class="v2-section--footer__sitemap-category">
-          <div class="v2-section--footer__sitemap-category-header">開発リソース</div>
+          <div class="v2-section--footer__sitemap-category-header">開発リソース<span class="caret"></span></div>
           <div class="v2-section--footer__sitemap-item"><a href="https://docs.monaca.io/ja/" target="_blank">ドキュメント</a></div>
           <div class="v2-section--footer__sitemap-item section-header"><a href="/book/support/">公式ガイドブック</a></div>
           <div class="v2-section--footer__sitemap-item"><a href="book/001/">公式入門書</a></div>
@@ -50,7 +50,7 @@
       </div>
       <div class="v2-section--footer__sitemap-block">
         <div class="v2-section--footer__sitemap-category">
-          <div class="v2-section--footer__sitemap-category-header">Monaca について</div>
+          <div class="v2-section--footer__sitemap-category-header">Monaca について<span class="caret"></span></div>
           <div class="v2-section--footer__sitemap-item"><a href="/terms-of-service/">利用規約</a></div>
           <div class="v2-section--footer__sitemap-item"><a href="/terms-of-service/policy.html">プライバシーポリシー</a></div>
           <div class="v2-section--footer__sitemap-item"><a href="/logos.html">ロゴの利用について</a></div>
@@ -63,7 +63,7 @@
     </div>
   </div>
   <div class="v2-section--footer__copyright">
-    Copyright © {{currentYear}} Asial Corporation. All rights reserved.
+    Copyright © {{currentYear}}&nbsp;<a href="http://www.asial.co.jp/" target="_blank">Asial Corporation</a>. All rights reserved.
   </div>
 </footer>
 
@@ -114,4 +114,18 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
         a.appendChild(r);
     })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
   {{/is}}
+</script>
+
+<script>
+  // Toggle category in footer (in smartphone/tablet mode)
+  document.addEventListener('DOMContentLoaded', function() {
+    jQuery('.v2-section--footer__sitemap-category-header').on('click', function(e) {
+      var category = e.target.parentNode;
+      if (!category.classList.contains('open')) {
+        category.classList.add('open');
+      } else {
+        category.classList.remove('open');
+      }
+    });
+  });
 </script>
