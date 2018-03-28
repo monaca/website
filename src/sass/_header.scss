@@ -564,6 +564,10 @@ html[lang=ja] header.navbar {
 
                     > li > a {
                         color: $nav-item-dark-color;
+
+                        &:hover, &:focus {
+                            color: $nav-item-dark-color;
+                        }
                     }
                 }
             }
@@ -605,10 +609,13 @@ html[lang=ja] header.navbar {
             > a {
                 color: rgba(255, 255, 255, .7);
             }
-            &:hover > a,
-            &:focus > a {
-                background-color: rgba($color: white, $alpha: 0.1) !important;
-                color: rgba(255, 255, 255, 1.0) !important;
+            // Big screen nav
+            @media screen and (min-width: $v2-break-tablet + 1px) {
+                &:hover > a,
+                &:focus > a {
+                    background-color: rgba($color: white, $alpha: 0.1) !important;
+                    color: rgba(255, 255, 255, 1.0) !important;
+                }
             }
         }
         .navbar-nav > li.login {
@@ -659,9 +666,12 @@ html[lang=ja] header.navbar {
             > a {
                 color: #444;
             }
-            &:hover > a,
-            &:focus > a {
-                color: #000 !important;
+            // Big screen nav
+            @media screen and (min-width: $v2-break-tablet + 1px) {
+                &:hover > a,
+                &:focus > a {
+                    color: #000 !important;
+                }
             }
         }
         .navbar-nav > li.login {
