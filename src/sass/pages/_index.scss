@@ -1832,12 +1832,43 @@ html[lang=ja] body.home {
     }
 
 
-    // In PC mode
-    @media screen and (min-width: $v2-break-tablet + 1) {
-        .v2-section--logos {
-            background-color: blue;
-    
+    .v2-section--logos {
+        // In PC mode
+        @media screen and (min-width: $v2-break-tablet + 1) {
+            background-color: white;
+            border-bottom: 1px solid #f0f0f0;
+            
             > .v2-section--logos__wrapper {
+                display: flex;
+                flex-flow: row nowrap;
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 0 32px;
+                max-width: 1920px;
+                height: 70px;
+                overflow: hidden;
+
+                > .v2-section--logos__logo {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    flex: 1;
+                }
+            }
+        }
+        // In smartphone/tablet mode
+        @media screen and (max-width: $v2-break-tablet) {
+            display: none;
+        }
+    }
+
+    // In PC mode
+    .v2-section--features {
+        @media screen and (min-width: $v2-break-tablet + 1) {
+            background-color: blue;
+            
+            > .v2-section--features__wrapper {
                 margin: 0 auto;
                 max-width: 1440px;
                 height: 512px;
