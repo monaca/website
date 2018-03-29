@@ -2053,6 +2053,76 @@ html[lang=ja] body.home {
             }
         }
     }
+
+    .v2-section--monaca {
+        // In PC/tablet/smartphone mode
+        @media screen {
+            background-color: white;
+            border-bottom: 1px solid #f0f0f0;
+            overflow: hidden;
+            
+            > .v2-section--monaca__wrapper {
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 0 32px;
+                max-width: 1024px;
+
+                > .v2-section--monaca__title {
+                    margin-top: 112px;
+                    font-size: 35px;
+                    font-weight: 700;
+                }
+
+                > .v2-section--monaca__feature-container {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    margin-top: 43px;
+
+                    > .v2-section--monaca__feature {
+                        flex-grow: 1;
+                        background-color: white;
+                        margin: 10px;
+                        box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1);
+                        box-sizing: border-box;
+                        border: 1px solid #ededed;
+                        border-radius: 5px;
+                        padding-top: 42px;
+                        padding-bottom: 37px;
+                        flex-basis: 280px;
+                        max-width: 300px;
+                        height: 280px;
+
+                        > .v2-section--monaca__feature-icon {
+                            height: 100px;
+                            background-repeat: no-repeat;
+                            background-position: center 0;
+                        }
+
+                        > .v2-section--monaca__feature-title {
+                            margin-top: 5px;
+                            font-size: 19.5px;
+                            font-weight: 700;
+                        }
+
+                        > .v2-section--monaca__feature-description {
+                            margin-top: 6px;
+                            padding: 0 32px;
+                            font-size: 15.5px;
+                            line-height: 32px;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+        // In tablet mode
+        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
+        }
+        // In smartphone mode
+        @media screen and (max-width: $v2-break-smartphone) {
+        }
+    }
 }
 
 html[lang=ru] body.home{
