@@ -301,7 +301,7 @@ component: navbar
 
             if (header) {
                 var klass = 'scrolling';
-                if (document.body.scrollTop > 30) {
+                if (document.documentElement.scrollTop > 30 || document.body.scrollTop > 30) {
                     header.classList.add(klass);
                 } else {
                     header.classList.remove(klass);
