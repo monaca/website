@@ -220,7 +220,7 @@ html[lang=ja] header.navbar {
 
         &.collapse:not(.in) {
             .navbar-nav li.navbar-nav__menu {
-                padding-right: 8px;
+                padding-right: 7px;
             }
             .navbar-nav li .opt {
                 @media screen and (max-width: 870px) {
@@ -461,6 +461,12 @@ html[lang=ja] header.navbar {
                     pointer-events: auto;
                     opacity: 1;
                 }
+            }
+
+            .caret {
+                border-top: 5px dashed;
+                border-right: 5px solid transparent;
+                border-left: 5px solid transparent;
             }
         }
     }
