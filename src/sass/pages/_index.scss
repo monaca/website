@@ -2270,8 +2270,31 @@ html[lang=ja] body.home {
                 }
             }
         }
-        // In smartphone mode
-        @media screen and (max-width: $v2-break-smartphone) {
+        // In small screen
+        @media screen and (max-width: 750px) {
+            > .v2-section--apps__wrapper {
+                height: auto;
+
+                > .v2-section--apps__app-container {
+                    margin: 12px auto 0 auto;
+                    width: 375px;
+
+                    > .v2-section--apps__app {
+                        margin: 13.2px;
+                        width: 86px;
+                        height: 86px;
+                        background-size: 86px 86px;
+
+                        &:nth-child(10) {
+                            display: none;
+                        }
+                    }
+                }
+                > .v2-section--apps__navigation {
+                    margin-top: 26px;
+                    margin-bottom: 11px;
+                }
+            }
         }
     }
 }
