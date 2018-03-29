@@ -393,7 +393,7 @@ html[lang=ja] header.navbar {
             }
 
             &:hover > a, &:focus > a {
-                background-color: rgba($color: white, $alpha: 0.1) !important;
+                background-color: rgba($color: white, $alpha: 0.16) !important;
                 color: $nav-item-bright-color !important;
             }
         }
