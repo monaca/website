@@ -1688,182 +1688,127 @@ html[lang=en] body.home {
 }
 
 html[lang=ja] body.home {
-    #notificationHeader {
-        @media screen and (max-width: 1200px) {
-          top: 50px;
-        }
-        @media screen and (max-width: $break) {
-          top: 50px;
-        }
-    }
+    .v2-section--keyvisual {
+        // In PC mode
+        @media screen and (min-width: $v2-break-tablet + 1) {
+            background-color: #1a1a1a;
 
-    .keyvisual.carousel-1 {
-        /* @include transition(background-color 1200ms); Diet for keyvisual images(1200ms ⇒ 0ms) */
-        @include transition(background-color 0ms);
-        height: auto;
-        max-height: 540px;
-        position: relative;
-        &[data-index="0"] { //Default keyvisual
-            @include background(linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0) 50%, rgba(0,0,0,0.1)));
-            background-color: #126aaa;
-        }
-        &[data-index="1"] { //Caravan
-            /*@include background(linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0) 80%, rgba(0,100,200,0.05)));*/
-            background-color: #e5e5e5;
-        }
-        &[data-index="2"] { //Caravan
-            /*@include background(linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0) 80%, rgba(0,100,200,0.05)));*/
-            background: url(../img/index/bg_keyvisual_repeat.jpg);
-        }
-        .carousel-container {
-            padding-bottom: percentage(540px/1170px);
-            @media screen and (max-width: 1199px) {
-                margin-top: 50px;
-            }
-        }
+            > .v2-section--keyvisual__wrapper {
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 143px 0;
+                max-width: 1920px;
+                height: 570px;
+                background-color: #333333;
+                background-image: url('/img/index-v2/keyvisual.jpg');
+                background-position: center center;
+                background-repeat: no-repeat;
 
-        #keyvisual-box {
-            position: absolute;
-            box-sizing: border-box;
-            margin-left: auto;
-            margin-right: auto;
-            width: 1170px;
-        }
-        #keyvisual-title {
-            position: absolute;
-            left: 42px;
-            top: 142px;
-            width: 100%;
-            @media screen and (max-width: $width) {
-                top: 10vw;
-            }
-            h2 {
-                font-size: 34px;
-                font-weight: normal;
-                line-height: 1.9em;
-                font-family: inherit;
-                letter-spacing: .04em;
-                @media screen and (max-width: $width) {
-                    font-size: 2.55vw;
+                > .v2-section--keyvisual__subtitle {
+                    color: white;
+                    font-size: 41px;
+                    font-weight: 700;
                 }
-                div {
-                    font-size: 52px;
-                    line-height: 1em;
-                    @media screen and (max-width: $width) {
-                        font-size: 3.9vw;
+                > .v2-section--keyvisual__title {
+                    color: white;
+                    font-size: 59px;
+                    font-weight: 700;
+                }
+                > .v2-section--keyvisual__description {
+                    margin-top: 4px;
+                    color: white;
+                    font-size: 19px;
+                    font-weight: 700;
+                }
+                > button.v2-section--keyvisual__trial-button {
+                    margin-top: 51px;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 15px 31px;
+                    background-color: #fa6800;
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 700;
+                    transition: background-color .4s ease;
+
+                    &:hover {
+                        background-color: #ea5600;
+                    }
+                    &:focus {
+                        outline: none;
                     }
                 }
-            }
-            img {
-                width: 190px;
-                @media screen and (max-width: $width) {
-                    width: 16vw;
-                }
-            }
-        }
+                > .v2-section--keyvisual__app-development {
+                    margin-top: 20px;
+                    color: white;
+                    font-size: 19px;
 
-        .box-try {
-            text-align: left;
-            padding: 60px 0 0;
-            position: absolute;
-            top: 86%;
-            min-width: 530px;
-            /* left: 3.8%; */
-            .btn {
-                padding: 0 20px;
-                margin: 0 20px 20px 0;
-                min-width: 240px;
-                span {
-                    font-size: 20px;
-                }
-                @media screen and (max-width: 900px) {
-                    font-size: 20px;
-                    height: 61px;
-                    line-height: 59px;
-                    min-width: 220px;
-                    span {
-                        font-size: 18px;
+                    a {
+                        color: white;
+                    }
+                    a:hover, a:focus {
+                        text-decoration: none;
+                        opacity: 0.9;
                     }
                 }
             }
         }
-        .box-buy{
-            left: 15%;
-            top: 60%;
-            @media screen and (max-width: 900px) {
-              top: 56%;
+        // In smartphone/tablet mode
+        @media screen and (max-width: $v2-break-tablet) {
+            background-color: #1a1a1a;
+
+            > .v2-section--keyvisual__wrapper {
+                margin: 0 auto;
+                max-width: 1920px;
+                height: 380px;
+                background-color: #333333;
+                background-image: url('/img/index-v2/keyvisual_sp.jpg');
+                background-position: center center;
+                background-repeat: no-repeat;
+
+                > .v2-section--keyvisual__subtitle {
+
+                }
+                > .v2-section--keyvisual__title {
+                    
+                }
+                > .v2-section--keyvisual__description {
+                    
+                }
+                > .v2-section--keyvisual__trial-button {
+                    
+                }
+                > .v2-section--keyvisual__app-development {
+                    
+                }
             }
         }
     }
 
-    .sp-keyvisual {
-        margin: 0 0 -10px 0;
-    }
-    .keyvisual.visible-xs {
-        /* background: url(../img/index/keyvisual_sp.jpg) no-repeat center bottom, url(../img/index/keyvisual_bg.png) repeat-x left bottom; */
-        background-color: #126faa;
-        color: #ffffff;
-        position: relative;
-        padding-bottom: 20px;
-        h1 {
-            padding-top: 130px;
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 30px;
-            text-align: left;
-            .small {
-                color: #ffffff;
-                display: inline-block;
-                font-size: 27px;
-                line-height: 40px;
-            }
-            .key {
-                font-size: 42px;
-            }
-        }
-        p {
-            font-size: 20px;
-            text-align: left;
-            width: 585px;
-            margin-bottom: 0;
-            word-break: break-all;
-            .small {
-                vertical-align: baseline;
-            }
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            text-align: center;
-            padding: 0 5%;
-            width: 100%;
-        }
-        .box-try {
-            text-align: center;
-            padding: 30px 0 0;
-            .btn {
-                padding: 0 20px;
-                margin: 0 auto 20px;
-                width: 100%;
-                max-width: 300px;
-                span {
-                    font-size: 20px;
-                }
+
+    // In PC mode
+    @media screen and (min-width: $v2-break-tablet + 1) {
+        .v2-section--logos {
+            background-color: blue;
+    
+            > .v2-section--logos__wrapper {
+                margin: 0 auto;
+                max-width: 1440px;
+                height: 512px;
+                background-color: green;
             }
         }
     }
-    .section.campaign-banner {
-        padding-top: 20px!important;
-        @media screen and (max-width: $break) {
-            padding: 5px 0 0!important;
-        }
-    }
-    .box-awards {
-        ul {
-            li {
-                width: 19%;
-                @media screen and (max-width: $break-xs) {
-                    display: inline;
-                    width: 10%;
-                }
+    // In smartphone/tablet mode
+    @media screen and (max-width: $v2-break-tablet) {
+        .v2-section--features {
+            background-color: blue;
+    
+            > .v2-section--features__wrapper {
+                margin: 0 auto;
+                max-width: 1440px;
+                height: 512px;
+                background-color: green;
             }
         }
     }
