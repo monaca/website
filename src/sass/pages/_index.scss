@@ -2249,11 +2249,26 @@ html[lang=ja] body.home {
                 }
             }
         }
-        // In PC mode
-        @media screen and (min-width: $v2-break-tablet + 1) {
-        }
         // In smartphone/tablet mode
         @media screen and (max-width: $v2-break-tablet) {
+            > .v2-section--apps__wrapper {
+                height: 581px;
+
+                > .v2-section--apps__title {
+                    font-size: 25.5px;
+                    line-height: 56px;
+                }
+                > .v2-section--apps__app-container {
+                    margin-top: -10px;
+
+                    > .v2-section--apps__app {
+                        margin: 34px 19px;
+                    }
+                }
+                > .v2-section--apps__navigation {
+                    margin-top: 5px;
+                }
+            }
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
