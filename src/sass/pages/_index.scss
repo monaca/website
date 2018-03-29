@@ -2058,8 +2058,7 @@ html[lang=ja] body.home {
         // In PC/tablet/smartphone mode
         @media screen {
             background-color: white;
-            border-bottom: 1px solid #f0f0f0;
-            overflow: hidden;
+            padding-bottom: 108px;
             
             > .v2-section--monaca__wrapper {
                 box-sizing: border-box;
@@ -2112,6 +2111,19 @@ html[lang=ja] body.home {
                             line-height: 32px;
                             text-align: left;
                         }
+                    }
+                }
+                > .v2-section--monaca__navigation {
+                    margin-top: 47px;
+                    
+                    a {
+                        font-size: 13.7px;
+                        color: #0054ac;
+                    }
+                    a:hover, a:focus {
+                        color: #0054ac;
+                        text-decoration: none;
+                        opacity: 0.8;
                     }
                 }
             }
