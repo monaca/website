@@ -1863,29 +1863,77 @@ html[lang=ja] body.home {
         }
     }
 
-    // In PC mode
-    .v2-section--features {
+    .v2-section--html5 {
+        // In PC mode
         @media screen and (min-width: $v2-break-tablet + 1) {
-            background-color: blue;
+            background-color: white;
+            border-bottom: 1px solid #f0f0f0;
+            overflow: hidden;
             
-            > .v2-section--features__wrapper {
+            > .v2-section--html5__wrapper {
+                display: flex;
+                flex-flow: row nowrap;
+                box-sizing: border-box;
                 margin: 0 auto;
-                max-width: 1440px;
-                height: 512px;
-                background-color: green;
+                padding: 0 32px;
+                max-width: 1024px;
+                height: 760px;
+
+                > .v2-section--html5__left-side {
+                    box-sizing: border-box;
+                    padding-top: 219px;
+                    padding-left: 32px;
+                    padding-right: 32px;
+                    width: 50%;
+                    height: 400px;
+                    text-align: left;
+
+                    > .v2-section--html5__title {
+                        font-size: 35px;
+                        font-weight: 700;
+                        line-height: 73px;
+                    }
+                    > .v2-section--html5__description {
+                        font-size: 15.5px;
+                        margin-top: 13px;
+                        line-height: 32px;
+                    }
+                    > .v2-section--html5__navigation {
+                        margin-top: 33px;
+                        
+                        a {
+                            font-size: 13.7px;
+                            color: #0054ac;
+                        }
+                        a:hover, a:focus {
+                            color: #0054ac;
+                            text-decoration: none;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+                > .v2-section--html5__right-side {
+                    width: 50%;
+                    height: 760px;
+                    padding: 120px 0 0 32px;
+                    overflow: visible;
+
+                    > .v2-section--html5__image {
+                        width: 656px;
+                        height: 520px;
+                        background-image: url('/img/index-v2/section1_contents1.jpg');
+                        background-repeat: no-repeat;
+                    }
+                }
             }
         }
-    }
-    // In smartphone/tablet mode
-    @media screen and (max-width: $v2-break-tablet) {
-        .v2-section--features {
-            background-color: blue;
+        // In smartphone/tablet mode
+        @media screen and (max-width: $v2-break-tablet) {
+            background-color: white;
+            border-bottom: 1px solid #f0f0f0;
+            overflow: hidden;
     
-            > .v2-section--features__wrapper {
-                margin: 0 auto;
-                max-width: 1440px;
-                height: 512px;
-                background-color: green;
+            > .v2-section--html5__wrapper {
             }
         }
     }
