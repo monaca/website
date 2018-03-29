@@ -2188,6 +2188,77 @@ html[lang=ja] body.home {
             }
         }
     }
+    
+    .v2-section--apps {
+        // In PC/tablet/smartphone mode
+        @media screen {
+            padding-top: 62px;
+            padding-bottom: 60px;
+            background-color: #fcfaf6;
+            background-image: url('/img/index-v2/section3_bg_w2560.jpg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            overflow: hidden;
+
+            > .v2-section--apps__wrapper {
+                position: relative;
+                left: 50%;
+                margin: 0 auto 0 -400px;
+                box-shadow: 0 3px 13px rgba(0, 0, 0, 0.3);
+                box-sizing: border-box;
+                padding: 43px 20px;
+                width: 800px;
+                height: 636px;
+                background-color: rgba(255, 255, 255, 0.96);
+
+                > .v2-section--apps__title {
+                    color: black;
+                    font-size: 35px;
+                    font-weight: 700;
+                    line-height: 64px;
+                }
+
+                > .v2-section--apps__app-container {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    margin-top: 10px;
+
+                    > .v2-section--apps__app {
+                        margin: 34px 20px;
+                        box-sizing: border-box;
+                        width: 110px;
+                        height: 110px;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
+                }
+
+                > .v2-section--apps__navigation {
+                    margin-top: 25px;
+                    
+                    a {
+                        font-size: 13.7px;
+                        color: #0054ac;
+                    }
+                    a:hover, a:focus {
+                        color: #0054ac;
+                        text-decoration: none;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+        // In PC mode
+        @media screen and (min-width: $v2-break-tablet + 1) {
+        }
+        // In smartphone/tablet mode
+        @media screen and (max-width: $v2-break-tablet) {
+        }
+        // In smartphone mode
+        @media screen and (max-width: $v2-break-smartphone) {
+        }
+    }
 }
 
 html[lang=ru] body.home{
