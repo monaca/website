@@ -2296,6 +2296,22 @@ html[lang=ja] body.home {
                 }
             }
         }
+        // Fix for w=320px devices
+        @media screen and (max-width: 374px) {
+            > .v2-section--apps__wrapper {
+                > .v2-section--apps__title {
+                    font-size: 22px;
+                    line-height: 48px;
+                }
+                > .v2-section--apps__app-container {
+                    > .v2-section--apps__app {
+                        width: 72px;
+                        height: 72px;
+                        background-size: 72px 72px;
+                    }
+                }
+            }
+        }
     }
 }
 
