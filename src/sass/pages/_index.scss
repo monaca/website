@@ -1829,6 +1829,17 @@ html[lang=ja] body.home {
                 }
             }
         }
+        // Fix for w=320px devices
+        @media screen and (max-width: 374px) {
+            > .v2-section--keyvisual__wrapper {
+                > .v2-section--keyvisual__subtitle {
+                    font-size: 20px;
+                }
+                > .v2-section--keyvisual__title {
+                    font-size: 24px;
+                }
+            }
+        }
     }
 
 
