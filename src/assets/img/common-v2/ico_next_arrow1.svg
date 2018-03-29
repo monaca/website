@@ -1,0 +1,20 @@
+<svg id="レイヤー_4" data-name="レイヤー 4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <title>ico_next_arrow1</title>
+  <g>
+    <circle class="cls-1" cx="8" cy="8" r="7.5"/>
+    <polyline class="cls-2" points="6.15 12.3 10.5 7.95 6.26 3.7"/>
+  </g>
+</svg>
