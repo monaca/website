@@ -2270,8 +2270,32 @@ html[lang=ja] body.home {
                 }
             }
         }
+        // In medium screen
+        @media screen and (min-width: 621px) and (max-width: 750px) {
+            > .v2-section--apps__wrapper {
+                height: auto;
+
+                > .v2-section--apps__app-container {
+                    margin: 12px auto 0 auto;
+                    width: 720px;
+
+                    > .v2-section--apps__app {
+                        margin: 24px 19px;
+
+                        &:nth-child(9),
+                        &:nth-child(10) {
+                            display: none;
+                        }
+                    }
+                }
+                > .v2-section--apps__navigation {
+                    margin-top: 26px;
+                    margin-bottom: 11px;
+                }
+            }
+        }
         // In small screen
-        @media screen and (max-width: 750px) {
+        @media screen and (max-width: 620px) {
             > .v2-section--apps__wrapper {
                 height: auto;
 
