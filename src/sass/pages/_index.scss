@@ -2090,7 +2090,7 @@ html[lang=ja] body.home {
                         padding-bottom: 37px;
                         flex-basis: 300px; // = min-width for flex-grow
                         max-width: 300px;
-                        height: 280px;
+                        min-height: 280px;
 
                         > .v2-section--monaca__feature-icon {
                             height: 100px;
