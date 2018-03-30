@@ -2337,6 +2337,92 @@ html[lang=ja] body.home {
             }
         }
     }
+
+    .v2-section--customers {
+        // In PC/tablet/smartphone mode
+        @media screen {
+            background-color: white;
+            padding-bottom: 60px;
+            
+            > .v2-section--customers__wrapper {
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 0 32px;
+                max-width: 1024px;
+
+                > .v2-section--customers__title {
+                    margin-top: 112px;
+                    font-size: 35px;
+                    font-weight: 700;
+                }
+
+                > .v2-section--customers__description {
+                    margin-top: 45px;
+                    font-size: 15.5px;
+                    line-height: 32px;
+                    color: #6f777f;
+                }
+
+                > .v2-section--customers__customer-container {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    margin-top: 8px;
+
+                    > .v2-section--customers__customer {
+                        background-color: white;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        padding-top: 42px;
+                        padding-bottom: 55px;
+                        width: 25%;
+
+                        > .v2-section--customers__customer-logo {
+                            height: 66px;
+                            background-repeat: no-repeat;
+                            background-position: center 0;
+                        }
+
+                        > .v2-section--customers__customer-face {
+                            margin-top: 20px;
+                            height: 192px;
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                        }
+
+                        > .v2-section--customers__customer-description {
+                            margin-top: 19px;
+                            padding: 0 21px 49px 21px;
+                            font-size: 17.5px;
+                            line-height: 32px;
+                            color: #6f777f;
+                            text-align: left;
+                        }
+
+                        > .v2-section--customers__customer-navigation {
+                            margin-top: 0;
+                            
+                            a {
+                                font-size: 16.5px;
+                                color: #0054ac;
+                            }
+                            a:hover, a:focus {
+                                color: #0054ac;
+                                text-decoration: none;
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // In tablet mode
+        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
+        }
+        // In smartphone mode
+        @media screen and (max-width: $v2-break-smartphone) {
+        }
+    }
 }
 
 html[lang=ru] body.home{
