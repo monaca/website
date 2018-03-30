@@ -2553,6 +2553,7 @@ html[lang=ja] body.home {
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
+            display: none;
         }
     }
 }
