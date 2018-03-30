@@ -2361,6 +2361,10 @@ html[lang=ja] body.home {
                     font-size: 15.5px;
                     line-height: 32px;
                     color: #6f777f;
+
+                    br {
+                        display: none;
+                    }
                 }
 
                 > .v2-section--customers__customer-container {
@@ -2391,9 +2395,10 @@ html[lang=ja] body.home {
                         }
 
                         > .v2-section--customers__customer-description {
-                            margin-top: 19px;
-                            padding: 0 21px 49px 21px;
-                            height: 145px;
+                            margin: 19px auto 49px auto;
+                            width: 198px;
+                            height: 96px;
+                            box-sizing: content-box;
                             font-size: 17.5px;
                             line-height: 32px;
                             color: #6f777f;
@@ -2417,8 +2422,44 @@ html[lang=ja] body.home {
                 }
             }
         }
-        // In tablet mode
-        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
+        // In medium screen
+        @media screen and (max-width: 960px) {
+            > .v2-section--customers__wrapper {
+                > .v2-section--customers__customer-container {
+                    margin-top: 10px;
+                    padding-bottom: 42px;
+
+                    > .v2-section--customers__customer {
+                        padding-bottom: 13px;
+                        width: 50%;
+
+                        > .v2-section--customers__customer-description {
+                            margin: 21px auto 49px auto;
+                            width: 198px;
+                            height: 94px;
+                        }
+                    }
+                }
+            }
+        }
+        // In smartphone/tablet mode
+        @media screen and (max-width: $v2-break-tablet) {
+            > .v2-section--customers__wrapper {
+                padding: 0 15px;
+
+                > .v2-section--customers__title {
+                    margin-top: 74px;
+                    font-size: 25.5px;
+                }
+
+                > .v2-section--customers__description {
+                    margin-top: 16px;
+
+                    br {
+                        display: inline;
+                    }
+                }
+            }
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
