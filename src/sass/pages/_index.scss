@@ -2343,6 +2343,7 @@ html[lang=ja] body.home {
         @media screen {
             background-color: white;
             padding-bottom: 60px;
+            overflow: hidden;
             
             > .v2-section--customers__wrapper {
                 box-sizing: border-box;
