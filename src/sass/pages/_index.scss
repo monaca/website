@@ -2464,6 +2464,38 @@ html[lang=ja] body.home {
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
+            > .v2-section--customers__wrapper {
+                > .v2-section--customers__title {
+                }
+
+                > .v2-section--customers__description {
+                }
+
+                > .v2-section--customers__customer-container {
+                    margin-top: 4px;
+
+                    > .v2-section--customers__customer {
+                        padding-bottom: 10px;
+                        width: 100%;
+
+                        > .v2-section--customers__customer-logo {
+                        }
+
+                        > .v2-section--customers__customer-face {
+                            display: none;
+                        }
+
+                        > .v2-section--customers__customer-description {
+                            margin: 11px auto 10px auto;
+                            width: 268px;
+                            height: 71px;
+                        }
+
+                        > .v2-section--customers__customer-navigation {
+                        }
+                    }
+                }
+            }
         }
     }
 }
