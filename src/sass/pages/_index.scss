@@ -2564,46 +2564,51 @@ html[lang=ja] body.home {
             
             > .v2-section--specials__wrapper {
                 box-sizing: border-box;
-                margin: 114px auto 225px auto;
+                margin: 115px auto 226px auto;
                 padding: 0 32px;
                 max-width: 1024px;
 
                 > .v2-section--specials__item-container {
                     display: flex;
-                    flex-flow: row nowrap;
+                    flex-flow: row wrap;
                     justify-content: center;
 
                     > .v2-section--specials__item {
-                        background-color: white;
-                        margin: 6px;
-                        box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1);
                         box-sizing: border-box;
-                        border: 1px solid #ededed;
-                        border-radius: 5px;
+                        padding: 5px;
                         width: 25%;
-                        height: 216px;
-                        overflow: hidden;
 
-                        > .v2-section--specials__item-image {
-                            background-size: cover;
-                            background-repeat: no-repeat;
-                            background-position: center 0;
-                            height: 107px;
-                        }
-
-                        > .v2-section--specials__item-title {
-                            margin-top: 23px;
-                            font-size: 20px;
-                            font-weight: 700;
-                            color: black;
-                        }
-
-                        > .v2-section--specials__item-description {
-                            margin-top: 3px;
-                            padding: 0 16px;
-                            font-size: 16px;
-                            line-height: 32px;
-                            color: #6f777f;
+                        > .v2-section--specials__item-inner {
+                            background-color: white;
+                            box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1);
+                            box-sizing: border-box;
+                            border: 1px solid #ededed;
+                            border-radius: 6px;
+                            width: 100%;
+                            height: 216px;
+                            overflow: hidden;
+    
+                            > .v2-section--specials__item-image {
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-position: center 0;
+                                height: 107px;
+                            }
+    
+                            > .v2-section--specials__item-title {
+                                margin-top: 23px;
+                                font-size: 20px;
+                                font-weight: 700;
+                                color: black;
+                            }
+    
+                            > .v2-section--specials__item-description {
+                                margin-top: 3px;
+                                padding: 0 16px;
+                                font-size: 16px;
+                                line-height: 32px;
+                                color: #6f777f;
+                            }
                         }
                     }
                 }
