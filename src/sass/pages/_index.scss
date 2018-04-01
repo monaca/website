@@ -2089,37 +2089,47 @@ html[lang=ja] body.home {
                     justify-content: center;
                     margin-top: 43px;
 
-                    > .v2-section--monaca__feature {
-                        flex-grow: 1;
-                        background-color: white;
-                        margin: 10px;
-                        box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1);
-                        box-sizing: border-box;
-                        border: 1px solid #ededed;
-                        border-radius: 5px;
-                        padding-top: 42px;
-                        flex-basis: 300px; // = min-width for flex-grow
-                        max-width: 300px;
-                        min-height: 280px;
+                    > a {
+                        color: unset;
+                        text-decoration: unset;
 
-                        > .v2-section--monaca__feature-icon {
-                            height: 100px;
-                            background-repeat: no-repeat;
-                            background-position: center 0;
-                        }
+                        > .v2-section--monaca__feature {
+                            flex-grow: 1;
+                            background-color: white;
+                            margin: 10px;
+                            box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1);
+                            box-sizing: border-box;
+                            border: 1px solid #ededed;
+                            border-radius: 5px;
+                            padding-top: 42px;
+                            flex-basis: 300px; // = min-width for flex-grow
+                            max-width: 300px;
+                            min-height: 280px;
+                            transition: background-color 0.2s ease;
 
-                        > .v2-section--monaca__feature-title {
-                            margin-top: 5px;
-                            font-size: 19.5px;
-                            font-weight: 700;
-                        }
-
-                        > .v2-section--monaca__feature-description {
-                            margin-top: 6px;
-                            padding: 0 32px;
-                            font-size: 15.5px;
-                            line-height: 32px;
-                            text-align: left;
+                            &:hover, &:focus {
+                                background-color: #fbfbfb;
+                            }
+    
+                            > .v2-section--monaca__feature-icon {
+                                height: 100px;
+                                background-repeat: no-repeat;
+                                background-position: center 0;
+                            }
+    
+                            > .v2-section--monaca__feature-title {
+                                margin-top: 5px;
+                                font-size: 19.5px;
+                                font-weight: 700;
+                            }
+    
+                            > .v2-section--monaca__feature-description {
+                                margin-top: 6px;
+                                padding: 0 32px;
+                                font-size: 15.5px;
+                                line-height: 32px;
+                                text-align: left;
+                            }
                         }
                     }
                 }
