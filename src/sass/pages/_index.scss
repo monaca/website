@@ -2241,6 +2241,12 @@ html[lang=ja] body.home {
                         height: 110px;
                         background-repeat: no-repeat;
                         background-position: center center;
+
+                        > a {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
 
