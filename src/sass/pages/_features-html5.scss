@@ -70,8 +70,8 @@ html[lang=ja] body.features-html5 {
     .v2-section--feature-container {
         overflow: hidden;
 
-        // In PC/tablet/smartphone mode
-        @media screen {
+        // In PC/tablet mode
+        @media screen and (min-width: $v2-break-smartphone + 1px) {
             > .v2-section--feature {
                 background-color: white;
                 border-bottom: 1px solid #f0f0f0;
@@ -201,7 +201,7 @@ html[lang=ja] body.features-html5 {
             }
         }
         // In medium screen
-        @media screen and (max-width: 960px) {
+        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: 960px) {
             margin-top: 47px;
 
             > .v2-section--feature {
@@ -279,63 +279,100 @@ html[lang=ja] body.features-html5 {
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
+            margin-top: 32px;
+
             > .v2-section--feature {
-                // background-color: white;
-                // border-bottom: 1px solid #f0f0f0;
-                // overflow: hidden;
-                
-                // > .v2-section--feature__wrapper {
-                //     display: flex;
-                //     flex-flow: column nowrap;
-                //     box-sizing: border-box;
-                //     margin: 0 auto;
-                //     padding: 0 22px;
+                &:nth-child(odd),
+                &:nth-child(even) {
+                    padding-bottom: 16px;
+
+                    > .v2-section--feature__wrapper {
+                        display: flex;
+                        flex-flow: column nowrap;
+                        box-sizing: border-box;
+                        padding: 0 22px;
+                        height: auto;
+        
+                        > .v2-section--feature__text-side {
+                            box-sizing: border-box;
+                            padding-top: 42px;
+                            padding-left: 0;
+                            padding-right: 0;
+                            padding-bottom: 37px;
+                            text-align: left;
+        
+                            > .v2-section--feature__title {
+                                font-size: 25px;
+                                font-weight: 700;
+                                line-height: 57px;
+                            }
+                            > .v2-section--feature__description {
+                                font-size: 15.5px;
+                                margin-top: 5px;
+                                line-height: 32px;
+                            }
+                        }
+                        > .v2-section--feature__image-side {
+                            padding: 0;
+                            overflow: visible;
+        
+                            > .v2-section--feature__image {
+                                position: relative;
+                                margin: 0 auto;
+                                max-width: 400px;
+                                height: 343px;
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: center 0;
+
+                                > .v2-section--feature__examples {
+                                    position: relative;
+                                    left: 50%;
+                                    right: unset;
+                                    margin-left: -320px;
+                                    width: 640px;
+                                    height: 100%;
+
+                                    > img.v2-section--feature__android-bezel {
+                                        display: none;
+                                    }
+                                    > img.v2-section--feature__ios-bezel {
+                                        position: absolute;
+                                        left: 50%;
+                                        margin-left: -106px;
+                                    }
+                                    > iframe.v2-section--feature__android-frame {
+                                        display: none;
+                                    }
+                                    > iframe.v2-section--feature__ios-frame {
+                                        transform: scale(0.5);
+                                        transform-origin: 0 0;
+
+                                        position: absolute;
+                                        margin-left: -90px;
+                                        top: 49px;
+                                        left: 50%;
+                                        width: 360px; // 180 * 2
+                                        height: 642px; // 321 * 2
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
     
-                //     > .v2-section--feature__text-side {
-                //         box-sizing: border-box;
-                //         padding-top: 42px;
-                //         padding-right: 16px;
-                //         padding-bottom: 37px;
-                //         text-align: left;
-    
-                //         > .v2-section--feature__title {
-                //             font-size: 25px;
-                //             font-weight: 700;
-                //             line-height: 57px;
-                //         }
-                //         > .v2-section--feature__description {
-                //             font-size: 15.5px;
-                //             margin-top: 5px;
-                //             line-height: 32px;
-                //         }
-                //         > .v2-section--feature__navigation {
-                //             margin-top: 28px;
-                            
-                //             a {
-                //                 font-size: 16px;
-                //                 color: #0054ac;
-                //             }
-                //             a:hover, a:focus {
-                //                 color: #0054ac;
-                //                 text-decoration: none;
-                //                 opacity: 0.8;
-                //             }
-                //         }
-                //     }
-                //     > .v2-section--feature__image-side {
-                //         padding: 0;
-                //         overflow: visible;
-    
-                //         > .v2-section--feature__image {
-                //             margin: 0 auto;
-                //             max-width: 400px;
-                //             height: 343px;
-                //             background-size: contain;
-                //             background-repeat: no-repeat;
-                //             background-position: center 0;
-                //         }
-                //     }
-                // }
+                &:last-child {
+                    border-bottom: 1px solid #f0f0f0;
+                    padding-bottom: 96px;
+
+                    > .v2-section--feature__wrapper {
+                        > .v2-section--feature__image-side {
+                            > .v2-section--feature__image {
+                                height: 420px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
