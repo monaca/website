@@ -219,10 +219,12 @@ html[lang=ja] body.features-monaca {
                         padding: 1px;
                         width: 50%;
 
-                        > .v2-section--specials__item-inner {
-                            > .v2-section--specials__item-title {
-                                font-size: 16px;
-                                line-height: 28px;
+                        > a {
+                            > .v2-section--specials__item-inner {
+                                > .v2-section--specials__item-title {
+                                    font-size: 16px;
+                                    line-height: 28px;
+                                }
                             }
                         }
                     }
@@ -240,26 +242,28 @@ html[lang=ja] body.features-monaca {
                         padding: 1px;
                         width: 50%;
 
-                        > .v2-section--specials__item-inner {
-                            height: 224px;
-
-                            > .v2-section--specials__item-title {
-                                font-size: 14px;
-                                line-height: 24px;
-                            }
-
-                            > .v2-section--specials__item-description {
-                                display: flex;
-                                flex-flow: row nowrap;
-                                justify-content: center;
-                                align-items: center;
-                                box-sizing: border-box;
-                                margin: 3px auto 0 auto;
-                                padding: 0 10px;
-                                font-size: 14px;
-                                line-height: 24px;
-                                color: #6f777f;
-                                text-align: left;
+                        > a {
+                            > .v2-section--specials__item-inner {
+                                height: 224px;
+    
+                                > .v2-section--specials__item-title {
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                }
+    
+                                > .v2-section--specials__item-description {
+                                    display: flex;
+                                    flex-flow: row nowrap;
+                                    justify-content: center;
+                                    align-items: center;
+                                    box-sizing: border-box;
+                                    margin: 3px auto 0 auto;
+                                    padding: 0 10px;
+                                    font-size: 14px;
+                                    line-height: 24px;
+                                    color: #6f777f;
+                                    text-align: left;
+                                }
                             }
                         }
                     }
