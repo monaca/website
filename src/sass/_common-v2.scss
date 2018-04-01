@@ -2,6 +2,143 @@
 }
 
 html[lang=ja] body.home,
+html[lang=ja] body.features-html5 {
+    .v2-section--monaca {
+        // In PC/tablet/smartphone mode
+        @media screen {
+            background-color: white;
+            padding-bottom: 108px;
+            
+            > .v2-section--monaca__wrapper {
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 0 32px;
+                max-width: 1024px;
+
+                > .v2-section--monaca__title {
+                    margin-top: 112px;
+                    font-size: 35px;
+                    font-weight: 700;
+                }
+
+                > .v2-section--monaca__feature-container {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    margin-top: 43px;
+
+                    > a {
+                        color: unset;
+                        text-decoration: unset;
+
+                        > .v2-section--monaca__feature {
+                            flex-grow: 1;
+                            background-color: white;
+                            margin: 10px;
+                            box-shadow: 0 3px 13px rgba(0, 0, 0, 0.1);
+                            box-sizing: border-box;
+                            border: 1px solid #ededed;
+                            border-radius: 5px;
+                            padding-top: 42px;
+                            flex-basis: 300px; // = min-width for flex-grow
+                            max-width: 300px;
+                            min-height: 280px;
+                            transition: background-color 0.2s ease;
+
+                            &:hover, &:focus {
+                                background-color: #fbfbfb;
+                            }
+
+                            > .v2-section--monaca__feature-icon {
+                                height: 100px;
+                                background-repeat: no-repeat;
+                                background-position: center 0;
+                            }
+
+                            > .v2-section--monaca__feature-title {
+                                margin-top: 5px;
+                                font-size: 19.5px;
+                                font-weight: 700;
+                            }
+
+                            > .v2-section--monaca__feature-description {
+                                margin-top: 6px;
+                                padding: 0 32px;
+                                font-size: 15.5px;
+                                line-height: 32px;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+                > .v2-section--monaca__navigation {
+                    margin-top: 47px;
+                    
+                    a {
+                        font-size: 13.7px;
+                        color: #0054ac;
+                    }
+                    a:hover, a:focus {
+                        color: #0054ac;
+                        text-decoration: none;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+        // In tablet mode
+        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
+            padding-bottom: 74px;
+
+            > .v2-section--monaca__wrapper {
+                > .v2-section--monaca__title {
+                    margin-top: 74px;
+                    font-size: 25.5px;
+                }
+
+                > .v2-section--monaca__feature-container {
+                    margin-top: 24px;
+                }
+
+                > .v2-section--monaca__navigation {
+                    margin-top: 26px;
+                    
+                    a {
+                        font-size: 15.5px;
+                    }
+                }
+            }
+        }
+        // In smartphone mode
+        @media screen and (max-width: $v2-break-smartphone) {
+            padding-bottom: 76px;
+
+            > .v2-section--monaca__wrapper {
+                padding: 0 20px;
+
+                > .v2-section--monaca__title {
+                    margin-top: 65px;
+                    font-size: 25.5px;
+                    line-height: 56px;
+                }
+
+                > .v2-section--monaca__feature-container {
+                    margin-top: 12px;
+                }
+
+                > .v2-section--monaca__navigation {
+                    margin-top: 26px;
+                    
+                    a {
+                        font-size: 15.5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+html[lang=ja] body.home,
 html[lang=ja] body.features-html5,
 html[lang=ja] body.features {
     .v2-section--specials {
