@@ -2617,7 +2617,7 @@ html[lang=ja] body.home {
         // In medium screen
         @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: 900px) {
             > .v2-section--specials__wrapper {
-                margin: 79px auto 226px auto;
+                margin: 79px auto;
 
                 > .v2-section--specials__item-container {
                     > .v2-section--specials__item {
