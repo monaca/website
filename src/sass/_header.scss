@@ -200,11 +200,8 @@ html[lang=ja] header.navbar {
 
             .monaca-logo {
                 width: auto;
-                height: 40px;
+                height: 24px;
                 transition: $header-transition;
-                @media screen and (max-width: 960px) {
-                    height: 24px;
-                }
             }
             .monaca-logo:hover {
               opacity: 0.7;
@@ -607,6 +604,19 @@ html[lang=ja] header.navbar {
 
     &.home {
         height: 100px;
+
+        .navbar-header {
+            .navbar-brand {
+                .monaca-logo {
+                    @media screen and (min-width: 960px) {
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    &.navbar-fixed-top {
         @media screen and (max-width: $v2-break-tablet) {
             height: 60px;
         }
@@ -654,7 +664,8 @@ html[lang=ja] header.navbar {
         }
     }
 
-    &:not(.home), &.scrolling {
+    &:not(.navbar-fixed-top),
+    &.scrolling {
         background-color: $small-header-bg;
         height: 60px;
 
