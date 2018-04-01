@@ -11,7 +11,6 @@ html[lang=ja] body.features-html5 {
                 max-width: 1920px;
                 height: 509px;
                 background-color: #333333;
-                //background-image: url('/img/index-v2/keyvisual.jpg');
                 background-position: center center;
                 background-repeat: no-repeat;
 
@@ -34,10 +33,9 @@ html[lang=ja] body.features-html5 {
             > .v2-section--keyvisual__wrapper {
                 box-sizing: border-box;
                 margin: 0 auto;
-                padding: 76px 32px;
-                height: 380px;
+                padding: 96px 32px;
+                height: 320px;
                 background-color: #333333;
-                background-image: url('/img/index-v2/keyvisual_sp.jpg');
                 background-position: center center;
                 background-repeat: no-repeat;
 
@@ -51,61 +49,14 @@ html[lang=ja] body.features-html5 {
                     font-size: 28px;
                     font-weight: 700;
                 }
-                > .v2-section--keyvisual__description {
-                    margin-top: 4px;
-                    color: white;
-                    font-size: 15.5px;
-                    font-weight: 400;
-                }
-                > button.v2-section--keyvisual__trial-button {
-                    margin-top: 27px;
-                    border: none;
-                    border-radius: 3px;
-                    padding: 13px 26px;
-                    background-color: #fa6800;
-                    color: white;
-                    font-size: 22px;
-                    font-weight: 700;
-                    transition: background-color .4s ease;
-
-                    &:hover {
-                        background-color: #ea5600;
-                    }
-                    &:focus {
-                        outline: none;
-                    }
-                }
-                > .v2-section--keyvisual__app-development {
-                    margin-top: 26px;
-                    color: white;
-                    font-size: 15.5px;
-
-                    a {
-                        color: white;
-                    }
-                    a:hover, a:focus {
-                        text-decoration: none;
-                        opacity: 0.9;
-                    }
-                }
-            }
-        }
-        // In smartphone mode
-        @media screen and (max-width: $v2-break-smartphone) {
-            > .v2-section--keyvisual__wrapper {
-                padding: 96px 20px;
-
-                > button.v2-section--keyvisual__trial-button {
-                    display: none;
-                }
-                > .v2-section--keyvisual__app-development {
-                    margin-top: 48px;
-                }
             }
         }
         // Fix for w=320px devices
         @media screen and (max-width: 374px) {
             > .v2-section--keyvisual__wrapper {
+                padding-left: 20px;
+                padding-right: 20px;
+
                 > .v2-section--keyvisual__subtitle {
                     font-size: 20px;
                 }
