@@ -2604,7 +2604,7 @@ html[lang=ja] body.home {
     
                             > .v2-section--specials__item-description {
                                 margin-top: 3px;
-                                padding: 0 16px;
+                                padding: 0;
                                 font-size: 16px;
                                 line-height: 32px;
                                 color: #6f777f;
@@ -2614,8 +2614,8 @@ html[lang=ja] body.home {
                 }
             }
         }
-        // In tablet mode
-        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
+        // In medium screen
+        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: 900px) {
             > .v2-section--specials__wrapper {
                 margin: 79px auto 226px auto;
 
