@@ -2616,6 +2616,23 @@ html[lang=ja] body.home {
         }
         // In tablet mode
         @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
+            > .v2-section--specials__wrapper {
+                margin: 79px auto 226px auto;
+
+                > .v2-section--specials__item-container {
+                    > .v2-section--specials__item {
+                        padding: 1px;
+                        width: 50%;
+
+                        > .v2-section--specials__item-inner {
+                            > .v2-section--specials__item-title {
+                                font-size: 16px;
+                                line-height: 28px;
+                            }
+                        }
+                    }
+                }
+            }
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
