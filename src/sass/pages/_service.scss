@@ -1615,15 +1615,19 @@ body.lang-en section#support {
 .training-outline {
   width: 1170px;
   margin: 0 auto;
+  padding: 0 95px;
   position: relative;
+  display: flex;
   @media screen and (max-width: 1170px) {
     width: 945px;
-    margin: 0 auto 40px;
+    margin: 30px auto 40px;
   }
   @media screen and (max-width: $break-lg) {
     padding: 0 5%;
     width: 100%;
     box-sizing: border-box;
+    display: block;
+    padding-bottom: 20px;
   }
   @media screen and (max-width: $break) {
     padding: 0 5%;
@@ -1631,25 +1635,23 @@ body.lang-en section#support {
     box-sizing: border-box;
   }
   .text {
-    margin: 0 auto 80px;
-    padding: 0 95px;
-    width: 1170px;
+    margin: 0 30px 80px 0;
     @media screen and (max-width: 1170px) {
-      margin: 0 auto 80px;
+      //margin: 0 auto 80px;
       width: 1070px;
     }
     @media screen and (max-width: $break-lg) {
       padding: 0;
-      margin: 5% auto 7% 0;
+      margin: 5% auto 20px 0;
       width: 100%;
       box-sizing: border-box;
-      float: none;
+      //float: none;
     }
     @media screen and (max-width: $break) {
-      margin: 0 0 7% 0;
+      margin: 0 0 20px 0;
       width: 100%;
       box-sizing: border-box;
-      float: left;
+      //float: left;
     }
     p {
       margin-bottom: 15px;
@@ -1657,35 +1659,12 @@ body.lang-en section#support {
     .last-sec {
       margin-bottom: 30px;
     }
-    .left-pic {
-      margin-right: 30px;
-      @media screen and (max-width: 1170px) {
-        width: 46%;
-        display: block;
-        float: left;
-        box-sizing: border-box;
-      }
-      @media screen and (max-width: $break) {
-        margin-right: 4%;
-        width: 48%;
-        display: block;
-        float: left;
-        box-sizing: border-box;
-      }
-    }
-    .right-pic {
-      @media screen and (max-width: 1170px) {
-        width: 46%;
-        display: block;
-        float: left;
-        box-sizing: border-box;
-      }
-      @media screen and (max-width: $break) {
-        width: 48%;
-        display: block;
-        float: left;
-        box-sizing: border-box;
-      }
+  }
+  .outline-pic {
+    width: 270px;
+    height: 210px;
+    @media screen and (max-width: $break-lg) {
+      margin-bottom: 80px;
     }
   }
   .iframe-content {
@@ -1806,7 +1785,7 @@ body.lang-en section#support {
       font-size: 11px;
       font-weight: bold;
       height: 25px;
-      line-height: 25px;
+      line-height: 24px;
       padding: 0 10px;
     }
     .btn-blue {
@@ -1876,6 +1855,10 @@ body.lang-en section#support {
       font-size: 18px;
       line-height: 1.4;
       color: #363636;
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
 
       @media screen and (max-width: 970px) {
         .br-hidden {
@@ -1897,6 +1880,9 @@ body.lang-en section#support {
         }
       }
     }
+  }
+  &.basic-course h4 {
+    margin-bottom: 0;
   }
   .theme {
     width: 590px;
