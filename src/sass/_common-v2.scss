@@ -266,6 +266,7 @@ html[lang=ja] body.features-monaca {
                                 height: 520px;
                                 background-repeat: no-repeat;
 
+                                // Onsen UI working examples
                                 > .v2-section--feature__examples {
                                     position: absolute;
                                     left: 0;
@@ -302,6 +303,28 @@ html[lang=ja] body.features-monaca {
                                         right: -162px;
                                         width: 360px; // 180 * 2
                                         height: 642px; // 321 * 2
+                                    }
+                                }
+
+                                // Monaca Debugger animation
+                                // (Override styles in _animations.scss)
+                                > #animation-livereload {
+                                    padding-top: 79px;
+                                    width: 656px;
+
+                                    .livereload-editor {
+                                        width: 406px;
+                                        height: 300px;
+
+                                        .CodeMirror {
+                                            height: 264px;
+                                        }
+                                    }
+                                    .livereload-connect {
+                                        top: 216px;
+                                    }
+                                    .livereload-device {
+                                        background: url('/img/features/monaca/livereload-device.png') no-repeat left top;
                                     }
                                 }
                             }
@@ -386,7 +409,17 @@ html[lang=ja] body.features-monaca {
                                 > .v2-section--feature__examples {
                                     transform: scale(0.75);
                                     transform-origin: 100% 0;
-                                }    
+                                }
+
+                                // Monaca Debugger animation
+                                // (Override styles in _animations.scss)
+                                > #animation-livereload {
+                                    position: absolute;
+                                    right: 0;
+                                    width: 656px;
+                                    transform: scale(0.8);
+                                    transform-origin: right top;
+                                }
                             }
                         }
                     }
@@ -496,6 +529,43 @@ html[lang=ja] body.features-monaca {
                                         left: 50%;
                                         width: 360px; // 180 * 2
                                         height: 642px; // 321 * 2
+                                    }
+                                }
+
+                                // Monaca Debugger animation
+                                // (Override styles in _animations.scss)
+                                > #animation-livereload {
+                                    position: relative;
+                                    left: 50%;
+                                    right: unset;
+                                    margin-left: -328px;
+                                    width: 656px;
+                                    height: 100%;
+                                    transform: scale(0.7);
+                                    transform-origin: center top;
+                                    @media screen and (max-width: 540px - 1px) {
+                                        transform: scale(0.6);
+                                    }
+                                    @media screen and (max-width: 450px - 1px) {
+                                        transform: scale(0.5);
+                                    }
+                                    @media screen and (max-width: 375px - 1px) {
+                                        transform: scale(0.4);
+                                    }
+
+                                    .livereload-editor {
+                                        width: 406px;
+                                        height: 300px;
+
+                                        .CodeMirror {
+                                            height: 264px;
+                                        }
+                                    }
+                                    .livereload-connect {
+                                        top: 216px;
+                                    }
+                                    .livereload-device {
+                                        background: url('/img/features/monaca/livereload-device.png') no-repeat left top;
                                     }
                                 }
                             }

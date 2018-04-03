@@ -87,7 +87,23 @@ fixednav: true
                 </div>
             </div>
             <div class="v2-section--feature__image-side">
-                <div class="v2-section--feature__image" style="background-image: url('/img/features/monaca/section1_contents5.jpg');"></div>
+                <div class="v2-section--feature__image">
+                    <div id="animation-livereload">
+                        <div class="livereload-editor">
+                            <div class="livereload-editor-header">index.html</div>
+                            <div class="livereload-editor-mask"></div>
+                            <div class="livereload-saved"></div>
+                        </div>
+
+                        <div class="livereload-connect stop"></div>
+
+                        <div class="livereload-device">
+                            <div class="livereload-device-screen-base"></div>
+                            <div class="livereload-device-screen"></div>
+                            <div class="livereload-device-screen-reloaded hidden"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -193,3 +209,14 @@ fixednav: true
     </div>
 </div>
 {{> section_specials_ja }}
+
+<link href="/css/codemirror.css" rel="stylesheet">
+<script src="/js/codemirror/codemirror.js"></script>
+<script src="/js/codemirror/mode/xml/xml.js"></script>
+<script src="/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+<script>
+    window.onload = function() {
+        animateLivereload(document.getElementById("animation-livereload"));
+    };
+</script>
