@@ -21,6 +21,15 @@ html[lang=ja] body.features-html5 {
                     font-weight: 700;
                 }
 
+                > .v2-section--monaca__description {
+                    margin: 0 auto;
+                    margin-top: 45px;
+                    font-size: 17.6px;
+                    line-height: 32px;
+                    max-width: 600px;
+                    color: #6f777f;
+                }
+
                 > .v2-section--monaca__feature-container {
                     display: flex;
                     flex-flow: row wrap;
@@ -100,6 +109,14 @@ html[lang=ja] body.features-html5 {
                     margin-top: 24px;
                 }
 
+                > .v2-section--monaca__description {
+                    margin-top: 18px;
+                    margin-bottom: 31px;
+                    font-size: 17.6px;
+                    line-height: 32px;
+                    color: #6f777f;
+                }
+
                 > .v2-section--monaca__navigation {
                     margin-top: 26px;
                     
@@ -120,6 +137,11 @@ html[lang=ja] body.features-html5 {
                     margin-top: 65px;
                     font-size: 25.5px;
                     line-height: 56px;
+                }
+
+                > .v2-section--monaca__description {
+                    margin-top: 16px;
+                    margin-bottom: 31px;
                 }
 
                 > .v2-section--monaca__feature-container {
