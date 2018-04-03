@@ -188,7 +188,7 @@ html[lang=ja] body.features-monaca {
                 }
                 > .v2-section--keyvisual__title {
                     color: white;
-                    font-size: 28px;
+                    font-size: 27px;
                     font-weight: 700;
                 }
             }
@@ -601,12 +601,16 @@ html[lang=ja] body.features-monaca {
     // In medium screen
     @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: 960px) {
         .v2-section--feature__title {
-            font-size: 24px !important;
+            font-size: 22px !important;
             line-height: 53px !important;
         }
     }
     // In smartphone mode
     @media screen and (max-width: $v2-break-smartphone) {
+        .v2-section--feature__title {
+            font-size: 22px !important;
+            line-height: 53px !important;
+        }
     }
 }
 
