@@ -1,8 +1,53 @@
 ---
 title: Monaca - プラン一覧、価格表
 class: pricing
+layout: src/templates/layouts/index.hbs
 description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。
 ---
+
+<div class="v2-section--plans">
+    <div class="v2-section--plans__wrapper">
+        <div class="v2-section--plans__title">料金プラン</div>
+        <div class="v2-section--plans__description">
+            各プランは14日間無料でお試しいただけます。
+            {{#if false}}<!-- Free/Pro プラン ⇔ Business/Enterprise プラン同士を変更できるようにした後に true にする  -->
+            プランは後からいつでも変更できます。
+            {{/if}}
+        </div>
+        <div class="v2-section--plans__foo-container"></div>
+    </div>
+</div>
+<div class="v2-section--options">
+    <div class="v2-section--options__wrapper">
+        <div class="v2-section--options__title">オプション料金</div>
+        <div class="v2-section--options__description"></div>
+        <div class="v2-section--options__foo-container"></div>
+    </div>
+</div>
+<div class="v2-section--activation-code">
+    <div class="v2-section--activation-code__wrapper">
+        <div class="v2-section--activation-code__title">アクティベーションコードをお持ちの場合</div>
+        <div class="v2-section--activation-code__description">Monaca のアカウントをお持ちの方は、こちらからアクティベーションコードを入力できます。</div>
+        <div class="v2-section--activation-code__foo-container"></div>
+    </div>
+</div>
+<div class="v2-section--education">
+    <div class="v2-section--education__wrapper">
+        <div class="v2-section--education__title">教育機関向けプラン</div>
+        <div class="v2-section--education__description">教育や研究に Monaca をご利用いただく教育機関を中心に、専用プランや割引プランをご用意しています。詳しくは Monaca Education の Web サイトをご覧ください。</div>
+        <div class="v2-section--education__foo-container"></div>
+    </div>
+</div>
+<div class="v2-section--pricing-faq">
+    <div class="v2-section--pricing-faq__wrapper">
+        <div class="v2-section--pricing-faq__title">料金プランに関してよくあるご質問</div>
+        <div class="v2-section--pricing-faq__description"></div>
+        <div class="v2-section--pricing-faq__foo-container"></div>
+    </div>
+</div>
+
+<div class="container" id="pricing-container" style="display: none;"></div>
+<!--
 <div id="important-info-ja-el"></div>
 <div class="container" id="pricing-container" style="display: none;">
     <h1>Monacaプラン一覧</h1>
@@ -12,8 +57,9 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
             <a href="javascript::void(0)" class="btn btn-green btn-trial">無料トライアルを開始</a>
         </div>
     </div>
-
+-->
     <!-- Old plan -->
+<!--
     <ul class="plan column-4 plan-en" style="display: none;">
         <li class="box-1" tile="4">
             <h2>ベーシック</h2>
@@ -91,8 +137,9 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
             </div>
         </li>
     </ul>
-
+-->
     <!-- New plan -->
+<!--
     <ul class="plan-type-col-2 plan-ja" style="display: none;">
         <li><div class="individuals-plan">個人向けプラン</div>
             <div class="box-try">
@@ -337,3 +384,4 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
 </div>
 
 <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+-->
