@@ -1017,21 +1017,139 @@ html[lang=ja] body.pricing {
                 > .v2-section--plans__description {
                     margin: 0 auto;
                     margin-top: 45px;
-                    font-size: 17.6px;
+                    font-size: 16px;
                     line-height: 32px;
                     max-width: 600px;
                     color: #6f777f;
+                }
+
+                > .v2-section--plans__period-switches-wrapper {
+                    margin-top: 44px;
+
+                    > .v2-section--plans__period-switches {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: center;
+                        align-items: left;
+                        margin: 0 auto;
+                        width: auto;
+
+                        > div {
+                            position: relative;
+                            margin: 7px;
+                            height: 26px;
+
+                            input[type=radio] {
+                                display: none;
+                            }
+    
+                            input[type=radio] + label::before {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                border: 1px solid #e6e6e6;
+                                border-radius: 100px;
+                                width: 26px;
+                                height: 26px;
+                            }
+                            input[type=radio] + label {
+                                display: inline;
+                                margin-left: 42px;
+                                font-size: 16px;
+                                font-weight: 400;
+                                line-height: 25px;
+                                color: #444;
+                                user-select: none;
+                            }
+                            input[type=radio] + label::after {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                top: 8px;
+                                left: 8px;
+                                border-radius: 100px;
+                                width: 10px;
+                                height: 10px;
+                                background-color: #468fff;
+                                transition: opacity 0.2s ease;
+                                opacity: 0;
+                            }
+
+                            // Checked label
+                            input[type=radio]:checked + label {
+                                font-weight: 700;
+                            }
+                            input[type=radio]:checked + label::after {
+                                opacity: 1;
+                            }
+
+                            .v2-section--plans__period-baloon {
+                                position: relative;
+                                margin-left: 20px;
+                                border-radius: 4px;
+                                padding: 5px 8px;
+                                background-color: #468fff;
+                                color: white;
+                                font-size: 16px;
+
+                                &::before {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    border-top: 8px solid transparent;
+                                    border-right: 8px dashed;
+                                    border-bottom: 8px solid transparent;
+                                    color: #468fff;
+                                    left: -8px;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
+                        > div:first-child {
+                            label {
+                                margin-right: 44px;
+                            }
+                        }
+                    }
                 }
 
                 > .v2-section--plans__foo-container {
                 }
             }
         }
-        // In tablet mode
-        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
+        // In tablet/smartphone mode
+        @media screen and (max-width: $v2-break-tablet) {
+            > .v2-section--plans__wrapper {
+                padding: 0 20px;
+
+                > .v2-section--plans__description {
+                    margin-top: 17px;
+                }
+            }
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
+            > .v2-section--plans__wrapper {
+                > .v2-section--plans__title {
+                    margin-top: 55px;
+                    font-size: 25.5px;
+                }
+
+                > .v2-section--plans__description {
+                    font-size: 15px;
+                }
+                > .v2-section--plans__period-switches-wrapper {
+                    margin-top: 26px;
+
+                    > .v2-section--plans__period-switches {
+                        flex-flow: column;
+                        width: 218px;
+                    }
+                }
+            }
         }
     }
 

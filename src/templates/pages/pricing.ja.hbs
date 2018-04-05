@@ -9,10 +9,24 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
     <div class="v2-section--plans__wrapper">
         <div class="v2-section--plans__title">料金プラン</div>
         <div class="v2-section--plans__description">
-            各プランは14日間無料でお試しいただけます。
+            各プランは14日間無料でお試しいただけます。<br>
+            プランは後からいつでも変更できます。
             {{#if false}}<!-- Free/Pro プラン ⇔ Business/Enterprise プラン同士を変更できるようにした後に true にする  -->
             プランは後からいつでも変更できます。
             {{/if}}
+        </div>
+        <div class="v2-section--plans__period-switches-wrapper">
+            <div class="v2-section--plans__period-switches">
+                <div>
+                    <input type="radio" name="period" id="monthly" value="monthly" checked="checked" />
+                    <label for="monthly">月額</label>
+                </div>
+                <div>
+                    <input type="radio" name="period" id="yearly" value="yearly" />
+                    <label for="yearly">年額</label>
+                    <span class="v2-section--plans__period-baloon">2ヶ月分お得</span>
+                </div>
+            </div>
         </div>
         <div class="v2-section--plans__foo-container"></div>
     </div>
