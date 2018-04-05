@@ -43,14 +43,15 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
                     <div class="v2-section--plans__plan-price">
                         <div class="v2-section--plans__plan-price-per-user">
                             1ユーザ
-                            <span>2,000</span>
-                            円/月
+                            <span class="price">2,000</span>
+                            <span class="unit">円/月</span>
                         </div>
                         <div class="v2-section--plans__plan-plus">
                             ＋
                         </div>
                         <div class="v2-section--plans__plan-price-base">
-                            基本料金：<span>なし</span>
+                            基本料金：<span class="price">なし</span>
+                            <span class="unit"></span>
                         </div>
                     </div>
                     <div class="v2-section--plans__plan-button">
@@ -90,14 +91,15 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
                     <div class="v2-section--plans__plan-price">
                         <div class="v2-section--plans__plan-price-per-user">
                             1ユーザ
-                            <span>5,000</span>
-                            円/月
+                            <span class="price">5,000</span>
+                            <span class="unit">円/月</span>
                         </div>
                         <div class="v2-section--plans__plan-plus">
                             ＋
                         </div>
                         <div class="v2-section--plans__plan-price-base">
-                            基本料金：<span>2,000円/月</span>
+                            基本料金：<span class="price">2,000</span>
+                            <span class="unit">円/月</span>
                         </div>
                     </div>
                     <div class="v2-section--plans__plan-button">
@@ -134,14 +136,15 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
                     <div class="v2-section--plans__plan-price">
                         <div class="v2-section--plans__plan-price-per-user">
                             1ユーザ
-                            <span>10,000</span>
-                            円/月
+                            <span class="price">10,000</span>
+                            <span class="unit">円/月</span>
                         </div>
                         <div class="v2-section--plans__plan-plus">
                             ＋
                         </div>
                         <div class="v2-section--plans__plan-price-base">
-                            基本料金：<span>50,000円/月</span>
+                            基本料金：<span class="price">50,000</span>
+                            <span class="unit">円/月</span>
                         </div>
                     </div>
                     <div class="v2-section--plans__plan-button">
@@ -558,3 +561,52 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
 -->
 
 <link href="https://fonts.googleapis.com/css?family=Yantramanav:400,500,700,900" rel="stylesheet">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        $('input[name="period"]:radio').change(function() {
+            var period = $(this).val();
+            switch (period) {
+                case 'monthly':
+                    // Pro
+                    $('.v2-section--plans__plan-price-per-user > span.price')[0].innerHTML = '2,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[0].innerHTML = '円/月';
+                    $('.v2-section--plans__plan-price-base > span.price')[0].innerHTML = 'なし';
+                    $('.v2-section--plans__plan-price-base > span.unit')[0].innerHTML = '';
+                    
+                    // Business
+                    $('.v2-section--plans__plan-price-per-user > span.price')[1].innerHTML = '5,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[1].innerHTML = '円/月';
+                    $('.v2-section--plans__plan-price-base > span.price')[1].innerHTML = '2,000';
+                    $('.v2-section--plans__plan-price-base > span.unit')[1].innerHTML = '円/月';
+
+                     // Enterprise
+                    $('.v2-section--plans__plan-price-per-user > span.price')[2].innerHTML = '10,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[2].innerHTML = '円/月';
+                    $('.v2-section--plans__plan-price-base > span.price')[2].innerHTML = '50,000';
+                    $('.v2-section--plans__plan-price-base > span.unit')[2].innerHTML = '円/月';
+                    break;
+                case 'yearly':
+                    // Pro
+                    $('.v2-section--plans__plan-price-per-user > span.price')[0].innerHTML = '20,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[0].innerHTML = '円/年';
+                    $('.v2-section--plans__plan-price-base > span.price')[0].innerHTML = 'なし';
+                    $('.v2-section--plans__plan-price-base > span.unit')[0].innerHTML = '';
+                    
+                    // Business
+                    $('.v2-section--plans__plan-price-per-user > span.price')[1].innerHTML = '60,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[1].innerHTML = '円/年';
+                    $('.v2-section--plans__plan-price-base > span.price')[1].innerHTML = '10,000';
+                    $('.v2-section--plans__plan-price-base > span.unit')[1].innerHTML = '円/年';
+
+                     // Enterprise
+                    $('.v2-section--plans__plan-price-per-user > span.price')[2].innerHTML = '120,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[2].innerHTML = '円/年';
+                    $('.v2-section--plans__plan-price-base > span.price')[2].innerHTML = '400,000';
+                    $('.v2-section--plans__plan-price-base > span.unit')[2].innerHTML = '円/年';
+                    break;
+                default:
+            }
+        });
+    });
+</script>
