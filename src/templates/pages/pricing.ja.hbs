@@ -9,7 +9,7 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
     <div class="v2-section--plans__wrapper">
         <div class="v2-section--plans__title">料金プラン</div>
         <div class="v2-section--plans__description">
-            各プランは14日間無料でお試しいただけます。<br>
+            各プランは14日間無料でお試しいただけます。
             プランは後からいつでも変更できます。
             {{#if false}}<!-- Free/Pro プラン ⇔ Business/Enterprise プラン同士を変更できるようにした後に true にする  -->
             プランは後からいつでも変更できます。
@@ -28,7 +28,166 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
                 </div>
             </div>
         </div>
-        <div class="v2-section--plans__foo-container"></div>
+        <div class="v2-section--plans__plan-container">
+            <div class="v2-section--plans__plan">
+                <div class="v2-section--plans__plan-inner">
+                    <div class="v2-section--plans__plan-ribbon">
+                        個人におすすめ
+                    </div>
+                    <div class="v2-section--plans__plan-name">
+                        Proプラン
+                    </div>
+                    <div class="v2-section--plans__plan-description">
+                        個人でのご利用に適したプランです。
+                    </div>
+                    <div class="v2-section--plans__plan-price">
+                        <div class="v2-section--plans__plan-price-per-user">
+                            1ユーザ
+                            <span>2,000</span>
+                            円/月
+                        </div>
+                        <div class="v2-section--plans__plan-plus">
+                            ＋
+                        </div>
+                        <div class="v2-section--plans__plan-price-base">
+                            基本料金：<span>なし</span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-button">
+                        <button>14日間無料トライアル</button>
+                    </div>
+                    <div class="v2-section--plans__plan-feature-container">
+                        <div class="v2-section--plans__plan-feature">
+                            <span>クラウド開発</span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>実機デバッグ</span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>ローカル開発</span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>カスタムプラグイン</span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-compare">
+                        <a href="/pricing-detail.html">詳細を比較する</a>
+                    </div>
+                </div>
+            </div>
+            <div class="v2-section--plans__plan">
+                <div class="v2-section--plans__plan-inner main-plan">
+                    <div class="v2-section--plans__plan-ribbon">
+                        人気 No.1
+                    </div>
+                    <div class="v2-section--plans__plan-name">
+                        Businessプラン
+                    </div>
+                    <div class="v2-section--plans__plan-description">
+                        複数人での開発に最適なプランです。<br>
+                        アカウントをまとめて管理できます。
+                    </div>
+                    <div class="v2-section--plans__plan-price">
+                        <div class="v2-section--plans__plan-price-per-user">
+                            1ユーザ
+                            <span>5,000</span>
+                            円/月
+                        </div>
+                        <div class="v2-section--plans__plan-plus">
+                            ＋
+                        </div>
+                        <div class="v2-section--plans__plan-price-base">
+                            基本料金：<span>2,000円/月</span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-button">
+                        <button>14日間無料トライアル</button>
+                    </div>
+                    <div class="v2-section--plans__plan-feature-container">
+                        <div class="v2-section--plans__plan-feature" id="plans-ref-1">
+                            <span><span><em>チーム開発</em> <a href="#plans-note-1">*1</a></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span><em>アプリロジック暗号化</em><span class="optional-info">従量課金</span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span><em>セキュアストレージ</em><span class="optional-info">従量課金</span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>請求書払い<span class="optional-info">6ヶ月・年額</span></span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-compare">
+                        <a href="/pricing-detail.html">詳細を比較する</a>
+                    </div>
+                </div>
+            </div>
+            <div class="v2-section--plans__plan">
+                <div class="v2-section--plans__plan-inner">
+                    <div class="v2-section--plans__plan-name">
+                        Enterpriseプラン
+                    </div>
+                    <div class="v2-section--plans__plan-description">
+                        オンプレミス対応も可能な最上位プランです。<br>
+                        全ての機能を無制限でご利用できます。
+                    </div>
+                    <div class="v2-section--plans__plan-price">
+                        <div class="v2-section--plans__plan-price-per-user">
+                            1ユーザ
+                            <span>10,000</span>
+                            円/月
+                        </div>
+                        <div class="v2-section--plans__plan-plus">
+                            ＋
+                        </div>
+                        <div class="v2-section--plans__plan-price-base">
+                            基本料金：<span>50,000円/月</span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-button">
+                        <button>お問い合わせ</button>
+                    </div>
+                    <div class="v2-section--plans__plan-feature-container">
+                        <div class="v2-section--plans__plan-feature">
+                            <span><em>プライオリティーサポート</em></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span><em>アプリロジック暗号化</em><span class="optional-info"><em>無制限</em></span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span><em>セキュアストレージ</em><span class="optional-info"><em>無制限</em></span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>オンプレミス対応<span class="optional-info">応相談</span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>専用ビルドサーバー対応<span class="optional-info">応相談</span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>請求書払い<span class="optional-info">1ヶ月単位</span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>5ユーザー以上</span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-compare">
+                        <a href="/pricing-detail.html">詳細を比較する</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="v2-section--plans__caution">※価格は全て税抜表示です。</div>
+        <div class="v2-section--plans__navigation"><a href="/free-plan.html">Freeプランの詳細はこちら<img src="/img/common-v2/ico_next_arrow2.svg" style="margin-left: 7px;" /></a></div>
+        <div class="v2-section--plans__footnote-container">
+            <div class="v2-section--plans__footnote" id="plans-note-1">
+                <div class="v2-section--plans__footnote-number">
+                    <a href="#plans-ref-1">^1</a>
+                </div>
+                <div class="v2-section--plans__footnote-content">
+                    「管理者アカウント」により複数のアカウントをまとめて管理したり、アプリの編集権限・テスト権限を他のユーザに与えたりすることができる機能です。複数人でのアプリ開発や、テスト作業・検収作業を効率化します。
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <div class="v2-section--options">
@@ -396,6 +555,6 @@ description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ�
     </div>
 
 </div>
-
-<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 -->
+
+<link href="https://fonts.googleapis.com/css?family=Yantramanav:400,500,700,900" rel="stylesheet">

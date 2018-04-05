@@ -999,12 +999,13 @@ html[lang=ja] body.pricing {
         // In PC/tablet/smartphone mode
         @media screen {
             background-color: white;
-            padding-bottom: 108px;
+            padding-bottom: 110px;
+            border-bottom: 1px solid #f0f0f0;
             
             > .v2-section--plans__wrapper {
                 box-sizing: border-box;
                 margin: 0 auto;
-                padding: 0 32px;
+                padding: 0;
                 max-width: 1024px;
 
                 > .v2-section--plans__title {
@@ -1019,7 +1020,6 @@ html[lang=ja] body.pricing {
                     margin-top: 45px;
                     font-size: 16px;
                     line-height: 32px;
-                    max-width: 600px;
                     color: #6f777f;
                 }
 
@@ -1062,6 +1062,7 @@ html[lang=ja] body.pricing {
                                 line-height: 25px;
                                 color: #444;
                                 user-select: none;
+                                cursor: pointer;
                             }
                             input[type=radio] + label::after {
                                 content: "";
@@ -1116,7 +1117,212 @@ html[lang=ja] body.pricing {
                     }
                 }
 
-                > .v2-section--plans__foo-container {
+                > .v2-section--plans__plan-container {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    margin-top: 54px;
+
+                    > .v2-section--plans__plan {
+                        margin-left: 32px;
+                        width: 320px;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+
+                        > .v2-section--plans__plan-inner {
+                            position: relative;
+                            box-shadow: inset 0 0 0px 1px #e5e5e5;
+                            width: 100%;
+                            padding-top: 56px;
+                            padding-bottom: 55px;
+                            &.main-plan {
+                                box-shadow: inset 0 0 0px 2px #468fff;
+                            }
+
+                            > .v2-section--plans__plan-ribbon {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: absolute;
+                                top: 0;
+                                left: 70px;
+                                width: 179px;
+                                height: 24px;
+                                background-color: #468fff;
+                                border-bottom-left-radius: 4px;
+                                border-bottom-right-radius: 4px;
+                                color: white;
+                                font-size: 16px;
+                                font-weight: 700;
+                            }
+
+                            > .v2-section--plans__plan-name {
+                                color: #468fff;
+                                font-size: 16px;
+                                font-weight: 700;
+                            }
+
+                            > .v2-section--plans__plan-description {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                height: 60px;
+                                color: #6f777f;
+                            }
+
+                            > .v2-section--plans__plan-price {
+                                margin-top: 16px;
+
+                                > .v2-section--plans__plan-price-per-user {
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    color: #25384c;
+
+                                    > span {
+                                        font-family: 'Yantramanav', sans-serif;
+                                        font-size: 62px;
+                                        font-weight: 700;
+                                        letter-spacing: -0.04em;
+                                    }
+                                }
+                                > .v2-section--plans__plan-plus {
+                                    margin-top: -15px;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    color: #6f777f;
+                                }
+                                > .v2-section--plans__plan-price-base {
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    color: #6f777f;
+
+                                    > span {
+                                        font-weight: 700;
+                                        color: #25384c;
+                                    }
+                                }
+                            }
+
+                            > .v2-section--plans__plan-button {
+                                margin-top: 52px;
+                                padding: 0 32px;
+
+                                button {
+                                    border: none;
+                                    border-radius: 3px;
+                                    padding: 10px 23px;
+                                    width: 100%;
+                                    background-color: #468fff;
+                                    color: white;
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    transition: opacity 0.2s ease;
+                                    opacity: 1;
+
+                                    &:hover {
+                                        opacity: 0.8;
+                                    }
+                                    &:focus {
+                                        outline: none;
+                                    }
+                                }
+                            }
+
+                            > .v2-section--plans__plan-feature-container {
+                                margin-top: 15px;
+                                height: 320px;
+
+                                > .v2-section--plans__plan-feature {
+                                    height: 43.5px;
+                                    color: #444444;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+
+                                    em {
+                                        font-style: normal;
+                                        font-weight: 700;
+                                    }
+                                    span.optional-info {
+                                        color: #6f777f;
+                                        margin-left: 10px;
+                                    }
+                                }
+                            }
+
+                            > .v2-section--plans__plan-compare {
+                                margin-top: 25px;
+                                font-size: 16.5px;
+
+                                a {
+                                    color: #0054ac;
+                                }
+                                a:hover, a:focus {
+                                    color: #0054ac;
+                                    text-decoration: none;
+                                    opacity: 0.8;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                > .v2-section--plans__caution {
+                    float: left;
+
+                    margin-top: 36px;
+                    width: 40%;
+                    text-align: left;
+                    font-size: 16.5px;
+                    color: #6f777f;
+                }
+                > .v2-section--plans__navigation {
+                    float: right;
+
+                    margin-top: 36px;
+                    width: 40%;
+                    text-align: right;
+
+                    a {
+                        font-size: 16.5px;
+                        color: #0054ac;
+                    }
+                    a:hover, a:focus {
+                        color: #0054ac;
+                        text-decoration: none;
+                        opacity: 0.8;
+                    }
+                }
+                > .v2-section--plans__footnote-container {
+                    clear: both;
+                    padding-top: 27px;
+
+                    > .v2-section--plans__footnote {
+                        display: flex;
+                        flex-flow: row nowrap;
+                        text-align: left;
+
+                        > .v2-section--plans__footnote-number {
+                            width: 28px;
+                            line-height: 32px;
+
+                            a {
+                                color: #0054ac;
+                            }
+                            a:hover, a:focus {
+                                color: #0054ac;
+                                text-decoration: none;
+                                opacity: 0.8;
+                            }
+                        }
+                        > .v2-section--plans__footnote-content {
+                            flex: 1;
+                            line-height: 32px;
+                            color: #6f777f;
+                        }
+                    }
                 }
             }
         }
