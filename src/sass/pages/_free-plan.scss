@@ -1,0 +1,221 @@
+html[lang=ja] body.free-plan {
+    a {
+        color: #0054ac;
+        cursor: pointer;
+    }
+    a:hover, a:focus {
+        color: #0054ac;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+
+    .v2-section--free-plan {
+        // In PC/tablet/smartphone mode
+        @media screen {
+            background-color: white;
+            padding-bottom: 110px;
+            border-bottom: 1px solid #f0f0f0;
+            
+            > .v2-section--free-plan__wrapper {
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 0 32px;
+                max-width: 1024px;
+
+                > .v2-section--free-plan__navigation {
+                    margin-top: 58px;
+                    padding: 0 32px;
+                    font-size: 16.5px;
+                    text-align: left;
+                }
+
+                > .v2-section--free-plan__title {
+                    margin-top: 112px;
+                    padding: 0 32px;
+                    font-size: 35px;
+                    font-weight: 700;
+                    color: #444;
+                    text-align: left;
+                }
+
+                > .v2-section--free-plan__description {
+                    margin: 0 auto;
+                    margin-top: 37px;
+                    padding: 0 32px;
+                    font-size: 16px;
+                    line-height: 32px;
+                    color: #6f777f;
+                    text-align: left;
+
+                    p {
+                        margin-bottom: 32px;
+                    }
+                    p:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+
+                > .v2-section--free-plan__features {
+                    margin-top: 48px;
+                    
+                    ul {
+                        margin-left: 85px;
+                        text-align: left;
+                        list-style: disc;
+
+                        li {
+                            margin: 9px 0;
+                            padding-left: 10px;
+                            font-size: 16.2px;
+                            color: #444444;
+
+                            em {
+                                font-style: normal;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+
+                > button.v2-section--free-plan__button {
+                    margin-top: 51px;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 15px 31px;
+                    background-color: #468fff;
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 700;
+                    transition: opacity .2s ease;
+                    opacity: 1;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                > .v2-section--free-plan__description-after {
+                    margin: 0 auto;
+                    margin-top: 48px;
+                    padding: 0 32px;
+                    font-size: 16px;
+                    line-height: 32px;
+                    color: #6f777f;
+                    text-align: left;
+
+                    p {
+                        margin-bottom: 32px;
+                    }
+                    p:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        // In medium screen
+        @media screen and (max-width: 1024px - 1px) {
+            // > .v2-section--free-plan__wrapper {
+            //     padding: 0 20px;
+
+            //     > .v2-section--free-plan__description {
+            //         margin-top: 17px;
+            //     }
+            //     > .v2-section--free-plan__period-switches-wrapper {
+            //         > .v2-section--free-plan__period-switches {
+            //             display: flex;
+            //             flex-flow: column nowrap;
+            //             width: 217px;
+            //         }
+            //     }
+            //     > .v2-section--free-plan__plan-container {
+            //         flex-flow: column wrap;
+            //         padding-bottom: 51px;
+
+            //         > .v2-section--free-plan__plan {
+            //             margin-left: 0;
+            //             margin-top: 30px;
+            //             width: 50%;
+            //             min-width: 320px;
+            //             &:first-child {
+            //                 margin-left: 0;
+            //                 margin-top: 0;
+            //             }
+
+            //             > .v2-section--free-plan__plan-inner {
+            //                 > .v2-section--free-plan__plan-feature-container {
+            //                     height: auto;
+            //                 }
+            //             }
+            //         }
+            //     }
+            //     > .v2-section--free-plan__caution {
+            //         float: none;
+
+            //         margin-top: -25px;
+            //         width: 100%;
+            //         text-align: center;
+            //     }
+            //     > .v2-section--free-plan__navigation {
+            //         float: none;
+
+            //         margin-top: 52px;
+            //         width: 100%;
+            //         text-align: center;
+            //     }
+            // }
+        }
+        // In tablet/smartphone mode
+        @media screen and (max-width: $v2-break-tablet) {
+            // padding-bottom: 51px;
+
+            // > .v2-section--free-plan__wrapper {
+            //     > .v2-section--free-plan__title {
+            //         margin-top: 55px;
+            //         font-size: 25.5px;
+            //     }
+
+            //     > .v2-section--free-plan__description {
+            //         font-size: 15px;
+            //     }
+            //     > .v2-section--free-plan__plan-container {
+            //         > .v2-section--free-plan__plan {
+            //             > .v2-section--free-plan__plan-inner {
+            //                 > .v2-section--free-plan__plan-button {
+            //                     display: none;
+            //                 }
+            
+            //                 > .v2-section--free-plan__plan-feature-container {
+            //                     display: none;
+            //                 }
+
+            //                 > .v2-section--free-plan__plan-compare {
+            //                     margin-top: 60px;
+            //                 }
+            //             }
+            //         }
+            //     }
+            //     > .v2-section--free-plan__footnote-container {
+            //         display: none;
+            //     }
+            // }
+        }
+        // In smartphone mode
+        @media screen and (max-width: $v2-break-smartphone) {
+            // > .v2-section--free-plan__wrapper {
+            //     padding: 0 16px;
+
+            //     > .v2-section--free-plan__period-switches-wrapper {
+            //         margin-top: 26px;
+
+            //         > .v2-section--free-plan__period-switches {
+            //             flex-flow: column;
+            //             width: 218px;
+            //         }
+            //     }
+            // }
+        }
+    }
+}
