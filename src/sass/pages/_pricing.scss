@@ -1446,6 +1446,7 @@ html[lang=ja] body.pricing {
             background-color: white;
             padding-bottom: 9px;
             border-bottom: 1px solid #f0f0f0;
+            overflow: hidden;
             
             > .v2-section--options__wrapper {
                 box-sizing: border-box;
@@ -1487,15 +1488,26 @@ html[lang=ja] body.pricing {
                             border: 1px solid #cccccc;
                         }
 
+                        // For responsive design
+                        tr.v2-section--options__option-table-row-fullwidth {
+                            display: none;
+                        }
+
                         th {
                             height: 47px;
                             background-color: #f2f2f2;
                         }
                         th.v2-section--options__option-table-cell-rightside {
+                            display: table-cell;
+
                             font-size: 16px;
                             color: #6f777f;
                             text-align: center;
                             vertical-align: middle;
+                        }
+                        // For responsive design
+                        th.v2-section--options__option-table-cell-fullwidth {
+                            display: none;
                         }
 
                         td.v2-section--options__option-table-cell-leftside {
@@ -1514,12 +1526,17 @@ html[lang=ja] body.pricing {
                             }
                         }
                         td.v2-section--options__option-table-cell-rightside {
-                            width: 350px;
+                            width: 35%;
                             font-size: 16px;
                             font-weight: 700;
                             color: #25384c;
                             text-align: center;
                             vertical-align: middle;
+
+                            span.v2-section--options__option-table-cell-rightside-price-container {
+                                display: inline-block;
+                                text-align: center;
+                            }
 
                             span.optional-info {
                                 font-size: 14px;
@@ -1557,8 +1574,58 @@ html[lang=ja] body.pricing {
                 > .v2-section--options__option {
                     text-align: center;
 
+                    &:last-child {
+                        margin-bottom: 77px;
+                    }
+
                     > .v2-section--options__option-description {
                         margin-top: 16px;
+                    }
+                    > .v2-section--options__option-table {
+                        table {
+                            border: 1px solid #cccccc;
+                        }
+
+                        tr {
+                            border: none;
+                        }
+                        thead > tr {
+                            border-bottom: 1px solid #cccccc;
+                        }
+                        // For responsive design
+                        tbody > tr.v2-section--options__option-table-row-fullwidth {
+                            display: table-row;
+                            border-bottom: 1px solid #cccccc;
+
+                            > td.v2-section--options__option-table-cell-rightside {
+                                display: table-cell;
+                                text-align: left;
+                                padding-left: 28px;
+                                padding-bottom: 28px;
+                            }
+                        }
+
+                        th.v2-section--options__option-table-cell-leftside,
+                        th.v2-section--options__option-table-cell-rightside {
+                            display: none;
+                        }
+                        // For responsive design
+                        th.v2-section--options__option-table-cell-fullwidth {
+                            display: table-cell;
+
+                            font-size: 16px;
+                            color: #6f777f;
+                            text-align: center;
+                            vertical-align: middle;
+                        }
+
+                        td {
+                            border-right: 1px solid #cccccc;
+                        }
+                        // For responsive design
+                        td.v2-section--options__option-table-cell-rightside {
+                            display: none;
+                        }
                     }
                 }
             }
