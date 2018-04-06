@@ -114,6 +114,8 @@ html[lang=ja] body.faq {
         // In tablet/smartphone mode
         @media screen and (max-width: $v2-break-tablet) {
             > .v2-section--faq__wrapper {
+                padding: 0 20px;
+
                 > .v2-section--faq__title {
                     margin-top: 55px;
                     font-size: 25.5px;
