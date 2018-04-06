@@ -995,6 +995,16 @@ html[lang=en] body.pricing.compare {
 }
 
 html[lang=ja] body.pricing {
+    a {
+        color: #0054ac;
+        cursor: pointer;
+    }
+    a:hover, a:focus {
+        color: #0054ac;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+
     .v2-section--plans {
         // In PC/tablet/smartphone mode
         @media screen {
@@ -1256,16 +1266,6 @@ html[lang=ja] body.pricing {
                             > .v2-section--plans__plan-compare {
                                 margin-top: 40px;
                                 font-size: 16.5px;
-
-                                a {
-                                    color: #0054ac;
-                                }
-                                a:hover, a:focus {
-                                    color: #0054ac;
-                                    text-decoration: none;
-                                    opacity: 0.8;
-                                    cursor: pointer;
-                                }
                             }
                         }
                     }
@@ -1286,16 +1286,6 @@ html[lang=ja] body.pricing {
                     margin-top: 36px;
                     width: 40%;
                     text-align: right;
-
-                    a {
-                        font-size: 16.5px;
-                        color: #0054ac;
-                    }
-                    a:hover, a:focus {
-                        color: #0054ac;
-                        text-decoration: none;
-                        opacity: 0.8;
-                    }
                 }
                 > .v2-section--plans__footnote-container {
                     clear: both;
@@ -1309,15 +1299,6 @@ html[lang=ja] body.pricing {
                         > .v2-section--plans__footnote-number {
                             width: 28px;
                             line-height: 32px;
-
-                            a {
-                                color: #0054ac;
-                            }
-                            a:hover, a:focus {
-                                color: #0054ac;
-                                text-decoration: none;
-                                opacity: 0.8;
-                            }
                         }
                         > .v2-section--plans__footnote-content {
                             flex: 1;
@@ -1807,12 +1788,14 @@ html[lang=ja] body.pricing {
         @media screen {
             background-color: white;
             padding-bottom: 108px;
+            overflow: hidden;
             
             > .v2-section--pricing-faq__wrapper {
                 box-sizing: border-box;
                 margin: 0 auto;
                 padding: 0 32px;
                 max-width: 1024px;
+                overflow: hidden;
 
                 > .v2-section--pricing-faq__title {
                     margin-top: 112px;
@@ -1830,7 +1813,59 @@ html[lang=ja] body.pricing {
                     color: #6f777f;
                 }
 
-                > .v2-section--pricing-faq__foo-container {
+                > .v2-section--pricing-faq__faq-container {
+                    display: flex;
+                    flex-flow: column wrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    margin-top: 80px;
+                    height: 1400px;
+
+                    > .v2-section--pricing-faq__faq {
+                        width: 50%;
+                        padding: 29px;
+
+                        > .v2-section--pricing-faq__question {
+                            display: flex;
+                            flex-flow: row nowrap;
+                            color: #444;
+                            text-align: left;
+
+                            .symbol {
+                                width: 32px;
+                                font-size: 21px;
+                                font-weight: 700;
+                            }
+                            .content {
+                                flex: 1;
+                                font-size: 19.5px;
+                                font-weight: 700;
+                            }
+                        }
+                        > .v2-section--pricing-faq__answer {
+                            display: flex;
+                            flex-flow: row nowrap;
+                            margin-top: 22px;
+                            color: #6f777f;
+                            text-align: left;
+
+                            .symbol {
+                                width: 32px;
+                                font-size: 19px;
+                            }
+                            .content {
+                                flex: 1;
+                                font-size: 15.5px;
+                                line-height: 32px;
+                                font-weight: 400;
+
+                                p:last-of-type {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
         }
