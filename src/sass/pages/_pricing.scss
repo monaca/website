@@ -1411,15 +1411,7 @@ html[lang=ja] body.pricing {
                     }
                 }
                 > .v2-section--plans__footnote-container {
-                    clear: both;
-                    padding: 46px 13px 0 13px;
-
-                    > .v2-section--plans__footnote {
-                        > .v2-section--plans__footnote-number {
-                        }
-                        > .v2-section--plans__footnote-content {
-                        }
-                    }
+                    display: none;
                 }
             }
         }
