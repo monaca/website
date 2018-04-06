@@ -1631,7 +1631,8 @@ html[lang=ja] body.pricing {
         // In PC/tablet/smartphone mode
         @media screen {
             background-color: white;
-            padding-bottom: 108px;
+            padding-bottom: 116px;
+            border-bottom: 1px solid #f0f0f0;
             
             > .v2-section--activation-code__wrapper {
                 box-sizing: border-box;
@@ -1649,21 +1650,68 @@ html[lang=ja] body.pricing {
                 > .v2-section--activation-code__description {
                     margin: 0 auto;
                     margin-top: 45px;
-                    font-size: 17.6px;
+                    font-size: 16px;
                     line-height: 32px;
-                    max-width: 600px;
                     color: #6f777f;
                 }
 
-                > .v2-section--activation-code__foo-container {
+                > button.v2-section--activation-code__button {
+                    margin-top: 51px;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 15px 31px;
+                    background-color: #468fff;
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 700;
+                    transition: opacity .2s ease;
+                    opacity: 1;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                > .v2-section--activation-code__description-after {
+                    margin: 0 auto;
+                    margin-top: 45px;
+                    font-size: 16px;
+                    line-height: 32px;
+                    color: #6f777f;
                 }
             }
         }
         // In tablet mode
-        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
+        @media screen and (max-width: $v2-break-tablet) {
+            padding-bottom: 56px;
+
+            > .v2-section--activation-code__wrapper {
+                > .v2-section--activation-code__title {
+                    margin-top: 55px;
+                    font-size: 25.5px;
+                }
+
+                > .v2-section--activation-code__description {
+                    margin-top: 15px;
+                }
+
+                > button.v2-section--activation-code__button {
+                    margin-top: 22px;
+                    font-size: 22px;
+                    padding: 13px 22px;
+                }
+
+                > .v2-section--activation-code__description-after {
+                    margin-top: 21px;
+                }
+            }
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
+            display: none;
         }
     }
 
@@ -1671,7 +1719,8 @@ html[lang=ja] body.pricing {
         // In PC/tablet/smartphone mode
         @media screen {
             background-color: white;
-            padding-bottom: 108px;
+            padding-bottom: 116px;
+            border-bottom: 1px solid #f0f0f0;
             
             > .v2-section--education__wrapper {
                 box-sizing: border-box;
@@ -1689,18 +1738,64 @@ html[lang=ja] body.pricing {
                 > .v2-section--education__description {
                     margin: 0 auto;
                     margin-top: 45px;
-                    font-size: 17.6px;
+                    font-size: 16px;
                     line-height: 32px;
-                    max-width: 600px;
                     color: #6f777f;
                 }
 
-                > .v2-section--education__foo-container {
+                > button.v2-section--education__button {
+                    margin-top: 51px;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 15px 31px;
+                    background-color: #468fff;
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 700;
+                    transition: opacity .2s ease;
+                    opacity: 1;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                > .v2-section--education__description-after {
+                    margin: 0 auto;
+                    margin-top: 45px;
+                    font-size: 16px;
+                    line-height: 32px;
+                    color: #6f777f;
                 }
             }
         }
         // In tablet mode
-        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
+        @media screen and (max-width: $v2-break-tablet) {
+            padding-bottom: 56px;
+
+            > .v2-section--education__wrapper {
+                > .v2-section--education__title {
+                    margin-top: 55px;
+                    font-size: 25.5px;
+                }
+
+                > .v2-section--education__description {
+                    margin-top: 15px;
+                }
+
+                > button.v2-section--education__button {
+                    margin-top: 22px;
+                    font-size: 22px;
+                    padding: 13px 22px;
+                }
+
+                > .v2-section--education__description-after {
+                    margin-top: 21px;
+                }
+            }
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
