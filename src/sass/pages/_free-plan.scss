@@ -165,18 +165,25 @@ html[lang=ja] body.free-plan {
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
-            // > .v2-section--free-plan__wrapper {
-            //     padding: 0 16px;
+            > .v2-section--free-plan__wrapper {
+                padding: 0 16px;
 
-            //     > .v2-section--free-plan__period-switches-wrapper {
-            //         margin-top: 26px;
+                > .v2-section--free-plan__features {
+                    margin-top: 18px;
+                    
+                    ul {
+                        margin-left: 45px;
 
-            //         > .v2-section--free-plan__period-switches {
-            //             flex-flow: column;
-            //             width: 218px;
-            //         }
-            //     }
-            // }
+                        li {
+                            line-height: 26px;
+                        }
+                    }
+                }
+
+                > .v2-section--free-plan__description-after {
+                    margin-top: 35px;
+                }
+            }
         }
     }
 }
