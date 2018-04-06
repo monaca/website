@@ -1869,8 +1869,31 @@ html[lang=ja] body.pricing {
                 }
             }
         }
-        // In tablet mode
-        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
+        // In tablet/smartphone mode
+        @media screen and (max-width: $v2-break-tablet) {
+            padding-bottom: 18px;
+
+            > .v2-section--pricing-faq__wrapper {
+                > .v2-section--pricing-faq__title {
+                    margin-top: 55px;
+                    font-size: 25.5px;
+                }
+                > .v2-section--pricing-faq__faq-container {
+                    flex-flow: column nowrap;
+                    margin-top: 49px;
+                    height: auto;
+
+                    > .v2-section--pricing-faq__faq {
+                        width: 100%;
+                        padding: 0 0 46px 0;
+
+                        > .v2-section--pricing-faq__answer {
+                            .content {
+                            }
+                        }
+                    }
+                }
+            }
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
