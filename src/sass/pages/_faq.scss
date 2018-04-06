@@ -113,7 +113,37 @@ html[lang=ja] body.faq {
         }
         // In tablet/smartphone mode
         @media screen and (max-width: $v2-break-tablet) {
-            
+            > .v2-section--faq__wrapper {
+                > .v2-section--faq__title {
+                    margin-top: 55px;
+                    font-size: 25.5px;
+                }
+    
+                > .v2-section--faq__description {
+                    font-size: 15px;
+                }
+
+                > .v2-section--faq__category {
+                    padding: 0;
+
+                    .v2-section--faq__description + & {
+                    }
+
+                    > .v2-section--faq__category-title {
+                        font-size: 20.5px;
+                    }
+
+                    > .v2-section--faq__faq-container {
+                        > .v2-section--faq__faq {
+                            > .v2-section--faq__question {
+                                .content {
+                                    font-size: 17.5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
