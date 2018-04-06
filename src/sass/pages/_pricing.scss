@@ -1385,6 +1385,14 @@ html[lang=ja] body.pricing {
             padding-bottom: 51px;
 
             > .v2-section--plans__wrapper {
+                > .v2-section--plans__title {
+                    margin-top: 55px;
+                    font-size: 25.5px;
+                }
+
+                > .v2-section--plans__description {
+                    font-size: 15px;
+                }
                 > .v2-section--plans__plan-container {
                     > .v2-section--plans__plan {
                         > .v2-section--plans__plan-inner {
@@ -1420,14 +1428,6 @@ html[lang=ja] body.pricing {
             > .v2-section--plans__wrapper {
                 padding: 0 16px;
 
-                > .v2-section--plans__title {
-                    margin-top: 55px;
-                    font-size: 25.5px;
-                }
-
-                > .v2-section--plans__description {
-                    font-size: 15px;
-                }
                 > .v2-section--plans__period-switches-wrapper {
                     margin-top: 26px;
 
@@ -1444,7 +1444,8 @@ html[lang=ja] body.pricing {
         // In PC/tablet/smartphone mode
         @media screen {
             background-color: white;
-            padding-bottom: 108px;
+            padding-bottom: 9px;
+            border-bottom: 1px solid #f0f0f0;
             
             > .v2-section--options__wrapper {
                 box-sizing: border-box;
@@ -1459,21 +1460,108 @@ html[lang=ja] body.pricing {
                     color: #444;
                 }
 
-                > .v2-section--options__description {
-                    margin: 0 auto;
-                    margin-top: 45px;
-                    font-size: 17.6px;
-                    line-height: 32px;
-                    max-width: 600px;
-                    color: #6f777f;
-                }
+                > .v2-section--options__option {
+                    margin-top: 47px;
+                    margin-bottom: 106px;
+                    text-align: left;
 
-                > .v2-section--options__foo-container {
+                    > .v2-section--options__option-title {
+                        font-size: 20.5px;
+                        font-weight: 700;
+                        color: #444;
+                    }
+                    > .v2-section--options__option-description {
+                        margin-top: 6px;
+                        font-size: 16px;
+                        line-height: 34px;
+                        color: #6f777f;
+
+                        p {
+                            margin-bottom: 38px;
+                        }
+                    }
+                    > .v2-section--options__option-table {
+                        margin-top: -5px;
+
+                        table, tr {
+                            border: 1px solid #cccccc;
+                        }
+
+                        th {
+                            height: 47px;
+                            background-color: #f2f2f2;
+                        }
+                        th.v2-section--options__option-table-cell-rightside {
+                            font-size: 16px;
+                            color: #6f777f;
+                            text-align: center;
+                            vertical-align: middle;
+                        }
+
+                        td.v2-section--options__option-table-cell-leftside {
+                            padding: 28px 28px 21px 28px;
+
+                            .v2-section--options__option-table-cell-title {
+                                font-size: 16.5px;
+                                font-weight: 700;
+                                color: #25384c;
+                            }
+                            .v2-section--options__option-table-cell-description {
+                                margin-top: 11px;
+                                font-size: 16.5px;
+                                line-height: 35px;
+                                color: #6f777f;
+                            }
+                        }
+                        td.v2-section--options__option-table-cell-rightside {
+                            width: 350px;
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: #25384c;
+                            text-align: center;
+                            vertical-align: middle;
+
+                            span.optional-info {
+                                font-size: 14px;
+                                font-weight: 400;
+                                color: #6f777f;
+                            }
+                        }
+                    }
+                    > .v2-section--options__option-caution {
+                        margin-top: 36px;
+                        text-align: left;
+                        font-size: 16.5px;
+                        color: #6f777f;
+                    }
+                    > .v2-section--options__option-description-after {
+                        margin-top: 27px;
+                        font-size: 16px;
+                        line-height: 34px;
+                        color: #6f777f;
+                    }
                 }
             }
         }
-        // In tablet mode
-        @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
+        // In tablet/smartphone mode
+        @media screen and (max-width: $v2-break-tablet) {
+            > .v2-section--options__wrapper {
+                > .v2-section--options__title {
+                    margin-top: 55px;
+                    font-size: 25.5px;
+                }
+
+                > .v2-section--options__description {
+                    font-size: 15px;
+                }
+                > .v2-section--options__option {
+                    text-align: center;
+
+                    > .v2-section--options__option-description {
+                        margin-top: 16px;
+                    }
+                }
+            }
         }
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
