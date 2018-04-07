@@ -1900,3 +1900,8 @@ html[lang=ja] body.pricing:not(.compare) {
         }
     }
 }
+html[lang=ja] body.pricing.compare {
+    h1 {
+        margin-top: 112px;
+    }
+}
