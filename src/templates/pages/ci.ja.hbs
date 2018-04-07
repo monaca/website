@@ -81,13 +81,13 @@ description: Monaca CIを使うと簡単なセットアップでCordovaアプリ
         <div id="compare-cont" class="compare-cont">
             <table id="compare-cont-table">
                 <thead class="japan-plan">
-                    <th>Free<span>無料</span></th>
-                    <th>Pro<span>2,160円/月</span></th>
-                    <th>Business<span>7,560円/月</span></th>
-                    <th>Enterprise<span>108,000円/月</span></th>
+                    {{!-- <th>Free<span>無料</span></th> --}}
+                    <th>Pro<span>2,000円/月</span></th>
+                    <th>Business<span>7,000円/月</span></th>
+                    <th>Enterprise<span>100,000円/月</span></th>
                 </thead>
                 <thead class="foreign-plan">
-                    <th>Free<span>無料</span></th>
+                    {{!-- <th>Free<span>無料</span></th> --}}
                     <th>Developer<span>2,000円/月</span></th>
                     <th>Gold<span>5,000円/月</span></th>
                     <th>Platinum<span>8,000円/月</span></th>
@@ -96,17 +96,18 @@ description: Monaca CIを使うと簡単なセットアップでCordovaアプリ
 
                 <tbody>
                   <tr>
-                    <td>10ビルド<span>/月</span></td>
-                    <td class="dev-plan" rowspan="2">10ビルド<span>/月</span></td>
-                    <td class="personal-plan" rowspan="2">10ビルド<span>/月</span></td>
-                    <td rowspan="2" colspan="2">30ビルド<span>/月</span></td>
+                    {{!-- <td>10ビルド<span>/月</span></td> --}}
+                    <td rowspan=="2" class="dev-plan">10ビルド<span>/月</span></td>
+                    <td rowspan=="2" class="personal-plan">10ビルド<span>/月</span></td>
+                    <td rowspan=="2">30ビルド<span>/月</span></td>
                   </tr>
                   <tr>
                     <td></td>
                   </tr>
                   <tr class="compare-cont-comment">
-                    <td colspan="4">
+                    <td colspan="3">
                         <ul>
+                            <li>価格は全て税抜表示です。</li>
                             <li>CIチケット（ビルドチケット）は追加で購入できます（50ビルドが10,000円 - 3ヶ月の有効期限）</li>
                             <li>Basicプランでは24時間で3回までのビルド制限があります。</li>
                             <li>BasicプランとPersonalプランでは、サードパーティ製Cordovaプラグインを追加することができません。</li>

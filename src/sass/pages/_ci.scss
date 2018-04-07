@@ -896,6 +896,9 @@ html[lang=ja] body.ci {
                     @media screen and (max-width: $break-xs) {
                         width: 396px;
                     }
+                    th, td {
+                        width: 33.33%;
+                    }
                     td {
                         @media screen and (max-width: $break-xs) {
                             height: 70px;
