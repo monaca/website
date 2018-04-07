@@ -668,7 +668,7 @@ html[lang=ja] header.navbar {
     &.scrolling {
         background-color: $small-header-bg;
         height: 60px;
-        border-bottom: 1px solid #e5e5e5;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
         .navbar-header {
             .navbar-brand {
