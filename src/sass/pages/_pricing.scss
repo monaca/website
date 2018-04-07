@@ -1048,6 +1048,7 @@ html[lang=ja] body.pricing:not(.compare) {
                             position: relative;
                             margin: 7px;
                             height: 26px;
+                            text-align: left;
 
                             input[type=radio] {
                                 display: none;
@@ -1097,6 +1098,7 @@ html[lang=ja] body.pricing:not(.compare) {
                             }
 
                             .v2-section--plans__period-baloon {
+                                display: inline-block;
                                 position: relative;
                                 margin-left: 20px;
                                 border-radius: 4px;
@@ -1325,7 +1327,7 @@ html[lang=ja] body.pricing:not(.compare) {
                     > .v2-section--plans__period-switches {
                         display: flex;
                         flex-flow: column nowrap;
-                        width: 217px;
+                        width: 227px;
                     }
                 }
                 > .v2-section--plans__plan-container {
@@ -1410,7 +1412,7 @@ html[lang=ja] body.pricing:not(.compare) {
 
                     > .v2-section--plans__period-switches {
                         flex-flow: column;
-                        width: 218px;
+                        width: 228px;
                     }
                 }
             }
