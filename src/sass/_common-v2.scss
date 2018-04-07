@@ -647,6 +647,10 @@ html[lang=ja] body.features-html5 {
         @media screen and (min-width: $v2-break-tablet + 1) {
             > .v2-section--keyvisual__wrapper {
                 background-image: url('/img/features/html5/keyvisual.jpg');
+                
+                // Fix for the current image
+                background-position: center 40px;
+                background-color: #141311;
             }
         }
         // In smartphone/tablet mode
