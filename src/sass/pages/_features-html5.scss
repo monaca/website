@@ -1,4 +1,14 @@
 html[lang=ja] body.features-html5 {
+    a {
+        color: #0054ac;
+        cursor: pointer;
+    }
+    a:hover, a:focus {
+        color: #0054ac;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+
     .v2-section--closing {
         // In PC/tablet/smartphone mode
         @media screen {
