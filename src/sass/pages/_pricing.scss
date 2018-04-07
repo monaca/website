@@ -1220,7 +1220,8 @@ html[lang=ja] body.pricing:not(.compare) {
                                 margin-top: 52px;
                                 padding: 0 32px;
 
-                                button {
+                                a {
+                                    display: inline-block;
                                     border: none;
                                     border-radius: 3px;
                                     padding: 10px 23px;
@@ -1229,14 +1230,17 @@ html[lang=ja] body.pricing:not(.compare) {
                                     color: white;
                                     font-size: 20px;
                                     font-weight: 700;
+                                    cursor: pointer;
                                     transition: opacity 0.2s ease;
                                     opacity: 1;
 
                                     &:hover {
                                         opacity: 0.8;
+                                        text-decoration: none;
                                     }
                                     &:focus {
                                         outline: none;
+                                        text-decoration: none;
                                     }
                                 }
                             }
@@ -1636,7 +1640,8 @@ html[lang=ja] body.pricing:not(.compare) {
                     color: #6f777f;
                 }
 
-                > button.v2-section--activation-code__button {
+                > a.v2-section--activation-code__button {
+                    display: inline-block;
                     margin-top: 51px;
                     border: none;
                     border-radius: 3px;
@@ -1645,14 +1650,17 @@ html[lang=ja] body.pricing:not(.compare) {
                     color: white;
                     font-size: 24px;
                     font-weight: 700;
+                    cursor: pointer;
                     transition: opacity .2s ease;
                     opacity: 1;
 
                     &:hover {
                         opacity: 0.8;
+                        text-decoration: none;
                     }
                     &:focus {
                         outline: none;
+                        text-decoration: none;
                     }
                 }
 
@@ -1679,7 +1687,7 @@ html[lang=ja] body.pricing:not(.compare) {
                     margin-top: 15px;
                 }
 
-                > button.v2-section--activation-code__button {
+                > a.v2-section--activation-code__button {
                     margin-top: 22px;
                     font-size: 22px;
                     padding: 13px 22px;
@@ -1724,7 +1732,8 @@ html[lang=ja] body.pricing:not(.compare) {
                     color: #6f777f;
                 }
 
-                > button.v2-section--education__button {
+                > a.v2-section--education__button {
+                    display: inline-block;
                     margin-top: 51px;
                     border: none;
                     border-radius: 3px;
@@ -1733,14 +1742,17 @@ html[lang=ja] body.pricing:not(.compare) {
                     color: white;
                     font-size: 24px;
                     font-weight: 700;
+                    cursor: pointer;
                     transition: opacity .2s ease;
                     opacity: 1;
 
                     &:hover {
                         opacity: 0.8;
+                        text-decoration: none;
                     }
                     &:focus {
                         outline: none;
+                        text-decoration: none;
                     }
                 }
 
@@ -1767,7 +1779,7 @@ html[lang=ja] body.pricing:not(.compare) {
                     margin-top: 15px;
                 }
 
-                > button.v2-section--education__button {
+                > a.v2-section--education__button {
                     margin-top: 22px;
                     font-size: 22px;
                     padding: 13px 22px;

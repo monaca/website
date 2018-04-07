@@ -32,7 +32,8 @@ html[lang=ja] body.features-html5 {
                     line-height: 32px;
                     color: #6f777f;
                 }
-                > button.v2-section--closing__trial-button {
+                > a.v2-section--closing__trial-button {
+                    display: inline-block;
                     margin-top: 51px;
                     border: none;
                     border-radius: 3px;
@@ -41,13 +42,16 @@ html[lang=ja] body.features-html5 {
                     color: white;
                     font-size: 24px;
                     font-weight: 700;
+                    cursor: pointer;
                     transition: background-color .4s ease;
 
                     &:hover {
                         background-color: #ea5600;
+                        text-decoration: none;
                     }
                     &:focus {
                         outline: none;
+                        text-decoration: none;
                     }
                 }
             }
@@ -67,7 +71,7 @@ html[lang=ja] body.features-html5 {
                     line-height: 32px;
                     color: #6f777f;
                 }
-                > button.v2-section--closing__trial-button {
+                > a.v2-section--closing__trial-button {
                     margin-top: 23px;
                     padding: 11px 23px;
                 }

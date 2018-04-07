@@ -1720,7 +1720,8 @@ html[lang=ja] body.home {
                     font-size: 19px;
                     font-weight: 700;
                 }
-                > button.v2-section--keyvisual__trial-button {
+                > a.v2-section--keyvisual__trial-button {
+                    display: inline-block;
                     margin-top: 51px;
                     border: none;
                     border-radius: 3px;
@@ -1729,13 +1730,16 @@ html[lang=ja] body.home {
                     color: white;
                     font-size: 24px;
                     font-weight: 700;
+                    cursor: pointer;
                     transition: background-color .4s ease;
 
                     &:hover {
                         background-color: #ea5600;
+                        text-decoration: none;
                     }
                     &:focus {
                         outline: none;
+                        text-decoration: none;
                     }
                 }
                 > .v2-section--keyvisual__app-development {
@@ -1783,7 +1787,8 @@ html[lang=ja] body.home {
                     font-size: 15.5px;
                     font-weight: 400;
                 }
-                > button.v2-section--keyvisual__trial-button {
+                > a.v2-section--keyvisual__trial-button {
+                    display: inline-block;
                     margin-top: 27px;
                     border: none;
                     border-radius: 3px;
@@ -1792,13 +1797,16 @@ html[lang=ja] body.home {
                     color: white;
                     font-size: 22px;
                     font-weight: 700;
+                    cursor: pointer;
                     transition: background-color .4s ease;
 
                     &:hover {
                         background-color: #ea5600;
+                        text-decoration: none;
                     }
                     &:focus {
                         outline: none;
+                        text-decoration: none;
                     }
                 }
                 > .v2-section--keyvisual__app-development {
@@ -1821,7 +1829,7 @@ html[lang=ja] body.home {
             > .v2-section--keyvisual__wrapper {
                 padding: 96px 20px;
 
-                > button.v2-section--keyvisual__trial-button {
+                > a.v2-section--keyvisual__trial-button {
                     display: none;
                 }
                 > .v2-section--keyvisual__app-development {
@@ -2408,7 +2416,8 @@ html[lang=ja] body.home {
                     font-size: 35px;
                     font-weight: 700;
                 }
-                > button.v2-section--closing__trial-button {
+                > a.v2-section--closing__trial-button {
+                    display: inline-block;
                     margin-top: 51px;
                     border: none;
                     border-radius: 3px;
@@ -2417,13 +2426,16 @@ html[lang=ja] body.home {
                     color: white;
                     font-size: 24px;
                     font-weight: 700;
+                    cursor: pointer;
                     transition: background-color .4s ease;
 
                     &:hover {
                         background-color: #ea5600;
+                        text-decoration: none;
                     }
                     &:focus {
                         outline: none;
+                        text-decoration: none;
                     }
                 }
             }
@@ -2437,7 +2449,7 @@ html[lang=ja] body.home {
                 > .v2-section--closing__title {
                     font-size: 25.5px;
                 }
-                > button.v2-section--closing__trial-button {
+                > a.v2-section--closing__trial-button {
                     margin-top: 54px;
                     padding: 11px 23px;
                 }

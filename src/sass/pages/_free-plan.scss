@@ -94,7 +94,8 @@ html[lang=ja] body.free-plan {
                     }
                 }
 
-                > button.v2-section--free-plan__button {
+                > a.v2-section--free-plan__button {
+                    display: inline-block;
                     margin-top: 51px;
                     border: none;
                     border-radius: 3px;
@@ -103,14 +104,17 @@ html[lang=ja] body.free-plan {
                     color: white;
                     font-size: 24px;
                     font-weight: 700;
+                    cursor: pointer;
                     transition: opacity .2s ease;
                     opacity: 1;
 
                     &:hover {
                         opacity: 0.8;
+                        text-decoration: none;
                     }
                     &:focus {
                         outline: none;
+                        text-decoration: none;
                     }
                 }
             }
@@ -158,7 +162,7 @@ html[lang=ja] body.free-plan {
                     padding: 0;
                 }
 
-                > button.v2-section--free-plan__button {
+                > a.v2-section--free-plan__button {
                     display: none;
                 }
             }
