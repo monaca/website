@@ -564,6 +564,7 @@ html[lang=ja] header.navbar {
 
                 .navbar-right {
                     margin: 0;
+                    padding-bottom: 100px; // For iPhone X
 
                     > li > a {
                         color: $nav-item-dark-color;
