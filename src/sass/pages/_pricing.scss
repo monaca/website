@@ -661,7 +661,7 @@ body.pricing.compare article.main {
             width: 150px;
         }
         &.compare-header-ja {
-            padding-top: 56px;
+            padding-top: 24px;
         }
         h2 {
             box-sizing: content-box;
@@ -994,7 +994,7 @@ html[lang=en] body.pricing.compare {
     }
 }
 
-html[lang=ja] body.pricing {
+html[lang=ja] body.pricing:not(.compare) {
     a {
         color: #0054ac;
         cursor: pointer;
