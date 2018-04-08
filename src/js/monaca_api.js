@@ -155,7 +155,7 @@
 
       // If logged in, jump to dashboard
       if (loginData.ready) {
-        if (loginData.status.isLogin) {
+        if (loginData.status.isLogin || JSON.stringify(loginData.status) === '{}') { // If loginData.status is broken, jump to dashboard
           location.href = MONACA_API_URL + '/' + LANG + '/dashboard';
           return;
         }
