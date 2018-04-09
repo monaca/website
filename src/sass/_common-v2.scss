@@ -136,7 +136,7 @@ html[lang=ja] body.features-html5 {
                 > .v2-section--monaca__title {
                     margin-top: 65px;
                     font-size: 25.5px;
-                    line-height: 56px;
+                    line-height: 140%;
                 }
 
                 > .v2-section--monaca__description {
@@ -253,7 +253,7 @@ html[lang=ja] body.features-monaca {
         
                         > .v2-section--feature__text-side {
                             box-sizing: border-box;
-                            padding-top: 219px;
+                            padding-top: 234px;
                             padding-left: 32px;
                             padding-right: 32px;
                             width: 50%;
@@ -263,8 +263,9 @@ html[lang=ja] body.features-monaca {
                             > .v2-section--feature__title {
                                 font-size: 35px;
                                 font-weight: 700;
-                                line-height: 73px;
+                                line-height: 140%;
                                 color: #444;
+                                margin-bottom: 30px;
                             }
                             > .v2-section--feature__description {
                                 font-size: 15.5px;
@@ -403,15 +404,16 @@ html[lang=ja] body.features-monaca {
                         height: 508px;
         
                         > .v2-section--feature__text-side {
-                            padding-top: 72px;
+                            padding-top: 82px;
                             padding-left: 20px; // For Even
                             padding-right: 16px; // For Even
                             padding-bottom: 89px;
         
                             > .v2-section--feature__title {
                                 font-size: 25px;
-                                line-height: 57px;
+                                line-height: 140%;
                                 color: #444;
+                                margin-bottom: 30px;
                             }
                             > .v2-section--feature__description {
                                 margin-top: 5px;
@@ -495,7 +497,7 @@ html[lang=ja] body.features-monaca {
         
                         > .v2-section--feature__text-side {
                             box-sizing: border-box;
-                            padding-top: 42px;
+                            padding-top: 52px;
                             padding-left: 0;
                             padding-right: 0;
                             padding-bottom: 37px;
@@ -504,8 +506,9 @@ html[lang=ja] body.features-monaca {
                             > .v2-section--feature__title {
                                 font-size: 25px;
                                 font-weight: 700;
-                                line-height: 57px;
+                                line-height: 140%;
                                 color: #444;
+                                margin-bottom: 30px;
                             }
                             > .v2-section--feature__description {
                                 font-size: 15.5px;
@@ -622,21 +625,18 @@ html[lang=ja] body.features-monaca {
     @media screen and (min-width: $v2-break-smartphone + 1px) {
         .v2-section--feature__title {
             font-size: 28px !important;
-            line-height: 63px !important;
         }
     }
     // In medium screen
     @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: 960px) {
         .v2-section--feature__title {
             font-size: 22px !important;
-            line-height: 53px !important;
         }
     }
     // In smartphone mode
     @media screen and (max-width: $v2-break-smartphone) {
         .v2-section--feature__title {
             font-size: 22px !important;
-            line-height: 53px !important;
         }
     }
 }
