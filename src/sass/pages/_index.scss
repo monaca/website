@@ -2336,12 +2336,12 @@ html[lang=ja] body.home {
                         }
 
                         > .v2-section--customers__customer-description {
-                            margin: 19px auto 49px auto;
+                            margin: 24px auto 49px auto;
                             width: 198px;
-                            height: 96px;
+                            height: 46px;
                             box-sizing: content-box;
-                            font-size: 17.5px;
-                            line-height: 32px;
+                            font-size: 15.5px;
+                            line-height: 130%;
                             color: #6f777f;
                             text-align: left;
                         }
@@ -2350,7 +2350,7 @@ html[lang=ja] body.home {
                             margin-top: 0;
                             
                             a {
-                                font-size: 16.5px;
+                                font-size: 15.5px;
                                 color: #0054ac;
                             }
                             a:hover, a:focus {
@@ -2375,9 +2375,9 @@ html[lang=ja] body.home {
                         width: 50%;
 
                         > .v2-section--customers__customer-description {
-                            margin: 21px auto 49px auto;
+                            margin: 24px auto 49px auto;
                             width: 198px;
-                            height: 94px;
+                            height: 46px;
                         }
                     }
                 }
@@ -2394,7 +2394,8 @@ html[lang=ja] body.home {
                 }
 
                 > .v2-section--customers__description {
-                    margin-top: 16px;
+                    margin-top: 22px;
+                    line-height: 130%;
 
                     br {
                         display: inline;
@@ -2428,9 +2429,9 @@ html[lang=ja] body.home {
                         }
 
                         > .v2-section--customers__customer-description {
-                            margin: 11px auto 10px auto;
+                            margin: 21px auto 10px auto;
                             width: 280px;
-                            height: 71px;
+                            height: 61px;
                         }
 
                         > .v2-section--customers__customer-navigation {
