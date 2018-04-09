@@ -1872,7 +1872,47 @@ html[lang=ja] body.home {
                     justify-content: center;
                     align-items: center;
                     
-                    flex: 1;
+                    // If short width is given
+                    @media screen and (max-width: 1249px) {
+                        &:nth-child(1) {
+                            flex: 220; // Original width: 251px
+                            > div.v2-section--logos__logo-inner {
+                                width: 100%;
+                            }
+                        }
+                        &:nth-child(2) {
+                            flex: 170;
+                        }
+                        &:nth-child(3) {
+                            flex: 116;
+                        }
+                        &:nth-child(4) {
+                            flex: 162;
+                        }
+                        &:nth-child(5) {
+                            flex: 135;
+                        }
+                        &:nth-child(6) {
+                            flex: 134;
+                        }
+                    }
+                    // If long width is given
+                    @media screen and (min-width: 1250px) {
+                        flex: 1;
+
+                        &:nth-child(1) {
+                            flex: 1.2;
+                        }
+                    }
+
+                    > div.v2-section--logos__logo-inner {
+                        width: 80%;
+                        height: 80%;
+
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
                 }
             }
         }
