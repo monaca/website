@@ -7,6 +7,9 @@ $close-toggle-bg: #444;
 
 html[lang=ja] .navbar-inverse {
     border-color: transparent;
+    .navbar-nav > .open > a {
+        background-color: transparent;
+    }
 }
 html[lang=ja] header.navbar {
     // Start base
