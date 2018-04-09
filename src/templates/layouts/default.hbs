@@ -136,7 +136,7 @@
 <body class="{{class}}">
 
     {{#unless hideHeader}}
-    {{> header }}
+    {{#is language "ja"}}{{> header_ja }}{{else}}{{> header_en }}{{/is}}
     {{/unless}}
     {{> loginPopup }}
     {{> notificationHeader }}
@@ -147,7 +147,7 @@
     </article>
 
     {{#unless hideFooter}}
-    {{> footer }}
+    {{#is language "ja"}}{{> footer_ja }}{{else}}{{> footer_en }}{{/is}}
     {{/unless}}
 
     <script>

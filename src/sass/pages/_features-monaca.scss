@@ -1,0 +1,262 @@
+html[lang=ja] body.features-monaca {
+    a {
+        color: #0054ac;
+        cursor: pointer;
+    }
+    a:hover, a:focus {
+        color: #0054ac;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+
+    .v2-section--others {
+        // In PC/tablet/smartphone mode
+        @media screen {
+            background-color: white;
+            overflow: hidden;
+            
+            > .v2-section--others__wrapper {
+                box-sizing: border-box;
+                margin: 258px auto 194px auto;
+                padding: 0;
+                max-width: 1024px;
+
+                > .v2-section--others__title {
+                    color: #444;
+                    font-size: 35px;
+                    font-weight: 700;
+                    line-height: 140%;
+
+                    > br {
+                        display: none;
+                    }
+                }
+
+                > .v2-section--others__item-container {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    margin-top: 60px;
+                    margin-bottom: -30px;
+
+                    > .v2-section--others__item {
+                        box-sizing: border-box;
+                        margin-bottom: 62px;
+                        padding: 0 32px;
+                        width: 50%;
+                        height: 210px;
+
+                        > .v2-section--others__item-inner {
+                            display: flex;
+                            flex-flow: row wrap;
+                            background-color: white;
+                            box-sizing: border-box;
+                            width: 100%;
+                            height: 100%;
+                            overflow: hidden;
+
+                            > .v2-section--others__item-icon {
+                                background-size: contain;
+                                background-repeat: no-repeat;
+                                background-position: center 24px;
+                                width: 120px;
+                            }
+
+                            > .v2-section--others__item-text {
+                                flex: 1;
+                                text-align: left;
+                                padding-left: 14px;
+
+                                > .v2-section--others__item-title {
+                                    margin-top: 20px;
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    color: #444;
+                                }
+        
+                                > .v2-section--others__item-description {
+                                    margin-top: 9px;
+                                    padding: 0;
+                                    font-size: 16px;
+                                    line-height: 32px;
+                                    color: #6f777f;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                > .v2-section--others__navigation {
+                    a {
+                        font-size: 13.7px;
+                        color: #0054ac;
+                    }
+                    a:hover, a:focus {
+                        color: #0054ac;
+                        text-decoration: none;
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+        // In medium screen and smartphone mode
+        @media screen and (max-width: 900px) {
+            > .v2-section--others__wrapper {
+                margin: 119px auto;
+                padding: 0 20px;
+
+                > .v2-section--others__title {
+                    font-size: 25.3px;
+                    line-height: 140%;
+
+                    > br {
+                        display: inline;
+                    }
+                }
+
+                > .v2-section--others__item-container {
+                    margin-top: 48px;
+
+                    > .v2-section--others__item {
+                        margin-bottom: 0;
+                        padding: 0 16px;
+                        width: 50%;
+                        height: 261px;
+
+                        > .v2-section--others__item-inner {
+                            display: block;
+
+                            > .v2-section--others__item-icon {
+                                background-position: 0 center;
+                                width: auto;
+                                height: 60px;
+                            }
+
+                            > .v2-section--others__item-text {
+                                padding-left: 0;
+
+                                > .v2-section--others__item-title {
+                                    margin-top: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                > .v2-section--others__navigation {
+                    margin-top: 29px;
+                }
+            }
+        }
+        // In smartphone mode
+        @media screen and (max-width: $v2-break-smartphone) {
+            > .v2-section--others__wrapper {
+                margin: 119px auto 51px auto;
+                padding: 0px 24px;
+
+                > .v2-section--others__title {
+                    font-size: 25px;
+
+                    > br {
+                        display: inline;
+                    }
+                }
+
+                > .v2-section--others__item-container {
+                    > .v2-section--others__item {
+                        padding: 0;
+                        width: 100%;
+
+                        > .v2-section--others__item-inner {
+                            > .v2-section--others__item-icon {
+                            }
+
+                            > .v2-section--others__item-text {
+                                > .v2-section--others__item-title {
+                                    font-size: 19.5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                > .v2-section--others__navigation {
+                }
+            }
+        }
+    }
+
+    .v2-section--closing {
+        // In PC/tablet/smartphone mode
+        @media screen {
+            background-color: #fcfaf6;
+
+            > .v2-section--closing__wrapper {
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 112px 40px;
+                max-width: 1920px;
+                height: 506px;
+
+                > .v2-section--closing__title {
+                    color: #444;
+                    font-size: 35px;
+                    font-weight: 700;
+                }
+                > .v2-section--closing__description {
+                    margin-top: 45px;
+                    font-size: 17.6px;
+                    line-height: 32px;
+                    color: #6f777f;
+                }
+                > a.v2-section--closing__trial-button {
+                    display: inline-block;
+                    margin-top: 51px;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 15px 31px;
+                    background-color: #fa6800;
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: background-color .4s ease;
+
+                    &:hover {
+                        background-color: #ea5600;
+                        text-decoration: none;
+                    }
+                    &:focus {
+                        outline: none;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        // In smartphone/tablet mode
+        @media screen and (max-width: $v2-break-tablet) {
+            > .v2-section--closing__wrapper {
+                padding: 74px 40px;
+                height: 351px;
+
+                > .v2-section--closing__title {
+                    font-size: 25.5px;
+                }
+                > .v2-section--closing__description {
+                    margin-top: 18px;
+                    font-size: 17.6px;
+                    line-height: 32px;
+                    color: #6f777f;
+                }
+                > a.v2-section--closing__trial-button {
+                    margin-top: 23px;
+                    padding: 11px 23px;
+                }
+            }
+        }
+        // In smartphone mode
+        @media screen and (max-width: $v2-break-smartphone) {
+            display: none;
+        }
+    }
+}

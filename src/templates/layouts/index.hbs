@@ -57,7 +57,7 @@
 
 </head>
 <body class="{{class}}">
-    {{> header }}
+    {{#is language "ja"}}{{> header_ja }}{{else}}{{> header_en }}{{/is}}
 
     <div class="main" role="main">
         {{> loginPopup }}
@@ -66,7 +66,7 @@
 
     </div>
 
-    {{> footer }}
+    {{#is language "ja"}}{{> footer_ja }}{{else}}{{> footer_en }}{{/is}}
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>

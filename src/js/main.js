@@ -20,15 +20,6 @@ $(function() {
     }, 150);
   });
 
-  $("header.navbar .navbar-collapse a").on({
-    "touchstart": function() {
-      $(this).addClass("active");
-    },
-    "touchend": function() {
-      $("header.navbar .navbar-collapse a").removeClass("active");
-    }
-  });
-
   //setNotificationHeader();
 });
 

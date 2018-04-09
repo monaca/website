@@ -1,339 +1,588 @@
 ---
 title: Monaca - プラン一覧、価格表
 class: pricing
+layout: src/templates/layouts/index.hbs
 description: Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。
 ---
-<div id="important-info-ja-el"></div>
-<div class="container" id="pricing-container" style="display: none;">
-    <h1>Monacaプラン一覧</h1>
-    <div class="trial plan-en" style="display: none;">
-        <p>月額プランの場合、すべてのプランで14日間の無料トライアルをお試しいただけます。</p>
-        <div class="box-try">
-            <a href="javascript::void(0)" class="btn btn-green btn-trial">無料トライアルを開始</a>
+
+<div class="v2-section--plans">
+    <div class="v2-section--plans__wrapper">
+        <div class="v2-section--plans__title">料金プラン</div>
+        <div class="v2-section--plans__description">
+            各プランは14日間無料でお試しいただけます。
         </div>
-    </div>
-
-    <!-- Old plan -->
-    <ul class="plan column-4 plan-en" style="display: none;">
-        <li class="box-1" tile="4">
-            <h2>ベーシック</h2>
-            <div class="price annual basic">
-            <div class="amount">無料</div>
-            </div>
-            <ul class="features free">
-                <li><span>3</span> プロジェクト</li>
-                <li><span>250MB</span> のストレージ</li>
-                <li><span>ローカル開発環境</span> <br />(CLI、Localkit) のトライアル</li>
-                <li><span>プッシュ通知機能</span></li>
-                <li><span>コミュニティ</span>フォーラム</li>
-            </ul>
-            <div class="detail-box">
-                <a href="pricing-detail.html" target="_blamk">詳細を比較する</a>
-            </div>
-        </li>
-        <li class="box-1">
-            <h2>デベロッパー</h2>
-            <div class="price annual">
-                <div class="amount">20<span>,</span>000</div>
-                <div class="period">円/年</div>
-            </div>
-            <div class="price monthly">
-                <div class="amount">月額: <span class="lato">2000</span>円</div>
-            </div>
-            <ul class="features">
-                <li><span>10</span> プロジェクト</li>
-                <li><span>1GB</span> のストレージ</li>
-                <li><span>無制限</span> のリモートビルド</li>
-                <li><span>テクニカルサポート</span><br />(チケット要購入)</li>
-            </ul>
-            <div class="detail-box">
-                <a href="pricing-detail.html" target="_blamk">詳細を比較する</a>
-            </div>
-        </li>
-        <li class="box-1 popular">
-            <h2>ゴールド</h2>
-            <div class="price annual">
-                <div class="amount">50<span>,</span>000</div>
-                <div class="period">円/年</div>
-            </div>
-            <div class="price monthly">
-                <div class="amount">月額: <span class="lato">5,000</span>円</div>
-            </div>
-            <ul class="features">
-                <li><span>100</span> プロジェクト</li>
-                <li><span>10GB</span> のストレージ</li>
-                <li><span>チーム開発</span>機能</li>
-                <li>Monaca for <span>Visual Studio</span></li>
-                <li><span>カスタム</span> Cordova プラグイン</li>
-                <li><span>毎月1枚</span> のサポートチケット</li>
-            </ul>
-            <div class="detail-box">
-                <a href="pricing-detail.html" target="_blamk">詳細を比較する</a>
-            </div>
-        </li>
-        <li class="box-1">
-            <h2>プラチナ</h2>
-            <div class="price annual">
-                <div class="amount">80<span>,</span>000</div>
-                <div class="period">円/年</div>
-            </div>
-            <div class="price monthly">
-                <div class="amount">月額: <span class="lato">8,000</span>円</div>
-            </div>
-            <ul class="features">
-                <li>プロジェクト数 <span>無制限</span></li>
-                <li><span>20GB</span> のストレージ</li>
-                <li><span>無制限</span> のリモートビルド</li>
-                <li><span>毎月2枚</span> のサポートチケット</li>
-            </ul>
-            <div class="detail-box">
-                <a href="pricing-detail.html" target="_blamk">詳細を比較する</a>
-            </div>
-        </li>
-    </ul>
-
-    <!-- New plan -->
-    <ul class="plan-type-col-2 plan-ja" style="display: none;">
-        <li><div class="individuals-plan">個人向けプラン</div>
-            <div class="box-try">
-                <a href="javascript::void(0)" class="btn btn-green btn-trial">無料プランで始める</a>
-            </div>
-            <ul class="plan column-4">
-                <li class="box-1" tile="4">
-                    <h2>Freeプラン</h2>
-                    <div class="price annual basic">
-                        <div class="amount">無料</div>
-                    </div>
-                    <ul class="features free">
-                        <li><span>MonacaクラウドIDE</span></li>
-                        <li><span>Monacaデバッガー</span></li>
-                        <li><span>3</span> プロジェクト</li>
-                        <li><span>3回/日</span> のリモートビルド</li>
-                        <li><span>コミュニティフォーラム</span></li>
-                    </ul>
-                    <div class="detail-box">
-                        <a href="pricing-detail.html" target="_blamk">詳細を比較する</a>
-                    </div>
-                </li>
-                <li class="box-1">
-                    <h2>Proプラン</h2>
-                    <div class="price annual">
-                        <div class="amount">2<span>,</span>160</div>
-                        <div class="period">円/月</div>
-                    </div>
-                    <div class="price monthly">
-                      <div class="amount">年額: <span class="lato">21,600</span>円</div>
-                    </div>
-                    <ul class="features">
-                        <li><span class="all-features">Freeプランの全機能</span></li>
-                        <li><span>ローカル開発</span></li>
-                        <li><span>カスタムCordovaプラグイン</span></li>
-                        <li><span>10</span> プロジェクト</li>
-                        <li><span>無制限</span> のリモートビルド</li>
-                        <li><span>テクニカルサポート</span><br />(テクニカルチケット要購入)</li>
-                        <li><span>クレジット払いのみ</span></li>
-                    </ul>
-                    <div class="detail-box">
-                        <a href="pricing-detail.html" target="_blamk">詳細を比較する</a>
-                    </div>
-                </li>
-            </ul>
-        </li>
-        <li><div class="enterprises-plan">企業向けプラン</div>
-            <div class="box-try">
-                <a href="javascript::void(0)" class="btn btn-green enterprises-btn btn-enterprises-trial">企業向け14日間<br class="opt">無料トライアル開始</a>
-            </div>
-            <ul class="plan column-4">
-                <li class="box-1 popular">
-                    <h2>Businessプラン</h2>
-                    <div class="price annual">
-                        <div class="amount">7<span>,</span>560</div>
-                        <div class="period">円/月</div>
-                    </div>
-                    <div class="price monthly">
-                        <div class="amount">6ヶ月: <span class="lato">41,580</span>円</div>
-                        <div class="amount">年額: <span class="lato">75,600</span>円</div>
-                        <div class="amount"><span class="lato">(1開発ライセンス込)</span></div>
-                        <div class="amount" style="margin-top: 20px;">追加開発者ライセンス: </div>
-                        <div class="amount"><span class="lato">5,400</span>円/月</div>
-                    </div>
-                    <ul class="features">
-                        <li><span class="all-features">Proプランの全機能</span></li>
-                        <li><span>エンタープライズプラグイン</span><br />（オプション利用）</li>
-                        <li><span>アカウント管理</span></li>
-                        <li><span>プロジェクト共有</span></li>
-                        <li><span>100</span> プロジェクト</li>
-                        <li><span>1枚/月</span> のサポートチケット</li>
-                        <li><span>請求書払い</span> (半年以上)</li>
-                    </ul>
-                    <div class="detail-box">
-                        <a href="pricing-detail.html" target="_blamk">詳細を比較する</a>
-                    </div>
-                </li>
-                <li class="box-1">
-                    <h2>Enterpriseプラン</h2>
-                    <div class="price annual">
-                        <div class="amount">108<span>,</span>000</div>
-                        <div class="period">円/月</div>
-                    </div>
-                    <div class="price monthly">
-                        <div class="amount">6ヶ月: <span class="lato">594,000</span>円</div>
-                        <div class="amount">年額: <span class="lato">1,080,000</span>円</div>
-                        <div class="amount"><span class="lato">(5開発ライセンス込)</span></div>
-                        <div class="amount" style="margin-top: 20px;">追加開発者ライセンス: </div>
-                        <div class="amount"><span class="lato">10,800</span>円/月</div>
-                    </div>
-                    <ul class="features">
-                        <li><span class="all-features">Businessプランの全機能</span></li>
-                        <li><span>エンタープライズプラグイン</span><br />（組織内無制限利用）</li>
-                        <li><span>請求書払い</span></li>
-                        <li><span>カスタマイズ対応</span></li>
-                    </ul>
-                    <div class="detail-box">
-                        <a href="pricing-detail.html" target="_blamk">詳細を比較する</a>
-                    </div>
-                </li>
-            </ul>
-        </li>
-    </ul>
-    <ul class="attention">
-        <li><p>※表示されている価格は、税込価格になります。</p></li>
-    </ul>
-
-    <ul class="plan enterprise column-1 clearfix plan-en" style="display: none;">
-        <li class="box-1 clearfix">
-            <div class="col-1">
-                <h2>Monacaエンタープライズ</h2>
-                <div class="price annual">
-                    <div class="amount">162<span>,</span>000<div class="period">円/月 (5開発ライセンス込)</div></div>
+        <div class="v2-section--plans__period-switches-wrapper">
+            <div class="v2-section--plans__period-switches">
+                <div>
+                    <input type="radio" name="period" id="monthly" value="monthly" checked="checked" />
+                    <label for="monthly">月額</label>
+                </div>
+                <div>
+                    <input type="radio" name="period" id="yearly" value="yearly" />
+                    <label for="yearly">年額</label>
+                    <span class="v2-section--plans__period-baloon">2ヶ月分お得</span>
                 </div>
             </div>
-            <div class="col-2">
-                <p>エンタープライズプランは、あなたのアプリのセキュリティとパフォーマンスを最大限に高めます。アプリを自動的に更新するIn-App Updaterやリソース暗号化、セキュアストレージといった拡張機能の利用料が含まれます。<a href="/enterprise.html" style="position: static">詳細についてはこちらをご覧ください</a></p>
+        </div>
+        <div class="v2-section--plans__plan-container">
+            <div class="v2-section--plans__plan">
+                <div class="v2-section--plans__plan-inner">
+                    <div class="v2-section--plans__plan-ribbon">
+                        個人におすすめ
+                    </div>
+                    <div class="v2-section--plans__plan-name">
+                        Proプラン
+                    </div>
+                    <div class="v2-section--plans__plan-description">
+                        個人でのご利用に適したプランです。
+                    </div>
+                    <div class="v2-section--plans__plan-price">
+                        <div class="v2-section--plans__plan-price-per-user">
+                            1ユーザ
+                            <span class="price">2,000</span>
+                            <span class="unit">円/月</span>
+                        </div>
+                        <div class="v2-section--plans__plan-plus">
+                            ＋
+                        </div>
+                        <div class="v2-section--plans__plan-price-base">
+                            基本料金：<span class="price">なし</span>
+                            <span class="unit"></span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-button">
+                        <a href="https://monaca.mobi/ja/signup">14日間無料トライアル</a>
+                    </div>
+                    <div class="v2-section--plans__plan-feature-container">
+                        <div class="v2-section--plans__plan-feature">
+                            <span>クラウド開発</span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>実機デバッグ</span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>ローカル開発</span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>カスタムプラグイン</span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-compare">
+                        <a href="/pricing-detail.html">詳細を比較する</a>
+                    </div>
+                </div>
             </div>
-        </li>
-    </ul>
-    <ul class="other-plan column-2 clearfix plan-en" style="display: none;">
-        <li class="box-1">
-            <h2>アカデミック向けライセンス</h2>
-            <p>教育や研究にMonacaをご利用いただく教育機関を中心に、専用プランや割引プランをご用意しています。<a href="https://edu.monaca.io/" target="_blank">アカデミック向けライセンスの詳細はこちら。</a></p>
-        </li>
-        <li class="box-1">
-            <h2>ボリュームディスカウント</h2>
-            <p>5名以上の開発メンバーの際に割引となるボリュームディスカウントを提供いたします。詳しくは<a href="/support/inquiry.html">お問い合わせ</a>いただきますようお願いいたします。</p>
-        </li>
-    </ul>
-
-    <div class="academic-plan plan-ja" style="display: none;">教育機関向けプラン</div>
-    <ul class="plan enterprise column-1 clearfix plan-ja" style="display: none;">
-        <li class="box-1 clearfix">
-            <div class="col-1">
-                <h2>アカデミック向けライセンス</h2>
+            <div class="v2-section--plans__plan">
+                <div class="v2-section--plans__plan-inner main-plan">
+                    <div class="v2-section--plans__plan-ribbon">
+                        人気 No.1
+                    </div>
+                    <div class="v2-section--plans__plan-name">
+                        Businessプラン
+                    </div>
+                    <div class="v2-section--plans__plan-description">
+                        複数人での開発に最適なプランです。<br>
+                        アカウントをまとめて管理できます。
+                    </div>
+                    <div class="v2-section--plans__plan-price">
+                        <div class="v2-section--plans__plan-price-per-user">
+                            1ユーザ
+                            <span class="price">5,000</span>
+                            <span class="unit">円/月</span>
+                        </div>
+                        <div class="v2-section--plans__plan-plus">
+                            ＋
+                        </div>
+                        <div class="v2-section--plans__plan-price-base">
+                            基本料金：<span class="price">2,000</span>
+                            <span class="unit">円/月</span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-button">
+                        <a href="https://enterprise.monaca.mobi/ja/register">14日間無料トライアル</a>
+                    </div>
+                    <div class="v2-section--plans__plan-feature-container">
+                        <div class="v2-section--plans__plan-feature" id="plans-ref-1">
+                            <span><span><em>チーム開発</em> <a href="#plans-note-1">*1</a></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span><em>アプリロジック暗号化</em><span class="optional-info">従量課金</span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span><em>セキュアストレージ</em><span class="optional-info">従量課金</span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>請求書払い<span class="optional-info">6ヶ月・年額</span></span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-compare">
+                        <a href="/pricing-detail.html">詳細を比較する</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-2">
-                <p>教育や研究にMonacaをご利用いただく教育機関を中心に、専用プランや割引プランをご用意しています。<a href="https://edu.monaca.io/" target="_blank">アカデミック向けライセンスの詳細はこちら。</a></p>
+            <div class="v2-section--plans__plan">
+                <div class="v2-section--plans__plan-inner">
+                    <div class="v2-section--plans__plan-name">
+                        Enterpriseプラン
+                    </div>
+                    <div class="v2-section--plans__plan-description">
+                        オンプレミス対応も可能な最上位プランです。<br>
+                        全ての機能を無制限でご利用できます。
+                    </div>
+                    <div class="v2-section--plans__plan-price">
+                        <div class="v2-section--plans__plan-price-per-user">
+                            1ユーザ
+                            <span class="price">10,000</span>
+                            <span class="unit">円/月</span>
+                        </div>
+                        <div class="v2-section--plans__plan-plus">
+                            ＋
+                        </div>
+                        <div class="v2-section--plans__plan-price-base">
+                            基本料金：<span class="price">50,000</span>
+                            <span class="unit">円/月</span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-button">
+                        <a href="/enterprise-contact.html">お問い合わせ</a>
+                    </div>
+                    <div class="v2-section--plans__plan-feature-container">
+                        <div class="v2-section--plans__plan-feature">
+                            <span><em>プライオリティーサポート</em></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span><em>アプリロジック暗号化</em><span class="optional-info"><em>無制限</em></span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span><em>セキュアストレージ</em><span class="optional-info"><em>無制限</em></span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>オンプレミス対応<span class="optional-info">応相談</span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>専用ビルドサーバー対応<span class="optional-info">応相談</span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>請求書払い<span class="optional-info">1ヶ月単位</span></span>
+                        </div>
+                        <div class="v2-section--plans__plan-feature">
+                            <span>5ユーザー以上</span>
+                        </div>
+                    </div>
+                    <div class="v2-section--plans__plan-compare">
+                        <a href="/pricing-detail.html">詳細を比較する</a>
+                    </div>
+                </div>
             </div>
-        </li>
-    </ul>
-
-    <div class="additional-plan plan-en" style="display: none;">
-        <h2>追加サポートチケット</h2>
-        <table>
-            <tr>
-                <th>チケットメニュー</th>
-                <th>価格</th>
-                <th>有効期限</th>
-            </tr>
-            <tr>
-                <td>シングルチケット</td>
-                <td>5,000円</td>
-                <td>1年間</td>
-            </tr>
-        </table>
-        <ul class="attention">
-            <li>* 追加購入したサポートチケットは他のユーザーと共有することはできません。</li>
-            <li>* ご購入いただいたサポートチケットの払い戻しはいたしません。</li>
-        </ul>
-    </div>
-
-    <div class="additional-plan plan-ja" style="display: none;">
-        <h2>オプション費用</h2>
-        <h3>エンタープライズプラグイン<br class="opt">（Businessプラン対象）</h3>
-        <table>
-            <tr>
-                <th>プラグイン名</th>
-                <th>価格（税込み）</th>
-            </tr>
-            <tr>
-                <td>アプリロジック暗号化</td>
-                <td>97,200円/アプリ/年</td>
-            </tr>
-            <tr>
-                <td>セキュアストレージ</td>
-                <td>97,200円/アプリ/年</td>
-            </tr>
-            <tr>
-                <td>In-Appアップデーター</td>
-                <td>97,200円/アプリ/年</td>
-            </tr>
-        </table>
-        <ul class="attention">
-            <li>* エンタープライズプラグインの詳細は<a href="/enterprise.html#plugin-description">こちら</a>をご覧ください。</li>
-            <li>* Enterpriseプランでは契約企業内で無制限にご利用いただけます。</li>
-        </ul>
-    </div>
-
-    <div class="additional-plan plan-ja" style="display: none;">
-        <h3>サポートチケット</h3>
-        <table>
-            <tr>
-                <th>契約形態</th>
-                <th>チケット数（時間）</th>
-                <th>価格（税込み）</th>
-                <th>有効期限</th>
-            </tr>
-            <tr>
-                <td>シングルチケット</td>
-                <td>1枚（30分）</td>
-                <td>10,800円</td>
-                <td>1年間</td>
-            </tr>
-            <tr>
-                <td>10チケットパック</td>
-                <td>10枚（5時間）</td>
-                <td>108,000円</td>
-                <td>1年間</td>
-            </tr>
-            <tr>
-                <td>50チケットパック</td>
-                <td>50枚（25時間）</td>
-                <td>486,000円</td>
-                <td>1年間</td>
-            </tr>
-            <tr>
-                <td>100チケットパック</td>
-                <td>100枚（50時間）</td>
-                <td>864,000円</td>
-                <td>1年間</td>
-            </tr>
-        </table>
-        <ul class="attention">
-            <li>* テクニカルサポートの詳細は<a href="https://ja.monaca.io/service/index.html#support-tech-detail">こちら</a>をご覧ください。</li>
-            <li>* チケットパックはBusinessプラン、Enterpriseプランが対象となります。</li>
-        </ul>
-    </div>
-
-    <div class="additional-plan plan-en" style="display: none;">
-        <h2>アクティベーションコード</h2>
-        <div class="box">
-            <p>アクティベーションコードをご利用の方は<br>
-            こちらからお願いいたします。</p>
-            <div class="box-try">
-                <a href="https://monaca.mobi/ja/payment/activation_code_input" class="btn btn-blue">アクティベーションコードを使用</a>
+        </div>
+        <div class="v2-section--plans__caution">※価格は全て税抜表示です。</div>
+        <div class="v2-section--plans__navigation"><a href="/free-plan.html">Freeプランの詳細はこちら<img src="/img/common-v2/ico_next_arrow2.svg" style="margin-left: 7px;" /></a></div>
+        <div class="v2-section--plans__footnote-container">
+            <div class="v2-section--plans__footnote" id="plans-note-1">
+                <div class="v2-section--plans__footnote-number">
+                    <a href="#plans-ref-1">^1</a>
+                </div>
+                <div class="v2-section--plans__footnote-content">
+                    「管理者アカウント」により複数のアカウントをまとめて管理したり、アプリの編集権限・テスト権限を他のユーザに与えたりすることができる機能です。複数人でのアプリ開発や、テスト作業・検収作業を効率化します。
+                </div>
             </div>
         </div>
     </div>
-
+</div>
+<div class="v2-section--options">
+    <div class="v2-section--options__wrapper">
+        <div class="v2-section--options__title">オプション費用</div>
+        <div class="v2-section--options__option">
+            <div class="v2-section--options__option-title">エンタープライズプラグイン</div>
+            <div class="v2-section--options__option-description">
+                <p>アプリのセキュリティや運用性を飛躍的に高める拡張プラグインです。</p>
+                <p>Businessプランでは、年間ライセンスをアプリ毎に追加購入することでご利用いただけます。<br />Enterpriseプランでは、契約企業内で無制限にご利用いただけます。</p>
+            </div>
+            <div class="v2-section--options__option-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="v2-section--options__option-table-cell-leftside"></th>
+                            <th class="v2-section--options__option-table-cell-rightside">年間ライセンス料金</th>
+                            <th class="v2-section--options__option-table-cell-fullwidth" colspan="2">年間ライセンス料金</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="v2-section--options__option-table-cell-leftside">
+                                <div class="v2-section--options__option-table-cell-title">
+                                    アプリロジック暗号化 プラグイン
+                                </div>
+                                <div class="v2-section--options__option-table-cell-description">
+                                    ソースコードを暗号化する事によって、アプリのセキュリティレベルをネイティブコードと同等レベル以上に引き上げます。
+                                </div>
+                            </td>
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    90,000円/年<br /><span class="optional-info">（1アプリあたり）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="v2-section--options__option-table-row-fullwidth">
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    90,000円/年<br /><span class="optional-info">（1アプリあたり）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="v2-section--options__option-table-cell-leftside">
+                                <div class="v2-section--options__option-table-cell-title">
+                                    セキュアストレージ プラグイン
+                                </div>
+                                <div class="v2-section--options__option-table-cell-description">
+                                    アプリ内に保存されるデータを暗号化するストレージ機能を提供します。端末の盗難や紛失などの万が一の際の情報漏洩を未然に防ぎます。
+                                </div>
+                            </td>
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    90,000円/年<br /><span class="optional-info">（1アプリあたり）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="v2-section--options__option-table-row-fullwidth">
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    90,000円/年<br /><span class="optional-info">（1アプリあたり）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="v2-section--options__option-table-cell-leftside">
+                                <div class="v2-section--options__option-table-cell-title">
+                                    In-Appアップデーター プラグイン
+                                </div>
+                                <div class="v2-section--options__option-table-cell-description">
+                                    ストアから再ダウンロードすることなく、アプリの自動更新を行う機能を提供します。アプリの再配布、端末への再インストールを行うことなく、常にユーザーが最新のアプリを利用している状態を保ちます。
+                                </div>
+                            </td>
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    90,000円/年<br /><span class="optional-info">（1アプリあたり）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="v2-section--options__option-table-row-fullwidth">
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    90,000円/年<br /><span class="optional-info">（1アプリあたり）</span>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="v2-section--options__option-caution">
+                ※価格は全て税抜表示です。
+            </div>
+            <div class="v2-section--options__option-description-after">
+                各エンタープライズプラグインの年間ライセンスは <a href="https://enterprise.monaca.mobi/ja/" target="_blank">企業向けプラン管理画面</a> よりご購入いただけます。
+            </div>
+        </div>
+        <div class="v2-section--options__option">
+            <div class="v2-section--options__option-title">有償サポート</div>
+            <div class="v2-section--options__option-description">
+                <p>チケット制のテクニカルサポートです。<br />専門知識を持ったサポートチームが技術的なご質問に対して柔軟に対応いたします。<br />サポートの具体的な内容や、必要なチケット枚数の目安については <a href="/dev-support.html">サポート体制</a> をご覧ください。</p>
+                <p>テクニカルサポートは「サポートチケット」を追加購入することでご利用いただけます。</p>
+            </div>
+            <div class="v2-section--options__option-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="v2-section--options__option-table-cell-leftside"></th>
+                            <th class="v2-section--options__option-table-cell-rightside">料金</th>
+                            <th class="v2-section--options__option-table-cell-fullwidth" colspan="2">料金</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="v2-section--options__option-table-cell-leftside">
+                                <div class="v2-section--options__option-table-cell-title">
+                                    サポートチケット
+                                </div>
+                                <div class="v2-section--options__option-table-cell-description">
+                                    1枚につき30分相当のテクニカルサポートを実施いたします。
+                                </div>
+                            </td>
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    10,000円/1枚<br /><span class="optional-info">（有効期限: 1年間）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="v2-section--options__option-table-row-fullwidth">
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    10,000円/1枚<br /><span class="optional-info">（有効期限: 1年間）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="v2-section--options__option-table-cell-leftside">
+                                <div class="v2-section--options__option-table-cell-title">
+                                    10チケットパック
+                                </div>
+                                <div class="v2-section--options__option-table-cell-description">
+                                    サポートチケット10枚をまとめ買いできるパックです。
+                                </div>
+                            </td>
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    100,000円/10枚<br /><span class="optional-info">（有効期限: 1年間）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="v2-section--options__option-table-row-fullwidth">
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    100,000円/10枚<br /><span class="optional-info">（有効期限: 1年間）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="v2-section--options__option-table-cell-leftside">
+                                <div class="v2-section--options__option-table-cell-title">
+                                    50チケットパック
+                                </div>
+                                <div class="v2-section--options__option-table-cell-description">
+                                    サポートチケット50枚をまとめ買いできるパックです。10%の割引が適用されます。
+                                </div>
+                            </td>
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    450,000円/50枚<br /><span class="optional-info">（有効期限: 1年間）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="v2-section--options__option-table-row-fullwidth">
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    450,000円/50枚<br /><span class="optional-info">（有効期限: 1年間）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="v2-section--options__option-table-cell-leftside">
+                                <div class="v2-section--options__option-table-cell-title">
+                                    100チケットパック
+                                </div>
+                                <div class="v2-section--options__option-table-cell-description">
+                                    サポートチケット100枚をまとめ買いできるパックです。20%の割引が適用されます。
+                                </div>
+                            </td>
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    800,000円/100枚<br /><span class="optional-info">（有効期限: 1年間）</span>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr class="v2-section--options__option-table-row-fullwidth">
+                            <td class="v2-section--options__option-table-cell-rightside">
+                                <span class="v2-section--options__option-table-cell-rightside-price-container">
+                                    800,000円/100枚<br /><span class="optional-info">（有効期限: 1年間）</span>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="v2-section--options__option-caution">
+                ※価格は全て税抜表示です。
+            </div>
+            <div class="v2-section--options__option-description-after">
+                サポートチケットは <a href="https://enterprise.monaca.mobi/ja/" target="_blank">企業向けプラン管理画面</a> よりご購入いただけます。
+            </div>
+        </div>
+    </div>
+</div>
+<div class="v2-section--activation-code">
+    <div class="v2-section--activation-code__wrapper">
+        <div class="v2-section--activation-code__title">アクティベーションコードをお持ちの場合</div>
+        <div class="v2-section--activation-code__description">Monacaのアカウントをお持ちの方は、こちらからアクティベーションコードを入力できます。</div>
+        <a class="v2-section--activation-code__button" href="https://monaca.mobi/ja/payment/activation_code_input">アクティベーションコードを入力する</a>
+        <div class="v2-section--activation-code__description-after">アカウントをお持ちでない場合は、まず <a href="https://monaca.mobi/ja/signup">無料でアカウントを作成</a> してください。</div>
+    </div>
+</div>
+<div class="v2-section--education">
+    <div class="v2-section--education__wrapper">
+        <div class="v2-section--education__title">教育機関向けプラン</div>
+        <div class="v2-section--education__description">教育や研究にMonacaをご利用いただく教育機関を中心に、専用プランや割引プランをご用意しています。<br />詳しくは <a href="https://edu.monaca.io/">Monaca Education</a> のWebサイトをご覧ください。</div>
+        <a class="v2-section--education__button" href="https://edu.monaca.io/">Monaca Educationのサイトに移動する</a>
+    </div>
+</div>
+<div class="v2-section--pricing-faq">
+    <div class="v2-section--pricing-faq__wrapper">
+        <div class="v2-section--pricing-faq__title">料金プランに関してよくあるご質問</div>
+        <div class="v2-section--pricing-faq__faq-container">
+            <div class="v2-section--pricing-faq__faq">
+                <div class="v2-section--pricing-faq__question">
+                    <div class="symbol">Q</div>
+                    <div class="content">無料トライアルとはなんですか？</div>
+                </div>
+                <div class="v2-section--pricing-faq__answer">
+                    <div class="symbol">A</div>
+                    <div class="content">
+                        <p>有料プランと同等の機能を2週間無料でご利用いただける機能です。</p>
+                        <p>制限として、リリースビルドはご利用いただけません。また、サポートチケットは付属しません。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="v2-section--pricing-faq__faq">
+                <div class="v2-section--pricing-faq__question">
+                    <div class="symbol">Q</div>
+                    <div class="content">無料トライアル期間が終わるとどうなりますか？</div>
+                </div>
+                <div class="v2-section--pricing-faq__answer">
+                    <div class="symbol">A</div>
+                    <div class="content">
+                        <p>お支払い方法が設定されている場合、自動的に選択プランの課金が開始されます。</p>
+                        <p>お支払い方法が設定されていない状態で無料トライアル期間を過ぎると、自動的に <a href="/free-plan.html">Freeプラン</a> に移行します。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="v2-section--pricing-faq__faq">
+                <div class="v2-section--pricing-faq__question">
+                    <div class="symbol">Q</div>
+                    <div class="content">どのような支払い方法がありますか？</div>
+                </div>
+                <div class="v2-section--pricing-faq__answer">
+                    <div class="symbol">A</div>
+                    <div class="content">
+                        <p>クレジットカードでのお支払いが可能です。Businessプラン以上では請求書でのお支払いにも対応いたします。Businessプランの請求書払いは6ヶ月・年額のみ対応しております。Enterpriseプランの請求書払いは1ヶ月単位で対応いたします。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="v2-section--pricing-faq__faq">
+                <div class="v2-section--pricing-faq__question">
+                    <div class="symbol">Q</div>
+                    <div class="content">教育機関向けの割引プランはありますか？</div>
+                </div>
+                <div class="v2-section--pricing-faq__answer">
+                    <div class="symbol">A</div>
+                    <div class="content">
+                        <p>はい、ございます。プランの詳細については <a href="https://edu.monaca.io/" target="_blank">Monaca Education</a> のWebサイトをご覧ください。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="v2-section--pricing-faq__faq">
+                <div class="v2-section--pricing-faq__question">
+                    <div class="symbol">Q</div>
+                    <div class="content">アプリの配布数によってMonacaの利用料金は変わりますか？</div>
+                </div>
+                <div class="v2-section--pricing-faq__answer">
+                    <div class="symbol">A</div>
+                    <div class="content">
+                        <p>いいえ、Monacaはアプリの配布数に関わらず定額でご利用いただけます。追加料金はかかりません。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="v2-section--pricing-faq__faq">
+                <div class="v2-section--pricing-faq__question">
+                    <div class="symbol">Q</div>
+                    <div class="content">アプリ開発に関して、Monacaの利用以外にかかる費用はありますか？</div>
+                </div>
+                <div class="v2-section--pricing-faq__answer">
+                    <div class="symbol">A</div>
+                    <div class="content">
+                        <p>AppleのDeveloper登録や、Google Playのアプリリリース者登録などに別途費用がかかることがあります。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="v2-section--pricing-faq__faq">
+                <div class="v2-section--pricing-faq__question">
+                    <div class="symbol">Q</div>
+                    <div class="content">どのようなサポートが受けられますか？</div>
+                </div>
+                <div class="v2-section--pricing-faq__answer">
+                    <div class="symbol">A</div>
+                    <div class="content">
+                        <p>Monacaの操作方法のご説明から、アプリ開発に伴う技術的な質問への対応などを日本語で行っております。詳しくは <a href="/dev-support.html">サポート体制</a> のページをご覧ください。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="v2-section--pricing-faq__faq">
+                <div class="v2-section--pricing-faq__question">
+                    <div class="symbol">Q</div>
+                    <div class="content">見積もりを依頼したいです。</div>
+                </div>
+                <div class="v2-section--pricing-faq__answer">
+                    <div class="symbol">A</div>
+                    <div class="content">
+                        <p><a href="/support/inquiry.html">お問い合わせ</a> フォームにて承っております。お気軽にご相談ください。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="v2-section--pricing-faq__faq">
+                <div class="v2-section--pricing-faq__question">
+                    <div class="symbol">Q</div>
+                    <div class="content">他にも質問したいことがあります。</div>
+                </div>
+                <div class="v2-section--pricing-faq__answer">
+                    <div class="symbol">A</div>
+                    <div class="content">
+                        <p><a href="/support/inquiry.html">お問い合わせ</a> フォームよりお気軽にご質問ください。迅速にご対応いたします。</p>
+                        <p>料金プラン以外に関する質問につきましては、 <a href="/faq.html">よくあるご質問</a> ページをご覧ください。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<div class="container" id="pricing-container" style="display: none;"></div>
+
+<link href="https://fonts.googleapis.com/css?family=Yantramanav:400,500,700,900" rel="stylesheet">
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        $('input[name="period"]:radio').change(function() {
+            var period = $(this).val();
+            switch (period) {
+                case 'monthly':
+                    // Pro
+                    $('.v2-section--plans__plan-price-per-user > span.price')[0].innerHTML = '2,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[0].innerHTML = '円/月';
+                    $('.v2-section--plans__plan-price-base > span.price')[0].innerHTML = 'なし';
+                    $('.v2-section--plans__plan-price-base > span.unit')[0].innerHTML = '';
+                    
+                    // Business
+                    $('.v2-section--plans__plan-price-per-user > span.price')[1].innerHTML = '5,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[1].innerHTML = '円/月';
+                    $('.v2-section--plans__plan-price-base > span.price')[1].innerHTML = '2,000';
+                    $('.v2-section--plans__plan-price-base > span.unit')[1].innerHTML = '円/月';
+
+                     // Enterprise
+                    $('.v2-section--plans__plan-price-per-user > span.price')[2].innerHTML = '10,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[2].innerHTML = '円/月';
+                    $('.v2-section--plans__plan-price-base > span.price')[2].innerHTML = '50,000';
+                    $('.v2-section--plans__plan-price-base > span.unit')[2].innerHTML = '円/月';
+                    break;
+                case 'yearly':
+                    // Pro
+                    $('.v2-section--plans__plan-price-per-user > span.price')[0].innerHTML = '20,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[0].innerHTML = '円/年';
+                    $('.v2-section--plans__plan-price-base > span.price')[0].innerHTML = 'なし';
+                    $('.v2-section--plans__plan-price-base > span.unit')[0].innerHTML = '';
+                    
+                    // Business
+                    $('.v2-section--plans__plan-price-per-user > span.price')[1].innerHTML = '60,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[1].innerHTML = '円/年';
+                    $('.v2-section--plans__plan-price-base > span.price')[1].innerHTML = '10,000';
+                    $('.v2-section--plans__plan-price-base > span.unit')[1].innerHTML = '円/年';
+
+                     // Enterprise
+                    $('.v2-section--plans__plan-price-per-user > span.price')[2].innerHTML = '120,000';
+                    $('.v2-section--plans__plan-price-per-user > span.unit')[2].innerHTML = '円/年';
+                    $('.v2-section--plans__plan-price-base > span.price')[2].innerHTML = '400,000';
+                    $('.v2-section--plans__plan-price-base > span.unit')[2].innerHTML = '円/年';
+                    break;
+                default:
+            }
+        });
+    });
+</script>

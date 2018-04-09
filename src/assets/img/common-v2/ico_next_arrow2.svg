@@ -1,0 +1,17 @@
+<svg id="レイヤー_1" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" width="19.01" height="14" viewBox="0 0 19.01 14">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #0054ac;
+      }
+    </style>
+  </defs>
+  <title>ico_next_arrow</title>
+  <g>
+    <rect class="cls-1" x="13.8" y="-0.74" width="2" height="9.9" transform="translate(1.36 11.7) rotate(-45)"/>
+    <g>
+      <rect class="cls-1" y="6.01" width="17.25" height="2"/>
+      <rect class="cls-1" x="9.85" y="8.79" width="9.9" height="2" transform="translate(-2.59 13.33) rotate(-45)"/>
+    </g>
+  </g>
+</svg>

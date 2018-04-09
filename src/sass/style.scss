@@ -4,8 +4,10 @@
 
 //  Reset CSS and variables have been to _init.scss
 @import "init";
+@import "init-v2"; // Some pages started using a new design (named v2) as of March 2018
 @import "icon";
 @import "common";
+@import "common-v2";
 @import "button";
 @import "header";
 @import "footer";
@@ -13,10 +15,14 @@
 @import "slick";
 @import "animations";
 @import "pages/index";
+@import "pages/features-html5";
+@import "pages/features-monaca";
 @import "pages/localkit";
 @import "pages/support";
 @import "pages/prices";
 @import "pages/pricing";
+@import "pages/free-plan";
+@import "pages/faq";
 @import "pages/debugger";
 @import "pages/enterprise";
 @import "pages/enterprise-contact";

@@ -153,6 +153,16 @@
         return;
       }
 
+      // If logged in, jump to dashboard
+      if (loginData.ready) {
+        if (loginData.status.isLogin || JSON.stringify(loginData.status) === '{}') { // If loginData.status is broken, jump to dashboard
+          location.href = MONACA_API_URL + '/' + LANG + '/dashboard';
+          return;
+        }
+      } else {
+        return; // Wait until login data is retrieved
+      }
+
       formUtil.resetError();
       setCsrfToken("loginpopup-csrf-token", monacaApi.getBaseUrl() + "/" + window.LANG + "/api/account/login");
       $('#loginpopup').fadeIn(msec)

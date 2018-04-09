@@ -1,0 +1,85 @@
+html[lang=ja] body.features-html5 {
+    a {
+        color: #0054ac;
+        cursor: pointer;
+    }
+    a:hover, a:focus {
+        color: #0054ac;
+        text-decoration: none;
+        opacity: 0.8;
+    }
+
+    .v2-section--closing {
+        // In PC/tablet/smartphone mode
+        @media screen {
+            background-color: #fcfaf6;
+
+            > .v2-section--closing__wrapper {
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 112px 40px;
+                max-width: 1920px;
+                height: 506px;
+
+                > .v2-section--closing__title {
+                    color: #444;
+                    font-size: 35px;
+                    font-weight: 700;
+                }
+                > .v2-section--closing__description {
+                    margin-top: 45px;
+                    font-size: 17.6px;
+                    line-height: 32px;
+                    color: #6f777f;
+                }
+                > a.v2-section--closing__trial-button {
+                    display: inline-block;
+                    margin-top: 51px;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 15px 31px;
+                    background-color: #fa6800;
+                    color: white;
+                    font-size: 24px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: background-color .4s ease;
+
+                    &:hover {
+                        background-color: #ea5600;
+                        text-decoration: none;
+                    }
+                    &:focus {
+                        outline: none;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        // In smartphone/tablet mode
+        @media screen and (max-width: $v2-break-tablet) {
+            > .v2-section--closing__wrapper {
+                padding: 74px 40px;
+                height: 351px;
+
+                > .v2-section--closing__title {
+                    font-size: 25.5px;
+                }
+                > .v2-section--closing__description {
+                    margin-top: 18px;
+                    font-size: 17.6px;
+                    line-height: 32px;
+                    color: #6f777f;
+                }
+                > a.v2-section--closing__trial-button {
+                    margin-top: 23px;
+                    padding: 11px 23px;
+                }
+            }
+        }
+        // In smartphone mode
+        @media screen and (max-width: $v2-break-smartphone) {
+            display: none;
+        }
+    }
+}

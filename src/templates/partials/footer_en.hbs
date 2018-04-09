@@ -1,5 +1,4 @@
 <footer class="common">
-  {{#is language "en"}}
   <div>
     <div>
       <h3>Develop</h3>
@@ -98,54 +97,6 @@
       {{/is}}
     </div>
   </div>
-
-
-  {{else}}
-    <ul>
-        {{#is language "ja"}}
-            <li><a href="https://docs.monaca.io/ja/">ドキュメント</a></li>
-            <li><a href="/great-apps.html">事例</a></li>
-            <li><a href="/headline/">お知らせ</a></li>
-            <li><a href="/terms-of-service/">利用規約</a></li>
-            <li><a href="/about-us.html">運営会社</a></li>
-            <li><a href="/terms-of-service/policy.html">プライバシーポリシー</a></li>
-            <li><a href="/terms-of-service/law.html">特定商取引法に基づく表記</a></li>
-            <li><a href="http://monaca.io/">English</a></li>
-        {{else}}
-            <li><a href="https://docs.monaca.io/en/">Docs</a></li>
-            <li><a href="http://monaca.mobi/en/blog">Blog</a></li>
-            <li><a href="/headline/">Updates</a></li>
-            <li><a href="/terms-of-service/">Terms</a></li>
-            <li><a href="/about-us.html">About Us</a></li>
-            <li><a href="/terms-of-service/policy.html">Privacy Policy</a></li>
-            <li><a href="http://ja.monaca.io/">日本語</a></li>
-        {{/is}}
-    </ul>
-    <!-- for RPG tkool footer start -->
-    <ul class="rpg-footer" style="display: none;">
-        {{#is language "ja"}}
-            <li><a href="/terms-of-service/">利用規約</a></li>
-            <li><a href="/about-us.html">運営会社</a></li>
-            <li><a href="/terms-of-service/policy.html">プライバシーポリシー</a></li>
-            <li><a href="/terms-of-service/law.html">特定商取引法に基づく表記</a></li>
-        {{/is}}
-    </ul>
-    <!-- for RPG tkool footer end -->
-
-    <p>
-        {{#is language "ja"}}
-           <a href="https://twitter.com/monaca_ja" target="_blank" class="footer-social-icon"><img src="/img/footer/icn_tw.png" alt="Twitter" width="44" height="39"></a>
-        {{else}}
-           <a href="https://twitter.com/monaca_io" target="_blank" class="footer-social-icon"><img src="/img/footer/icn_tw.png" alt="Twitter" width="44" height="39"></a>
-        {{/is}}
-        <a href="https://github.com/monaca" target="_blank" class="footer-social-icon"><img src="/img/footer/icn_gh.png" alt="GitHub" width="48" height="44"></a>
-        <a href="https://www.facebook.com/monaca.io" target="_blank" class="footer-social-icon"><img src="/img/footer/icn_fb.png" width="39" height="39"></a>
-        {{#is language "ja"}}<a href="https://teratail.com/tags/monaca" target="_blank" class="footer-social-icon">{{else}}<a href="http://stackoverflow.com/questions/tagged/monaca" target="_blank" class="footer-social-icon">{{/is}}<img src="/img/footer/icn_tt.png" width="44" height="44"></a>
-    </p>
-
-    <p class="copyright">Copyright &copy; 2017 <a href="http://www.asial.co.jp/en" target="_blank">Asial Corporation</a>. All rights reserved.</p>
-
-    {{/is}}
 </footer>
 
 <div id="modal-overlay"></div>
