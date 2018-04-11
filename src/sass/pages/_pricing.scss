@@ -661,7 +661,7 @@ body.pricing.compare article.main {
             width: 150px;
         }
         &.compare-header-ja {
-            padding-top: 24px;
+            padding-top: 56px;
         }
         h2 {
             box-sizing: content-box;
@@ -1917,5 +1917,10 @@ html[lang=ja] body.pricing:not(.compare) {
 html[lang=ja] body.pricing.compare {
     h1 {
         margin-top: 112px;
+    }
+    .compare-header {
+        &.compare-header-ja {
+            padding-top: 24px;
+        }
     }
 }
