@@ -2,6 +2,16 @@
 
   window.monacaPages = window.monacaPages || [];
 
+  //--------------------------------
+  // Note:
+  // 
+  // In English website:
+  //    Show the Overseas plans if accessed from Overseas network
+  //    Show the Japanese plans if accessed from Japanese network
+  // In Japanese website:
+  //    Always show the Japanese plans
+  //--------------------------------
+
   monacaPages["/pricing.html"] = function(loginData) {
     loginData.autoDisplay = false;
 
@@ -48,8 +58,8 @@
     var tableEl;
     var contEl;
 
-    // If accessed from Japanese network
-    if (loginData.status.inJapan) {
+    // If accessed from Japanese network (or the user visits Japanese website)
+    if (loginData.status.inJapan || document.documentElement.getAttribute('lang') === 'ja') {
       $('.plan-ja').css('display', 'block');
       tableEl = document.getElementById("compare-cont-table-ja");
       contEl = document.getElementById("compare-cont-ja");
@@ -75,8 +85,8 @@
       (contEl.clientWidth + contEl.scrollLeft < tableEl.clientWidth) ? contEl.classList.add("rightshadow") : contEl.classList.remove("rightshadow");
     }
 
-    // If accessed from Japanese network
-    if (loginData.status.inJapan) {
+    // If accessed from Japanese network (or the user visits Japanese website)
+    if (loginData.status.inJapan || document.documentElement.getAttribute('lang') === 'ja') {
       $('.dev-plan').remove();
     } else {
       $('.personal-plan').remove();
