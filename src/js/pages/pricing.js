@@ -5,6 +5,7 @@
   monacaPages["/pricing.html"] = function(loginData) {
     loginData.autoDisplay = false;
 
+    // If accessed from Japanese network
     if (loginData.status.inJapan) {
       $('.plan-ja').css('display', 'block');
       
@@ -47,6 +48,7 @@
     var tableEl;
     var contEl;
 
+    // If accessed from Japanese network
     if (loginData.status.inJapan) {
       $('.plan-ja').css('display', 'block');
       tableEl = document.getElementById("compare-cont-table-ja");
@@ -73,6 +75,7 @@
       (contEl.clientWidth + contEl.scrollLeft < tableEl.clientWidth) ? contEl.classList.add("rightshadow") : contEl.classList.remove("rightshadow");
     }
 
+    // If accessed from Japanese network
     if (loginData.status.inJapan) {
       $('.dev-plan').remove();
     } else {
@@ -100,6 +103,7 @@
     var tableEl;
     var contEl;
 
+    // If accessed from Japanese network
     if (loginData.status.inJapan) {
       $('.plan-ja').css('display', 'block');
       tableEl = document.getElementById("compare-cont-table-ja");
@@ -126,6 +130,7 @@
       (contEl.clientWidth + contEl.scrollLeft < tableEl.clientWidth) ? contEl.classList.add("rightshadow") : contEl.classList.remove("rightshadow");
     }
 
+    // If accessed from Japanese network
     if (loginData.status.inJapan) {
       $('.dev-plan').remove();
     } else {
