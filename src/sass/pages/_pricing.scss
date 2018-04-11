@@ -655,13 +655,13 @@ body.pricing.compare article.main {
     }
     .compare-header {
         float: left;
-        padding-top: 25px;
+        padding-top: 23px;
         width: 200px;
         @media screen and (max-width: $break-xs) {
             width: 150px;
         }
         &.compare-header-ja {
-            padding-top: 24px;
+            padding-top: 56px;
         }
         h2 {
             box-sizing: content-box;
@@ -1917,5 +1917,10 @@ html[lang=ja] body.pricing:not(.compare) {
 html[lang=ja] body.pricing.compare {
     h1 {
         margin-top: 112px;
+    }
+    .compare-header {
+        &.compare-header-ja {
+            padding-top: 24px;
+        }
     }
 }
