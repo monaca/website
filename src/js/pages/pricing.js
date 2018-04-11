@@ -47,7 +47,7 @@
     var tableEl;
     var contEl;
 
-    if (loginData.status.inJapan || document.documentElement.getAttribute('lang') === 'ja') {
+    if (loginData.status.inJapan) {
       $('.plan-ja').css('display', 'block');
       tableEl = document.getElementById("compare-cont-table-ja");
       contEl = document.getElementById("compare-cont-ja");
@@ -73,7 +73,7 @@
       (contEl.clientWidth + contEl.scrollLeft < tableEl.clientWidth) ? contEl.classList.add("rightshadow") : contEl.classList.remove("rightshadow");
     }
 
-    if (loginData.status.inJapan || document.documentElement.getAttribute('lang') === 'ja') {
+    if (loginData.status.inJapan) {
       $('.dev-plan').remove();
     } else {
       $('.personal-plan').remove();
@@ -100,7 +100,7 @@
     var tableEl;
     var contEl;
 
-    if (loginData.status.inJapan || document.documentElement.getAttribute('lang') === 'ja') {
+    if (loginData.status.inJapan) {
       $('.plan-ja').css('display', 'block');
       tableEl = document.getElementById("compare-cont-table-ja");
       contEl = document.getElementById("compare-cont-ja");
@@ -126,7 +126,7 @@
       (contEl.clientWidth + contEl.scrollLeft < tableEl.clientWidth) ? contEl.classList.add("rightshadow") : contEl.classList.remove("rightshadow");
     }
 
-    if (loginData.status.inJapan || document.documentElement.getAttribute('lang') === 'ja') {
+    if (loginData.status.inJapan) {
       $('.dev-plan').remove();
     } else {
       $('.personal-plan').remove();
