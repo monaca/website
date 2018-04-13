@@ -14,18 +14,21 @@ html body.migration-from-app-builder {
       align-items: flex-start;
       min-height: 456px;
       transform: scaleY(1.0015);
-	  height: 510px;
+	  height: 680px;
 
       @media screen and (max-width: 1100px) {
-        height: 856px;
+        height: 1200px;
       }
 
 	  div.pic {
 		padding-top: 22px;
 	  }
       > div {
-        padding: 10px 20px 0;
-        width: 550px;
+        padding: 10px 0 0 20px;
+        width: 450px;
+        &.pic {
+            width: 650px;
+        }
 
         h1 {
           color:  #000000;
@@ -33,7 +36,7 @@ html body.migration-from-app-builder {
           font-weight: 400;
           text-align: left;
           transform: scaleX(1.001);
-		  margin-bottom: 15px;
+          margin-bottom: 35px;
 		  line-height: 1.2em;
 			@media screen and (max-width: $break) {
 				font-size: 34px;
@@ -42,14 +45,14 @@ html body.migration-from-app-builder {
 
         p {
           color:  #000000;
-          font-size: 28px;
-			line-height: 34px;
+          font-size: 18px;
+          line-height: 140%;
           font-weight: 400;
           transform: scaleX(1.001);
-		  margin-bottom: 37px;
+          margin-bottom: 17px;
 
           @media screen and (max-width: 1300px) {
-            font-size: 26px;
+            font-size: 16px;
           }
         }
 
@@ -57,19 +60,12 @@ html body.migration-from-app-builder {
 		  margin-bottom: 80px;
 		  @media screen and (max-width: 1100px) {
 			margin-bottom: 30px;
-		  }
-          h2 {
-            color:  #000000;
-            font-size: 22px;
-            font-weight: 400;
-            transform: scaleX(1.001);
-            margin-bottom: 8px;
           }
-
+          
           ul {
-            background-color:  #484d50;
-            max-width: 360px;
+            max-width: 540px;
             //height: 75px;
+            margin-left: 10px;
             padding: 13px 25px 15px;
             list-style: none;
 			border-radius: 2px;
@@ -78,12 +74,11 @@ html body.migration-from-app-builder {
 			}
 
             li {
-              font-family: "Courier New", monospace;
-              color:  #ffffff;
-              font-size: 18px;
-              font-weight: 600;
-              transform: scaleY(1.0004);
-				vertical-align: middle;
+                margin-bottom: 10px;
+                font-size: 15px;
+                list-style: disc;
+                transform: scaleY(1.0004);
+                vertical-align: middle;
             }
           }
         }
