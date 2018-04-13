@@ -3,121 +3,94 @@ title: Migration from AppBuilder | Monaca
 class: migration-from-app-builder
 ---
 
-<div class="keyvisual box-full">
-    <div>
-        <h1><img src="/img/ci/logo_monaca_ci.png" alt="Monaca CI" /></h1>
-        <h2>Continuous Integration for Cordova Apps</h2>
-        <p>Hands-free build and deployment automation for your Cordova apps. 
-<br class="hidden-xs" />No need to maintain local SDK anymore!</p>
-
-        <div class="box-try">
-            <a href="{{site.monaca_api}}/signup" class="btn btn-green">Sign Up Now for Free<span class='small'></span></a>
-            <a href="https://docs.monaca.io/en/manual/monaca_ci/overview/" class="btn btn-line-gray" target="_blank">See Instructions<span class='small'></span></a>
-        </div>
+<div class="keyvisual" style="background: linear-gradient(#fff, #f7f7f7);">
+  <div>
+    <h1><img src="/img/cli/logo_monaca_cli.png" alt="Monaca CLI" /> <br class="visible-xs">Monaca x Onsen UI CLI</h1>
+    <p>Enhanced command-line interface for hybrid apps, with advanced debugging and remote build support.</p>
+    <div class="try-it-out">
+      <h2>Try it out, it's free:</h2>
+      <ul class="terminal-sample">
+        <li>&gt; npm install -g monaca</li>
+        <li>&gt; monaca create helloworld</li>
+      </ul>
     </div>
+  </div>
+  <div class="pic"><img src="/img/cli/keyvisual.png" /></div>
 </div>
 
 <div id="benefits" class="container section benefits">
-    <p>Monaca CI (Continuous Integration & Deployment) is a service that has been integrated within the current development environment stack to automate building and deployment cycle. Monaca CI let developers focus more on the code and less on the backend process of building, testing and deploying an app.</p>
+    <p>
+      Monaca CLI is the full stack development tool for hybrid apps.<br />
+      It is compatible with Cordova CLI and make the development much eaiser and fast.
+    </p>
 </div>
 
 <div class="container section subfeatures">
     <ol>
         <li>
-            <h3 class="maintitle"><img src="/img/ci/icon_ci_01.png" alt="Easy Setup" /></h3>
+            <h3 class="maintitle"><img src="/img/cli/icon_cli_01.png" alt="Easy Setup" /></h3>
             <h4 class="subtitle">Easy Setup</h4>
-            <p>Quickly start deployment automation by choosing your GitHub repository. All build configurations are easily made on the browser.</p>
+            <p>With a npm install, you get everything setup for app development. Monaca CLI bundles all dev stack, so no need to install additional dependencies and setup platform SDKs.</p>
         </li>
         <li>
-            <h3 class="maintitle"><img src="/img/ci/icon_ci_06.png" alt="Security" /></h3>
-            <h4 class="subtitle">Security</h4>
-            <p>Everything is prepared on the cloud in a sandbox-environment for security. By combining <a href="https://docs.monaca.io/en/reference/power_plugins/html5_resource_encryption/">Resource Encryption Power Plugin</a>, you can even add security layer to your application.</p>
+            <h3 class="maintitle"><img src="/img/cli/icon_cli_06.png" alt="Preview and Test on Device" /></h3>
+            <h4 class="subtitle">Preview and Test on Device</h4>
+            <p>Run the app in a local browser or on a real device using Monaca Debugger. Both supports live reloading for quicker debugging. Hot reloading is supported for React templates.</p>
         </li>
         <li>
-            <h3 class="maintitle"><img src="/img/ci/icon_ci_02.png" alt="Made for Cordova" /></h3>
-            <h4 class="subtitle">Made for Cordova Developers</h4>
-            <p>We support various Cordova versions and third-party plugins using hook scripts. No need to maintain Xcode, Android SDK or any other build tools.
-            </p>
+            <h3 class="maintitle"><img src="/img/cli/icon_cli_02.png" alt="Advance Debugging" /></h3>
+            <h4 class="subtitle">Advance Debugging</h4>
+            <p>Dev tools bundled in CLI enabled JavaScript debugging - including breakpoints, step in/out and code profiling. Even debug iOS devices from Windows PC.</p>
         </li>
         <li>
-            <h3 class="maintitle"><img src="/img/ci/icon_ci_03.png" alt="Remote Build" /></h3>
-            <h4 class="subtitle">Remote Build</h4>
-            <p>Trigger automatic remote builds by committing to the repository. Flexible configurations to precisely define  is possible by specifying tag names or branch names to build for debug and/or release builds.</p>
+            <h3 class="maintitle"><img src="/img/cli/icon_cli_03.png" alt="Cloud Sync" /></h3>
+            <h4 class="subtitle">Cloud Sync</h4>
+            <p>Easily push projects to the Monaca Cloud and access from any computer, anywhere, anytime. Your projects can be synced between various development environments.</p>
         </li>
         <li>
-            <h3 class="maintitle"><img src="/img/ci/icon_ci_04.png" alt="Deployment" /></h3>
-            <h4 class="subtitle">Deployment</h4>
-            <p>Automated deployment to third-party distribution services. Supported services include but not limited to Hockey App and Deploy Gate. <a href="">Click here</a> for a complete list of supported and upcoming services.</p>
+            <h3 class="maintitle"><img src="/img/cli/icon_cli_04.png" alt="Remote Build & Development" /></h3>
+            <h4 class="subtitle">Remote Build & Development</h4>
+            <p>Instantly create package for iOS, Android, and Window simultanously. Flexible build and deployment options including full-support of Cordova plugins.</p>
         </li>
         <li>
-            <h3 class="maintitle"><img src="/img/ci/icon_ci_05.png" alt="Cross Platform" /></h3>
-            <h4 class="subtitle">Supports iOS, Android and Windows</h4>
-            <p>Seamlessly build for all major mobile operating systems. You can even combine with our Cordova state-of-the-art development tools and debugging application!</p>
+            <h3 class="maintitle"><img src="/img/cli/icon_cli_05.png" alt="Many Framework Templates" /></h3>
+            <h4 class="subtitle">Many Framework Templates</h4>
+            <p>You can pick your framework of choice - Angular 1, Angular 2, React, Ionic, or somthing else. Onsen UI templates come with Webpack configs and are fully customizable.</p>
         </li>
     </ol>
 </div>
 
-<div class="container box-plan">
-    
-    <div id="important-info-en-el" class="cmn-info-middle"></div>
+<div class="onsen-ui">
+  <div>
+    <h2>Onsen UI</h2>
+    <p>A framework agnostic platform with hundreds of ready-to-use native look and feel components.</p>
+    <p>Additional support is provided for Angual 1 & 2, React, Meteor and jQuery! Start using Onsen UI today with Monaca CLI's fast and easy to access pre-generated templates.</p>
+  </div>
 
-    <h2>Monaca CI Pricing</h2>
-    <p>The Monaca CI service is on a pay-per-use platform with a monthly fee. Note that all of our plans include <a href="/pricing.html">advanced debugging, remote push notifications, technical support and more</a>!</p>
-
-    <div class="compare-box">
-        <div class="compare-header">
-            <h3>Monaca Plans</h3>
-            <div>Monthly Charge</div>
-            <ul>
-                <li><i>GitHub Public <br class="hidden-xs" />Repos</i></li>
-                <li><i>GitHub Private <br class="hidden-xs" />Repos</i></li>
-            </ul>
-        </div>
-        <div id="compare-cont" class="compare-cont">
-            <table id="compare-cont-table">
-                <thead class="japan-plan">
-                    <th>Free<span>Free</span></th>
-                    <th>Pro<span>JPY 2,160/mo</span></th>
-                    <th>Business<span>JPY 7,560/mo</span></th>
-                    <th>Enterprise<span>JPY 108,000/mo</span></th>
-                </thead>
-                <thead class="foreign-plan">
-                    <th>Free<span>Free</span></th>
-                    <th>Developer<span>From $19/mo</span></th>
-                    <th>Gold<span>From $49/mo</span></th>
-                    <th>Platinum<span>From $78/mo</span></th>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>10 CI<span>/mo</span></td>
-                    <td class="dev-plan" rowspan="2">10 Builds<span>/mo</span></td>
-                    <td class="personal-plan" rowspan="2">10 Builds<span>/mo</span></td>
-                    <td rowspan="2" colspan="2">30 Builds<span>/mo</span><br /></td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                  </tr>
-                  <tr class="compare-cont-comment">
-                    <td colspan="4">
-                        <ul>
-                            <li>Additional CI tickets(build tickets) are available for purchase ($110 for 50 builds - valid for 3 months).</li>
-                            <li>Basic plan is limited to 3 builds per last 24 hours.</li>
-                            <li>Basic plan does not include third-party Cordova plugin support.</li>
-                            <li>Basic plan users need to log in within 30 days.</li>
-                        </ul>
-                    </td>
-                    <td class="comment-next-line"></td>
-                  </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="compare-contact">
-            <a href="pricing-detail.html">Compare All Features</a>
-        </div>
-    </div>
+  <div><img src="/img/cli/onsenui_temp.png" alt="Onsen UI App Samples" /></div>
 </div>
-<div class="compare-trial">
-    <p>14 day UNLIMITED FREE TRIAL on all monthly plans.</p>
-    <a href="{{site.monaca_api}}/signup" class="btn btn-green">Sign Up Now for Free</a>
+
+<div class="get-started">
+    <h2>Let's get started, it's free!</h2>
+    <p>Access comprehensive services to develop and build your Cordova apps, fast and easy.</p>
+</div>
+
+<div class="resource-reference">
+    <div class="resource-options">
+      <h2>Other Development Options</h2>
+      <p>Want a GUI alternative?<br />We have variety of options to chose from.</p>
+      <ul>
+        <li><a href="/localkit.html">Monaca LocalKit</a> - Desktop app with GUI interface</li>
+        <li><a href="/cloud.html">Monaca Cloud IDE</a> - Browser driven online IDE</li>
+        <li><a href="/visualstudio.html">Monaca for Visual Studio</a> - Extension for VS</li>
+      </ul>
+    </div>
+    <div class="resource-documentation">
+      <h2>Documentation</h2>
+      <p>Please refer to out docs for the details.</p>
+      <ul>
+        <li><a href="https://docs.monaca.io/en/quick_start/cli/">Getting Started to Monaca CLI</a></li>
+        <li><a href="https://docs.monaca.io/en/manual/development/monaca_cli/overview/">Monaca CLI Manual</a></li>
+      </ul>
+    </div>
 </div>
