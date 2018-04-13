@@ -4,17 +4,31 @@ html body.migration-from-app-builder {
         p {color: #8d98a6;}
     }
 
+
+    h1 {
+        color:  #000000;
+        font-size: 40px;
+        font-weight: 400;
+        text-align: center;
+        line-height: 1.2em;
+          @media screen and (max-width: $break) {
+              font-size: 34px;
+          }
+        margin: 100px auto 50px auto;
+        max-width: 800px;
+      }
+
+
     .keyvisual {
       font-family: Helvetica;
       text-align: left;
-      padding-top: 100px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       align-items: flex-start;
       min-height: 456px;
       transform: scaleY(1.0015);
-	  height: 800px;
+	  height: 600px;
 
       @media screen and (max-width: 1100px) {
         height: 1200px;
@@ -34,19 +48,6 @@ html body.migration-from-app-builder {
                 padding-top: 22px;
             }
             width: 635px;
-        }
-
-        h1 {
-          color:  #000000;
-          font-size: 40px;
-          font-weight: 400;
-          text-align: left;
-          transform: scaleX(1.001);
-          margin-bottom: 35px;
-		  line-height: 1.2em;
-			@media screen and (max-width: $break) {
-				font-size: 34px;
-			}
         }
 
         p {
@@ -88,7 +89,7 @@ html body.migration-from-app-builder {
         }
       }
       > div.buttons {
-        margin-top: -10px;
+        margin-top: -50px;
         padding: 0;
         width: 100%;
         max-width: 1065px;
