@@ -253,7 +253,6 @@ body.service {
             vertical-align: middle;
             text-align: right;
             white-space: nowrap;
-
           }
           > .status_column {
             width: 150px;
@@ -1994,6 +1993,9 @@ body.lang-en section#support {
         }
       }
     }
+  }
+  .price-center {
+    text-align: center;
   }
   .price-long {
     width: 240px;
