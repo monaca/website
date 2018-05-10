@@ -17,6 +17,7 @@
         //do something
         alert(email);
         $(inputFormEmail).val('');
+        displayFinishPage();
       } else {
         alert('invalid email');
       }
@@ -36,6 +37,10 @@
       var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       if (email.match(mailFormat)) return true;
       return false;
+    }
+
+    function displayFinishPage() {
+      location.href='/phonegap/thankyou.html';
     }
 
   };
