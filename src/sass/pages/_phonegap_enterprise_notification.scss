@@ -18,6 +18,11 @@ html body.phonegap_enterprise_notification {
         max-width: 800px;
       }
 
+    .form-error {
+      margin-top: 20px;
+      color: #f55b56 !important;
+    }
+
     form.phonegap-e-form input {
         font-size: 14px;
         padding: 5px 10px;
