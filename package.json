@@ -18,6 +18,7 @@
     "test": "grunt assemble",
     "build": "grunt build",
     "server": "grunt server",
+    "server:local": "grunt --site-config local server",
     "server:ja": "grunt server:ja",
     "server:en": "grunt server:en"
   },
