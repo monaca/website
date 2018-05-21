@@ -1,6 +1,6 @@
 (function() {
   var monacaApi = Object.create(null);
-  monacaApi.executedLoginCheck = false;
+  var isLoggedIn = false;
 
   var loginData = {
     preReady:     false,
@@ -56,19 +56,16 @@
 
   monacaApi.popupMsec = 400;
   monacaApi.loginCheck = function(status) {
-    this.executedLoginCheck = true;
     loginData.status = status;
     loginData.setPreReady();
 
     if (!status.isLogin) {
+      // Not logged in yet
+      $(".navbar-nav .after-login").remove();
       loginData.setReady();
-    }
-
-    if (status.isLogin) {
+    } else {
       $(".navbar-nav .before-login").remove();
       this.loadLoginData();
-    } else {
-      $(".navbar-nav .after-login").remove();
     }
   };
   

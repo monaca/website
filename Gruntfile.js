@@ -31,7 +31,7 @@ module.exports = function(grunt) {
 
     // Load site.yml
     if (grunt.option('site-config')) {
-      var site_yaml = grunt.file.readYAML(grunt.option('site-config'));
+      var site_yaml = grunt.file.readYAML(config.src + '/data/site_' + grunt.option('site-config') + '.yml');
     } else {
       var site_yaml = grunt.file.readYAML(config.src + '/data/site.yml');
     }

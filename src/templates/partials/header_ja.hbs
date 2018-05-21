@@ -107,78 +107,9 @@ component: navbar
                             </ul>
                         </li>
 
-                        <li class="login"><a id="show_loginpopup" class="btn">ログイン</a></li>
-                        <li class="trial"><a href="https://enterprise.monaca.mobi/ja/register" class="btn orange">無料トライアル</a></li>
-
-    {{!-- 
-
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">料金</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="https://monaca.mobi/ja/pricing">Monacaプラン一覧</a></li>
-                                <li><a href="https://monaca.mobi/ja/payment/activation_code_input" target="_blamk">アクティベーションコードを使用</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">パートナー</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/solution-partner/index.html">開発パートナー制度</a></li>
-                                <li><a href="/solution-partner/list.html">開発パートナー企業紹介</a></li>
-                                <li><a href="/product-partner/index.html">プロダクトパートナー</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">サポート<span class="opt">・サービス</span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/dev-support.html">サポート・サービス概要</a></li>
-                                <li><a href="/service/training.html">トレーニング</a></li>
-                                <li><a href="/book/support/">Monaca公式ガイドブック</a></li>
-                                <li><a href="/book/001/">書籍「Monacaで学ぶはじめてのプログラミング」</a></li>
-                                <li><a href="/development.html">アプリ開発依頼</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">活用事例</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/great-apps.html">アプリ事例</a></li>
-                                <li><a href="/showcase/">導入事例</a></li>
-                                <li><a href="https://vimeo.com/channels/monaca" target="_blank">導入事例動画 <i class="glyphicon glyphicon-new-window"></i></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="https://docs.monaca.io/ja/" target="_blank">ドキュメント</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">お知らせ</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="https://press.monaca.io/" target="_brank">ブログ <i class="glyphicon glyphicon-new-window"></i></a></li>
-                                <li><a href="/headline/">ニュース・更新情報</a></li>
-                                <li><a href="/headline/fault.html">障害・不具合情報</a></li>
-                                <li><a href="/events/">イベント情報</a></li>
-                                <li><a href="/events/training.html">トレーニング情報</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">お問い合わせ</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/service/index.html">サポート受付</a></li>
-                                <li><a href="/support/inquiry.html">お問い合わせ</a></li>
-                                <li><a href="https://teratail.com/tags/monaca" target="_brank">コミュニティ <i class="glyphicon glyphicon-new-window"></i></a></li>
-                                <li><a href="/logos.html">ロゴの利用について</a></li>
-                                <li><a href="/careers.html">採用情報</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-dashboard pc after-login">
-                        <a href="javascript:void(0)" class="nav-title dashboard go-to-dashboard">ダッシュボード</a>
-                        </li>
-                        <li class="nav-user dropdown pc after-login">
-                            <span class="nav-title"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"></span>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-title settings" href="https://monaca.mobi/ja/account/edit">アカウント設定</a></li>
-                                <li><a href="javascript:void(0)" class="nav-title exec-logout">ログアウト</a></li>
-                            </ul>
-                        </li>
-                        <li class="sp after-login"><a href="javascript:void(0)" class="go-to-dashboard">ダッシュボード</a></li>
-                        <li class="sp after-login"><a href="https://monaca.mobi/ja/account/edit" class="settings"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"> アカウント設定</a></li>
-                        <li class="sp after-login"><a href="javascript:void(0)" class="exec-logout">ログアウト</a></li> --}}
+                        <li class="login before-login"><a id="show_loginpopup" class="btn">ログイン</a></li>
+                        <li class="trial before-login"><a href="https://enterprise.monaca.mobi/ja/register" class="btn orange">無料トライアル</a></li>
+                        <li class="trial after-login"><a href="https://monaca.mobi/{{language}}/dashboard" class="btn orange">ダッシュボード</a></li>
 
                     {{else}}
                         <li class="dropdown">
@@ -237,28 +168,6 @@ component: navbar
                                             <img src="/img/icon/ja.png"> 日本語
                                         </a>
                                     </li>
-                                    <!--
-                                    <li {{#is language "es"}} style="display: none" {{/is}}>
-                                        <a href="https://monaca.io/es/" >
-                                            <img src="/img/icon/es.png"> Español
-                                        </a>
-                                    </li>
-                                    <li {{#is language "de"}} style="display: none" {{/is}}>
-                                        <a href="https://monaca.io/de/" >
-                                            <img src="/img/icon/de.png"> Deutsch
-                                        </a>
-                                    </li>
-                                    <li {{#is language "it"}} style="display: none" {{/is}}>
-                                        <a href="https://monaca.io/it/" >
-                                            <img src="/img/icon/it.png"> Italiano
-                                        </a>
-                                    </li>
-                                    <li {{#is language "ru"}} style="display: none" {{/is}}>
-                                        <a href="https://monaca.io/ru/" >
-                                            <img src="/img/icon/ru.png"> Русский
-                                        </a>
-                                    </li>
-                                    -->
                                 </ul>
                             </li>
                         {{/is}}
