@@ -166,15 +166,6 @@
           });
         });
     </script>
-    {{#is language "ja"}}
-        <script src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
-    {{else}}
-        <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
-    {{/is}}
-    <script>
-      if (!monacaApi.executedLoginCheck) {
-        monacaApi.loginCheck({});
-      }
-    </script>
+    <script src="{{site.monaca_api}}/login_io.php?lang={{language}}&callback=monacaApi.loginCheck" defer></script>
   </body>
 </html>

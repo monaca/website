@@ -82,15 +82,6 @@
         {{/is}}
         window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
     </script>
-    {{#is language "ja"}}
-        <script src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
-    {{else}}
-        <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
-    {{/is}}
-    <script>
-      if (!monacaApi.executedLoginCheck) {
-        monacaApi.loginCheck({});
-      }
-    </script>
+    <script src="{{site.monaca_api}}/login_io.php?lang={{language}}&callback=monacaApi.loginCheck" defer></script>
 </body>
 </html>
