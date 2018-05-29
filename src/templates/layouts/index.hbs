@@ -83,5 +83,20 @@
         window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
     </script>
     <script src="{{site.monaca_api}}/login_io.php?lang={{language}}&callback=monacaApi.loginCheck" defer></script>
+
+{{#is language "en"}}
+    <script>
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5b0bc12a10b99c7b36d45eef/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+    </script>
+{{/is}}
+
 </body>
 </html>
