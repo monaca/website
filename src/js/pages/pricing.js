@@ -15,24 +15,19 @@
   monacaPages["/pricing.html"] = function(loginData) {
     loginData.autoDisplay = false;
 
-    // If accessed from Japanese network
     if (loginData.status.inJapan) {
-      $('.plan-ja').css('display', 'block');
-      
-      $('.plan-type-col-2').removeClass('logindata-status-inen');
-      $('.plan-type-col-2').addClass('logindata-status-injapan');
+    }
 
-      $('body.pricing article.main .container ul.other-plan .box-1:nth-child(1)').css('margin-right', '0');
 
-      if (loginData.status.isLogin) {
-        $('.btn-trial').html(getProPlanTrialButtonLabel());
-      }
+    $('.plan-ja').css('display', 'block');
+    
+    $('.plan-type-col-2').removeClass('logindata-status-inen');
+    $('.plan-type-col-2').addClass('logindata-status-injapan');
 
-    } else {
-      $('.plan-en').css('display', 'block');
+    $('body.pricing article.main .container ul.other-plan .box-1:nth-child(1)').css('margin-right', '0');
 
-      $('.plan-type-col-2').removeClass('logindata-status-injapan');
-      $('.plan-type-col-2').addClass('logindata-status-inen');
+    if (loginData.status.isLogin) {
+      $('.btn-trial').html(getProPlanTrialButtonLabel());
     }
 
     document.getElementById('pricing-container').style.display = 'block';
@@ -58,20 +53,12 @@
     var tableEl;
     var contEl;
 
-    // If accessed from Japanese network (or the user visits Japanese website)
-    if (loginData.status.inJapan || document.documentElement.getAttribute('lang') === 'ja') {
-      $('.plan-ja').css('display', 'block');
-      tableEl = document.getElementById("compare-cont-table-ja");
-      contEl = document.getElementById("compare-cont-ja");
+    $('.plan-ja').css('display', 'block');
+    tableEl = document.getElementById("compare-cont-table-ja");
+    contEl = document.getElementById("compare-cont-ja");
 
-      if (loginData.status.isLogin) {
-        $('.btn-trial').html(getProPlanTrialButtonLabel());
-      }
-
-    } else {
-      $('.plan-en').css('display', 'block');
-      tableEl = document.getElementById("compare-cont-table");
-      contEl = document.getElementById("compare-cont");
+    if (loginData.status.isLogin) {
+      $('.btn-trial').html(getProPlanTrialButtonLabel());
     }
 
     contEl.addEventListener("scroll", setShadow);
@@ -85,12 +72,7 @@
       (contEl.clientWidth + contEl.scrollLeft < tableEl.clientWidth) ? contEl.classList.add("rightshadow") : contEl.classList.remove("rightshadow");
     }
 
-    // If accessed from Japanese network (or the user visits Japanese website)
-    if (loginData.status.inJapan || document.documentElement.getAttribute('lang') === 'ja') {
-      $('.dev-plan').remove();
-    } else {
-      $('.personal-plan').remove();
-    }
+    $('.dev-plan').remove();
 
     $('.btn-trial').click(function(){
       if (loginData.status.isLogin) {
@@ -164,20 +146,6 @@
 
     var display = 'none';
   
-    /*
-
-    if (inJapan) {
-      // ja
-      $('#important-info-ja-el').append(importantInfoJaEl);
-  
-      // Change CSS
-      $('html[lang=ja] body.pricing article.main .container').css('padding-top', '50px');
-      $('html[lang=ja] body.ci .subfeatures').css('margin-bottom', '24px');
-      display = 'block';
-    }
-
-    */
-
     if (document.getElementById('important-info-ja-el')) {
       document.getElementById('important-info-ja-el').style.display = display;
     }
