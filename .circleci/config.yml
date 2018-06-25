@@ -29,8 +29,8 @@ jobs:
           wget https://api.keycdn.com/zones/purge/38816.json --user="${KEY_CDN_API_KEY}" --password='' -v
 
 workflows:
-  - version: 2
-  - publish:
+  version: 2
+  publish:
     jobs:
       - build-staging:
           filters:
