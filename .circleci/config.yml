@@ -8,10 +8,10 @@ jobs:
       - run: |
           git submodule sync
           npm install
-          npm rebuild node-sass
-          npm install -g grunt
-          grunt deploy:en --site-config=stg --aws-key="${AWS_KEY}" --aws-secret="${AWS_SECRET}" --aws-region="" --aws-bucket="s.monaca.io"
-          grunt deploy:ja --site-config=stg --aws-key="${AWS_KEY}" --aws-secret="${AWS_SECRET}" --aws-region="" --aws-bucket="s.ja.monaca.io"
+          #npm rebuild node-sass
+          #npm install -g grunt
+          ./node_modules/.bin/grunt deploy:en --site-config=stg --aws-key="${AWS_KEY}" --aws-secret="${AWS_SECRET}" --aws-region="" --aws-bucket="s.monaca.io"
+          ./node_modules/.bin/grunt deploy:ja --site-config=stg --aws-key="${AWS_KEY}" --aws-secret="${AWS_SECRET}" --aws-region="" --aws-bucket="s.ja.monaca.io"
 
   build-production:
     docker:
