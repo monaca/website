@@ -2,46 +2,16 @@
 
   window.monacaPages = window.monacaPages || [];
 
-  //--------------------------------
-  // Note:
-  // 
-  // In English website:
-  //    Show the Overseas plans if accessed from Overseas network
-  //    Show the Japanese plans if accessed from Japanese network
-  // In Japanese website:
-  //    Always show the Japanese plans
-  //--------------------------------
-
   monacaPages["/pricing.html"] = function(loginData) {
     loginData.autoDisplay = false;
 
-    if (loginData.status.inJapan) {
-    }
-
-
-    $('.plan-ja').css('display', 'block');
-    
     $('.plan-type-col-2').removeClass('logindata-status-inen');
     $('.plan-type-col-2').addClass('logindata-status-injapan');
 
     $('body.pricing article.main .container ul.other-plan .box-1:nth-child(1)').css('margin-right', '0');
 
-    if (loginData.status.isLogin) {
-      $('.btn-trial').html(getProPlanTrialButtonLabel());
-    }
-
-    document.getElementById('pricing-container').style.display = 'block';
-
     $('.btn-trial').click(function(){
-      if (loginData.status.isLogin) {
-        location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/pricing?type=1';
-      } else {
-        location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/signup';
-      }
-    });
-
-    $('.btn-enterprises-trial').click(function(){
-      location.href = 'https://enterprise.monaca.mobi/' + window.LANG + '/register';
+      location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/signup';
     });
 
     displayNewPlanInfo(loginData.status.inJapan);
@@ -53,7 +23,6 @@
     var tableEl;
     var contEl;
 
-    $('.plan-ja').css('display', 'block');
     tableEl = document.getElementById("compare-cont-table-ja");
     contEl = document.getElementById("compare-cont-ja");
 
@@ -75,15 +44,7 @@
     $('.dev-plan').remove();
 
     $('.btn-trial').click(function(){
-      if (loginData.status.isLogin) {
-        location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/pricing?type=1';
-      } else {
-        location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/signup';
-      }
-    });
-
-    $('.btn-enterprises-trial').click(function(){
-      location.href = 'https://enterprise.monaca.mobi/' + window.LANG + '/register';
+      location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/signup';
     });
 
     displayNewPlanInfo(loginData.status.inJapan);
