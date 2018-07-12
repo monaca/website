@@ -85,12 +85,12 @@
             {{/is}}
         {{/compare}}
     ">
-    <meta property="og:image" content="{{#compare image "typeof" "string"}}{{image}}{{else}}https://monaca.io/img/ogp.png{{/compare}}">
+    <meta property="og:image" content="{{#compare image "typeof" "string"}}{{image}}{{else}}https://monaca.io/img/ogp_ja.png{{/compare}}">
     <meta property="fb:admins" content="597508315" >
     <meta name="twitter:site" content="@monaca_io">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@monaca_io">
-    <meta name="twitter:image" content="{{#compare image "typeof" "string"}}{{image}}{{else}}https://monaca.io/img/ogp.png{{/compare}}">
+    <meta name="twitter:image" content="{{#compare image "typeof" "string"}}{{image}}{{else}}https://monaca.io/img/ogp_ja.png{{/compare}}">
     <meta property="twitter:title" content="
         {{#compare title "typeof" "string"}}
             {{#is language "ja"}}
@@ -166,21 +166,15 @@
           });
         });
     </script>
-    <script src="{{site.monaca_api}}/login_io.php?lang={{language}}&callback=monacaApi.loginCheck" defer></script>
-
-{{#is language "en"}}
+    {{#is language "ja"}}
+        <script src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
+    {{else}}
+        <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
+    {{/is}}
     <script>
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/5b0bc12a10b99c7b36d45eef/default';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-  })();
+      if (!monacaApi.executedLoginCheck) {
+        monacaApi.loginCheck({});
+      }
     </script>
-{{/is}}
-
   </body>
 </html>
