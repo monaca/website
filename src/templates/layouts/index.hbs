@@ -87,10 +87,5 @@
     {{else}}
         <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
     {{/is}}
-    <script>
-      if (!monacaApi.executedLoginCheck) {
-        monacaApi.loginCheck({});
-      }
-    </script>
 </body>
 </html>

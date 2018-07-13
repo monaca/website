@@ -59,13 +59,12 @@
     loginData.status = status;
     loginData.setPreReady();
 
-    if (!status.isLogin) {
-      // Not logged in yet
-      $(".navbar-nav .after-login").remove();
-      loginData.setReady();
-    } else {
+    if (status.isLogin) {
       $(".navbar-nav .before-login").remove();
       this.loadLoginData();
+    } else {
+      $(".navbar-nav .after-login").remove();
+      loginData.setReady();
     }
   };
   
