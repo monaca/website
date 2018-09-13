@@ -32,11 +32,7 @@ workflows:
   version: 2
   publish:
     jobs:
-      - build-staging:
-          filters:
-            branches:
-              only:
-                - master
+      - build-staging
       - build-production:
           filters:
             branches:
