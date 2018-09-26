@@ -1703,7 +1703,6 @@ html[lang=ja] body.home {
                 background-image: url('/img/index-v2/keyvisual.jpg');
                 background-position: center center;
                 background-repeat: no-repeat;
-
                 > .v2-section--keyvisual__subtitle {
                     color: white;
                     font-size: 41px;
@@ -1713,6 +1712,12 @@ html[lang=ja] body.home {
                     color: white;
                     font-size: 59px;
                     font-weight: 700;
+                    position: relative;
+                }
+                .pwa_img{
+                    width: 120px;
+                    position: absolute;
+                    top: -70px;
                 }
                 > .v2-section--keyvisual__description {
                     margin-top: 4px;
@@ -1764,13 +1769,17 @@ html[lang=ja] body.home {
             > .v2-section--keyvisual__wrapper {
                 box-sizing: border-box;
                 margin: 0 auto;
-                padding: 76px 32px;
+                padding: 96px 32px;
                 height: 380px;
                 background-color: #333333;
                 background-image: url('/img/index-v2/keyvisual_sp.jpg');
                 background-position: center center;
                 background-repeat: no-repeat;
-
+                .pwa_img{
+                    width: 60px;
+                    position: absolute;
+                    top: 80px;
+                }
                 > .v2-section--keyvisual__subtitle {
                     color: white;
                     font-size: 21.5px;
@@ -1827,8 +1836,11 @@ html[lang=ja] body.home {
         // In smartphone mode
         @media screen and (max-width: $v2-break-smartphone) {
             > .v2-section--keyvisual__wrapper {
-                padding: 96px 20px;
-
+                padding: 126px 20px;
+                .pwa_img{
+                    top: 70px;
+                    right: 8%;
+                }
                 > a.v2-section--keyvisual__trial-button {
                     display: none;
                 }
@@ -1856,7 +1868,7 @@ html[lang=ja] body.home {
         @media screen and (min-width: $v2-break-tablet + 1) {
             background-color: white;
             border-bottom: 1px solid #f0f0f0;
-            
+
             > .v2-section--logos__wrapper {
                 display: flex;
                 flex-flow: row nowrap;
@@ -1871,7 +1883,7 @@ html[lang=ja] body.home {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    
+
                     // If short width is given
                     @media screen and (max-width: 1249px) {
                         &:nth-child(1) {
@@ -1928,7 +1940,7 @@ html[lang=ja] body.home {
             background-color: white;
             border-bottom: 1px solid #f0f0f0;
             overflow: hidden;
-            
+
             > .v2-section--html5__wrapper {
                 display: flex;
                 flex-flow: row nowrap;
@@ -1962,7 +1974,7 @@ html[lang=ja] body.home {
                     }
                     > .v2-section--html5__navigation {
                         margin-top: 33px;
-                        
+
                         a {
                             font-size: 13.7px;
                             color: #0054ac;
@@ -1994,7 +2006,7 @@ html[lang=ja] body.home {
             background-color: white;
             border-bottom: 1px solid #f0f0f0;
             overflow: hidden;
-            
+
             > .v2-section--html5__wrapper {
                 display: flex;
                 flex-flow: row nowrap;
@@ -2026,7 +2038,7 @@ html[lang=ja] body.home {
                     }
                     > .v2-section--html5__navigation {
                         margin-top: 28px;
-                        
+
                         a {
                             font-size: 16px;
                             color: #0054ac;
@@ -2060,7 +2072,7 @@ html[lang=ja] body.home {
             background-color: white;
             border-bottom: 1px solid #f0f0f0;
             overflow: hidden;
-            
+
             > .v2-section--html5__wrapper {
                 display: flex;
                 flex-flow: column nowrap;
@@ -2089,7 +2101,7 @@ html[lang=ja] body.home {
                     }
                     > .v2-section--html5__navigation {
                         margin-top: 28px;
-                        
+
                         a {
                             font-size: 16px;
                             color: #0054ac;
@@ -2118,7 +2130,7 @@ html[lang=ja] body.home {
             }
         }
     }
-    
+
     .v2-section--apps {
         // In PC/tablet/smartphone mode
         @media screen {
@@ -2173,7 +2185,7 @@ html[lang=ja] body.home {
 
                 > .v2-section--apps__navigation {
                     margin-top: 25px;
-                    
+
                     a {
                         font-size: 13.7px;
                         color: #0054ac;
@@ -2283,7 +2295,7 @@ html[lang=ja] body.home {
             background-color: white;
             padding-bottom: 60px;
             overflow: hidden;
-            
+
             > .v2-section--customers__wrapper {
                 box-sizing: border-box;
                 margin: 0 auto;
@@ -2349,7 +2361,7 @@ html[lang=ja] body.home {
 
                         > .v2-section--customers__customer-navigation {
                             margin-top: 0;
-                            
+
                             a {
                                 font-size: 15.5px;
                                 color: #0054ac;
