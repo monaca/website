@@ -115,9 +115,9 @@
 
   function getProPlanTrialButtonLabel() {
     if (window.LANG == 'ja') {
-      return 'Proプラン14日間無料トライアル開始';
+      return '14日間無料トライアル開始';
     }
 
-    return 'Start a 14 day Pro Plan Free Trial';
+    return 'Start a 14 day Free Trial';
   }
 })();
