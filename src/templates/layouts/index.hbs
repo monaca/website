@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0054ac"/>
     <title>
         {{title}}
     </title>
@@ -34,6 +35,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
 
     <meta property="og:url" content="{{#is language "ja"}}https://ja.monaca.io/{{else}}https://monaca.io/{{/is}}">
     <meta property="og:type" content="website">
@@ -54,24 +56,42 @@
     <script src="https://use.typekit.net/tky7gag.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-
 </head>
 <body class="{{class}}">
-    {{#is language "ja"}}{{> header_ja }}{{else}}{{> header_en }}{{/is}}
+    <noscript>
+        <style>
+          div.content-wrapper { display: none }
+        </style>
+        <p>Javascript is loading, please wait. Please enable javascript, if you have it disabled.</p>
+    </noscript>
 
-    <div class="main" role="main">
-        {{> loginPopup }}
-        {{> notificationHeader }}
-        {{> body }}
+    <div class="content-wrapper">
+        {{#is language "ja"}}{{> header_ja }}{{else}}{{> header_en }}{{/is}}
 
+        <div class="main" role="main">
+            {{> loginPopup }}
+            {{> notificationHeader }}
+            {{> body }}
+        </div>
+
+        {{#is language "ja"}}{{> footer_ja }}{{else}}{{> footer_en }}{{/is}}
     </div>
-
-    {{#is language "ja"}}{{> footer_ja }}{{else}}{{> footer_en }}{{/is}}
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/all.js"></script>
     <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js',).then(function(registration) {
+              // Registration was successful
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              // registration failed :(
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
 
         window.MONACA_API_URL = "{{site.monaca_api}}";
         window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
