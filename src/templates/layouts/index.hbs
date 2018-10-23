@@ -60,22 +60,23 @@
 <body class="{{class}}">
     <noscript>
         <style>
-          div.content-wrapper { display: none }
+          header.navbar { display: none !important }
+          div.main { display: none !important }
+          footer.common { display: none !important }
+          footer.v2-section--footer { display: none !important }
         </style>
         <p>Javascript is loading, please wait. Please enable javascript, if you have it disabled.</p>
     </noscript>
 
-    <div class="content-wrapper">
-        {{#is language "ja"}}{{> header_ja }}{{else}}{{> header_en }}{{/is}}
+    {{#is language "ja"}}{{> header_ja }}{{else}}{{> header_en }}{{/is}}
 
-        <div class="main" role="main">
-            {{> loginPopup }}
-            {{> notificationHeader }}
-            {{> body }}
-        </div>
-
-        {{#is language "ja"}}{{> footer_ja }}{{else}}{{> footer_en }}{{/is}}
+    <div class="main" role="main">
+        {{> loginPopup }}
+        {{> notificationHeader }}
+        {{> body }}
     </div>
+
+    {{#is language "ja"}}{{> footer_ja }}{{else}}{{> footer_en }}{{/is}}
 
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
