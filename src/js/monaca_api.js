@@ -173,6 +173,17 @@
       closePopup(msec, 'loginpopup');
     });
 
+    $('.toggle-password').click(function() {
+      $('.toggle-password')
+        .toggleClass('glyphicon-eye-open')
+        .toggleClass('glyphicon-eye-close');
+      if ($('#login_popup_password').attr('type') === 'password') {
+        $('#login_popup_password').attr('type', 'text');
+      } else {
+        $('#login_popup_password').attr('type', 'password');
+      }
+    });
+
     $('#popup_login_btn').click(function() {
       $('#popup_login_btn').addClass('loading');
       $("#login-popup-form").attr('action', window.MONACA_API_URL + "/" + window.LANG + "/login");
