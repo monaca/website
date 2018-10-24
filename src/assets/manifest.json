@@ -1,0 +1,21 @@
+{
+  "short_name": "Monaca",
+  "name": "Monaca",
+  "icons": [
+    {
+      "src": "img/monaca_icon_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "img/monaca_icon_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0054ac",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#0054ac"
+}
