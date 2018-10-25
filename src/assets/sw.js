@@ -1,4 +1,4 @@
-var CACHE_NAME = 'monaca-website-cache-v1';
+var CACHE_NAME = 'monaca-website-cache-v2';
 var urlsToCache = [
   'css/bootstrap-theme.min.css',
   'css/bootstrap.min.css',
@@ -23,18 +23,11 @@ self.addEventListener('activate', function (event) {
     caches.keys().then(function (keys) {
       Promise.all(
         keys.map(function (key) {
-          if (key === CACHE_NAME) {
+          if (key !== CACHE_NAME) {
             return caches.delete(key);
           }
         })
       )
-    }).then(function () {
-      console.log('Deleted old caches to update');
-      caches.open(CACHE_NAME)
-        .then(function (cache) {
-          return cache.addAll(urlsToCache);
-          console.log('Caches were up to date')
-        })
     })
   );
 });
