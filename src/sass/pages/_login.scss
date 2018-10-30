@@ -191,6 +191,22 @@
   }
 }
 
+#loginpopup {
+  .login-form {
+    input#login_popup_password {
+      padding-right: 38px;
+    }
+    span.toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+  }
+}
+
 #lostpassword {
   .form-error, .required {
     color: #f55b56;

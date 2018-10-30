@@ -23,8 +23,9 @@
         <li class="email">
           <input type="text" name="form[email]" maxlength="255" placeholder="{{#is language "ja"}}メールアドレス{{else}}E-mail address{{/is}}" class="email" id="login_popup_email" />
         </li>
-        <li>
+        <li style="position: relative;">
           <input type="password" name="form[password]" maxlength="30" placeholder="{{#is language "ja"}}パスワード{{else}}Password{{/is}}" class="password" id="login_popup_password" />
+          <span class="glyphicon glyphicon-eye-open toggle-password"></span>
         </li>
         <li class="autologin-check">
           <input type="checkbox" name="form[remember_id]" value="1" id="login_popup_remember_email" checked="checked" />
@@ -40,9 +41,9 @@
             <span class="loading-spinner spinner-w-green"></span>
             <span class="btn-txt">{{#is language "ja"}}ログイン{{else}}Login{{/is}}</span>
           </button>
-          {{#is language "ja"}}<button id="popup_login_btn" class="btn-gray btn-long" type="button" onclick="location.href='https://enterprise.monaca.mobi/ja/'">企業向けプラン管理者のログインはこちら</button>
+          {{#is language "ja"}}<button id="enterprise_login_btn" class="btn-gray btn-long" type="button" onclick="location.href='https://enterprise.monaca.mobi/ja/'">企業向けプラン管理者のログインはこちら</button>
           <a href="https://partner.classi.jp">Classi IDでログインの方はこちら</a>
-          {{else}}<button id="popup_login_btn" class="btn-gray btn-long" type="button" onclick="location.href='https://enterprise.monaca.mobi/en/'">Login to team dashboard</button>
+          {{else}}<button id="enterprise_login_btn" class="btn-gray btn-long" type="button" onclick="location.href='https://enterprise.monaca.mobi/en/'">Login to team dashboard</button>
           {{/is}}
         </li>
       </ul>
