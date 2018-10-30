@@ -23,8 +23,9 @@
         <li class="email">
           <input type="text" name="form[email]" maxlength="255" placeholder="{{#is language "ja"}}メールアドレス{{else}}E-mail address{{/is}}" class="email" id="login_popup_email" />
         </li>
-        <li>
+        <li style="position: relative;">
           <input type="password" name="form[password]" maxlength="30" placeholder="{{#is language "ja"}}パスワード{{else}}Password{{/is}}" class="password" id="login_popup_password" />
+          <span class="glyphicon glyphicon-eye-open toggle-password"></span>
         </li>
         <li class="autologin-check">
           <input type="checkbox" name="form[remember_id]" value="1" id="login_popup_remember_email" checked="checked" />
