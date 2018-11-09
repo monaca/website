@@ -26,7 +26,7 @@
     tableEl = document.getElementById("compare-cont-table-ja");
     contEl = document.getElementById("compare-cont-ja");
 
-    if (loginData.status.isLogin) {
+    if (loginData.status && loginData.status.isLogin) {
       $('.btn-trial').html(getProPlanTrialButtonLabel());
     }
 
