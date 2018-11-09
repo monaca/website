@@ -14,7 +14,7 @@
       location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/signup';
     });
 
-    displayNewPlanInfo(loginData.status.inJapan);
+    displayNewPlanInfo();
     displayBody();
   };
 
@@ -47,7 +47,7 @@
       location.href = monacaApi.getBaseUrl() + '/' + window.LANG + '/signup';
     });
 
-    displayNewPlanInfo(loginData.status.inJapan);
+    displayNewPlanInfo();
     displayBody();
   };
 
@@ -90,13 +90,13 @@
       $('.personal-plan').remove();
     }
 
-    displayNewPlanInfo(loginData.status.inJapan);
+    displayNewPlanInfo();
     displayBody();
   };
 
 
 
-  function displayNewPlanInfo(inJapan) {
+  function displayNewPlanInfo() {
     var importantInfoJaEl = '<div class="cmn-important-info"><a href="/important-info/info-new-plan.html" target="_blamk"><h2>';
     importantInfoJaEl += '<span class="cmn-label color-red">重要</span>';
     importantInfoJaEl += 'Monacaの一部のプランを対象に';
