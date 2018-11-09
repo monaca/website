@@ -131,22 +131,7 @@
     <!-- algolia search -->
     <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
-    <script>
-        {{#is language "ja"}}
-            window.LANG = "ja";
-        {{else}}
-            window.LANG = "en";
-        {{/is}}
-        if (window.location.href.indexOf("error502") > -1) {
-          monacaApi.loginCheck(false); // Force to stop login check request When web-server error
-        } else {
-          var head = document.getElementsByTagName('head')[0];
-          var script = document.createElement('script');
-          script.type = 'text/javascript';
-          script.src = "{{site.monaca_api}}/" + window.LANG + "/login_io?callback=monacaApi.loginCheck";
-          head.appendChild(script);
-        }
-    </script>
+
 </head>
 
 <body class="{{class}}">
@@ -182,5 +167,16 @@
           });
         });
     </script>
+    {{#is class "error"}}
+      <script>
+        monacaApi.loginCheck(false); // Force to stop login check request When web-server error
+      </script>
+    {{else}}
+      {{#is language "ja"}}
+        <script src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
+      {{else}}
+        <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
+      {{/is}}
+    {{/is}}
   </body>
 </html>
