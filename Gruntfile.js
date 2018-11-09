@@ -15,7 +15,7 @@
 // use this if you want to match all subfolders:
 // '<%= config.src %>/templates/pages/**/*.hbs'
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
@@ -23,17 +23,17 @@ module.exports = function(grunt) {
     var isWindows = /^win/.test(process.platform);
 
     var config = {
-            src: 'src',
-            dist: 'dist/en',
-            distJa: 'dist/ja',
-            distEn: 'dist/en'
-        };
+        src: 'src',
+        dist: 'dist/en',
+        distJa: 'dist/ja',
+        distEn: 'dist/en'
+    };
 
     // Load site.yml
     if (grunt.option('site-config')) {
-      var site_yaml = grunt.file.readYAML(config.src + '/data/site_' + grunt.option('site-config') + '.yml');
+        var site_yaml = grunt.file.readYAML(config.src + '/data/site_' + grunt.option('site-config') + '.yml');
     } else {
-      var site_yaml = grunt.file.readYAML(config.src + '/data/site.yml');
+        var site_yaml = grunt.file.readYAML(config.src + '/data/site.yml');
     }
 
     // Display information
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         config: config,
 
-	sass: {
+        sass: {
             options: {
                 outputStyle: "compressed",
                 sourceMap: true,
@@ -52,10 +52,10 @@ module.exports = function(grunt) {
             dist: {
                 files: [{
                     expand: true,
-                    cwd   : 'src/sass',
-                    src   : '*.scss',
-                    dest  : '<%= config.dist %>/css/',
-                    ext   : '.css'
+                    cwd: 'src/sass',
+                    src: '*.scss',
+                    dest: '<%= config.dist %>/css/',
+                    ext: '.css'
                 }]
             },
             styleguide: {
@@ -64,10 +64,10 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd   : '<%= config.src %>/styleguide',
-                    src   : '*.scss',
-                    dest  : 'docs/styleguide',
-                    ext   : '.css'
+                    cwd: '<%= config.src %>/styleguide',
+                    src: '*.scss',
+                    dest: 'docs/styleguide',
+                    ext: '.css'
                 }]
             }
         },
@@ -91,7 +91,7 @@ module.exports = function(grunt) {
             sass: {
                 files: ['<%= config.src %>/**/*.scss'],
                 tasks: ['sass', 'copy:css'],
-                options : {
+                options: {
                     spawn: false
                 }
             },
@@ -226,7 +226,7 @@ module.exports = function(grunt) {
                     cwd: "<%= config.src %>/templates/pages/",
                     src: '**/*.en.hbs',
                     dest: '<%= config.dist %>/',
-                    rename: function(dest, src) {
+                    rename: function (dest, src) {
                         return dest + src.replace('.en.hbs', '.html');
                     }
                 }]
@@ -252,7 +252,7 @@ module.exports = function(grunt) {
                     cwd: "<%= config.src %>/templates/pages/",
                     src: '**/*.ja.hbs',
                     dest: '<%= config.distJa %>/',
-                    rename: function(dest, src) {
+                    rename: function (dest, src) {
                         return dest + src.replace('.ja.hbs', '.html');
                     }
                 }]
@@ -266,7 +266,7 @@ module.exports = function(grunt) {
                     cwd: "<%= config.src %>/templates/pages/",
                     src: 'index.es.hbs',
                     dest: '<%= config.dist %>/es/',
-                    rename: function(dest, src) {
+                    rename: function (dest, src) {
                         return dest + src.replace('.es.hbs', '.html');
                     }
                 }]
@@ -280,7 +280,7 @@ module.exports = function(grunt) {
                     cwd: "<%= config.src %>/templates/pages/",
                     src: 'index.de.hbs',
                     dest: '<%= config.dist %>/de/',
-                    rename: function(dest, src) {
+                    rename: function (dest, src) {
                         return dest + src.replace('.de.hbs', '.html');
                     }
                 }]
@@ -294,7 +294,7 @@ module.exports = function(grunt) {
                     cwd: "<%= config.src %>/templates/pages/",
                     src: 'index.it.hbs',
                     dest: '<%= config.dist %>/it/',
-                    rename: function(dest, src) {
+                    rename: function (dest, src) {
                         return dest + src.replace('.it.hbs', '.html');
                     }
                 }]
@@ -308,7 +308,7 @@ module.exports = function(grunt) {
                     cwd: "<%= config.src %>/templates/pages/",
                     src: 'index.ru.hbs',
                     dest: '<%= config.dist %>/ru/',
-                    rename: function(dest, src) {
+                    rename: function (dest, src) {
                         return dest + src.replace('.ru.hbs', '.html');
                     }
                 }]
@@ -396,10 +396,22 @@ module.exports = function(grunt) {
                     bucket: grunt.option('aws-bucket'),
                     region: grunt.option('aws-region'),
                 },
-                files: [
-                    {action: "delete", dest: '/'},
-                    {expand: true, cwd: '<%= config.distJa %>', src: ['**'], dest: ''},
-                    {expand: true, cwd: '<%= config.distJa %>', src: ['**/*.js.gz', '**/*.html.gz', '**/*.css.gz'], dest: ''},
+                files: [{
+                        action: "delete",
+                        dest: '/'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= config.distJa %>',
+                        src: ['**'],
+                        dest: ''
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= config.distJa %>',
+                        src: ['**/*.js.gz', '**/*.html.gz', '**/*.css.gz'],
+                        dest: ''
+                    },
                 ]
             },
             en: {
@@ -407,10 +419,22 @@ module.exports = function(grunt) {
                     bucket: grunt.option('aws-bucket'),
                     region: grunt.option('aws-region'),
                 },
-                files: [
-                    {action: "delete", dest: '/'},
-                    {expand: true, cwd: '<%= config.distEn %>', src: ['**'], dest: ''},
-                    {expand: true, cwd: '<%= config.distEn %>', src: ['**/*.js.gz', '**/*.html.gz', '**/*.css.gz'], dest: ''},
+                files: [{
+                        action: "delete",
+                        dest: '/'
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= config.distEn %>',
+                        src: ['**'],
+                        dest: ''
+                    },
+                    {
+                        expand: true,
+                        cwd: '<%= config.distEn %>',
+                        src: ['**/*.js.gz', '**/*.html.gz', '**/*.css.gz'],
+                        dest: ''
+                    },
                 ]
             },
         },
@@ -471,21 +495,21 @@ module.exports = function(grunt) {
         },
 
         cssmin: {
-          dist: {
-            files: [{
-                expand: true,
-                cwd: '<%= config.distEn %>/css/',
-                src: ['**/*.css', '!**/*.min.css'],
-                dest: '<%= config.distEn %>/css/',
-                ext: '.css'
-            }, {
-                expand: true,
-                cwd: '<%= config.distJa %>/css/',
-                src: ['**/*.css', '!**/*.min.css'],
-                dest: '<%= config.distJa %>/css/',
-                ext: '.css'
-            }]
-          }
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= config.distEn %>/css/',
+                    src: ['**/*.css', '!**/*.min.css'],
+                    dest: '<%= config.distEn %>/css/',
+                    ext: '.css'
+                }, {
+                    expand: true,
+                    cwd: '<%= config.distJa %>/css/',
+                    src: ['**/*.css', '!**/*.min.css'],
+                    dest: '<%= config.distJa %>/css/',
+                    ext: '.css'
+                }]
+            }
         },
 
         imagemin: {
