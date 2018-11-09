@@ -15,7 +15,7 @@ self.addEventListener('install', function (event) {
     .then(function (cache) {
       return cache.addAll(urlsToCache);
     })
-    .then(self.skipWaiting()))
+    .then(self.skipWaiting())
   );
 });
 
