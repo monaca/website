@@ -1,4 +1,4 @@
-var CACHE_NAME = 'monaca-website-cache-v6';
+var CACHE_NAME = 'monaca-website-cache-v7';
 var urlsToCache = [
   'css/bootstrap-theme.min.css',
   'css/bootstrap.min.css',
@@ -15,6 +15,7 @@ self.addEventListener('install', function (event) {
     .then(function (cache) {
       return cache.addAll(urlsToCache);
     })
+    .then(self.skipWaiting()))
   );
 });
 
