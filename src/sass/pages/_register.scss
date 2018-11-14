@@ -337,7 +337,8 @@
       }
     }
 
-    .signup-form, .login-form {
+    .signup-form,
+    .login-form {
       padding: 0;
       @extend %signup-form;
       ul li {
@@ -370,6 +371,7 @@
       
       input {
         &[type="text"],
+        &[type="email"],
         &[type="password"] {
           width: 387px;
           display: block;

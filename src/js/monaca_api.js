@@ -190,6 +190,52 @@
       $("#login-popup-form").submit();
     });
 
+
+    (function() {
+      var $email = $('#login_popup_email');
+      var $emailErrors = $('#login_popup_email_errors');
+
+      if (!$email || !$emailErrors) {
+        return;
+      }
+
+      $email.on('keyup', _.debounce(function(e) {
+        var errors = [];
+        var data  = $email.val();
+
+        if (!_.isString(data)) {
+          return;
+        }
+
+        if (/[　]/.test(data)) {
+          errors.push('全角空白');
+        }
+
+        data = data.trim();
+
+        if (!/^[\w\-+.@]*$/.test(data)) {
+          if (/[＠]/.test(data)) {
+            errors.push('全角＠');
+          }
+
+          if (/[．]/.test(data)) {
+            errors.push('全角ドット');
+          }
+
+          if (errors.length === 0) {
+            errors.push('全角文字または不正な文字');
+          }
+        }
+
+        if (errors.length === 0) {
+          $emailErrors.hide();
+        } else {
+          $emailErrors.show();
+          $('#login_popup_email_errors_ja').text(errors.join(', '));
+        }
+      }, 300));
+    }());
+
     var f = monacaPages[path];
     if (f) {
       f(loginData);
