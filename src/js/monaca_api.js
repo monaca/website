@@ -213,7 +213,7 @@
 
         data = data.trim();
 
-        if (!/^[\w\-+.@]*$/.test(data)) {
+        if (!/^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~\-@]*$/.test(data)) {
           if (/[＠]/.test(data)) {
             errors.push('全角＠');
           }
