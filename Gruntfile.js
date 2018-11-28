@@ -21,6 +21,16 @@ module.exports = function (grunt) {
     require('load-grunt-tasks')(grunt);
 
     var isWindows = /^win/.test(process.platform);
+    var workboxBuild = require('workbox-build');
+    var precachedFiles = [
+        '**/css/bootstrap-theme.min.css',
+        '**/css/bootstrap.min.css',
+        '**/css/codemirror.css',
+        '**/css/style.css',
+        '**/js/all.js',
+        '**/js/bootstrap.min.js',
+        '**/js/jquery.min.js'
+    ];
 
     var config = {
         src: 'src',
@@ -372,6 +382,12 @@ module.exports = function (grunt) {
                 src: 'all.js',
                 dest: '<%= config.distJa %>/js/'
             },
+            serviceworker: {
+                expand: true,
+                cwd: '<%= config.dist %>/',
+                src: ['sw.js'],
+                dest: '<%= config.distJa %>/'
+            },
             styleguide: {
                 expand: true,
                 cwd: '<%= config.dist %>/img/',
@@ -542,6 +558,37 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-styledocco');
 
+
+    function injectManifest() {
+        return new Promise(function (resolve, reject) {
+            workboxBuild.injectManifest({
+                maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+                globDirectory: 'dist/en/',
+                globPatterns: precachedFiles,
+                swDest: 'dist/en/sw.js',
+                swSrc: 'dist/en/sw-src.js'
+            })
+            .then(function (result) {
+                if (result) console.log('Precache Files:', result);
+                resolve(result);
+            })
+            .catch(function (err) {
+                reject(err);
+            });
+        });
+    };
+
+    grunt.registerTask('buildSw', function() {
+        var done = this.async();
+        injectManifest()
+        .then(function () {
+          done();
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
+    });
+
     grunt.registerTask('server', [
         'build',
         'connect:en',
@@ -568,7 +615,9 @@ module.exports = function (grunt) {
         'copy',
         'uglify',
         'assemble',
-        'cssmin'
+        'cssmin',
+        'buildSw',
+        'copy:serviceworker'
     ]);
 
     grunt.registerTask('default', [

@@ -53,6 +53,7 @@ npm run build
 1. Copy assets in `/src/assets` into `/dist`.
 2. Compile sass files.
 3. Concatenate JS files in `/src/js`. Generated `all.js` will be placed in `/dist/js`.
+4. Generate Service Worker file.
 
 
 ### Watch and live-reload
