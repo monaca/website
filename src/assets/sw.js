@@ -1,4 +1,4 @@
-var CACHE_NAME = 'monaca-website-cache-v7';
+var CACHE_NAME = 'monaca-website-cache-v8';
 var urlsToCache = [
   'css/bootstrap-theme.min.css',
   'css/bootstrap.min.css',
