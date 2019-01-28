@@ -1,6 +1,160 @@
 (function() {
   window.monacaPages = window.monacaPages || [];
 
+  monacaPages["/support/education-inquiry.html"] = function (loginData) {
+    var params = monacaApi.getUrlVars();
+    var initFormData;
+    var LICENSE_PURCHASE_DETAIL = '#license_purchase_detail';
+    var BOOK_PURCHASE_DETAIL = '#book_purchase_detail';
+    var INQUIRY_DETAIL = '#inquiry_detail';
+    var LICENSE_PURCHASE = 'license_purchase';
+    var BOOK_PURCHASE = 'book_purchase';
+    var INQUIRY = 'inquiry';
+
+    loginData.autoDisplay = false;
+    displayBody();
+    showLoading("support-inquiry", "loading");
+        
+    if(!loginData.status.isLogin) document.getElementById('link_technical_to').href += '?tag=bugs';
+
+    loginData.onReady(function() {
+      hideAll();
+
+      $.ajax({
+        type: "GET",
+        url: monacaApi.getBaseUrl() + "/" + window.LANG + "/support/education_inquiry_io",
+        xhrFields: {
+          withCredentials: true
+        },
+        dataType: "json",
+        success: function(msg) {
+          hideLoading("support-inquiry", "loading");
+
+          if (msg.result && msg.result.initOK) {
+            initFormData = msg.result.initOK;
+            displayForm(initFormData);
+            return;
+          }
+          displayUnknownError();
+        },
+        error: function(msg) {
+          hideLoading("support-inquiry", "loading");
+          displayUnknownError();
+        }
+      });
+
+      $('#question-type-radio').click(function() {
+        var value = $("#question-type-radio input[type='radio']:checked").val();
+        if (value === LICENSE_PURCHASE) {
+          show(LICENSE_PURCHASE_DETAIL);
+        } else if (value === BOOK_PURCHASE) {
+          show(BOOK_PURCHASE_DETAIL);
+        } else if (value === INQUIRY) {
+          show(INQUIRY_DETAIL);
+        } else {
+          hideAll();
+        }
+      });
+
+      $("#send").click(function() {
+        formUtil.disableAllInput();
+        var sendData = createSendData();
+
+        $.ajax( {
+          type: "POST",
+          url: monacaApi.getBaseUrl() + "/" + window.LANG + "/support/education_inquiry_io",
+          xhrFields: {
+            withCredentials: true
+          },
+          data: sendData,
+          dataType: "json",
+          success: function(msg) {
+            formUtil.enableAllInput();
+
+            if (msg.result == 'submitOK') {
+              displayFinishPage();
+            } else if (msg.result && msg.result.formError) {
+              formUtil.displayFormError(msg.result.formError);
+            } else {
+              displayUnknownError();
+            }
+          },
+          error: function(msg) {
+            formUtil.enableAllInput();
+            displayUnknownError();
+          }
+        });
+
+        return false;
+      });
+    });
+
+    function hideAll() {
+      $(LICENSE_PURCHASE_DETAIL).hide("fast");
+      $(BOOK_PURCHASE_DETAIL).hide("fast");
+      $(INQUIRY_DETAIL).hide("fast");
+    }
+
+    function show(type) {
+      var options = [LICENSE_PURCHASE_DETAIL, BOOK_PURCHASE_DETAIL, INQUIRY_DETAIL];
+      options.forEach(function(option) {
+        var element = $(option);
+        if (option !== type) {
+          if (element.css('display') !== 'none') element.hide("slow");
+        }
+      });
+      if ($(type).css('display') === 'none') $(type).show("slow");
+    }
+
+    function displayForm(data) {
+      formUtil.resetError();
+      formUtil.setRadioOptions('question-type-radio', 'inquiry[question_type]', data.question_types, 'question-type');
+      formUtil.setRadioOptions('license-type-radio','inquiry[license]', data.licenses, 'question-type');
+      formUtil.setSelectOptions('book', data.books);
+      $('#name').val(loginData.getProfileColumn('name'));
+      $('#email').val(loginData.getProfileColumn('email'));
+      displayBody();
+    }
+
+    function displayUnknownError(tag) {
+      formUtil.resetError();
+      $('#csrf-token-error').css('display', 'block');
+      displayBody();
+    }
+
+    function createSendData(with_token) {
+      var sendData = {
+        "inquiry[name]":        $('#name').val(),
+        "inquiry[email]":       $('#email').val(),
+        "inquiry[school]":      $('#school').val(),
+      };
+
+      var question_type;
+
+      if(with_token) sendData["inquiry[_csrf_token]"] = initFormData['_csrf_token'];
+
+      $('#question-type-radio :radio:checked').each(function(){
+        question_type = $(this).val();
+        sendData['inquiry[question_type]'] = question_type;
+      });
+
+      if (question_type) {
+        if (question_type === LICENSE_PURCHASE) {
+          $('#license-type-radio :radio:checked').each(function(){
+            sendData['inquiry[license]'] = $(this).val();
+          });
+        } else if (question_type === BOOK_PURCHASE) {
+          sendData['inquiry[book]'] = $('#book').val();
+          sendData['inquiry[book_number]'] = $('#book-number').val();
+        } else if (question_type === INQUIRY) {
+          sendData['inquiry[message]'] = $('#message').val();
+        }
+      }
+
+      return sendData;
+    }
+  };
+
   monacaPages["/support/inquiry.html"] = function (loginData) {
     var params = monacaApi.getUrlVars();
     var initFormData;
