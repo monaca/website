@@ -160,7 +160,7 @@ body.support {
           width: 500px;
           height: 200px;
         }
-        input[type=text] {
+        input[type=text], input[type=number] {
           padding: 5px;
           border: 1px solid #ccc;
           border-radius: 4px;
@@ -802,7 +802,7 @@ body.support {
             }
           }
         }
-        input[type="text"] {
+        input[type="text"], input[type="number"] {
           box-sizing: border-box;
           width: 540px;
           background: #fff none repeat scroll 0 0;
@@ -822,7 +822,7 @@ body.support {
         textarea {
           margin: 0 0 20px 0;
         }
-        textarea, input[type=text]#device_os {
+        textarea, input[type=text]#device_os, input[type=number]#device_os {
           box-sizing:border-box;
           width: 540px;
           @media screen and (max-width: $break) {
