@@ -54,7 +54,7 @@
         }
       });
 
-      $('input[name="inquiry[license_period_type]"]').click((e)=> {
+      $('input[name="inquiry[license_period_type]"]').click(function(e){
         var unit = e.target.value;
         var unit_text = unit == 'monthly' ? 'ヶ月' : '年';
         $('#licence-term-unit').text(unit_text);
