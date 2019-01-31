@@ -619,6 +619,11 @@ body.support {
             width: 20px;
             vertical-align: middle;
           }
+          #license_purchase_detail {
+            input[type=radio] {
+              margin: 0 5px;
+            }
+          }
           textarea {
             background: #fff none repeat scroll 0 0;
             border: 1px solid #cccccc;

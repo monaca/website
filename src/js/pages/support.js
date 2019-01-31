@@ -23,9 +23,7 @@
       $.ajax({
         type: "GET",
         url: monacaApi.getBaseUrl() + "/" + window.LANG + "/support/education_inquiry_io",
-        xhrFields: {
-          withCredentials: true
-        },
+        xhrFields: { withCredentials: true },
         dataType: "json",
         success: function(msg) {
           hideLoading("support-inquiry", "loading");
@@ -56,6 +54,12 @@
         }
       });
 
+      $('input[name="inquiry[license_period_type]"]').click((e)=> {
+        var unit = e.target.value;
+        var unit_text = unit == 'monthly' ? 'ヶ月' : '年';
+        $('#licence-term-unit').text(unit_text);
+      });
+      
       $("#send").click(function() {
         formUtil.disableAllInput();
         var sendData = createSendData();
@@ -63,9 +67,7 @@
         $.ajax( {
           type: "POST",
           url: monacaApi.getBaseUrl() + "/" + window.LANG + "/support/education_inquiry_io",
-          xhrFields: {
-            withCredentials: true
-          },
+          xhrFields: { withCredentials: true },
           data: sendData,
           dataType: "json",
           success: function(msg) {
@@ -140,9 +142,10 @@
 
       if (question_type) {
         if (question_type === LICENSE_PURCHASE) {
-          $('#license-type-radio :radio:checked').each(function(){
-            sendData['inquiry[license]'] = $(this).val();
-          });
+          sendData['inquiry[license]'] = $('input[name="inquiry[license]"]:checked').val();
+          sendData['inquiry[license_period_type]'] = $('input[name="inquiry[license_period_type]"]:checked').val();
+          sendData['inquiry[license_number]'] = $('input[name="inquiry[license_number]"]').val();
+          sendData['inquiry[license_term]'] = $('input[name="inquiry[license_term]"]').val();
         } else if (question_type === BOOK_PURCHASE) {
           sendData['inquiry[book]'] = $('#book').val();
           sendData['inquiry[book_number]'] = $('#book-number').val();

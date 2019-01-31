@@ -8,123 +8,129 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
 
 <section id="support-inquiry" class="subpage">
   <div class="container">
-  <h1>お問い合わせ</h1>
+    <h1>お問い合わせ</h1>
 
-  <div id="content">
-    <form class="feedback-form" id="contactForm">
+    <div id="content">
+      <form class="feedback-form" id="contactForm">
 
-    <p>下のフォームにて検索キーワード(例:'Android Build', 'Monaca CLI')を入力し、お問い合わせに関する内容をMonacaドキュメントから探すことができます。解決しない場合は、以下のフォームをご記入ください。 </p>
-    <div class="aside-search" id="aside-search" style="padding-top: 10px; padding-bottom: 20px;">
-      <input type="search" id="inquiry-search-doc" placeholder="キーワード"><br />
-    </div>
-    
-    <div class="feedback-item feedback-item-radio">
-      <h2>お問い合わせの種類：</h2>
-      <ul id="question-type-radio"></ul>
-      <p class="form-error" id="question-type-error"></p>
-    </div>
+        <div class="feedback-item feedback-item-radio">
+          <h2>お問い合わせの種類：</h2>
+          <ul id="question-type-radio"></ul>
+          <p class="form-error" id="question-type-error"></p>
+        </div>
 
-    <div id="license_purchase_detail" class="feedback-item feedback-item-radio">
-      <h2>Please specify licenses you want to purchase:</h2>
-      <ul id="license-type-radio"></ul>
-      <p class="form-error" id="license-error"></p>
-    </div>
+        <div id="license_purchase_detail" class="feedback-item feedback-item-radio" style="padding-top:0;">
+          <h2>ご購入ライセンス：</h2>
 
-    <div id="book_purchase_detail" class="feedback-item">
-      <h2>Please specify books you want to purchase:</h2>
-      <table>
-        <tr>
-          <td class="label">書類の種別<span class="required">*</span></td>
-          <td class="form-item">
-            <select name="inquiry[book]" id="book"></select>
-            <p class="form-error" id="book-error"></p>
-          </td>
-        </tr>
-        <tr>
-          <td class="label">
-          冊数<span class="required">*</span>
-          </td>
-          <td>
-            <input type="number" name="inquiry[book_number]" id="book-number" class="book-number" min="1" max="999999" />
-            <p class="form-error" id="book-number-error"></p>
-          </td>
-        </tr>
-      </table>
-    </div>
+          <table>
+            <tr>
+              <td class="label">ライセンス種別<span class="required">*</span></td>
+              <td>
+                <ul id="license-type-radio"></ul>
+                <p class="form-error" id="license-error"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">ライセンス数<span class="required">*</span></td>
+              <td>
+                <input type="number" name="inquiry[license_number]" id="license_number" class="license_number" min="1"
+                  max="999999" />
+                <p class="form-error" id="license-number-error"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">月額/年額<span class="required">*</span></td>
+              <td>
+                <input type="radio" name="inquiry[license_period_type]" value="monthly" style="margein:0;" checked>月額
+                <input type="radio" name="inquiry[license_period_type]" value="yearly">年額
+              </td>
+            </tr>
+            <tr>
+              <td class="label">ライセンス期間<span class="required">*</span></td>
+              <td>
+                <input style="width:60px; text-align:right;" type="number" name="inquiry[license_term]" id="license_term"
+                  class="license_number" min="1" max="999999" />
+                <span id="licence-term-unit">ヶ月</span>
+                <p class="form-error" id="license-term-error"></p>
+              </td>
+            </tr>
+          </table>
+        </div>
 
-    <div id="inquiry_detail" class="feedback-item feedback-text">
-      <h2> Please enter your request in detail</h2>
-      <table>
-        <tr>
-          <td class="label">内容<span class="required">*</span></td>
-          <td>
-            <p class="message-description">お問い合わせ内容を詳細に記述してください。不具合等の報告、技術的な質問は <a id="link_technical_to" href='/support/technical/'>こちらから</a>お問い合わせください。</p>
-            <textarea rows="4" cols="30" name="inquiry[message]" id="message" placeholder="ここに内容を記入してください"></textarea>
-            <p class="form-error" id="message-error"></p>
-          </td>
-        </tr>
-      </table>
-    </div>
+        <div id="book_purchase_detail" class="feedback-item">
+          <h2>ご購入書籍：</h2>
+          <table>
+            <tr>
+              <td class="label">書類の種別<span class="required">*</span></td>
+              <td class="form-item">
+                <select name="inquiry[book]" id="book"></select>
+                <p class="form-error" id="book-error"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">
+                冊数<span class="required">*</span>
+              </td>
+              <td>
+                <input type="number" name="inquiry[book_number]" id="book-number" class="book-number" min="1" max="999999">
+                <p class="form-error" id="book-number-error"></p>
+              </td>
+            </tr>
+          </table>
+        </div>
 
-    <div class="feedback-item">
-      <h2>お客様情報：</h2>
-      <table>
-      <tr>
-        <td class="label">
-        お名前<span class="required">*</span>
-        </td>
-        <td>
-        <input type="text" name="inquiry[name]" id="name" class="name" />
-        <p class="form-error" id="name-error"></p>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">
-        学校名<span class="required">*</span>
-        </td>
-        <td>
-        <input type="text" name="inquiry[school]" id="school" class="school" />
-        <p class="form-error" id="school-error"></p>
-        </td>
-      </tr>
-      <tr>
-        <td class="label">
-        メールアドレス<span class="required">*</span>
-        </td>
-        <td>
-        <input type="text" name="inquiry[email]" id="email" class="email" />
-        <p class="form-error" id="email-error"></p>
-        </td>
-      </tr>
-      </table>
-    </div>
+        <div id="inquiry_detail" class="feedback-item feedback-text">
+          <h2>お問合せ内容：</h2>
+          <table>
+            <tr>
+              <td class="label">内容<span class="required">*</span></td>
+              <td>
+                <p class="message-description">お問い合わせ内容を詳細に記述してください。不具合等の報告、技術的な質問は <a id="link_technical_to" href='/support/technical/'>こちらから</a>お問い合わせください。</p>
+                <textarea rows="4" cols="30" name="inquiry[message]" id="message" placeholder="ここに内容を記入してください"></textarea>
+                <p class="form-error" id="message-error"></p>
+              </td>
+            </tr>
+          </table>
+        </div>
 
-    <div class="form-footer">
-      <input id="send" name="submit" class="btn-blue submit-btn" type="button" value="送信する"/>
+        <div class="feedback-item">
+          <h2>お客様情報：</h2>
+          <table>
+            <tr>
+              <td class="label">
+                お名前<span class="required">*</span>
+              </td>
+              <td>
+                <input type="text" name="inquiry[name]" id="name" class="name" />
+                <p class="form-error" id="name-error"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">
+                学校名 / 組織名<span class="required">*</span>
+              </td>
+              <td>
+                <input type="text" name="inquiry[school]" id="school" class="school" />
+                <p class="form-error" id="school-error"></p>
+              </td>
+            </tr>
+            <tr>
+              <td class="label">
+                メールアドレス<span class="required">*</span>
+              </td>
+              <td>
+                <input type="text" name="inquiry[email]" id="email" class="email" />
+                <p class="form-error" id="email-error"></p>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="form-footer">
+          <input id="send" name="submit" class="btn-blue submit-btn" type="button" value="送信する" />
+        </div>
+      </form>
     </div>
-    </form>
-  </div>
 
   </div>
 </section>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script type="text/javascript">
-  {{#is language "ja"}}
-    docsearch({
-    apiKey: 'cb8771194cfef15ef3d6578f488656b7',
-    indexName: 'monaca',
-    inputSelector: '#inquiry-search-doc',
-    algoliaOptions: { 'facetFilters': ["language:ja"] },
-    debug: false // Set debug to true if you want to inspect the dropdown
-  });
-  {{else}}
-    docsearch({
-    apiKey: 'cb8771194cfef15ef3d6578f488656b7',
-    indexName: 'monaca',
-    inputSelector: '#inquiry-search-doc',
-    algoliaOptions: { 'facetFilters': ["language:en"] },
-    debug: false // Set debug to true if you want to inspect the dropdown
-  });
-  {{/is}}
-</script>
