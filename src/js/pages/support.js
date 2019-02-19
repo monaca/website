@@ -146,9 +146,11 @@
           sendData['inquiry[license_period_type]'] = $('input[name="inquiry[license_period_type]"]:checked').val();
           sendData['inquiry[license_number]'] = $('input[name="inquiry[license_number]"]').val();
           sendData['inquiry[license_term]'] = $('input[name="inquiry[license_term]"]').val();
+          sendData['inquiry[license_purchase_message]'] = $('#license_purchase_message').val();
         } else if (question_type === BOOK_PURCHASE) {
           sendData['inquiry[book]'] = $('#book').val();
           sendData['inquiry[book_number]'] = $('#book-number').val();
+          sendData['inquiry[book_purchase_message]'] = $('#book_purchase_message').val();
         } else if (question_type === INQUIRY) {
           sendData['inquiry[message]'] = $('#message').val();
         }
