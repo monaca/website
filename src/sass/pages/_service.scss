@@ -997,6 +997,12 @@ body.service {
             }
           }
         }
+        .feedback-form-email-notice {
+          float: left;
+          color: #333;
+          font-size: 11px;
+          padding-top: 5px;
+        }
         input[type="text"] {
           box-sizing: border-box;
           width: 540px;
