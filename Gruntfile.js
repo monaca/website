@@ -562,31 +562,31 @@ module.exports = function (grunt) {
     function injectManifest() {
         return new Promise(function (resolve, reject) {
             workboxBuild.injectManifest({
-                maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
-                globDirectory: 'dist/en/',
-                globPatterns: precachedFiles,
-                swDest: 'dist/en/sw.js',
-                swSrc: 'dist/en/sw-src.js'
-            })
-            .then(function (result) {
-                if (result) console.log('Precache Files:', result);
-                resolve(result);
-            })
-            .catch(function (err) {
-                reject(err);
-            });
+                    maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+                    globDirectory: 'dist/en/',
+                    globPatterns: precachedFiles,
+                    swDest: 'dist/en/sw.js',
+                    swSrc: 'dist/en/sw-src.js'
+                })
+                .then(function (result) {
+                    if (result) console.log('Precache Files:', result);
+                    resolve(result);
+                })
+                .catch(function (err) {
+                    reject(err);
+                });
         });
     };
 
-    grunt.registerTask('buildSw', function() {
+    grunt.registerTask('buildSw', function () {
         var done = this.async();
         injectManifest()
-        .then(function () {
-          done();
-        })
-        .catch(function (err) {
-            console.log(err);
-        });
+            .then(function () {
+                done();
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
     });
 
     grunt.registerTask('server', [
