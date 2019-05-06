@@ -740,7 +740,7 @@ body.appkit {
 
   .tab-main {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     padding: 40px 20px;
 
     @include mq(small) {
@@ -757,7 +757,7 @@ body.appkit {
       align-items: flex-start;
       text-align: left;
       width: 65%;
-      padding: 0 50px 0 0;
+      padding: 30px 50px 0 0;
 
       @include mq(small) {
         width: 100%;
