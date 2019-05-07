@@ -815,6 +815,10 @@ body.appkit {
       max-width: 440px;
       padding: 20px;
 
+      td {
+        padding: 3px 15px;
+      }
+      
       @include mq(small) {
         width: 100%;
       }
