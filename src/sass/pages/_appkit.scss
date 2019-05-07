@@ -61,9 +61,11 @@ body.appkit {
       @include wrapper($maxWidth: 1366px);
       height: 640px;
       display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 100px 1fr;
       grid-template-areas: "logo image"  "content image";
       @include mq(medium) {
-        height: 445px;
+        height: 470px;
         grid-template-columns: 1fr;
         grid-template-areas: "logo"  "content";
       }
@@ -175,30 +177,30 @@ body.appkit {
 
     &__image-wrapper {
       position: relative;
-      margin-bottom: -210px;
+      margin-bottom: -35px;
 
       @include mq(medium) {
         left: 40px;
-        top: 150px;
+        top: 110px;
       }
 
 
       > img {
-        height: 720px;
+        // height: 720px;
         @include mq(medium) {
-          height: 600px;
+          // height: 600px;
         }
 
-        &:first-of-type {
-          z-index: 1;
-          position: relative;
-        }
+        // &:first-of-type {
+        //   z-index: 1;
+        //   position: relative;
+        // }
 
-        &:last-of-type {
-          position: absolute;
-          left: 180px;
-          bottom: -38px;
-        }
+        // &:last-of-type {
+        //   position: absolute;
+        //   left: 180px;
+        //   bottom: -38px;
+        // }
       }
     }
   }
