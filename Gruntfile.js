@@ -26,7 +26,7 @@ module.exports = function (grunt) {
         '**/css/bootstrap-theme.min.css',
         '**/css/bootstrap.min.css',
         '**/css/codemirror.css',
-        '**/css/style.css',
+        // '**/css/style.css',
         '**/js/all.js',
         '**/js/bootstrap.min.js',
         '**/js/jquery.min.js'
