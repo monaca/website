@@ -818,7 +818,7 @@ body.appkit {
       td {
         padding: 3px 15px;
       }
-      
+
       @include mq(small) {
         width: 100%;
       }
@@ -918,6 +918,11 @@ body.appkit {
     color: #fff;
     padding: 10px 15px;
     
+    > a {
+      text-decoration: none;
+      color: #fff;
+    }
+
     &:hover {
       background: #ea5600;
     }
