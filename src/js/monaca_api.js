@@ -62,9 +62,11 @@
     if (status.isLogin) {
       $(".navbar-nav .before-login").remove();
       this.loadLoginData();
+      this.showcaseAddEnable(true);
     } else {
       $(".navbar-nav .after-login").remove();
       loginData.setReady();
+      this.showcaseAddEnable(false);
     }
   };
   
@@ -266,6 +268,16 @@
         vars[hash[0]] = hash[1];
     }
     return vars;
+  };
+
+  monacaApi.showcaseAddEnable = function(enable) {
+    var inputs = $('section#case_add input');
+
+    if (enable) {
+      inputs.removeAttr('disabled');
+    } else {
+      inputs.attr('disabled', 'disabled');
+    }        
   };
 
   window.monacaApi = monacaApi;
