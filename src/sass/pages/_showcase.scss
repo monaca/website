@@ -6915,9 +6915,11 @@ body.showcase.showcase {
                             font-size: 11px;
                             line-height: 1.4;
                             padding: 0 0 25px;
-                            .btn-black {
+                            .btn-black, .btn-orange {
                                 line-height: 2px;
                                 padding: 20px 14px;
+                                margin-right: 20px;
+                                font-weight: 700;
                             }
                             input.wide {
                                 width: 85%;

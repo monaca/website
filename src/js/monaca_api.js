@@ -62,9 +62,11 @@
     if (status.isLogin) {
       $(".navbar-nav .before-login").remove();
       this.loadLoginData();
+      this.showcaseAddEnable(true);
     } else {
       $(".navbar-nav .after-login").remove();
       loginData.setReady();
+      this.showcaseAddEnable(false);
     }
   };
   
@@ -143,7 +145,7 @@
       location.href = MONACA_GITHUB_OAUTH_URL;
     });
 
-    $('#show_loginpopup').click(function() {
+    $('#show_loginpopup, .show_loginpopup').click(function() {
       if (isSafari()) {
         location.href=window.MONACA_API_URL + "/" + window.LANG + "/login";
         return;
@@ -266,6 +268,19 @@
         vars[hash[0]] = hash[1];
     }
     return vars;
+  };
+
+  monacaApi.showcaseAddEnable = function(enable) {
+    var inputs = $('section#case_add input:not(#login-required)');
+    var loginRequiredButton = $('section#case_add input#login-required');
+
+    if (enable) {
+      inputs.removeAttr('disabled');
+      loginRequiredButton.hide();
+    } else {
+      inputs.attr('disabled', 'disabled');      
+      loginRequiredButton.show();
+    }
   };
 
   window.monacaApi = monacaApi;
