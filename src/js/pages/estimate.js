@@ -23,7 +23,7 @@
       // post estimate API
       $.ajax({
         type: 'POST',
-        url: 'https://www.asial.co.jp/api/estimate.php',
+        url: 'https://shop.asial.co.jp/api/estimate.php',
         dataType: 'json',
         data: data,
         success: function (data) {
