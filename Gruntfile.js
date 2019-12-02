@@ -19,6 +19,7 @@ module.exports = function (grunt) {
 
     require('time-grunt')(grunt);
     require('load-grunt-tasks')(grunt);
+    const sass = require('node-sass');
 
     var isWindows = /^win/.test(process.platform);
     var workboxBuild = require('workbox-build');
@@ -55,6 +56,7 @@ module.exports = function (grunt) {
 
         sass: {
             options: {
+                implementation: sass,
                 outputStyle: "compressed",
                 sourceMap: true,
                 includePaths: require('node-bourbon').includePaths
