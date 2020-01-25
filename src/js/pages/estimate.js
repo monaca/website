@@ -6,8 +6,7 @@
     $('.form-error-detail').hide();
 
 
-    $('#send_feedback').on('click', function () {
-
+    $('#send_feedback').on('click', function (event) {
       // disable submit button
       $('#send_feedback').prop('disabled', true);
 
@@ -16,9 +15,17 @@
       $('#content input[type=text],textarea').each(function (index, el) {
         data[$(el).attr('name')] = $(el).val();
       });
+      
+      $('.form-error').hide(); // hide old errors
 
-      // hide old errors
-      $('.form-error').hide();
+      var regexp = /^(?=.*@(gmail|yahoo|icloud)).+$/; //stop free mail domain
+      if (regexp.test($('input[name="email"]').val())) {
+        $('#content input[name="email"] ~ p.form-error')
+        .html("独自ドメインメールをご入力ください。").show();
+
+        $('#send_feedback').prop('disabled', false);
+        return;
+      }
 
       // post estimate API
       $.ajax({
@@ -44,7 +51,6 @@
 
             // enable submit button
             $('#send_feedback').prop('disabled', false);
-
             return;
           }
 
