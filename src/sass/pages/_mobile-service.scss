@@ -1,0 +1,126 @@
+
+$black: black;
+@mixin two_columns{grid-template-columns: 40% 0%;}
+@mixin center{
+    margin-left: 16%;
+}
+
+p{color: $black;}
+
+button{
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+}
+
+header{
+    position: fixed;
+}
+
+.keyvisual-mob-serv{
+    display: grid;
+    background-color: #47A3E6;
+    padding-bottom: 9%;
+
+    p, h2{color: white;}
+    h2{
+        font-size: 36px;
+        font-weight: bold;
+    }
+    .wrap{
+        @include two_columns;
+        @include center;
+        display: grid;
+        margin-top: 2%;
+
+        .left{
+            width: 480px;
+            text-align: initial;
+            margin-top: 15%;
+
+            button{
+                background: transparent;
+                color: white;
+                border: white solid 1px;
+                margin-top: 6%;
+                padding: 1% 3% 1% 3%;
+                border-radius: 3px;
+                font-size: 15px;
+                font-weight: bold;
+            }
+
+        }
+        .right{
+            width: 480px;
+        }
+    }
+
+    .characteristics{
+        color: white;
+        .title{
+            font-weight: bold;
+            border-bottom: solid #ffffff85 1px;
+            text-align: start;
+            width: 69%;
+            @include center;
+            margin-bottom: 1%;
+        }
+
+        .content{
+            @include center;
+            display: grid;
+            grid-template-columns: 29% 29% 29%;
+
+            div{
+                text-align: start;
+                font-size: 20px;
+                color: #ffffffbd;
+                p{color: #ffffffbd;}
+            }
+        }
+    }
+}
+
+.showcase{
+    background-color: #2C6EA8;
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+
+    a{
+        text-decoration: inherit; /* no underline */
+        cursor: pointer;
+        color: #0054AC;
+    }
+
+    .showcase_content{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .phone{
+        width: 55%;
+    }
+
+    .arrow{
+        width: 6%;
+    }
+
+}
+
+.reasons{
+    background-color: #E8EBED;
+    .card{
+        border: #0F192A solid 2px;
+        padding: 5%;
+        margin-bottom: 2%;
+        background-color: white;
+    }
+}
+
+.phase_content{
+}
+
