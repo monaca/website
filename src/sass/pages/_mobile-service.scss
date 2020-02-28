@@ -1,3 +1,7 @@
+@mixin showcase_grid{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
 
 $black: black;
 
@@ -102,22 +106,36 @@ header{
     }
 
     .showcase_content{
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
         width: 68%;
         margin: auto;
+        font-weight: bold;
     }
 
-    .tablet{
+    .top_text, .images, .bottom_links{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .bottom_links{
+        p{color: #0054AC}
+
+    }
+
+    .top_text{
         .start, .end, #last_link{
             color: rgba(255, 255, 255, 0.71);
         }
+
         .middle{
             color: white;
+            font-size: 4em;
+            font-weight: lighter;
         }
     }
     .phone{
-        width: 55%;
+        width: 76%;
+        margin: auto;
+        margin-top: 21%;
     }
 
 
