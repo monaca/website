@@ -1,9 +1,5 @@
 
 $black: black;
-@mixin two_columns{grid-template-columns: 40% 0%;}
-@mixin center{
-    margin-left: 16%;
-}
 
 p{color: $black;}
 
@@ -30,16 +26,21 @@ header{
         font-size: 36px;
         font-weight: bold;
     }
+
     .wrap{
-        @include two_columns;
-        @include center;
-        display: grid;
+        width: 77%;
+        margin: auto;
+        text-align: center;
+    }
+    .wrap_keuvisual{
         margin-top: 2%;
+        display: flex;
+        margin-left: 8%;
 
         .left{
             width: 480px;
             text-align: initial;
-            margin-top: 15%;
+            margin-top: 6%;
 
             button{
                 background: transparent;
@@ -54,35 +55,35 @@ header{
 
         }
         .right{
-            width: 480px;
+            width: 43.8%;
         }
     }
 
     .characteristics{
         color: white;
+        margin-left: 8%;
         .title{
             font-weight: bold;
             border-bottom: solid #ffffff85 1px;
             text-align: start;
-            width: 69%;
-            @include center;
+            width: 90%;
             margin-bottom: 1%;
         }
 
         .content{
-            @include center;
             display: grid;
-            grid-template-columns: 29% 29% 29%;
-
-            div{
-                text-align: start;
-                font-size: 20px;
-                color: #ffffffbd;
-                p{color: #ffffffbd;}
-            }
+            grid-template-columns: 32% 31% 27%;
         }
+        div{
+            text-align: start;
+            font-size: 20px;
+            color: #ffffffbd;
+            p{color: #ffffffbd;}
+        }
+
     }
 }
+
 
 .showcase{
     background-color: #2C6EA8;
@@ -96,18 +97,29 @@ header{
         color: #0054AC;
     }
 
+    .arrow{
+        width: 6%;
+    }
+
     .showcase_content{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
+        width: 68%;
+        margin: auto;
     }
 
+    .tablet{
+        .start, .end, #last_link{
+            color: rgba(255, 255, 255, 0.71);
+        }
+        .middle{
+            color: white;
+        }
+    }
     .phone{
         width: 55%;
     }
 
-    .arrow{
-        width: 6%;
-    }
 
 }
 
