@@ -3,6 +3,8 @@
     grid-template-columns: 25% 25% 25% 25%;
 }
 
+@mixin font_family{ font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif; }
+
 $black: black;
 
 p{color: $black;}
@@ -20,13 +22,32 @@ header{
     position: fixed;
 }
 
+h2{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: start;
+    margin-left: 8%;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 1%;
+    font-family: 'Heebo', sans-serif;
+}
+
+.keyvisual-mob-serv, .showcase, .reasons, .phase_content{
+    @include font_family;
+}
+
 .keyvisual-mob-serv{
+    position: relative;
+    overflow: hidden;
     display: grid;
-    background-color: #47A3E6;
     padding-bottom: 9%;
 
-    p, h2{color: white;}
-    h2{
+    p, h1{color: white;}
+    h1{
         font-size: 36px;
         font-weight: bold;
     }
@@ -36,6 +57,7 @@ header{
         margin: auto;
         text-align: center;
     }
+
     .wrap_keuvisual{
         margin-top: 2%;
         display: flex;
@@ -73,7 +95,6 @@ header{
             width: 90%;
             margin-bottom: 1%;
         }
-
         .content{
             display: grid;
             grid-template-columns: 32% 31% 27%;
@@ -88,12 +109,25 @@ header{
     }
 }
 
+.keyvisual-mob-serv::before{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    bottom: 17%;
+    left: -50%;
+    z-index: -1;
+    background: #47A3E6 0 0 repeat;
+    transform: rotate(-5deg);
+}
 
 .showcase{
-    background-color: #2C6EA8;
     color: white;
-    padding-top: 5%;
+    padding-top: 15%;
     padding-bottom: 5%;
+    position: relative;
+    margin-top: -16%;
+    z-index: -2;
 
     a{
         text-decoration: inherit; /* no underline */
@@ -141,16 +175,90 @@ header{
 
 }
 
+.showcase::before{
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 35%;
+    bottom: 52%;
+    left: -5%;
+    z-index: -1;
+    background: #2C6EA8 0 0 repeat;
+    transform: rotate(-5deg);
+}
+
 .reasons{
     background-color: #E8EBED;
+
+    .reasons_content{
+        padding-top: 4%;
+        padding-bottom: 4%;
+        text-align: center;
+        margin: auto;
+        width: 80%;
+    }
+
+    .card_wrap{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        margin-top: 3%;
+        margin-left: 8%;
+    }
+
     .card{
-        border: #0F192A solid 2px;
-        padding: 5%;
+        border: #0f192a1c solid 2px;
+        padding: 7%;
         margin-bottom: 2%;
         background-color: white;
+        width: 91%;
+        height: auto;
+        text-align: start;
+
+        .num{
+            color: #47A3E6;
+            font-size: 80px;
+            font-weight: normal;
+        }
+
+        h3{ height: 18% }
+
+        .desc{
+            font-size: 16px;
+            color: #6F777F;
+        }
     }
 }
 
-.phase_content{
+.phases{
+    .phases_wrap{
+        padding-top: 4%;
+        padding-bottom: 4%;
+        text-align: center;
+        margin: auto;
+        width: 80%;
+
+        .content{
+            margin-left: 8%;
+            .stage{
+                display: grid;
+                grid-template-columns: 25% 63%;
+                text-align: start;
+                margin-top: 3%;
+
+                .banner{
+                    img{ width: 65%; }
+                }
+
+                .side_info{
+                    display: grid;
+                    h3{ border-bottom: #C8CACC solid 1px; }
+                }
+            }
+        }
+    }
+}
+
+.training{
+
 }
 
