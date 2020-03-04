@@ -5,6 +5,11 @@
 
 @mixin font_family{ font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif; }
 
+@mixin gray_p{
+    font-size: 16px;
+    color: #6f777f;
+}
+
 $black: black;
 
 p{color: $black;}
@@ -30,6 +35,7 @@ h2{
 }
 
 h3{
+    text-align: start;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 1%;
@@ -126,6 +132,7 @@ h3{
     padding-top: 15%;
     padding-bottom: 5%;
     position: relative;
+    overflow: hidden;
     margin-top: -16%;
     z-index: -2;
 
@@ -145,9 +152,37 @@ h3{
         font-weight: bold;
     }
 
+
+
     .top_text, .images, .bottom_links{
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
+    }
+
+    .top_text{
+        grid-template-columns: 30% 47% 23%;
+    }
+
+
+
+    .first, .second{
+        display: flex;
+    }
+
+    .start{
+        width: 40%;
+        font-size: 15px;
+    }
+
+    .middle{
+        font-size: 6em;
+        font-weight: lighter;
+    }
+
+    .end{
+        font-size: 25px;
+        margin-top: 15%;
+        margin-left: 1%;
     }
 
     .bottom_links{
@@ -166,10 +201,19 @@ h3{
             font-weight: lighter;
         }
     }
+    .images{margin-top: -10%;}
+    .tablet{
+        max-width: none;
+        width: 125%;
+    }
     .phone{
         width: 76%;
         margin: auto;
         margin-top: 21%;
+
+        #phone1{margin-left: 19%;}
+
+        #phone2{margin-left: 10%;}
     }
 
 
@@ -179,8 +223,8 @@ h3{
     content: "";
     position: absolute;
     width: 130%;
-    height: 35%;
-    bottom: 52%;
+    height: 40%;
+    bottom: 45%;
     left: -5%;
     z-index: -1;
     background: #2C6EA8 0 0 repeat;
@@ -188,7 +232,9 @@ h3{
 }
 
 .reasons{
-    background-color: #E8EBED;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10%;
 
     .reasons_content{
         padding-top: 4%;
@@ -203,33 +249,50 @@ h3{
         grid-template-columns: 33% 33% 33%;
         margin-top: 3%;
         margin-left: 8%;
+
+        .card{
+            border: #0f192a1c solid 2px;
+            padding: 7%;
+            padding-bottom: 15%;
+            background-color: white;
+            width: 91%;
+            height: auto;
+            text-align: start;
+            //margin-bottom: 0%;
+            border-radius: 5px;
+            -moz-box-shadow: 3px 3px 5px 6px #ccc;
+            -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+            box-shadow: 0px 3px 10px 0px #ccc;
+
+            .num{
+                color: #47A3E6;
+                font-size: 80px;
+                font-weight: normal;
+            }
+
+            h3{ height: 55px;}
+
+            .desc{ @include gray_p; }
+        }
     }
 
-    .card{
-        border: #0f192a1c solid 2px;
-        padding: 7%;
-        margin-bottom: 2%;
-        background-color: white;
-        width: 91%;
-        height: auto;
-        text-align: start;
 
-        .num{
-            color: #47A3E6;
-            font-size: 80px;
-            font-weight: normal;
-        }
+}
 
-        h3{ height: 18% }
-
-        .desc{
-            font-size: 16px;
-            color: #6F777F;
-        }
-    }
+.reasons::before{
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 45%;
+    bottom: 22%;
+    left: -5%;
+    z-index: -1;
+    background: #E8EBED 0 0 repeat;
+    transform: rotate(-4deg);
 }
 
 .phases{
+    margin-top: -7%;
     .phases_wrap{
         padding-top: 4%;
         padding-bottom: 4%;
@@ -238,20 +301,55 @@ h3{
         width: 80%;
 
         .content{
-            margin-left: 8%;
+            margin-left: 13%;
+            margin-top: 3%;
+            width: 84%;
+
             .stage{
                 display: grid;
-                grid-template-columns: 25% 63%;
+                grid-template-columns: 14% 86%;
+                margin-bottom: -4px;
                 text-align: start;
-                margin-top: 3%;
 
                 .banner{
-                    img{ width: 65%; }
+                    position: relative;
+                    .title{
+                        position: absolute;
+                        top: 3%;
+                        left: 7%;
+                        text-align: center;
+                        width: 85%;
+                    }
+
+                    .phase_num{
+                        font-size: 41px;
+                        margin-block-end: unset;
+                        margin-top: -8%;
+                    }
+
+                    .caption{
+                        font-size: 16px;
+                        font-weight: bold;
+                    }
+
+                    p{
+                        margin-block-end: unset;
+                        color: white;
+                    }
                 }
 
                 .side_info{
                     display: grid;
-                    h3{ border-bottom: #C8CACC solid 1px; }
+                    h3{
+                        border-bottom: #C8CACC solid 1px;
+                        padding-left: 10%;
+                        padding-bottom: 5px;
+                    }
+                    p{
+                        padding-left: 10%;
+                        margin-block-end: unset;
+                        @include gray_p;
+                    }
                 }
             }
         }
@@ -259,6 +357,121 @@ h3{
 }
 
 .training{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10%;
 
+    .training_wrap{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        .wrap_left{
+            margin-top: 12%;
+            h2{margin-left: 16%;}
+
+            .card_info{
+                margin-top: 8%;
+                margin-left: 15%;
+                background: white;
+                text-align: start;
+                padding: 5%;
+                width: 80%;
+                -moz-box-shadow: 3px 3px 5px 6px #ccc;
+                -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+                box-shadow: 0px 3px 10px 0px #ccc;
+
+                ul{margin-top: 4%;}
+                li{margin-top: 5px;}
+            }
+
+
+        }
+    }
 }
+
+.training::before{
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 56%;
+    bottom: 30%;
+    left: -5%;
+    z-index: -1;
+    background: #E8EBED 0 0 repeat;
+    transform: rotate(-4deg);
+}
+
+.service{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 18%;
+
+    .service_wrap{
+        width: 80%;
+        margin: auto;
+        //background: #0a001f;
+
+        h2{
+            text-align: center;
+            margin-left: 0;
+            margin-bottom: 3%;
+        }
+        #subtitle{
+            text-align: center;
+            margin-bottom: 4%;
+        }
+
+        .table{
+            display: grid;
+            grid-template-columns: 18% 18% 18% 18% 18%;
+            margin-left: 6%;
+
+            .table_item{
+                background: white;
+                padding: 10%;
+                padding-bottom: 25%;
+                width: 95%;
+                -moz-box-shadow: 3px 3px 5px 6px #ccc;
+                -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+                box-shadow: 0px 3px 10px 0px #ccc;
+
+                img{
+                    width: 70%;
+                    margin-top: 5%;
+                }
+
+                h3{
+                    width: 95%;
+                    margin: auto;
+                    margin-top: -10%;
+                    text-align: center;
+                    font-weight: normal;
+                }
+
+                .squares{
+                    width: 85%;
+                    margin: auto;
+                    margin-top: 15%;
+                    text-align: start;
+                    font-size: 16px;
+                    color: #6F777F;
+                }
+            }
+        }
+    }
+}
+.service::before{
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 46%;
+    bottom: 20%;
+    left: -5%;
+    z-index: -1;
+    background: #E8EBED 0 0 repeat;
+    transform: rotate(-4deg);
+}
+
 
