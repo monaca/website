@@ -3,7 +3,10 @@
     grid-template-columns: 25% 25% 25% 25%;
 }
 
-@mixin font_family{ font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif; }
+@mixin font_hiragino{ font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif; }
+
+@mixin font_nueve{ font-family: "Helvetica Neue"; font-weight: 200; }
+
 
 @mixin gray_p{
     font-size: 16px;
@@ -42,13 +45,18 @@ h3{
     font-family: 'Heebo', sans-serif;
 }
 
+.arrow{
+    width: 6%;
+}
+
 .keyvisual-mob-serv, .showcase, .reasons, .phase_content{
-    @include font_family;
+    @include font_hiragino;
 }
 
 .keyvisual-mob-serv{
     position: relative;
     overflow: hidden;
+    z-index: 0;
     display: grid;
     padding-bottom: 9%;
 
@@ -134,7 +142,7 @@ h3{
     position: relative;
     overflow: hidden;
     margin-top: -16%;
-    z-index: -2;
+    z-index: -1;
 
     a{
         text-decoration: inherit; /* no underline */
@@ -142,17 +150,11 @@ h3{
         color: #0054AC;
     }
 
-    .arrow{
-        width: 6%;
-    }
-
     .showcase_content{
         width: 68%;
         margin: auto;
         font-weight: bold;
     }
-
-
 
     .top_text, .images, .bottom_links{
         display: grid;
@@ -162,8 +164,6 @@ h3{
     .top_text{
         grid-template-columns: 30% 47% 23%;
     }
-
-
 
     .first, .second{
         display: flex;
@@ -198,7 +198,7 @@ h3{
         .middle{
             color: white;
             font-size: 4em;
-            font-weight: lighter;
+            @include font_nueve;
         }
     }
     .images{margin-top: -10%;}
@@ -215,8 +215,6 @@ h3{
 
         #phone2{margin-left: 10%;}
     }
-
-
 }
 
 .showcase::before{
@@ -268,6 +266,7 @@ h3{
                 color: #47A3E6;
                 font-size: 80px;
                 font-weight: normal;
+                @include font_nueve;
             }
 
             h3{ height: 55px;}
@@ -325,6 +324,7 @@ h3{
                         font-size: 41px;
                         margin-block-end: unset;
                         margin-top: -8%;
+                        @include font_nueve;
                     }
 
                     .caption{
@@ -381,9 +381,16 @@ h3{
                 -moz-box-shadow: 3px 3px 5px 6px #ccc;
                 -webkit-box-shadow: 3px 3px 5px 6px #ccc;
                 box-shadow: 0px 3px 10px 0px #ccc;
+                font-size: 16px;
+                color: #6F777F;
 
-                ul{margin-top: 4%;}
+                p{color: #6F777F;}
+
+                ul{
+                    margin-top: 4%;
+                }
                 li{margin-top: 5px;}
+                li:before{ content:"•"; font-size:20px; }
             }
 
 
@@ -406,7 +413,7 @@ h3{
 .service{
     position: relative;
     overflow: hidden;
-    padding-bottom: 18%;
+    padding-bottom: 15%;
 
     .service_wrap{
         width: 80%;
@@ -451,7 +458,9 @@ h3{
                 }
 
                 .squares{
-                    width: 85%;
+                    //width: 85%;
+                    width: 140px;
+                    height: 144px;
                     margin: auto;
                     margin-top: 15%;
                     text-align: start;
@@ -462,16 +471,240 @@ h3{
         }
     }
 }
+
 .service::before{
     content: "";
     position: absolute;
     width: 130%;
-    height: 46%;
-    bottom: 20%;
+    height: 47%;
+    bottom: 18%;
     left: -5%;
     z-index: -1;
     background: #E8EBED 0 0 repeat;
     transform: rotate(-4deg);
 }
 
+.prices{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 15%;
+
+    .prices_wrap{
+        width: 80%;
+        margin: auto;
+    }
+
+    h2{
+        text-align: center;
+        margin: 0;
+        margin-bottom: 3%;
+    }
+    .prices_title{
+        text-align: start;
+        .title{padding-bottom: 6%;}
+    }
+
+    .prices_table, .prices_title{
+        display: grid;
+        grid-template-columns: 10% 22% 22% 22% 22%;
+        margin-left: 3%;
+
+        #price_categories{
+            width: 93%;
+            margin-top: 39px;
+            text-align: start;
+
+            .table_categories{
+                color: #6F777F;
+                border-top: #c3c2c282 solid 1.3px;
+                padding-top: 5%;
+                padding-bottom: 65%;
+                width: 95%;
+            }
+        }
+
+        .prices_table_item{
+            background: white;
+            margin-right: 10%;
+            border-radius: 5px;
+            -moz-box-shadow: 3px 3px 5px 6px #ccc;
+            -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+            box-shadow: 0px 3px 10px 0px #ccc;
+
+            .price_bold{
+                font-weight: bold;
+            }
+
+            .title{
+                text-align: start;
+            }
+
+            .content{
+                p{color: #6F777F;}
+            }
+
+            .table_categories{
+                border-top: solid gray 1px;
+                padding-top: 7%;
+            }
+
+            .header{
+                padding: 4%;
+                border-radius: 5px 5px 0 0;
+                background: #76BE60;
+                color: white;
+            }
+            #header_blue{ background: #47A3E6; }
+
+            .prices_row{
+                color: #6F777F;
+                padding: 10%;
+            }
+            #per_training{padding-top: 3%;}
+            #lectures{margin-top: 4%;}
+            #settlement{padding-top:3%;}
+            #scrum_price{ padding-bottom: 15%; padding-top: 13%; }
+            #license_3rd_row{padding-top: 65%;}
+            #third_row{border-bottom: solid #cecece82 1px; padding-bottom: 10%; padding-top: 10%;}
+            #fourth_row{padding-bottom: 0; margin-bottom: unset;}
+
+            .row_1, .row_2{ border-bottom: solid #cdcdcda3 1px; }
+
+            .row_1{ padding-bottom: 15%; }
+
+            .row_2{
+                padding-bottom: 20%;
+                padding-top: 20%;
+            }
+
+            .row_3{ padding-top: 50%; }
+        }
+
+
+    }
+
+
+}
+
+.prices::before{
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 38%;
+    bottom: 14%;
+    left: -5%;
+    z-index: -1;
+    background: #E8EBED 0 0 repeat;
+    transform: rotate(-4deg);
+}
+
+.showcase_logo{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 15%;
+
+    .showcase_logo_wrap{
+        color: #0a001f;
+        width: 80%;
+        margin: auto;
+
+        h2{margin-left: 0; text-align: center}
+
+        .logos{
+            color: #0a001f;
+            width: 88%;
+            margin: auto;
+
+            .link{
+                margin-bottom: 1%;
+                text-align: end;
+                color: #0054AC;
+                cursor: pointer;
+                font-weight: bold;
+
+                img{width: 1.5%;}
+            }
+            .logo_group{
+                margin: auto;
+                background: white;
+                display: grid;
+                grid-template-columns: 25% 25% 25% 25%;
+                padding: 5%;
+                padding-left: 2%;
+                padding-right: 2%;
+                -moz-box-shadow: 3px 3px 5px 6px #ccc;
+                -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+                box-shadow: 0px 3px 10px 0px #ccc;
+
+                img{
+                    width: 75%;
+                    padding: 15%;
+                    padding-bottom: 10%;
+                    margin: auto;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.showcase_logo::before{
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 40%;
+    bottom: 12%;
+    left: -5%;
+    z-index: -1;
+    background: #E8EBED 0 0 repeat;
+    transform: rotate(-4deg);
+}
+
+.inquiry{
+    width: 56%;
+    margin: auto;
+    margin-bottom: 10%;
+
+    h2{
+        margin-left: 0;
+        margin-bottom: 4%;
+    }
+
+    h3{
+        font-size: 20px;
+        color: #6F777F;
+        ont-weight: normal;
+        margin-bottom: 6%;
+    }
+
+    p{
+        font-size: 16px;
+        color: #444444;
+        margin-bottom: 1%;
+        margin-top: 3%;
+        text-align: start;
+    }
+
+    input, textarea{
+        width: 100%;
+        padding: 3%;
+        border: solid #B3B3B3 1px;
+        border-radius: 5px;
+    }
+
+    textarea{
+        height: 338px;
+        resize: none;
+    }
+
+    button{
+        width: 20%;
+        background: #468FFF;
+        padding: 2%;
+        margin-top: 5%;
+        border-radius: 3px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
 
