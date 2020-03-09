@@ -1,3 +1,23 @@
+//Media queries section
+
+@mixin for-phone-only {
+    @media (max-width: 360px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+}
+
+//Group similar attributes for html elements
+
 @mixin showcase_grid{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -7,6 +27,27 @@
 
 @mixin font_nueve{ font-family: "Helvetica Neue"; font-weight: 200; }
 
+@mixin margin-left-center{ margin-left: 8%;}
+
+@mixin phone-content-width{
+    width: 85%;
+}
+
+@mixin h1-titles{
+        font-size: 36px;
+        font-weight: bold;
+}
+
+@mixin h2-titles{
+        font-size: 30px;
+        font-weight: bold;
+}
+
+@mixin h3-titles{
+        font-size: 20px;
+        font-weight: bold;
+}
+
 
 @mixin gray_p{
     font-size: 16px;
@@ -14,6 +55,8 @@
 }
 
 $black: black;
+
+//CSS
 
 p{color: $black;}
 
@@ -26,21 +69,15 @@ button{
     cursor: pointer;
 }
 
-header{
-    position: fixed;
-}
-
 h2{
-    font-size: 30px;
-    font-weight: bold;
+    @include h2-titles;
+    @include margin-left-center;
     text-align: start;
-    margin-left: 8%;
 }
 
 h3{
     text-align: start;
-    font-size: 20px;
-    font-weight: bold;
+    @include h3-titles;
     margin-bottom: 1%;
     font-family: 'Heebo', sans-serif;
 }
@@ -53,36 +90,37 @@ h3{
     @include font_hiragino;
 }
 
-.keyvisual-mob-serv{
+.keyvisual-mob-serv {
+
     position: relative;
     overflow: hidden;
     z-index: 0;
     display: grid;
     padding-bottom: 9%;
 
-    p, h1{color: white;}
-    h1{
-        font-size: 36px;
-        font-weight: bold;
+    p, h1 {
+        color: white;
     }
 
-    .wrap{
+    @include h1-titles;
+
+    .wrap {
         width: 77%;
         margin: auto;
         text-align: center;
     }
 
-    .wrap_keuvisual{
+    .wrap_keyvisual {
         margin-top: 2%;
         display: flex;
-        margin-left: 8%;
+        @include margin-left-center;
 
-        .left{
-            width: 480px;
+        .left {
+            width: 50%;
             text-align: initial;
             margin-top: 6%;
 
-            button{
+            button {
                 background: transparent;
                 color: white;
                 border: white solid 1px;
@@ -94,33 +132,115 @@ h3{
             }
 
         }
-        .right{
+
+        .right {
             width: 43.8%;
         }
     }
 
-    .characteristics{
+    .characteristics {
         color: white;
-        margin-left: 8%;
-        .title{
+        @include margin-left-center;
+
+        .title {
             font-weight: bold;
-            border-bottom: solid #ffffff85 1px;
+            border-bottom: solid #ffffff40 1px;
             text-align: start;
             width: 90%;
             margin-bottom: 1%;
+            color: white;
         }
-        .content{
+
+        .content {
             display: grid;
             grid-template-columns: 32% 31% 27%;
         }
-        div{
+
+        div {
             text-align: start;
             font-size: 20px;
             color: #ffffffbd;
-            p{color: #ffffffbd;}
+
+            p {
+                color: #ffffffbd;
+            }
         }
 
     }
+
+    @include for-phone-only {
+        z-index: 1;
+        padding-bottom: 25%;
+
+        .wrap {
+            @include phone-content-width;
+            margin-top: 10%;
+
+            .wrap_keyvisual {
+                display: unset;
+                margin-top: 0;
+                margin-left: 0;
+
+                .left {
+                    text-align: center;
+                    width: 100%;
+                    margin-top: unset;
+
+                    h1 {
+                        font-size: 20px;
+                        line-height: 27px;
+                    }
+
+                    button {
+                        position: fixed;
+                        @include phone-content-width;
+                        background: #FA6800;
+                        border: unset;
+                        padding: 3% 4% 3% 4%;
+                        top: 89%;
+                        left: 8%;
+                    }
+                }
+
+                .right {
+                    width: 100%;
+                    margin-top: 10%;
+                    margin-bottom: 5%;
+                }
+            }
+
+            .characteristics {
+                margin-left: 0;
+
+                .title {
+                    text-align: center;
+                    padding-bottom: 2%;
+                    width: 100%;
+                    font-size: 14px;
+                }
+
+                .content {
+                    display: block;
+
+                    div {
+                        display: flex;
+                        font-size: 12px;
+                        border-bottom: solid #ffffff40 1px;
+                        padding-top: 3%;
+                        padding-bottom: 3%;
+                    }
+                }
+
+                div {
+                    br{
+                        display: none;
+                    }
+
+                }
+            }
+        }
+    }
+
 }
 
 .keyvisual-mob-serv::before{
@@ -133,6 +253,14 @@ h3{
     z-index: -1;
     background: #47A3E6 0 0 repeat;
     transform: rotate(-5deg);
+
+    @include for-phone-only{
+        width: 130%;
+        height: 130%;
+        bottom: 8%;
+        left: -15%;
+    }
+
 }
 
 .showcase{
@@ -142,7 +270,6 @@ h3{
     position: relative;
     overflow: hidden;
     margin-top: -16%;
-    z-index: -1;
 
     a{
         text-decoration: inherit; /* no underline */
@@ -154,6 +281,12 @@ h3{
         width: 68%;
         margin: auto;
         font-weight: bold;
+
+        @include h3-titles;
+
+        .mobile_showcase_title{
+            display: none;
+        }
     }
 
     .top_text, .images, .bottom_links{
@@ -174,11 +307,6 @@ h3{
         font-size: 15px;
     }
 
-    .middle{
-        font-size: 6em;
-        font-weight: lighter;
-    }
-
     .end{
         font-size: 25px;
         margin-top: 15%;
@@ -187,6 +315,7 @@ h3{
 
     .bottom_links{
         p{color: #0054AC}
+        cursor: pointer;
 
     }
 
@@ -195,17 +324,22 @@ h3{
             color: rgba(255, 255, 255, 0.71);
         }
 
+        #last_link{ cursor: pointer; }
+
         .middle{
             color: white;
-            font-size: 4em;
+            font-size: 6em;
             @include font_nueve;
         }
     }
+
     .images{margin-top: -10%;}
+
     .tablet{
         max-width: none;
         width: 125%;
     }
+
     .phone{
         width: 76%;
         margin: auto;
@@ -214,6 +348,59 @@ h3{
         #phone1{margin-left: 19%;}
 
         #phone2{margin-left: 10%;}
+    }
+
+    @include for-phone-only{
+
+        padding-top: 25%;
+        padding-bottom: 20%;
+        margin-top: -25%;
+
+        .showcase_content{
+            @include phone-content-width;
+
+            .mobile_showcase_title{
+                display: block;
+                margin-bottom: 10%;
+            }
+
+            .top_text{
+                grid-template-columns: 50% 80%;
+                width: 85%;
+
+                .start{
+                    width: 100%;
+                    text-align: start;
+                }
+
+                .middle{
+                    font-size: 40px;
+                    display: inline-block;
+                }
+
+                .end{
+                    display: inline-block;
+                    font-size: 20.4px;
+                    font-weight: 100;
+                }
+
+                .second{
+                    margin-left: 20%;
+                    .middle{
+                        margin-left: -18%;
+                    }
+                }
+
+                .fourth{
+                    display: none;
+                }
+            }
+
+            .images{ margin-top: -25% }
+
+            .bottom_links{ grid-template-columns: 100% 0 0 0; }
+        }
+
     }
 }
 
@@ -227,6 +414,12 @@ h3{
     z-index: -1;
     background: #2C6EA8 0 0 repeat;
     transform: rotate(-5deg);
+
+    @include for-phone-only{
+        height: 35%;
+        bottom: 67%;
+        left: -10%;
+    }
 }
 
 .reasons{
@@ -246,7 +439,7 @@ h3{
         display: grid;
         grid-template-columns: 33% 33% 33%;
         margin-top: 3%;
-        margin-left: 8%;
+        @include margin-left-center;
 
         .card{
             border: #0f192a1c solid 2px;
@@ -275,7 +468,41 @@ h3{
         }
     }
 
+    @include for-phone-only{
+        .reasons_content{
+            @include phone-content-width;
 
+            h2{
+                @include h3-titles;
+                margin: 0;
+                text-align: center;
+                padding: 5% 19% 5% 19%;
+            }
+
+            .card_wrap{
+                display: block;
+                margin-left: 0;
+
+                .card{
+                    width: 100%;
+                    padding: 5% 7% 5% 7%;
+                    margin-bottom: 8%;
+
+                    .num{ font-size: 60px; }
+
+                    h3{
+                        font-size: 16px;
+                        margin-bottom: -3%;
+                    }
+
+                    .desc{
+                        font-size: 14px;
+                        //width: 90%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .reasons::before{
@@ -288,6 +515,11 @@ h3{
     z-index: -1;
     background: #E8EBED 0 0 repeat;
     transform: rotate(-4deg);
+
+    @include for-phone-only{
+        height: 23%;
+        bottom: 3%;
+    }
 }
 
 .phases{
@@ -320,6 +552,8 @@ h3{
                         width: 85%;
                     }
 
+                    .mobile_banner{ display: none; }
+
                     .phase_num{
                         font-size: 41px;
                         margin-block-end: unset;
@@ -340,6 +574,7 @@ h3{
 
                 .side_info{
                     display: grid;
+                    .title_mobile{ display: none}
                     h3{
                         border-bottom: #C8CACC solid 1px;
                         padding-left: 10%;
@@ -352,6 +587,54 @@ h3{
                     }
                 }
             }
+        }
+    }
+
+    @include for-phone-only{
+
+        .phases_wrap{
+
+            @include phone-content-width;
+
+            h2{
+                @include h3-titles;
+                margin-top: 15%;
+                margin-bottom: 12%;
+            }
+
+            .content{
+                margin-left: 0;
+                width: 100%;
+
+                .stage{
+                    grid-template-columns: 4% 96%;
+
+                    .banner{
+                        .desktop_banner, .desktop_title{ display: none; }
+
+                        .mobile_banner{display: block; padding-bottom: 40%;}
+                    }
+
+                    .side_info{
+
+                        #phase_0{margin-bottom: -5%;
+                        }
+                        .mobile_title{ display: block; margin-bottom: 10%;}
+
+                        .mobile_title{ p{ font-size: 14px; color: #47A3E6; font-weight: bold; } }
+
+                        p{ padding-left: 6%; }
+
+                        h3{ padding-left: 5%; color: #444444;}
+
+
+                    }
+                }
+
+
+            }
+
+
         }
     }
 }
@@ -372,12 +655,12 @@ h3{
             h2{margin-left: 16%;}
 
             .card_info{
-                margin-top: 8%;
+                margin-top: 7%;
                 margin-left: 15%;
                 background: white;
                 text-align: start;
-                padding: 5%;
-                width: 80%;
+                padding: 6%;
+                width: 82%;
                 -moz-box-shadow: 3px 3px 5px 6px #ccc;
                 -webkit-box-shadow: 3px 3px 5px 6px #ccc;
                 box-shadow: 0px 3px 10px 0px #ccc;
@@ -389,8 +672,8 @@ h3{
                 ul{
                     margin-top: 4%;
                 }
-                li{margin-top: 5px;}
-                li:before{ content:"•"; font-size:20px; }
+                li{margin-top: 5px; margin-block-start: unset;}
+                li:before{ content:"•"; font-size:20px;}
             }
 
 
@@ -402,8 +685,8 @@ h3{
     content: "";
     position: absolute;
     width: 130%;
-    height: 56%;
-    bottom: 30%;
+    height: 59%;
+    bottom: 27%;
     left: -5%;
     z-index: -1;
     background: #E8EBED 0 0 repeat;
