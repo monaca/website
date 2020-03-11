@@ -48,7 +48,6 @@
         font-weight: bold;
 }
 
-
 @mixin gray_p{
     font-size: 16px;
     color: #6f777f;
@@ -269,7 +268,7 @@ h3{
     padding-bottom: 5%;
     position: relative;
     overflow: hidden;
-    margin-top: -16%;
+    margin-top: -17%;
 
     a{
         text-decoration: inherit; /* no underline */
@@ -288,6 +287,8 @@ h3{
             display: none;
         }
     }
+
+    .horizontal_wrap{ display: none; }
 
     .top_text, .images, .bottom_links{
         display: grid;
@@ -357,7 +358,8 @@ h3{
         margin-top: -25%;
 
         .showcase_content{
-            @include phone-content-width;
+
+            width: 100%;
 
             .mobile_showcase_title{
                 display: block;
@@ -396,9 +398,41 @@ h3{
                 }
             }
 
-            .images{ margin-top: -25% }
+            .images{ display: none; margin-top: -25% }
 
-            .bottom_links{ grid-template-columns: 100% 0 0 0; }
+            .bottom_links{ display: none; grid-template-columns: 100% 0 0 0; }
+
+            .horizontal_wrap{
+                display: block;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+
+                .horizontal_item{
+                    display: inline-block;
+                    position: relative;
+                    width: 90%;
+                    //background: rebeccapurple;
+                    margin-left: 5%;
+
+                    img{
+                        max-width: 100%;
+                    }
+
+                    a{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        left: 50%;
+                        -webkit-transform: translateX(-50%);
+                        transform: translateX(-50%);
+                        color: #6F777F;
+                        font-size: 15px;
+                    }
+                }
+
+            }
         }
 
     }
@@ -649,34 +683,60 @@ h3{
         margin: auto;
         display: grid;
         grid-template-columns: 50% 50%;
+    }
 
-        .wrap_left{
-            margin-top: 12%;
-            h2{margin-left: 16%;}
+    .wrap_left{
+        margin-top: 12%;
+        h2{margin-left: 16%;}
 
-            .card_info{
-                margin-top: 7%;
-                margin-left: 15%;
-                background: white;
-                text-align: start;
-                padding: 6%;
-                width: 82%;
-                -moz-box-shadow: 3px 3px 5px 6px #ccc;
-                -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-                box-shadow: 0px 3px 10px 0px #ccc;
-                font-size: 16px;
-                color: #6F777F;
+        .card_info{
+            margin-top: 7%;
+            margin-left: 15%;
+            background: white;
+            text-align: start;
+            padding: 6%;
+            width: 82%;
+            -moz-box-shadow: 3px 3px 5px 6px #ccc;
+            -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+            box-shadow: 0px 3px 10px 0px #ccc;
+            font-size: 16px;
+            color: #6F777F;
 
-                p{color: #6F777F;}
+            p{color: #6F777F;}
 
-                ul{
-                    margin-top: 4%;
-                }
-                li{margin-top: 5px; margin-block-start: unset;}
-                li:before{ content:"•"; font-size:20px;}
+            ul{
+                margin-top: 4%;
+            }
+            li{margin-top: 5px; margin-block-start: unset;}
+            li:before{ content:"•"; font-size:20px;}
+        }
+
+
+    }
+
+    .training_wrap_mobile{ display: none; }
+
+    @include for-phone-only{
+        padding-bottom: 25%;
+
+        .training_wrap{ display: none }
+
+        .training_wrap_mobile{
+            display: block;
+            h2 {
+                margin: auto;
+                text-align: center;
+                font-size: 20px;
+                margin-bottom: 7%;
             }
 
+            .wrap_left{ margin-top: 10%; }
 
+            .card_info{
+                margin: auto;
+                width: 85%;
+                font-size: 14px;
+            }
         }
     }
 }
@@ -691,6 +751,11 @@ h3{
     z-index: -1;
     background: #E8EBED 0 0 repeat;
     transform: rotate(-4deg);
+
+    @include for-phone-only{
+        height: 40%;
+        bottom: 5%;
+    }
 }
 
 .service{
@@ -753,6 +818,53 @@ h3{
             }
         }
     }
+
+    @include for-phone-only{
+        .service_wrap{
+            width: 85%;
+
+            h2{
+                font-size: 20px;
+                padding: 5%;
+                margin-bottom: 6%;
+            }
+
+            #subtitle{ display: none; }
+
+            .table{
+                grid-template-columns: 53% 55%;
+                margin-left: 0;
+
+                .table_item{
+                    width: 85%;
+                    padding: 2%;
+                    padding-bottom: 5%;
+                    margin-bottom: 15%;
+
+                    img{
+                        width: 85%;
+                        margin-top: -10%;
+                    }
+
+                    h3{
+                        font-size: 14px;
+                        margin-top: -17%;
+                    }
+
+                    .squares{
+                        width: 100px;
+                        height: 108px;
+                        margin-top: 8%;
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            #last_item{
+                margin-left: 51%;
+            }
+        }
+    }
 }
 
 .service::before{
@@ -765,6 +877,11 @@ h3{
     z-index: -1;
     background: #E8EBED 0 0 repeat;
     transform: rotate(-4deg);
+
+    @include for-phone-only{
+        height: 28%;
+        bottom: 6%;
+    }
 }
 
 .prices{
@@ -782,6 +899,7 @@ h3{
         margin: 0;
         margin-bottom: 3%;
     }
+
     .prices_title{
         text-align: start;
         .title{padding-bottom: 6%;}
@@ -866,6 +984,12 @@ h3{
 
     }
 
+    @include for-phone-only{
+        .prices_wrap{
+            .prices_title{ display: none; }
+        }
+    }
+
 
 }
 
@@ -907,6 +1031,7 @@ h3{
 
                 img{width: 1.5%;}
             }
+
             .logo_group{
                 margin: auto;
                 background: white;
@@ -927,6 +1052,39 @@ h3{
                     cursor: pointer;
                 }
             }
+
+            .logos_button_mobile{ display: none; }
+        }
+    }
+
+    @include for-phone-only{
+        padding-bottom: 20%;
+        .showcase_logo_wrap{
+            width: 95%;
+
+            h2{
+                font-size: 20px;
+                padding: 5%;
+            }
+
+            .logos{
+                .link{ display: none; }
+
+                .logo_group{ margin-top: 8%; }
+
+                .logos_button_mobile{
+                    display: block;
+                    width: 75%;
+                    background: #468FFF;
+                    padding: 3%;
+                    margin: auto;
+                    margin-top: 10%;
+                    border-radius: 3px;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            }
+
         }
     }
 }
@@ -941,6 +1099,11 @@ h3{
     z-index: -1;
     background: #E8EBED 0 0 repeat;
     transform: rotate(-4deg);
+
+    @include for-phone-only{
+        height: 63%;
+        bottom: 8%;
+    }
 }
 
 .inquiry{
@@ -988,6 +1151,50 @@ h3{
         border-radius: 3px;
         font-size: 16px;
         font-weight: bold;
+    }
+
+    @include for-phone-only{
+        width: 85%;
+        padding-bottom: 5%;
+        margin-top: 10%;
+
+        h2{
+            font-size: 20px;
+            width: 95%;
+            margin: auto;
+            margin-bottom: 8%;
+        }
+
+        h3{
+            font-size: 14px;
+            margin: auto;
+            text-align: center;
+            font-weight: normal;
+            margin-bottom: 12%;
+
+            span{
+                font-size: 12px;
+
+                #underlined{
+                    color: #0054AC;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        p{ margin-bottom: 2%; }
+
+        input{
+            padding: 6%;
+            margin-bottom: 6%;
+        }
+
+        button{
+            width: 100%;
+            padding: 4%;
+            margin-top: 13%;
+        }
+
     }
 }
 
