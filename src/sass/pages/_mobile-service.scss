@@ -53,6 +53,18 @@
     color: #6f777f;
 }
 
+@mixin blue_button{
+    display: block;
+    width: 75%;
+    background: #468FFF;
+    padding: 3%;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 $black: black;
 
 //CSS
@@ -284,7 +296,7 @@ h3{
 
         @include h3-titles;
 
-        .mobile_showcase_title{
+        .mobile_showcase_title, .showcase_mobile_button, .divider_line{
             display: none;
         }
 
@@ -380,84 +392,21 @@ h3{
                 .arrow{ width: 9%; }
             }
         }
+
     }
 
     .horizontal_wrap{ display: none; }
 
-    /*
-    .top_text, .images, .bottom_links{
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-    }
-
-    .top_text{
-        grid-template-columns: 30% 47% 23%;
-    }
-
-    .first, .second{
-        display: flex;
-    }
-
-    .start{
-        width: 40%;
-        font-size: 15px;
-    }
-
-    .end{
-        font-size: 25px;
-        margin-top: 15%;
-        margin-left: 1%;
-    }
-
-    .bottom_links{
-        p{color: #0054AC}
-        cursor: pointer;
-
-    }
-
-    .top_text{
-        .start, .end, #last_link{
-            color: rgba(255, 255, 255, 0.71);
-        }
-
-        #last_link{ cursor: pointer; }
-
-        .middle{
-            color: white;
-            font-size: 6em;
-            @include font_nueve;
-        }
-    }
-
-    .images{margin-top: -10%;}
-
-    .tablet{
-        //max-width: none;
-        //width: 125%;
-    }
-
-    .phone{
-        width: 76%;
-        margin: auto;
-        margin-top: 21%;
-
-        #phone1{margin-left: 19%;}
-
-        #phone2{margin-left: 10%;}
-    }
-    */
-
     @include for-phone-only{
 
         padding-top: 25%;
-        padding-bottom: 20%;
         margin-top: -25%;
 
         .showcase_content{
-
             width: 100%;
+            padding-bottom: 3%;
 
-
+            .wrap{ display: none}
 
             .mobile_showcase_title{
                 display: block;
@@ -467,41 +416,37 @@ h3{
                 margin-bottom: 10%;
             }
 
-            .top_text{
-                grid-template-columns: 50% 80%;
-                width: 85%;
+            .mobile_showcase_headers{
+                margin-left: 11%;
 
-                .start{
-                    width: 100%;
-                    text-align: start;
-                }
-
-                .middle{
-                    font-size: 40px;
+                .header{
                     display: inline-block;
-                }
 
-                .end{
-                    display: inline-block;
-                    font-size: 20.4px;
-                    font-weight: 100;
-                }
+                    .first{
+                        font-size: 14px;
+                        color: rgba(255, 255, 255, 0.71);
+                        text-align: start;
 
-                .second{
-                    margin-left: 20%;
-                    .middle{
-                        margin-left: -18%;
+                    }
+
+                    .second{
+                        text-align: start;
+
+                        .num{
+                            color: white;
+                            font-size: 40px;
+                            @include font_nueve;
+                        }
+
+                        .text{
+                            font-size: 20.4px;
+                            color: rgba(255, 255, 255, 0.71);
+                        }
                     }
                 }
 
-                .fourth{
-                    display: none;
-                }
+                #header1{ margin-right: 10%; }
             }
-
-            .images{ display: none; margin-top: -25% }
-
-            .bottom_links{ display: none; grid-template-columns: 100% 0 0 0; }
 
             .horizontal_wrap{
                 display: block;
@@ -509,12 +454,12 @@ h3{
                 overflow-y: hidden;
                 white-space: nowrap;
                 -webkit-overflow-scrolling: touch;
+                margin-top: -23%;
 
                 .horizontal_item{
                     display: inline-block;
                     position: relative;
                     width: 90%;
-                    //background: rebeccapurple;
                     margin-left: 5%;
 
                     img{
@@ -534,6 +479,19 @@ h3{
                 }
 
             }
+
+            .showcase_mobile_button{
+                @include blue_button;
+                margin-top: 6%;
+            }
+
+            .divider_line{
+                display: block;
+                border-bottom: #00000021 solid 1px;
+                width: 85%;
+                margin: auto;
+                margin-top: 16%;
+            }
         }
 
     }
@@ -551,8 +509,8 @@ h3{
     transform: rotate(-5deg);
 
     @include for-phone-only{
-        height: 35%;
-        bottom: 67%;
+        height: 70%;
+        bottom: 50%;
         left: -10%;
     }
 }
@@ -1174,15 +1132,7 @@ h3{
                 .logo_group{ margin-top: 8%; }
 
                 .logos_button_mobile{
-                    display: block;
-                    width: 75%;
-                    background: #468FFF;
-                    padding: 3%;
-                    margin: auto;
-                    margin-top: 10%;
-                    border-radius: 3px;
-                    font-size: 16px;
-                    font-weight: bold;
+                    @include blue_button;
                 }
             }
 
