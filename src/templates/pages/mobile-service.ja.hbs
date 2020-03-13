@@ -91,12 +91,12 @@ keywords: スマートフォンアプリ開発、ハイブリッドアプリ開�
 
             <div class="horizontal_item">
                 <img class="phone" id="phone1" src="img/mobile-service-assets/Group_187x2.png">
-                <a>三井住友 <p>フィナンシャルグループ 様</a>
+                <a id="phone1_link">三井住友 <br>フィナンシャルグループ 様</a>
             </div>
 
-            <div class="horizontal_item">
+            <div class="horizontal_item" id="last_item">
                 <img class="phone" id="phone2" src="img/mobile-service-assets/Group_186x2.png">
-                <a>マネックス証券 様</a>
+                <a id="phone2_link">マネックス証券 様</a>
             </div>
         </div>
 
@@ -298,67 +298,137 @@ keywords: スマートフォンアプリ開発、ハイブリッドアプリ開�
 <div class="prices">
     <div class="prices_wrap">
         <h2>料金イメージ</h2>
-        <div class="prices_title">
-            <div></div>
-            <div class="title" >Monaca料金</div>
-            <div class="title">支援サービス料金</div>
-            <div></div>
-            <div></div>
+        <div class="desktop_wrap_prices">
+            <div class="prices_title">
+                <div></div>
+                <div class="title" >Monaca料金</div>
+                <div class="title">支援サービス料金</div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="prices_table">
+                <div id="price_categories">
+                    <p class="table_categories">費用</p>
+                    <p class="table_categories">対象</p>
+                    <p class="table_categories">費用例</p>
+                </div>
+                <div class="prices_table_item">
+                    <div class="content">
+                        <div class="header" id="header_blue">Monacaライセンス</div>
+                        <div class="prices_row">
+                            <div class="row_1 price_bold">基本料金(2,000円)〜<br>＋<br>5,000円/利用者/月〜</div>
+                            <div class="row_2">Monacaの利用料<br>開発者につき1ライセンス</div>
+                            <div class="row_3" id="license_3rd_row">5名の利用者<br>月額: <span class="price_bold">27,000円</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prices_table_item">
+                    <div class="content">
+                        <div class="header">開発 / 運用支援サービス</div>
+                        <div class="prices_row">
+                            <div class="row_1 price_bold">初期料金<br>＋<br>30,000円/アプリ/月〜</div>
+                            <div class="row_2">Monacaの利用料<br>開発者につき1ライセンス</div>
+                            <div class="development_column_extra_rows">
+                                <p id="third_row">5画面構成の業務アプリ<br>（ネイティブAPIあり）<br><br>
+                                    初期: <span class="price_bold">400,000円</span><br>月額: <span class="price_bold">70,000円</span></p>
+                                <p id="fourth_row">
+                                    PoCアプリ開発支援<br>（1画面、ミニマムUI）<br><br>
+                                    初期: <span class="price_bold">300,000円</span><br>月額: <span class="price_bold">30,000円</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prices_table_item">
+                    <div class="content">
+                        <div class="header">トレーニング</div>
+                        <div class="prices_row">
+                            <div class="row_1"><p id="per_training">1トレーニングあたり<br><span class="price_bold">20,000円/受講者〜</span></p></div>
+                            <div class="row_2"><p id="lectures">講義、ワークショップ等</p></div>
+                            <div class="row_3">プログラミング講座<br>(3日間、5名)<br><br><span class="price_bold">650,000円</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prices_table_item">
+                    <div class="content">
+                        <div class="header">アプリ開発コーチング</div>
+                        <div class="prices_row">
+                            <div class="row_1"><p id="settlement">実績精算<br><span class="price_bold">30,000円/1時間</span></p></div>
+                            <div class="row_2" id="scrum_price">スクラム支援<br>DevOps構築<br>コンサルティング</div>
+                            <div class="row_3">週1日の<br>オンサイトコーチング<br><br><span class="price_bold">800,000円/月</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="prices_table">
+        <div class="mobile_wrap_prices">
             <div id="price_categories">
                 <p class="table_categories">費用</p>
                 <p class="table_categories">対象</p>
                 <p class="table_categories">費用例</p>
             </div>
-            <div class="prices_table_item">
-                <div class="content">
-                    <div class="header" id="header_blue">Monacaライセンス</div>
-                    <div class="prices_row">
-                        <div class="row_1 price_bold">基本料金(2,000円)〜<br>＋<br>5,000円/利用者/月〜</div>
-                        <div class="row_2">Monacaの利用料<br>開発者につき1ライセンス</div>
-                        <div class="row_3" id="license_3rd_row">5名の利用者<br>月額: <span class="price_bold">27,000円</span></div>
-                    </div>
+            <div class="prices_table_wrap">
+                <div class="prices_title">
+                    <div></div>
+                    <div class="title" >Monaca料金</div>
+                    <div class="title">支援サービス料金</div>
+                    <div></div>
+                    <div></div>
                 </div>
-            </div>
-            <div class="prices_table_item">
-                <div class="content">
-                    <div class="header">開発 / 運用支援サービス</div>
-                    <div class="prices_row">
-                        <div class="row_1 price_bold">初期料金<br>＋<br>30,000円/アプリ/月〜</div>
-                        <div class="row_2">Monacaの利用料<br>開発者につき1ライセンス</div>
-                        <div class="development_column_extra_rows">
-                            <p id="third_row">5画面構成の業務アプリ<br>（ネイティブAPIあり）<br><br>
-                                初期: <span class="price_bold">400,000円</span><br>月額: <span class="price_bold">70,000円</span></p>
-                            <p id="fourth_row">
-                                PoCアプリ開発支援<br>（1画面、ミニマムUI）<br><br>
-                                初期: <span class="price_bold">300,000円</span><br>月額: <span class="price_bold">30,000円</span>
-                            </p>
+                <div class="prices_table">
+                    <div class="prices_table_item">
+                        <div class="content">
+                            <div class="header" id="header_blue">Monacaライセンス</div>
+                            <div class="prices_row">
+                                <div class="row_1 price_bold">基本料金(2,000円)〜<br>＋<br>5,000円/利用者/月〜</div>
+                                <div class="row_2">Monacaの利用料<br>開発者につき1ライセンス</div>
+                                <div class="row_3" id="license_3rd_row">5名の利用者<br>月額: <span class="price_bold">27,000円</span></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="prices_table_item">
-                <div class="content">
-                    <div class="header">トレーニング</div>
-                    <div class="prices_row">
-                        <div class="row_1"><p id="per_training">1トレーニングあたり<br><span class="price_bold">20,000円/受講者〜</span></p></div>
-                        <div class="row_2"><p id="lectures">講義、ワークショップ等</p></div>
-                        <div class="row_3">プログラミング講座<br>(3日間、5名)<br><br><span class="price_bold">650,000円</span></div>
+                    <div class="prices_table_item">
+                        <div class="content">
+                            <div class="header">開発 / 運用支援サービス</div>
+                            <div class="prices_row">
+                                <div class="row_1 price_bold">初期料金<br>＋<br>30,000円/アプリ/月〜</div>
+                                <div class="row_2">Monacaの利用料<br>開発者につき1ライセンス</div>
+                                <div class="development_column_extra_rows">
+                                    <p id="third_row">5画面構成の業務アプリ<br>（ネイティブAPIあり）<br><br>
+                                        初期: <span class="price_bold">400,000円</span><br>月額: <span class="price_bold">70,000円</span></p>
+                                    <p id="fourth_row">
+                                        PoCアプリ開発支援<br>（1画面、ミニマムUI）<br><br>
+                                        初期: <span class="price_bold">300,000円</span><br>月額: <span class="price_bold">30,000円</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="prices_table_item">
-                <div class="content">
-                    <div class="header">アプリ開発コーチング</div>
-                    <div class="prices_row">
-                        <div class="row_1"><p id="settlement">実績精算<br><span class="price_bold">30,000円/1時間</span></p></div>
-                        <div class="row_2" id="scrum_price">スクラム支援<br>DevOps構築<br>コンサルティング</div>
-                        <div class="row_3">週1日の<br>オンサイトコーチング<br><br><span class="price_bold">800,000円/月</span></div>
+                    <div class="prices_table_item">
+                        <div class="content">
+                            <div class="header">トレーニング</div>
+                            <div class="prices_row">
+                                <div class="row_1"><p id="per_training">1トレーニングあたり<br><span class="price_bold">20,000円/受講者〜</span></p></div>
+                                <div class="row_2"><p id="lectures">講義、ワークショップ等</p></div>
+                                <div class="row_3">プログラミング講座<br>(3日間、5名)<br><br><span class="price_bold">650,000円</span></div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="prices_table_item">
+                        <div class="content">
+                            <div class="header">アプリ開発コーチング</div>
+                            <div class="prices_row">
+                                <div class="row_1"><p id="settlement">実績精算<br><span class="price_bold">30,000円/1時間</span></p></div>
+                                <div class="row_2" id="scrum_price">スクラム支援<br>DevOps構築<br>コンサルティング</div>
+                                <div class="row_3">週1日の<br>オンサイトコーチング<br><br><span class="price_bold">800,000円/月</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div></div>
                 </div>
             </div>
+
         </div>
+
     </div>
 
 </div>
