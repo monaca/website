@@ -1,8 +1,20 @@
 //Media queries section
 
 @mixin for-phone-only {
-    @media (max-width: 360px) { @content; }
+    //@media (max-width: 360px) { @content; }
+    @media (min-width: 320px) and (max-width: 480px) {@content;}
 }
+
+@mixin phone_tablet_inbetween {
+    //@media (max-width: 360px) { @content; }
+    @media (min-width: 481px) and (max-width: 767px) {@content;}
+}
+
+@mixin for-tablet-only {
+    //@media (max-width: 360px) { @content; }
+    @media (min-device-width : 768px) and (max-device-width : 1024px) {@content;}
+}
+
 @mixin for-tablet-portrait-up {
     @media (min-width: 600px) { @content; }
 }
@@ -250,6 +262,10 @@ h3{
                 }
             }
         }
+    }
+
+    @include phone_tablet_inbetween{
+
     }
 
 }
@@ -514,7 +530,7 @@ h3{
     position: absolute;
     width: 130%;
     height: 70%;
-    bottom: 50%;
+    bottom: 45%;
     left: -5%;
     z-index: -1;
     background: #2C6EA8 0 0 repeat;
@@ -679,7 +695,7 @@ h3{
 
                 .side_info{
                     display: grid;
-                    .title_mobile{ display: none}
+                    .mobile_title{ display: none}
                     h3{
                         border-bottom: #C8CACC solid 1px;
                         padding-left: 10%;

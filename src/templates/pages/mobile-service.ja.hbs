@@ -5,12 +5,14 @@ description: お客様のご要望に合わせたスマートフォンアプリ�
 keywords: スマートフォンアプリ開発、ハイブリッドアプリ開発、アプリ開発、見積依頼
 ---
 
+
+
 <div class="keyvisual-mob-serv">
     <div class="wrap">
         <div class="wrap_keyvisual">
             <div class="left">
                 <h1>自社アプリ開発を可能にする国内No.1クラウド基盤</h1>
-                <button>お問い合わせ</button>
+                <button id="scroll_to_form">お問い合わせ</button>
             </div>
             <div class="right">
                 <img src="img/mobile-service-assets/illustration@2x.png">
@@ -36,7 +38,7 @@ keywords: スマートフォンアプリ開発、ハイブリッドアプリ開�
             Monacaで作られています</h3>
 
         <div class="wrap">
-            <div class="showcase_item">
+            <div class="showcase_item seikyoren">
                 <div class="first">Monaca開発<br>ユーザー数 </div>
                 <div class="second"><span class="num">25</span> <span class="text">万人</span></div>
                 <div class="showcase_img tablets">
@@ -44,7 +46,7 @@ keywords: スマートフォンアプリ開発、ハイブリッドアプリ開�
                     <a>全国生活協同組合連合会 様 <img class="arrow" src="img/mobile-service-assets/icn_arrow_blue.png"></a>
                 </div>
             </div>
-            <div class="showcase_item">
+            <div class="showcase_item naganobank">
                 <div class="first">作られた</br>アプリの数</div>
                 <div class="second"><span class="num">12</span> <span class="text">万アプリ</span></div>
                 <div class="showcase_img tablets" id="second_tablet">
@@ -52,13 +54,13 @@ keywords: スマートフォンアプリ開発、ハイブリッドアプリ開�
                     <a>長野銀行 様 <img class="arrow" src="img/mobile-service-assets/icn_arrow_blue.png"></a>
                 </div>
             </div>
-            <div class="showcase_item">
+            <div class="showcase_item smbc" >
                 <div class="showcase_img phones" id="phone1">
                     <img class="phone" src="img/mobile-service-assets/Group_187x2.png">
                     <a>三井住友 <br>フィナンシャルグループ 様 <img class="arrow" src="img/mobile-service-assets/icn_arrow_blue.png"></a>
                 </div>
             </div>
-            <div class="showcase_item">
+            <div class="showcase_item monex" >
                 <a id="last_link">全ての導入事例を見る <img class="arrow" src="img/mobile-service-assets/icn_arrow_r_2x.png"></a>
                 <div class="showcase_img phones" id="phone2" >
                     <img class="phone" src="img/mobile-service-assets/Group_186x2.png">
@@ -79,22 +81,19 @@ keywords: スマートフォンアプリ開発、ハイブリッドアプリ開�
         </div>
 
         <div class="horizontal_wrap">
-            <div class="horizontal_item">
+            <div class="horizontal_item seikyoren">
                 <img class="tablet" src="img/mobile-service-assets/Group_184x2.png">
                 <a>全国生活協同組合連合会 様</a>
             </div>
-
-            <div class="horizontal_item">
+            <div class="horizontal_item naganobank">
                 <img class="tablet" src="img/mobile-service-assets/Group_185x2.png">
                 <a>長野銀行 様</a>
             </div>
-
-            <div class="horizontal_item">
+            <div class="horizontal_item smbc">
                 <img class="phone" id="phone1" src="img/mobile-service-assets/Group_187x2.png">
                 <a id="phone1_link">三井住友 <br>フィナンシャルグループ 様</a>
             </div>
-
-            <div class="horizontal_item" id="last_item">
+            <div class="horizontal_item monex" id="las_item">
                 <img class="phone" id="phone2" src="img/mobile-service-assets/Group_186x2.png">
                 <a id="phone2_link">マネックス証券 様</a>
             </div>
@@ -465,7 +464,7 @@ keywords: スマートフォンアプリ開発、ハイブリッドアプリ開�
     </div>
 </div>
 
-<form class="inquiry">
+<form class="inquiry" id="contact_us">
     <h2>まずはお問い合わせください</h2>
 
     <h3>アシアル株式会社Monacaチームへ<br>お気軽にお問い合わせください。<br><br>
@@ -487,3 +486,28 @@ keywords: スマートフォンアプリ開発、ハイブリッドアプリ開�
 </form>
 
 
+<script>
+    $("#scroll_to_form").click(function() {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("#contact_us").offset().top -20
+        }, 2000);
+    });
+
+    $(".seikyoren").click(function() {
+        window.location.replace('/showcase/seikyoren.html');
+    });
+
+    $(".naganobank").click(function() {
+        window.location.replace('/showcase/naganobank.html');
+    });
+
+    $(".smbc").click(function() {
+        window.location.replace('/showcase/smbc.html');
+    });
+
+    $(".monex").click(function() {
+        window.location.replace('/showcase/monex.html');
+    });
+
+
+</script>
