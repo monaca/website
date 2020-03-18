@@ -152,8 +152,18 @@ h3{
                 border-radius: 3px;
                 font-size: 15px;
                 font-weight: bold;
+                transition: all 0.3s linear; /* vendorless fallback */
+                -o-transition: all 0.3s linear; /* opera */
+                -ms-transition: all 0.3s linear; /* IE 10 */
+                -moz-transition: all 0.3s linear; /* Firefox */
+                -webkit-transition: all 0.3s linear; /*safari and chrome */
             }
 
+            button:hover{
+                background: #FFFFFF;
+                color: #47A3E6;
+                box-shadow: 0px 3px 12px 0px #494847;
+            }
         }
 
         .right {
@@ -223,6 +233,7 @@ h3{
                         top: 89%;
                         left: 8%;
                     }
+
                 }
 
                 .right {
@@ -262,10 +273,6 @@ h3{
                 }
             }
         }
-    }
-
-    @include phone_tablet_inbetween{
-
     }
 
 }
@@ -353,6 +360,7 @@ h3{
             }
 
             .showcase_img{
+                cursor: pointer;
 
                 a{
                     text-decoration: inherit;
@@ -366,8 +374,6 @@ h3{
                     font-size: 15px;
                     width: 100%;
                 }
-
-
             }
 
             .tablets, .phones{
@@ -408,7 +414,6 @@ h3{
                 .arrow{ width: 9%; }
             }
         }
-
     }
 
     .horizontal_wrap{ display: none; }
@@ -476,6 +481,8 @@ h3{
                     display: inline-block;
                     position: relative;
                     width: 90%;
+                    cursor: pointer;
+
 
                     .tablet{
                         max-width: unset;
@@ -1218,7 +1225,7 @@ h3{
                     padding: 15%;
                     padding-bottom: 10%;
                     margin: auto;
-                    cursor: pointer;
+                    //cursor: pointer;
                 }
             }
 
@@ -1316,6 +1323,17 @@ h3{
         border-radius: 3px;
         font-size: 16px;
         font-weight: bold;
+
+        transition: all 0.3s linear; /* vendorless fallback */
+        -o-transition: all 0.3s linear; /* opera */
+        -ms-transition: all 0.3s linear; /* IE 10 */
+        -moz-transition: all 0.3s linear; /* Firefox */
+        -webkit-transition: all 0.3s linear; /*safari and chrome */
+    }
+
+    button:hover{
+        background: #2773E6;
+        box-shadow: 0px 3px 12px 0px #494847;
     }
 
     @include for-phone-only{
