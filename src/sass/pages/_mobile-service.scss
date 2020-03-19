@@ -1191,7 +1191,7 @@ h3{
         width: 80%;
         margin: auto;
 
-        h2{margin-left: 0; text-align: center}
+        h2{margin-left: 0; text-align: center; margin-bottom: 2%;}
 
         .logos{
             color: #0a001f;
@@ -1199,7 +1199,7 @@ h3{
             margin: auto;
 
             .link{
-                margin-bottom: 1%;
+                margin-bottom: 1.5%;
                 text-align: end;
                 color: #0054AC;
                 cursor: pointer;
@@ -1245,7 +1245,7 @@ h3{
             }
 
             .logos{
-                .link{ display: none; }
+                .link{ display: none;}
 
                 .logo_group{ margin-top: 8%;
                     img{ width: 90%; }
