@@ -30,7 +30,7 @@ footer.common {
     .container {
         width: auto;
     }
-    .copyright {
+/*    .copyright {
         font-size: 14px;
         text-align: center;
         a {
@@ -42,7 +42,7 @@ footer.common {
                 text-decoration: none;
             }
         }
-    }
+    }*/
     .footer-social-icon {
         display: inline-block;
         margin: 0 14px;
@@ -325,12 +325,14 @@ html[lang=en] > body > footer > div {
 
 html[lang=ja] footer.v2-section--footer {
   margin: 0 auto;
-  max-width: 1024px;
-  //background-color: cyan;
+  padding: 32px 0 0 0;
+  width: 100%;
+  background-color: #f0f0f0;
   text-align: left;
 
   > .v2-section--footer__sitemap-wrapper {
-    margin: 32px 32px 0 32px;
+    margin: 0 auto;
+    max-width: 1024px;
 
     // In PC mode
     @media screen and (min-width: $v2-break-tablet + 1) {
@@ -339,18 +341,22 @@ html[lang=ja] footer.v2-section--footer {
         flex-flow: row nowrap;
         
         > .v2-section--footer__sitemap-block {
-          flex: 1;
-          width: 25%;
-          
+          flex: auto;
+          justify-content: space-evenly;
+          width: 18%;
+
+          &.double {
+            width: 38%;
+          }
+
           > .v2-section--footer__sitemap-category {
-            padding: 0 32px 24px 32px;
-            background-color: white; //debug
+            padding: 0 0 24px 0;
             
             > .v2-section--footer__sitemap-category-header {
               padding: 5px 0;
               font-size: 16px;
               font-weight: 700;
-              color: #333;
+              color: #6f777f;
 
               > .caret {
                 display: none;
@@ -358,21 +364,33 @@ html[lang=ja] footer.v2-section--footer {
             }
             
             > .v2-section--footer__sitemap-item {
-              padding: 6px 0;
+              padding: 3px 0;
               line-height: 16px;
-              font-size: 14px;
+              font-size: 12px;
               font-weight: 400;
 
               > a {
-                color: #6e7780;
+                color: #6f777f;
               }
 
-              &.section-header:before {
+              &.section-header:not(:first-child) {
+                margin-top: 10px;
+              }
+
+/*              &.section-header:before {
                   content: ' ';
                   display: block;
                   height: 1px;
                   margin: 3px 0 14px 0;
                   background-color: #e5e5e5;
+              }*/
+
+              &.indented {
+                text-indent: 10px;
+              }
+
+              &.indented-2x {
+                text-indent: 20px;
               }
             }
           }
@@ -383,7 +401,7 @@ html[lang=ja] footer.v2-section--footer {
             font-weight: 400;
 
             > a {
-              color: #6e7780;
+              color: #6f777f;
             }
           }
         }
@@ -519,35 +537,42 @@ html[lang=ja] footer.v2-section--footer {
   }
 
   > .v2-section--footer__copyright {
+
+    display: block;
+    max-width: 960px; 
+    margin: 32px auto 0;
+    padding: 32px 0 48px 0;
+    border-top: 1px solid #b3b3b3;
+    // height: 60px;
+    color: #6f777f;
+    font-size: 14px;
+    letter-spacing: -0.04em;
+    position: relative;
+    
+    a.contact {
+      color: #6f777f;
+      border: 1px solid #b3b3b3;
+      border-radius: 24px;
+      padding: 2px 12px;
+      text-decoration: none;
+      position: absolute;
+      left: 50%;
+      top: 28px;
+      transform: translate(-50%, 0);
+    }
+
+    span.copyright {
+      display: block;
+      font-size: 9px;
+    }
+
     // In PC mode
     @media screen and (min-width: $v2-break-tablet + 1) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 85px 32px 0 32px;
-      height: 60px;
-      color: #6e7780;
-      font-size: 14px;
-      letter-spacing: -0.04em;
-
-      a {
-        color: #6e7780;
-      }
     }
     // In smartphone/tablet mode
     @media screen and (max-width: $v2-break-tablet) {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       margin: 0;
-      height: 60px;
-      color: #6e7780;
       font-size: 12px;
-      letter-spacing: -0.04em;
-
-      a {
-        color: #6e7780;
-      }
     }
   }
 }
