@@ -13,6 +13,7 @@ body.headline {
 
       @media screen and (max-width: $break) {
         margin-top: 50px;
+        margin-bottom: 20px;
       }
 
       h1 {
@@ -121,13 +122,41 @@ body.headline {
           text-align: right;
           padding: 1em;
           padding-top: 0.4em;
+
+          .icon-arrow {
+            display: none;
+          }
+
           @media screen and (max-width: $break) {
+            text-align: center;
+
             .btn-blue {
               font-size: 16px;
+
+              &:first-child {
+                font-size: 14px;
+                background-color: transparent;
+                color: #6F777F;
+                border: none;
+                margin: 0 auto 20px auto;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                > .icon-arrow {
+                  display: block;
+                }
+              }
+
+              &:last-child{
+                width: 100%;
+                background-color: #B3B3B3;
+                border: none;
+                font-size: 16px;
+                font-weight: bold;
+              }
             }
-          }
-          @media screen and (max-width: $break-xs) {
-            text-align: center;
           }
 
           > .wspc {
