@@ -3,7 +3,7 @@
     <div class="v2-section--footer__sitemap">
       <div class="v2-section--footer__sitemap-block">
         <div class="v2-section--footer__sitemap-category">
-          <div class="v2-section--footer__sitemap-category-header">運営会社</div>
+          <div class="v2-section--footer__sitemap-item section-header">運営会社</div>
           <div class="v2-section--footer__sitemap-item"><img src="/img/logos/Asial_Logo.svg" alt="Asial" width="92" /></a></div>
           <div class="v2-section--footer__sitemap-item">アシアル株式会社</div>
           <div class="v2-section--footer__sitemap-item">〒113-0034</div>
@@ -107,7 +107,6 @@
           <div class="v2-section--footer__sitemap-item indented"><a href="/cs_net-bank.html">ジャパンネット銀行 - 残高確認</a></div>
           <div class="v2-section--footer__sitemap-item indented"><a href="/cs_hitachi-tools.html">三菱日立ツール - 切削工具商品カタログ</a></div>
         </div>
-        <div class="v2-section--footer__language-switch"><a href="https://monaca.io/">English</a></div>
       </div>
     </div>
   </div>
@@ -115,8 +114,8 @@
     <span>アシアル株式会社Monacaチームへ、お気軽にお問い合わせください。</span>
     <a class="contact" href="/contact.html">お問い合わせ</a>
     <span class="copyright">Copyright © {{currentYear}}&nbsp;<a href="http://www.asial.co.jp/" target="_blank">Asial Corporation</a>. All rights reserved.</span>
-    <a href="https://twitter.com" class="social twitter"></a>
-    <a href="https://facebook.com" class="social facebook"></a>
+    <a href="https://twitter.com" class="social twitter"><img src="img/footer/ico_twitter.svg" alt="Twitter" /></a>
+    <a href="https://facebook.com" class="social facebook"><img src="img/footer/ico_facebook.svg" alt="facebook" /></a>
   </div>
 </footer>
 
@@ -169,16 +168,3 @@ h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
   {{/is}}
 </script>
 
-<script>
-  // Toggle category in footer (in smartphone/tablet mode)
-  document.addEventListener('DOMContentLoaded', function() {
-    jQuery('.v2-section--footer__sitemap-category-header').on('click', function(e) {
-      var category = e.target.parentNode;
-      if (!category.classList.contains('open')) {
-        category.classList.add('open');
-      } else {
-        category.classList.remove('open');
-      }
-    });
-  });
-</script>
