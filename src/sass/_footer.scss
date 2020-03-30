@@ -549,6 +549,21 @@ html[lang=ja] footer.v2-section--footer {
     letter-spacing: -0.04em;
     position: relative;
     
+    span.left {
+      display: block;
+      margin-bottom: 16px;
+      float: left;
+    }
+
+    span.right {
+      float: right;
+      
+      a {
+        color: #6f777f;
+        text-decoration: none;
+      }
+    }
+    
     a.contact {
       color: #6f777f;
       border: 1px solid #b3b3b3;
@@ -560,13 +575,9 @@ html[lang=ja] footer.v2-section--footer {
       top: 28px;
       transform: translate(-50%, 0);
     }
-
-    span:first-child {
-      display: block;
-      margin-bottom: 16px;
-    }
-
+    
     span.copyright {
+//      @include clearfix;
       display: inline-block;
       text-align: left;
       font-size: 9px;

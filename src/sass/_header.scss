@@ -1,7 +1,7 @@
-$menu-item-color: #999;
+$menu-item-color: #fff;
 $nav-item-bright-color: #ddd;
 $nav-item-dark-color: #444;
-$small-header-bg: rgba($color: white, $alpha: .96);
+$small-header-bg: rgba($color: #0A6FD9, $alpha: 1);
 $header-transition: all .4s ease;
 $close-toggle-bg: #444;
 
@@ -11,7 +11,7 @@ html[lang=ja] .navbar-inverse {
         background-color: transparent;
     }
 }
-html[lang=ja] header.navbar {
+html[lang=ja] .navbar {
     // Start base
     .navbar-header {
         margin: 0;
@@ -23,7 +23,7 @@ html[lang=ja] header.navbar {
             background-color: rgba(0, 0, 0, 0.16);
             border-radius: 0;
             border: none;
-            height: 60px;
+            height: 46px;
             margin: 0 -12px 0 0;
             padding: 0 12px;
             position: relative;
@@ -187,9 +187,12 @@ html[lang=ja] header.navbar {
     border-width: 0px;
     border-radius: 0;
     max-width: 1920px;
-    height: 60px;
+    height: 46px;
+    min-height: 46px;
     transition: $header-transition;
-    background-color: transparent;
+    background-color: $small-header-bg;
+    color: $menu-item-color;
+//    background-color: transparent;
     font-family: Open Sans, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
 
     .navbar-header {
@@ -202,8 +205,8 @@ html[lang=ja] header.navbar {
             height: 100%;
 
             .monaca-logo {
-                width: 181.11px;
-                height: 24px;
+                // width: 181.11px;
+                height: 22px;
                 transition: $header-transition;
             }
             .monaca-logo:hover {
@@ -215,7 +218,7 @@ html[lang=ja] header.navbar {
 
     .navbar-collapse {
         height: 100%;
-        transition: none !important;
+        transition: none; // !important;
         padding: 0;
 
         &.collapse:not(.in) {
@@ -235,7 +238,7 @@ html[lang=ja] header.navbar {
         }
 
         @media screen and (min-width: $v2-break-tablet + 1px) {
-            display: flex !important; // There is another media query with !important...
+            display: flex; // !important; // There is another media query with !important...
             align-items: center;
             margin-left: auto;
         }
@@ -244,7 +247,7 @@ html[lang=ja] header.navbar {
             display: none;
 
             .navbar-toggle > span {
-                border-radius: 0 !important;
+                border-radius: 0; // !important;
             }
     
             .navbar-toggle.navbar-close {
@@ -384,17 +387,18 @@ html[lang=ja] header.navbar {
     // Big screen nav
     @media screen and (min-width: $v2-break-tablet + 1px) {
         .navbar-nav > li {
-            padding: 16px 0; // Increase hoverable area
+            // padding: 16px 0; // Increase hoverable area
             margin-right: 0;
 
             & > a {
-                border-radius: 4px;
+                line-height: 30px;
+                // border-radius: 4px;
                 padding: 8px; // Increase hoverable area
             }
 
             &:hover > a, &:focus > a {
-                background-color: rgba($color: white, $alpha: 0.16) !important;
-                color: $nav-item-bright-color !important;
+                background-color: rgba($color: black, $alpha: 0.2); // !important;
+                color: $nav-item-bright-color; // !important;
             }
         }
 
@@ -406,10 +410,10 @@ html[lang=ja] header.navbar {
                 transform: translateX(-50%);
                 margin: 0;
                 padding: 7px 0 10px 0;
-                top: 61px; // dropdown-menu (white) should intersects with the header (white) when scrolling
-                border-radius: 4px;
-                border-top-left-radius: 4px; // Override...
-                border-top-right-radius: 4px;
+                top: 46px; // dropdown-menu (white) should intersects with the header (white) when scrolling
+                // border-radius: 4px;
+                // border-top-left-radius: 4px; // Override...
+                // border-top-right-radius: 4px;
                 background-color: #fff;
                 box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
                 border: none;
@@ -466,9 +470,17 @@ html[lang=ja] header.navbar {
             }
 
             .caret {
-                border-top: 5px dashed;
-                border-right: 5px solid transparent;
-                border-left: 5px solid transparent;
+                position: relative;
+                display: inline-block;
+                box-sizing: border-box;
+                width: 13px;
+                height: 13px;
+                border-style: solid;
+                border-width: 0 3px 3px 0;
+                border-color: rgba(255,255,255,0.5);
+                transform: scale(0.5) rotate(45deg);
+                transition: all .2s ease-out;
+                vertical-align: baseline;
             }
         }
     }
@@ -480,14 +492,14 @@ html[lang=ja] header.navbar {
         }
 
         li > a {
-            border-bottom: 1px solid rgba($color: black, $alpha: .1) !important;
-            padding: 16px 20px !important;
+            border-bottom: 1px solid rgba($color: black, $alpha: .1); // !important;
+            padding: 16px 20px; // !important;
         }
 
         .navbar-collapse .navbar-menu-toolbar {
             display: block;
             width: 100%;
-            height: 60px;
+            height: 46px;
             border-bottom: 1px solid rgba($color: black, $alpha: .2);
         }
 
@@ -512,7 +524,7 @@ html[lang=ja] header.navbar {
                 color: #6f777f;
                 background-color: rgba(0,0,0,.07);
                 transition: none;
-                padding: 16px 20px 16px 39px !important;
+                padding: 16px 20px 16px 39px; // !important;
 
                 &:hover, &:focus {
                     color: #444;
@@ -523,7 +535,7 @@ html[lang=ja] header.navbar {
             & .dropdown-menu,
             &:hover .dropdown-menu {
                 margin: 0;
-                display: none !important;
+                display: none; // !important;
             }
 
             .caret {
@@ -546,7 +558,7 @@ html[lang=ja] header.navbar {
 
                 .dropdown-menu,
                 &:hover .dropdown-menu {
-                    display: block !important;
+                    display: block; // !important;
                 }
             }
 
@@ -608,7 +620,7 @@ html[lang=ja] header.navbar {
         }
     }
 
-    &.home {
+    &.home_ {
         height: 100px;
 
         .navbar-header {
@@ -624,19 +636,19 @@ html[lang=ja] header.navbar {
 
     &.navbar-fixed-top {
         @media screen and (max-width: $v2-break-tablet) {
-            height: 60px;
+            height: 46px;
         }
 
         .navbar-nav > li {
             > a {
-                color: rgba(255, 255, 255, .7);
+                color: rgba(255, 255, 255, 1.0);
             }
             // Big screen nav
             @media screen and (min-width: $v2-break-tablet + 1px) {
                 &:hover > a,
                 &:focus > a {
-                    background-color: rgba($color: white, $alpha: 0.1) !important;
-                    color: rgba(255, 255, 255, 1.0) !important;
+                    background-color: rgba($color: black, $alpha: 0.2); // !important;
+                    color: rgba(255, 255, 255, 0.7); // !important;
                 }
             }
         }
@@ -650,8 +662,8 @@ html[lang=ja] header.navbar {
             &:hover > a.btn,
             &:focus > a.btn {
                 border-color: #fff;
-                background-color: #fff !important;
-                color: #6f777f !important;
+                background-color: #fff; // !important;
+                color: #6f777f; // !important;
             }    
         }
         .navbar-nav > li.trial {
@@ -664,7 +676,7 @@ html[lang=ja] header.navbar {
             &:hover > a.btn,
             &:focus > a.btn {
                 border-color: #fa6800;
-                background-color: #fa6800 !important;
+                background-color: #fa6800; // !important;
                 color: #fff;
             }    
         }
@@ -673,28 +685,28 @@ html[lang=ja] header.navbar {
     &:not(.navbar-fixed-top),
     &.scrolling {
         background-color: $small-header-bg;
-        height: 60px;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        height: 46px;
+        min-height: 46px;
 
         .navbar-header {
             .navbar-brand {
                 .monaca-logo {
-                    width: 110px;
-                    height: 24px;
+                    height: 22px;
+                    filter: brightness(0) invert(1); //to make SVG logo white regardless of whatever it originally was
                     transition: $header-transition;
                 }
             }
         }
 
         .navbar-nav > li {
-            > a {
-                color: #444;
-            }
+            // > a {
+            //     color: #444;
+            // }
             // Big screen nav
             @media screen and (min-width: $v2-break-tablet + 1px) {
                 &:hover > a,
                 &:focus > a {
-                    color: #000 !important;
+                    color: #000; // !important;
                 }
             }
         }
@@ -708,22 +720,22 @@ html[lang=ja] header.navbar {
             &:hover > a.btn,
             &:focus > a.btn {
                 border-color: rgba(0, 0, 0, 0.2);
-                background-color: rgba(0, 0, 0, 0.03) !important;
-                color: #000 !important;
+                background-color: rgba(0, 0, 0, 0.03); // !important;
+                color: #000; // !important;
             }    
         }
         .navbar-nav > li.trial {
             > a.btn {
                 border-color: #fa6800;
-                background-color: #fa6800 !important;
+                background-color: #fa6800; // !important;
                 font-size: 16px;
                 color: #fff;
             }
             &:hover > a.btn,
             &:focus > a.btn {
                 border-color: #ea5600;
-                background-color: #ea5600 !important;
-                color: #fff !important;
+                background-color: #ea5600; // !important;
+                color: #fff; // !important;
             }    
         }
 
@@ -737,7 +749,7 @@ html[lang=ja] header.navbar {
     }
 }
 
-html[lang=en] header.navbar {
+html[lang=en] .navbar {
     border-width: 0px;
     border-radius: 0;
     width: 100%;
@@ -747,7 +759,7 @@ html[lang=en] header.navbar {
     font-family: Open Sans, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
 
     .monaca-logo {
-        width: 110px;
+        height: 22px;
         transition: $header-transition;
     }
 
@@ -1034,7 +1046,7 @@ html[lang=en] header.navbar {
 }
 
 html[lang=en] {
-    body > header.navbar > div.container {
+    body > .navbar > div.container {
         max-width: 1170px;
         padding: 35px 0 57px;
 
