@@ -1,6 +1,6 @@
 $menu-item-color: #fff;
-$nav-item-bright-color: #ddd;
-$nav-item-dark-color: #444;
+$nav-item-bright-color: #B3B3B3;
+$nav-item-dark-color: #6F777F;
 $small-header-bg: rgba($color: #0A6FD9, $alpha: 1);
 $header-transition: all .4s ease;
 $close-toggle-bg: #444;
@@ -122,7 +122,7 @@ html[lang=ja] .navbar {
                 color: #0088cc;
                 font-size: 1rem;
                 font-weight: 700;
-                padding-left: 16px;
+                // padding-left: 16px;
                 text-align: left;
             }
         }
@@ -147,7 +147,7 @@ html[lang=ja] .navbar {
             float: none;
             li a {
                 color: #0088cc;
-                padding-left: 30px;
+                // padding-left: 30px;
                 &:hover {
                     background-color: rgba(0, 0, 0, 0.5);
                 }
@@ -208,6 +208,9 @@ html[lang=ja] .navbar {
                 // width: 181.11px;
                 height: 22px;
                 transition: $header-transition;
+                .color {
+                    fill: $menu-item-color;
+                }
             }
             .monaca-logo:hover {
               opacity: 0.7;
@@ -245,11 +248,25 @@ html[lang=ja] .navbar {
 
         .navbar-menu-toolbar {
             display: none;
+            position: relative;
 
             .navbar-toggle > span {
                 border-radius: 0; // !important;
             }
     
+            .monaca-logo {
+                height: 22px;
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                transform: translate(0, -50%);
+                // filter: brightness(70%)
+
+                .color {
+                    fill: $nav-item-bright-color;
+                }
+            }
+
             .navbar-toggle.navbar-close {
                 width: 26px;
                 height: 100%;
@@ -269,7 +286,7 @@ html[lang=ja] .navbar {
                     margin-top: 0;
                     width: 24px;
                     height: 2px;
-                    background-color: $close-toggle-bg;
+                    background-color: $nav-item-bright-color;
     
                     &:first-child {
                         transform: rotate(45deg);
@@ -378,7 +395,7 @@ html[lang=ja] .navbar {
             @media screen and (max-width: $v2-break-tablet) {
                 & li a {
                     font-size: 15px;
-                    line-height: 21px;
+                    line-height: 46px;
                 }
             }
         }
@@ -414,21 +431,23 @@ html[lang=ja] .navbar {
                 // border-radius: 4px;
                 // border-top-left-radius: 4px; // Override...
                 // border-top-right-radius: 4px;
+                border-radius: 0;
                 background-color: #fff;
-                box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+                // box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+                box-shadow: 0 1px 0 1px rgba(0,0,0,0.3);
                 border: none;
 
                 display: block;
                 pointer-events: none;
                 opacity: 0;
-                transition: opacity .15s ease;
+                transition: opacity .15s ease-out;
 
 
                 & > li {
                     height: auto;
 
                     > a {
-                        color: #333;
+                        color: #6F777F;
                         padding: 0 14px;
                         letter-spacing: -0.08em;
                         line-height: 37px;
@@ -444,11 +463,11 @@ html[lang=ja] .navbar {
                         display: block;
                         height: 1px;
                         margin: 7px 0;
-                        background-color: #e5e5e5;
+                        background-color: #b3b3b3;
                     }
                 }
 
-                &:before {
+/*                &:before {
                     content: ' ';
                     display: block;
                     position: absolute;
@@ -459,7 +478,7 @@ html[lang=ja] .navbar {
                     top: -8px;
                     left: 50%;
                     transform: translateX(-50%);
-                }
+                }*/
             }
 
             &:hover, &:focus {
@@ -492,8 +511,8 @@ html[lang=ja] .navbar {
         }
 
         li > a {
-            border-bottom: 1px solid rgba($color: black, $alpha: .1); // !important;
-            padding: 16px 20px; // !important;
+            // border-bottom: 1px solid rgba($color: black, $alpha: .1); // !important;
+            padding: 0px 20px; // !important;
         }
 
         .navbar-collapse .navbar-menu-toolbar {
@@ -521,10 +540,10 @@ html[lang=ja] .navbar {
             }
 
             & .dropdown-menu > li > a {
-                color: #6f777f;
+                /* color: #6f777f;
                 background-color: rgba(0,0,0,.07);
                 transition: none;
-                padding: 16px 20px 16px 39px; // !important;
+                padding: 16px 20px 16px 39px; // !important; */
 
                 &:hover, &:focus {
                     color: #444;
@@ -539,14 +558,15 @@ html[lang=ja] .navbar {
             }
 
             .caret {
-                border-top: 5px dashed;
+                display: none;
+/*                 border-top: 5px dashed;
                 border-right: 5px solid transparent;
                 border-left: 5px solid transparent;
                 color: #444;
-                transition: transform .15s ease-in;
+                transition: transform .15s ease-in; */
             }
 
-            &.open {
+/*             &.open {
                 .dropdown-toggle {
                     background-color: inherit;
                     color: inherit;
@@ -560,6 +580,10 @@ html[lang=ja] .navbar {
                 &:hover .dropdown-menu {
                     display: block; // !important;
                 }
+            } */
+
+            .dropdown-menu {
+                display: block; // !important;
             }
 
         }
@@ -573,7 +597,8 @@ html[lang=ja] .navbar {
             max-height: 100vh;
 
             .navbar-menu-wrapper {
-                width: 260px;
+                // width: 260px;
+                width: 100%;
                 min-height: 100vh;
 
                 float: right;
@@ -583,11 +608,28 @@ html[lang=ja] .navbar {
                     margin: 0;
                     padding-bottom: 100px; // For iPhone X
 
-                    > li > a {
-                        color: $nav-item-dark-color;
 
-                        &:hover, &:focus {
+                    > li {
+
+                        margin: 0 20px;
+                        border-bottom: 1px solid $nav-item-bright-color;
+
+                        > a {
                             color: $nav-item-dark-color;
+    
+                            &:hover, &:focus {
+                                color: $nav-item-dark-color;
+                            }
+                        }
+
+                        li {
+                            margin-left: 20px;
+                            border-top: 1px solid $nav-item-bright-color;
+                            height: 45px;
+
+                            a {
+                                color: $nav-item-dark-color;
+                            }
                         }
                     }
                 }
@@ -692,7 +734,7 @@ html[lang=ja] .navbar {
             .navbar-brand {
                 .monaca-logo {
                     height: 22px;
-                    filter: brightness(0) invert(1); //to make SVG logo white regardless of whatever it originally was
+                    // filter: brightness(0) invert(1); //to make SVG logo white regardless of whatever it originally was
                     transition: $header-transition;
                 }
             }
@@ -740,7 +782,7 @@ html[lang=ja] .navbar {
         }
 
         .navbar-toggle > span {
-            background-color: $close-toggle-bg;
+            background-color: $menu-item-color;
         }
 
         .monaca-logo .cls-1 {
@@ -986,7 +1028,7 @@ html[lang=en] .navbar {
                 color: #0088cc;
                 font-size: 1rem;
                 font-weight: 700;
-                padding-left: 16px;
+                // padding-left: 16px;
                 text-align: left;
             }
             .dropdown:hover > .dropdown-toggle {
