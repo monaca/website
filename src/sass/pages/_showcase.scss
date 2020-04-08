@@ -10,6 +10,7 @@ body.showcase-index {
                     bottom: 135px;
                     left: 0;
                     width: 100%;
+                    pointer-events: none;
                     @media screen and (max-width: 700px) {
                         bottom: 69px;
                     }
@@ -71,8 +72,25 @@ body.showcase-index {
                     background-size: cover;
                     background-position: center center;
                     background-repeat: no-repeat;
+                    position: relative;
+                    cursor: pointer;
+
                     @media screen and (max-width: 700px) {
                         height: 300px;
+                    }
+
+                    &:after {
+                        display: block;
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: transparent;
+                        background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                        background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                        pointer-events: none;
                     }
                 }
 
@@ -88,15 +106,19 @@ body.showcase-index {
                     background-image: url("/img/showcase/keyvisual_34.png");
                 }
 
-                &.smbc .img {
-                    background-image: url("/img/showcase/keyvisual_33.jpg");
+                &.fujitec .img {
+                    background-image: url("/img/showcase/carousel_01.jpg");
                 }
-
+                
                 &.monex .img {
-                    background-image: url("/img/showcase/keyvisual_32.jpg");
+                    background-image: url("/img/showcase/carousel_02.jpg");
                 }
 
-                &.secondfactory .img {
+                &.smbc .img {
+                    background-image: url("/img/showcase/carousel_03.jpg");
+                }
+
+                 &.secondfactory .img {
                     background-image: url("/img/showcase/keyvisual_31.jpg");
                 }
             }
@@ -175,6 +197,7 @@ body.showcase-index {
             a {
                 font-size: 14px;
                 text-align: left;
+                text-decoration: none;
 
                 .icon-arrow {
                     height: 10px;
@@ -249,6 +272,7 @@ body.showcase-index {
             //}
 
             .sp-cf {
+                // ???
                 display: inline-block;
                 min-height: 1%;
                 display: block;

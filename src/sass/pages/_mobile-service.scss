@@ -129,11 +129,11 @@ h3{
 
 .showcase{
     color: white;
-    padding-top: 15%;
+    // padding-top: 15%;
     padding-bottom: 5%;
     position: relative;
     overflow: hidden;
-    margin-top: -16%;
+    // margin-top: -16%;
     z-index: -2;
 
     a{
@@ -219,7 +219,7 @@ h3{
 
 }
 
-.showcase::before{
+/*.showcase::before{
     content: "";
     position: absolute;
     width: 130%;
@@ -229,7 +229,7 @@ h3{
     z-index: -1;
     background: #2C6EA8 0 0 repeat;
     transform: rotate(-5deg);
-}
+}*/
 
 .reasons{
     position: relative;

@@ -427,20 +427,21 @@ html[lang=ja] .navbar {
                 transform: translateX(-50%);
                 margin: 0;
                 padding: 7px 0 10px 0;
-                top: 46px; // dropdown-menu (white) should intersects with the header (white) when scrolling
-                // border-radius: 4px;
-                // border-top-left-radius: 4px; // Override...
-                // border-top-right-radius: 4px;
-                border-radius: 0;
+                top: 38px; // dropdown-menu (white) should intersects with the header (white) when scrolling
+                border-radius: 6px;
+                border-top-left-radius: 6px; // Override...
+                border-top-right-radius: 6px;
+                // border-radius: 0;
                 background-color: #fff;
                 // box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
-                box-shadow: 0 1px 0 1px rgba(0,0,0,0.3);
+                // box-shadow: 0 1px 0 1px rgba(0,0,0,0.3);
+                box-shadow: 0 3px 20px 0 rgba(0,0,0,0.16);
                 border: none;
 
                 display: block;
                 pointer-events: none;
                 opacity: 0;
-                transition: opacity .15s ease-out;
+                transition: all .15s ease-out;
 
 
                 & > li {
@@ -467,24 +468,28 @@ html[lang=ja] .navbar {
                     }
                 }
 
-/*                &:before {
+                &:before {
                     content: ' ';
                     display: block;
+                    width: 14px;
+                    height: 14px;
+                    background: white;
                     position: absolute;
-                    border-bottom: 8px dashed;
-                    border-right: 8px solid transparent;
-                    border-left: 8px solid transparent;
+                    border: none;
+                    border-radius: 3px;
                     color: #fff;
-                    top: -8px;
+                    top: -5px;
                     left: 50%;
-                    transform: translateX(-50%);
-                }*/
+                    transform: translateX(-50%) rotate3d(0, 0, 1, 42deg) skewX(-6deg);
+                    z-index: -1;
+                }
             }
 
             &:hover, &:focus {
                 .dropdown-menu {
                     pointer-events: auto;
                     opacity: 1;
+                    top: 46px;
                 }
             }
 
@@ -739,7 +744,7 @@ html[lang=ja] .navbar {
                 }
             }
         }
-
+/*
         .navbar-nav > li {
             // > a {
             //     color: #444;
@@ -751,7 +756,7 @@ html[lang=ja] .navbar {
                     color: #000; // !important;
                 }
             }
-        }
+        }*/
         .navbar-nav > li.login {
             > a.btn {
                 border-color: rgba(0, 0, 0, .1);
