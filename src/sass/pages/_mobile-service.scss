@@ -127,7 +127,7 @@ h3{
     transform: rotate(-5deg);
 }
 
-.showcase{
+.showcase {
     color: white;
     // padding-top: 15%;
     padding-bottom: 5%;
@@ -136,11 +136,11 @@ h3{
     // margin-top: -16%;
     z-index: -2;
 
-    a{
-        text-decoration: inherit; /* no underline */
+/*     a {
+        text-decoration: inherit; //
         cursor: pointer;
         color: #0054AC;
-    }
+    } */
 
     .arrow{
         width: 6%;
@@ -474,4 +474,71 @@ h3{
     transform: rotate(-4deg);
 }
 
+h2.other_case_studies {
+    color: #444444;
+    font-size: 40;
+    text-align: center;
+    margin: 90px auto 60px;
+}
+
+.case-container {
+    display: flex;
+    margin-bottom: 60px;
+}
+
+.cases {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 270px);
+    column-gap: 74px;
+    row-gap: 30px;
+
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: repeat(2, 270px);
+    }
+
+    @media screen and (max-width: 700px) {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 40px;
+        width: 100%;
+        margin-top: 60px;
+    }
+
+    .case {
+        display: flex;
+        flex-direction: column;
+
+        .thumb {
+            width: 270px;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 15px;
+
+            @media screen and (max-width: 700px) {
+                width: 100%;
+                height: unset;
+            }
+        }
+
+        .title {
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: bold;
+            color: #6F777F;
+            text-align: left;
+            margin-bottom: 6px;
+        }
+
+        a {
+            font-size: 14px;
+            text-align: left;
+            text-decoration: none;
+
+            .icon-arrow {
+                height: 10px;
+                margin-left: 3px;
+            }
+        }
+    }
+}
 
