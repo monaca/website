@@ -488,9 +488,14 @@ body.showcase {
                 position: absolute;
                 left: 15%;
                 bottom: 24px;
-                color: white;
                 font-size: 30px;
                 z-index: 9;
+                color: white;
+
+                &.flipped {
+                    left: 20%;
+                    margin-left: 250px;
+                }
 
                 span {
                     display: block;
@@ -505,8 +510,13 @@ body.showcase {
                 position: absolute;
                 right: 15%;
                 bottom: 90px;
-                background: white;
+                background: rgba(255,255,255,.875);
                 z-index: 9;
+
+                &.flipped {
+                    right: initial;
+                    left: 15%;
+                }
 
                 img {
                     display: block;
@@ -639,6 +649,7 @@ body.showcase {
             }
             text-align: left;
             max-height: 100%;
+            color: #333333;
         }
 
         > h1 {
@@ -1009,9 +1020,14 @@ body.showcase {
             
             a {
                 float: right;
-                line-height: 100px;
                 margin-left: 10px;
-                font-size: 64px;
+                margin-top: 30px;
+                
+                &:not(.btn) {
+                    margin-top: 0;
+                    font-size: 64px;
+                    line-height: 100px;
+                }
                 
                 img {
                     height: 48px;

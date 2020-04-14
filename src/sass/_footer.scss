@@ -627,34 +627,25 @@ html[lang=ja] footer.v2-section--footer {
     }
     
     a.social {
-      // background-color: #6f777f;
       display: inline-block;
       vertical-align: text-top;
       width: 32px;
       height: 32px;
       margin-right: 14px;
 
-      & > img {
-        transition: all ease-out .15s;
-        filter: hue-rotate(210deg) saturate(7%) brightness(156%);
+      & > svg {
+        .color {
+          transition: all ease-out .15s;
+          fill: #6f777f;
+        }
       }
       
-      &:hover > img {
-        filter: hue-rotate(205deg) saturate(69%) brightness(180%);
+      &:hover > svg {
+        .color {
+          fill: #47a3e6;
+        }
       }
 
-
-/*      &.twitter {
-        mask-image: url('../img/footer/ico_twitter.svg');
-      }
-
-      &.facebook {
-        mask-image: url('../img/footer/ico_facebook.svg');
-      }*/
-
-      &:hover {
-//        background-color: #47a3e6;
-      }
     }
 
     // In PC mode
