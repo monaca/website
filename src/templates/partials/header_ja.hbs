@@ -69,7 +69,7 @@ component: navbar
                 <ul class="nav navbar-nav navbar-right">
 
                     {{#is language "ja"}}
-                        <li class="navbar-nav__menu dropdown">
+                        <li class="navbar-nav__menu menu_dev dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">ソリューション<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="/dev-support">アプリ開発支援サービス</a></li>
@@ -79,13 +79,13 @@ component: navbar
                                 {{!-- <li class="section-header"><a href="/dev-support.html">サポート体制</a></li> --}}
                             </ul>
                         </li>
-                        <li class="navbar-nav__menu"><a href="/features">Monacaを選ぶ理由</a></li>
-                        <li class="navbar-nav__menu"><a href="/showcase">導入事例</a></li>
-                        <li class="navbar-nav__menu dropdown">
+                        <li class="navbar-nav__menu menu_features"><a href="/features">Monacaを選ぶ理由</a></li>
+                        <li class="navbar-nav__menu menu_show"><a href="/showcase">導入事例</a></li>
+                        <li class="navbar-nav__menu menu_partner dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">エコシステム<span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="/solution_partner/list.html">開発パートナー</a></li>
-                                <li><a href="/product_partner/index.html">プロダクトパートナー</a></li>
+                                <li><a href="/solution-partner/list.html">開発パートナー</a></li>
+                                <li><a href="/product-partner/index.html">プロダクトパートナー</a></li>
                             </ul>
                         </li>
                         <li class="navbar-nav__menu dropdown">
@@ -97,7 +97,7 @@ component: navbar
                                 <li><a href="https://note.asial.co.jp">アシアルnote</a></li>
                             </ul>
                         </li>
-                        <li class="navbar-nav__menu"><a class="contact" href="/support/inquiry.html">お問い合わせ</a></li>
+                        <li class="navbar-nav__menu menu_support"><a class="contact" href="/support/inquiry.html">お問い合わせ</a></li>
 
                         <!--li class="login before-login"><a id="show_loginpopup" class="btn">ログイン</a></li>
                         <li class="trial before-login"><a href="https://monaca.mobi/ja/signup" class="btn orange" onclick="gtag('event', 'view_item', {'event_category': 'engagement','event_label': 'trial-start'});">無料トライアル</a></li>
