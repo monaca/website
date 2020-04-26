@@ -1,185 +1,61 @@
 ---
-title: サポート＆サービス | MonacaでHTML5モバイルアプリ開発
-class: service
-description: Monacaサポート＆サービス - クラウド上のアプリ開発環境。iOS/Android/Windows向けHTML5ハイブリッドアプリに対応。
+title: Monaca - サポート＆学習ガイド
+class: guide-of-study
+description: Monaca - サポート＆学習ガイド
+layout: src/templates/layouts/default.hbs
 ---
 
-  <div id="main-wrap">
-    <section id="support-index" class="subpage">
-      <div class="container">
-        <h1>サポート＆サービス</h1>
+<div class="guide-header">
+  <h1>サポート&学習ガイド</h1>
+  <div class="description">
+    <div class="text">
+      Monacaでは、アプリ開発をスムーズに行えるよう、様々なサポートや学習ガイドを揃えております。
+    </div>
+    <span class="floating-text">改修</span>
+  </div>
+</div>
 
-        <p>下のフォームにて検索キーワード(例:'Android Build', 'Monaca CLI')を入力し、お問い合わせに関する内容をMonacaドキュメントから探すことができます。</p>
-        <div class="aside-search" id="aside-search" style="padding-top: 10px; padding-bottom: 40px;">
-          <input type="search" id="aside-search-doc" placeholder="キーワード"><br />
-        </div>
-
-        <div class="flex-container clearfix">
-          <section class="support-index-box box-04">
-            <h2 class="row2-title">テクニカルサポート・<br>コードレビュー</h2>
-            <img src="/img/service/ico_support_tech.png" alt="Technical Support">
-
-            <div class="support-index-box-description">
-              <p>商用アプリ開発や受託アプリ開発などに関連し、その内容を公開することができない技術的課題について、チケット制のテクニカルサポートを提供いたします。専門知識を持ったテクニカルサポートチームが皆様の課題にお答えします。ご質問への回答がすぐに必要な場合もテクニカルサポートをご利用ください。</p>
-
-              <p>また、テクニカルサポートの延長で、専門知識を持ったテクニカルサポートチームが開発中のソースコードを直接レビューし、コード記述や設定のアドバイスを行うことで課題解決のサポートをいたします。必要によってサンプルコードの提示なども行います。</p>
-              <p style="color:#C00;">サポート内容により必要となるチケット枚数については、下部の「サポートチケットについて」を参照してください。</p>
-            </div>
-            <div class="support-index-box-footer">
-              <a class="btn btn-blue" href="/support/technical/index.html">サポート受付</a>
-            </div>
-          </section>
-          <section class="support-index-box box-01">
-            <h2>Monacaフォーラム</h2>
-            <img src="/img/service/ico_support_forum.png" alt="Monaca Forum">
-
-            <div class="support-index-box-description">
-              <p>Monacaフォーラムでは、Q＆A基盤であるteratail上にてMonacaでのアプリ開発中に発生した技術的な課題について他のユーザーへアドバイスを求めたり、開発に際して役に立つ情報を他のユーザーと共有できます。</p>
-            </div>
-            <div class="support-index-box-footer">
-              <a class="btn btn-blue" href="https://teratail.com/tags/monaca">Monacaフォーラム</a>
-            </div>
-          </section>
-
-          <section class="support-index-box box-03">
-            <h2>一般的なお問い合わせ</h2>
-            <img src="/img/service/ico_support_question.png" alt="General Questions">
-
-            <div class="support-index-box-description">
-              <p>Monacaに関する一般的なお問い合わせを受け付けております。各種ご利用プランのご相談、ボリュームディスカウント、アライアンスに関するお問い合わせはこちらをご利用ください。</p>
-
-              <p style="color:#C00;">アプリ開発に関わる質問および技術的なご質問に関しては、「Monacaフォーラム」もしくは「テクニカルサポート」をご利用ください。</p>
-            </div>
-            <div class="support-index-box-footer">
-              <a class="btn btn-blue" href="/support/inquiry.html">お問い合わせ</a>
-            </div>
-          </section>
-
-          <section class="support-index-box box-02">
-            <h2>障害情報・不具合の報告</h2>
-            <img src="/img/service/ico_support_fault.png" alt="Known Issues">
-
-            <div class="support-index-box-description">
-              <p>Monacaのご利用に際してお気づきになった不具合についてユーザーの皆様からの報告を受け付けております。</p>
-              <p style="color:#C00;">弊社からは、障害情報・不具合の対応状況に関しては「お知らせ」の「障害・不具合情報」でご連絡をさせていただきます。</p>
-
-              <p>弊社よりすぐに回答が必要なお問い合わせに関しては「テクニカルサポート」をご利用ください。</p>
-            </div>
-            <div class="support-index-box-footer">
-              <a class="btn btn-blue" href="/headline/fault.html">障害・不具合情報</a>
-              <a class="btn btn-blue" href="/support/technical/?tag=bugs">障害・不具合情報の報告</a>
-            </div>
-          </section>
-
-          <section class="support-index-box box-05">
-            <h2 class="row2-title">プロフェッショナル<br>サービス</h2>
-            <img src="/img/service/ico_support_pro.png" alt="Professional Service">
-
-            <div class="support-index-box-description">
-              <p>お客様のご要望にあわせて、ハイブリッドアプリケーション開発の経験豊富な専門のエンジニアが、アプリ開発における実装方法の検討から設計レビュー、UI設計、プラグイン開発、パフォーマンスチューニング等の専門サービスを提供いたします。</p>
-            </div>
-            <div class="support-index-box-footer">
-              <a class="btn btn-blue" href="/support/inquiry.html">お問い合わせ</a>
-            </div>
-          </section>
-
-          <section class="support-index-box box-06">
-            <h2>トレーニング</h2>
-            <img src="/img/service/ico_support_training.png" alt="Training">
-
-            <div class="support-index-box-description">
-              <p>アシアル株式会社では、HTML5、JavaScriptを用いたハイブリッドアプリケーション開発を行う上で必要な知識やノウハウを習得するための各種トレーニングメニューをご用意しています。</p>
-            </div>
-            <div class="support-index-box-footer">
-              <a class="btn btn-blue" href="/support/inquiry.html">お問い合わせ</a>
-            </div>
-          </section>
-        </div>
-        <div class="support-index-box-detail-description" id="support-tech-detail">
-          <h3>サポートチケットについて</h3>
-
-          <p>テクニカルサポートおよびコードレビューにはサポートチケットが必要になります。</p>
-          <p>・<span style="text-decoration:underline;">必要となるチケット枚数の目安</span></p>
-          <p><div class="support-ticket-description">チケット 1枚： 過去の類似事象を調査し回答<br/>
-           チケット 2〜4枚： お客様の要望・課題および発生している不具合事象について回答(ソースコードレビューなし)<br/>
-           チケット 5枚以上： お客様の要望・課題および発生している不具合事象について、該当箇所のソースコードレビューを行います。必要によりサンプルプロジェクトを作成して納品<br/>
-           ※ プロジェクト全体をレビューする場合は、プロフェショナルサービスにお問い合わせください。</div></p>
-           <p>・<span style="text-decoration:underline;">契約プランごとのチケット自動付与</span></p>
-           <p><div class="support-ticket-description">サポートチケットは、契約プランに応じて毎月規定数が付与されます。自動付与されたチケット有効期限は、付与月末日です。翌月への繰越はできません。</div></p>
-           <p>・<span style="text-decoration:underline;">チケットの購入方法</span></p>
-           <p><div class="support-ticket-description">チケットの購入に関しては<a style='text-decoration:none;' href='https://docs.monaca.io/ja/faq/general/#how-can-i-buy-the-support-tickets' target='_blank'>こちらのページ</a>をご覧ください。</div></p>
-         </div>
-       </div>
-     </section>
-     <script>
-      $(document).ready(function(){
-        $('.trainee-voice-title').slick({
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          autoplay: true,
-          autoplaySpeed: 8000,
-          dots: false,
-          arrows: false
-        });
-      });
-    </script>
-  </section>
-  <script src="/js/jquery.smoothScroll.js"></script>
-
-
-  <script src="/js/moment.js"></script>
-  <script src="/js/jquery.min.js"></script>
-  <script>
-
-    $(window).load(function() {
-     var fadeInSpeed = 400;
-     $('div.service span#github-published_at').hide();
-     $.ajax({
-      url: 'https://api.github.com/repos/monaca/Localkit/releases',
-      dataType: 'jsonp',
-      success: function(res) {
-       $("div.service span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
-       $('div.service span#github-published_at a strong').text(res.data[0].name);
-       var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
-       $('div.service span#github-published_at span').text(dateJa);
-       $('div.service span#github-published_at').fadeIn(fadeInSpeed);
-     },
-     error: function() {
-       $('div.service span#github-published_at').hide();
-     }
-   });
-   });
-  </script>
-  <script>
-    window.addEventListener("load", function() {
-      $('.trainee-voice-title').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 8000,
-        dots: false,
-        arrows: false
-      });
-    });
-  </script>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script type="text/javascript">
-  {{#is language "ja"}}
-      docsearch({
-      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
-      indexName: 'monaca',
-      inputSelector: '#aside-search-doc',
-      algoliaOptions: { 'facetFilters': ["language:ja"] },
-      debug: false // Set debug to true if you want to inspect the dropdown
-    });
-  {{else}}
-      docsearch({
-      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
-      indexName: 'monaca',
-      inputSelector: '#aside-search-doc',
-      algoliaOptions: { 'facetFilters': ["language:en"] },
-      debug: false // Set debug to true if you want to inspect the dropdown
-    });
-  {{/is}}
-</script>
+<div class="container section links">
+  <div class="links-list">
+    <a href="/documentation.html" class="links-list-item">
+      <img src="" alt="">
+      <h1>ドキュメント</h1>
+      <p>□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□</p>
+    </a>
+    <a href="/training.html" class="links-list-item">
+      <img src="" alt="">
+      <h1>トレーニング</h1>
+      <p>□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□</p>
+    </a>
+    <a class="links-list-item">
+      <img src="" alt="">
+      <h1>アプリ開発サポート</h1>
+      <p>□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□</p>
+    </a>
+    <a href="/books.html" class="links-list-item">
+      <img src="" alt="">
+      <h1>関連書籍</h1>
+      <p>□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□</p>
+    </a>
+    <a href="/tech_support.html" class="links-list-item">
+      <img src="" alt="">
+      <h1>テクニカルサポート</h1>
+      <p>□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□</p>
+    </a>
+    <a href="/enterprise_devops.html" class="links-list-item">
+      <img src="" alt="">
+      <h1>エンタープライズ<br>DevOpsサポート</h1>
+      <p>□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□</p>
+    </a>
+    <a class="links-list-item">
+      <img src="" alt="">
+      <h1><span>公式フォーラム</span><br>teratail</h1>
+      <p>□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□</p>
+    </a>
+    <a class="links-list-item">
+      <img src="" alt="">
+      <h1><span>公式コミュニティ</span><br>Monaca UG<span style="font-size: 14px">（ユーザーグループ）</span></h1>
+      <p>□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□</p>
+    </a>
+  </div>
+</div>
