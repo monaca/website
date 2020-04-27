@@ -242,7 +242,7 @@ html[lang=ja] {
 
                 .monaca-logo {
                     // width: 181.11px;
-                    height: 22px;
+                    height: 26px;
                     transition: $header-transition;
                     .color {
                         fill: $logo-dark-color;
@@ -266,7 +266,7 @@ html[lang=ja] {
 
             &.collapse:not(.in) {
                 .navbar-nav li.navbar-nav__menu {
-                    padding-right: 7px;
+                    padding-right: 25px;
                 }
                 .navbar-nav li .opt {
                     @media screen and (max-width: 870px) {
@@ -295,7 +295,7 @@ html[lang=ja] {
                 }
         
                 .monaca-logo {
-                    height: 22px;
+                    height: 26px;
                     position: absolute;
                     left: 20px;
                     top: 50%;
@@ -345,7 +345,7 @@ html[lang=ja] {
                     color: $nav-item-dark-color;
                     white-space: nowrap;
                     transition: $header-transition;
-                    font-weight: normal;
+                    font-weight: 600;
 
                     &:hover, &:focus {
                         color: $nav-item-darker-color;
@@ -361,8 +361,9 @@ html[lang=ja] {
                     }
         
                     & .caret {
-                        margin-left: 5px;
+                        margin-left: 2px;
                         border-color: $nav-item-dark-color;
+                        opacity: 0.7;
                     }
                 }
             }
@@ -457,7 +458,7 @@ html[lang=ja] {
                     line-height: 66px;
                     // border-radius: 4px;
                     // padding: 8px; // Increase hoverable area
-                    padding: 0 14px;
+                    padding: 0;
                 }
 
                 &:hover > a, &:focus > a {
@@ -544,10 +545,10 @@ html[lang=ja] {
                     position: relative;
                     display: inline-block;
                     box-sizing: border-box;
-                    width: 13px;
-                    height: 13px;
+                    width: 12px;
+                    height: 12px;
                     border-style: solid;
-                    border-width: 0 3px 3px 0;
+                    border-width: 0 2px 2px 0;
                     border-color: rgba(255,255,255,0.5);
                     transform: scale(0.5) rotate(45deg);
                     transition: all .2s ease-out;
@@ -703,14 +704,14 @@ html[lang=ja] {
             height: 100%;
 
             @media screen and (max-width: $v2-break-smartphone) {
-                padding: 0px 20px;
+                padding: 0px 0px 0px 20px;
             }
             @media screen and (min-width: $v2-break-smartphone + 1px) and (max-width: $v2-break-tablet) {
-                padding: 0px 32px;
+                padding: 0px 0px 0px 32px;
             }
             @media screen and (min-width: $v2-break-tablet + 1px) {
                 display: flex;
-                padding: 0px 40px;
+                padding: 0px 0px 0px 30px;
             }
         }
 
@@ -786,7 +787,7 @@ html[lang=ja] {
             .navbar-header {
                 .navbar-brand {
                     .monaca-logo {
-                        height: 22px;
+                        height: 26px;
                         // filter: brightness(0) invert(1); //to make SVG logo white regardless of whatever it originally was
                         transition: $header-transition;
                     }
@@ -878,7 +879,7 @@ html[lang=en] .navbar {
     z-index: 100;
 
     .monaca-logo {
-        height: 22px;
+        height: 26px;
         transition: $header-transition;
     }
 
