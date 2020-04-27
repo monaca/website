@@ -2854,7 +2854,7 @@ html[lang=ja] body.home {
         > h1 {
             margin-top: 100px;
             font-size: 60px;
-            font-weight: normal;
+            font-weight: 600;
             color: white;
             position: relative;
             z-index: 1;
@@ -2897,6 +2897,7 @@ html[lang=ja] body.home {
                     text-align: center;
                     color: white;
                     font-size: 18px;
+                    font-weight: 600;
                 }
 
                 > p {
@@ -2922,6 +2923,7 @@ html[lang=ja] body.home {
                     transform: translate(-50%,0);
                     text-align: center;
                     font-size: 14px;
+                    font-weight: 600;
                     color: #0085B1;
                     text-decoration: none;
                 }
