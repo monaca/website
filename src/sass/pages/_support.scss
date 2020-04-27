@@ -31,10 +31,10 @@ body.support {
   article.main {
     section {
       /* padding-top: 0px; */
-      padding-bottom: 80px;
+      padding-bottom: 12px;
       border: none;
       &:first-child {
-        padding-top: 140px;
+        padding-top: 32px;
       }
       h1 {
         text-align: center;
@@ -211,10 +211,10 @@ body.support {
       }
 
       > h1 {
-        color: #2472b3;
+        color: #444444;
         font-size: 36px;
         line-height: 36px;
-        margin: 0 0 30px;
+        margin: 0 auto 30px;
         text-align: center;
         padding: 0;
         @media screen and (max-width: $break) {
@@ -548,7 +548,7 @@ body.support {
 
 
   #support-inquiry {
-    padding: 100px 0 30px 0;
+    padding: 32px 0 30px 0;
     width: 700px;
     @media screen and (max-width: $break) {
       width: 100%;
@@ -565,11 +565,11 @@ body.support {
         width: auto;
       }
       > h1 {
-        color: #2472b3;
+        color: #444444;
         font-size: 36px;
         line-height: 36px;
         margin: 0 0 70px;
-        text-align: left;
+        text-align: center;
         padding: 0;
         @media screen and (max-width: $break) {
           font-size: 28px;
@@ -641,10 +641,11 @@ body.support {
             height: 226px;
           }
           p {
+            font-size: 20px;
             font-weight: normal;
             line-height: 150%;
             margin: 0 0 10px;
-            color: #333;
+            color: #6F777F;
             padding: 0;
             a {
               text-decoration: underline;
@@ -938,5 +939,27 @@ div.search {
   
   p {
     margin-bottom: 20px !important;
+  }
+}
+
+a.back {
+  color: #0054AC;
+  font-size: 20px;
+  position: relative;
+  float: left;
+  left: -130px;
+
+  &:after {
+      content: 'Previous';
+      display: block;
+      position: absolute;
+      font-size: 14px;
+      left: 24px;
+      bottom: 100%;
+  }
+
+  img {
+      padding-left: 10px;
+      transform: rotate3d(0,0,1,180deg);
   }
 }

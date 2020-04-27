@@ -39,12 +39,13 @@ body.logos article.main {
         border-bottom: none;
     }
     section#pageguide{
-        margin-top: 97px;
+        margin-top: 70px;
         h1 {
-            color: #2472b3;
+            color: #444444;
             font-size: 40px;
-            margin: 0 0 50px;
-            text-align: left;
+            line-height: 48px;
+            margin: 0 0 70px;
+            text-align: center;
             padding: 0;
         }
         @media screen and (max-width: $break) {
@@ -72,12 +73,10 @@ body.logos article.main {
         h3 {
             font-size: 23px;
             text-align: left;
-            
         }
         @media screen and (max-width: $break) {
             h3 {
                 font-size: 20px;
-                
             }
         }
         h3#titlemonaca{
@@ -172,7 +171,7 @@ body.logos article.main {
             margin-bottom: 48px;
             li{
                 list-style-position: inside;
-                list-style-type: disc; 
+                list-style-type: disc;
                 text-align: left;
             }
         }

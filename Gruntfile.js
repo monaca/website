@@ -466,12 +466,12 @@ module.exports = function (grunt) {
             options: {
                 livereload: 35729,
                 hostname: '0.0.0.0',
-                protocol: 'https'
+                protocol: 'http'
             },
             en: {
                 options: {
                     open: {
-                        target: 'https://localhost:3010',
+                        target: 'http://localhost:3010',
                         appName: isWindows ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' : 'Google Chrome'
                     },
                     port: 3010,
@@ -483,7 +483,7 @@ module.exports = function (grunt) {
             ja: {
                 options: {
                     open: {
-                        target: 'https://localhost:3011',
+                        target: 'http://localhost:3011',
                         appName: isWindows ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' : 'Google Chrome'
                     },
                     port: 3011,

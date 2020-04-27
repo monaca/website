@@ -16,7 +16,7 @@ html[lang=ja] body.faq {
             padding-bottom: 9px;
             border-bottom: 1px solid #f0f0f0;
             overflow: hidden;
-            
+
             > .v2-section--faq__wrapper {
                 box-sizing: border-box;
                 margin: 0 auto;
@@ -24,18 +24,21 @@ html[lang=ja] body.faq {
                 max-width: 1024px;
 
                 > .v2-section--faq__title {
-                    margin-top: 112px;
-                    font-size: 35px;
-                    font-weight: 700;
+                    margin-top: 90px;
+                    font-size: 40px;
+                    line-height: 48px;
                     color: #444;
                 }
 
                 > .v2-section--faq__description {
-                    margin: 0 auto;
-                    margin-top: 17px;
-                    font-size: 16px;
-                    line-height: 32px;
+                    margin: 48px auto 0 auto;
+                    font-size: 20px;
+                    line-height: 30px;
                     color: #6f777f;
+
+                    & + .v2-section--faq__category {
+                        margin-top: 70px;
+                    }
                 }
 
                 > .v2-section--faq__category {
@@ -62,17 +65,17 @@ html[lang=ja] body.faq {
                         align-items: flex-start;
                         margin-top: 49px;
                         height: auto;
-    
+
                         > .v2-section--faq__faq {
                             width: 100%;
                             padding: 0 0 46px 0;
-    
+
                             > .v2-section--faq__question {
                                 display: flex;
                                 flex-flow: row nowrap;
                                 color: #444;
                                 text-align: left;
-    
+
                                 .symbol {
                                     width: 32px;
                                     font-size: 21px;
@@ -90,7 +93,7 @@ html[lang=ja] body.faq {
                                 margin-top: 22px;
                                 color: #6f777f;
                                 text-align: left;
-    
+
                                 .symbol {
                                     width: 32px;
                                     font-size: 19px;
@@ -100,7 +103,7 @@ html[lang=ja] body.faq {
                                     font-size: 15.5px;
                                     line-height: 32px;
                                     font-weight: 400;
-    
+
                                     p:last-of-type {
                                         margin-bottom: 0;
                                     }
@@ -117,12 +120,21 @@ html[lang=ja] body.faq {
                 padding: 0 20px;
 
                 > .v2-section--faq__title {
-                    margin-top: 55px;
-                    font-size: 25.5px;
+                    margin-top: 44px;
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: #6F777F;
+                    font-weight: bold;
                 }
-    
+
                 > .v2-section--faq__description {
-                    font-size: 15px;
+                    font-size: 14px;
+                    line-height: 21px;
+                    margin-top: 30px;
+
+                    & + .v2-section--faq__category {
+                        margin-top: 100px;
+                    }
                 }
 
                 > .v2-section--faq__category {
