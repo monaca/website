@@ -273,11 +273,6 @@ html[lang=ja] {
                         display: none;
                     }
                 }
-                .navbar-nav li .caret {
-                    @media screen and (max-width: 1020px) {
-                        display: none;
-                    }
-                }
             }
 
             @media screen and (min-width: $v2-break-tablet + 1px) {
