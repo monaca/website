@@ -123,14 +123,6 @@
     "dbgCommunicationBody": "Monaca Debugger offers useful communication tools like chat and screenshots as standard features. You can send feedback to developers from a device as it runs the app.",
     "dbgDownload": "Monaca Debugger is available for download from the app stores below:",
 
-    "devSupportHeading": "HTML5 Hybrid App <br />Development Support",
-    "devSupportDescription": "We help you overcome all kinds of technical challenges related to HTML5 hybrid app development. Asial provides full support for your app development projects, leveraging our proven experience and knowledge gained from developing Monaca and numerous other apps.",
-    "devSupportSummaryTitle": "A Wide Range of Supported Technologies",
-    "devSupportSummaryBody": "Developing HTML5 hybrid apps requires knowledge of a wide range of technologies such as HTML5, Cordova, Monaca, Onsen UI, and AngularJS. Our service fully supports these technologies.",
-    "devSupportStaffTitle": "Professional Support by HTML5 Hybrid App Development Experts",
-    "devSupportStaffBody": "Having engaged in the research and development of HTML5 hybrid apps since 2009, Asial has accumulated know-how and expertise that has both breadth and depth. We did this through the development of Monaca and many other app projects. We can deliver rapid solutions to address your challenges.",
-    "devSupportMenuTitle": "HTML5 Hybrid App Development Support Menu",
-
     "kidozenHeading": "Enterprise <span>mBaaS</span>",
     "kidozenSummaryTitle": "What is the Enterprise mBaaS \"KidoZen\"?",
     "kidozenSummaryBody": "<p>KidoZen is an enterprise platform that provides end-to-end backend services for secure and efficient enterprise mobile app development. The platform is equipped with a full range of capabilities that will streamline your app development and management while significantly reducing related costs. The capabilities include connectors that integrate existing in-house systems, server capabilities such as push notifications, app store features, and data analytics.</p><p>KidoZen is offered as one of the optional services of Monaca.</p>",
