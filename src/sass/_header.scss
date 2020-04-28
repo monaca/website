@@ -9,6 +9,29 @@ $header-transition: all .2s ease-out;
 $close-toggle-bg: #444;
 
 html[lang=ja] {
+    // --------------------------------
+    // Notes on implementing global navigation and sidebar:
+    // - Please be careful not to let the class names interfere with the existing Bootstrap class names.
+    // --------------------------------
+
+    // Main global nav should be shown always
+    .ja-globalnav {
+        background-color: yellow;
+    }
+    // Sidebar should be shown only when width >= 971px
+    .ja-sidebar {
+        z-index: 100;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100%;
+        background-color: green;
+        opacity: 0.8;
+        @media screen and (min-width: 971px) {
+            display: none;
+        }
+    }
 }
 
 html[lang=en] .navbar {
