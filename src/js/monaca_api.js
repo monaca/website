@@ -60,11 +60,11 @@
     loginData.setPreReady();
 
     if (status.isLogin) {
-      $(".navbar-nav .before-login").remove();
+      $(".navbar-nav .before-login").remove(); // Only for lang="en"
       this.loadLoginData();
       this.showcaseAddEnable(true);
     } else {
-      $(".navbar-nav .after-login").remove();
+      $(".navbar-nav .after-login").remove(); // Only for lang="en"
       loginData.setReady();
       this.showcaseAddEnable(false);
     }

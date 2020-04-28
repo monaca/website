@@ -412,7 +412,7 @@ body.showcase {
         min-width: 0;
     }
 
-    header.navbar {
+    header.navbar { // Only for lang="en"
         min-width: 1170px;
         @media screen and (max-width: 1170px) {
             min-width: 0;
@@ -8042,7 +8042,7 @@ body.showcase.showcase {
         }
     }
 
-    header.navbar {
+    header.navbar { // Only for lang="en"
         @media screen and (max-width: 1170px) {
             min-width: 0;
         }

@@ -486,7 +486,7 @@ body.service {
     position: relative;
     z-index: 100;
   }
-  .navbar {
+  .navbar { // Only for lang="en"
     margin: 0;
     .navbar-header {
       @media screen and (max-width: 970px) {
@@ -494,10 +494,10 @@ body.service {
       }
     }
   }
-  .navbar-right {
+  .navbar-right { // Only for lang="en"
     margin-right: 0;
   }
-  .navbar-header {
+  .navbar-header { // Only for lang="en"
     margin: 0 0 0 10px;
     @media screen and (max-width: 1170px) {
       margin: 0;
@@ -523,7 +523,7 @@ body.service {
       width: 100%;
       box-sizing: border-box;
     }
-    .navbar-right {
+    .navbar-right { // Only for lang="en"
       margin-right: 0;
     }
   }
