@@ -16,7 +16,12 @@ html[lang=ja] {
 
     // Main global nav should be shown always
     .ja-globalnav {
-        background-color: yellow;
+        @media screen and (max-width: 970px) {
+            background-color: cyan;
+        }
+        @media screen and (min-width: 971px) {
+            background-color: yellow;
+        }
     }
     // Sidebar should be shown only when width >= 971px
     .ja-sidebar {
@@ -28,8 +33,11 @@ html[lang=ja] {
         height: 100%;
         background-color: green;
         opacity: 0.8;
-        @media screen and (min-width: 971px) {
+        @media screen and (max-width: 970px) {
             display: none;
+        }
+        @media screen and (min-width: 971px) {
+            display: none; // Should be toggled by JavaScript
         }
     }
 }
