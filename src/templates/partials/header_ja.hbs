@@ -88,10 +88,12 @@ component: navbar
             if (isShown) {
                 // Hide
                 {{!-- document.documentElement.style.overflowY = 'hidden'; --}}
+                sidebarToggleButton.classList.remove('sidebar-shown');
                 sidebar.classList.remove('shown');
             } else {
                 // Show
                 {{!-- document.documentElement.style.overflowY = 'auto'; --}}
+                sidebarToggleButton.classList.add('sidebar-shown');
                 sidebar.classList.add('shown');
             }
         });
