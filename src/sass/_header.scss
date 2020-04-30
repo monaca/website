@@ -150,7 +150,7 @@ html[lang=ja] {
                     height: 4px;
                     background-color: #3B8BE0;
                     opacity: 0;
-                    transform: translateY(calc(-#{$extra-hoverable-height})) scaleY(1);
+                    transform: translateY(#{- $extra-hoverable-height}) scaleY(1);
                     transition: all 0.3s ease-out;
                 }
                 &.selected > div.ja-globalnav__menu-bottom-bar {
@@ -158,7 +158,7 @@ html[lang=ja] {
                 }
                 &:hover.selected > div.ja-globalnav__menu-bottom-bar {
                     opacity: 0;
-                    transform: translateY(calc(-#{$extra-hoverable-height} + 4px)) scaleY(0);
+                    transform: translateY(#{- $extra-hoverable-height + 2px}) scaleY(0);
                 }
 
                 > div.ja-globalnav__menu-dropdown {
