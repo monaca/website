@@ -7,6 +7,7 @@ $logo-blue-color: #0054AC;
 $small-header-bg: rgba($color: #0A6FD9, $alpha: 1);
 $header-transition: all .2s ease-out;
 $close-toggle-bg: #444;
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
 html[lang=ja] {
     // --------------------------------
@@ -153,27 +154,32 @@ html[lang=ja] {
                 width: 18px;
                 height: 6px;
                 &:last-of-type {
-                height: 1px;
-            }
+                    height: 1px;
+                }
                 border-top: 1px solid #8D99A7; // Workaround for broken height in some environment
+            }
         }
-    }
     }
     // Sidebar should be shown only when width >= 971px
     .ja-sidebar {
         z-index: 100;
         position: fixed;
-        top: 0;
+        top: 66px;
         right: 0;
-        width: 200px;
+        border-top: 1px solid #E6E6E6;
+        width: 100%;
         height: 100%;
-        background-color: green;
-        opacity: 0.8;
-        @media screen and (max-width: 970px) {
-            display: none;
-        }
-        @media screen and (min-width: 971px) {
-            display: none; // Should be toggled by JavaScript
+        background-color: white;
+        pointer-events: none;
+        transition: opacity 0.6s $ease-out-expo;
+        opacity: 0;
+        &.shown {
+            opacity: 1;
+            // Force hide in PC mode
+            @media screen and (min-width: 971px) {
+                opacity: 0;
+                pointer-events: none;
+            }
         }
     }
 }

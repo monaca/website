@@ -68,17 +68,32 @@ component: navbar
         </li>
     </ul>
     {{!-- Sidebar toggle button should be shown only in non-PC mode --}}
-    <div class="ja-globalnav__sidebar-toggle-button">
+    <div id="sidebar-toggle-button" class="ja-globalnav__sidebar-toggle-button">
         <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
         <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
         <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
     </div>
 </div>
-<div class="ja-sidebar">
+<div id="sidebar" class="ja-sidebar">
     横幅 970 px 以下のときトグル可能
 </div>
 
 <script>
     (function() {
+        var sidebarToggleButton = document.querySelector('#sidebar-toggle-button');
+        var sidebar = document.querySelector('#sidebar');
+        sidebarToggleButton.addEventListener('click', function(event) {
+            var isShown = sidebar.classList.contains('shown');
+            // Toggle
+            if (isShown) {
+                // Hide
+                {{!-- document.documentElement.style.overflowY = 'hidden'; --}}
+                sidebar.classList.remove('shown');
+            } else {
+                // Show
+                {{!-- document.documentElement.style.overflowY = 'auto'; --}}
+                sidebar.classList.add('shown');
+            }
+        });
     }());
 </script>
