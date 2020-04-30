@@ -22,22 +22,23 @@ html[lang=ja] {
         right: 0;
         left: 0;
         display: flex;
+        align-items: center;
         justify-content: space-between;
         height: 66px;
-        @media screen and (max-width: 970px) {
-            background-color: cyan;
-        }
-        @media screen and (min-width: 971px) {
-            background-color: #fff;
-        }
+        background-color: #fff;
 
         > div.ja-globalnav__logo {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            margin-left: 30px;
             padding: 0;
             height: 100%;
+            @media screen and (max-width: 970px) {
+                margin-left: 22px;
+            }
+            @media screen and (min-width: 971px) {
+                margin-left: 30px;
+            }
 
             a {
                 .monaca-logo {
@@ -63,12 +64,18 @@ html[lang=ja] {
         }
 
         > ul.ja-globalnav__menu-list {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            white-space: nowrap;
-            padding: 0;
-            height: 100%;
+            // Menu list should be shown only in PC mode
+            @media screen and (max-width: 970px) {
+                display: none;
+            }
+            @media screen and (min-width: 971px) {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                white-space: nowrap;
+                padding: 0;
+                height: 100%;
+            }
 
             > li.ja-globalnav__menu {
                 display: inline-flex;
@@ -121,6 +128,30 @@ html[lang=ja] {
                         transform: scale(0.5) rotate(45deg);
                     }
                 }
+            }
+        }
+
+        > div.ja-globalnav__sidebar-toggle-button {
+            // Sidebar toggle button should be shown only in non-PC mode
+            @media screen and (max-width: 970px) {
+                display: inline-flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                margin-right: 16px;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+            @media screen and (min-width: 971px) {
+                display: none;
+            }
+
+            > span.ja-globalnav__sidebar-toggle-button-bar {
+                margin: 2.5px 0;
+                width: 18px;
+                height: 1px;
+                background-color: #8D99A7;
             }
         }
     }

@@ -29,6 +29,7 @@ component: navbar
             </svg>
         </a>
     </div>
+    {{!-- Menu list should be shown only in PC mode --}}
     <ul class="ja-globalnav__menu-list">
         <li class="ja-globalnav__menu{{#_or (_is page.class "platform") (_is page.class "devops") (_is page.class "dev-support")}} selected{{/_or}}">
             {{#_or (_is page.class "platform") (_is page.class "devops") (_is page.class "dev-support")}}<div class="ja-globalnav__menu-subtitle">ソリューション</div>{{/_or}}
@@ -65,7 +66,13 @@ component: navbar
         <li class="ja-globalnav__menu">
             <div class="ja-globalnav__menu-title"><a href="/">お問い合わせ</a></div>
         </li>
-    </li>
+    </ul>
+    {{!-- Sidebar toggle button should be shown only in non-PC mode --}}
+    <div class="ja-globalnav__sidebar-toggle-button">
+        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
+        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
+        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
+    </div>
 </div>
 <div class="ja-sidebar">
     横幅 970 px 以下のときトグル可能
