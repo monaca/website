@@ -82,20 +82,44 @@ component: navbar
     (function() {
         var sidebarToggleButton = document.querySelector('#sidebar-toggle-button');
         var sidebar = document.querySelector('#sidebar');
-        sidebarToggleButton.addEventListener('click', function(event) {
+        var toggleSidebar = function() {
             var isShown = sidebar.classList.contains('shown');
             // Toggle
             if (isShown) {
                 // Hide
-                {{!-- document.documentElement.style.overflowY = 'hidden'; --}}
                 sidebarToggleButton.classList.remove('sidebar-shown');
                 sidebar.classList.remove('shown');
             } else {
                 // Show
-                {{!-- document.documentElement.style.overflowY = 'auto'; --}}
                 sidebarToggleButton.classList.add('sidebar-shown');
                 sidebar.classList.add('shown');
             }
+        }
+
+
+        var isClickHandlerProcessed = false;
+        var isTouchStartHandlerProcessed = false;
+        sidebarToggleButton.addEventListener('click', function(event) {
+            // Prevent duplicate handler execution
+            if (isTouchStartHandlerProcessed) {
+                isClickHandlerProcessed = false;
+                isTouchStartHandlerProcessed = false;
+                return;
+            }
+            isClickHandlerProcessed = true;
+
+            toggleSidebar();
+        });
+        sidebarToggleButton.addEventListener('touchstart', function(event) {
+            // Prevent duplicate handler execution
+            if (isClickHandlerProcessed) {
+                isClickHandlerProcessed = false;
+                isTouchStartHandlerProcessed = false;
+                return;
+            }
+            isTouchStartHandlerProcessed = true;
+
+            toggleSidebar();
         });
     }());
 </script>
