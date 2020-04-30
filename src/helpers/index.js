@@ -5,6 +5,14 @@ module.exports.register = function (Handlebars) {
     return a == b;
   });
 
+  Handlebars.registerHelper('_includes', function(a, b, options) {
+    if (a != null && b != null) {
+      return a.includes(b);
+    } else {
+      return false;
+    }
+  });
+
   Handlebars.registerHelper('_or', function() {
     var len = arguments.length - 1;
     var options = arguments[len];
