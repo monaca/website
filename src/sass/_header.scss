@@ -85,12 +85,15 @@ html[lang=ja] {
             }
 
             > li.ja-globalnav__menu {
+                $extra-hoverable-height: 16px;
+                
+                position: relative;
                 display: inline-flex;
                 flex-flow: column;
                 align-items: flex-start;
                 justify-content: center;
                 margin-right: 25px;
-                height: 100%;
+                height: calc(#{$extra-hoverable-height} + 100% + #{$extra-hoverable-height}); // Extend hoverable area by 16px (top) + 16px (bottom)
 
                 cursor: default;
                 color: $nav-item-dark-color;
@@ -100,13 +103,6 @@ html[lang=ja] {
                 text-decoration: none;
                 &:hover, &:focus {
                     color: $nav-item-darker-color;
-                }
-
-                &.selected {
-                    background-repeat: no-repeat;
-                    background-size: calc(100% - 17px) 4px;
-                    background-position: 0 bottom;
-                    background-image: linear-gradient(#3B8BE0, #3B8BE0);
                 }
 
                 > div.ja-globalnav__menu-subtitle {
@@ -145,6 +141,86 @@ html[lang=ja] {
                         transform: scale(0.5) rotate(45deg);
                     }
                 }
+
+                > div.ja-globalnav__menu-bottom-bar {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: calc(100% - 17px);
+                    height: 4px;
+                    background-color: #3B8BE0;
+                    opacity: 0;
+                    transform: translateY(calc(-#{$extra-hoverable-height})) scaleY(1);
+                    transition: all 0.3s ease-out;
+                }
+                &.selected > div.ja-globalnav__menu-bottom-bar {
+                    opacity: 1;
+                }
+                &:hover.selected > div.ja-globalnav__menu-bottom-bar {
+                    opacity: 0;
+                    transform: translateY(calc(-#{$extra-hoverable-height} + 4px)) scaleY(0);
+                }
+
+                > div.ja-globalnav__menu-dropdown {
+                    position: absolute;
+                    display: block;
+                    top: calc(#{$extra-hoverable-height} + 57px);
+                    left: 50%;
+                    transform: translateX(-50%) translateY(0);
+                    margin: 0;
+                    border-radius: 10px;
+                    padding: 36px;
+                    background-color: #fff;
+                    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
+                    pointer-events: none;
+                    opacity: 0;
+                    transition: all 0.3s ease-out;
+                    text-align: left;
+                    &::before { // Arrow
+                        content: '';
+                        position: absolute;
+                        top: -9px;
+                        left: 50%;
+                        margin-left: calc(-10px - 8px);
+                        border-radius: 2px;
+                        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
+                        width: 20px;
+                        height: 20px;
+                        background: #fff;
+                        transform: scaleX(0.85) rotate(45deg);
+                    }
+                    &::after { // Hide shadow of arrow
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: calc(50% - 50px);
+                        margin-left: -8px;
+                        width: 100px;
+                        height: 36px;
+                        background: #fff;
+                    }
+
+                    a {
+                        color: $nav-item-dark-color;
+                        white-space: nowrap;
+                        transition: $header-transition;
+                        font-size: 14px;
+                        font-weight: normal;
+                        text-decoration: none;
+                
+                        &:hover, &:focus {
+                            color: $nav-item-darker-color;
+                        }
+                    }
+                }
+                &:hover {
+                    > div.ja-globalnav__menu-dropdown {
+                        pointer-events: auto;
+                        opacity: 1;
+                        transform: translateX(-50%) translateY(20px);
+                    }
+                }
+                
             }
         }
 

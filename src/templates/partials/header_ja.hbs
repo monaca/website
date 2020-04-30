@@ -40,12 +40,21 @@ component: navbar
                 {{#is page.class "devops"}}エンタープライズDevOps{{/is}}
                 <span class="ja-globalnav__caret"></span>
             </div>
+            <div class="ja-globalnav__menu-bottom-bar"></div>
+            <div class="ja-globalnav__menu-dropdown">
+                <div><a href="/dev-support/">アプリ開発支援サービス</a></div>
+                <div><a href="/platform/">アプリ開発プラットフォーム</a></div>
+                <div><a href="/devops/">エンタープライズDevOps</a></div>
+                <div><a href="https://edu.monaca.io/" target="_blank" rel="noopener">プログラミング教育</a></div>
+            </div>
         </li>
         <li class="ja-globalnav__menu">
             <div class="ja-globalnav__menu-title"><a href="/why-monaca/">Monacaを選ぶ理由</a></div>
+            <div class="ja-globalnav__menu-bottom-bar"></div>
         </li>
         <li class="ja-globalnav__menu">
             <div class="ja-globalnav__menu-title"><a href="/showcase/">導入事例</a></div>
+            <div class="ja-globalnav__menu-bottom-bar"></div>
         </li>
         <li class="ja-globalnav__menu{{#_or (_is page.class "solution-partner") (_is page.class "product-partner")}} selected{{/_or}}">
             {{#_or (_is page.class "solution-partner") (_is page.class "product-partner")}}<div class="ja-globalnav__menu-subtitle">エコシステム</div>{{/_or}}
@@ -55,12 +64,25 @@ component: navbar
                 {{#is page.class "product-partner"}}プロダクトパートナー{{/is}}
                 <span class="ja-globalnav__caret"></span>
             </div>
+            <div class="ja-globalnav__menu-bottom-bar"></div>
+            <div class="ja-globalnav__menu-dropdown">
+                <div><a href="/solution-partner/">開発パートナー</a></div>
+                <div><a href="/product-partner/">プロダクトパートナー</a></div>
+            </div>
         </li>
         <li class="ja-globalnav__menu">
             <div class="ja-globalnav__menu-title">ブログ<span class="ja-globalnav__caret"></span></div>
+            <div class="ja-globalnav__menu-bottom-bar"></div>
+            <div class="ja-globalnav__menu-dropdown">
+                <div><a href="https://press.monaca.io/" target="_blank" rel="noopener">モナカプレス</a></div>
+                <div><a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">アシアルブログ</a></div>
+                <div><a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">The Web Tub</a></div>
+                <div><a href="https://note.asial.co.jp/" target="_blank" rel="noopener">アシアルnote</a></div>
+            </div>
         </li>
         <li class="ja-globalnav__menu">
             <div class="ja-globalnav__menu-title"><a href="/support/inquiry.html">お問い合わせ</a></div>
+            <div class="ja-globalnav__menu-bottom-bar"></div>
         </li>
     </ul>
     {{!-- Sidebar toggle button should be shown only in non-PC mode --}}
