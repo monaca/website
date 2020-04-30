@@ -148,12 +148,15 @@ html[lang=ja] {
             }
 
             > span.ja-globalnav__sidebar-toggle-button-bar {
-                margin: 2.5px 0;
+                box-sizing: border-box;
                 width: 18px;
+                height: 6px;
+                &:last-of-type {
                 height: 1px;
-                background-color: #8D99A7;
             }
+                border-top: 1px solid #8D99A7; // Workaround for broken height in some environment
         }
+    }
     }
     // Sidebar should be shown only when width >= 971px
     .ja-sidebar {
