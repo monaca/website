@@ -34,12 +34,10 @@ component: navbar
         <li class="ja-globalnav__menu{{#_or (_is page.class "platform") (_is page.class "devops") (_is page.class "dev-support")}} selected{{/_or}}">
             {{#_or (_is page.class "platform") (_is page.class "devops") (_is page.class "dev-support")}}<div class="ja-globalnav__menu-subtitle">ソリューション</div>{{/_or}}
             <div class="ja-globalnav__menu-title">
-                <a href="/">
-                    {{#_nor (_is page.class "platform") (_is page.class "dev-support") (_is page.class "devops")}}ソリューション{{/_nor}}
-                    {{#is page.class "platform"}}アプリ開発プラットフォーム{{/is}}
-                    {{#is page.class "dev-support"}}アプリ開発支援サービス{{/is}}
-                    {{#is page.class "devops"}}エンタープライズDevOps{{/is}}
-                </a>
+                {{#_nor (_is page.class "platform") (_is page.class "dev-support") (_is page.class "devops")}}ソリューション{{/_nor}}
+                {{#is page.class "platform"}}アプリ開発プラットフォーム{{/is}}
+                {{#is page.class "dev-support"}}アプリ開発支援サービス{{/is}}
+                {{#is page.class "devops"}}エンタープライズDevOps{{/is}}
                 <span class="ja-globalnav__caret"></span>
             </div>
         </li>
@@ -52,16 +50,14 @@ component: navbar
         <li class="ja-globalnav__menu{{#_or (_is page.class "solution-partner") (_is page.class "product-partner")}} selected{{/_or}}">
             {{#_or (_is page.class "solution-partner") (_is page.class "product-partner")}}<div class="ja-globalnav__menu-subtitle">エコシステム</div>{{/_or}}
             <div class="ja-globalnav__menu-title">
-                <a href="/">
-                    {{#_nor (_is page.class "solution-partner") (_is page.class "product-partner")}}エコシステム{{/_nor}}
-                    {{#is page.class "solution-partner"}}開発パートナー{{/is}}
-                    {{#is page.class "product-partner"}}プロダクトパートナー{{/is}}
-                </a>
+                {{#_nor (_is page.class "solution-partner") (_is page.class "product-partner")}}エコシステム{{/_nor}}
+                {{#is page.class "solution-partner"}}開発パートナー{{/is}}
+                {{#is page.class "product-partner"}}プロダクトパートナー{{/is}}
                 <span class="ja-globalnav__caret"></span>
             </div>
         </li>
         <li class="ja-globalnav__menu">
-            <div class="ja-globalnav__menu-title"><a href="/">ブログ</a><span class="ja-globalnav__caret"></span></div>
+            <div class="ja-globalnav__menu-title">ブログ<span class="ja-globalnav__caret"></span></div>
         </li>
         <li class="ja-globalnav__menu">
             <div class="ja-globalnav__menu-title"><a href="/support/inquiry.html">お問い合わせ</a></div>

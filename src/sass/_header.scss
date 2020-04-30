@@ -92,6 +92,16 @@ html[lang=ja] {
                 margin-right: 25px;
                 height: 100%;
 
+                cursor: default;
+                color: $nav-item-dark-color;
+                white-space: nowrap;
+                transition: $header-transition;
+                font-weight: 600;
+                text-decoration: none;
+                &:hover, &:focus {
+                    color: $nav-item-darker-color;
+                }
+
                 &.selected {
                     background-repeat: no-repeat;
                     background-size: calc(100% - 17px) 4px;
