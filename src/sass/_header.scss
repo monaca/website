@@ -54,7 +54,7 @@ html[lang=ja] {
                     @media screen and (min-width: 971px) {
                         height: 26px;
                     }
-    
+
                     .color {
                         fill: $logo-dark-color;
         
@@ -190,19 +190,70 @@ html[lang=ja] {
         position: fixed;
         top: 66px;
         right: 0;
-        border-top: 1px solid #E6E6E6;
+        padding-bottom: 120px; // Show whole part of sidebar when scrolling
         width: 100%;
         height: 100%;
         background-color: white;
-        pointer-events: none;
         transition: opacity 0.6s $ease-out-expo;
-        opacity: 0;
+        &:not(.shown) {
+            opacity: 0;
+            pointer-events: none;
+        }
         &.shown {
             opacity: 1;
             // Force hide in PC mode
             @media screen and (min-width: 971px) {
                 opacity: 0;
                 pointer-events: none;
+            }
+            overflow-y: scroll;
+        }
+
+        > div.ja-sidebar__menu-list {
+            box-sizing: border-box;
+            margin: 0 22px;
+            border-top: 1px solid #E6E6E6;
+
+            > div.ja-sidebar__menu {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: flex-start;
+                box-sizing: border-box;
+                height: 44px;
+                padding: 16px 10px;
+                text-align: left;
+                font-size: 12px;
+                font-weight: 600;
+                text-decoration: none;
+                color: $nav-item-dark-color;
+
+                border-top: 1px solid #E6E6E6;
+                &:first-of-type {
+                    border-top: none;
+                }
+                &:last-of-type {
+                    border-bottom: 1px solid #E6E6E6;
+                }
+
+                &.item {
+                    margin-left: 20px;
+                }
+
+                &.group + .item {
+                    border-top: none;
+                    margin-top: -10px;
+                }
+
+                a {
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    color: $nav-item-dark-color;
+                    &:hover, &:focus {
+                        color: $nav-item-darker-color;
+                    }
+                }
             }
         }
     }
