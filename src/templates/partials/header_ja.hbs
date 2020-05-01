@@ -2,6 +2,7 @@
 component: navbar
 ---
 {{!-- New global nav (from May 2020) --}}
+{{#if show_ja_globalnav}}
 <div class="ja-globalnav">
     <div class="ja-globalnav__logo">
         <a href="/">
@@ -165,6 +166,7 @@ component: navbar
         <div class="ja-sidebar__menu group"><a href="/support/inquiry.html">お問い合わせ</a></div>
     </div>
 </div>
+{{/if}}
 {{!-- Show sub navigation in /platform/-related pages --}}
 {{#if show_subnav}}
 <div class="ja-subnav">
@@ -205,6 +207,7 @@ component: navbar
 </div>
 {{/if}}
 
+{{#if show_ja_globalnav}}
 <script>
     (function() {
         var sidebarToggleButton = document.querySelector('#sidebar-toggle-button');
@@ -250,3 +253,4 @@ component: navbar
         });
     }());
 </script>
+{{/if}}
