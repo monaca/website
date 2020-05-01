@@ -116,6 +116,8 @@ html[lang=ja] {
 
                 > div.ja-globalnav__menu-title {
                     a {
+                        display: inline-block;
+                        line-height: 66px;
                         color: $nav-item-dark-color;
                         white-space: nowrap;
                         transition: $header-transition;
@@ -152,6 +154,7 @@ html[lang=ja] {
                         width: 100%;
                     }
                     height: 4px;
+                    pointer-events: none;
                     background-color: #3B8BE0;
                     opacity: 0;
                     transform: translateY(#{- $extra-hoverable-height}) scaleY(1);
@@ -161,6 +164,9 @@ html[lang=ja] {
                     opacity: 1;
                 }
                 &:hover.selected > div.ja-globalnav__menu-bottom-bar {
+                    &.static {
+                        background-color: #0054AC;
+                    }
                     &:not(.static) {
                         opacity: 0;
                         transform: translateY(#{- $extra-hoverable-height + 2px}) scaleY(0);
