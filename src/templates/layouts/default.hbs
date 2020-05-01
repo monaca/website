@@ -135,20 +135,25 @@
 
 <body class="{{class}}">
 
-    {{#unless hideHeader}}
-    {{#is language "ja"}}{{> header_ja }}{{else}}{{> header_en }}{{/is}}
-    {{/unless}}
+    
+    {{#is language "ja"}}
+    {{> header_ja }}
+    {{else}}
+    {{#unless hideHeader}}{{> header_en }}{{/unless}}
+    {{/is}}
     {{> loginPopup }}
     {{> notificationHeader }}
-    <article class="main" role="main">
+    <article class="main" role="main"{{#is language "ja"}}{{#if show_ja_globalnav}}{{#if show_ja_subnav}} style="padding-top: 122px;"{{else}} style="padding-top: 66px;"{{/if}}{{/if}}{{else}}{{#unless hideHeader}} style="padding-top: 50px;"{{/unless}}{{/is}}>
 
       {{> body }}
 
     </article>
 
-    {{#unless hideFooter}}
-    {{#is language "ja"}}{{> footer_ja }}{{else}}{{> footer_en }}{{/is}}
-    {{/unless}}
+    {{#is language "ja"}}
+    {{> footer_ja }}
+    {{else}}
+    {{#unless hideFooter}}{{> footer_en }}{{/unless}}
+    {{/is}}
 
     <script>
         window.MONACA_API_URL = "{{site.monaca_api}}";

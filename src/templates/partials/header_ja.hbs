@@ -2,6 +2,7 @@
 component: navbar
 ---
 {{!-- New global nav (from May 2020) --}}
+{{#if show_ja_globalnav}}
 <div class="ja-globalnav">
     <div class="ja-globalnav__logo">
         <a href="/">
@@ -165,7 +166,48 @@ component: navbar
         <div class="ja-sidebar__menu group"><a href="/support/inquiry.html">お問い合わせ</a></div>
     </div>
 </div>
+{{/if}}
+{{!-- Show sub navigation in /platform/-related pages --}}
+{{#if show_ja_subnav}}
+<div class="ja-subnav">
+    <div class="ja-subnav__top-bar"></div>
+    <div class="ja-subnav__title">
+        Monaca開発プラットフォーム
+    </div>
+    {{!-- Menu list should be shown only in PC mode --}}
+    <ul class="ja-subnav__menu-list">
+        <li class="ja-subnav__menu">
+            <div class="ja-subnav__menu-title">特徴<span class="ja-subnav__caret"></span></div>
+        </li>
+        <li class="ja-subnav__menu">
+            <div class="ja-subnav__menu-title">Monacaを知る<span class="ja-subnav__caret"></span></div>
+        </li>
+        <li class="ja-subnav__menu">
+            <div class="ja-subnav__menu-title">学習ガイド<span class="ja-subnav__caret"></span></div>
+        </li>
+        <li class="ja-subnav__menu">
+            <div class="ja-subnav__menu-title">料金プラン</div>
+        </li>
+        <li class="ja-subnav__menu">
+            <div class="ja-subnav__menu-button blue">ログイン</div>
+        </li>
+        <li class="ja-subnav__menu">
+            <div class="ja-subnav__menu-button blue-ghost">無料トライアル</div>
+        </li>
+        <li class="ja-subnav__menu">
+            <div class="ja-subnav__menu-button green">ダッシュボード</div>
+        </li>
+    </ul>
+    {{!-- Sidebar toggle button should be shown only in non-PC mode --}}
+    {{!-- <div id="sidebar-toggle-button" class="ja-subnav__sidebar-toggle-button">
+        <span class="ja-subnav__sidebar-toggle-button-bar"></span>
+        <span class="ja-subnav__sidebar-toggle-button-bar"></span>
+        <span class="ja-subnav__sidebar-toggle-button-bar"></span>
+    </div> --}}
+</div>
+{{/if}}
 
+{{#if show_ja_globalnav}}
 <script>
     (function() {
         var sidebarToggleButton = document.querySelector('#sidebar-toggle-button');
@@ -211,3 +253,4 @@ component: navbar
         });
     }());
 </script>
+{{/if}}

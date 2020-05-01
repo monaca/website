@@ -13,6 +13,18 @@ module.exports.register = function (Handlebars) {
     }
   });
 
+  Handlebars.registerHelper('_and', function() {
+    var len = arguments.length - 1;
+    var options = arguments[len];
+  
+    for (var i = 0; i < len; i++) {
+      if (!arguments[i]) {
+        return options.inverse(this); // = false
+      }
+    }
+    return options.fn(this); // = true
+  });
+
   Handlebars.registerHelper('_or', function() {
     var len = arguments.length - 1;
     var options = arguments[len];
