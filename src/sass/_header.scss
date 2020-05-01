@@ -17,7 +17,7 @@ html[lang=ja] {
 
     // Main global nav should be shown always
     .ja-globalnav {
-        z-index: 100;
+        z-index: 200;
         position: fixed;
         top: 0;
         right: 0;
@@ -459,6 +459,155 @@ html[lang=ja] {
                     > .ja-sidebar__menu-exlink {
                         margin-left: 4px;
                     }
+                }
+            }
+        }
+    }
+
+    // Sub nav should be shown in /platform/-related pages
+    .ja-subnav {
+        z-index: 100;
+        position: fixed;
+        top: 66px;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 56px;
+        background-color: #fff;
+
+        > div.ja-subnav__top-bar {
+            position: absolute;
+            top: 0;
+            @media screen and (max-width: 970px) {
+                left: 22px;
+                width: calc(100% - 22px * 2);
+            }
+            @media screen and (min-width: 971px) {
+                left: 30px;
+                width: calc(100% - 30px * 2 + 8px);
+            }
+            height: 1px;
+            pointer-events: none;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        > div.ja-subnav__title {
+            cursor: default;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            height: 100%;
+            @media screen and (max-width: 970px) {
+                margin-left: 22px;
+            }
+            @media screen and (min-width: 971px) {
+                margin-left: 30px;
+            }
+            color: #132C47;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        > ul.ja-subnav__menu-list {
+            // Menu list should be shown only in PC mode
+            @media screen and (max-width: 970px) {
+                display: none;
+            }
+            @media screen and (min-width: 971px) {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                white-space: nowrap;
+                padding: 0;
+                height: 100%;
+            }
+
+            > li.ja-subnav__menu {
+                $extra-hoverable-height: 16px;
+                
+                position: relative;
+                display: inline-flex;
+                flex-flow: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin-right: 25px;
+                height: calc(#{$extra-hoverable-height} + 100% + #{$extra-hoverable-height}); // Extend hoverable area by 16px (top) + 16px (bottom)
+
+                cursor: default;
+                color: #8D99A7;
+                white-space: nowrap;
+                transition: $header-transition;
+                font-size: 13px;
+                font-weight: 600;
+                text-decoration: none;
+                &:hover, &:focus {
+                    color: #42566C;
+                }
+
+                > div.ja-subnav__menu-title {
+                    a {
+                        display: inline-block;
+                        line-height: 56px;
+                        color: #8D99A7;
+                        white-space: nowrap;
+                        transition: $header-transition;
+                        font-size: 13px;
+                        font-weight: 600;
+                        text-decoration: none;
+                        &:hover, &:focus {
+                            color: #42566C;
+                        }
+                    }
+
+                    span.ja-subnav__caret {
+                        position: relative;
+                        display: inline-block;
+                        box-sizing: border-box;
+                        margin-left: 2px;
+                        width: 12px;
+                        height: 12px;
+                        border-style: solid;
+                        border-width: 0 2px 2px 0;
+                        border-color: $nav-item-dark-color;
+                        opacity: 0.7;
+                        vertical-align: baseline;
+                        transform: scale(0.5) rotate(45deg);
+                    }
+                }
+
+                > div.ja-subnav__menu-button {
+                    box-sizing: border-box;
+                    display: inline-flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: center;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+                    border-radius: 14px;
+                    padding: 8px 12px;
+                    height: 28px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    &.blue {
+                        border: none;
+                        background-color: #3B8BE0;
+                        color: #fff;
+                    }
+                    &.blue-ghost {
+                        border: 1px solid #3B8BE0;
+                        background-color: #fff;
+                        color: #3B8BE0;
+                    }
+                    &.green {
+                        border: none;
+                        background-color: #65AD3E;
+                        color: #fff;
+                    }
+                }
+
+                > div.ja-subnav__menu-green-button {
                 }
             }
         }
