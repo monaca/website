@@ -1,222 +1,213 @@
 ---
 component: navbar
 ---
-<!-- Fixed navbar -->
-<nav
-    class="
-        navbar
-        navbar-inverse
-        {{#if fixednav}}navbar-fixed-top{{/if}}
-        {{#is class "home"}}home{{/is}}
-    "
-    role="navigation"
->
-        {{#is class "home"}}
-        <div class="container">
-        {{else}}
-        <div class="container small">
-        {{/is}}
-
-        <div class="navbar-header" id="header-top">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">
-                <svg class="monaca-logo" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181.11 40">
-                    <title>img_logo</title>
-                    <symbol style="display: none;">
-                        <g id="logo">
-                            <path d="M32.34,0H7.66A7.69,7.69,0,0,0,0,7.66V32.34A7.69,7.69,0,0,0,7.66,40H32.34A7.69,7.69,0,0,0,40,32.34V7.66A7.69,7.69,0,0,0,32.34,0ZM27.78,27.78H12.22V12.22H27.78Z" transform="translate(0)"/>
-                        </g>
-                        <g id="logo_text">
-                            <path d="M74.46,31.26H72.38s0-1.6,0-2.21V15.18L66.3,25.69a6.9,6.9,0,0,1-1,1.37,2.43,2.43,0,0,1-1.64.54A2.47,2.47,0,0,1,62,27.06a5,5,0,0,1-1-1.37L54.62,15.18V29c0,.61,0,2.21,0,2.21H52.54a1.93,1.93,0,0,1-1.47-.66A2.25,2.25,0,0,1,50.5,29V11.79a3.1,3.1,0,0,1,.78-2.1,2.52,2.52,0,0,1,2-.91h1.13a2.45,2.45,0,0,1,1.57.57,5,5,0,0,1,1,1.34l6.73,11.4,6.44-11.4a6.3,6.3,0,0,1,1-1.34,2.26,2.26,0,0,1,1.57-.57h1.13a2.51,2.51,0,0,1,2,.91,3.1,3.1,0,0,1,.78,2.1V29a2.25,2.25,0,0,1-.57,1.55A1.93,1.93,0,0,1,74.46,31.26Z" transform="translate(0)"/>
-                            <path d="M90.52,31.45a8.45,8.45,0,0,1-6.76-3,11.33,11.33,0,0,1-2.52-7.64,11.33,11.33,0,0,1,2.52-7.64,9.2,9.2,0,0,1,13.51,0,11.43,11.43,0,0,1,2.52,7.64,11.42,11.42,0,0,1-2.52,7.64A8.52,8.52,0,0,1,90.52,31.45Zm0-17a4.68,4.68,0,0,0-4.68,3.38,8.53,8.53,0,0,0-.48,3,8.5,8.5,0,0,0,.48,3,5.71,5.71,0,0,0,1.21,2,4.52,4.52,0,0,0,1.64,1.08,4.88,4.88,0,0,0,3.62,0A4.84,4.84,0,0,0,94,25.87a6.92,6.92,0,0,0,1.7-5,6.89,6.89,0,0,0-1.71-5A4.61,4.61,0,0,0,90.52,14.43Z" transform="translate(0)"/>
-                            <path d="M118.82,31.26h-2V18.61a5.38,5.38,0,0,0-.78-3.12,2.81,2.81,0,0,0-2.49-1c-1.8,0-3.52,1.12-5.12,3.32V29c0,.61,0,2.21,0,2.21h-2.08a1.93,1.93,0,0,1-1.47-.66,2.25,2.25,0,0,1-.57-1.55V12.71a2.3,2.3,0,0,1,.57-1.59,1.93,1.93,0,0,1,1.47-.66,2,2,0,0,1,1.48.65,2.27,2.27,0,0,1,.6,1.6V13A9.53,9.53,0,0,1,110,11.6a7.44,7.44,0,0,1,4-1.34,6.76,6.76,0,0,1,3.13.65,6.27,6.27,0,0,1,2.09,1.76,8.88,8.88,0,0,1,1.72,5.56V29a2.2,2.2,0,0,1-.6,1.56A2,2,0,0,1,118.82,31.26Z" transform="translate(0)"/>
-                            <path d="M131,31.45a6,6,0,0,1-4.29-1.66,6.09,6.09,0,0,1-1.8-4.55,5.94,5.94,0,0,1,2.1-4.8,9.56,9.56,0,0,1,6.28-1.87h3.65a4.29,4.29,0,0,0-1-3.08,4.39,4.39,0,0,0-3.12-.95,13.42,13.42,0,0,0-4.39.89h0a2.78,2.78,0,0,1-.75.1,1.52,1.52,0,0,1-1.08-.56,2.23,2.23,0,0,1-.51-1.58,1.82,1.82,0,0,1,1.18-1.71,14.28,14.28,0,0,1,6.18-1.42,7.09,7.09,0,0,1,5.8,2.55A8.28,8.28,0,0,1,141,18.27V29a2.21,2.21,0,0,1-.6,1.56,2,2,0,0,1-1.48.65h-2v-2a11.82,11.82,0,0,1-1.74,1.22A8.27,8.27,0,0,1,131,31.45Zm2.71-9.1a8.23,8.23,0,0,0-3.58.63A1.89,1.89,0,0,0,129,24.86c0,1.09.33,2.55,3.13,2.55a5.05,5.05,0,0,0,2.73-.8,8.84,8.84,0,0,0,2-1.74V22.35Z" transform="translate(0)"/>
-                            <path d="M154.45,31.45a9.13,9.13,0,0,1-6.77-2.82,10.72,10.72,0,0,1-2.89-7.78,10.72,10.72,0,0,1,2.88-7.78,9.13,9.13,0,0,1,6.77-2.82,8.83,8.83,0,0,1,3.58.63,12.56,12.56,0,0,1,2.2,1.21,2.06,2.06,0,0,1,1,1.66,2.38,2.38,0,0,1-.48,1.48,1.47,1.47,0,0,1-1.15.69,2.78,2.78,0,0,1-1.46-.46,6.48,6.48,0,0,0-3.41-1,5.33,5.33,0,0,0-4.28,1.71,6.83,6.83,0,0,0-1.52,4.64,6.83,6.83,0,0,0,1.52,4.64,5.33,5.33,0,0,0,4.28,1.71,6.48,6.48,0,0,0,3.41-1,2.62,2.62,0,0,1,1.36-.45,1.56,1.56,0,0,1,1.25.69,2.39,2.39,0,0,1,.48,1.48,2.06,2.06,0,0,1-1,1.66A9.69,9.69,0,0,1,154.45,31.45Z" transform="translate(0)"/>
-                            <path d="M171,31.45a6,6,0,0,1-4.29-1.66,6.09,6.09,0,0,1-1.8-4.55,5.94,5.94,0,0,1,2.1-4.8,9.56,9.56,0,0,1,6.28-1.87H177a4.29,4.29,0,0,0-1-3.08,4.39,4.39,0,0,0-3.12-.95,13.41,13.41,0,0,0-4.39.89h0a2.79,2.79,0,0,1-.75.1,1.51,1.51,0,0,1-1.08-.56,2.22,2.22,0,0,1-.51-1.58,1.82,1.82,0,0,1,1.18-1.71,14.28,14.28,0,0,1,6.18-1.42,7.09,7.09,0,0,1,5.8,2.55,8.27,8.27,0,0,1,1.83,5.46V29a2.21,2.21,0,0,1-.6,1.56,2,2,0,0,1-1.48.65h-2v-2a11.9,11.9,0,0,1-1.74,1.22A8.27,8.27,0,0,1,171,31.45Zm2.71-9.1a8.23,8.23,0,0,0-3.58.63,1.89,1.89,0,0,0-1.09,1.88c0,1.09.33,2.55,3.13,2.55a5,5,0,0,0,2.73-.8,8.84,8.84,0,0,0,2-1.74V22.35Z" transform="translate(0)"/>
-                        </g>
-                    </symbol>
-                    <g class="color logo_color">
-                        <use xlink:href="#logo" />
+{{!-- New global nav (from May 2020) --}}
+<div class="ja-globalnav">
+    <div class="ja-globalnav__logo">
+        <a href="/">
+            <svg class="monaca-logo" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181.11 40">
+                <title>img_logo</title>
+                <symbol style="display: none;">
+                    <g id="logo">
+                        <path d="M32.34,0H7.66A7.69,7.69,0,0,0,0,7.66V32.34A7.69,7.69,0,0,0,7.66,40H32.34A7.69,7.69,0,0,0,40,32.34V7.66A7.69,7.69,0,0,0,32.34,0ZM27.78,27.78H12.22V12.22H27.78Z" transform="translate(0)"/>
                     </g>
-                    <g class="color">
-                        <use xlink:href="#logo_text" />
+                    <g id="logo_text">
+                        <path d="M74.46,31.26H72.38s0-1.6,0-2.21V15.18L66.3,25.69a6.9,6.9,0,0,1-1,1.37,2.43,2.43,0,0,1-1.64.54A2.47,2.47,0,0,1,62,27.06a5,5,0,0,1-1-1.37L54.62,15.18V29c0,.61,0,2.21,0,2.21H52.54a1.93,1.93,0,0,1-1.47-.66A2.25,2.25,0,0,1,50.5,29V11.79a3.1,3.1,0,0,1,.78-2.1,2.52,2.52,0,0,1,2-.91h1.13a2.45,2.45,0,0,1,1.57.57,5,5,0,0,1,1,1.34l6.73,11.4,6.44-11.4a6.3,6.3,0,0,1,1-1.34,2.26,2.26,0,0,1,1.57-.57h1.13a2.51,2.51,0,0,1,2,.91,3.1,3.1,0,0,1,.78,2.1V29a2.25,2.25,0,0,1-.57,1.55A1.93,1.93,0,0,1,74.46,31.26Z" transform="translate(0)"/>
+                        <path d="M90.52,31.45a8.45,8.45,0,0,1-6.76-3,11.33,11.33,0,0,1-2.52-7.64,11.33,11.33,0,0,1,2.52-7.64,9.2,9.2,0,0,1,13.51,0,11.43,11.43,0,0,1,2.52,7.64,11.42,11.42,0,0,1-2.52,7.64A8.52,8.52,0,0,1,90.52,31.45Zm0-17a4.68,4.68,0,0,0-4.68,3.38,8.53,8.53,0,0,0-.48,3,8.5,8.5,0,0,0,.48,3,5.71,5.71,0,0,0,1.21,2,4.52,4.52,0,0,0,1.64,1.08,4.88,4.88,0,0,0,3.62,0A4.84,4.84,0,0,0,94,25.87a6.92,6.92,0,0,0,1.7-5,6.89,6.89,0,0,0-1.71-5A4.61,4.61,0,0,0,90.52,14.43Z" transform="translate(0)"/>
+                        <path d="M118.82,31.26h-2V18.61a5.38,5.38,0,0,0-.78-3.12,2.81,2.81,0,0,0-2.49-1c-1.8,0-3.52,1.12-5.12,3.32V29c0,.61,0,2.21,0,2.21h-2.08a1.93,1.93,0,0,1-1.47-.66,2.25,2.25,0,0,1-.57-1.55V12.71a2.3,2.3,0,0,1,.57-1.59,1.93,1.93,0,0,1,1.47-.66,2,2,0,0,1,1.48.65,2.27,2.27,0,0,1,.6,1.6V13A9.53,9.53,0,0,1,110,11.6a7.44,7.44,0,0,1,4-1.34,6.76,6.76,0,0,1,3.13.65,6.27,6.27,0,0,1,2.09,1.76,8.88,8.88,0,0,1,1.72,5.56V29a2.2,2.2,0,0,1-.6,1.56A2,2,0,0,1,118.82,31.26Z" transform="translate(0)"/>
+                        <path d="M131,31.45a6,6,0,0,1-4.29-1.66,6.09,6.09,0,0,1-1.8-4.55,5.94,5.94,0,0,1,2.1-4.8,9.56,9.56,0,0,1,6.28-1.87h3.65a4.29,4.29,0,0,0-1-3.08,4.39,4.39,0,0,0-3.12-.95,13.42,13.42,0,0,0-4.39.89h0a2.78,2.78,0,0,1-.75.1,1.52,1.52,0,0,1-1.08-.56,2.23,2.23,0,0,1-.51-1.58,1.82,1.82,0,0,1,1.18-1.71,14.28,14.28,0,0,1,6.18-1.42,7.09,7.09,0,0,1,5.8,2.55A8.28,8.28,0,0,1,141,18.27V29a2.21,2.21,0,0,1-.6,1.56,2,2,0,0,1-1.48.65h-2v-2a11.82,11.82,0,0,1-1.74,1.22A8.27,8.27,0,0,1,131,31.45Zm2.71-9.1a8.23,8.23,0,0,0-3.58.63A1.89,1.89,0,0,0,129,24.86c0,1.09.33,2.55,3.13,2.55a5.05,5.05,0,0,0,2.73-.8,8.84,8.84,0,0,0,2-1.74V22.35Z" transform="translate(0)"/>
+                        <path d="M154.45,31.45a9.13,9.13,0,0,1-6.77-2.82,10.72,10.72,0,0,1-2.89-7.78,10.72,10.72,0,0,1,2.88-7.78,9.13,9.13,0,0,1,6.77-2.82,8.83,8.83,0,0,1,3.58.63,12.56,12.56,0,0,1,2.2,1.21,2.06,2.06,0,0,1,1,1.66,2.38,2.38,0,0,1-.48,1.48,1.47,1.47,0,0,1-1.15.69,2.78,2.78,0,0,1-1.46-.46,6.48,6.48,0,0,0-3.41-1,5.33,5.33,0,0,0-4.28,1.71,6.83,6.83,0,0,0-1.52,4.64,6.83,6.83,0,0,0,1.52,4.64,5.33,5.33,0,0,0,4.28,1.71,6.48,6.48,0,0,0,3.41-1,2.62,2.62,0,0,1,1.36-.45,1.56,1.56,0,0,1,1.25.69,2.39,2.39,0,0,1,.48,1.48,2.06,2.06,0,0,1-1,1.66A9.69,9.69,0,0,1,154.45,31.45Z" transform="translate(0)"/>
+                        <path d="M171,31.45a6,6,0,0,1-4.29-1.66,6.09,6.09,0,0,1-1.8-4.55,5.94,5.94,0,0,1,2.1-4.8,9.56,9.56,0,0,1,6.28-1.87H177a4.29,4.29,0,0,0-1-3.08,4.39,4.39,0,0,0-3.12-.95,13.41,13.41,0,0,0-4.39.89h0a2.79,2.79,0,0,1-.75.1,1.51,1.51,0,0,1-1.08-.56,2.22,2.22,0,0,1-.51-1.58,1.82,1.82,0,0,1,1.18-1.71,14.28,14.28,0,0,1,6.18-1.42,7.09,7.09,0,0,1,5.8,2.55,8.27,8.27,0,0,1,1.83,5.46V29a2.21,2.21,0,0,1-.6,1.56,2,2,0,0,1-1.48.65h-2v-2a11.9,11.9,0,0,1-1.74,1.22A8.27,8.27,0,0,1,171,31.45Zm2.71-9.1a8.23,8.23,0,0,0-3.58.63,1.89,1.89,0,0,0-1.09,1.88c0,1.09.33,2.55,3.13,2.55a5,5,0,0,0,2.73-.8,8.84,8.84,0,0,0,2-1.74V22.35Z" transform="translate(0)"/>
                     </g>
-                </svg>
-            </a>
-            <div class="nav-docu" style="display: none;"><a href="https://docs.monaca.io/ja/rpg_tkool/" target="_blank">ご利用方法</a></div> <!-- width: 767px以下の表示 -->
-        </div>
-
-        <div class="navbar-collapse collapse" id="navbar-menu">
-            <div class="navbar-menu-wrapper">
-                <div class="navbar-menu-toolbar">
-                    <svg class="monaca-logo" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181.11 40">
-                        <title>img_logo</title>
-                        <g class="color">
-                            <use xlink:href="#logo" />
-                            <use xlink:href="#logo_text" />
-                        </g>
-                    </svg>
-                    <button type="button" class="navbar-toggle collapsed navbar-close" data-toggle="collapse" data-target="#navbar-menu">
-                        <span></span>
-                        <span></span>
-                    </button>
-                </div>
-
-                <ul class="nav navbar-nav navbar-right">
-
-                    {{#is language "ja"}}
-                        <li class="navbar-nav__menu menu_dev dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ソリューション<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/dev-support">アプリ開発支援サービス</a></li>
-                                <li><a href="/devops">エンタープライズDevOps</a></li>
-                                <li><a href="https://edu.monaca.io/">プログラミング教育</a></li>
-                                <li><a href="/platform">アプリ開発プラットフォーム</a></li>
-                                {{!-- <li class="section-header"><a href="/dev-support.html">サポート体制</a></li> --}}
-                            </ul>
-                        </li>
-                        <li class="navbar-nav__menu menu_features"><a href="/features">Monacaを選ぶ理由</a></li>
-                        <li class="navbar-nav__menu menu_show"><a href="/showcase">導入事例</a></li>
-                        <li class="navbar-nav__menu menu_partner dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">エコシステム<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/solution-partner/list.html">開発パートナー</a></li>
-                                <li><a href="/product-partner/index.html">プロダクトパートナー</a></li>
-                            </ul>
-                        </li>
-                        <li class="navbar-nav__menu dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">ブログ<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="https://press.monaca.io/">モナカプレス</a></li>
-                                <li><a href="https://blog.asial.co.jp/">アシアルブログ</a></li>
-                                <li><a href="https://medium.com/the-web-tub">The Web Tub</a></li>
-                                <li><a href="https://note.asial.co.jp">アシアルnote</a></li>
-                            </ul>
-                        </li>
-                        <li class="navbar-nav__menu menu_support"><a class="contact" href="/support/inquiry.html">お問い合わせ</a></li>
-
-                        <!--li class="login before-login"><a id="show_loginpopup" class="btn">ログイン</a></li>
-                        <li class="trial before-login"><a href="https://monaca.mobi/ja/signup" class="btn orange" onclick="gtag('event', 'view_item', {'event_category': 'engagement','event_label': 'trial-start'});">無料トライアル</a></li>
-                        <li class="trial after-login"><a href="https://monaca.mobi/{{language}}/dashboard" class="btn orange">ダッシュボード</a></li-->
-
-                    {{else}}
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{i18n "products"}}</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/cloud.html">{{i18n "monacaCloud"}}</a></li>
-                                <li><a href="/debugger.html">{{i18n "monacaDebugger"}}</a></li>
-                                <li><a href="/localkit.html">Monaca Localkit</a></li>
-                                {{#is language "ja"}}<li><a href="https://edu.monaca.io/" target="_blank">{{i18n "monacaAcademic"}}</a></li>{{/is}}
-                                {{#is language "ja"}}<li><a href="http://ja.onsen.io/">Onsen UI</a></li>{{else}}<li><a href="http://onsen.io/">Onsen UI</a></li>{{/is}}
-                                <li><a href="/enterprise.html">{{i18n "monacaEnterprise"}}</a></li>
-                                {{#is language "en"}}<li><a href="/cli.html">{{i18n "monacaCli"}}</a></li>{{/is}}
-                                <li><a href="/ci.html">{{i18n "monacaCi"}}</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pricing</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/pricing.html">{{i18n "pricing"}}</a></li>
-                                <li><a href="https://monaca.mobi/en/payment/activation_code_input" target="_blamk">Use Activation Code</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{i18n "resources"}}</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/headline/">Updates</a></li>
-                                <li><a href="https://docs.monaca.io/en/" target="_blank">Docs<!-- <i class="glyphicon glyphicon-new-window">&nbsp;</i>--></a></li>
-                                <li><a href="/great-apps.html">Showcase</a></li>
-                                <li><a href="https://community.onsen.io/">Forum</a></li>
-                                <li><a href="/product-partner/">Partners</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="https://onsen.io/blog/">Blog</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{i18n "services"}}</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/service/index.html">{{i18n "support"}} {{i18n "andServices"}}</a></li>
-                                <li><a href="/logos.html">Logo Guideline</a></li>
-                            </ul>
-                        </li>
-                        {{#is class "home"}}
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle">
-                                    <img src={{i18n "langIcon"}}> {{i18n "fullLang"}}
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li {{#is language "en"}} style="display: none" {{/is}}>
-                                        <a href="https://monaca.io/">
-                                            <img src="/img/icon/en.png"> English
-                                        </a>
-                                    </li>
-                                    <li {{#is language "ja"}} style="display: none" {{/is}}>
-                                        <a href="https://ja.monaca.io/" >
-                                            <img src="/img/icon/ja.png"> 日本語
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        {{/is}}
-
-                        <li id="signup_link"><a href="{{site.monaca_api}}/signup" class="login before-login">{{i18n "signup"}}</a></li>
-                        <li id="show_loginpopup_li"><a href="javascript:void(0)" id="show_loginpopup" class="login before-login">{{i18n "login"}}</a></li>
-
-                        <li class="nav-dashboard pc after-login">
-                            <a href="javascript:void(0)" class="nav-title dashboard go-to-dashboard">Dashboard</a>
-                        </li>
-                        <li class="nav-user dropdown pc after-login">
-                            <span class="nav-title"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm"></span>
-                            <ul class="dropdown-menu">
-                                <li><a class="nav-title settings" href="https://monaca.mobi/en/account/edit">Manage</a></li>
-                                <li><a href="javascript:void(0)" class="nav-title exec-logout">Logout</a></li>
-                            </ul>
-                        </li>
-                        <li class="sp after-login"><a href="javascript:void(0)" class="go-to-dashboard">Dashboard</a></li>
-                        <li class="sp after-login"><a href="https://monaca.mobi/en/account/edit" class="settings"><img class="user-icon" src="https://secure.gravatar.com/avatar/9b9e30f9722f42ef5c65d8f24ccf9935?s=24&d=mm">Manage</a></li>
-                        <li class="sp after-login"><a href="javascript:void(0)" class="exec-logout">Logout</a></li>
-
-                    {{/is}}
-
-                </ul>
-
-
-                <div class="nav-docu" style="display: none;"><a href="https://docs.monaca.io/ja/rpg_tkool/" target="_blank">ご利用方法</a></div> <!-- width: 768px以上の表示 -->
-            </div>
-        </div>
+                </symbol>
+                <g class="color logo_color">
+                    <use xlink:href="#logo" />
+                </g>
+                <g class="color">
+                    <use xlink:href="#logo_text" />
+                </g>
+            </svg>
+        </a>
     </div>
-</nav>
+    {{!-- Menu list should be shown only in PC mode --}}
+    <ul class="ja-globalnav__menu-list">
+        <li class="ja-globalnav__menu{{#_or (_is page.class "platform") (_is page.class "devops") (_is page.class "dev-support")}} selected{{/_or}}">
+            {{#_or (_is page.class "platform") (_is page.class "devops") (_is page.class "dev-support")}}<div class="ja-globalnav__menu-subtitle">ソリューション</div>{{/_or}}
+            <div class="ja-globalnav__menu-title">
+                {{#_nor (_is page.class "platform") (_is page.class "dev-support") (_is page.class "devops")}}ソリューション{{/_nor}}
+                {{#is page.class "platform"}}アプリ開発プラットフォーム{{/is}}
+                {{#is page.class "dev-support"}}アプリ開発支援サービス{{/is}}
+                {{#is page.class "devops"}}エンタープライズDevOps{{/is}}
+                <span class="ja-globalnav__caret"></span>
+            </div>
+            <div class="ja-globalnav__menu-bottom-bar"></div>
+            <div class="ja-globalnav__menu-dropdown solutions">
+                <div class="ja-globalnav__menu-dropdown-item">
+                    <a href="/platform/">
+                        <img class="ja-globalnav__menu-dropdown-item-icon" src="/img/ja-globalnav/icon_pl.svg" />
+                        アプリ開発プラットフォーム
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item">
+                    <a href="/dev-support/">
+                        <img class="ja-globalnav__menu-dropdown-item-icon" src="/img/ja-globalnav/icon_dev_support.svg" />
+                        アプリ開発支援サービス
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item">
+                    <a href="/devops/">
+                        <img class="ja-globalnav__menu-dropdown-item-icon" src="/img/ja-globalnav/icon_devops.svg" />
+                        エンタープライズDevOps
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item">
+                    <a href="https://edu.monaca.io/" target="_blank" rel="noopener">
+                        <img class="ja-globalnav__menu-dropdown-item-icon" src="/img/ja-globalnav/icon_edu.svg" />
+                        プログラミング教育
+                        <img class="ja-globalnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" />
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="ja-globalnav__menu{{#_or (_is page.class "why-monaca")}} selected{{/_or}}">
+            <div class="ja-globalnav__menu-title"><a href="/why-monaca/">Monacaを選ぶ理由</a></div>
+            <div class="ja-globalnav__menu-bottom-bar static"></div>
+        </li>
+        <li class="ja-globalnav__menu{{#_or (_is page.class "showcase-index") (_includes page.class "showcase")}} selected{{/_or}}">
+            <div class="ja-globalnav__menu-title"><a href="/showcase/">導入事例</a></div>
+            <div class="ja-globalnav__menu-bottom-bar static"></div>
+        </li>
+        <li class="ja-globalnav__menu{{#_or (_is page.class "solution-partner") (_is page.class "product-partner")}} selected{{/_or}}">
+            {{#_or (_is page.class "solution-partner") (_is page.class "product-partner")}}<div class="ja-globalnav__menu-subtitle">エコシステム</div>{{/_or}}
+            <div class="ja-globalnav__menu-title">
+                {{#_nor (_is page.class "solution-partner") (_is page.class "product-partner")}}エコシステム{{/_nor}}
+                {{#is page.class "solution-partner"}}開発パートナー{{/is}}
+                {{#is page.class "product-partner"}}プロダクトパートナー{{/is}}
+                <span class="ja-globalnav__caret"></span>
+            </div>
+            <div class="ja-globalnav__menu-bottom-bar"></div>
+            <div class="ja-globalnav__menu-dropdown ecosystems">
+                <div class="ja-globalnav__menu-dropdown-item"><a href="/solution-partner/">開発パートナー</a></div>
+                <div class="ja-globalnav__menu-dropdown-item"><a href="/product-partner/">プロダクトパートナー</a></div>
+            </div>
+        </li>
+        <li class="ja-globalnav__menu">
+            <div class="ja-globalnav__menu-title">ブログ<span class="ja-globalnav__caret"></span></div>
+            <div class="ja-globalnav__menu-bottom-bar"></div>
+            <div class="ja-globalnav__menu-dropdown blogs">
+                <div class="ja-globalnav__menu-dropdown-item blogs">
+                    <a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">
+                        <span class="img-switcher">
+                            <img src="/img/ja-globalnav/logo_asial_blog_gray.svg" title="アシアルブログ" />
+                            <img src="/img/ja-globalnav/logo_asial_blog.svg" title="アシアルブログ" />
+                        </span>
+                        <img class="ja-globalnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" />
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item blogs">
+                    <a href="https://press.monaca.io/" target="_blank" rel="noopener">
+                        <span class="img-switcher">
+                            <img src="/img/ja-globalnav/logo_monaca_press_gray.svg" title="モナカプレス" />
+                            <img src="/img/ja-globalnav/logo_monaca_press.svg" title="モナカプレス" />
+                        </span>
+                        <img class="ja-globalnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" />
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item blogs">
+                    <a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">
+                        <span class="img-switcher">
+                            <img src="/img/ja-globalnav/logo_the_web_tub_gray.svg" title="The Web Tub" />
+                            <img src="/img/ja-globalnav/logo_the_web_tub.svg" title="The Web Tub" />
+                        </span>
+                        <img class="ja-globalnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" />
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item blogs">
+                    <a href="https://note.asial.co.jp/" target="_blank" rel="noopener">
+                        <span class="img-switcher">
+                            <img src="/img/ja-globalnav/logo_note_gray.svg" title="アシアルnote" />
+                            <img src="/img/ja-globalnav/logo_note.svg" title="アシアルnote" style="top: 1px;" />
+                        </span>
+                        <img class="ja-globalnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" />
+                    </a>
+                </div>
+            </div>
+        </li>
+        <li class="ja-globalnav__menu{{#_or (_is page.class "support")}} selected{{/_or}}">
+            <div class="ja-globalnav__menu-title"><a href="/support/inquiry.html">お問い合わせ</a></div>
+            <div class="ja-globalnav__menu-bottom-bar static"></div>
+        </li>
+    </ul>
+    {{!-- Sidebar toggle button should be shown only in non-PC mode --}}
+    <div id="sidebar-toggle-button" class="ja-globalnav__sidebar-toggle-button">
+        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
+        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
+        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
+    </div>
+</div>
+<div id="sidebar" class="ja-sidebar">
+    <div class="ja-sidebar__menu-list">
+        <div class="ja-sidebar__menu group">ソリューション</div>
+        <div class="ja-sidebar__menu item"><a href="/platform/">アプリ開発プラットフォーム</a></div>
+        <div class="ja-sidebar__menu item"><a href="/dev-support/">アプリ開発支援サービス</a></div>
+        <div class="ja-sidebar__menu item"><a href="/devops/">エンタープライズDevOps</a></div>
+        <div class="ja-sidebar__menu item"><a href="https://edu.monaca.io/" target="_blank" rel="noopener">プログラミング教育<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-sidebar__menu group"><a href="/why-monaca/">Monacaを選ぶ理由</a></div>
+        <div class="ja-sidebar__menu group"><a href="/showcase/">導入事例</a></div>
+        <div class="ja-sidebar__menu group">エコシステム</div>
+        <div class="ja-sidebar__menu item"><a href="/solution-partner/">開発パートナー</a></div>
+        <div class="ja-sidebar__menu item"><a href="/product-partner/">プロダクトパートナー</a></div>
+        <div class="ja-sidebar__menu group">ブログ</div>
+        <div class="ja-sidebar__menu item"><a href="https://press.monaca.io/" target="_blank" rel="noopener">モナカプレス<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-sidebar__menu item"><a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">アシアルブログ<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-sidebar__menu item"><a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">The Web Tub<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-sidebar__menu item"><a href="https://note.asial.co.jp/" target="_blank" rel="noopener">アシアルnote<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-sidebar__menu group"><a href="/support/inquiry.html">お問い合わせ</a></div>
+    </div>
+</div>
 
 <script>
     (function() {
-        document.addEventListener('DOMContentLoaded', function() {
-            // Remove expanding/collapsing delay of side menu
-            jQuery.fn.collapse.Constructor.TRANSITION_DURATION = 0;
-        });
-        document.addEventListener('scroll', function(event) {
-            var header = document.querySelector('.navbar-fixed-top')
-
-            if (header) {
-                var klass = 'scrolling';
-                if (document.documentElement.scrollTop > 30 || document.body.scrollTop > 30) {
-                    header.classList.add(klass);
-                } else {
-                    header.classList.remove(klass);
-                }
+        var sidebarToggleButton = document.querySelector('#sidebar-toggle-button');
+        var sidebar = document.querySelector('#sidebar');
+        var toggleSidebar = function() {
+            var isShown = sidebar.classList.contains('shown');
+            // Toggle
+            if (isShown) {
+                // Hide
+                sidebarToggleButton.classList.remove('sidebar-shown');
+                sidebar.classList.remove('shown');
+            } else {
+                // Show
+                sidebarToggleButton.classList.add('sidebar-shown');
+                sidebar.classList.add('shown');
             }
-        });
+        }
 
-        var buttons = Array.prototype.slice.call(document.querySelectorAll('.navbar-toggle'));
-        buttons.forEach(function(button) {
-            button.onclick = function(event) {
-                var isShown = !!document.querySelector('#navbar-menu.collapse.in');
-                document.documentElement.style.overflowY = isShown ? 'auto' : 'hidden';
-            };
+
+        var isClickHandlerProcessed = false;
+        var isTouchStartHandlerProcessed = false;
+        sidebarToggleButton.addEventListener('click', function(event) {
+            // Prevent duplicate handler execution
+            if (isTouchStartHandlerProcessed) {
+                isClickHandlerProcessed = false;
+                isTouchStartHandlerProcessed = false;
+                return;
+            }
+            isClickHandlerProcessed = true;
+
+            toggleSidebar();
         });
-    }())
+        sidebarToggleButton.addEventListener('touchstart', function(event) {
+            // Prevent duplicate handler execution
+            if (isClickHandlerProcessed) {
+                isClickHandlerProcessed = false;
+                isTouchStartHandlerProcessed = false;
+                return;
+            }
+            isTouchStartHandlerProcessed = true;
+
+            toggleSidebar();
+        });
+    }());
 </script>

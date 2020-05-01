@@ -555,7 +555,7 @@ body.lang-ja #signup-invited {
 
 
 body.register {
-  .navbar {
+  .navbar { // Only for lang="en"
     margin: 0 0 0 0;
     min-height: 0;
   }

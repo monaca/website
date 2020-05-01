@@ -12,7 +12,7 @@ body.terms-of-service {
       height: 50px;
       position: relative;
       z-index: 100;
-      &.navbar {
+      &.navbar { // Only for lang="en"
         margin: 0;
       }
     }

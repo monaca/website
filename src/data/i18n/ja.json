@@ -120,14 +120,6 @@
     "dbgCommunicationBody": "Monacaデバッガーには、チャットやスクリーンショットといったコミュニケーション機能が標準搭載。アプリを確認した端末から開発者にフィードバックを送る事が可能です。",
     "dbgDownload": "Monacaデバッガーは、下記アプリストアから<br/>ダウンロードすることができます。",
 
-    "devSupportHeading": "HTML5ハイブリッドアプリ<br />開発サポート",
-    "devSupportDescription": "HTML5ハイブリッドアプリ開発全般に関する、技術的な課題解決をご支援いたします。これまでMonacaの開発や、実際にアプリ開発プロジェクトの中で培って来たアシアルがお客様のアプリ開発プロジェクトをサポートいたします。",
-    "devSupportSummaryTitle": "幅広いサポート対象技術",
-    "devSupportSummaryBody": "HTML5ハイブリッドアプリ開発を行うためには、HTML5、Cordova、Monaca、Onsen UI、AngularJSなど、広範囲な技術の理解が必要になります。本サービスではこれら技術を幅広くサポートさせていただきます。",
-    "devSupportStaffTitle": "開発経験豊富なHTML5ハイブリッドアプリ開発の専門スタッフが対応",
-    "devSupportStaffBody": "アシアルでは2009年からHTML5ハイブリッドアプリ開発の研究開発を開始し、これまでMonacaの開発や多くのアプリ開発プロジェクトを通じて多くのノウハウを蓄積して参りました。お客様の課題を的確にスピーディに解決することができます。",
-    "devSupportMenuTitle": "HTML5ハイブリッドアプリ開発サポートメニュー",
-
     "kidozenHeading": "エンタープライズ向け<span>mBaaS</span>",
     "kidozenSummaryTitle": "エンタープライズmBaaS「KidoZen」とは",
     "kidozenSummaryBody": "<p>米KidoZen社が提供するKidoZenは安全にかつ効率的にエンタープライズ向けモバイルアプリケーションを開発するために必要なバックエンドサービスを一括提供するプラットフォームです。既存の社内システムと接続するためのコネクターや、プッシュ通知などのサーバー機能、アプリストア機能、データ分析機能などが提供され、アプリの開発および運用を簡素化し、コストを大幅に削減します。</p><p>KidoZenはMonacaのオプションサービスとして提供されます。</p>",

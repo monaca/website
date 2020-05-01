@@ -201,6 +201,7 @@ module.exports = function (grunt) {
 
         assemble: {
             options: {
+                helpers: ['<%= config.src %>/helpers/*.js'],
                 flatten: true,
                 layout: '<%= config.src %>/templates/layouts/default.hbs',
                 data: ['<%= config.src %>/data/i18n/*.{json,yml}'],
