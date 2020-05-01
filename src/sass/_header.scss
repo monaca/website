@@ -208,6 +208,24 @@ html[lang=ja] {
                         height: 36px;
                         background: #fff;
                     }
+                    &.solutions {
+                        left: calc(50% + 72px);
+                        &::before { // Arrow
+                            left: calc(50% - 64px);
+                        }
+                        &::after { // Hide shadow of arrow
+                            left: calc(50% - 50px - 64px);
+                        }
+                    }
+                    &.ecosystems {
+                        left: calc(50% + 37px);
+                        &::before { // Arrow
+                            left: calc(50% - 34px);
+                        }
+                        &::after { // Hide shadow of arrow
+                            left: calc(50% - 50px - 34px);
+                        }
+                    }
                     &.blogs {
                         left: unset;
                         right: -109px;
