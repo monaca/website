@@ -94,11 +94,43 @@ component: navbar
         <li class="ja-globalnav__menu">
             <div class="ja-globalnav__menu-title">ブログ<span class="ja-globalnav__caret"></span></div>
             <div class="ja-globalnav__menu-bottom-bar"></div>
-            <div class="ja-globalnav__menu-dropdown">
-                <div class="ja-globalnav__menu-dropdown-item"><a href="https://press.monaca.io/" target="_blank" rel="noopener">モナカプレス</a></div>
-                <div class="ja-globalnav__menu-dropdown-item"><a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">アシアルブログ</a></div>
-                <div class="ja-globalnav__menu-dropdown-item"><a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">The Web Tub</a></div>
-                <div class="ja-globalnav__menu-dropdown-item"><a href="https://note.asial.co.jp/" target="_blank" rel="noopener">アシアルnote</a></div>
+            <div class="ja-globalnav__menu-dropdown blogs">
+                <div class="ja-globalnav__menu-dropdown-item blogs">
+                    <a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">
+                        <span class="img-switcher">
+                            <img src="/img/ja-globalnav/logo_asial_blog_gray.svg" title="アシアルブログ" />
+                            <img src="/img/ja-globalnav/logo_asial_blog.svg" title="アシアルブログ" />
+                        </span>
+                        <img class="ja-globalnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" />
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item blogs">
+                    <a href="https://press.monaca.io/" target="_blank" rel="noopener">
+                        <span class="img-switcher">
+                            <img src="/img/ja-globalnav/logo_monaca_press_gray.svg" title="モナカプレス" />
+                            <img src="/img/ja-globalnav/logo_monaca_press.svg" title="モナカプレス" />
+                        </span>
+                        <img class="ja-globalnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" />
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item blogs">
+                    <a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">
+                        <span class="img-switcher">
+                            <img src="/img/ja-globalnav/logo_the_web_tub_gray.svg" title="The Web Tub" />
+                            <img src="/img/ja-globalnav/logo_the_web_tub.svg" title="The Web Tub" />
+                        </span>
+                        <img class="ja-globalnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" />
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item blogs">
+                    <a href="https://note.asial.co.jp/" target="_blank" rel="noopener">
+                        <span class="img-switcher">
+                            <img src="/img/ja-globalnav/logo_note_gray.svg" title="アシアルnote" />
+                            <img src="/img/ja-globalnav/logo_note.svg" title="アシアルnote" />
+                        </span>
+                        <img class="ja-globalnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" />
+                    </a>
+                </div>
             </div>
         </li>
         <li class="ja-globalnav__menu{{#_or (_is page.class "support")}} selected{{/_or}}">

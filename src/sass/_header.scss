@@ -185,6 +185,13 @@ html[lang=ja] {
                     opacity: 0;
                     transition: all 0.3s ease-out;
                     text-align: left;
+                    &.blogs {
+                        left: unset;
+                        right: -109px;
+                        transform: translateY(0);
+                        flex-flow: row nowrap;
+                        padding: 37px 30px;
+                    }
                     &::before { // Arrow
                         content: '';
                         position: absolute;
@@ -211,6 +218,9 @@ html[lang=ja] {
 
                     > div.ja-globalnav__menu-dropdown-item {
                         padding: 0 70px 0 37px;
+                        &.blogs {
+                            padding: 0;
+                        }
                         height: 46px;
                         display: inline-flex;
                         flex-flow: row nowrap;
@@ -228,9 +238,33 @@ html[lang=ja] {
                             font-size: 14px;
                             font-weight: normal;
                             text-decoration: none;
-                    
                             &:hover, &:focus {
                                 color: $nav-item-darker-color;
+                            }
+
+                            > span.img-switcher {
+                                position: relative;
+
+                                > img {
+                                    transition: opacity 0.3s ease-out;
+                                }
+                                > img:nth-child(1) {
+                                    opacity: 1;
+                                }
+                                > img:nth-child(2) {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    opacity: 0;
+                                }
+                                &:hover {
+                                    > img:nth-child(1) {
+                                        opacity: 0;
+                                    }
+                                    > img:nth-child(2) {
+                                        opacity: 1;
+                                    }
+                                }
                             }
 
                             > .ja-globalnav__menu-dropdown-item-icon {
@@ -243,6 +277,13 @@ html[lang=ja] {
                                 max-width: unset; // Prevent broken SVG width
                             }
                         }
+                        &.blogs > a {
+                            justify-content: center;
+                            width: 180px;
+                        }
+                        &.blogs > a > .ja-globalnav__menu-dropdown-item-exlink {
+                            margin-left: 10px;
+                        }
                     }
                 }
                 &:hover {
@@ -250,6 +291,9 @@ html[lang=ja] {
                         pointer-events: auto;
                         opacity: 1;
                         transform: translateX(-50%) translateY(20px);
+                        &.blogs {
+                            transform: translateY(20px);
+                        }
                     }
                 }
                 
