@@ -384,7 +384,7 @@ html[lang=ja] {
     }
     // Sidebar should be shown only when width >= 971px
     .ja-sidebar {
-        z-index: 100;
+        z-index: 200;
         position: fixed;
         top: 66px;
         right: 0;
