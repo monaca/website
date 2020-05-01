@@ -109,7 +109,7 @@ body.showcase-index {
                 &.fujitec .img {
                     background-image: url("/img/showcase/carousel_01.jpg");
                 }
-                
+
                 &.monex .img {
                     background-image: url("/img/showcase/carousel_02.jpg");
                 }
@@ -172,6 +172,15 @@ body.showcase-index {
         .case {
             display: flex;
             flex-direction: column;
+
+            .companyItem {
+                transition-property: opacity;
+                transition-duration: .1s;
+            }
+
+            .companyItem:hover{
+                opacity: 85%;
+            }
 
             .thumb {
                 width: 270px;
@@ -479,7 +488,7 @@ body.showcase {
                     height: 300px;
                 }
 
-                
+
             }
 
             h1 {
@@ -603,7 +612,7 @@ body.showcase {
 
                     &.prev {
                         float: left;
-    
+
                         &:after {
                             content: 'Previous';
                             display: block;
@@ -612,17 +621,17 @@ body.showcase {
                             left: 24px;
                             bottom: 100%;
                         }
-    
+
                         img {
                             padding-left: 10px;
                             transform: rotate3d(0,0,1,180deg);
                         }
-    
+
                     }
-    
+
                     &.next {
                         float: right;
-    
+
                         &:after {
                             content: 'Next';
                             display: block;
@@ -631,12 +640,12 @@ body.showcase {
                             right: 24px;
                             bottom: 100%;
                         }
-    
+
                         img {
                             padding-left: 10px;
                         }
                     }
-    
+
                 }
 
             }
@@ -727,14 +736,14 @@ body.showcase {
                 color: #6F777F;
                 border-bottom: 1px solid #707070;
                 height: 40px;
-                
+
                 dt {
                     display: inline-block;
                     font-weight: 700;
                     width: 60px;
                     line-height: 40px;
                 }
-                
+
                 dd {
                     display: inline-block;
                     line-height: 40px;
@@ -1017,18 +1026,18 @@ body.showcase {
                 color: #6F777F;
                 font-size: 16px;
             }
-            
+
             a {
                 float: right;
                 margin-left: 10px;
                 margin-top: 30px;
-                
+
                 &:not(.btn) {
                     margin-top: 0;
                     font-size: 64px;
                     line-height: 100px;
                 }
-                
+
                 img {
                     height: 48px;
                 }
