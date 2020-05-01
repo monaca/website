@@ -219,6 +219,10 @@ body.showcase-index {
     .movie {
         margin: 0 0 100px;
 
+        @media screen and (max-width: $break) {
+            margin: 0 0 50px;
+        }
+
         .headline {
             padding: 20px 15px;
             width: 225px;
