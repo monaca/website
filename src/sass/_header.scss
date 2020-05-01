@@ -210,7 +210,7 @@ html[lang=ja] {
                     }
 
                     > div.ja-globalnav__menu-dropdown-item {
-                        padding: 0 95px 0 37px;
+                        padding: 0 70px 0 37px;
                         height: 46px;
                         display: inline-flex;
                         flex-flow: row nowrap;
@@ -235,10 +235,12 @@ html[lang=ja] {
 
                             > .ja-globalnav__menu-dropdown-item-icon {
                                 margin-right: 10px;
+                                max-width: unset; // Prevent broken SVG width
                             }
 
                             > .ja-globalnav__menu-dropdown-item-exlink {
                                 margin-left: 4px;
+                                max-width: unset; // Prevent broken SVG width
                             }
                         }
                     }
