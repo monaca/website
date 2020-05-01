@@ -169,13 +169,16 @@ html[lang=ja] {
 
                 > div.ja-globalnav__menu-dropdown {
                     position: absolute;
-                    display: block;
+                    display: inline-flex;
+                    flex-flow: column nowrap;
+                    align-items: stretch;
+                    justify-content: center;
                     top: calc(#{$extra-hoverable-height} + 57px);
                     left: 50%;
                     transform: translateX(-50%) translateY(0);
                     margin: 0;
                     border-radius: 10px;
-                    padding: 36px;
+                    padding: 26px 0px;
                     background-color: #fff;
                     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
                     pointer-events: none;
@@ -206,16 +209,37 @@ html[lang=ja] {
                         background: #fff;
                     }
 
-                    a {
-                        color: $nav-item-dark-color;
-                        white-space: nowrap;
-                        transition: $header-transition;
-                        font-size: 14px;
-                        font-weight: normal;
-                        text-decoration: none;
-                
-                        &:hover, &:focus {
-                            color: $nav-item-darker-color;
+                    > div.ja-globalnav__menu-dropdown-item {
+                        padding: 0 95px 0 37px;
+                        height: 46px;
+                        display: inline-flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        justify-content: flex-start;
+
+                        > a {
+                            display: inline-flex;
+                            flex-flow: row nowrap;
+                            align-items: center;
+                            justify-content: flex-start;
+                            color: $nav-item-dark-color;
+                            white-space: nowrap;
+                            transition: $header-transition;
+                            font-size: 14px;
+                            font-weight: normal;
+                            text-decoration: none;
+                    
+                            &:hover, &:focus {
+                                color: $nav-item-darker-color;
+                            }
+
+                            > .ja-globalnav__menu-dropdown-item-icon {
+                                margin-right: 10px;
+                            }
+
+                            > .ja-globalnav__menu-dropdown-item-exlink {
+                                margin-left: 4px;
+                            }
                         }
                     }
                 }

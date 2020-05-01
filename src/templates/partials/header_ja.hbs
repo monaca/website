@@ -42,10 +42,31 @@ component: navbar
             </div>
             <div class="ja-globalnav__menu-bottom-bar"></div>
             <div class="ja-globalnav__menu-dropdown">
-                <div><a href="/platform/">アプリ開発プラットフォーム</a></div>
-                <div><a href="/dev-support/">アプリ開発支援サービス</a></div>
-                <div><a href="/devops/">エンタープライズDevOps</a></div>
-                <div><a href="https://edu.monaca.io/" target="_blank" rel="noopener">プログラミング教育</a></div>
+                <div class="ja-globalnav__menu-dropdown-item">
+                    <a href="/platform/">
+                        <img class="ja-globalnav__menu-dropdown-item-icon" src="/img/ja-globalnav/icon_pl.svg" />
+                        アプリ開発プラットフォーム
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item">
+                    <a href="/dev-support/">
+                        <img class="ja-globalnav__menu-dropdown-item-icon" src="/img/ja-globalnav/icon_dev_support.svg" />
+                        アプリ開発支援サービス
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item">
+                    <a href="/devops/">
+                        <img class="ja-globalnav__menu-dropdown-item-icon" src="/img/ja-globalnav/icon_devops.svg" />
+                        エンタープライズDevOps
+                    </a>
+                </div>
+                <div class="ja-globalnav__menu-dropdown-item">
+                    <a href="https://edu.monaca.io/" target="_blank" rel="noopener">
+                        <img class="ja-globalnav__menu-dropdown-item-icon" src="/img/ja-globalnav/icon_edu.svg" />
+                        プログラミング教育
+                        <img class="ja-globalnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" />
+                    </a>
+                </div>
             </div>
         </li>
         <li class="ja-globalnav__menu{{#_or (_is page.class "why-monaca")}} selected{{/_or}}">
@@ -66,18 +87,18 @@ component: navbar
             </div>
             <div class="ja-globalnav__menu-bottom-bar"></div>
             <div class="ja-globalnav__menu-dropdown">
-                <div><a href="/solution-partner/">開発パートナー</a></div>
-                <div><a href="/product-partner/">プロダクトパートナー</a></div>
+                <div class="ja-globalnav__menu-dropdown-item"><a href="/solution-partner/">開発パートナー</a></div>
+                <div class="ja-globalnav__menu-dropdown-item"><a href="/product-partner/">プロダクトパートナー</a></div>
             </div>
         </li>
         <li class="ja-globalnav__menu">
             <div class="ja-globalnav__menu-title">ブログ<span class="ja-globalnav__caret"></span></div>
             <div class="ja-globalnav__menu-bottom-bar"></div>
             <div class="ja-globalnav__menu-dropdown">
-                <div><a href="https://press.monaca.io/" target="_blank" rel="noopener">モナカプレス</a></div>
-                <div><a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">アシアルブログ</a></div>
-                <div><a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">The Web Tub</a></div>
-                <div><a href="https://note.asial.co.jp/" target="_blank" rel="noopener">アシアルnote</a></div>
+                <div class="ja-globalnav__menu-dropdown-item"><a href="https://press.monaca.io/" target="_blank" rel="noopener">モナカプレス</a></div>
+                <div class="ja-globalnav__menu-dropdown-item"><a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">アシアルブログ</a></div>
+                <div class="ja-globalnav__menu-dropdown-item"><a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">The Web Tub</a></div>
+                <div class="ja-globalnav__menu-dropdown-item"><a href="https://note.asial.co.jp/" target="_blank" rel="noopener">アシアルnote</a></div>
             </div>
         </li>
         <li class="ja-globalnav__menu{{#_or (_is page.class "support")}} selected{{/_or}}">
