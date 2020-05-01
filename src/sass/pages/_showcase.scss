@@ -410,6 +410,22 @@ body.showcase-index {
 
         .mr {
             margin: 0 1% 0 0;
+            @media screen and (max-width: $break) {
+                margin: 0;
+            }
+        }
+
+        .break-vimeo-list-url {
+            display: none;
+            @media screen and (max-width: $break) {
+                display: block;
+                margin-top: 30px;
+                a {
+                    font-size: 14px;
+                    text-align: center;
+                    float: none;
+                }
+            }
         }
     }
 }
