@@ -185,13 +185,6 @@ html[lang=ja] {
                     opacity: 0;
                     transition: all 0.3s ease-out;
                     text-align: left;
-                    &.blogs {
-                        left: unset;
-                        right: -109px;
-                        transform: translateY(0);
-                        flex-flow: row nowrap;
-                        padding: 37px 30px;
-                    }
                     &::before { // Arrow
                         content: '';
                         position: absolute;
@@ -215,13 +208,27 @@ html[lang=ja] {
                         height: 36px;
                         background: #fff;
                     }
+                    &.blogs {
+                        left: unset;
+                        right: -109px;
+                        transform: translateY(0);
+                        flex-flow: row nowrap;
+                        padding: 26px 30px;
+                        &::before { // Arrow
+                            left: unset;
+                            right: 132px;
+                        }
+                        &::after { // Hide shadow of arrow
+                            left: unset;
+                            right: calc(132px - 50px);
+                        }
+                    }
 
                     > div.ja-globalnav__menu-dropdown-item {
                         padding: 0 37px;
                         &.blogs {
                             padding: 0;
                         }
-                        height: 46px;
                         display: inline-flex;
                         flex-flow: row nowrap;
                         align-items: center;
@@ -234,7 +241,7 @@ html[lang=ja] {
                             justify-content: flex-start;
                             padding-right: 33px;
                             width: 100%;
-                            height: 100%;
+                            height: 46px;
                             color: $nav-item-dark-color;
                             white-space: nowrap;
                             transition: $header-transition;
