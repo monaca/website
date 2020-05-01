@@ -438,12 +438,20 @@ html[lang=ja] {
                 }
 
                 a {
+                    display: inline-flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: flex-start;
                     font-size: 12px;
                     font-weight: 600;
                     text-decoration: none;
                     color: $nav-item-dark-color;
                     &:hover, &:focus {
                         color: $nav-item-darker-color;
+                    }
+
+                    > .ja-sidebar__menu-exlink {
+                        margin-left: 4px;
                     }
                 }
             }
