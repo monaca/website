@@ -11,17 +11,26 @@
   var TYPE_NEWS_AND_RELEASE = 'news_and_release';
   var TYPE_TRAINING = 'training';
   var TYPE_EVENT = 'event';
+  var HEADER_TYPE = 'header_type';
+  var HEADER_CONTENT = 'header_content';
+  var HEADER_DATE = 'header_date';
 
   var translations = {
     'en': {
       'news_and_release': 'Announcement',
       'training': 'Training',
-      'event': 'Seminar'
+      'event': 'Seminar',
+      'header_type': 'Type',
+      'header_content': 'Content',
+      'header_date': 'Date',
     },
     'ja': {
       'news_and_release': 'お知らせ',
       'training': 'トレーニング',
-      'event': 'セミナー'
+      'event': 'セミナー',
+      'header_type': '種別',
+      'header_content': '内容',
+      'header_date': '更新日',
     }
   }
 
@@ -108,63 +117,38 @@
 
   monacaPages['/headline/index.html'] = function () {
 
-    if (window.LANG == 'ja') {
-      limitCounter = 1;
-      $.when(getAllHeadlinesFromDatabase(limit)).done(function(data) {
-        headlineData = data;
-        var headlineElement = $('.headline-entries');
-        // Create Header
-        appendHeadlineHeader(headlineElement);
-        // Append Content
-        appendHeadlineContent(headlineElement, headlineData.slice(0, limit));
-      });
+    limitCounter = 1;
+    $.when(getAllHeadlinesFromDatabase(limit)).done(function(data) {
+      headlineData = data;
+      var headlineElement = $('.headline-entries');
+      // Create Header
+      appendHeadlineHeader(headlineElement);
+      // Append Content
+      appendHeadlineContent(headlineElement, headlineData.slice(0, limit));
+    });
 
-
-      $(".headlines-more").click(function () {
-        if (isFetchingData()) return;
-        hideHeadlineMore();
-        var headlineElement = $('.headline-entries');
-        var current = getCurrentShownHeadlineEntry();
-        if (headlineData && headlineData.length) {
-          if ((headlineData.length - current) >= limit) {
-            appendHeadlineContent(headlineElement, headlineData.slice(current, current + limit));
-            showHeadlineMore();
-            return;
-          }
-        }
-        // fetch more data from database
-        limitCounter++;
-        $.when(getAllHeadlinesFromDatabase(limit * limitCounter)).done(function(data) {
-          headlineData = data;
-          var headlineElement = $('.headline-entries');
+    $(".headlines-more").click(function () {
+      if (isFetchingData()) return;
+      hideHeadlineMore();
+      var headlineElement = $('.headline-entries');
+      var current = getCurrentShownHeadlineEntry();
+      if (headlineData && headlineData.length) {
+        if ((headlineData.length - current) >= limit) {
           appendHeadlineContent(headlineElement, headlineData.slice(current, current + limit));
           showHeadlineMore();
-        });
-      });
-
-    } else {
-
-      // english
-      getHeadline({ lang: window.LANG, type: TYPE_NEWS_AND_RELEASE, limit: limit },
-        function (data) {
-          appendHeadline(
-            $('.headline-entries'), data
-          );
-  
-          $('.headline-entry-toggle').on('click', 'img', function () {
-            $img = $(this);
-            $entries = $img.parent().parent().find('.headline-sub-entries');
-            if ($entries.css('display') == 'none') {
-              $img.attr('src', '/img/headline/ico_tri_downward.png');
-            } else {
-              $img.attr('src', '/img/headline/ico_tri_leftward.png');
-            }
-            $entries.slideToggle();
-          });
+          return;
         }
-      );
+      }
+      // fetch more data from database
+      limitCounter++;
+      $.when(getAllHeadlinesFromDatabase(limit * limitCounter)).done(function(data) {
+        headlineData = data;
+        var headlineElement = $('.headline-entries');
+        appendHeadlineContent(headlineElement, headlineData.slice(current, current + limit));
+        showHeadlineMore();
+      });
+    });
 
-    }
 
   };
 /*
@@ -216,13 +200,12 @@
     });
   }
 
-  // Japanese page
   function appendHeadlineHeader(element) {
     element.append(
       '<div class="headline-entry header">' +
-      '  <div class="header-item">種別</div>' +
-      '  <div class="header-item">内容</div>' +
-      '  <div class="header-item">更新日</div>' +
+      '  <div class="header-item">' + getText(HEADER_TYPE) + '</div>' +
+      '  <div class="header-item">' + getText(HEADER_CONTENT) + '</div>' +
+      '  <div class="header-item">' + getText(HEADER_DATE) + '</div>' +
       '</div>'
     );
   }
@@ -237,20 +220,30 @@
 
   function getAllHeadlinesFromDatabase(limit) {
     var deferred = $.Deferred();
+    var lang = window.LANG;
     $.when(
-      getHeadline({ lang: window.LANG, type: TYPE_NEWS_AND_RELEASE, limit: limit }),
-      getTrainings({lang: window.LANG, limit: limit, all: true}),
-      getEvents({lang: window.LANG, limit: limit, all: true})
+      getHeadline({ lang: lang, type: TYPE_NEWS_AND_RELEASE, limit: limit }),
+      getTrainings({lang: lang, limit: limit, all: true}),
+      getEvents({lang: lang, limit: limit, all: true})
     ).done(function(headlineResponse, trainingResponse, eventResponse) {
       var headlines = headlineResponse[0].result;
-      var trainings = trainingResponse[0].result;
-      for (var i = 0; i < trainings.length; i++) {
-        trainings[i].type = TYPE_TRAINING;
+
+      var trainings = [];
+      if (trainingResponse) {
+        trainings = trainingResponse[0].result;
+        for (var i = 0; i < trainings.length; i++) {
+          trainings[i].type = TYPE_TRAINING;
+        }
       }
-      var events = eventResponse[0].result;
-      for (var i = 0; i < events.length; i++) {
-        events[i].type = TYPE_EVENT;
+
+      var events = [];
+      if (eventResponse) {
+        events = eventResponse[0].result;
+        for (var i = 0; i < events.length; i++) {
+          events[i].type = TYPE_EVENT;
+        }
       }
+
       data = [].concat(headlines, trainings, events);
       // Sort by date
       data.sort(function(a, b) {
@@ -275,7 +268,6 @@
     return false;
   }
 
-  // Japanese page
   function appendHeadlineContent(element, data) {
     for (var i = 0; i < data.length; i++) {
       var entry = data[i];
@@ -301,29 +293,6 @@
     }
   }
 
-  // English page
-  function appendHeadline(element, data) {
-    var result = data.result;
-    element.append(
-      '<div class="headline-entry header">' +
-      '  <div class="header-item">種別</div>' +
-      '  <div class="header-item">内容</div>' +
-      '  <div class="header-item">更新日</div>' +
-      '</div>'
-    );
-    for (var i = 0; i < result.length; i++) {
-      var entry = result[i];
-      element.append(
-        '<div id="entry_' + entry.id + '" class="headline-entry">' +
-        '  <div class="headline-entry-type">' +
-        '    <div class="headline-entry-type-badge">' + getText(entry.type) + '</div>' +
-        '  </div>' +
-        '  <div class="headline-entry-content">' + entry.body + '</div>' +
-        '  <div class="headline-entry-date">' + entry.date + '</div>' +
-        '</div>'
-      );
-    }
-  }
 
   function getIssues(options, success, fail) {
     var lang = options.lang || 'en';
@@ -454,6 +423,8 @@
     var entry_num = options.entry_num || 0;
     var all = options.all || true;
 
+    if (lang === 'en') { return false; }
+
     return $.ajax({
       type: "GET",
       url: monacaApi.getBaseUrl() + "/" + lang + "/api/event/list",
@@ -506,6 +477,8 @@
     var limit = options.limit || 50;
     var entry_num = options.entry_num || 0;
     var all = options.all || true;
+
+    if (lang === 'en') { return false; }
 
     return $.ajax({
       type: "GET",
