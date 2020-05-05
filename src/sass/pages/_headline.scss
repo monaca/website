@@ -91,6 +91,21 @@ body.headline {
         margin-top: 0;
       }
 
+      .headline-footer {
+        margin-bottom: 20px;
+        
+        .headlines-more {
+          cursor: pointer;
+          display: block;
+  
+          span {
+            color: #0054AC;
+            vertical-align: middle;
+          }
+
+        }
+      }
+      
       > p {
         text-align: center;
 
@@ -218,13 +233,15 @@ body.headline {
             margin: 15px 0 0 20px;
 
             .headline-entry-type-badge {
+              // Use Japanese-font glyphs for alphanumerics
+              font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Helvetica Neue", Arial, sans-serif;
               font-size: 10px;
               line-height: 23px;
               padding: 0 10px;
               border: 1px solid #B3B3B3;
               border-radius: 10px;
               height: 18px;
-              width: 80px;
+              width: 82px;
               display: flex;
               justify-content: center;
               align-items: center;
