@@ -34,87 +34,6 @@
     }
   }
 
-/*  var mock = {
-    result: [
-      {
-        id: 1,
-        type: 'news',
-        title: 'Title 1',
-        body: 'Lorem ipsum dolor sit amet',
-        date: '2020.04.20',
-        shouldOpen: false,
-        statusCss: null, // 'fixing', 'reported'
-        details: [
-          {
-            dateTime: '2020.05.01',
-            description: 'details description 1'
-          },
-          {
-            dateTime: '2020.05.31',
-            description: 'details description 2'
-          }
-        ]
-      },
-      {
-        id: 2,
-        type: 'news',
-        title: 'Title 2',
-        body: 'Lorem ipsum dolor sit amet',
-        date: '2020.04.22',
-        shouldOpen: true,
-        statusCss: 'fixing', // 'fixing', 'reported'
-        details: [
-          {
-            dateTime: '2020.05.01',
-            description: 'details description 1'
-          },
-          {
-            dateTime: '2020.05.31',
-            description: 'details description 2'
-          }
-        ]
-      },
-      {
-        id: 3,
-        type: 'news',
-        title: 'Title 3',
-        body: 'Lorem ipsum dolor sit amet',
-        date: '2020.04.25',
-        shouldOpen: true,
-        statusCss: null, // 'fixing', 'reported'
-        details: [
-          {
-            dateTime: '2020.05.01',
-            description: 'details description 1'
-          },
-          {
-            dateTime: '2020.05.31',
-            description: 'details description 2'
-          }
-        ]
-      },
-      {
-        id: 4,
-        type: 'news',
-        title: 'Title 4',
-        body: 'Lorem ipsum dolor sit amet',
-        date: '2020.04.27',
-        shouldOpen: false,
-        statusCss: 'reported', // 'fixing', 'reported'
-        details: [
-          {
-            dateTime: '2020.05.01',
-            description: 'details description 1'
-          },
-          {
-            dateTime: '2020.05.31',
-            description: 'details description 2'
-          }
-        ]
-      }
-    ]
-  }*/
-
   monacaPages['/headline/index.html'] = function () {
 
     limitCounter = 1;
@@ -151,16 +70,15 @@
 
 
   };
-/*
-  monacaPages['/headline/fault.html'] = function () {
-    // var category = window.getQueryString('category');
-    appendIssues(window.LANG, $('.headline-entries'), mock);
 
-    // getIssues({ lang: window.LANG, type: 'fault', limit: limit, category: category },
-    //   function (data) {
-    //     appendIssues(
-    //       window.LANG, $('.headline-entries'), data
-    //     );
+  monacaPages['/headline/fault.html'] = function () {
+    var category = window.getQueryString('category');
+
+    getIssues({ lang: window.LANG, type: 'fault', limit: limit, category: category },
+      function (data) {
+        appendIssues(
+          window.LANG, $('.headline-entries'), data
+        );
 
         $('.headline-entry-toggle').on('click', 'img', function () {
           $img = $(this);
@@ -172,9 +90,9 @@
           }
           $entries.slideToggle();
         });
-    //   }
-    // );
-  };*/
+      }
+    );
+  };
 
   function getText(key) {
     var lang = window.LANG.toLowerCase();
@@ -315,7 +233,6 @@
   function appendIssues(lang, element, data) {
     var result = data.result;
     var timeZone = lang == 'ja' ? 'JST' : 'UTC';
-    console.log("RESULT",result);
     for (var i = 0; i < result.length; i++) {
       var entry = result[i];
       var shouldOpen = entry.shouldOpen;
@@ -328,7 +245,7 @@
       }
       var detailsClass = shouldOpen ? '' : 'display: none;';
       element.append(
-        '<div id="entry_' + entry.id + '" class="headline-entry">' +
+        '<div id="entry_' + entry.id + '" class="headline-fault-entry">' +
         '  <div class="headline-entry-toggle"><img src="/img/headline/' + icon + '" /></div>' +
         '  <dl>' +
         '    <dt>' + entry.date + '</dt>' +
