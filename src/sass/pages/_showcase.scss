@@ -521,6 +521,13 @@ body.showcase {
                 z-index: 9;
                 color: white;
 
+                @media screen and (max-width: $break) {
+                    font-size: 18px;
+                    width: unset;
+                    left: unset;
+                    padding: 0 5%;
+                }
+
                 &.flipped {
                     left: 20%;
                     margin-left: 250px;
@@ -529,6 +536,10 @@ body.showcase {
                 span {
                     display: block;
                     font-size: 19px;
+
+                    @media screen and (max-width: $break) {
+                        font-size: 11px;
+                    }
                 }
             }
 
