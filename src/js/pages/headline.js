@@ -2,7 +2,37 @@
 
   window.monacaPages = window.monacaPages || [];
 
-  var limit = 50;
+  var limit = 20;
+  var limitCounter = 1; // increase amount of data to query from database
+
+  // Headline data
+  var headlineData = [];
+
+  var TYPE_NEWS_AND_RELEASE = 'news_and_release';
+  var TYPE_TRAINING = 'training';
+  var TYPE_EVENT = 'event';
+  var HEADER_TYPE = 'header_type';
+  var HEADER_CONTENT = 'header_content';
+  var HEADER_DATE = 'header_date';
+
+  var translations = {
+    'en': {
+      'news_and_release': 'Announcement',
+      'training': 'Training',
+      'event': 'Seminar',
+      'header_type': 'Type',
+      'header_content': 'Content',
+      'header_date': 'Date',
+    },
+    'ja': {
+      'news_and_release': 'お知らせ',
+      'training': 'トレーニング',
+      'event': 'セミナー',
+      'header_type': '種別',
+      'header_content': '内容',
+      'header_date': '更新日',
+    }
+  }
 
 /*  var mock = {
     result: [
@@ -87,58 +117,39 @@
 
   monacaPages['/headline/index.html'] = function () {
 
+    limitCounter = 1;
+    $.when(getAllHeadlinesFromDatabase(limit)).done(function(data) {
+      headlineData = data;
+      var headlineElement = $('.headline-entries');
+      // Create Header
+      appendHeadlineHeader(headlineElement);
+      // Append Content
+      appendHeadlineContent(headlineElement, headlineData.slice(0, limit));
+    });
 
-    // appendHeadline($('.headline-entries'), mock);
-
-    // appendIssues(window.LANG, $('.headline-entries'), mock);
-
-    getHeadline({ lang: window.LANG, type: 'news_and_release', limit: limit },
-      function (data) {
-        appendHeadline(
-          $('.headline-entries'), data
-        );
-
-        $('.headline-entry-toggle').on('click', 'img', function () {
-          $img = $(this);
-          $entries = $img.parent().parent().find('.headline-sub-entries');
-          if ($entries.css('display') == 'none') {
-            $img.attr('src', '/img/headline/ico_tri_downward.png');
-          } else {
-            $img.attr('src', '/img/headline/ico_tri_leftward.png');
-          }
-          $entries.slideToggle();
-        });
+    $(".headlines-more").click(function () {
+      if (isFetchingData()) return;
+      hideHeadlineMore();
+      var headlineElement = $('.headline-entries');
+      var current = getCurrentShownHeadlineEntry();
+      if (headlineData && headlineData.length) {
+        if ((headlineData.length - current) >= limit) {
+          appendHeadlineContent(headlineElement, headlineData.slice(current, current + limit));
+          showHeadlineMore();
+          return;
+        }
       }
-    );
-
-    if (window.LANG == 'ja') {
-      getTrainings({lang: window.LANG, limit: limit, all: true},
-        function (data) {
-          appendTrainings(window.LANG, $(".trainings-entries"), data);
-        }
-      );
-      $(".trainings-more").click(function () {
-        getTrainings({lang: window.LANG, limit: limit, entry_num: $(".training-entry").size()},
-          function (data) {
-            appendTrainings(window.LANG, $(".trainings-entries"), data);
-          }
-        );
+      // fetch more data from database
+      limitCounter++;
+      $.when(getAllHeadlinesFromDatabase(limit * limitCounter)).done(function(data) {
+        headlineData = data;
+        var headlineElement = $('.headline-entries');
+        appendHeadlineContent(headlineElement, headlineData.slice(current, current + limit));
+        showHeadlineMore();
       });
+    });
 
-      getEvents({lang: window.LANG, limit: limit, all: true},
-        function (data) {
-          appendEvents($(".events-entries"), data);
-        }
-      );
 
-      $(".events-more").click(function () {
-        getEvents({lang: window.LANG, limit: limit, entry_num: $(".events-entry").size()},
-          function (data) {
-            appendEvents($(".events-entries"), data);
-          }
-        );
-      });
-    }
   };
 /*
   monacaPages['/headline/fault.html'] = function () {
@@ -165,12 +176,17 @@
     // );
   };*/
 
+  function getText(key) {
+    var lang = window.LANG.toLowerCase();
+    return translations[lang][key];
+  }
+
   function getHeadline(options,success,fail) {
     var lang = options.lang || 'en';
-    var news_type = options.type || 'news_and_release';
+    var news_type = options.type || TYPE_NEWS_AND_RELEASE;
     var limit = options.limit || 50;
 
-    $.ajax({
+    return $.ajax({
       type: 'GET',
       url: monacaApi.getBaseUrl() + '/' + lang + '/api/news/list',
       dataType: 'JSON',
@@ -184,28 +200,99 @@
     });
   }
 
-  function appendHeadline(element, data) {
-    var result = data.result;
+  function appendHeadlineHeader(element) {
     element.append(
       '<div class="headline-entry header">' +
-      '  <div class="header-item">種別</div>' +
-      '  <div class="header-item">内容</div>' +
-      '  <div class="header-item">更新日</div>' +
+      '  <div class="header-item">' + getText(HEADER_TYPE) + '</div>' +
+      '  <div class="header-item">' + getText(HEADER_CONTENT) + '</div>' +
+      '  <div class="header-item">' + getText(HEADER_DATE) + '</div>' +
       '</div>'
     );
-    for (var i = 0; i < result.length; i++) {
-      var entry = result[i];
+  }
+
+  function getHeadlineContentBody(entry) {
+    if (entry.type === TYPE_NEWS_AND_RELEASE) {
+      return entry.body;
+    } else if (entry.type === TYPE_EVENT || entry.type === TYPE_TRAINING) {
+      return '<a href="' + entry.url + '" target="_blank">' + entry.title + '</a></br>主催：' + entry.organizer + '、開催場所：' + entry.location + '、参加費用：' + formatPrice(entry);
+    }
+  }
+
+  function getAllHeadlinesFromDatabase(limit) {
+    var deferred = $.Deferred();
+    var lang = window.LANG;
+    $.when(
+      getHeadline({ lang: lang, type: TYPE_NEWS_AND_RELEASE, limit: limit }),
+      getTrainings({lang: lang, limit: limit, all: true}),
+      getEvents({lang: lang, limit: limit, all: true})
+    ).done(function(headlineResponse, trainingResponse, eventResponse) {
+      var headlines = headlineResponse[0].result;
+
+      var trainings = [];
+      if (trainingResponse) {
+        trainings = trainingResponse[0].result;
+        for (var i = 0; i < trainings.length; i++) {
+          trainings[i].type = TYPE_TRAINING;
+        }
+      }
+
+      var events = [];
+      if (eventResponse) {
+        events = eventResponse[0].result;
+        for (var i = 0; i < events.length; i++) {
+          events[i].type = TYPE_EVENT;
+        }
+      }
+
+      data = [].concat(headlines, trainings, events);
+      // Sort by date
+      data.sort(function(a, b) {
+        return (new Date(b.date)) - (new Date(a.date))
+      });
+      deferred.resolve(data);
+    });
+    return deferred.promise();
+  }
+
+  function showHeadlineMore() {
+    $(".headlines-more").css('opacity', 1);
+  }
+
+  function hideHeadlineMore() {
+    $(".headlines-more").css('opacity', 0.5);
+  }
+
+  function isFetchingData() {
+    var status = $(".headlines-more").css('opacity');
+    if (parseFloat(status) <= 0.5) return true;
+    return false;
+  }
+
+  function appendHeadlineContent(element, data) {
+    for (var i = 0; i < data.length; i++) {
+      var entry = data[i];
       element.append(
         '<div id="entry_' + entry.id + '" class="headline-entry">' +
         '  <div class="headline-entry-type">' +
-        '    <div class="headline-entry-type-badge">' + entry.type + '</div>' +
+        '    <div class="headline-entry-type-badge">' + getText(entry.type) + '</div>' +
         '  </div>' +
-        '  <div class="headline-entry-content">' + entry.body + '</div>' +
+        '  <div class="headline-entry-content">' + getHeadlineContentBody(entry) + '</div>' +
         '  <div class="headline-entry-date">' + entry.date + '</div>' +
         '</div>'
       );
     }
   }
+
+  function getCurrentShownHeadlineEntry() {
+    try {
+      var nums = $(".headline-entry").size();
+      if (nums > 0) nums--;
+      return nums;
+    } catch (e) {
+      return 0;
+    }
+  }
+
 
   function getIssues(options, success, fail) {
     var lang = options.lang || 'en';
@@ -336,7 +423,9 @@
     var entry_num = options.entry_num || 0;
     var all = options.all || true;
 
-    $.ajax({
+    if (lang === 'en') { return false; }
+
+    return $.ajax({
       type: "GET",
       url: monacaApi.getBaseUrl() + "/" + lang + "/api/event/list",
       dataType: "JSON",
@@ -389,7 +478,9 @@
     var entry_num = options.entry_num || 0;
     var all = options.all || true;
 
-    $.ajax({
+    if (lang === 'en') { return false; }
+
+    return $.ajax({
       type: "GET",
       url: monacaApi.getBaseUrl() + "/" + lang + "/api/training/list",
       dataType: "JSON",
