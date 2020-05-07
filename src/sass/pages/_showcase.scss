@@ -542,6 +542,10 @@ body.showcase {
                 background: rgba(255,255,255,.875);
                 z-index: 9;
 
+                @media screen and (max-width: $break) {
+                    display: none;
+                }
+
                 &.flipped {
                     right: initial;
                     left: 15%;
