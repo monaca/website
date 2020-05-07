@@ -531,6 +531,14 @@ body.showcase {
                 &.flipped {
                     left: 20%;
                     margin-left: 250px;
+
+                    @media screen and (max-width: $break) {
+                        font-size: 18px;
+                        width: unset;
+                        left: unset;
+                        padding: 0 5%;
+                        margin-left: unset;
+                    }
                 }
 
                 span {
