@@ -866,6 +866,10 @@ body.showcase {
                 border-top: 1px solid $border-color;
                 padding: 30px 100px 25px;
 
+                @media screen and (max-width: $break) {
+                    padding: 30px 0 25px;
+                }
+
                 h1 {
                     margin-bottom: 5px;
                 }
