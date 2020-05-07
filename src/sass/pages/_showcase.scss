@@ -634,6 +634,10 @@ body.showcase {
                     font-size: 20px;
                     position: relative;
 
+                    @media screen and (max-width: $break) {
+                        font-size: 0;
+                    }
+
                     &.prev {
                         float: left;
 
@@ -644,6 +648,10 @@ body.showcase {
                             font-size: 14px;
                             left: 24px;
                             bottom: 100%;
+
+                            @media screen and (max-width: $break) {
+                                bottom: -20%;
+                            }
                         }
 
                         img {
@@ -663,6 +671,10 @@ body.showcase {
                             font-size: 14px;
                             right: 24px;
                             bottom: 100%;
+
+                            @media screen and (max-width: $break) {
+                                bottom: -20%;
+                            }
                         }
 
                         img {
