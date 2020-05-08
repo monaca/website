@@ -829,6 +829,121 @@ html[lang=ja] {
                 }
             }
         }
+
+        > div.ja-subnav__subsidebar-toggle-button {
+            // Sidebar toggle button should be shown only in non-PC mode
+            @media screen and (max-width: 970px) {
+                display: inline-flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                justify-content: center;
+                margin-right: 16px;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+            }
+            @media screen and (min-width: 971px) {
+                display: none;
+            }
+
+            > span.ja-subnav__subsidebar-toggle-button-caret {
+                border-style: solid;
+                border-width: 0 1px 1px 0;
+                border-color: #8D99A7;
+                width: 11px;
+                height: 11px;
+                opacity: 1;
+                transform-origin: center center;
+                transform: translateY(-3px) scaleY(1) rotate(45deg);
+            }
+            &.subsidebar-shown > span.ja-subnav__subsidebar-toggle-button-caret {
+                transform: translateY(3px) scaleY(-1) rotate(45deg);
+            }
+        }
+    }
+    // Sidebar should be shown only when width >= 971px
+    .ja-subsidebar {
+        z-index: 50;
+        position: fixed;
+        top: 122px;
+        right: 0;
+        padding-bottom: calc(122px + 120px); // Show whole part of subsidebar when scrolling
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        transition: all 0.4s cubic-bezier(0.1, 0.7, 0.1, 1);
+        &:not(.shown) {
+            opacity: 0;
+            transform: translateY(-100%);
+            pointer-events: none;
+        }
+        &.shown {
+            opacity: 1;
+            transform: translateY(0%);
+            // Force hide in PC mode
+            @media screen and (min-width: 971px) {
+                opacity: 0;
+                transform: translateY(-100%);
+                pointer-events: none;
+            }
+            overflow-y: scroll;
+        }
+
+        > div.ja-subsidebar__menu-list {
+            box-sizing: border-box;
+            margin: 0 22px;
+            border-top: 1px solid #E6E6E6;
+
+            > div.ja-subsidebar__menu {
+                display: flex;
+                flex-flow: row nowrap;
+                align-items: center;
+                justify-content: flex-start;
+                box-sizing: border-box;
+                height: 44px;
+                padding: 16px 10px;
+                text-align: left;
+                font-size: 12px;
+                font-weight: 600;
+                text-decoration: none;
+                color: $nav-item-dark-color;
+
+                border-top: 1px solid #E6E6E6;
+                &:first-of-type {
+                    border-top: none;
+                }
+                &:last-of-type {
+                    border-bottom: 1px solid #E6E6E6;
+                }
+
+                &.item {
+                    margin-left: 20px;
+                }
+
+                &.group + .item {
+                    border-top: none;
+                    margin-top: -10px;
+                }
+
+                a {
+                    display: inline-flex;
+                    flex-flow: row nowrap;
+                    align-items: center;
+                    justify-content: flex-start;
+                    font-size: 12px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    color: $nav-item-dark-color;
+                    &:hover, &:focus {
+                        color: $nav-item-darker-color;
+                    }
+
+                    > .ja-subsidebar__menu-exlink {
+                        margin-left: 4px;
+                    }
+                }
+            }
+        }
     }
 }
 
