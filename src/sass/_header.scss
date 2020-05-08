@@ -665,15 +665,49 @@ html[lang=ja] {
                         background: #fff;
                         transform: scaleX(0.85) rotate(45deg);
                     }
+                    $arrow-hider-width: 80px;
                     &::after { // Hide shadow of arrow
                         content: '';
                         position: absolute;
                         top: 0;
-                        left: calc(50% - 50px);
+                        left: calc(50% - #{$arrow-hider-width / 2});
                         margin-left: -8px;
-                        width: 100px;
+                        width: $arrow-hider-width;
                         height: 36px;
                         background: #fff;
+                    }
+                    &.features {
+                        $baloon-shift: 40px;
+
+                        left: calc(50% + #{$baloon-shift});
+                        &::before { // Arrow
+                            left: calc(50% - #{$baloon-shift});
+                        }
+                        &::after { // Hide shadow of arrow
+                            left: calc(50% - #{$arrow-hider-width / 2} - #{$baloon-shift});
+                        }
+                    }
+                    &.about-monaca {
+                        $baloon-shift: 40px;
+
+                        left: calc(50% + #{$baloon-shift});
+                        &::before { // Arrow
+                            left: calc(50% - #{$baloon-shift});
+                        }
+                        &::after { // Hide shadow of arrow
+                            left: calc(50% - #{$arrow-hider-width / 2} - #{$baloon-shift});
+                        }
+                    }
+                    &.guide {
+                        $baloon-shift: 80px;
+
+                        left: calc(50% + #{$baloon-shift});
+                        &::before { // Arrow
+                            left: calc(50% - #{$baloon-shift});
+                        }
+                        &::after { // Hide shadow of arrow
+                            left: calc(50% - #{$arrow-hider-width / 2} - #{$baloon-shift});
+                        }
                     }
 
                     > div.ja-subnav__menu-dropdown-extra-hoverable-area {
