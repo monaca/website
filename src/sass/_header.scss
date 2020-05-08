@@ -343,7 +343,7 @@ html[lang=ja] {
             }
         }
 
-        > div.ja-globalnav__sidebar-toggle-button {
+        > div.ja-globalnav__globalsidebar-toggle-button {
             // Sidebar toggle button should be shown only in non-PC mode
             @media screen and (max-width: 970px) {
                 display: inline-flex;
@@ -359,7 +359,7 @@ html[lang=ja] {
                 display: none;
             }
 
-            > span.ja-globalnav__sidebar-toggle-button-bar {
+            > span.ja-globalnav__globalsidebar-toggle-button-bar {
                 box-sizing: border-box;
                 width: 18px;
                 height: 6px;
@@ -376,7 +376,7 @@ html[lang=ja] {
                     transform-origin: center 0.5px;
                 }
             }
-            &.sidebar-shown > span.ja-globalnav__sidebar-toggle-button-bar {
+            &.globalsidebar-shown > span.ja-globalnav__globalsidebar-toggle-button-bar {
                 &:nth-child(1) {
                     transform: translateY(6px) rotate(45deg);
                 }
@@ -390,12 +390,12 @@ html[lang=ja] {
         }
     }
     // Sidebar should be shown only when width >= 971px
-    .ja-sidebar {
+    .ja-globalsidebar {
         z-index: 200;
         position: fixed;
         top: 66px;
         right: 0;
-        padding-bottom: 120px; // Show whole part of sidebar when scrolling
+        padding-bottom: 120px; // Show whole part of globalsidebar when scrolling
         width: 100%;
         height: 100%;
         background-color: white;
@@ -414,12 +414,12 @@ html[lang=ja] {
             overflow-y: scroll;
         }
 
-        > div.ja-sidebar__menu-list {
+        > div.ja-globalsidebar__menu-list {
             box-sizing: border-box;
             margin: 0 22px;
             border-top: 1px solid #E6E6E6;
 
-            > div.ja-sidebar__menu {
+            > div.ja-globalsidebar__menu {
                 display: flex;
                 flex-flow: row nowrap;
                 align-items: center;
@@ -463,7 +463,7 @@ html[lang=ja] {
                         color: $nav-item-darker-color;
                     }
 
-                    > .ja-sidebar__menu-exlink {
+                    > .ja-globalsidebar__menu-exlink {
                         margin-left: 4px;
                     }
                 }

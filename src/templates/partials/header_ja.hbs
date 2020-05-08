@@ -142,31 +142,31 @@ component: navbar
             <div class="ja-globalnav__menu-bottom-bar static"></div>
         </li>
     </ul>
-    {{!-- Sidebar toggle button should be shown only in non-PC mode --}}
-    <div id="sidebar-toggle-button" class="ja-globalnav__sidebar-toggle-button">
-        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
-        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
-        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
+    {{!-- globalsidebar toggle button should be shown only in non-PC mode --}}
+    <div id="globalsidebar-toggle-button" class="ja-globalnav__globalsidebar-toggle-button">
+        <span class="ja-globalnav__globalsidebar-toggle-button-bar"></span>
+        <span class="ja-globalnav__globalsidebar-toggle-button-bar"></span>
+        <span class="ja-globalnav__globalsidebar-toggle-button-bar"></span>
     </div>
 </div>
-<div id="sidebar" class="ja-sidebar">
-    <div class="ja-sidebar__menu-list">
-        <div class="ja-sidebar__menu group">ソリューション</div>
-        <div class="ja-sidebar__menu item"><a href="/platform/">アプリ開発プラットフォーム</a></div>
-        <div class="ja-sidebar__menu item"><a href="/dev-support/">アプリ開発支援サービス</a></div>
-        <div class="ja-sidebar__menu item"><a href="/devops/">エンタープライズDevOps</a></div>
-        <div class="ja-sidebar__menu item"><a href="https://edu.monaca.io/" target="_blank" rel="noopener">プログラミング教育<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
-        <div class="ja-sidebar__menu group"><a href="/why-monaca/">Monacaを選ぶ理由</a></div>
-        <div class="ja-sidebar__menu group"><a href="/showcase/">導入事例</a></div>
-        <div class="ja-sidebar__menu group">エコシステム</div>
-        <div class="ja-sidebar__menu item"><a href="/solution-partner/">開発パートナー</a></div>
-        <div class="ja-sidebar__menu item"><a href="/product-partner/">プロダクトパートナー</a></div>
-        <div class="ja-sidebar__menu group">ブログ</div>
-        <div class="ja-sidebar__menu item"><a href="https://press.monaca.io/" target="_blank" rel="noopener">モナカプレス<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
-        <div class="ja-sidebar__menu item"><a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">アシアルブログ<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
-        <div class="ja-sidebar__menu item"><a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">The Web Tub<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
-        <div class="ja-sidebar__menu item"><a href="https://note.asial.co.jp/" target="_blank" rel="noopener">アシアルnote<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
-        <div class="ja-sidebar__menu group"><a href="/support/inquiry.html">お問い合わせ</a></div>
+<div id="globalsidebar" class="ja-globalsidebar">
+    <div class="ja-globalsidebar__menu-list">
+        <div class="ja-globalsidebar__menu group">ソリューション</div>
+        <div class="ja-globalsidebar__menu item"><a href="/platform/">アプリ開発プラットフォーム</a></div>
+        <div class="ja-globalsidebar__menu item"><a href="/dev-support/">アプリ開発支援サービス</a></div>
+        <div class="ja-globalsidebar__menu item"><a href="/devops/">エンタープライズDevOps</a></div>
+        <div class="ja-globalsidebar__menu item"><a href="https://edu.monaca.io/" target="_blank" rel="noopener">プログラミング教育<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-globalsidebar__menu group"><a href="/why-monaca/">Monacaを選ぶ理由</a></div>
+        <div class="ja-globalsidebar__menu group"><a href="/showcase/">導入事例</a></div>
+        <div class="ja-globalsidebar__menu group">エコシステム</div>
+        <div class="ja-globalsidebar__menu item"><a href="/solution-partner/">開発パートナー</a></div>
+        <div class="ja-globalsidebar__menu item"><a href="/product-partner/">プロダクトパートナー</a></div>
+        <div class="ja-globalsidebar__menu group">ブログ</div>
+        <div class="ja-globalsidebar__menu item"><a href="https://press.monaca.io/" target="_blank" rel="noopener">モナカプレス<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-globalsidebar__menu item"><a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">アシアルブログ<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-globalsidebar__menu item"><a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">The Web Tub<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-globalsidebar__menu item"><a href="https://note.asial.co.jp/" target="_blank" rel="noopener">アシアルnote<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-globalsidebar__menu group"><a href="/support/inquiry.html">お問い合わせ</a></div>
     </div>
 </div>
 {{/if}}
@@ -201,11 +201,11 @@ component: navbar
             <div class="ja-subnav__menu-button green">ダッシュボード</div>
         </li> --}}
     </ul>
-    {{!-- Sidebar toggle button should be shown only in non-PC mode --}}
-    {{!-- <div id="sidebar-toggle-button" class="ja-subnav__sidebar-toggle-button">
-        <span class="ja-subnav__sidebar-toggle-button-bar"></span>
-        <span class="ja-subnav__sidebar-toggle-button-bar"></span>
-        <span class="ja-subnav__sidebar-toggle-button-bar"></span>
+    {{!-- subsidebar toggle button should be shown only in non-PC mode --}}
+    {{!-- <div id="subsidebar-toggle-button" class="ja-subnav__subsidebar-toggle-button">
+        <span class="ja-subnav__subsidebar-toggle-button-bar"></span>
+        <span class="ja-subnav__subsidebar-toggle-button-bar"></span>
+        <span class="ja-subnav__subsidebar-toggle-button-bar"></span>
     </div> --}}
 </div>
 {{/if}}
@@ -213,26 +213,26 @@ component: navbar
 {{#if show_ja_globalnav}}
 <script>
     (function() {
-        var sidebarToggleButton = document.querySelector('#sidebar-toggle-button');
-        var sidebar = document.querySelector('#sidebar');
-        var toggleSidebar = function() {
-            var isShown = sidebar.classList.contains('shown');
+        var globalsidebarToggleButton = document.querySelector('#globalsidebar-toggle-button');
+        var globalsidebar = document.querySelector('#globalsidebar');
+        var toggleGlobalSidebar = function() {
+            var isShown = globalsidebar.classList.contains('shown');
             // Toggle
             if (isShown) {
                 // Hide
-                sidebarToggleButton.classList.remove('sidebar-shown');
-                sidebar.classList.remove('shown');
+                globalsidebarToggleButton.classList.remove('globalsidebar-shown');
+                globalsidebar.classList.remove('shown');
             } else {
                 // Show
-                sidebarToggleButton.classList.add('sidebar-shown');
-                sidebar.classList.add('shown');
+                globalsidebarToggleButton.classList.add('globalsidebar-shown');
+                globalsidebar.classList.add('shown');
             }
         }
 
 
         var isClickHandlerProcessed = false;
         var isTouchStartHandlerProcessed = false;
-        sidebarToggleButton.addEventListener('click', function(event) {
+        globalsidebarToggleButton.addEventListener('click', function(event) {
             // Prevent duplicate handler execution
             if (isTouchStartHandlerProcessed) {
                 isClickHandlerProcessed = false;
@@ -241,9 +241,9 @@ component: navbar
             }
             isClickHandlerProcessed = true;
 
-            toggleSidebar();
+            toggleGlobalSidebar();
         });
-        sidebarToggleButton.addEventListener('touchstart', function(event) {
+        globalsidebarToggleButton.addEventListener('touchstart', function(event) {
             // Prevent duplicate handler execution
             if (isClickHandlerProcessed) {
                 isClickHandlerProcessed = false;
@@ -252,7 +252,7 @@ component: navbar
             }
             isTouchStartHandlerProcessed = true;
 
-            toggleSidebar();
+            toggleGlobalSidebar();
         });
     }());
 </script>
