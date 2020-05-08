@@ -574,9 +574,6 @@ html[lang=ja] {
                         background-color: rgba(0, 0, 0, 0.1);
                         color: #42566C;
                         transition: background-color 0.3s ease-out;
-                        &:hover, &:focus {
-                            background-color: rgba(0, 0, 0, 0.15);
-                        }
                     }
 
                     // Suppress vertical misalignment of Japanese glyph
@@ -623,6 +620,14 @@ html[lang=ja] {
                 }
                 &:hover > div.ja-subnav__menu-title,
                 &:focus > div.ja-subnav__menu-title {
+                    &.selected {
+                        &.static {
+                            background-color: rgba(0, 0, 0, 0.15);
+                        }
+                        &:not(.static) {
+                            background-color: transparent;
+                        }
+                    }
                     a {
                         color: #42566C;
                         opacity: 1;
