@@ -32,11 +32,11 @@ component: navbar
     </div>
     {{!-- Menu list should be shown only in PC mode --}}
     <ul class="ja-globalnav__menu-list">
-        <li class="ja-globalnav__menu{{#_or (_is page.class "platform") (_is page.class "devops") (_is page.class "dev-support")}} selected{{/_or}}">
-            {{#_or (_is page.class "platform") (_is page.class "devops") (_is page.class "dev-support")}}<div class="ja-globalnav__menu-subtitle">ソリューション</div>{{/_or}}
+        <li class="ja-globalnav__menu{{#_or show_ja_subnav (_is page.class "devops") (_is page.class "dev-support")}} selected{{/_or}}">
+            {{#_or show_ja_subnav (_is page.class "devops") (_is page.class "dev-support")}}<div class="ja-globalnav__menu-subtitle">ソリューション</div>{{/_or}}
             <div class="ja-globalnav__menu-title">
-                {{#_nor (_is page.class "platform") (_is page.class "dev-support") (_is page.class "devops")}}ソリューション{{/_nor}}
-                {{#is page.class "platform"}}アプリ開発プラットフォーム{{/is}}
+                {{#_nor show_ja_subnav (_is page.class "dev-support") (_is page.class "devops")}}ソリューション{{/_nor}}
+                {{#if show_ja_subnav}}アプリ開発プラットフォーム{{/if}}
                 {{#is page.class "dev-support"}}アプリ開発支援サービス{{/is}}
                 {{#is page.class "devops"}}エンタープライズDevOps{{/is}}
                 <span class="ja-globalnav__caret"></span>
