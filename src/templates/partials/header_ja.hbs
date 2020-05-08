@@ -209,15 +209,16 @@ component: navbar
         <li class="ja-subnav__menu">
             <div class="ja-subnav__menu-title static{{#_or (_is page.class "pricing") (_is page.class "pricing compare")}} selected{{/_or}}"><a href="/pricing.html">料金プラン</a></div>
         </li>
-        <li class="ja-subnav__menu" style="margin-left: 10px; margin-right: 0;">
+        {{!-- The following menus will be shown/hidden by JavaScript --}}
+        <li class="ja-subnav__menu" id="login-button-menu" style="margin-left: 10px; margin-right: 0;">
             <div class="ja-subnav__menu-button blue">ログイン</div>
         </li>
-        <li class="ja-subnav__menu" style="margin-left: 5px; margin-right: 0;">
+        <li class="ja-subnav__menu" id="trial-button-menu" style="margin-left: 5px; margin-right: 0;">
             <div class="ja-subnav__menu-button blue-ghost">無料トライアル</div>
         </li>
-        {{!-- <li class="ja-subnav__menu">
+        <li class="ja-subnav__menu" id="dashboard-button-menu" style="margin-left: 10px; margin-right: 0;">
             <div class="ja-subnav__menu-button green">ダッシュボード</div>
-        </li> --}}
+        </li>
     </ul>
     {{!-- subsidebar toggle button should be shown only in non-PC mode --}}
     {{!-- <div id="subsidebar-toggle-button" class="ja-subnav__subsidebar-toggle-button">
