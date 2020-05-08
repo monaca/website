@@ -1,0 +1,417 @@
+html[lang=ja] body.platform {
+  .v2-section--keyvisual {
+    // In PC mode (926px up)
+    @media screen and (min-width: 926px) {
+
+        > .v2-section--keyvisual__wrapper {
+            position: relative;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 143px 40px;
+            max-width: 1285px;
+            height: 513px;
+            background-image: url('/img/platform/platform_background.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            > .title {
+                position: absolute;
+                left: 170px;
+                top: 80px;
+                text-align: left;
+                color: white;
+
+                > .v2-section--keyvisual__subtitle {
+                    font-size: 20px;
+                }
+
+                .long {
+                    display: inline-block;
+                }
+
+                .short {
+                    display: none;
+                }
+
+                > .v2-section--keyvisual__title {
+                    font-size: 46px;
+                    font-weight: bold;
+                }
+                > .v2-section--keyvisual__description {
+                    font-size: 14px;
+                }
+            }
+
+            > .box {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: 240px;
+                display: flex;
+                flex-direction: row;
+                max-width: 864px;
+                min-width: 864px;
+                min-height: 240px;
+                background-color: #FFFFFF;
+                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+                text-align: left;
+                padding: 30px;
+
+                .box-button {
+                    position: absolute;
+                    bottom: 0px;
+                    max-height: 40px;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 12px 20px;
+                    color: white;
+                    font-size: 15px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: background-color .4s ease;
+                }
+
+                .title {
+                    font-weight: bold;
+                    color: #444444;
+                    font-size: 20px;
+                    padding-bottom: 10px;
+                }
+
+                .description {
+                    color: #6F777F;
+                    font-size: 14px;
+                }
+
+                > .trial {
+                    position: absolute;
+                    box-sizing: border-box;
+                    max-width: 375px;
+                    min-height: 180px;
+                    padding-right: 10px;
+
+                    > a.v2-section--keyvisual__trial-button {
+                        max-width: 151px;
+                        background-color: #fa6800;
+        
+                        &:hover {
+                            background-color: #ea5600;
+                            text-decoration: none;
+                        }
+                        &:focus {
+                            outline: none;
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+
+                > .app {
+                    position: absolute;
+                    box-sizing: border-box;
+                    max-width: 375px;
+                    min-height: 180px;
+                    padding-left: 10px;
+                    right: 30px;
+
+                    > .v2-section--keyvisual__app-development {
+                        max-width: 200px;
+                        background-color: #468FFF;
+            
+                        &:hover {
+                            background-color: #468FFF;
+                            text-decoration: none;
+                        }
+                        &:focus {
+                            outline: none;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+            }
+
+
+            > .floating-text {
+                position: absolute;
+                background-color:#B90000;
+                top: 20px;
+                right: 10px;
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 40px;
+                color: #FFFFFF;
+                font-weight: bold;
+                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+            }
+
+        }
+    }
+
+    // In smartphone mode - 640-925px
+    @media screen and (max-width: 925px) {
+        > .v2-section--keyvisual__wrapper {
+            position: relative;
+            box-sizing: border-box;
+            margin: 0 auto;
+            padding: 143px 40px;
+            height: 513px;
+            background-image: url('/img/platform/platform_background.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            > .title {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: 20px;
+                text-align: center;
+                color: white;
+                min-width: 450px;
+
+                > .v2-section--keyvisual__subtitle {
+                    font-size: 18px;
+                }
+                > .v2-section--keyvisual__title {
+                    font-size: 36px;
+                    font-weight: bold;
+                }
+
+                .long {
+                    display: none;
+                }
+
+                .short {
+                    display: inline-block;
+                }
+
+                > .v2-section--keyvisual__description {
+                    font-size: 12px;
+                }
+            }
+
+            > .box {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: 240px;
+                display: flex;
+                flex-direction: row;
+                min-width: 630px;
+                min-height: 250px;
+                background-color: #FFFFFF;
+                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+                text-align: left;
+                padding: 10px;
+
+                .box-button {
+                    position: absolute;
+                    bottom: 0px;
+                    max-height: 40px;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 12px 20px;
+                    color: white;
+                    font-size: 15px;
+                    font-weight: bold;
+                    cursor: pointer;
+                    transition: background-color .4s ease;
+                }
+
+                .title {
+                    font-weight: bold;
+                    color: #444444;
+                    font-size: 20px;
+                    padding-bottom: 10px;
+                }
+
+                .description {
+                    color: #6F777F;
+                    font-size: 14px;
+                }
+
+                > .trial {
+                    position: absolute;
+                    box-sizing: border-box;
+                    max-width: 300px;
+                    min-height: 230px;
+                    padding-right: 10px;
+
+                    > a.v2-section--keyvisual__trial-button {
+                        max-width: 151px;
+                        background-color: #fa6800;
+        
+                        &:hover {
+                            background-color: #ea5600;
+                            text-decoration: none;
+                        }
+                        &:focus {
+                            outline: none;
+                            text-decoration: none;
+                        }
+                    }
+
+                }
+
+                > .app {
+                    position: absolute;
+                    box-sizing: border-box;
+                    max-width: 300px;
+                    min-height: 230px;
+                    padding-left: 10px;
+                    right: 10px;
+
+                    > .v2-section--keyvisual__app-development {
+                        max-width: 200px;
+                        background-color: #468FFF;
+            
+                        &:hover {
+                            background-color: #468FFF;
+                            text-decoration: none;
+                        }
+                        &:focus {
+                            outline: none;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+            }
+
+
+            > .floating-text {
+                display: none;
+            }
+
+        }
+    }
+
+    // In smartphone mode - 640px
+    @media screen and (max-width: $v2-break-smartphone) {
+        > .v2-section--keyvisual__wrapper {
+            position: relative;
+            box-sizing: border-box;
+            padding: 126px 20px;
+            height: 737px;
+            background-image: url('/img/platform/platform_background_mobile.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            > .title {
+                position: absolute;
+                text-align: center;
+                color: white;
+                top: 10px;
+                left: 50%;
+                transform: translate(-50%);
+                min-width: 260px;
+
+                > .v2-section--keyvisual__subtitle {
+                    font-size: 12px;
+                }
+                > .v2-section--keyvisual__title {
+                    font-size: 24px;
+                    font-weight: bold;
+                    padding-top: 5px;
+                    padding-bottom: 10px;
+                }
+
+                .long {
+                    display: none;
+                }
+
+                .short {
+                    display: inline-block;
+                }
+
+                > .v2-section--keyvisual__description {
+                    font-size: 12px;
+                }
+            }
+
+            > .box {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                top: 215px;
+                display: flex;
+                flex-direction: column-reverse;
+                min-width: 276px;
+                max-width: 276px;
+                min-height: 505px;
+                max-height: 505px;
+                background-color: #FFFFFF;
+                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+                text-align: center;
+
+                .box-button {
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    max-height: 40px;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 12px 20px;
+                    color: white;
+                    font-size: 15px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+
+                .title {
+                    font-weight: bold;
+                    color:#6F777F;
+                    font-size: 16px;
+                    padding-bottom: 10px;
+                }
+
+                .description {
+                    color: #6F777F;
+                    font-size: 13px;
+                    text-align: left;
+                    padding-bottom: 5px;
+                }
+
+                > .trial {
+                    position: relative;
+                    box-sizing: border-box;
+                    min-width: 216px;
+                    max-width: 216px;
+                    min-height: 210px;
+                    max-height: 210px;
+                    right:-20px;
+
+                    > a.v2-section--keyvisual__trial-button {
+                        min-width: 216px;
+                        background-color: #B3B3B3;
+                    }
+
+                }
+
+                > .app {
+                    position: relative;
+                    box-sizing: border-box;
+                    min-width: 216px;
+                    max-width: 216px;
+                    min-height: 195px;
+                    max-height: 195px;
+                    top: -40px;
+                    right:-20px;
+
+                    > .v2-section--keyvisual__app-development {
+                        min-width: 216px;
+                        background-color: #B3B3B3;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+  }
+}
