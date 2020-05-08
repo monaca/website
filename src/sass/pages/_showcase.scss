@@ -1081,7 +1081,7 @@ body.showcase {
             }
 
             @media screen and (max-width: $break) {
-                padding: inherit;
+                padding: 0;
                 height: unset;
                 text-align: center;
             }
@@ -1108,6 +1108,8 @@ body.showcase {
 
                 @media screen and (max-width: $break) {
                     float: none;
+                    margin-left: 5px;
+                    margin-right: 5px;
                 }
 
                 &:not(.btn) {
@@ -1241,6 +1243,13 @@ body.showcase {
     .container.contact {
         min-width: 100%;
     }
+
+    .other_case_studies, .case-container {
+        @media screen and (max-width: $break) {
+            display: none;
+        }
+    }
+
 }
 
 body.showcase.hitachitool {
