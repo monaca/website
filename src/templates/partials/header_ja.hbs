@@ -213,26 +213,26 @@ component: navbar
 {{#if show_ja_globalnav}}
 <script>
     (function() {
-        var globalsidebarToggleButton = document.querySelector('#globalsidebar-toggle-button');
-        var globalsidebar = document.querySelector('#globalsidebar');
+        var globalSidebarToggleButton = document.querySelector('#globalsidebar-toggle-button');
+        var globalSidebar = document.querySelector('#globalsidebar');
         var toggleGlobalSidebar = function() {
-            var isShown = globalsidebar.classList.contains('shown');
+            var isShown = globalSidebar.classList.contains('shown');
             // Toggle
             if (isShown) {
                 // Hide
-                globalsidebarToggleButton.classList.remove('globalsidebar-shown');
-                globalsidebar.classList.remove('shown');
+                globalSidebarToggleButton.classList.remove('globalsidebar-shown');
+                globalSidebar.classList.remove('shown');
             } else {
                 // Show
-                globalsidebarToggleButton.classList.add('globalsidebar-shown');
-                globalsidebar.classList.add('shown');
+                globalSidebarToggleButton.classList.add('globalsidebar-shown');
+                globalSidebar.classList.add('shown');
             }
         }
 
 
         var isClickHandlerProcessed = false;
         var isTouchStartHandlerProcessed = false;
-        globalsidebarToggleButton.addEventListener('click', function(event) {
+        globalSidebarToggleButton.addEventListener('click', function(event) {
             // Prevent duplicate handler execution
             if (isTouchStartHandlerProcessed) {
                 isClickHandlerProcessed = false;
@@ -243,7 +243,7 @@ component: navbar
 
             toggleGlobalSidebar();
         });
-        globalsidebarToggleButton.addEventListener('touchstart', function(event) {
+        globalSidebarToggleButton.addEventListener('touchstart', function(event) {
             // Prevent duplicate handler execution
             if (isClickHandlerProcessed) {
                 isClickHandlerProcessed = false;
