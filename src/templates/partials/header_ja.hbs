@@ -172,31 +172,31 @@ component: navbar
 <div class="ja-subnav">
     <div class="ja-subnav__top-bar"></div>
     <div class="ja-subnav__logo">
-        Monaca開発プラットフォーム
+        <a href="/platform/">Monaca開発プラットフォーム</a>
     </div>
     {{!-- Menu list should be shown only in PC mode --}}
     <ul class="ja-subnav__menu-list">
         <li class="ja-subnav__menu">
-            <div class="ja-subnav__menu-title">特徴<span class="ja-subnav__caret"></span></div>
+            <div class="ja-subnav__menu-title{{#_or (_is page.class "features-html5") (_is page.class "features-monaca")}} selected{{/_or}}"><span class="vertical-align-fix">特徴</span><span class="ja-subnav__caret"></span></div>
         </li>
         <li class="ja-subnav__menu">
-            <div class="ja-subnav__menu-title">Monacaを知る<span class="ja-subnav__caret"></span></div>
+            <div class="ja-subnav__menu-title{{#_or (_is page.class "headline") (_is page.class "faq")}} selected{{/_or}}"><span class="vertical-align-fix">Monacaを知る</span><span class="ja-subnav__caret"></span></div>
         </li>
         <li class="ja-subnav__menu">
-            <div class="ja-subnav__menu-title">学習ガイド<span class="ja-subnav__caret"></span></div>
+            <div class="ja-subnav__menu-title{{#_or (_is page.class "guide-of-study") (_is page.class "book-support") (_is page.class "events") (_is page.class "support")}} selected{{/_or}}"><span class="vertical-align-fix">学習ガイド</span><span class="ja-subnav__caret"></span></div>
         </li>
         <li class="ja-subnav__menu">
-            <div class="ja-subnav__menu-title">料金プラン</div>
+            <div class="ja-subnav__menu-title{{#_or (_is page.class "pricing") (_is page.class "pricing")}} selected{{/_or}}"><a href="/pricing.html">料金プラン</a></div>
         </li>
-        <li class="ja-subnav__menu">
+        <li class="ja-subnav__menu" style="margin-left: 10px; margin-right: 0;">
             <div class="ja-subnav__menu-button blue">ログイン</div>
         </li>
-        <li class="ja-subnav__menu">
+        <li class="ja-subnav__menu" style="margin-left: 5px; margin-right: 0;">
             <div class="ja-subnav__menu-button blue-ghost">無料トライアル</div>
         </li>
-        <li class="ja-subnav__menu">
+        {{!-- <li class="ja-subnav__menu">
             <div class="ja-subnav__menu-button green">ダッシュボード</div>
-        </li>
+        </li> --}}
     </ul>
     {{!-- Sidebar toggle button should be shown only in non-PC mode --}}
     {{!-- <div id="sidebar-toggle-button" class="ja-subnav__sidebar-toggle-button">
