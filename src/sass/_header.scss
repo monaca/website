@@ -93,7 +93,7 @@ html[lang=ja] {
                 align-items: flex-start;
                 justify-content: center;
                 margin-right: 25px;
-                height: calc(#{$extra-hoverable-height} + 100% + #{$extra-hoverable-height}); // Extend hoverable area by 16px (top) + 16px (bottom)
+                height: 100%;
 
                 cursor: default;
                 color: $nav-item-dark-color;
@@ -157,7 +157,7 @@ html[lang=ja] {
                     pointer-events: none;
                     background-color: #3B8BE0;
                     opacity: 0;
-                    transform: translateY(#{- $extra-hoverable-height}) scaleY(1);
+                    transform: translateY(0) scaleY(1);
                     transition: all 0.3s ease-out;
                 }
                 &.selected > div.ja-globalnav__menu-bottom-bar {
@@ -169,7 +169,7 @@ html[lang=ja] {
                     }
                     &:not(.static) {
                         opacity: 0;
-                        transform: translateY(#{- $extra-hoverable-height + 2px}) scaleY(0);
+                        transform: translateY(2px) scaleY(0);
                     }
                 }
 
@@ -179,7 +179,7 @@ html[lang=ja] {
                     flex-flow: column nowrap;
                     align-items: stretch;
                     justify-content: center;
-                    top: calc(#{$extra-hoverable-height} + 57px);
+                    top: 57px;
                     left: 50%;
                     transform: translateX(-50%) translateY(0);
                     margin: 0;
@@ -246,6 +246,13 @@ html[lang=ja] {
                             left: unset;
                             right: calc(132px - 50px);
                         }
+                    }
+
+                    > div.ja-globalnav__menu-dropdown-extra-hoverable-area {
+                        position: absolute;
+                        top: -27px;
+                        width: 100%;
+                        height: 27px;
                     }
 
                     > div.ja-globalnav__menu-dropdown-item {
@@ -538,8 +545,6 @@ html[lang=ja] {
             }
 
             > li.ja-subnav__menu {
-                $extra-hoverable-height: 16px;
-                
                 position: relative;
                 display: inline-flex;
                 flex-flow: column;
