@@ -60,11 +60,22 @@
     loginData.setPreReady();
 
     if (status.isLogin) {
-      $(".navbar-nav .before-login").remove(); // Only for lang="en"
+      // For login user
+      if (window.LANG === 'en') {
+        $(".navbar-nav .before-login").remove();
+      } else if (window.LANG === 'ja') {
+        $('#login-button-menu').hide();
+        $('#trial-button-menu').hide();
+      }
       this.loadLoginData();
       this.showcaseAddEnable(true);
     } else {
-      $(".navbar-nav .after-login").remove(); // Only for lang="en"
+      // For non-login user
+      if (window.LANG === 'en') {
+        $(".navbar-nav .after-login").remove();
+      } else if (window.LANG === 'ja') {
+        $('#dashboard-button-menu').hide();
+      }
       loginData.setReady();
       this.showcaseAddEnable(false);
     }

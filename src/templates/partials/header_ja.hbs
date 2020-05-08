@@ -32,17 +32,18 @@ component: navbar
     </div>
     {{!-- Menu list should be shown only in PC mode --}}
     <ul class="ja-globalnav__menu-list">
-        <li class="ja-globalnav__menu{{#_or (_is page.class "platform") (_is page.class "devops") (_is page.class "dev-support")}} selected{{/_or}}">
-            {{#_or (_is page.class "platform") (_is page.class "devops") (_is page.class "dev-support")}}<div class="ja-globalnav__menu-subtitle">ソリューション</div>{{/_or}}
+        <li class="ja-globalnav__menu{{#_or show_ja_subnav (_is page.class "devops") (_is page.class "dev-support")}} selected{{/_or}}">
+            {{#_or show_ja_subnav (_is page.class "devops") (_is page.class "dev-support")}}<div class="ja-globalnav__menu-subtitle">ソリューション</div>{{/_or}}
             <div class="ja-globalnav__menu-title">
-                {{#_nor (_is page.class "platform") (_is page.class "dev-support") (_is page.class "devops")}}ソリューション{{/_nor}}
-                {{#is page.class "platform"}}アプリ開発プラットフォーム{{/is}}
+                {{#_nor show_ja_subnav (_is page.class "dev-support") (_is page.class "devops")}}ソリューション{{/_nor}}
+                {{#if show_ja_subnav}}アプリ開発プラットフォーム{{/if}}
                 {{#is page.class "dev-support"}}アプリ開発支援サービス{{/is}}
                 {{#is page.class "devops"}}エンタープライズDevOps{{/is}}
                 <span class="ja-globalnav__caret"></span>
             </div>
             <div class="ja-globalnav__menu-bottom-bar"></div>
             <div class="ja-globalnav__menu-dropdown solutions">
+                <div class="ja-globalnav__menu-dropdown-extra-hoverable-area"></div>
                 <div class="ja-globalnav__menu-dropdown-item">
                     <a href="/platform/">
                         <img class="ja-globalnav__menu-dropdown-item-icon" src="/img/ja-globalnav/icon_pl.svg" />
@@ -88,6 +89,7 @@ component: navbar
             </div>
             <div class="ja-globalnav__menu-bottom-bar"></div>
             <div class="ja-globalnav__menu-dropdown ecosystems">
+                <div class="ja-globalnav__menu-dropdown-extra-hoverable-area"></div>
                 <div class="ja-globalnav__menu-dropdown-item"><a href="/solution-partner/">開発パートナー</a></div>
                 <div class="ja-globalnav__menu-dropdown-item"><a href="/product-partner/">プロダクトパートナー</a></div>
             </div>
@@ -96,6 +98,7 @@ component: navbar
             <div class="ja-globalnav__menu-title">ブログ<span class="ja-globalnav__caret"></span></div>
             <div class="ja-globalnav__menu-bottom-bar"></div>
             <div class="ja-globalnav__menu-dropdown blogs">
+                <div class="ja-globalnav__menu-dropdown-extra-hoverable-area"></div>
                 <div class="ja-globalnav__menu-dropdown-item blogs">
                     <a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">
                         <span class="img-switcher">
@@ -139,31 +142,31 @@ component: navbar
             <div class="ja-globalnav__menu-bottom-bar static"></div>
         </li>
     </ul>
-    {{!-- Sidebar toggle button should be shown only in non-PC mode --}}
-    <div id="sidebar-toggle-button" class="ja-globalnav__sidebar-toggle-button">
-        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
-        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
-        <span class="ja-globalnav__sidebar-toggle-button-bar"></span>
+    {{!-- globalsidebar toggle button should be shown only in non-PC mode --}}
+    <div id="globalsidebar-toggle-button" class="ja-globalnav__globalsidebar-toggle-button">
+        <span class="ja-globalnav__globalsidebar-toggle-button-bar"></span>
+        <span class="ja-globalnav__globalsidebar-toggle-button-bar"></span>
+        <span class="ja-globalnav__globalsidebar-toggle-button-bar"></span>
     </div>
 </div>
-<div id="sidebar" class="ja-sidebar">
-    <div class="ja-sidebar__menu-list">
-        <div class="ja-sidebar__menu group">ソリューション</div>
-        <div class="ja-sidebar__menu item"><a href="/platform/">アプリ開発プラットフォーム</a></div>
-        <div class="ja-sidebar__menu item"><a href="/dev-support/">アプリ開発支援サービス</a></div>
-        <div class="ja-sidebar__menu item"><a href="/devops/">エンタープライズDevOps</a></div>
-        <div class="ja-sidebar__menu item"><a href="https://edu.monaca.io/" target="_blank" rel="noopener">プログラミング教育<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
-        <div class="ja-sidebar__menu group"><a href="/why-monaca/">Monacaを選ぶ理由</a></div>
-        <div class="ja-sidebar__menu group"><a href="/showcase/">導入事例</a></div>
-        <div class="ja-sidebar__menu group">エコシステム</div>
-        <div class="ja-sidebar__menu item"><a href="/solution-partner/">開発パートナー</a></div>
-        <div class="ja-sidebar__menu item"><a href="/product-partner/">プロダクトパートナー</a></div>
-        <div class="ja-sidebar__menu group">ブログ</div>
-        <div class="ja-sidebar__menu item"><a href="https://press.monaca.io/" target="_blank" rel="noopener">モナカプレス<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
-        <div class="ja-sidebar__menu item"><a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">アシアルブログ<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
-        <div class="ja-sidebar__menu item"><a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">The Web Tub<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
-        <div class="ja-sidebar__menu item"><a href="https://note.asial.co.jp/" target="_blank" rel="noopener">アシアルnote<img class="ja-sidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
-        <div class="ja-sidebar__menu group"><a href="/support/inquiry.html">お問い合わせ</a></div>
+<div id="globalsidebar" class="ja-globalsidebar">
+    <div class="ja-globalsidebar__menu-list">
+        <div class="ja-globalsidebar__menu group">ソリューション</div>
+        <div class="ja-globalsidebar__menu item"><a href="/platform/">アプリ開発プラットフォーム</a></div>
+        <div class="ja-globalsidebar__menu item"><a href="/dev-support/">アプリ開発支援サービス</a></div>
+        <div class="ja-globalsidebar__menu item"><a href="/devops/">エンタープライズDevOps</a></div>
+        <div class="ja-globalsidebar__menu item"><a href="https://edu.monaca.io/" target="_blank" rel="noopener">プログラミング教育<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-globalsidebar__menu group"><a href="/why-monaca/">Monacaを選ぶ理由</a></div>
+        <div class="ja-globalsidebar__menu group"><a href="/showcase/">導入事例</a></div>
+        <div class="ja-globalsidebar__menu group">エコシステム</div>
+        <div class="ja-globalsidebar__menu item"><a href="/solution-partner/">開発パートナー</a></div>
+        <div class="ja-globalsidebar__menu item"><a href="/product-partner/">プロダクトパートナー</a></div>
+        <div class="ja-globalsidebar__menu group">ブログ</div>
+        <div class="ja-globalsidebar__menu item"><a href="https://press.monaca.io/" target="_blank" rel="noopener">モナカプレス<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-globalsidebar__menu item"><a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">アシアルブログ<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-globalsidebar__menu item"><a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">The Web Tub<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-globalsidebar__menu item"><a href="https://note.asial.co.jp/" target="_blank" rel="noopener">アシアルnote<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-globalsidebar__menu group"><a href="/support/inquiry.html">お問い合わせ</a></div>
     </div>
 </div>
 {{/if}}
@@ -171,65 +174,103 @@ component: navbar
 {{#if show_ja_subnav}}
 <div class="ja-subnav">
     <div class="ja-subnav__top-bar"></div>
-    <div class="ja-subnav__title">
-        Monaca開発プラットフォーム
+    <div class="ja-subnav__logo">
+        <a href="/platform/">Monaca開発プラットフォーム</a>
     </div>
     {{!-- Menu list should be shown only in PC mode --}}
     <ul class="ja-subnav__menu-list">
         <li class="ja-subnav__menu">
-            <div class="ja-subnav__menu-title">特徴<span class="ja-subnav__caret"></span></div>
+            <div class="ja-subnav__menu-title{{#_or (_is page.class "features-html5") (_is page.class "features-monaca")}} selected{{/_or}}"><span class="vertical-align-fix">特徴</span><span class="ja-subnav__caret"></span></div>
+            <div class="ja-subnav__menu-dropdown features">
+                <div class="ja-subnav__menu-dropdown-extra-hoverable-area"></div>
+                <div class="ja-subnav__menu-dropdown-item"><a href="/features/html5.html">HTML5とは？</a></div>
+                <div class="ja-subnav__menu-dropdown-item"><a href="/features/">Monacaの利点</a></div>
+            </div>
         </li>
         <li class="ja-subnav__menu">
-            <div class="ja-subnav__menu-title">Monacaを知る<span class="ja-subnav__caret"></span></div>
+            <div class="ja-subnav__menu-title{{#_or (_is page.class "headline") (_is page.class "faq")}} selected{{/_or}}"><span class="vertical-align-fix">Monacaを知る</span><span class="ja-subnav__caret"></span></div>
+            <div class="ja-subnav__menu-dropdown about-monaca">
+                <div class="ja-subnav__menu-dropdown-extra-hoverable-area"></div>
+                <div class="ja-subnav__menu-dropdown-item"><a href="/headline/">最新情報</a></div>
+                <div class="ja-subnav__menu-dropdown-item"><a href="/faq.html">よくあるご質問</a></div>
+                <div class="ja-subnav__menu-dropdown-item"><a href="/headline/fault.html">障害・不具合情報</a></div>
+            </div>
         </li>
         <li class="ja-subnav__menu">
-            <div class="ja-subnav__menu-title">学習ガイド<span class="ja-subnav__caret"></span></div>
+            <div class="ja-subnav__menu-title{{#_or (_is page.class "guide-of-study") (_is page.class "book-support") (_is page.class "events") (_is page.class "support")}} selected{{/_or}}"><span class="vertical-align-fix">学習ガイド</span><span class="ja-subnav__caret"></span></div>
+            <div class="ja-subnav__menu-dropdown guide">
+                <div class="ja-subnav__menu-dropdown-extra-hoverable-area"></div>
+                <div class="ja-subnav__menu-dropdown-item"><a href="/service/">サポート＆学習ガイド</a></div>
+                <div class="ja-subnav__menu-dropdown-item"><a href="https://docs.monaca.io/ja/" target="_blank" rel="noopener">ドキュメント<img class="ja-subnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" /></a></div>
+                <div class="ja-subnav__menu-dropdown-item"><a href="/book/support/">関連書籍</a></div>
+                <div class="ja-subnav__menu-dropdown-item"><a href="https://teratail.com/tags/monaca" target="_blank" rel="noopener">公式フォーラム (teratail)<img class="ja-subnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" /></a></div>
+                <div class="ja-subnav__menu-dropdown-item"><a href="https://monacaug.mobi/" target="_blank" rel="noopener">公式コミュニティ (Monaca UG)<img class="ja-subnav__menu-dropdown-item-exlink" src="/img/ja-globalnav/icn_ex_link_14px.svg" /></a></div>
+                <div class="ja-subnav__menu-dropdown-item"><a href="/events/training.html">トレーニング</a></div>
+            </div>
         </li>
         <li class="ja-subnav__menu">
-            <div class="ja-subnav__menu-title">料金プラン</div>
+            <div class="ja-subnav__menu-title static{{#_or (_is page.class "pricing") (_is page.class "pricing compare")}} selected{{/_or}}"><a href="/pricing.html">料金プラン</a></div>
         </li>
-        <li class="ja-subnav__menu">
-            <div class="ja-subnav__menu-button blue">ログイン</div>
+        {{!-- The following menus will be shown/hidden by JavaScript --}}
+        <li class="ja-subnav__menu" id="login-button-menu" style="margin-left: 10px; margin-right: 0;">
+            <div class="ja-subnav__menu-button blue" id="show_loginpopup">ログイン</div>
         </li>
-        <li class="ja-subnav__menu">
-            <div class="ja-subnav__menu-button blue-ghost">無料トライアル</div>
+        <li class="ja-subnav__menu" id="trial-button-menu" style="margin-left: 5px; margin-right: 0;">
+            <a href="https://monaca.mobi/ja/signup" onclick="gtag('event', 'view_item', {'event_category': 'engagement','event_label': 'trial-start'});"><div class="ja-subnav__menu-button blue-ghost">無料トライアル</div></a>
         </li>
-        <li class="ja-subnav__menu">
-            <div class="ja-subnav__menu-button green">ダッシュボード</div>
+        <li class="ja-subnav__menu" id="dashboard-button-menu" style="margin-left: 10px; margin-right: 0;">
+            <a href="https://monaca.mobi/{{language}}/dashboard"><div class="ja-subnav__menu-button green">ダッシュボード</div></a>
         </li>
     </ul>
-    {{!-- Sidebar toggle button should be shown only in non-PC mode --}}
-    {{!-- <div id="sidebar-toggle-button" class="ja-subnav__sidebar-toggle-button">
-        <span class="ja-subnav__sidebar-toggle-button-bar"></span>
-        <span class="ja-subnav__sidebar-toggle-button-bar"></span>
-        <span class="ja-subnav__sidebar-toggle-button-bar"></span>
-    </div> --}}
+    {{!-- subsidebar toggle button should be shown only in non-PC mode --}}
+    <div id="subsidebar-toggle-button" class="ja-subnav__subsidebar-toggle-button">
+        <span class="ja-subnav__subsidebar-toggle-button-caret"></span>
+    </div>
+</div>
+<div id="subsidebar" class="ja-subsidebar">
+    <div class="ja-subsidebar__menu-list">
+        <div class="ja-subsidebar__menu group">特徴</div>
+        <div class="ja-subsidebar__menu item"><a href="/features/html5.html">HTML5とは？</a></div>
+        <div class="ja-subsidebar__menu item"><a href="/features/">Monacaの利点</a></div>
+        <div class="ja-subsidebar__menu group">Monacaを知る</div>
+        <div class="ja-subsidebar__menu item"><a href="/headline/">最新情報</a></div>
+        <div class="ja-subsidebar__menu item"><a href="/faq.html">よくあるご質問</a></div>
+        <div class="ja-subsidebar__menu item"><a href="/headline/fault.html">障害・不具合情報</a></div>
+        <div class="ja-subsidebar__menu group">学習ガイド</div>
+        <div class="ja-subsidebar__menu item"><a href="/service/">サポート＆学習ガイド</a></div>
+        <div class="ja-subsidebar__menu item"><a href="https://docs.monaca.io/ja/" target="_blank" rel="noopener">ドキュメント<img class="ja-subsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-subsidebar__menu item"><a href="/book/support/">関連書籍</a></div>
+        <div class="ja-subsidebar__menu item"><a href="https://teratail.com/tags/monaca" target="_blank" rel="noopener">公式フォーラム (teratail)<img class="ja-subsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-subsidebar__menu item"><a href="https://monacaug.mobi/" target="_blank" rel="noopener">公式コミュニティ (Monaca UG)<img class="ja-subsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
+        <div class="ja-subsidebar__menu item"><a href="/events/training.html">トレーニング</a></div>
+        <div class="ja-subsidebar__menu group"><a href="/pricing.html">料金プラン</a></div>
+    </div>
 </div>
 {{/if}}
 
 {{#if show_ja_globalnav}}
 <script>
     (function() {
-        var sidebarToggleButton = document.querySelector('#sidebar-toggle-button');
-        var sidebar = document.querySelector('#sidebar');
-        var toggleSidebar = function() {
-            var isShown = sidebar.classList.contains('shown');
+        var globalSidebarToggleButton = document.querySelector('#globalsidebar-toggle-button');
+        var globalSidebar = document.querySelector('#globalsidebar');
+        var toggleGlobalSidebar = function() {
+            var isShown = globalSidebar.classList.contains('shown');
             // Toggle
             if (isShown) {
                 // Hide
-                sidebarToggleButton.classList.remove('sidebar-shown');
-                sidebar.classList.remove('shown');
+                globalSidebarToggleButton.classList.remove('globalsidebar-shown');
+                globalSidebar.classList.remove('shown');
             } else {
                 // Show
-                sidebarToggleButton.classList.add('sidebar-shown');
-                sidebar.classList.add('shown');
+                globalSidebarToggleButton.classList.add('globalsidebar-shown');
+                globalSidebar.classList.add('shown');
             }
         }
 
 
         var isClickHandlerProcessed = false;
         var isTouchStartHandlerProcessed = false;
-        sidebarToggleButton.addEventListener('click', function(event) {
+        globalSidebarToggleButton.addEventListener('click', function(event) {
             // Prevent duplicate handler execution
             if (isTouchStartHandlerProcessed) {
                 isClickHandlerProcessed = false;
@@ -238,9 +279,9 @@ component: navbar
             }
             isClickHandlerProcessed = true;
 
-            toggleSidebar();
+            toggleGlobalSidebar();
         });
-        sidebarToggleButton.addEventListener('touchstart', function(event) {
+        globalSidebarToggleButton.addEventListener('touchstart', function(event) {
             // Prevent duplicate handler execution
             if (isClickHandlerProcessed) {
                 isClickHandlerProcessed = false;
@@ -249,7 +290,55 @@ component: navbar
             }
             isTouchStartHandlerProcessed = true;
 
-            toggleSidebar();
+            toggleGlobalSidebar();
+        });
+    }());
+</script>
+{{/if}}
+
+{{#if show_ja_subnav}}
+<script>
+    (function() {
+        var subSidebarToggleButton = document.querySelector('#subsidebar-toggle-button');
+        var subSidebar = document.querySelector('#subsidebar');
+        var toggleSubSidebar = function() {
+            var isShown = subSidebar.classList.contains('shown');
+            // Toggle
+            if (isShown) {
+                // Hide
+                subSidebarToggleButton.classList.remove('subsidebar-shown');
+                subSidebar.classList.remove('shown');
+            } else {
+                // Show
+                subSidebarToggleButton.classList.add('subsidebar-shown');
+                subSidebar.classList.add('shown');
+            }
+        }
+
+
+        var isClickHandlerProcessed = false;
+        var isTouchStartHandlerProcessed = false;
+        subSidebarToggleButton.addEventListener('click', function(event) {
+            // Prevent duplicate handler execution
+            if (isTouchStartHandlerProcessed) {
+                isClickHandlerProcessed = false;
+                isTouchStartHandlerProcessed = false;
+                return;
+            }
+            isClickHandlerProcessed = true;
+
+            toggleSubSidebar();
+        });
+        subSidebarToggleButton.addEventListener('touchstart', function(event) {
+            // Prevent duplicate handler execution
+            if (isClickHandlerProcessed) {
+                isClickHandlerProcessed = false;
+                isTouchStartHandlerProcessed = false;
+                return;
+            }
+            isTouchStartHandlerProcessed = true;
+
+            toggleSubSidebar();
         });
     }());
 </script>
