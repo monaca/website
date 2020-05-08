@@ -487,6 +487,10 @@ body.showcase {
                 background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
                 background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
                 z-index: 1;
+
+                @media screen and (max-width: $break) {
+                    bottom: 235px;
+                }
             }
 
 
@@ -526,6 +530,7 @@ body.showcase {
                     width: unset;
                     left: unset;
                     padding: 0 5%;
+                    bottom: 235px;
                 }
 
                 &.flipped {
@@ -562,7 +567,13 @@ body.showcase {
                 z-index: 9;
 
                 @media screen and (max-width: $break) {
-                    display: none;
+                    //display: none;
+                    position: unset;
+                    width: inherit;
+                    height: auto;
+                    text-align: center;
+                    right: 0;
+                    margin-top: 60px;
                 }
 
                 &.flipped {
@@ -574,6 +585,12 @@ body.showcase {
                     display: block;
                     width: 180px;
                     margin: 44px auto 32px;
+
+                    @media screen and (max-width: $break) {
+                        width: 40%;
+                        height: auto;
+                        margin: 0;
+                    }
                 }
 
                 h3 {
