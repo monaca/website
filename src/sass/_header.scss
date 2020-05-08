@@ -629,6 +629,101 @@ html[lang=ja] {
                     }
                 }
 
+                > div.ja-subnav__menu-dropdown {
+                    position: absolute;
+                    display: inline-flex;
+                    flex-flow: column nowrap;
+                    align-items: stretch;
+                    justify-content: center;
+                    top: calc(-14px + 47px);
+                    left: 50%;
+                    transform: translateX(-50%) translateY(0);
+                    margin: 0;
+                    border-radius: 10px;
+                    padding: 26px 0px;
+                    background-color: #fff;
+                    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
+                    pointer-events: none;
+                    opacity: 0;
+                    transition: all 0.3s ease-out;
+                    text-align: left;
+                    &::before { // Arrow
+                        content: '';
+                        position: absolute;
+                        top: -9px;
+                        left: 50%;
+                        margin-left: calc(-10px - 8px);
+                        border-radius: 2px;
+                        box-shadow: 0 3px 20px rgba(0, 0, 0, 0.16);
+                        width: 20px;
+                        height: 20px;
+                        background: #fff;
+                        transform: scaleX(0.85) rotate(45deg);
+                    }
+                    &::after { // Hide shadow of arrow
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: calc(50% - 50px);
+                        margin-left: -8px;
+                        width: 100px;
+                        height: 36px;
+                        background: #fff;
+                    }
+
+                    > div.ja-subnav__menu-dropdown-extra-hoverable-area {
+                        position: absolute;
+                        top: -27px;
+                        width: 100%;
+                        height: 27px;
+                    }
+
+                    > div.ja-subnav__menu-dropdown-item {
+                        padding: 0 37px;
+                        &.blogs {
+                            padding: 0;
+                        }
+                        display: inline-flex;
+                        flex-flow: row nowrap;
+                        align-items: center;
+                        justify-content: flex-start;
+
+                        > a {
+                            display: inline-flex;
+                            flex-flow: row nowrap;
+                            align-items: center;
+                            justify-content: flex-start;
+                            padding-right: 33px;
+                            width: 100%;
+                            height: 46px;
+                            color: $nav-item-dark-color;
+                            white-space: nowrap;
+                            transition: $header-transition;
+                            font-size: 14px;
+                            font-weight: normal;
+                            text-decoration: none;
+                            &:hover, &:focus {
+                                color: $nav-item-darker-color;
+                            }
+
+                            > .ja-subnav__menu-dropdown-item-exlink {
+                                margin-left: 4px;
+                                max-width: unset; // Prevent broken SVG width
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    > div.ja-subnav__menu-dropdown {
+                        pointer-events: auto;
+                        opacity: 1;
+                        transform: translateX(-50%) translateY(20px);
+                        &.blogs {
+                            transform: translateY(20px);
+                        }
+                    }
+                }
+
                 > div.ja-subnav__menu-button {
                     box-sizing: border-box;
                     display: inline-flex;
