@@ -99,6 +99,11 @@
     return translations[lang][key];
   }
 
+  function getText(key) {
+    var lang = window.LANG.toLowerCase();
+    return translations[lang][key];
+  }
+
   function getHeadline(options,success,fail) {
     var lang = options.lang || 'en';
     var news_type = options.type || TYPE_NEWS_AND_RELEASE;
