@@ -395,7 +395,7 @@ html[lang=ja] {
         position: fixed;
         top: 66px;
         right: 0;
-        padding-bottom: 120px; // Show whole part of globalsidebar when scrolling
+        padding-bottom: calc(66px + 50px); // Show whole part of globalsidebar when scrolling
         width: 100%;
         height: 100%;
         background-color: white;
@@ -867,7 +867,7 @@ html[lang=ja] {
         position: fixed;
         top: 122px;
         right: 0;
-        padding-bottom: calc(122px + 120px); // Show whole part of subsidebar when scrolling
+        padding-bottom: calc(122px + 50px); // Show whole part of subsidebar when scrolling
         width: 100%;
         height: 100%;
         background-color: white;
