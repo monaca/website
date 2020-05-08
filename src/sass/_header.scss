@@ -775,25 +775,52 @@ html[lang=ja] {
                     height: 28px;
                     font-size: 12px;
                     font-weight: bold;
+                    transition: all 0.3s ease-out;
+                    user-select: none;
                     &.blue {
                         border: none;
                         background-color: #3B8BE0;
                         color: #fff;
+                        &:hover, &:focus {
+                            background-color: #5AA7FA;
+                            cursor: pointer;
+                        }
+                        &:active {
+                            background-color: #2071C7;
+                            transition: all 0.1s ease-out;
+                        }
                     }
                     &.blue-ghost {
                         border: 1px solid #3B8BE0;
                         padding: 8px 11px;
                         background-color: #fff;
                         color: #3B8BE0;
+                        &:hover, &:focus {
+                            border: 1px solid #5AA7FA;
+                            background-color: #5AA7FA;
+                            color: #fff;
+                            cursor: pointer;
+                        }
+                        &:active {
+                            border: 1px solid #2071C7;
+                            background-color: #2071C7;
+                            color: #fff;
+                            transition: all 0.1s ease-out;
+                        }
                     }
                     &.green {
                         border: none;
                         background-color: #65AD3E;
                         color: #fff;
+                        &:hover, &:focus {
+                            background-color: #81C75B;
+                            cursor: pointer;
+                        }
+                        &:active {
+                            background-color: #4D9426;
+                            transition: all 0.1s ease-out;
+                        }
                     }
-                }
-
-                > div.ja-subnav__menu-green-button {
                 }
             }
         }
