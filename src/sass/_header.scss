@@ -763,7 +763,12 @@ html[lang=ja] {
                     }
                 }
 
-                > div.ja-subnav__menu-button {
+                a, a:hover, a:focus, a:active {
+                    opacity: 1 !important;
+                    text-decoration: none !important;
+                }
+
+                div.ja-subnav__menu-button {
                     box-sizing: border-box;
                     display: inline-flex;
                     flex-flow: row nowrap;

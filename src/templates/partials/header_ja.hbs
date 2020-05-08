@@ -211,13 +211,13 @@ component: navbar
         </li>
         {{!-- The following menus will be shown/hidden by JavaScript --}}
         <li class="ja-subnav__menu" id="login-button-menu" style="margin-left: 10px; margin-right: 0;">
-            <div class="ja-subnav__menu-button blue">ログイン</div>
+            <div class="ja-subnav__menu-button blue" id="show_loginpopup">ログイン</div>
         </li>
         <li class="ja-subnav__menu" id="trial-button-menu" style="margin-left: 5px; margin-right: 0;">
-            <div class="ja-subnav__menu-button blue-ghost">無料トライアル</div>
+            <a href="https://monaca.mobi/ja/signup" onclick="gtag('event', 'view_item', {'event_category': 'engagement','event_label': 'trial-start'});"><div class="ja-subnav__menu-button blue-ghost">無料トライアル</div></a>
         </li>
         <li class="ja-subnav__menu" id="dashboard-button-menu" style="margin-left: 10px; margin-right: 0;">
-            <div class="ja-subnav__menu-button green">ダッシュボード</div>
+            <a href="https://monaca.mobi/{{language}}/dashboard"><div class="ja-subnav__menu-button green">ダッシュボード</div></a>
         </li>
     </ul>
     {{!-- subsidebar toggle button should be shown only in non-PC mode --}}
