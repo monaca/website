@@ -1274,6 +1274,36 @@ body.showcase {
         min-width: 100%;
     }
 
+    h2.other_case_studies {
+        text-align: center;
+        margin: 50px 0;
+        font-size: 40px;
+    }
+
+    .case-container {
+        margin-bottom: 50px;
+        .cases {
+            text-align: center;
+
+            .case {
+                margin: 0 2%;
+                display: inline-table;
+
+                @media screen and (max-width: $width) {
+                    width: 25%;
+                }
+
+                .title, a {
+                    display: block;
+                    text-align: left;
+                }
+                p.title {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
     .other_case_studies, .case-container {
         @media screen and (max-width: $break) {
             display: none;
