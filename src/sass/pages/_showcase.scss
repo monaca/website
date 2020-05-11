@@ -1108,12 +1108,17 @@ body.showcase {
 
             @media screen and (max-width: 1070px) {
                 width: 100%;
+                padding: 0 70px;
             }
 
-            @media screen and (max-width: $break) {
-                padding: 0;
+            @media screen and (max-width: $break-lg) {
                 height: unset;
                 text-align: center;
+                padding: 0 70px;
+            }
+
+            @media screen and (max-width: $break-xs) {
+                padding: 0;
             }
 
             span {
@@ -1122,7 +1127,7 @@ body.showcase {
                 color: #6F777F;
                 font-size: 16px;
 
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: $break-lg) {
                     display: inline-block;
                     padding: 0 6%;
                     margin-top: 25px;
@@ -1136,7 +1141,7 @@ body.showcase {
                 margin-left: 10px;
                 margin-top: 30px;
 
-                @media screen and (max-width: $break) {
+                @media screen and (max-width: $break-lg) {
                     float: none;
                     margin-left: 5px;
                     margin-right: 5px;
@@ -1151,7 +1156,7 @@ body.showcase {
                 img {
                     height: 48px;
 
-                    @media screen and (max-width: $break) {
+                    @media screen and (max-width: $break-lg) {
                         width: 40%;
                         height: unset;
                         max-height: 50px;
