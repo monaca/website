@@ -807,13 +807,26 @@ body.showcase {
                 margin-bottom: 4px;
                 color: #6F777F;
                 border-bottom: 1px solid #707070;
-                height: 40px;
+
+                @media screen and (max-width: $break-xs) {
+                    font-size: 11px;
+                }
 
                 dt {
                     display: inline-block;
                     font-weight: 700;
-                    width: 60px;
+                    min-width: 30%;
+                    margin-right: 5%;
                     line-height: 40px;
+
+                    @media screen and (max-width: $break-xs) {
+                        min-width: 20%;
+                        margin-right: 2%;
+                    }
+
+                    @media screen and (max-width: 350px) {
+                        min-width: unset;
+                    }
                 }
 
                 dd {
@@ -1282,10 +1295,6 @@ body.showcase.hitachitool {
             background-position: left center;
             min-height: 0;
         }
-
-        .info dl dt {
-            width: 80px;
-        }
     }
 
     article.main .interview {
@@ -1328,12 +1337,6 @@ body.showcase.jnb {
         background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%); /* IE10+ */
         @media screen and (max-width: 1070px) {
             background: #333;
-        }
-    }
-
-    article.main {
-        .info dl dt {
-            width: 80px;
         }
     }
 
@@ -1981,12 +1984,6 @@ body.showcase.fusionnagaike {
         background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0) 100%); /* IE10+ */
     }
 
-    article.main {
-        .info dl dt {
-            width: 80px;
-        }
-    }
-
     article.main .app-info {
         padding: 90px 0 40px;
         background: url(/img/fusionnagaike/img_1.jpg) no-repeat right bottom;
@@ -2100,12 +2097,6 @@ body.showcase.nijibox {
         background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0) 100%); /* IE10+ */
         @media screen and (max-width: $break) {
             background: #333;
-        }
-    }
-
-    article.main {
-        .info dl dt {
-            width: 170px;
         }
     }
 
@@ -2343,12 +2334,6 @@ body.showcase.doshisha {
         }
     }
 
-    article.main {
-        .info dl dt {
-            width: 80px;
-        }
-    }
-
     article.main .app-info {
         padding: 90px 0 40px;
         background: url(/img/doshisha/img_1.jpg) no-repeat right 90px;
@@ -2495,10 +2480,6 @@ body.showcase.flexion {
                 margin-left: 0;
             }
         }
-
-        dl dt {
-            width: 120px;
-        }
     }
 
     article.main .app-info {
@@ -2635,10 +2616,6 @@ body.showcase.proroutemarumitsu {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 120px;
         }
     }
 
@@ -2778,10 +2755,6 @@ body.showcase.teu {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 120px;
         }
     }
 
@@ -2943,14 +2916,6 @@ body.showcase.jmac {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 120px;
-            @media screen and (max-width: $break-xs) {
-                width: 20%;
-                float: left;
-            }
         }
 
         dd {
@@ -3122,10 +3087,6 @@ body.showcase.kdl {
             @media screen and (max-width: $break) {
                 margin-left: 0;
             }
-        }
-
-        dl dt {
-            width: 70px;
         }
     }
 
@@ -3304,10 +3265,6 @@ body.showcase.netmarketing {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 120px;
         }
     }
 
@@ -3513,10 +3470,6 @@ body.showcase.unisys {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 120px;
         }
     }
 
@@ -3729,10 +3682,6 @@ body.showcase.jtrust {
         h1 img {
             margin-bottom: 10px;
         }
-
-        dl dt {
-            width: 120px;
-        }
     }
 
     article.main .app-info {
@@ -3917,10 +3866,6 @@ body.showcase.kddi-web {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 120px;
         }
     }
 
@@ -4132,10 +4077,6 @@ body.showcase.clubood {
         h1 img {
             margin-bottom: 10px;
         }
-
-        dl dt {
-            width: 120px;
-        }
     }
 
     .developer {
@@ -4346,10 +4287,6 @@ body.showcase.fujitec {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 120px;
         }
     }
 
@@ -4570,10 +4507,6 @@ body.showcase.pscsrv {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 120px;
         }
     }
 
@@ -4819,10 +4752,6 @@ body.showcase.wfp {
         h1 img {
             margin-bottom: 10px;
         }
-
-        dl dt {
-            width: 120px;
-        }
     }
 
     .developer {
@@ -5042,10 +4971,6 @@ body.showcase.shogi {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 50px;
         }
     }
 
@@ -5315,10 +5240,6 @@ body.showcase.ocj {
                 margin-left: 0;
             }
         }
-
-        dl dt {
-            width: 120px;
-        }
     }
 
     .developer {
@@ -5527,12 +5448,6 @@ body.showcase.uhas {
         background: -ms-linear-gradient(left, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0) 100%); /* IE10+ */
         @media screen and (max-width: $break) {
             font-size: 20px;
-        }
-    }
-
-    article.main {
-        .info dl dt {
-            width: 80px;
         }
     }
 
@@ -6199,10 +6114,6 @@ body.showcase.ctp {
         h1 img {
             margin-bottom: 10px;
         }
-
-        dl dt {
-            width: 110px;
-        }
     }
 
     article.main .app-info {
@@ -6429,10 +6340,6 @@ body.showcase.ezsoft {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 110px;
         }
     }
 
@@ -6661,10 +6568,6 @@ body.showcase.secondfactory {
         h1 img {
             margin-bottom: 10px;
         }
-
-        dl dt {
-            width: 110px;
-        }
     }
 
     article.main .app-info {
@@ -6892,10 +6795,6 @@ body.showcase.monex {
         h1 img {
             margin-bottom: 10px;
         }
-
-        dl dt {
-            width: 110px;
-        }
     }
 
     article.main .app-info {
@@ -7122,10 +7021,6 @@ body.showcase.smbc {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 180px;
         }
     }
 
@@ -7390,10 +7285,6 @@ body.showcase.kavli {
         h1 img {
             margin-bottom: 10px;
         }
-
-        dl dt {
-            width: 180px;
-        }
     }
 
     article.main .app-info {
@@ -7620,10 +7511,6 @@ body.showcase.canbe {
         h1 img {
             margin-bottom: 10px;
         }
-
-        dl dt {
-            width: 180px;
-        }
     }
 
     article.main .app-info {
@@ -7848,10 +7735,6 @@ body.showcase.seikyoren {
     article.main .info .info-cont {
         h1 img {
             margin-bottom: 10px;
-        }
-
-        dl dt {
-            width: 180px;
         }
     }
 
