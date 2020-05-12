@@ -326,6 +326,13 @@ html[lang=en] > body > footer > div {
 html[lang=ja] {
   $footer-inner-width: 960px;
   footer.ja-footer {
+    // Show only in PC mode
+    @media screen and (max-width: 970px) {
+      display: none;
+    }
+    @media screen and (min-width: 971px) {
+      display: block;
+    }
     padding: 62px 32px 0;
     background-color: #F0F0F0;
     overflow-x: auto;
@@ -485,5 +492,18 @@ html[lang=ja] {
         }
       }
     }
+  }
+  footer.ja-footer--mobile {
+    // Show only in tablet/smartphone mode
+    @media screen and (max-width: 970px) {
+      display: block;
+    }
+    @media screen and (min-width: 971px) {
+      display: none;
+    }
+    padding: 62px 32px 0;
+    background-color: #F0F0F0;
+    overflow-x: auto;
+    height: 500px;
   }
 }
