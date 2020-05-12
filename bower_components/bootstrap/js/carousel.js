@@ -213,17 +213,11 @@
     var options = $.extend({}, $target.data(), $this.data())
     var slideIndex = $this.attr('data-slide-to')
     if (slideIndex) options.interval = false
-    var slideSide = $this.attr('data-slide')
 
     Plugin.call($target, options)
 
     if (slideIndex) {
       $target.data('bs.carousel').to(slideIndex)
-    }
-    else if (slideSide) {
-        slideSide.toString().toLowerCase() === 'next' ?
-            $target.data('bs.carousel').next() :
-            $target.data('bs.carousel').prev()
     }
 
     e.preventDefault()

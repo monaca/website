@@ -368,4 +368,17 @@ class: showcase-index
 
 <script>
     $('.js-modal-btn-vimeo').modalVideo({ channel: 'vimeo' });
+    $('.next').click(function(){
+        let href
+        let $this   = $(this)
+        let $target = $($this.attr('data-target') || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')) // strip for ie7
+        if (!$target.hasClass('carousel')) return
+        let slideSide = $this.attr('data-slide-to')
+
+        if (slideSide) {
+            slideSide.toString().toLowerCase() === 'next' ?
+                    $target.data('bs.carousel').next() :
+                    $target.data('bs.carousel').prev()
+        }
+    });
 </script>
