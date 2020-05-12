@@ -501,7 +501,7 @@ html[lang=ja] {
     @media screen and (min-width: 971px) {
       display: none;
     }
-    padding: 26px 30px 183px;
+    padding: 26px 30px 107px;
     background-color: #F0F0F0;
     overflow-x: auto;
     > div.ja-footer--mobile__row {
@@ -578,6 +578,36 @@ html[lang=ja] {
             border-color: rgba(111, 120, 128, 0.7);
           }
         }
+      }
+    }
+    > div.ja-footer--mobile__credit {
+      margin-top: 35px;
+      > div.ja-footer--mobile__credit-sns {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        > span.ja-footer--mobile__credit-twitter {
+          transition: filter 0.3s ease-out;
+          filter: brightness(100%);
+          &:hover, &:focus {
+            filter: brightness(80%);
+          }
+        }
+        > span.ja-footer--mobile__credit-facebook {
+          margin-left: 15px;
+          transition: filter 0.3s ease-out;
+          filter: brightness(100%);
+          &:hover, &:focus {
+            filter: brightness(80%);
+          }
+        }
+      }
+      > div.ja-footer--mobile__credit-copyright {
+        padding-top: 4px;
+        font-size: 8px;
+        text-align: left;
+        color: #6F777F;
       }
     }
   }
