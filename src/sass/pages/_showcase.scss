@@ -66,15 +66,40 @@ body.showcase-index {
                 }
 
                 button {
+                    position: relative;
+                    text-align: center;
+                }
+
+                button.next {
+                    font-size: 20px;
+                    color: white;
+                    background-color: rgba(100,100,100,0.6);
+                    outline: none;
+                    border-style: none;
+                    border-radius: 50%;
+                    padding: 0 12px 5px;
+                    bottom: 350px;
+                    left: 560px;
+
+                    @media screen and (max-width: 1100px) {
+                        left: 400px;
+                    }
+
+                    @media screen and (max-width: 700px) {
+                        display: none;
+                    }
+                }
+
+                button.detail-pg {
                     text-align: center;
                     padding: 8px 12px;
                     position: relative;
-                    left: 420px;
+                    left: 410px;
                     border-radius: 5px;
                     bottom: 150px;
 
                     @media screen and (max-width: 1100px) {
-                        left: 260px;
+                        left: 240px;
                     }
 
                     @media screen and (max-width: 700px) {
