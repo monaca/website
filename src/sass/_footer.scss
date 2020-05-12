@@ -411,11 +411,79 @@ html[lang=ja] {
       }
     }
     > div.ja-footer__credit {
-      margin: 0 auto;
+      margin: 30px auto 0;
       border-top: 1px solid #B3B3B3;
       max-width: $footer-inner-width;
       height: 132px;
       color: #6F777F;
+      a {
+          color: #6F777F;
+          text-decoration: none;
+          opacity: 1;
+          &:hover, &:focus {
+            color: #585E65;
+            opacity: 1;
+          }
+      }
+      > div.ja-footer__credit-inquiry-and-lang {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 28px;
+        height: 24px;
+        font-size: 14px;
+        > div.ja-footer__credit-inquiry {
+          a.inquiry-button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            margin-left: 15px;
+            border-radius: 12px;
+            padding: 0 12px;
+            height: 24px;
+            font-size: 13px;
+            font-weight: bold;
+            transition: all 0.3s ease-out;
+            border: 1px solid rgba(111, 120, 128, 0.5);
+            &:hover, &:focus {
+              border-color: rgba(111, 120, 128, 0.7);
+            }
+          }
+        }
+        > div.ja-footer__credit-lang {
+          font-size: 12px;
+        }
+      }
+      > div.ja-footer__credit-copyright-and-sns {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 20px;
+        font-size: 9px;
+        > span.ja-footer__credit-twitter {
+          position: relative;
+          top: 2px;
+          margin-left: 29px;
+          transition: filter 0.3s ease-out;
+          filter: brightness(100%);
+          &:hover, &:focus {
+            filter: brightness(80%);
+          }
+        }
+        > span.ja-footer__credit-facebook {
+          position: relative;
+          top: 2px;
+          margin-left: 15px;
+          transition: filter 0.3s ease-out;
+          filter: brightness(100%);
+          &:hover, &:focus {
+            filter: brightness(80%);
+          }
+        }
+      }
     }
   }
 }
