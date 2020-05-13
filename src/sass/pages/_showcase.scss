@@ -70,36 +70,16 @@ body.showcase-index {
                     text-align: center;
                 }
 
-                button.next {
-                    font-size: 20px;
-                    color: white;
-                    background-color: rgba(100,100,100,0.6);
-                    outline: none;
-                    border-style: none;
-                    border-radius: 50%;
-                    padding: 0 12px 5px;
-                    bottom: 350px;
-                    left: 560px;
-
-                    @media screen and (max-width: 1100px) {
-                        left: 400px;
-                    }
-
-                    @media screen and (max-width: 700px) {
-                        display: none;
-                    }
-                }
-
                 button.detail-pg {
                     text-align: center;
                     padding: 8px 12px;
                     position: relative;
-                    left: 410px;
+                    left: 430px;
                     border-radius: 5px;
                     bottom: 150px;
 
                     @media screen and (max-width: 1100px) {
-                        left: 240px;
+                        left: 260px;
                     }
 
                     @media screen and (max-width: 700px) {
@@ -164,6 +144,32 @@ body.showcase-index {
                  &.secondfactory .img {
                     background-image: url("/img/showcase/keyvisual_31.jpg");
                 }
+            }
+        }
+
+        .btn-zone {
+            position: absolute;
+            bottom: 340px;
+            left: 50%;
+            min-width: 500px;
+
+            @media screen and (max-width: 1100px) {
+                min-width: 340px;
+            }
+
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+
+            button.next {
+                float: right;
+                font-size: 20px;
+                color: white;
+                background-color: rgba(100,100,100,0.6);
+                outline: none;
+                border-style: none;
+                border-radius: 50%;
+                padding: 0 12px 5px;
             }
         }
 
