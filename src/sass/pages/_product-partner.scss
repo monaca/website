@@ -49,8 +49,9 @@ body.product-partner {
     .productsPartner-header {
       h1 {
         color: #444444;
-        font-size: 36px;
-        line-height: 36px;
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 300;
         margin: 50px auto;
         text-align: center;
         padding: 0;
@@ -78,6 +79,7 @@ body.product-partner {
           color: #6F777F;
           font-size: 20px;
           line-height: 30px;
+          font-weight: 300;
           text-align: left;
         }
 
@@ -174,7 +176,7 @@ body.product-partner {
       margin: 35px auto 65px;
       display: grid;
       width: 830px;
-      grid-template-columns: repeat(auto-fit, 138px);
+      grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
       border-bottom: 1px solid #C7C5C2;
 
       .productsPartner-nav-item {
@@ -192,6 +194,7 @@ body.product-partner {
           color: #6F777F;
           font-size: 20px;
           line-height: 26px;
+          font-weight: 300;
 
           &.active {
             border-bottom: 2px solid #468FFF;
@@ -208,7 +211,7 @@ body.product-partner {
         color: #444444;
         font-size: 30px;
         font-weight: normal;
-        line-height: 1;
+        line-height: 48px;
         margin-bottom: 26px;
         text-align: center;
       }
