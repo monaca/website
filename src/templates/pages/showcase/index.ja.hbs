@@ -356,15 +356,11 @@ class: showcase-index
                         webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
 
-            <div class="break-vimeo">
+            <div class="break-vimeo firstVid">
                 <button class="js-modal-btn-vimeo" data-video-id="215604151"></button>
-                <iframe class="left-vimeo" src="https://player.vimeo.com/video/215604151" frameborder="0"
-                        webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
             <div class="break-vimeo mr">
                 <button class="js-modal-btn-vimeo" data-video-id="215604307"></button>
-                <iframe class="right-vimeo" src="https://player.vimeo.com/video/215604307" frameborder="0"
-                        webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
             </div>
             <div class="break-vimeo-list-url">
                 <a href="https://vimeo.com/channels/monaca" target="_blank">事例動画一覧へ <i
@@ -388,5 +384,21 @@ class: showcase-index
                     $target.data('bs.carousel').next() :
                     $target.data('bs.carousel').prev()
         }
+    });
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     $('.break-vimeo iframe').hide();
+    // });
+    window.addEventListener('load', function () {
+        let widthSize = window.outerWidth * 0.9;
+        let heightSize = widthSize/1.77777;
+        let opts = 'frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen';
+        let size = `width = "${widthSize}" height = "${heightSize}"`;
+        let iframe2 = `<iframe class="left-vimeo" src="https://player.vimeo.com/video/215604151" ${size} ${opts}></iframe>`;
+        let iframe1 = `<iframe class="right-vimeo" src="https://player.vimeo.com/video/215604307" ${size} ${opts} ></iframe>`;
+        $('.firstVid').append(iframe1);
+        $('.break-vimeo.mr').append(iframe2);
+        // $('.break-vimeo iframe').attr("height", widthSize/1.77777 );
+        // $('.break-vimeo iframe').attr("width", widthSize);
+        // $('.break-vimeo iframe').show();
     });
 </script>
