@@ -1,11 +1,11 @@
 body.why-monaca {
 
     .header {
-        height: 500px;
-        width: 100%;
-        //background-image: url("/img/showcase/keyvisual_36.png");
-        background-color: lightgrey;
-        background-size: cover;
+        margin: auto;
+        height: 435px;
+        max-width: 1366px;
+        background-image: url("/img/why-monaca/background_why_monaca.svg");
+        background-color: #75B8FF;
         background-position: center center;
         background-repeat: no-repeat;
 
@@ -19,7 +19,8 @@ body.why-monaca {
             padding: 0;
             font-size: 60px;
             font-weight: normal;
-            color: #6F777F;
+            line-height: 102px;
+            color: #FFFFFF;
         }
 
         p {
@@ -27,13 +28,22 @@ body.why-monaca {
             padding: 0;
             font-size: 30px;
             line-height: 51px;
-            color: #6F777F;
+            color: #FFFFFF;
         }
+
+        p.small-screen {
+            display: none;
+        }
+
+        p.wide-screen {
+            display: inline-block;
+        }        
     }
 
     .why-panel {
         display: grid;
         grid-template-areas: "title title" "description image";
+
         column-gap: 37px;
         row-gap: 50px;
         grid-template-columns: 490px 1fr;
@@ -53,9 +63,18 @@ body.why-monaca {
             margin: 0;
             padding: 0;
             font-size: 40px;
+            line-height: 48px;
             font-weight: normal;
             color: #444444;
             text-align: center;
+        }
+
+        h2.small-screen {
+            display: none;
+        }
+
+        h2.wide-screen {
+            display: inline-block;
         }
 
         p {
@@ -72,8 +91,218 @@ body.why-monaca {
             grid-area: image;
             margin: 0;
             padding: 0;
-            height: 360px;
-            background-color: lightgrey;
+        }
+
+        .panel-1 {
+            position: relative;
+            top: -100px;
+            right: 0px;
+            width: 438.41px;
+            height: 441.63px;
+        }
+
+        .panel-2 {
+            width: 428.58px;
+            height: 491.04px;
+        }
+
+        .panel-3 {
+            width: 379.59px;
+            height: 321.55px;
+        }
+
+        .panel-4 {
+            width: 433.50px;
+            height: 360.50px;
+        }
+
+    }
+
+    // Pre ipad pro
+    @media screen and (max-width: $v2-break-ipad-pro) {
+        .header {
+            height: 350px;
+
+            h1 {
+                font-size: 40px;
+                line-height: 45px;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 25px;
+            }
+        }
+
+        .why-panel {
+            width: 100%;
+            column-gap: 20px;
+            row-gap: 40px;
+            grid-template-columns: 400px 1fr;
+
+            margin-bottom: 80px;
+
+            &:first-child {
+                margin-top: 80px;
+            }
+
+            .panel-1 .panel-2 .panel-3 .panel-4 {
+                width: 415px;
+                height: 255px;
+            }
+
+            .panel-1 {
+                position: relative;
+                top: 0px;
+                right: 0px;
+            }
+
+            h2 {
+                font-size: 35px;
+                line-height: 40px;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+        }
+
+    }
+
+    // ipad
+    @media screen and (max-width: $v2-break-tablet + 1) {
+
+        .header {
+            height: 300px;
+        }
+
+        .why-panel {
+            grid-template-areas: "title" "image" "description";
+            row-gap: 30px;
+            grid-template-columns: none;
+            width: 100%;
+            margin-bottom: 50px;
+            justify-items: center;
+            align-items: center;
+
+            &:first-child {
+                margin-top: 50px;
+            }
+
+            h2 {
+                grid-area: title;
+                font-size: 25px;
+                line-height: 30px;
+                font-weight: normal;
+                color: #444444;
+                text-align: center;
+            }
+
+            p {
+                grid-area: description;
+                font-size: 16px;
+                line-height: 23px;
+                color: #6F777F;
+                text-align: left;
+            }
+
+            .panel1 .panel2 .panel3 .panel4 {
+                text-align: center;
+                width: 415px;
+                height: 255px;
+            }
+
+        }
+
+    }
+
+    // In smartphone mode
+    @media screen and (max-width: $v2-break-smartphone) {
+        .header {
+
+            background-image: url("/img/why-monaca/background_sp.svg");
+            max-width: 320px;
+            max-height: 270px;
+
+            h1 {
+                font-size: 24px;
+                line-height: 31.2px;
+                position: relative;
+                top: 50px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 24px;
+                padding-left: 10px;
+                padding-right: 10px;
+
+            }
+
+            p.small-screen {
+                display: inline-block;
+                position: relative;
+                bottom: -30px;
+                width: 260px;
+            }
+    
+            p.wide-screen {
+                display: none;
+            }        
+        }
+
+        .why-panel {
+            row-gap: 30px;
+            margin-bottom: 50px;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            &:first-child {
+                margin-top: 50px;
+            }
+
+            h2 {
+                grid-area: title;
+                font-size: 20px;
+                line-height: 26px;
+            }
+
+            h2.small-screen {
+                display: inline-block;
+            }
+    
+            h2.wide-screen {
+                display: none;
+            }
+
+            p {
+                grid-area: description;
+                font-size: 14px;
+                line-height: 21px;
+            }
+
+            .panel-1 {
+                width: 167.77px;
+                height: 169px;
+            }
+    
+            .panel-2 {
+                width: 261.84px;
+                height: 300px;
+            }
+    
+            .panel-3 {
+                width: 199.5px;
+                height: 169px;
+            }
+    
+            .panel-4 {
+                width: 195.4px;
+                height: 169px;
+            }
+
         }
     }
 }
