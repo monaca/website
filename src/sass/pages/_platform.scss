@@ -131,24 +131,6 @@ html[lang=ja] body.platform {
 
             }
 
-
-            > .floating-text {
-                position: absolute;
-                background-color:#B90000;
-                top: 20px;
-                right: 10px;
-                height: 120px;
-                width: 120px;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 40px;
-                color: #FFFFFF;
-                font-weight: bold;
-                box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
-            }
-
         }
     }
 
@@ -281,12 +263,6 @@ html[lang=ja] body.platform {
                 }
 
             }
-
-
-            > .floating-text {
-                display: none;
-            }
-
         }
     }
 
