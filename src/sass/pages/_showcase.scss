@@ -299,13 +299,17 @@ body.showcase-index {
                 border: none;
                 background: none;
                 h2 {
-                    font-size: 20px;
+                    font-size: 30px;
                     line-height: 23px;
                     color: #444444;
                     font-weight: normal;
                     text-align: center;
                     margin-top: 50px;
                     margin-bottom: 30px;
+
+                    @media screen and (max-width: 700px) {
+                        font-size: 20px;
+                    }
                 }
                 a {
                     display: none !important;
@@ -382,25 +386,17 @@ body.showcase-index {
 
         .vimeo {
             @media screen and (max-width: 1100px) {
-                -webkit-justify-content: center;
-                justify-content: center;
-            }
-            @media screen and (max-width: 927px) {
                 display: none;
             }
 
             button {
-                padding: none;
+                padding: 0;
                 width: 373px;
                 height: 210px;
                 background: none;
                 border: none;
                 position: absolute;
                 @media screen and (max-width: 1100px) {
-                    margin: 0;
-                    float: none;
-                }
-                @media screen and (max-width: 927px) {
                     display: none;
                 }
 
@@ -408,12 +404,33 @@ body.showcase-index {
                     margin: 0 0 0 12px;
                     float: right;
                     @media screen and (max-width: 1100px) {
-                        margin: 0;
-                        float: none;
-                    }
-                    @media screen and (max-width: 927px) {
                         display: none;
                     }
+                }
+            }
+        }
+
+        .vimeo-medium {
+            display: none;
+            @media screen and (max-width: 1100px) {
+                -webkit-justify-content: center;
+                justify-content: center;
+                display: block;
+            }
+
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+
+            button {
+                padding: 0;
+                width: 600px;
+                height: 337px;
+                background: none;
+                border: none;
+                position: absolute;
+                @media screen and (max-width: 700px) {
+                    display: none;
                 }
             }
         }
@@ -421,7 +438,7 @@ body.showcase-index {
         .break-vimeo {
             display: none;
             position: relative;
-            @media screen and (max-width: 927px) {
+            @media screen and (max-width: 700px) {
                 display: block;
                 button {
                     padding: none;
@@ -433,16 +450,6 @@ body.showcase-index {
                 }
                 iframe {
                     width: 100%;
-                }
-            }
-            @media screen and (max-width: 900px) {
-                button {
-                    height: 70%;
-                }
-            }
-            @media screen and (max-width: $break) {
-                button {
-                    height: 65%;
                 }
             }
             @media screen and (max-width: 700px) {
@@ -461,23 +468,15 @@ body.showcase-index {
                 }
             }
             @media screen and (max-width: 320px) {
-                padding: 30px 0 50%;
                 button {
                     height: 80%;
                 }
             }
         }
 
-        .mr {
-            margin: 0 1% 0 0;
-            @media screen and (max-width: $break) {
-                margin: 0;
-            }
-        }
-
         .break-vimeo-list-url {
             display: none;
-            @media screen and (max-width: $break) {
+            @media screen and (max-width: 1100px) {
                 display: block;
                 margin-top: 30px;
                 a {
