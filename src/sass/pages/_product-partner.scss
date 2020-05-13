@@ -81,28 +81,6 @@ body.product-partner {
           text-align: left;
         }
 
-        .floating-text {
-          position: absolute;
-          background-color: #40B900;
-          top: -60px;
-          right: -150px;
-          height: 120px;
-          width: 120px;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 40px;
-          color: #FFFFFF;
-          font-weight: bold;
-          box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
-        }
-
-        @media screen and (max-width: $break-xl) {
-          .floating-text {
-            display: none;
-          }
-        }
         @media screen and (max-width: $break-lg) {
           flex-direction: column-reverse;
           width: 100%;
