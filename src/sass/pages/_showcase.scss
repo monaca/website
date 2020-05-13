@@ -259,6 +259,14 @@ body.showcase-index {
         }
     }
 
+    .clearfix {
+        display: inline-flex;
+
+        @media screen and (max-width: 1100px) {
+            display: block;
+        }
+    }
+
     .movie {
         margin: 0 0 100px;
 
@@ -268,15 +276,21 @@ body.showcase-index {
 
         .headline {
             padding: 20px 15px;
-            width: 225px;
-            height: 233px;
+            width: 205px;
+            height: 210px;
             box-sizing: border-box;
             border: solid 1px #d4d4d4;
             background: #fafafa;
             position: relative;
-            float: left;
+            text-align: left;
+            margin-right: 5px;
 
-            @media screen and (max-width: 1170px) {
+            h2 {
+                font-size: 24px;
+                position: relative;
+            }
+
+            @media screen and (max-width: 1100px) {
                 padding: 20px 0;
                 margin: 0 0 50px;
                 float: none;
@@ -353,8 +367,7 @@ body.showcase-index {
         a {
             position: absolute;
             bottom: 20px;
-            left: 10px;
-            @media screen and (max-width: 1170px) {
+            @media screen and (max-width: 1100px) {
                 position: relative;
                 float: right;
                 bottom: 0;
@@ -368,7 +381,7 @@ body.showcase-index {
         }
 
         .vimeo {
-            @media screen and (max-width: 1170px) {
+            @media screen and (max-width: 1100px) {
                 -webkit-justify-content: center;
                 justify-content: center;
             }
@@ -378,12 +391,12 @@ body.showcase-index {
 
             button {
                 padding: none;
-                width: 415px;
-                height: 233px;
+                width: 373px;
+                height: 210px;
                 background: none;
                 border: none;
                 position: absolute;
-                @media screen and (max-width: 1170px) {
+                @media screen and (max-width: 1100px) {
                     margin: 0;
                     float: none;
                 }
@@ -394,7 +407,7 @@ body.showcase-index {
                 iframe {
                     margin: 0 0 0 12px;
                     float: right;
-                    @media screen and (max-width: 1170px) {
+                    @media screen and (max-width: 1100px) {
                         margin: 0;
                         float: none;
                     }
