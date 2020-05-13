@@ -795,10 +795,16 @@ body.solution-partner {
 
   .partner-list {
     .header {
+      h1 {
+        font-size: 40px;
+        line-height:48px;
+        color: #444444;
+      }
+
       @media screen and (max-width: $break) {
         h1 {
           font-size: 24px;
-          line-height: 31px;
+          line-height: 31.2px;
           color: #6F777F;
           font-weight: bold;
         }
@@ -835,6 +841,10 @@ body.solution-partner {
             margin-top: -30px;
             font-size: 14px;
             line-height: 21px;
+          }
+          img {
+            position: relative;
+            right: -15px;
           }
         }
       }
