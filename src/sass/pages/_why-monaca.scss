@@ -1,5 +1,4 @@
 body.why-monaca {
-
     .header {
         margin: auto;
         height: 435px;
@@ -18,7 +17,7 @@ body.why-monaca {
             margin: 0;
             padding: 0;
             font-size: 60px;
-            font-weight: normal;
+            font-weight: 300;
             line-height: 102px;
             color: #FFFFFF;
         }
@@ -28,6 +27,8 @@ body.why-monaca {
             padding: 0;
             font-size: 30px;
             line-height: 51px;
+            font-weight: 300;
+            opacity: 0.6;
             color: #FFFFFF;
         }
 
@@ -64,7 +65,7 @@ body.why-monaca {
             padding: 0;
             font-size: 40px;
             line-height: 48px;
-            font-weight: normal;
+            font-weight: 300;
             color: #444444;
             text-align: center;
         }
@@ -83,6 +84,7 @@ body.why-monaca {
             padding: 0;
             font-size: 20px;
             line-height: 30px;
+            font-weight: 300;
             color: #6F777F;
             text-align: left;
         }
@@ -200,7 +202,7 @@ body.why-monaca {
                 grid-area: title;
                 font-size: 25px;
                 line-height: 30px;
-                font-weight: normal;
+                font-weight: 300;
                 color: #444444;
                 text-align: center;
             }
@@ -233,6 +235,7 @@ body.why-monaca {
                 line-height: 31.2px;
                 position: relative;
                 top: 50px;
+                font-weight: 600;
             }
 
             p {
@@ -240,7 +243,8 @@ body.why-monaca {
                 line-height: 24px;
                 padding-left: 10px;
                 padding-right: 10px;
-
+                font-weight: 300;
+                opacity: 1;
             }
 
             p.small-screen {
