@@ -2697,7 +2697,7 @@ html[lang=ja] body.home {
                 display: block;
                 width: 340px;
                 height: 430px;
-                margin-top: 48px;
+                padding-top: 18px;
                 background-color: transparent;
                 background-size: auto 30%;
                 background-repeat: no-repeat;
@@ -2755,6 +2755,8 @@ html[lang=ja] body.home {
 
                 &.platform {
                     background-image: url(/img/landing/key_appdev.png);
+                    background-size: auto 28%;
+                    background-position: 51% 7%;
 
                     > .icon {
                         background-image: url(/img/landing/icon_appdev.png);
@@ -2763,6 +2765,8 @@ html[lang=ja] body.home {
 
                 &.support {
                     background-image: url(/img/landing/key_devsup.png);
+                    background-size: auto 32%;
+                    background-position: 54% 5%;
 
                     > .icon {
                         background-image: url(/img/landing/icon_devsup.png);
@@ -2771,6 +2775,8 @@ html[lang=ja] body.home {
 
                 &.devops {
                     background-image: url(/img/landing/key_devops.png);
+                    background-size: auto 35%;
+                    background-position: 51% 1%;
 
                     > .icon {
                         background-image: url(/img/landing/icon_devops.png);
