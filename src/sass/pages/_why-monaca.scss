@@ -176,6 +176,11 @@ body.why-monaca {
 
         .header {
             height: 300px;
+
+            p {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
         }
 
         .why-panel {
@@ -218,12 +223,9 @@ body.why-monaca {
 
     }
 
-    // In smartphone mode
-    @media screen and (max-width: $v2-break-smartphone) {
+    // Specific screen to handle
+    @media screen and (max-width: 524px) {
         .header {
-
-            background-image: url("/img/why-monaca/background_sp.svg");
-            max-width: 320px;
             max-height: 270px;
 
             h1 {
@@ -247,10 +249,18 @@ body.why-monaca {
                 bottom: -30px;
                 width: 260px;
             }
-    
+
             p.wide-screen {
                 display: none;
-            }        
+            }
+        }
+    }
+
+    // In smartphone mode (iphone 6/7/8 plus)
+    @media screen and (max-width: 414px) {
+        .header {
+            background-image: url("/img/why-monaca/background_sp.svg");
+            max-width: 320px;
         }
 
         .why-panel {
