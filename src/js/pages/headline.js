@@ -17,7 +17,7 @@
 
   var translations = {
     'en': {
-      'news_and_release': 'Announcement',
+      'news_and_release': 'News',
       'training': 'Training',
       'event': 'Seminar',
       'header_type': 'Type',
