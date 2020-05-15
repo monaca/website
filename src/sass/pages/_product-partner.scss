@@ -49,7 +49,7 @@ body.product-partner {
     .productsPartner-header {
       h1 {
         color: #444444;
-        font-size: 40px;
+        font-size: 2.857rem;
         line-height: 48px;
         font-weight: 300;
         margin: 50px auto 65px auto;
@@ -59,7 +59,7 @@ body.product-partner {
 
       @media screen and (max-width: $break) {
         h1 {
-          font-size: 24px;
+          font-size: 1.714rem;
           line-height: 31px;
           color: #6F777F;
           font-weight: bold;
@@ -77,7 +77,7 @@ body.product-partner {
         .text {
           max-width: 700px;
           color: #6F777F;
-          font-size: 20px;
+          font-size: 1.429rem;
           line-height: 30px;
           font-weight: 300;
           text-align: left;
@@ -94,7 +94,7 @@ body.product-partner {
 
     .list-container {
       color: #666;
-      font-size: 14px;
+      font-size: 1rem;
       line-height: 22px;
       margin: 30px auto;
       text-align: left;
@@ -119,7 +119,7 @@ body.product-partner {
           display: inline-block;
           min-width: 186px;
           margin-right: 0.5em;
-          font-size: 16px;
+          font-size: 1.143rem;
           line-height: 2.5;
           color: #2472b3;
           @media screen and (max-width: $break-lg) {
@@ -192,7 +192,7 @@ body.product-partner {
           align-items: center;
           justify-content: center;
           color: #6F777F;
-          font-size: 20px;
+          font-size: 1.429rem;
           line-height: 26px;
           font-weight: 300;
 
@@ -209,7 +209,7 @@ body.product-partner {
 
       h3 {
         color: #444444;
-        font-size: 30px;
+        font-size: 2.143rem;
         font-weight: normal;
         line-height: 48px;
         margin-bottom: 18px;
@@ -249,7 +249,7 @@ body.product-partner {
             box-sizing: border-box;
             color: #505763;
             display: inline-block;
-            font-size: 15px;
+            font-size: 1.071rem;
             font-weight: 500;
             height: 40px;
             letter-spacing: 1px;
@@ -273,8 +273,7 @@ body.product-partner {
             padding-right: 35px;
 
             h4 {
-              color: #444;
-              font-size: 24px;
+              font-size: 1.714rem;
               line-height: 26px;
               letter-spacing: -0.07rem;
               margin-bottom: 15px;
@@ -282,8 +281,7 @@ body.product-partner {
             }
 
             p {
-              color: #666666;
-              font-size: 14px;
+              font-size: 1rem;
               line-height: 1.4;
               margin-bottom: 28px;
             }
@@ -300,7 +298,7 @@ body.product-partner {
           }
 
           h5 {
-            font-size: 14px;
+            font-size: 1rem;
             font-weight: bold;
             line-height: 1.4;
             color: #555;
@@ -311,12 +309,12 @@ body.product-partner {
           }
 
           .tantou {
-            font-size: 13px;
+            font-size: 0.929rem;
             line-height: 1.2;
           }
 
           .form, .homepage, .mail, .tel {
-            font-size: 13px;
+            font-size: 0.929rem;
             line-height: 1.5;
             margin-bottom: 14px;
             padding-left: 26px;
