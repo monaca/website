@@ -2610,7 +2610,6 @@ html[lang=ja] body.home {
         @include background(linear-gradient(to right, #56CCF2, #2F95ED));
         background-color: #2F95ED;
         width: 100%;
-        min-height: 700px;
         position: relative;
         margin-top: 0;
         padding: 0;
@@ -2696,7 +2695,7 @@ html[lang=ja] body.home {
             > .solution {
                 display: block;
                 width: 340px;
-                height: 430px;
+                height: 418px;
                 padding-top: 18px;
                 background-color: transparent;
                 background-size: auto 30%;
@@ -2717,7 +2716,7 @@ html[lang=ja] body.home {
 
                 > h3 {
                     display: block;
-                    margin: 12px auto;
+                    margin: 12px auto 0;
                     width: 214px;
                     text-align: center;
                     color: white;
@@ -2728,11 +2727,12 @@ html[lang=ja] body.home {
 
                 > p {
                     display: block;
-                    margin: 12px auto;
+                    margin: 8px auto 0;
                     width: 214px;
                     text-align: justify;
                     color: white;
                     font-size: 14px;
+                    line-height: 1.5rem;
                     opacity: 0.8;
                 }
 
@@ -2746,7 +2746,7 @@ html[lang=ja] body.home {
                     box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
                     position: absolute;
                     left: 50%;
-                    bottom: 30px;
+                    bottom: 33px;
                     transform: translate(-50%,0);
                     text-align: center;
                     font-size: 14px;
