@@ -55,14 +55,13 @@ body.product-partner {
         margin: 50px auto 65px auto;
         text-align: center;
         padding: 0;
-      }
 
-      @media screen and (max-width: $break) {
-        h1 {
+        @media screen and (max-width: $break-xs) {
           font-size: 1.714rem;
           line-height: 31px;
           color: #6F777F;
           font-weight: bold;
+          margin: 40px auto 32px auto;
         }
       }
 
@@ -81,6 +80,11 @@ body.product-partner {
           line-height: 30px;
           font-weight: 300;
           text-align: left;
+
+          @media screen and (max-width: $break-xs) {
+            font-size: 1rem;
+            padding: 0 26px;
+          }
         }
 
         @media screen and (max-width: $break-lg) {
@@ -101,18 +105,16 @@ body.product-partner {
       padding: 0;
       width: 790px;
       border: none;
+      width: 100%;
+      padding: 0 22px;
       @media screen and (min-width: $break-lg) {
         display: none;
-      }
-      @media screen and (max-width: $break-lg) {
-        width: 100%;
-        padding: 0 50px;
       }
 
       .link-list {
         margin: 0 0 30px 0;
         @media screen and (max-width: $break) {
-          margin: 0 0 8% 0;
+          margin: 0 0 72px 0;
         }
 
         li {
@@ -206,6 +208,7 @@ body.product-partner {
     .list-contents {
       max-width: 1170px;
       margin: 0 auto;
+      padding: 0 22px;
 
       h3 {
         color: #444444;
@@ -225,6 +228,21 @@ body.product-partner {
           border-bottom: 1px solid #dbdbdb;
           vertical-align: middle;
           padding: 28px 40px 0 40px;
+
+          @media screen and (max-width: $break-xs) {
+            float:none; 
+            display:block; 
+            padding: 28px 20px 0 20px;
+          }
+        }
+
+        tr {
+          color: #707070;
+
+          @media screen and (max-width: $break-xs) {
+            float:none; 
+            display:block;
+          }
         }
 
         .products-name {
@@ -232,6 +250,10 @@ body.product-partner {
           padding: 0 50px;
           background-color: #fafafa;
           text-align: center;
+
+          @media screen and (max-width: $break-xs) {
+            width: 100%;
+          }
 
           img {
             margin-bottom: 15px;
@@ -266,24 +288,46 @@ body.product-partner {
 
         .outline {
           width: 600px;
-          padding-right: 0;
+
+          @media screen and (max-width: $break-xs) {
+            width: 100%; 
+            border-bottom: none;
+          }
+
+          @media screen and (min-width: $break-xs) {
+            padding-right: 0;
+          }
 
           .outline-contents {
             border-right: 1px solid #dbdbdb;
             padding-right: 35px;
 
+            @media screen and (max-width: $break-xs) {
+              border-right: none; 
+              padding-right: 0;
+              border-bottom: 1px solid #dbdbdb;
+            }
+
             h4 {
               font-size: 1.714rem;
               line-height: 26px;
               letter-spacing: -0.07rem;
-              margin-bottom: 15px;
+              margin-bottom: 20px;
               font-weight: bold;
+
+              @media screen and (max-width: $break-xs) {
+                font-size: 1.143rem;
+              }
             }
 
             p {
               font-size: 1rem;
               line-height: 1.4;
               margin-bottom: 28px;
+              line-height: 21px;
+              padding: 0;
+              overflow: hidden;
+              text-overflow: ellipsis;
             }
 
           }
@@ -293,6 +337,10 @@ body.product-partner {
           width: 320px;
           padding: 30px 20px;
 
+          @media screen and (max-width: $break-xs) {
+            width: 100%;
+          }
+
           ul li:last-child {
             margin-bottom: 0;
           }
@@ -301,7 +349,6 @@ body.product-partner {
             font-size: 1rem;
             font-weight: bold;
             line-height: 1.4;
-            color: #555;
           }
 
           .link-area {
@@ -338,6 +385,27 @@ body.product-partner {
           }
         }
       }
+    }
+  }
+
+  .show-mobile {
+    display: none;
+    @media screen and (max-width: $break-xs) {
+      display: block !important;
+    }
+  }
+
+  .hide-mobile {
+    display: block;
+    @media screen and (max-width: $break-xs) {
+      display: none !important;
+    }
+  }
+
+  .hide-tablet {
+    display: block;
+    @media screen and (max-width: $break) {
+      display: none !important;
     }
   }
 }
