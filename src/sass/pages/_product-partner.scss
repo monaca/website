@@ -52,7 +52,7 @@ body.product-partner {
         font-size: 40px;
         line-height: 48px;
         font-weight: 300;
-        margin: 50px auto;
+        margin: 50px auto 65px auto;
         text-align: center;
         padding: 0;
       }
@@ -173,7 +173,7 @@ body.product-partner {
       @media screen and (max-width: $break-lg) {
         display: none;
       }
-      margin: 35px auto 65px;
+      margin: 39px auto 58px;
       display: grid;
       width: 830px;
       grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
@@ -204,7 +204,7 @@ body.product-partner {
     }
 
     .list-contents {
-      width: 1170px;
+      max-width: 1170px;
       margin: 0 auto;
 
       h3 {
@@ -212,19 +212,19 @@ body.product-partner {
         font-size: 30px;
         font-weight: normal;
         line-height: 48px;
-        margin-bottom: 26px;
+        margin-bottom: 18px;
         text-align: center;
       }
 
       table {
-        layout: fixed;
-        border-top: 2px solid #0092bf;
+        display: grid;
+        border-top: 1.25px solid #0092bf;
         border-bottom: 1px solid #dbdbdb;
 
         th, td {
           border-bottom: 1px solid #dbdbdb;
           vertical-align: middle;
-          padding: 50px 40px 0 40px;
+          padding: 28px 40px 0 40px;
         }
 
         .products-name {
@@ -276,6 +276,7 @@ body.product-partner {
               color: #444;
               font-size: 24px;
               line-height: 26px;
+              letter-spacing: -0.07rem;
               margin-bottom: 15px;
               font-weight: bold;
             }
@@ -283,8 +284,8 @@ body.product-partner {
             p {
               color: #666666;
               font-size: 14px;
-              line-height: 1.6;
-
+              line-height: 1.4;
+              margin-bottom: 28px;
             }
 
           }
