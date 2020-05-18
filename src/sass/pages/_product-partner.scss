@@ -229,7 +229,7 @@ body.product-partner {
           vertical-align: middle;
           padding: 28px 40px 0 40px;
 
-          @media screen and (max-width: $break-xs) {
+          @media screen and (max-width: $break) {
             float:none; 
             display:block; 
             padding: 28px 20px 0 20px;
@@ -239,7 +239,7 @@ body.product-partner {
         tr {
           color: #707070;
 
-          @media screen and (max-width: $break-xs) {
+          @media screen and (max-width: $break) {
             float:none; 
             display:block;
           }
@@ -247,11 +247,11 @@ body.product-partner {
 
         .products-name {
           width: 250px;
-          padding: 0 50px;
+          padding: 24px;
           background-color: #fafafa;
           text-align: center;
 
-          @media screen and (max-width: $break-xs) {
+          @media screen and (max-width: $break) {
             width: 100%;
             padding: 0 16px;
             height: 85px;
@@ -261,17 +261,20 @@ body.product-partner {
           }
 
           > img {
-            margin-bottom: 15px;
+            margin-bottom: 8px;
+            min-width: 56px;
+            max-width: 152px;
             
-            @media screen and (max-width: $break-xs) {
+            @media screen and (max-width: $break) {
               max-width: 50%;
               margin-bottom: 0;
+              max-height: 75%;
             }
           }
 
           a {
             color: #505763;
-            @media screen and (max-width: $break-xs) {
+            @media screen and (max-width: $break) {
               margin-bottom: 0;
               padding: 0 20px;
 
@@ -307,22 +310,20 @@ body.product-partner {
         .outline {
           width: 600px;
 
-          @media screen and (max-width: $break-xs) {
+          @media screen and (max-width: $break) {
             width: 100%; 
             border-bottom: none;
           }
 
-          @media screen and (min-width: $break-xs) {
-            padding-right: 0;
-          }
-
           .outline-contents {
             border-right: 1px solid #dbdbdb;
-            padding-right: 35px;
 
-            @media screen and (max-width: $break-xs) {
-              border-right: none; 
-              padding-right: 0;
+            @media screen and (min-width: $break) {
+              padding-right: 35px;
+            }
+
+            @media screen and (max-width: $break) {
+              border-right: none;
               border-bottom: 1px solid #dbdbdb;
             }
 
@@ -333,7 +334,7 @@ body.product-partner {
               margin-bottom: 20px;
               font-weight: bold;
 
-              @media screen and (max-width: $break-xs) {
+              @media screen and (max-width: $break) {
                 font-size: 1.143rem;
               }
             }
@@ -341,7 +342,7 @@ body.product-partner {
             p {
               font-size: 1rem;
               line-height: 1.4;
-              margin-bottom: 28px;
+              margin: 0 0 28px 0;
               line-height: 21px;
               padding: 0;
               overflow: hidden;
@@ -355,7 +356,7 @@ body.product-partner {
           width: 320px;
           padding: 30px 20px;
 
-          @media screen and (max-width: $break-xs) {
+          @media screen and (max-width: $break) {
             width: 100%;
             border-bottom: none;
           }
@@ -425,6 +426,13 @@ body.product-partner {
     display: block;
     @media screen and (max-width: $break) {
       display: none !important;
+    }
+  }
+
+  .show-tablet {
+    display: none;
+    @media screen and (max-width: $break) {
+      display: block !important;
     }
   }
 }
