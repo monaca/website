@@ -41,13 +41,23 @@ body.guide-of-study {
         font-size: 20px;
         line-height: 30px;
         text-align: left;
+
+          @media screen and (max-width: 1060px) {
+              font-size: 17px;
+              max-width: 550px;
+          }
+
+          @media screen and (max-width: 700px) {
+              font-size: 14px;
+              max-width: 450px;
+          }
       }
 
-      @media screen and (max-width: $break-lg) {
+      @media screen and (max-width: 1060px) {
         flex-direction: column-reverse;
         width: 100%;
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 15%;
+        padding-right: 15%;
       }
     }
   }
@@ -56,17 +66,18 @@ body.guide-of-study {
     padding: 0;
     margin-top: 30px;
     margin-bottom: 100px;
-    min-width: 1000px;
-    width: 1000px;
+    //min-width: 1000px;
+    //width: 1000px;
     display: flex;
     justify-content: center;
     @media screen and(max-width: 1060px) {
-      min-width: 690px;
-      width: 690px;
+      //min-width: 690px;
+      //width: 690px;
     }
     @media screen and(max-width: 700px) {
-      min-width: 310px;
-      width: 310px;
+      //min-width: 310px;
+      //width: 310px;
+
     }
   }
 
@@ -80,7 +91,9 @@ body.guide-of-study {
       grid-template-columns: repeat(2, 300px);
     }
     @media screen and(max-width: 700px) {
-      grid-template-columns: repeat(1, 275px);
+      //grid-template-columns: repeat(1, 275px);
+      display: block;
+      margin: 0 10%;
     }
 
     a.links-list-item {
@@ -99,6 +112,7 @@ body.guide-of-study {
         padding-top: 30px;
         padding-left: 10px;
         padding-right: 10px;
+        height: 15%;
       }
 
       &:hover {
