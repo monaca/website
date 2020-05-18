@@ -355,8 +355,35 @@ body.product-partner {
               margin: 0 0 28px 0;
               line-height: 21px;
               padding: 0;
-              overflow: hidden;
-              text-overflow: ellipsis;
+
+              @media screen and (max-width: $break-xs) {
+                margin-bottom: 8px;
+                max-height: 64px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+              }
+
+              &.non-hidden {
+                max-height: 100%;
+                overflow: auto;
+                display: block;
+              }
+            }
+
+            .show-content {
+              color: #0054AC;
+              text-align: center;
+              cursor: pointer;
+
+              img {
+                margin: 0 0 1px 4px;
+
+                &.rotated {
+                  transform: rotate(180deg);
+                }
+              }
             }
 
           }
