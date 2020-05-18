@@ -253,14 +253,32 @@ body.product-partner {
 
           @media screen and (max-width: $break-xs) {
             width: 100%;
+            padding: 0 16px;
+            height: 85px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
           }
 
-          img {
+          > img {
             margin-bottom: 15px;
+            
+            @media screen and (max-width: $break-xs) {
+              max-width: 50%;
+              margin-bottom: 0;
+            }
           }
 
           a {
             color: #505763;
+            @media screen and (max-width: $break-xs) {
+              margin-bottom: 0;
+              padding: 0 20px;
+
+              img {
+                transform: rotate(-45deg);
+              }
+            }
           }
 
           .btn-gray-line {
@@ -339,6 +357,7 @@ body.product-partner {
 
           @media screen and (max-width: $break-xs) {
             width: 100%;
+            border-bottom: none;
           }
 
           ul li:last-child {
