@@ -10,11 +10,12 @@ show_ja_globalnav: true
     <h1>お問い合わせ</h1>
     <p>□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■</p>
     <div class="box">
-        <p><strong>お問い合わせの前に、下の検索フォームをご利用ください。</strong><br>下のフォームにて検索キーワード(例:’Android Build’, ‘Monaca
+        <p><span class="title">お問い合わせの前に、下の検索フォームをご利用ください。</span><br>下のフォームにて検索キーワード(例:’Android Build’, ‘Monaca
             CLI’)を入力し、お問い合わせに関する内容をMonacaドキュメントから探すことができます。解決しない場合は、以下の各種お問い合わせからお願いいたします。</p>
-        <div class="input-container">
-            <input type="text" placeholder="キーワード">
+        <div class="aside-search" id="aside-search" style="padding-top: 10px; padding-bottom: 20px;">
+          <input type="search" id="inquiry-search-doc" placeholder="キーワード"><br />
         </div>
+
     </div>
 </div>
 <div class="container pages">
@@ -32,8 +33,29 @@ show_ja_globalnav: true
         <div class="page box">
             <h2>障害・<br class="no-break">不具合報告</h2>
             <p>□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■</p>
-            <a href="technical/">お問い合わせ<img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg"></a>
+            <a href="technical/?tag=bugs">お問い合わせ<img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg"></a>
         </div>
     </div>
-    <a class="big-link" href="">プログラミング教育へのお問い合わせはこちら<img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg"></a>
+    <a class="big-link" href="/support/education-inquiry.html">プログラミング教育へのお問い合わせはこちら<img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg"></a>
 </div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script type="text/javascript">
+  {{#is language "ja"}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#inquiry-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:ja"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{else}}
+      docsearch({
+      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
+      indexName: 'monaca',
+      inputSelector: '#inquiry-search-doc',
+      algoliaOptions: { 'facetFilters': ["language:en"] },
+      debug: false // Set debug to true if you want to inspect the dropdown
+    });
+  {{/is}}
+</script>

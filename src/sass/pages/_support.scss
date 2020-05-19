@@ -1,4 +1,8 @@
 body.support {
+  section.nav {
+    padding-top: 0px !important;
+  }
+
   .keyvisual {
     background: url(../img/support/keyvisual.jpg) no-repeat center bottom, url(../img/support/keyvisual_bg.png) repeat-x left bottom;
     color: #000;
@@ -82,13 +86,14 @@ body.support {
     }
   }
   #support-tech {
-    padding: 100px 0 0px 0;
+    padding: 32px 0 30px 0;
     width: 700px;
     table {
       width: 100%;
     }
     @media screen and (max-width: $break) {
       width: 85%;
+      padding: 10px 0 10px 0;
     }
     .required {
       color: #f55b56;
@@ -135,6 +140,9 @@ body.support {
       }
       hr {
         margin: 0 0 20px 0;
+        @media screen and (max-width: $break) {
+          display: none;
+        }
       }
       .form-item {
         font-size: 12px;
@@ -159,6 +167,19 @@ body.support {
           margin-top: 5px;
           width: 500px;
           height: 200px;
+          background: #fff none repeat scroll 0 0;
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+          color: #666666;
+          display: inline-block;
+          font-size: 14px;
+          margin: 0 0 5px;
+          outline: medium none;
+          padding: 5px;
+          @media screen and (max-width: $break) {
+            width: 100%;
+          }
         }
         input[type=text], input[type=number] {
           padding: 5px;
@@ -175,6 +196,19 @@ body.support {
         }
 
       }
+
+      .separate-table-block-item {
+        position: relative;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        top: -20px;
+        @media screen and (max-width: $break) {
+          top: unset;
+          padding-bottom: 30px;
+          padding-top: unset;
+        }
+      }
+
       .agree-state-p {
         margin-bottom: 0;
         line-height: 1em;
@@ -183,7 +217,6 @@ body.support {
         margin-bottom: 0;
       }
       .notification {
-        margin-bottom: 40px;
         a {
           text-decoration: underline;
           &:hover {
@@ -199,6 +232,29 @@ body.support {
         @media screen and (max-width: $break) {
           padding: 0;
         }
+
+        &.notification {
+          color: #6F777F;
+          font-size: 20px;
+          font-weight: 300;
+          line-height: 30px;
+          @media screen and (max-width: $break) {
+            font-size: 14px;
+            line-height: 21px;
+          }
+        }
+
+        &.sub-notification {
+          color: #6F777F;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 24px;
+          margin-bottom: 40px;
+          @media screen and (max-width: $break) {
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
       }
 
       > ul {
@@ -212,13 +268,18 @@ body.support {
 
       > h1 {
         color: #444444;
-        font-size: 36px;
-        line-height: 36px;
-        margin: 0 auto 30px;
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 300;
+        margin: 0 auto 70px;
         text-align: center;
         padding: 0;
         @media screen and (max-width: $break) {
-          font-size: 28px;
+          color: #6F777F;
+          font-size: 24px;
+          line-height: 31.2px;
+          font-weight: 600;
+          margin-bottom: 30px;
         }
       }
       > div.support-tech-caution {
@@ -264,6 +325,7 @@ body.support {
 
       > form > table {
         td {
+          color: initial;
           padding: 4px 0 25px;
           @media screen and (max-width: $break) {
             padding-bottom: 30px;
@@ -358,6 +420,13 @@ body.support {
             }
           }
 
+          #show-support-ticket {
+            cursor: pointer;
+            @media screen and (max-width: $break) {
+              display: none;
+            }
+          }
+
           > div.balloon-wrapper {
             position: relative;
             display: inline-block;
@@ -394,6 +463,17 @@ body.support {
           > select {
             min-width: 200px;
             font-size: 12px;
+            background-color: #fff;
+            border: 1px solid #9c9c9c;
+            border-radius: 4px;
+            color: #3f3e3d;
+            height: 30px;
+            margin-bottom: 5px;
+            padding: 0 7px;
+            vertical-align: middle;
+            @media screen and (max-width: $break) {
+              width: 100%;
+            }
           }
         }
         td.label {
@@ -552,6 +632,7 @@ body.support {
     width: 700px;
     @media screen and (max-width: $break) {
       width: 100%;
+      padding: 10px 20px 10px 20px;
     }
     > .container {
       width: 700px;
@@ -566,14 +647,18 @@ body.support {
       }
       > h1 {
         color: #444444;
-        font-size: 36px;
-        line-height: 36px;
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 300;
         margin: 0 0 70px;
         text-align: center;
         padding: 0;
         @media screen and (max-width: $break) {
-          font-size: 28px;
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 31.2px;
           margin-bottom: 30px;
+          color: #6F777F;
         }
       }
       > #content {
@@ -621,6 +706,9 @@ body.support {
             margin: 0 5px 0 40px;
             width: 20px;
             vertical-align: middle;
+            @media screen and (max-width: $break-iphone-5) {
+              margin: 0 5px 0 20px;
+            }
           }
           #license_purchase_detail {
             input[type=radio] {
@@ -642,11 +730,15 @@ body.support {
           }
           p {
             font-size: 20px;
-            font-weight: normal;
-            line-height: 150%;
+            font-weight: 300;
+            line-height: 30px;
             margin: 0 0 10px;
             color: #6F777F;
             padding: 0;
+            @media screen and (max-width: $break) {
+              font-size: 14px;
+              line-height: 21px;
+            }
             a {
               text-decoration: underline;
               &:hover {
@@ -885,7 +977,7 @@ input {
 }
 input[type=search] {
   -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   font-family: inherit;
   font-size: 14px;
 }
@@ -932,6 +1024,17 @@ input::-webkit-input-placeholder {
   width: 500px;
   color: #333;
   cursor: pointer;
+  @media screen and (max-width: $break) {
+    width: 70%;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.algolia-autocomplete {
+  width: 100%;
 }
 
 div.search {
@@ -944,22 +1047,41 @@ div.search {
 
 a.back {
   color: #0054AC;
-  font-size: 20px;
+  font-size: 16px;
+  line-height: 20px;
   position: relative;
+  font-weight: 300;
   float: left;
-  left: -130px;
+  margin-left: 10%;
+
+  @media screen and (max-width: $break) {
+    margin-left: 24px;
+    font-size: 11px;
+    line-height: 20px;
+  }
 
   &:after {
       content: 'Previous';
       display: block;
       position: absolute;
-      font-size: 14px;
-      left: 24px;
+      font-size: 10px;
+      line-height: 20px;
       bottom: 100%;
+      margin-left: 31px;
+
+      @media screen and (max-width: $break) {
+        display: none;
+      }
   }
 
   img {
       padding-left: 10px;
       transform: rotate3d(0,0,1,180deg);
+
+      @media screen and (max-width: $break) {
+        padding-left: 5px;
+        width: 13.7px;
+        height: 10.16px;
+      }
   }
 }

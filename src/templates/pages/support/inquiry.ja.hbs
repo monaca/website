@@ -12,17 +12,11 @@ show_ja_globalnav: true
 
 <section id="support-inquiry" class="subpage">
   <div class="container">
-    <!--section class="nav clearfix">
-      <a href="/support" class="back"><img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg">お問い合わせトップ</a>
-    </section-->
     <h1>一般的なお問い合わせ</h1>
     <div id="content">
       <form class="feedback-form" id="contactForm">
 
         <p>□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■□□□□□□□□□■</p>
-        <!--div class="aside-search" id="aside-search" style="padding-top: 10px; padding-bottom: 20px;">
-          <input type="search" id="inquiry-search-doc" placeholder="キーワード"><br />
-        </div-->
 
         <div class="feedback-item feedback-item-radio">
           <h2>お問い合わせの種類：<span style="color:red"></span></h2>
@@ -86,24 +80,3 @@ show_ja_globalnav: true
     </div>
   </div>
 </section>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script type="text/javascript">
-  {{#is language "ja"}}
-      docsearch({
-      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
-      indexName: 'monaca',
-      inputSelector: '#inquiry-search-doc',
-      algoliaOptions: { 'facetFilters': ["language:ja"] },
-      debug: false // Set debug to true if you want to inspect the dropdown
-    });
-  {{else}}
-      docsearch({
-      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
-      indexName: 'monaca',
-      inputSelector: '#inquiry-search-doc',
-      algoliaOptions: { 'facetFilters': ["language:en"] },
-      debug: false // Set debug to true if you want to inspect the dropdown
-    });
-  {{/is}}
-</script>
