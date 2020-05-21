@@ -634,13 +634,15 @@ body.showcase {
 
                 img {
                     display: block;
-                    width: 180px;
-                    max-width: 315px;
+                    max-width: 200px;
+                    max-height: 100px;
                     margin: 44px auto 32px;
 
                     @media screen and (max-width: $width) {
+                        max-width: 315px;
+                        max-height: none;
                         margin-top: 0;
-                        width: 40%;
+                        width: 25%;
                         height: auto;
                     }
                 }
