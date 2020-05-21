@@ -645,6 +645,10 @@ body.showcase {
                         width: 25%;
                         height: auto;
                     }
+
+                    @media screen and (max-width: $break) {
+                        width: 40%;
+                    }
                 }
 
                 h3 {
