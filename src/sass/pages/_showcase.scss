@@ -566,8 +566,10 @@ body.showcase {
                 color: white;
 
                 @media screen and (max-width: $width) {
+                    position: relative;
                     font-size: 20px;
-                    bottom: 53%;
+                    bottom: 120px;
+                    margin-bottom: 0;
                 }
 
                 @media screen and (max-width: $break) {
@@ -575,19 +577,23 @@ body.showcase {
                     width: unset;
                     left: unset;
                     padding: 0 5%;
-                    bottom: 40%;
+                    bottom: 100px;
                 }
 
                 &.flipped {
                     left: 20%;
                     margin-left: 250px;
 
+                    @media screen and (max-width: $width) {
+                        font-size: 20px;
+                        margin-left: unset;
+                    }
+
                     @media screen and (max-width: $break) {
                         font-size: 18px;
                         width: unset;
                         left: unset;
                         padding: 0 5%;
-                        margin-left: unset;
                     }
                 }
 
@@ -618,7 +624,7 @@ body.showcase {
                     height: auto;
                     text-align: center;
                     right: 0;
-                    margin-top: 60px;
+                    margin-top: 0;
                 }
 
                 &.flipped {
@@ -633,6 +639,7 @@ body.showcase {
                     margin: 44px auto 32px;
 
                     @media screen and (max-width: $width) {
+                        margin-top: 0;
                         width: 40%;
                         height: auto;
                     }
