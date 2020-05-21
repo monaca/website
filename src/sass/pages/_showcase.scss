@@ -516,56 +516,43 @@ body.showcase {
                 width: 100%;
             }
 
-            &:before {
-                display: block;
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                background: transparent;
-                background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-                background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-                z-index: 1;
-
-                @media screen and (max-width: $width) {
-                    bottom: 45%;
-                }
-
-                @media screen and (max-width: 1000px) {
-                    bottom: 48%;
-                }
-
-                @media screen and (max-width: 927px) {
-                    bottom: 51%;
-                }
-
-                @media screen and (max-width: $break) {
-                    bottom: 225px;
-                }
-            }
-
-
-            img {
-                width: 100%;
-                max-width: 9999px;
-                height: auto;
+            .image-wrapper {
                 position: relative;
-                z-index: 0;
 
-                @media screen and (max-width: $break) {
-                    left: 50%;
-                    width: auto;
-                    height: 460px;
-                    transform: translate(-50%, 0);
+                &:before {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: transparent;
+                    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                    background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                    z-index: 1;
                 }
 
-                @media screen and (max-width: $break-xs) {
-                    height: 300px;
+                img {
+                    width: 100%;
+                    max-width: 9999px;
+                    height: auto;
+                    position: relative;
+                    z-index: 0;
+
+                    @media screen and (max-width: $break) {
+                        left: 50%;
+                        width: auto;
+                        height: 460px;
+                        transform: translate(-50%, 0);
+                    }
+
+                    @media screen and (max-width: $break-xs) {
+                        height: 300px;
+                    }
+
+
                 }
-
-
             }
 
             h1 {
@@ -588,7 +575,7 @@ body.showcase {
                     width: unset;
                     left: unset;
                     padding: 0 5%;
-                    bottom: 235px;
+                    bottom: 40%;
                 }
 
                 &.flipped {
@@ -648,10 +635,6 @@ body.showcase {
                     @media screen and (max-width: $width) {
                         width: 40%;
                         height: auto;
-                    }
-
-                    @media screen and (max-width: $break) {
-                        margin: 0;
                     }
                 }
 
