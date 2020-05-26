@@ -2,11 +2,67 @@ body.why-monaca {
     .header {
         margin: auto;
         height: 435px;
-        max-width: 1366px;
-        background-image: url("/img/why-monaca/background_why_monaca.svg");
         background-color: #75B8FF;
-        background-position: center center;
-        background-repeat: no-repeat;
+        position: relative;
+
+        &:before, &:after {
+            display: block;
+            height: 100%;
+            content: '';
+            background-color: transparent;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: 0;
+            opacity: 1;
+        }
+
+        &:before {
+            background-image: url(/img/why-monaca/background-left.svg);
+            left: -10%;
+            top: 0vw;
+            width: 30%;
+            @media screen and (max-width: 1200px) {
+                opacity: 0.5;
+            }
+
+            @media screen and (max-width: 1100px) {
+                left: -15%;
+                width: 35%;
+            }
+
+            @media screen and (max-width: 650px){
+                left: -30%;
+                width: 57%;
+                top: 10%;
+                transform: scale(0.8);
+            }
+
+            @media screen and (max-width: 320px){
+                left: -40%;
+                width: 70%;
+            }
+
+            @media screen and (max-width: 280px){
+                display: none;
+            }
+        }
+
+        &:after {
+            background-image: url(/img/why-monaca/background-right.svg);
+            width: 30%;
+            right: -10%;
+            top: 0vw;
+            @media screen and (max-width: 1200px) {
+                opacity: 0.5;
+            }
+            @media screen and (max-width: 650px){
+                top: -10%;
+            }
+            @media screen and (max-width: 280px){
+                display: none;
+            }
+        }
 
         display: flex;
         flex-direction: column;
@@ -262,10 +318,6 @@ body.why-monaca {
 
     // In smartphone mode (iphone 6/7/8 plus)
     @media screen and (max-width: 414px) {
-        .header {
-            background-image: url("/img/why-monaca/background_sp.svg");
-            max-width: 320px;
-        }
 
         .why-panel {
             row-gap: 30px;
