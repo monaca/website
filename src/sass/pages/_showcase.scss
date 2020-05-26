@@ -516,56 +516,43 @@ body.showcase {
                 width: 100%;
             }
 
-            &:before {
-                display: block;
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                background: transparent;
-                background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-                background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-                z-index: 1;
-
-                @media screen and (max-width: $width) {
-                    bottom: 45%;
-                }
-
-                @media screen and (max-width: 1000px) {
-                    bottom: 48%;
-                }
-
-                @media screen and (max-width: 927px) {
-                    bottom: 51%;
-                }
-
-                @media screen and (max-width: $break) {
-                    bottom: 225px;
-                }
-            }
-
-
-            img {
-                width: 100%;
-                max-width: 9999px;
-                height: auto;
+            .image-wrapper {
                 position: relative;
-                z-index: 0;
 
-                @media screen and (max-width: $break) {
-                    left: 50%;
-                    width: auto;
-                    height: 460px;
-                    transform: translate(-50%, 0);
+                &:before {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: transparent;
+                    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                    background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+                    z-index: 1;
                 }
 
-                @media screen and (max-width: $break-xs) {
-                    height: 300px;
+                img {
+                    width: 100%;
+                    max-width: 9999px;
+                    height: auto;
+                    position: relative;
+                    z-index: 0;
+
+                    @media screen and (max-width: $break) {
+                        left: 50%;
+                        width: auto;
+                        height: 460px;
+                        transform: translate(-50%, 0);
+                    }
+
+                    @media screen and (max-width: $break-xs) {
+                        height: 300px;
+                    }
+
+
                 }
-
-
             }
 
             h1 {
@@ -579,8 +566,10 @@ body.showcase {
                 color: white;
 
                 @media screen and (max-width: $width) {
+                    position: relative;
                     font-size: 20px;
-                    bottom: 53%;
+                    bottom: 120px;
+                    margin-bottom: 0;
                 }
 
                 @media screen and (max-width: $break) {
@@ -588,19 +577,23 @@ body.showcase {
                     width: unset;
                     left: unset;
                     padding: 0 5%;
-                    bottom: 235px;
+                    bottom: 100px;
                 }
 
                 &.flipped {
                     left: 20%;
                     margin-left: 250px;
 
+                    @media screen and (max-width: $width) {
+                        font-size: 20px;
+                        margin-left: unset;
+                    }
+
                     @media screen and (max-width: $break) {
                         font-size: 18px;
                         width: unset;
                         left: unset;
                         padding: 0 5%;
-                        margin-left: unset;
                     }
                 }
 
@@ -631,7 +624,7 @@ body.showcase {
                     height: auto;
                     text-align: center;
                     right: 0;
-                    margin-top: 60px;
+                    margin-top: 0;
                 }
 
                 &.flipped {
@@ -641,17 +634,20 @@ body.showcase {
 
                 img {
                     display: block;
-                    width: 180px;
-                    max-width: 315px;
+                    max-width: 200px;
+                    max-height: 100px;
                     margin: 44px auto 32px;
 
                     @media screen and (max-width: $width) {
-                        width: 40%;
+                        max-width: 315px;
+                        max-height: none;
+                        margin-top: 0;
+                        width: 25%;
                         height: auto;
                     }
 
                     @media screen and (max-width: $break) {
-                        margin: 0;
+                        width: 40%;
                     }
                 }
 
