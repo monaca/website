@@ -196,8 +196,7 @@ body.devops {
                 text-align: center;
                 height: 2em;
                 color: #444444;
-                margin-top: 30px;
-                margin-bottom: 20px;
+                margin: 30px 0 20px;
                 font-size: 30px;
                 font-weight: normal;
             }
@@ -343,9 +342,7 @@ body.devops {
                     padding-bottom: 10px;
                 }
                 .cost {
-                    //display: block;
-                    //width: 100%;
-                    overflow-y: scroll;
+                    overflow: hidden;
                     margin-left: 20px;
                     margin-right: 20px;
                     padding: 24px 10px;
@@ -357,9 +354,7 @@ body.devops {
                     }
                 }
                 .content {
-                    //display: block;
-                    //width: 100%;
-                    overflow-y: scroll;
+                    overflow: hidden;
                     margin-left: 20px;
                     margin-right: 20px;
                     padding: 24px 10px;
@@ -372,8 +367,6 @@ body.devops {
                     }
                 }
                 .examples {
-                    //display: block;
-                    //width: 100%;
                     margin-left: 20px;
                     margin-right: 20px;
                     padding: 24px 10px;
