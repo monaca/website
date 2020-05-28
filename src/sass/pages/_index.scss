@@ -1827,6 +1827,9 @@ html[lang=ja] body.platform {
 
                 img {
                     max-width: unset;
+
+                    position: relative;
+                    top: -1px;
                 }
             }
         }
@@ -1860,6 +1863,9 @@ html[lang=ja] body.platform {
     
                 img {
                     max-width: unset;
+
+                    position: relative;
+                    top: -1px;
                 }
             }
         }
