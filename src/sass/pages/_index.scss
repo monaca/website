@@ -1801,11 +1801,12 @@ html[lang=ja] body.platform {
             display: none;
         }
         @media screen and (min-width: 971px) {
-            overflow-x: hidden;
+            overflow: hidden;
             background-color: white;
             border-top: 1px solid #C7C5C2;
             border-bottom: 1px solid #C7C5C2;
             width: 100%;
+            height: 100px;
             padding: 0;
 
             > .v2-section--logos-pc__wrapper {
@@ -1816,7 +1817,6 @@ html[lang=ja] body.platform {
                 margin: 0 auto;
                 padding: 0;
                 white-space: nowrap;
-                height: 100px;
                 overflow: hidden;
 
                 a {
@@ -1833,11 +1833,12 @@ html[lang=ja] body.platform {
 
     .v2-section--logos-sp {
         @media screen and (max-width: 970px) {
-            overflow-x: hidden;
+            overflow: hidden;
             background-color: white;
             border-top: 1px solid #C7C5C2;
             border-bottom: 1px solid #C7C5C2;
             width: 100%;
+            height: 56px;
             padding: 0;
 
             > .v2-section--logos-sp__wrapper {
@@ -1848,7 +1849,6 @@ html[lang=ja] body.platform {
                 margin: 0 auto;
                 padding: 0;
                 white-space: nowrap;
-                height: 56px;
                 overflow: hidden;
 
                 a {
