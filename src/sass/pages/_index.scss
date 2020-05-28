@@ -1820,11 +1820,6 @@ html[lang=ja] body.platform {
                 overflow: hidden;
                 line-height: 0; // Prevent unexpected height
 
-                a {
-                    text-align: left;
-                    white-space: nowrap;
-                }
-
                 img {
                     max-width: unset;
 
@@ -1855,11 +1850,6 @@ html[lang=ja] body.platform {
                 white-space: nowrap;
                 overflow: hidden;
                 line-height: 0; // Prevent unexpected height
-
-                a {
-                    text-align: left;
-                    white-space: nowrap;
-                    }
     
                 img {
                     max-width: unset;
