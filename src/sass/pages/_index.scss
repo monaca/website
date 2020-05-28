@@ -1780,6 +1780,8 @@ html[lang=ja] body.platform {
     
     }
 
+    $scroll-offset: 2%;
+
     // This animation requires three same-content elements as follows:
     // [  1  ][  2  ][  3  ]
     //  33.3%  33.3%  33.3%
@@ -1787,10 +1789,10 @@ html[lang=ja] body.platform {
     //        from   to
     @keyframes logos-scroll {
         from {
-            transform: translateX(#{-33.33333%});
+            transform: translateX(#{-33.33333% + $scroll-offset});
         }
         to {
-            transform: translateX(#{-33.33333% * 2});
+            transform: translateX(#{-33.33333% * 2 + $scroll-offset});
         }
     }
 
