@@ -1692,6 +1692,9 @@ html[lang=en] body.home {
 
 html[lang=ja] body.home,
 html[lang=ja] body.platform {
+    background-image: url('/img/index/bg_index.svg');
+    background-repeat: repeat-y;
+    background-position: calc(50% + 520px) calc(-42px);
     overflow-x: hidden;
 
     .intro {
