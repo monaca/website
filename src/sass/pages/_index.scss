@@ -1818,6 +1818,7 @@ html[lang=ja] body.platform {
                 padding: 0;
                 white-space: nowrap;
                 overflow: hidden;
+                line-height: 0; // Prevent unexpected height
 
                 a {
                     text-align: left;
@@ -1850,6 +1851,7 @@ html[lang=ja] body.platform {
                 padding: 0;
                 white-space: nowrap;
                 overflow: hidden;
+                line-height: 0; // Prevent unexpected height
 
                 a {
                     text-align: left;
