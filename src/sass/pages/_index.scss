@@ -1692,6 +1692,7 @@ html[lang=en] body.home {
 
 html[lang=ja] body.home,
 html[lang=ja] body.platform {
+    overflow-x: hidden;
 
     .intro {
         background: #F0F0F0;
@@ -1779,76 +1780,86 @@ html[lang=ja] body.platform {
     
     }
 
-    .v2-section--logos {
-        // In PC mode
-        @media screen and (min-width: $v2-break-tablet + 1) {
+    // This animation requires three same-content elements as follows:
+    // [  1  ][  2  ][  3  ]
+    //  33.3%  33.3%  33.3%
+    //        |      |
+    //        from   to
+    @keyframes logos-scroll {
+        from {
+            transform: translateX(#{-33.33333%});
+        }
+        to {
+            transform: translateX(#{-33.33333% * 2});
+        }
+    }
+
+    .v2-section--logos-pc {
+        @media screen and (max-width: 970px) {
+            display: none;
+        }
+        @media screen and (min-width: 971px) {
+            overflow-x: hidden;
             background-color: white;
             border-top: 1px solid #C7C5C2;
             border-bottom: 1px solid #C7C5C2;
             width: 100%;
             padding: 0;
 
-            > .v2-section--logos__wrapper {
-                display: flex;
-                flex-flow: row nowrap;
+            > .v2-section--logos-pc__wrapper {
+                animation: logos-scroll 40s infinite linear;
+    
+                display: inline-block;
                 box-sizing: border-box;
                 margin: 0 auto;
-                padding: 0 32px;
-                max-width: 1920px;
-                height: 70px;
+                padding: 0;
+                white-space: nowrap;
+                height: 100px;
                 overflow: hidden;
 
-                > .v2-section--logos__logo {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                a {
+                    text-align: left;
+                    white-space: nowrap;
+                }
 
-                    // If short width is given
-                    @media screen and (max-width: 1249px) {
-                        &:nth-child(1) {
-                            flex: 220; // Original width: 251px
-                            > div.v2-section--logos__logo-inner {
-                                width: 100%;
-                            }
+                img {
+                    max-width: unset;
                         }
-                        &:nth-child(2) {
-                            flex: 170;
                         }
-                        &:nth-child(3) {
-                            flex: 116;
-                        }
-                        &:nth-child(4) {
-                            flex: 162;
-                        }
-                        &:nth-child(5) {
-                            flex: 135;
-                        }
-                        &:nth-child(6) {
-                            flex: 134;
-                        }
-                    }
-                    // If long width is given
-                    @media screen and (min-width: 1250px) {
-                        flex: 1;
-
-                        &:nth-child(1) {
-                            flex: 1.2;
                         }
                     }
 
-                    > div.v2-section--logos__logo-inner {
-                        width: 80%;
-                        height: 80%;
+    .v2-section--logos-sp {
+        @media screen and (max-width: 970px) {
+            overflow-x: hidden;
+            background-color: white;
+            border-top: 1px solid #C7C5C2;
+            border-bottom: 1px solid #C7C5C2;
+            width: 100%;
+            padding: 0;
 
-                        background-size: contain;
-                        background-repeat: no-repeat;
-                        background-position: center center;
+            > .v2-section--logos-sp__wrapper {
+                animation: logos-scroll 30s infinite linear;
+
+                display: inline-block;
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 0;
+                white-space: nowrap;
+                height: 56px;
+                overflow: hidden;
+
+                a {
+                    text-align: left;
+                    white-space: nowrap;
                     }
+    
+                img {
+                    max-width: unset;
                 }
             }
         }
-        // In smartphone/tablet mode
-        @media screen and (max-width: $v2-break-tablet) {
+        @media screen and (min-width: 971px) {
             display: none;
         }
     }
