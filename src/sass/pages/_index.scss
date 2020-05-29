@@ -1591,11 +1591,6 @@ html[lang=ja] body.home {
           padding-bottom: 22px;
         }
     
-        p {
-          font-size: 16px;
-          line-height: 1.6;
-        }
-    
         section, .section {
     /*      padding-top: 90px;
           padding-bottom: 40px;*/
@@ -1861,6 +1856,14 @@ html[lang=ja] body.home {
         @media screen and (min-width: 971px) {
             display: none;
         }
+    }
+
+    .solution-detail__description {
+      p {
+        margin: 0;
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
 
     .case-container {
