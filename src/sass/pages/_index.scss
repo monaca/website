@@ -1972,7 +1972,7 @@ html[lang=ja] body.home {
         > .solutions {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             width: 100%;
             position: relative;
             z-index: 1;
