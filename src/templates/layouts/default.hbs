@@ -38,27 +38,6 @@
         <meta http-equiv="refresh" content="0; URL={{redirect}}">
     {{/compare}}
 
-    <script>
-        var loadResources = function() {
-            var res = ["/css/codemirror.css", "//fonts.googleapis.com/css?family=Open+Sans:400,700"];
-            var headElement = document.getElementsByTagName("head")[0];
-            var l = document.createElement("link");
-
-            for (var i = 0; i < res.length; i++) {
-                var linkElement = document.createElement("link");
-                linkElement.rel = "stylesheet";
-                linkElement.href = res[i];
-                headElement.appendChild(linkElement);
-            }
-        };
-
-        var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
-        if (raf) {
-            raf(loadResources);
-        } else {
-            window.addEventListener('load', loadResources);
-        }
-    </script>
   {{#is language "ja"}}
     <script type="text/javascript">var Kairos3Tracker="asial";</script>
     <script type="text/javascript" charset="utf-8" src="//c.k3r.jp"></script>
