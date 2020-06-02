@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{language}}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
+  {{!-- meta elements (1 of 2) --}}
   <meta charset="UTF-8">
-
 {{#compare viewport "typeof" "string"}}
   <meta name="viewport" content="{{viewport}}">
 {{else}}
   <meta name="viewport" content="width=device-width, initial-scale=1">
 {{/compare}}
 
+  {{!-- title element --}}
+  {{!-- must be under charset="UTF-8", name="viewport" and name="robots". --}}
   <title>
     {{#compare title "typeof" "string"}}
       {{#is language "ja"}}
@@ -25,6 +27,7 @@
     {{/compare}}
   </title>
 
+  {{!-- meta elements (2 of 2) --}}
 {{#is language "ja"}}
   <meta name="keywords" content="
       {{#compare keywords "typeof" "string"}}
@@ -34,16 +37,9 @@
       {{/compare}}
   ">
 {{/is}}
-
 {{#compare redirect "typeof" "string"}}
   <meta http-equiv="refresh" content="0; URL={{redirect}}">
 {{/compare}}
-
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/style.css">
-
-  <link rel="shortcut icon" href="/img/favicon.ico">
-
   <meta property="og:type" content="article">
   <meta property="og:title" content="
       {{#compare title "typeof" "string"}}
@@ -81,7 +77,6 @@
           {{/is}}
       {{/compare}}
   ">
-
 {{#compare description "typeof" "string"}}
   <meta name="description" content="{{description}}">
   <meta property="og:description" content="{{description}}">
@@ -92,26 +87,29 @@
   <meta name="twitter:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
 {{/compare}}
 
+  {{!-- link elements (1 of 2) - Resources --}}
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  {{!-- link elements (2 of 2) - Stylesheets --}}
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+
+  {{!-- script elements --}}
 {{#is language "ja"}}
   <script defer type="text/javascript">var Kairos3Tracker="asial";</script>
   <script defer type="text/javascript" charset="utf-8" src="//c.k3r.jp"></script>
 {{/is}}
-
   <script defer src="/js/jquery.min.js"></script>
   <script defer src="/js/bootstrap.min.js"></script>
   <script defer src="/js/all.js"></script>
-
   <script defer src="https://use.typekit.net/tky7gag.js"></script>
   <script defer>
       if (location.href.indexOf('/contest/') > 0) {
           try{Typekit.load({ async: true });}catch(e){}
       }
   </script>
-
-  <!-- algolia search -->
   <script defer src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
-
   <script defer>
       window.MONACA_API_URL = "{{site.monaca_api}}";
       window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
