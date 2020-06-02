@@ -91,9 +91,15 @@
   <link rel="shortcut icon" href="/img/favicon.ico">
 
   {{!-- link elements (2 of 2) - Stylesheets --}}
+{{#if stylesheets}}
+  {{#each stylesheets}}
+  <link rel="stylesheet" href="{{this}}">
+  {{/each}}
+{{else}}
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
+{{/if}}
 
   {{!-- script elements --}}
 {{#is language "ja"}}

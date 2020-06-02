@@ -36,8 +36,14 @@
   <link rel="manifest" href="/manifest.json">
 
   {{!-- link elements (2 of 2) - Stylesheets --}}
+{{#if stylesheets}}
+  {{#each stylesheets}}
+  <link rel="stylesheet" href="{{this}}">
+  {{/each}}
+{{else}}
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/style.css">
+{{/if}}
 
   {{!-- script elements --}}
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-526750-32"></script>
