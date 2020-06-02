@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{language}}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-526750-32"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-526750-32', { 'optimize_id': 'GTM-N5QB3FJ'});
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0054ac"/>
@@ -41,35 +31,21 @@
 
     {{#if addEnIndexMeta}}<meta name="wot-verification" content="e3deda70c83199129d73"/>{{/if}}
 
-    <script src="https://use.typekit.net/tky7gag.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-526750-32"></script>
+    <script defer>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-</head>
-<body class="{{class}}">
-    <noscript>
-        <!-- When JavaScript is disabled, make all of elements invisible to prevent rendering incomplete HTML -->
-        <style>
-          div.main { display: none !important }
-          footer.common { display: none !important }
-          footer.v2-section--footer { display: none !important }
-        </style>
-        <p>Javascript is loading, please wait. Please enable javascript, if you have it disabled.</p>
-    </noscript>
-
-    {{#is language "ja"}}{{> header_ja }}{{else}}{{> header_en }}{{/is}}
-
-    <div class="main" role="main"{{#is language "ja"}}{{#if show_ja_globalnav}}{{#if show_ja_subnav}} style="padding-top: 122px;"{{else}} style="padding-top: 66px;"{{/if}}{{/if}}{{else}}{{#unless hideHeader}} style="padding-top: 50px;"{{/unless}}{{/is}}>
-        {{> loginPopup }}
-        {{> notificationHeader }}
-        {{> body }}
-    </div>
-
-    {{#is language "ja"}}{{> footer_ja }}{{else}}{{> footer_en }}{{/is}}
-
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/all.js"></script>
-    <script>
+      gtag('config', 'UA-526750-32', { 'optimize_id': 'GTM-N5QB3FJ'});
+    </script>
+    <script defer src="https://use.typekit.net/tky7gag.js"></script>
+    <script defer>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script defer src="/js/jquery.min.js"></script>
+    <script defer src="/js/bootstrap.min.js"></script>
+    <script defer src="/js/all.js"></script>
+    <script defer>
         if ('serviceWorker' in navigator) {
           window.addEventListener('load', function() {
             navigator.serviceWorker.register('/sw.js',).then(function(registration) {
@@ -92,9 +68,30 @@
         window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
     </script>
     {{#is language "ja"}}
-        <script src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
+        <script defer src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
     {{else}}
-        <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
+        <script defer src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
     {{/is}}
+</head>
+<body class="{{class}}">
+    <noscript>
+        <!-- When JavaScript is disabled, make all of elements invisible to prevent rendering incomplete HTML -->
+        <style>
+          div.main { display: none !important }
+          footer.common { display: none !important }
+          footer.v2-section--footer { display: none !important }
+        </style>
+        <p>Javascript is loading, please wait. Please enable javascript, if you have it disabled.</p>
+    </noscript>
+
+    {{#is language "ja"}}{{> header_ja }}{{else}}{{> header_en }}{{/is}}
+
+    <div class="main" role="main"{{#is language "ja"}}{{#if show_ja_globalnav}}{{#if show_ja_subnav}} style="padding-top: 122px;"{{else}} style="padding-top: 66px;"{{/if}}{{/if}}{{else}}{{#unless hideHeader}} style="padding-top: 50px;"{{/unless}}{{/is}}>
+        {{> loginPopup }}
+        {{> notificationHeader }}
+        {{> body }}
+    </div>
+
+    {{#is language "ja"}}{{> footer_ja }}{{else}}{{> footer_en }}{{/is}}
 </body>
 </html>

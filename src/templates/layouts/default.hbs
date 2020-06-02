@@ -38,10 +38,6 @@
         <meta http-equiv="refresh" content="0; URL={{redirect}}">
     {{/compare}}
 
-  {{#is language "ja"}}
-    <script type="text/javascript">var Kairos3Tracker="asial";</script>
-    <script type="text/javascript" charset="utf-8" src="//c.k3r.jp"></script>
-  {{/is}}
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 
@@ -95,21 +91,53 @@
         <meta name="twitter:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
     {{/compare}}
 
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/all.js"></script>
+    {{#is language "ja"}}
+        <script defer type="text/javascript">var Kairos3Tracker="asial";</script>
+        <script defer type="text/javascript" charset="utf-8" src="//c.k3r.jp"></script>
+    {{/is}}
 
-    <script src="https://use.typekit.net/tky7gag.js"></script>
-    <script>
+    <script defer src="/js/jquery.min.js"></script>
+    <script defer src="/js/bootstrap.min.js"></script>
+    <script defer src="/js/all.js"></script>
+
+    <script defer src="https://use.typekit.net/tky7gag.js"></script>
+    <script defer>
         if (location.href.indexOf('/contest/') > 0) {
             try{Typekit.load({ async: true });}catch(e){}
         }
     </script>
 
     <!-- algolia search -->
-    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
 
+    <script defer>
+        window.MONACA_API_URL = "{{site.monaca_api}}";
+        window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
+        {{#is language "ja"}}
+            window.LANG = "ja";
+        {{else}}
+            window.LANG = "en";
+        {{/is}}
+        window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
+
+        $(document).ajaxError(function (e, request, settings) {
+          ga('send', 'exception', {
+            exDescription: 'Ajax Error ' + settings.url + ' ' + e.result + ' EventType:' + e.type + ' Status:' + request.status
+          });
+        });
+    </script>
+    {{#is class "error"}}
+      <script defer>
+        monacaApi.loginCheck(false); // Force to stop login check request When web-server error
+      </script>
+    {{else}}
+      {{#is language "ja"}}
+        <script defer src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
+      {{else}}
+        <script defer src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
+      {{/is}}
+    {{/is}}
 </head>
 
 <body class="{{class}}">
@@ -132,34 +160,6 @@
     {{> footer_ja }}
     {{else}}
     {{#unless hideFooter}}{{> footer_en }}{{/unless}}
-    {{/is}}
-
-    <script>
-        window.MONACA_API_URL = "{{site.monaca_api}}";
-        window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
-        {{#is language "ja"}}
-            window.LANG = "ja";
-        {{else}}
-            window.LANG = "en";
-        {{/is}}
-        window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
-
-        $(document).ajaxError(function (e, request, settings) {
-          ga('send', 'exception', {
-            exDescription: 'Ajax Error ' + settings.url + ' ' + e.result + ' EventType:' + e.type + ' Status:' + request.status
-          });
-        });
-    </script>
-    {{#is class "error"}}
-      <script>
-        monacaApi.loginCheck(false); // Force to stop login check request When web-server error
-      </script>
-    {{else}}
-      {{#is language "ja"}}
-        <script src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
-      {{else}}
-        <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
-      {{/is}}
     {{/is}}
   </body>
 </html>
