@@ -332,7 +332,10 @@ module.exports = function (grunt) {
             bootstrap: {
                 expand: true,
                 cwd: 'bower_components/bootstrap/dist/',
-                src: ['**', '!**/*.js', '**/*.min.js', '!**/*.css', '**/*.min.css'],
+                src: [
+                    'js/bootstrap.min.js',
+                    'css/bootstrap.min.css',
+                ],
                 dest: '<%= config.dist %>/'
             },
             jquery: {
