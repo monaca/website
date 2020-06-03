@@ -379,7 +379,7 @@ module.exports = function (grunt) {
             css: {
                 expand: true,
                 cwd: '<%= config.dist %>/css/',
-                src: 'style.*',
+                src: '**/*.css',
                 dest: '<%= config.distJa %>/css/'
             },
             js: {
