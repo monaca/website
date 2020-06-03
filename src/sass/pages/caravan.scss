@@ -1,0 +1,287 @@
+@import "../constants";
+
+body.caravan {
+    .keyvisual {
+        background: url(../img/caravan/keyvisual_bg.jpg) repeat-x left bottom #e2f2f9;
+        height: auto;
+        overflow: visible;
+        padding: 0;
+        position: relative;
+        h1 {
+            img {
+                vertical-align: bottom;
+            }
+        }
+        @media screen and (max-width: $break) {
+            > div {
+                padding: 50px 0 0;
+                img {
+                    transform: none;
+                }
+            }
+        }
+    }
+    article.main {
+        h2 {
+            background: none no-repeat center top;
+            border-bottom: 1px solid #dcdcdc;
+            color: #00a0e9;
+            font-size: 2.57rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            padding: 65px 0 25px;
+            @media screen and (max-width: $break) {
+                background-size: 40px;
+                font-size: 22px;
+                padding: 52px 0 14px;
+            }
+        }
+        p {
+            font-size: 1rem;
+            padding: 0;
+            width: auto;
+        }
+        section {
+            border-bottom: none;
+        }
+        section.summary {
+            padding-bottom: 0;
+            @media screen and (max-width: $break) {
+                padding-top: 20px;
+            }
+            h2 {
+                background-image: url(/img/caravan/icn_schedule.png);
+            }
+            > p {
+                line-height: 2;
+                width: auto;
+                margin-bottom: 40px;
+                @media screen and (min-width: $break-xs + 1px) {
+                    float: left;
+                    margin-left: percentage(110px/1170px);
+                    width: percentage(600px/1170px);
+                }
+            }
+            .info {
+                background-color: #f5f5f5;
+                float: right;
+                margin-right: percentage(150px/1170px);
+                padding: 20px;
+                width: percentage(270px/1170px);
+                @media screen and (max-width: 1200px) {
+                    margin-right: percentage(110px/1170px);
+                    width: percentage(310px/1170px);
+                }
+                dl {
+                    background: url(/img/caravan/icn_diamond.png) no-repeat left 6px;
+                    border-bottom: 1px solid #ccc;
+                    margin-bottom: 4px;
+                    dt {
+                        color: #34454b;
+                        display: inline-block;
+                        line-height: 1.7;
+                        padding-left: 2px;
+                        text-align: left;
+                        width: percentage(60px/270px);
+                        font-weight: 700;
+                    }
+                    dd {
+                        color: #34454b;
+                        display: inline-block;
+                        line-height: 1.7;
+                        text-align: left;
+                        width: percentage(170px/270px);
+                    }
+                }
+                p {
+                    font-size: 0.86rem;
+                    line-height: 1.4;
+                    margin-top: 12px;
+                    padding: 0;
+                    word-break: break-word;
+                }
+                @media screen and (max-width: $break) {
+                    float: none;
+                    margin: 0 auto 40px;
+                    width: 80%;
+                }
+            }
+            .schedule {
+                clear: both;
+                &:after {
+                    content: "";
+                    clear: both;
+                    display: block;
+                }
+                @media screen and (min-width: $break-xs) and (max-width: 919px) {
+                    padding-left: 10%;
+                    padding-right: 10%;
+                }
+                li {
+                    border: 1px solid #d4d5d7;
+                    float: left;
+                    margin: 0 auto 30px;
+                    position: relative;
+                    text-align: center;
+                    height: 220px;
+                    &:after {
+                        border-radius: 30px;
+                        color: white;
+                        position: absolute;
+                        top: -20px;
+                        left: -20px;
+                        font-size: 16px;
+                        line-height: 18px;
+                        padding: 12px 12px;
+                        width: 60px;
+                        height: 60px;
+                    }
+                    &.full:after {
+                        content: "満員御礼";
+                        background-color: #f758b6;
+                    }
+                    &.fixed:after {
+                        content: "日時決定";
+                        background-color: #34454b;
+                    }
+                    &.added:after {
+                        content: "追加決定";
+                        background-color: #34454b;
+                        color: #a2d7f3;
+                    }
+                    &.ended:after {
+                        content: "開催終了";
+                        background-color: #999;
+                    }
+                    &.tba {
+                        background-color: #ddd;
+                        border: 8px solid #eee;
+                        color: #888;
+                        padding: 70px 0 0;
+                        h3 {
+                            background-color: transparent;
+                            color: #888;
+                            padding: 0;
+                        }
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                    &.inquiry {
+                        background: url(/img/caravan/icn_mail.png) no-repeat center 25px;
+                        padding: 60px 0 0;
+                        p {
+                            font-size: 1.29rem;
+                            line-height: 1.5;
+                            margin-bottom: 20px;
+                        }
+                        .btn {
+                            background-color: #34454b;
+                        }
+                    }
+                    @media screen and (min-width: 920px) {
+                        margin-right: percentage(30px/1108px);
+                        width: percentage(254px/1108px);
+                        &:nth-child(4n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media screen and (max-width: 919px) and (min-width: $break-xs + 1px) {
+                        margin-right: 6%;
+                        margin-bottom: 40px;
+                        width: 47%;
+                        &:nth-child(2n) {
+                            margin-right: 0;
+                        }
+                    }
+                    @media screen and (max-width: $break-xs) {
+                        float: none;
+                        margin: 0 auto 40px;
+                        width: 80%;
+                    }
+                    h3 {
+                        background-color: #f6f7f9;
+                        color: #00a0e9;
+                        font-size: 2.28rem;
+                        margin-bottom: 18px;
+                        padding: 10px;
+                        .small {
+                            font-size: 1.5rem;
+                            color: #00a0e9;
+                        }
+                    }
+                    p {
+                        text-align: center;
+                    }
+                    p.date {
+                        font-size: 16px;
+                        margin-bottom: 0;
+                        line-height: 26px;
+                        em {
+                            font-size: 22px;
+                            font-style: normal;
+                        }
+                    }
+                    p.place {
+                        font-size: 12px;
+                        line-height: 1.5;
+                        margin-bottom: 20px;
+                    }
+                    .btn {
+                        background-color: #00a0e9;
+                        color: white;
+                        padding: 10px 24px;
+                    }
+                }
+            }
+        }
+        section.points {
+            &:after {
+                content: "";
+                clear: both;
+                display: block;
+            }
+            h2 {
+                background-image: url(/img/caravan/icn_points.png);
+                margin-bottom: 50px;
+                @media screen and (max-width: $break) {
+                    margin-bottom: 30px;
+                }
+            }
+            p, li {
+                font-size: 1.43rem;
+                line-height: 2;
+                margin-bottom: 0;
+                overflow: hidden;
+                text-align: left;
+                @media screen and (max-width: $break) {
+                    font-size: 1rem;
+                }
+            }
+            li {
+                background: url(/img/caravan/icn_check.png) no-repeat left center;
+                padding-left: 40px;
+                @media screen and (max-width: $break) {
+                    background-size: 20px;
+                    padding-left: 26px;
+                }
+            }
+            .thumb {
+                float: left;
+                margin: 0 percentage(90px/1170px) 30px percentage(150px/1170px);
+                @media screen and (max-width: $break-xs) {
+                    display: none;
+                }
+            }
+        }
+    }
+    .space-40 {
+        letter-spacing: -0.4em;
+    }
+    .space-20 {
+        letter-spacing: -0.2em;
+    }
+    .indent1em {
+        text-indent: 1em;
+    }
+}
