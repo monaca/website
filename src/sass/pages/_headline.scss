@@ -1,5 +1,6 @@
 body.headline {
   #news {
+    font-weight: 300;
     width: 932px;
     padding: 0;
     @media screen and (max-width: 932px) {
@@ -18,8 +19,9 @@ body.headline {
 
       h1 {
         color: #444444;
-        font-size: 36px;
-        line-height: 36px;
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: 300;
         margin: 50px auto;
         text-align: center;
         padding: 0;
@@ -28,9 +30,9 @@ body.headline {
       @media screen and (max-width: $break) {
         h1 {
           font-size: 24px;
-          line-height: 31px;
+          line-height: 31.2px;
           color: #6F777F;
-          font-weight: bold;
+          font-weight: 600;
           margin: 50px auto 30px;
         }
       }
@@ -48,6 +50,28 @@ body.headline {
           font-size: 20px;
           line-height: 30px;
           text-align: left;
+        }
+
+        .wide-screen {
+          display: inline-block;
+        }
+        .small-screen {
+          display: none;
+        }
+
+        @media screen and (max-width: $break) {
+          .text {
+            text-align: center;
+            width: 236px;
+            font-size: 14px;
+            line-height: 21px;
+          }
+          .wide-screen {
+            display: none;
+          }
+          .small-screen {
+            display: inline-block;
+          }
         }
 
         @media screen and (max-width: $break-lg) {
@@ -215,11 +239,10 @@ body.headline {
               font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Helvetica Neue", Arial, sans-serif;
               font-size: 10px;
               line-height: 23px;
-              padding: 0 10px;
               border: 1px solid #B3B3B3;
               border-radius: 10px;
               height: 18px;
-              width: 82px;
+              width: 80px;
               display: flex;
               justify-content: center;
               align-items: center;

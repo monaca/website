@@ -2,19 +2,17 @@
 title: Monaca - Product Partners
 class: product-partner
 description: Using Monaca cloud-powered tools, services, and supported valuable product partners, can improve efficiency, security and monetization of your applications.
-viewport: width=1200px
 ---
 
 <div id="main-wrap">
   <section id="productsPartner">
-    <div class="productsPartner-header">
+    {{!-- <div class="productsPartner-header">
       <div class="productsPartner-contents">
         <div class="productsPartner-txt">
           <h2 class="title"><img src="/img/product-partner/bg_keyvisual_title_en.png" alt="Monaca Product Partners. With the support of our valuable product partners, we assure full efficiency, security and best monetization for your applications."></h2>
         </div>
       </div>
     </div>
-
     <div class="cate">
       <ul class="cate-link">
         <li>
@@ -42,6 +40,30 @@ viewport: width=1200px
           </a>
         </li>
       </ul>
+    </div> --}}
+
+    <div class="productsPartner-header">
+      <h1>Monaca Product Partner</h1>
+      <div class="description">
+        <div class="text">
+          With the support of our valuable product partners, we assure full efficiency, security and best monetization for your applications.
+        </div>
+      </div>
+    </div>
+
+    <ul class="productsPartner-nav">
+      <li class="productsPartner-nav-item"><a href="#pp-backend">Backend</a></li>
+      <li class="productsPartner-nav-item"><a href="#pp-test">Test Support</a></li>
+      <li class="productsPartner-nav-item"><a href="#pp-ad">Utilities</a></li>
+      <li class="productsPartner-nav-item"><a href="#pp-analytics">Analysis</a></li>
+    </ul>
+    <div class="list-container">
+      <ul class="link-list">
+        <li><a href="#pp-backend"><i class="glyphicon glyphicon-chevron-down"></i> Backend</a></li>
+        <li><a href="#pp-test"><i class="glyphicon glyphicon-chevron-down"></i> Test Support</a></li>
+        <li><a href="#pp-ad"><i class="glyphicon glyphicon-chevron-down"></i> Utilities</a></li>
+        <li><a href="#pp-analytics"><i class="glyphicon glyphicon-chevron-down"></i> Analysis</a></li>
+      </ul>
     </div>
 
     <div class="list-contents">
@@ -50,12 +72,18 @@ viewport: width=1200px
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_kii.png" alt="Kii Cloud">
-            <a class="btn-gray-line" href="http://documentation.kii.com/en/starts/" target="_blank">More details</a>
+            <a class="btn-gray-line hide-tablet" href="http://documentation.kii.com/en/starts/" target="_blank">More details</a>
+            <a class="show-tablet" href="http://documentation.kii.com/en/starts/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Kii Cloud</h4>
               <p>Kii Corporation is focused on addressing the high-performance demands of innovation in the connected world with an end-to-end cloud platform optimized for the IoT.<br>Kii Cloud is an MBaaS (Mobile Backend as a Service) provided by Kii Corporation. MBaaS is a service that provides various server-side features for mobile application development with common APIs. By leveraging these APIs, you can develop your mobile applications without worrying about the server-side implementations and operations.</p>
+              <p class="show-mobile show-content">
+                Show More<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
@@ -73,12 +101,18 @@ viewport: width=1200px
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_remote_testkit.png" alt="Remote Testkit">
-            <a class="btn-gray-line" href="https://appkitbox.com/en/testkit/" target="_blank">More details</a>
+            <a class="btn-gray-line hide-tablet" href="https://appkitbox.com/en/testkit/" target="_blank">More details</a>
+            <a class="show-tablet" href="https://appkitbox.com/en/testkit/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Remote Testkit</h4>
               <p>Remote TestKit is a cloud-based testing solution for mobile app development.<br>Remote gives you access to actual smart devices in an NTT secure data center reduces costs and improves app quality and productivity.<br>Using Remote TestKit makes it possible to significantly reduce the cost of purchasing and managing devices in order to develop and test mobile apps and the Web sites. With over 350 popular models to choose from, you can use Remote TestKit to remotely rent a wide variety of Android and iOS smartphones from around the world.</p>
+              <p class="show-mobile show-content">
+                Show More<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
@@ -97,12 +131,18 @@ viewport: width=1200px
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_dolby.png" alt="Dolby Developers" style="margin: -30px 0 0;">
-            <a class="btn-gray-line" href="http://developer.dolby.com/tools-tech.aspx" target="_blank">More details</a>
+            <a class="btn-gray-line hide-tablet" href="http://developer.dolby.com/tools-tech.aspx" target="_blank">More details</a>
+            <a class="show-tablet" href="http://developer.dolby.com/tools-tech.aspx" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Dolby Developer</h4>
               <p>Dolby Developer has come up with some cool solutions for App and Game Developers.<br>Dolby has worked with many OEMs to integrate Dolby Audio supporting Dolby Digital Plus into phones and tablets. As a developer you can deliver Dolby premium quality content by including the content into your Web projects using Dolby Audio API and Dolby Audio Plug-in for Cordova. </p>
+              <p class="show-mobile show-content">
+                Show More<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
@@ -123,12 +163,18 @@ viewport: width=1200px
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_repro.png" alt="Repro" style="margin: -30px 0 0;">
-            <a class="btn-gray-line" href="https://repro.io/" target="_blank">More details</a>
+            <a class="btn-gray-line hide-tablet" href="https://repro.io/" target="_blank">More details</a>
+            <a class="show-tablet" href="https://repro.io/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Repro</h4>
               <p>Repro is a growth platform for mobile apps empowered by the following features: easy and flexible analytics, qualitative study of users with play-by-play user action videos, marketing strategies such as push notification or in-app message, and so much more.<br>Try the Repro SDK for iOS and Android. It's simple and free.</p>
+              <p class="show-mobile show-content">
+                Show More<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
@@ -141,12 +187,18 @@ viewport: width=1200px
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_amazon.png" alt="Amazon Mobile Analytics">
-            <a class="btn-gray-line" href="https://aws.amazon.com/mobileanalytics/" target="_blank">More details</a>
+            <a class="btn-gray-line hide-tablet" href="https://aws.amazon.com/mobileanalytics/" target="_blank">More details</a>
+            <a class="show-tablet" href="https://aws.amazon.com/mobileanalytics/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Amazon Mobile Analytics</h4>
               <p>With Amazon Mobile Analytics, you can measure app usage and app revenue.<br>By tracking key trends such as new vs. returning users, app revenue, user retention, and custom in-app behavior events, you can make data-driven decisions to increase engagement and monetization for your app.<br>You can view key charts in the Mobile Analytics console and automatically export your app event data to Amazon S3 and Amazon Redshift to run custom analysis. </p>
+              <p class="show-mobile show-content">
+                Show More<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
@@ -159,12 +211,18 @@ viewport: width=1200px
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_appsflyer.png" alt="AppsFlyer Company">
-            <a class="btn-gray-line" href="https://www.appsflyer.com/overview/" target="_blank">More details</a>
+            <a class="btn-gray-line hide-tablet" href="https://www.appsflyer.com/overview/" target="_blank">More details</a>
+            <a class="show-tablet" href="https://www.appsflyer.com/overview/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>AppsFlyer</h4>
               <p>AppsFlyer is the market leader in mobile advertising attribution and analytics, helping marketers to pinpoint their targeting, optimize their ad spend and boost their ROI.<br>AppsFlyer allows users to monitor and track application installations, downloads, and conversions. The AppsFlyer API allows developers to access and integrate the functionality of AppsFlyer with other applications.<br>For more information please contact AppsFlyer.</p>
+              <p class="show-mobile show-content">
+                Show More<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
@@ -179,6 +237,7 @@ viewport: width=1200px
       <p class="btn-btt" style="margin-bottom: 250px;"><a href="#header-top">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
     </div>
   </section>
+</div>
 
   <script src="/js/jquery.smoothScroll.js"></script>
 
@@ -204,6 +263,17 @@ viewport: width=1200px
        $('div.product-partner span#github-published_at').hide();
      }
    });
+
+      // Show more button on mobile
+      $(".show-content").click(function(){
+        $(this).prev().toggleClass("non-hidden");
+        const img = $(this).clone().children()
+        $(this).text(function(i, text){
+          return text.includes("Show More") ? "Show Less" : "Show More";
+        })
+        $(this).append(img);
+        $(this).children('img').toggleClass("rotated");
+      });
    });
   </script>
 

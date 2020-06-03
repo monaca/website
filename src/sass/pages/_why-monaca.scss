@@ -1,13 +1,68 @@
 body.why-monaca {
-
     .header {
         margin: auto;
         height: 435px;
-        max-width: 1366px;
-        background-image: url("/img/why-monaca/background_why_monaca.svg");
         background-color: #75B8FF;
-        background-position: center center;
-        background-repeat: no-repeat;
+        position: relative;
+
+        &:before, &:after {
+            display: block;
+            height: 100%;
+            content: '';
+            background-color: transparent;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            z-index: 0;
+            opacity: 1;
+        }
+
+        &:before {
+            background-image: url(/img/why-monaca/background-left.svg);
+            left: -10%;
+            top: 0vw;
+            width: 30%;
+            @media screen and (max-width: 1200px) {
+                opacity: 0.5;
+            }
+
+            @media screen and (max-width: 1100px) {
+                left: -15%;
+                width: 35%;
+            }
+
+            @media screen and (max-width: 650px){
+                left: -30%;
+                width: 57%;
+                top: 10%;
+                transform: scale(0.8);
+            }
+
+            @media screen and (max-width: 320px){
+                left: -40%;
+                width: 70%;
+            }
+
+            @media screen and (max-width: 280px){
+                display: none;
+            }
+        }
+
+        &:after {
+            background-image: url(/img/why-monaca/background-right.svg);
+            width: 30%;
+            right: -10%;
+            top: 0vw;
+            @media screen and (max-width: 1200px) {
+                opacity: 0.5;
+            }
+            @media screen and (max-width: 650px){
+                top: -10%;
+            }
+            @media screen and (max-width: 280px){
+                display: none;
+            }
+        }
 
         display: flex;
         flex-direction: column;
@@ -18,7 +73,7 @@ body.why-monaca {
             margin: 0;
             padding: 0;
             font-size: 60px;
-            font-weight: normal;
+            font-weight: 300;
             line-height: 102px;
             color: #FFFFFF;
         }
@@ -28,6 +83,8 @@ body.why-monaca {
             padding: 0;
             font-size: 30px;
             line-height: 51px;
+            font-weight: 300;
+            opacity: 0.6;
             color: #FFFFFF;
         }
 
@@ -64,7 +121,7 @@ body.why-monaca {
             padding: 0;
             font-size: 40px;
             line-height: 48px;
-            font-weight: normal;
+            font-weight: 300;
             color: #444444;
             text-align: center;
         }
@@ -83,6 +140,7 @@ body.why-monaca {
             padding: 0;
             font-size: 20px;
             line-height: 30px;
+            font-weight: 300;
             color: #6F777F;
             text-align: left;
         }
@@ -200,7 +258,7 @@ body.why-monaca {
                 grid-area: title;
                 font-size: 25px;
                 line-height: 30px;
-                font-weight: normal;
+                font-weight: 300;
                 color: #444444;
                 text-align: center;
             }
@@ -233,6 +291,7 @@ body.why-monaca {
                 line-height: 31.2px;
                 position: relative;
                 top: 50px;
+                font-weight: 600;
             }
 
             p {
@@ -240,7 +299,8 @@ body.why-monaca {
                 line-height: 24px;
                 padding-left: 10px;
                 padding-right: 10px;
-
+                font-weight: 300;
+                opacity: 1;
             }
 
             p.small-screen {
@@ -258,10 +318,6 @@ body.why-monaca {
 
     // In smartphone mode (iphone 6/7/8 plus)
     @media screen and (max-width: 414px) {
-        .header {
-            background-image: url("/img/why-monaca/background_sp.svg");
-            max-width: 320px;
-        }
 
         .why-panel {
             row-gap: 30px;

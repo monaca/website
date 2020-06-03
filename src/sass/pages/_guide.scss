@@ -41,13 +41,23 @@ body.guide-of-study {
         font-size: 20px;
         line-height: 30px;
         text-align: left;
+
+          @media screen and (max-width: 1060px) {
+              font-size: 17px;
+              max-width: 550px;
+          }
+
+          @media screen and (max-width: 700px) {
+              font-size: 14px;
+              max-width: 450px;
+          }
       }
 
-      @media screen and (max-width: $break-lg) {
+      @media screen and (max-width: 1060px) {
         flex-direction: column-reverse;
         width: 100%;
-        padding-left: 5%;
-        padding-right: 5%;
+        padding-left: 15%;
+        padding-right: 15%;
       }
     }
   }
@@ -56,17 +66,18 @@ body.guide-of-study {
     padding: 0;
     margin-top: 30px;
     margin-bottom: 100px;
-    min-width: 1000px;
-    width: 1000px;
+    //min-width: 1000px;
+    //width: 1000px;
     display: flex;
     justify-content: center;
     @media screen and(max-width: 1060px) {
-      min-width: 690px;
-      width: 690px;
+      //min-width: 690px;
+      //width: 690px;
     }
     @media screen and(max-width: 700px) {
-      min-width: 310px;
-      width: 310px;
+      //min-width: 310px;
+      //width: 310px;
+      display: block;
     }
   }
 
@@ -80,7 +91,9 @@ body.guide-of-study {
       grid-template-columns: repeat(2, 300px);
     }
     @media screen and(max-width: 700px) {
-      grid-template-columns: repeat(1, 275px);
+      //grid-template-columns: repeat(1, 275px);
+      display: block;
+      margin: 0 10%;
     }
 
     a.links-list-item {
@@ -96,9 +109,9 @@ body.guide-of-study {
       box-shadow: 0 3px 6px rgba(0, 0, 0, .1);
 
       @media screen and(max-width: 700px) {
-        padding-top: 30px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 30px 10px;
+        height: auto;
+        margin-bottom: 20px;
       }
 
       &:hover {
@@ -106,9 +119,9 @@ body.guide-of-study {
       }
 
       img {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 10px;
+        width: auto;
+        height: 45px;
+        margin-bottom: 20px;
       }
 
       h1 {
@@ -117,6 +130,11 @@ body.guide-of-study {
         line-height: 26px;
         height: 52px;
         margin-bottom: 10px;
+
+          @media screen and(max-width: 700px) {
+              height: auto;
+              margin-bottom: 20px;
+          }
 
         span {
           font-size: 12px;
