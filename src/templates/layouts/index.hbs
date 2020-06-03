@@ -46,20 +46,24 @@
 {{/if}}
 
   {{!-- script elements --}}
+  {{!-- (Note: Inline scripts cannot be deferred and evaluated immediately) --}}
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-526750-32"></script>
-  <script defer>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'UA-526750-32', { 'optimize_id': 'GTM-N5QB3FJ'});
+      gtag('config', 'UA-526750-32', { 'optimize_id': 'GTM-N5QB3FJ'});
+    }
   </script>
   <script defer src="https://use.typekit.net/tky7gag.js"></script>
   <script defer>try{Typekit.load({ async: true });}catch(e){}</script>
   <script defer src="/js/jquery.min.js"></script>
   <script defer src="/js/bootstrap.min.js"></script>
   <script defer src="/js/all.js"></script>
-  <script defer>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
           navigator.serviceWorker.register('/sw.js',).then(function(registration) {
@@ -80,6 +84,7 @@
           window.LANG = "en";
       {{/is}}
       window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
+    }
   </script>
 {{#is language "ja"}}
   <script defer src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
