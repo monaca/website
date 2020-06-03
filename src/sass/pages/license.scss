@@ -1,0 +1,40 @@
+@import "../constants";
+
+body.license {
+    .container {
+        width: 932px;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 100px;
+        @media screen and (max-width: 932px) {
+            width: 100%;
+        }
+        > p {
+            text-align: left;
+        }
+        > h1 {
+            color: #2472b3;
+            font-size: 36px;
+            line-height: 36px;
+            margin: 0 0 50px;
+            text-align: left;
+            padding: 0;
+            @media screen and (max-width: $break) {
+                box-sizing: border-box;
+                font-size: 32px;
+            }
+        }
+        > h2 {
+            color: #2472b3;
+            font-size: 25px;
+            line-height: 25px;
+            margin: 0 0 30px;
+            text-align: left;
+            padding: 0;
+            @media screen and (max-width: $break) {
+                box-sizing: border-box;
+                font-size: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,339 @@
+@import "../constants";
+
+body.enterprise {
+    .keyvisual {
+        background: url(../img/enterprise/keyvisual.jpg) no-repeat center bottom, #1e212e;
+        color: #ffffff;
+        padding-bottom: 0px;
+        position: relative;
+
+        @media screen and (max-width: $break-xs) {
+            padding-bottom: 30px;
+        }
+
+        h1 {
+            font-weight: 400;
+            margin-bottom: 10px;
+            padding-top: 160px;
+            text-align: left;
+
+            img {
+                vertical-align: 4px;
+            }
+
+        }
+
+        p {
+            font-size: 20px;
+            text-align: left;
+            width: 420px;
+            word-break: break-all;
+        }
+
+        .btns {
+            text-align: left;
+            padding: 50px 0 0;
+
+            @media screen and (max-width: $break) {
+                padding-top: 30px;
+                text-align: center;
+            }
+
+            .btn {
+                padding: 0 20px;
+                margin: 0 15px 20px 0;
+            }
+
+        }
+
+    }
+
+    section.plugins {
+        img.img-encrypt,
+        img.img-storage {
+            display: inline-block;
+            margin-bottom: 100px;
+
+            @media screen and (max-width: $break-xs) {
+                margin-bottom: 60px;
+            }
+
+        }
+
+    }
+
+}
+
+html[lang="en"] body.enterprise {
+    .keyvisual {
+
+        h1 {
+            line-height: 1.2;
+            margin-bottom: 10px;
+            padding-top: 110px;
+
+            @media screen and (max-width: $break-xs) {
+                padding-top: 100px;
+                font-size: 30px;
+            }
+        }
+
+        .btn {
+             min-width: 200px;
+        }
+
+    }
+
+}
+
+html[lang="ja"] body.enterprise {
+    .keyvisual {
+
+        h1 {
+            line-height: 1.4;
+            margin-bottom: 10px;
+            padding-top: 160px;
+
+            @media screen and (max-width: $break-xs) {
+                padding-top: 90px;
+                font-size: 38px;
+                text-align: center;
+            }
+
+            div {
+                font-size: 42px;
+
+                @media screen and (max-width: $break-xs) {
+                    font-size: 21px;
+                    margin-bottom: 8px;
+                }
+            }
+
+        }
+
+        .btn {
+            min-width: 267px;
+
+            @media screen and (max-width: $break) {
+                width: 100%;
+            }
+        }
+
+    }
+
+    section.security {
+        @media screen and(max-width: 430px) {
+            padding: 90px 0 40px;
+        }
+
+        .box-1 {
+            padding: 24px 5% 16px;
+        }
+    }
+
+    section.plugins {
+
+        div.content-visual {
+            margin: auto;
+            position: relative;
+            width: 50%;
+
+            &.phone-display {
+                width: 585px;
+
+                @media screen and(max-width: 430px) {
+                    width: 270px;
+                }
+
+                > iframe.ios {
+                    position: absolute;
+                    transform: scale(0.5);
+                    transform-origin: 0 0;
+                    top: 49px;
+                    left: 333px;
+                    width: 360px;
+                    height: 643px;
+
+                    @media screen and(max-width: 430px) {
+                        display: none;
+                    }
+
+                }
+
+                > iframe.android {
+                    position: absolute;
+                    transform: scale(0.5);
+                    transform-origin: 0 0;
+                    top: 40px;
+                    left: 66px;
+                    width: 388px;
+                    height: 686px;
+
+                    @media screen and(max-width: 430px) {
+                        display: none;
+                    }
+
+                }
+
+                .phones01 {
+                    position: relative;
+                    z-index: -10;
+
+                    @media screen and(max-width: 430px) {
+                        display: none;
+                    }
+
+                }
+
+                .phones02 {
+                    display: none;
+
+                    @media screen and(max-width: 430px) {
+                        position: relative;
+                        z-index: -10;
+                        display: block;
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+    section, .box-uservoices {
+        h1 {
+            font-size: 32px;
+            line-height: 1.6;
+            @media screen and(max-width: 430px) {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .column-2,
+    .column-3,
+    .column-5 {
+        .box-1 {
+            background-color: inherit;
+            border: none;
+
+            h2 {
+                color: #333;
+                font-size: 21px;
+            }
+
+            p {
+                width: 322px;
+
+                @media screen and(max-width: 430px) {
+                    width: auto;
+                }
+                
+            }
+        }
+    }
+
+    .column-2,
+    .column-3 {
+        .box-1 {
+            img {
+                margin-bottom: 43px;
+
+                @media screen and(max-width: 430px) {
+                    margin-bottom: 24px;
+                }
+
+            }
+        }
+    }
+
+    .company-logos {
+        padding: 16px 0;
+
+        .box-1 {
+            margin-bottom: 0;
+            padding: 45px 0px 40px;
+
+            @media screen and(max-width: 430px) {
+                padding: 16px 0px 16px;
+            }
+
+        }
+
+    }
+
+    .for-enterprise {
+        background-color: #f5f9fb;
+        width: 100%;
+        padding: 80px 0 5px;
+
+        section {
+            padding: 0px;
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        p {
+            width: 254px;
+            text-align: center;
+        }
+
+        .box-1 {
+            margin-bottom: 0;
+            padding-bottom: 24px;
+        }
+
+    }
+
+    .inapp {
+        padding-bottom: 170px;
+    }
+
+    .box-uservoices {
+        li.flexion {
+            .uservoice-user {
+                padding:42px 0 0 80px;
+                background: url(../img/index/photo_flexion.png) no-repeat 5px 25px;
+                .uservoice-organization {
+                    @media screen and (min-width: 971px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        li.nijibox {
+            .uservoice-user {
+                padding:42px 0 0 80px;
+                background: url(../img/index/photo_nijibox.png) no-repeat 5px 25px;
+                .uservoice-name {
+                    @media screen and (min-width: 971px) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        li.jtrust {
+            .uservoice-user {
+                padding:42px 0 0 80px;
+                background: url(../img/index/photo_jtrust.png) no-repeat 5px 25px;
+            }
+        }
+
+    }
+
+    .box-partners {
+        border: none;
+    }
+
+    .btns .box-try {
+        padding: 0 0 30px;
+    }
+
+}
