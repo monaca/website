@@ -1,16 +1,7 @@
 @import "constants";
 @import "button";
 
-$menu-item-color: #fff;
-$nav-item-bright-color: #B3B3B3;
-$nav-item-dark-color: #718091;
-$nav-item-darker-color: #132C47;
-$logo-dark-color: #333333;
-$logo-blue-color: #0054AC;
-$small-header-bg: rgba($color: #0A6FD9, $alpha: 1);
 $header-transition: all .2s ease-out;
-$close-toggle-bg: #444;
-$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
 html[lang=en] .navbar {
     border-width: 0px;
