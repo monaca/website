@@ -337,6 +337,13 @@ html[lang=en] {
             }
         }
     }
+
+    // Override padding-top of main div (only when a specific class is set)
+    .main {
+        &.en-globalnav-shown {
+            padding-top: 50px;
+        }
+    }
 }
 
 #language-switch-container {

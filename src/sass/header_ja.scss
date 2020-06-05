@@ -940,6 +940,19 @@ html[lang=ja] {
             }
         }
     }
+
+    // Override padding-top of main div (only when a specific class is set)
+    .main {
+        &.ja-globalnav-shown {
+            padding-top: 66px;
+        }
+        &.ja-subnav-shown {
+            padding-top: 56px;
+        }
+        &.ja-globalnav-shown.ja-subnav-shown {
+            padding-top: #{66px + 56px};
+        }
+    }
 }
 
 #language-switch-container {
