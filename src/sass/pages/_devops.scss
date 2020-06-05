@@ -146,9 +146,16 @@ body.devops {
     }
 
     .keyvisual {
-        background: $background-gray;
+        background-image: url("/img/devops/keyvisual_devops.svg");
+        background-position: center -56px;
+
         h1 {
             text-align: center;
+            color: #44607E;
+            font-family: 'ITC Avant Garde Gothic Std', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Helvetica Neue", sans-serif;
+            font-size: 5em;
+            font-weight: bold;
+            padding-top: 170px;
 
             &.tablet-up {
                 padding-top: 200px;
@@ -170,9 +177,24 @@ body.devops {
     }
 
     #features {
+        padding-top: 0;
+        margin-top: -212px;
+
         p {
             margin-bottom: 70px;
         }
+
+        & > p {
+            max-width: 703px;
+            margin: auto;
+            margin-right: 56px;
+            margin-bottom: auto;
+        }
+
+        & > img {
+            margin-bottom: 19.5px;
+        }
+
         .feature {
             img {
                 display: block;
