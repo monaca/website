@@ -274,12 +274,14 @@ html[lang=ja] body.home {
         }
     }
 
-    .solution-detail__description {
-      p {
-        margin: 0;
-        font-size: 20px;
-        line-height: 30px;
-      }
+    .solution-detail {
+        .solution-detail__description {
+            p {
+                margin: 0;
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
     }
 
     .case-container {
