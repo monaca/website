@@ -8,123 +8,6 @@ html[lang=ja] body.home {
     background-position: calc(50% + 520px) calc(-42px);
     overflow-x: hidden;
 
-    $scroll-offset: 7%;
-
-    // This animation requires three same-content elements as follows:
-    // [  1  ][  2  ][  3  ]
-    //  33.3%  33.3%  33.3%
-    //        |      |
-    //        from   to
-    @keyframes logos-scroll {
-        from {
-            transform: translateX(#{-33.33333% + $scroll-offset});
-        }
-        to {
-            transform: translateX(#{-33.33333% * 2 + $scroll-offset});
-        }
-    }
-
-    .logos--pc {
-        @media screen and (max-width: 970px) {
-            display: none;
-        }
-        @media screen and (min-width: 971px) {
-            overflow: hidden;
-            background-color: white;
-            border-top: 1px solid #C7C5C2;
-            border-bottom: 1px solid #C7C5C2;
-            width: 100%;
-            height: 100px;
-            padding: 0;
-
-            > .logos--pc__wrapper {
-                animation: logos-scroll 40s infinite linear;
-    
-                display: inline-block;
-                box-sizing: border-box;
-                margin: 0 auto;
-                padding: 0;
-                white-space: nowrap;
-                overflow: hidden;
-                line-height: 0; // Prevent unexpected height
-
-                img {
-                    max-width: unset;
-
-                    position: relative;
-                    top: -1px;
-                }
-            }
-        }
-    }
-
-    .logos--sp {
-        @media screen and (max-width: 970px) {
-            overflow: hidden;
-            background-color: white;
-            border-top: 1px solid #C7C5C2;
-            border-bottom: 1px solid #C7C5C2;
-            width: 100%;
-            height: 56px;
-            padding: 0;
-
-            > .logos--sp__wrapper {
-                animation: logos-scroll 30s infinite linear;
-
-                display: inline-block;
-                box-sizing: border-box;
-                margin: 0 auto;
-                padding: 0;
-                white-space: nowrap;
-                overflow: hidden;
-                line-height: 0; // Prevent unexpected height
-    
-                img {
-                    max-width: unset;
-
-                    position: relative;
-                    top: -1px;
-                }
-            }
-        }
-        @media screen and (min-width: 971px) {
-            display: none;
-        }
-    }
-
-    .solution-detail__description {
-      p {
-        margin: 0;
-        font-size: 20px;
-        line-height: 30px;
-      }
-    }
-
-    .case-container {
-        background: #E3E3E3;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        flex-wrap: wrap;
-
-        .other_case_studies {
-            margin: 45px 0;
-            padding: 0;
-            font-size: 40px;
-            font-weight: normal;
-            width: 100%;
-        }
-
-        > a {
-            margin: 50px 0;
-            padding: 0;
-            font-size: 16px;
-            font-weight: normal;
-            width: 100%;
-            text-align: center;
-        }
-    }
-
     .landing-keyvisual {
         @include background(linear-gradient(to right, #56CCF2, #2F95ED));
         background-color: #2F95ED;
@@ -304,6 +187,123 @@ html[lang=ja] body.home {
                     }
                 }
             }
+        }
+    }
+
+    $scroll-offset: 7%;
+
+    // This animation requires three same-content elements as follows:
+    // [  1  ][  2  ][  3  ]
+    //  33.3%  33.3%  33.3%
+    //        |      |
+    //        from   to
+    @keyframes logos-scroll {
+        from {
+            transform: translateX(#{-33.33333% + $scroll-offset});
+        }
+        to {
+            transform: translateX(#{-33.33333% * 2 + $scroll-offset});
+        }
+    }
+
+    .logos--pc {
+        @media screen and (max-width: 970px) {
+            display: none;
+        }
+        @media screen and (min-width: 971px) {
+            overflow: hidden;
+            background-color: white;
+            border-top: 1px solid #C7C5C2;
+            border-bottom: 1px solid #C7C5C2;
+            width: 100%;
+            height: 100px;
+            padding: 0;
+
+            > .logos--pc__wrapper {
+                animation: logos-scroll 40s infinite linear;
+    
+                display: inline-block;
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                line-height: 0; // Prevent unexpected height
+
+                img {
+                    max-width: unset;
+
+                    position: relative;
+                    top: -1px;
+                }
+            }
+        }
+    }
+
+    .logos--sp {
+        @media screen and (max-width: 970px) {
+            overflow: hidden;
+            background-color: white;
+            border-top: 1px solid #C7C5C2;
+            border-bottom: 1px solid #C7C5C2;
+            width: 100%;
+            height: 56px;
+            padding: 0;
+
+            > .logos--sp__wrapper {
+                animation: logos-scroll 30s infinite linear;
+
+                display: inline-block;
+                box-sizing: border-box;
+                margin: 0 auto;
+                padding: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                line-height: 0; // Prevent unexpected height
+    
+                img {
+                    max-width: unset;
+
+                    position: relative;
+                    top: -1px;
+                }
+            }
+        }
+        @media screen and (min-width: 971px) {
+            display: none;
+        }
+    }
+
+    .solution-detail__description {
+      p {
+        margin: 0;
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+
+    .case-container {
+        background: #E3E3E3;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        flex-wrap: wrap;
+
+        .other_case_studies {
+            margin: 45px 0;
+            padding: 0;
+            font-size: 40px;
+            font-weight: normal;
+            width: 100%;
+        }
+
+        > a {
+            margin: 50px 0;
+            padding: 0;
+            font-size: 16px;
+            font-weight: normal;
+            width: 100%;
+            text-align: center;
         }
     }
 }
