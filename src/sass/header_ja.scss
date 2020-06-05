@@ -404,17 +404,15 @@ html[lang=ja] {
     }
     // Sidebar should be shown only when width >= 971px
     .ja-globalsidebar {
-        $extra-height: 50px;
+        $extra-height: 100px;
 
         z-index: 200;
         position: fixed;
         @media screen and (max-width: 970px) {
             top: 50px;
-            padding-bottom: calc(50px + #{$extra-height}); // Show whole part of globalsidebar when scrolling
         }
         @media screen and (min-width: 971px) {
             top: 66px;
-            padding-bottom: calc(66px + #{$extra-height}); // Show whole part of globalsidebar when scrolling
         }
         right: 0;
         width: 100%;
@@ -439,6 +437,7 @@ html[lang=ja] {
             box-sizing: border-box;
             margin: 0 22px;
             border-top: 1px solid #E6E6E6;
+            padding-bottom: $extra-height; // Show whole part of globalsidebar when scrolling
 
             > div.ja-globalsidebar__menu {
                 display: flex;
@@ -885,17 +884,15 @@ html[lang=ja] {
     }
     // Sidebar should be shown only when width >= 971px
     .ja-subsidebar {
-        $extra-height: 50px;
+        $extra-height: 200px;
 
         z-index: 50;
         position: fixed;
         @media screen and (max-width: 970px) {
             top: calc(50px + 56px);
-            padding-bottom: calc(50px + 56px + #{$extra-height}); // Show whole part of subsidebar when scrolling
         }
         @media screen and (min-width: 971px) {
             top: calc(66px + 56px);
-            padding-bottom: calc(66px + 56px + #{$extra-height}); // Show whole part of subsidebar when scrolling
         }
         right: 0;
         width: 100%;
@@ -923,6 +920,7 @@ html[lang=ja] {
             box-sizing: border-box;
             margin: 0 22px;
             border-top: 1px solid #E6E6E6;
+            padding-bottom: $extra-height; // Show whole part of globalsidebar when scrolling
 
             > div.ja-subsidebar__menu {
                 display: flex;
