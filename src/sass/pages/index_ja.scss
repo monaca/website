@@ -24,7 +24,7 @@ html[lang=ja] body.home {
         }
     }
 
-    .v2-section--logos-pc {
+    .logos--pc {
         @media screen and (max-width: 970px) {
             display: none;
         }
@@ -37,7 +37,7 @@ html[lang=ja] body.home {
             height: 100px;
             padding: 0;
 
-            > .v2-section--logos-pc__wrapper {
+            > .logos--pc__wrapper {
                 animation: logos-scroll 40s infinite linear;
     
                 display: inline-block;
@@ -58,7 +58,7 @@ html[lang=ja] body.home {
         }
     }
 
-    .v2-section--logos-sp {
+    .logos--sp {
         @media screen and (max-width: 970px) {
             overflow: hidden;
             background-color: white;
@@ -68,7 +68,7 @@ html[lang=ja] body.home {
             height: 56px;
             padding: 0;
 
-            > .v2-section--logos-sp__wrapper {
+            > .logos--sp__wrapper {
                 animation: logos-scroll 30s infinite linear;
 
                 display: inline-block;
