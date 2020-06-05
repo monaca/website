@@ -154,15 +154,28 @@ body.devops {
 
     .keyvisual {
         background-image: url("/img/devops/keyvisual_devops.svg");
-        background-position: center -56px;
+        background-position: 48% -18px;
+        background-repeat: no-repeat;
+        min-height: 200px;
+        background-size: 300%;
+
+        @include media-sm-up {
+            background-position: center -56px;
+            background-size: auto;
+        }
 
         h1 {
             text-align: center;
             color: #44607E;
             font-family: 'ITC Avant Garde Gothic Std', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Helvetica Neue", sans-serif;
-            font-size: 5em;
+            font-size: 2.5em;
             font-weight: bold;
-            padding-top: 170px;
+            padding-top: 18%;
+
+            @include media-sm-up {
+                font-size: 5em;
+                padding-top: 170px;
+            }
 
             &.tablet-up {
                 padding-top: 200px;
@@ -185,8 +198,17 @@ body.devops {
 
     #features {
         padding-top: 0;
-        margin-top: -212px;
         padding-bottom: 10px;
+        margin-top: -70px;
+        overflow-x: hidden;
+
+        @include media-sm-up {
+            margin-top: -24%;
+        }
+
+        @include media-md-up {
+            margin-top: -212px;
+        }
 
         p {
             margin-bottom: 70px;
@@ -201,6 +223,15 @@ body.devops {
 
         & > img {
             margin-bottom: 19.5px;
+            max-width: initial;
+            max-height: 80px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+
+            @include media-sm-up {
+                max-width: 100%;
+                max-height: none;
+            }
         }
 
         .feature {
