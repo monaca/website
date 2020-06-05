@@ -1,0 +1,138 @@
+@import "../constants";
+
+body.book-campaign {
+
+    .keyvisual {
+        background: url(/img/campaign/bg_keyvisual.jpg) no-repeat center center #2c92d3;
+        background-size: 120%;
+        height: auto;
+        padding-top: 50px;
+        @media screen and (min-width: 1300px) {
+            background-size: 1600px;
+        }
+        @media screen and (max-width: $break-xs) {
+            background: none transparent;
+            > div {
+                padding: 0;
+            }
+        }
+        h1 {
+            color: #fff;
+            position: relative;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 1070px;
+            .bg {
+                vertical-align: bottom;
+            }
+            .front {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
+    }
+
+    article.main {
+        section {
+            border-bottom: none;
+            padding-top: 0;
+        }
+        h2 {
+            border-bottom: 1px solid #dcdcdc;
+            font-size: 2.14rem;
+            margin-bottom: 27px;
+            padding-bottom: 12px;
+            position: relative;
+            text-align: left;
+            &:after {
+                background-color: #00a0e9;
+                content: "";
+                position: absolute;
+                bottom: -1px;
+                left: 0;
+                width: 60px;
+                height: 1px;
+            }
+        }
+        p {
+            margin-bottom: 20px;
+            /*width: auto;*/
+            max-width: initial;
+            max-width: none;
+        }
+        section.summary {
+            padding-top: 120px;
+            @media screen and (max-width: $break) {
+                padding-top: 40px;
+            }
+            .right {
+                overflow: hidden;
+            }
+            .alignleft {
+                float: left;
+                margin-right: 30px;
+                overflow: hidden;
+                @media screen and (max-width: $break-xs) {
+                    display: none;
+                }
+            }
+        }
+        .edu-items {
+            &:after { content: ""; clear: both; display: block; }
+            > li {
+                background-color: #f6f7f9;
+                float: left;
+                height: 330px;
+                padding: 40px;
+                text-align: left;
+                width: 48%;
+                &:first-child {
+                    margin-right: 4%;
+                }
+                @media screen and (min-width: $break-xs) and (max-width: $break) {
+                    height: 400px;
+                }
+                @media screen and (max-width: $break-xs) {
+                    float: none;
+                    height: auto;
+                    margin: 0 auto 50px;
+                    width: 90%;
+                }
+                h3 {
+                    color: #00a0e9;
+                    font-size: 1.28rem;
+                    margin-bottom: 30px;
+                }
+                dt,
+                li {
+                    color: #666;
+                    font-size: 1rem;
+                    text-indent: -1em;
+                    padding-left: 1em;
+                    margin-bottom: 4px;
+                    &:before {
+                        content: "・";
+                    }
+                }
+                dd {
+                    color: #666;
+                    font-size: 0.85rem;
+                    padding-left: 20px;
+                    margin-bottom: 15px;
+                    line-height: 1.6;
+                }
+            }
+        }
+        .btns {
+            padding-bottom: 100px;
+            .btn {
+                font-size: 20px;
+                height: 50px;
+                line-height: 50px;
+                min-width: 225px;
+            }
+        }
+    }
+}
