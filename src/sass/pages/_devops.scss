@@ -162,6 +162,7 @@ body.devops {
         @include media-sm-up {
             background-position: center -56px;
             background-size: auto;
+            height: 713px;
         }
 
         h1 {
@@ -203,11 +204,11 @@ body.devops {
         overflow-x: hidden;
 
         @include media-sm-up {
-            margin-top: -24%;
+            margin-top: -40%;
         }
 
         @include media-md-up {
-            margin-top: -212px;
+            margin-top: -392px;
         }
 
         p {
@@ -217,8 +218,12 @@ body.devops {
         & > p {
             max-width: 703px;
             margin: auto;
-            margin-right: 56px;
-            margin-bottom: auto;
+            margin-bottom: 32px;
+
+            @include media-md-up {
+                margin-right: 56px;
+                margin-bottom: auto;
+            }
         }
 
         & > img {
@@ -379,6 +384,11 @@ body.devops {
             .subtitle, p {
                 color: $text-dark-gray;
                 text-align: left;
+                padding: 0 5%;
+
+                @include media-sm-up {
+                   padding: 0;
+                }
             }
 
             .subtitle {
