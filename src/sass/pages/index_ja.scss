@@ -361,12 +361,93 @@ html[lang=ja] body.home {
     }
 
     .solution-detail {
-        .solution-detail__description {
+        margin: 0 auto;
+        padding: 0 32px 62px;
+        background-repeat: no-repeat;
+        color: #444444;
+        &.top {
+            padding-top: 98px;
+            padding-bottom: 145px;
+            background-image: url('/img/index/bg_concierge.svg');
+            background-position: calc(50% + 234px) calc(190px);
+        }
+        &.platform {
+            padding-bottom: 62px;
+            background-image: url('/img/index/bg_dc.svg');
+            background-position: calc(50% + 283px) calc(150px);
+        }
+        &.support {
+            padding-bottom: 170px;
+            background-image: url('/img/index/bg_ds.svg');
+            background-position: calc(50% + 317px) calc(168px);
+        }
+        &.devops {
+            padding-bottom: 125px;
+            background-image: url('/img/index/bg_do.svg');
+            background-position: calc(50% + 234px) calc(168px);
+        }
+        &.education {
+            padding-bottom: 182px;
+            background-image: url('/img/index/bg_ed.svg');
+            background-position: calc(50% + 235px) calc(170px);
+        }
+        
+        > .solution-detail__title {
+            font-size: 20px;
+            font-weight: normal;
+            line-height: 25px;
+            background-repeat: no-repeat;
+            background-position: center top;
+            padding: 40px 0 11px 0;
+        }
+        &.platform > .solution-detail__title {
+            color: #0051A4;
+            background-image: url('/img/index/icn_dc.svg');
+        }
+        &.support > .solution-detail__title {
+            color: #E25629;
+            background-image: url('/img/index/icn_ds.svg');
+        }
+        &.devops > .solution-detail__title {
+            color: #1492D5;
+            background-image: url('/img/index/icn_do.svg');
+        }
+        &.education > .solution-detail__title {
+            color: #3E892B;
+            background-image: url('/img/index/icn_ed.svg');
+            padding-bottom: 13px;
+        }
+
+        > .solution-detail__abstract {
+            font-size: 40px;
+            font-weight: normal;
+        }
+
+        > .solution-detail__description {
+            margin: 0 auto;
+            box-sizing: content-box;
+            padding: 43px 531px 0 0;
+            width: 429px;
+            text-align: left;
+            color: #6F777F;
             p {
                 margin: 0;
                 font-size: 20px;
                 line-height: 30px;
             }
+            a {
+                font-size: 20px;
+                color: #47A3E6;
+            }
+        }
+        &.top > .solution-detail__description {
+            padding-bottom: 15px;
+        }
+        &.platform > .solution-detail__description {
+            padding-bottom: 15px;
+        }
+        &.education > .solution-detail__description {
+            padding-bottom: 15px;
         }
     }
 
