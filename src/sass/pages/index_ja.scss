@@ -297,6 +297,7 @@ html[lang=ja] body.home {
         @media screen and (min-width: 971px) {
             overflow: hidden;
             background-color: white;
+            box-sizing: border-box;
             border-top: 1px solid #C7C5C2;
             border-bottom: 1px solid #C7C5C2;
             width: 100%;
@@ -328,6 +329,7 @@ html[lang=ja] body.home {
         @media screen and (max-width: 970px) {
             overflow: hidden;
             background-color: white;
+            box-sizing: border-box;
             border-top: 1px solid #C7C5C2;
             border-bottom: 1px solid #C7C5C2;
             width: 100%;
