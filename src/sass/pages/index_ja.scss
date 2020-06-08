@@ -17,7 +17,7 @@ html[lang=ja] body.home {
         padding: 0;
         overflow: hidden;
 
-        @media screen and (min-width: $break-xs + 1px) {
+        @media screen and (min-width: 971px) {
             &:before {
                 content: '';
                 display: block;
@@ -83,12 +83,12 @@ html[lang=ja] body.home {
             z-index: 1;
             position: relative;
             margin: 0 auto;
-            @media screen and (max-width: 970px) {
+            @media screen and (max-width: 640px) {
                 width: 60vw;
                 padding-top: 32px;
                 font-size: 30px;
             }
-            @media screen and (min-width: 971px) {
+            @media screen and (min-width: 641px) {
                 padding-top: 92px;
                 font-size: 60px;
             }
@@ -98,10 +98,10 @@ html[lang=ja] body.home {
 
         > .solutions {
             display: flex;
-            @media screen and (max-width: 970px) {
+            @media screen and (max-width: 640px) {
                 flex-flow: column nowrap;
             }
-            @media screen and (min-width: 971px) {
+            @media screen and (min-width: 641px) {
                 flex-flow: row nowrap;
                 max-width: 1024px;
                 margin: 0 auto;
@@ -110,7 +110,7 @@ html[lang=ja] body.home {
 
             > .solution {
                 position: relative;
-                @media screen and (max-width: 970px) {
+                @media screen and (max-width: 640px) {
                     &.platform {
                         height: 254px;
                     }
@@ -121,7 +121,7 @@ html[lang=ja] body.home {
                         height: 273px;
                     }
                 }
-                @media screen and (min-width: 971px) {
+                @media screen and (min-width: 641px) {
                     flex: 1;
                     height: 454px;
                 }
@@ -133,33 +133,33 @@ html[lang=ja] body.home {
                 }
                 &.platform > .solution__background > svg {
                     position: relative;
-                    @media screen and (max-width: 970px) {
+                    @media screen and (max-width: 640px) {
                         left: -65px;
                         top: 22px;
                     }
-                    @media screen and (min-width: 971px) {
+                    @media screen and (min-width: 641px) {
                         left: 4px;
                         top: 68px;
                     }
                 }
                 &.support > .solution__background > svg {
                     position: relative;
-                    @media screen and (max-width: 970px) {
+                    @media screen and (max-width: 640px) {
                         left: -89px;
                         top: 47px;
                     }
-                    @media screen and (min-width: 971px) {
+                    @media screen and (min-width: 641px) {
                         left: 7px;
                         top: 62px;
                     }
                 }
                 &.devops > .solution__background > svg {
                     position: relative;
-                    @media screen and (max-width: 970px) {
+                    @media screen and (max-width: 640px) {
                         left: -88px;
                         top: 7px;
                     }
-                    @media screen and (min-width: 971px) {
+                    @media screen and (min-width: 641px) {
                         left: -1px;
                         top: 48px;
                     }
@@ -174,30 +174,30 @@ html[lang=ja] body.home {
                 &.platform > .solution__icon {
                     background-image: url(/img/index/keyvisual_icn_dc.svg);
                     background-size: 26px;
-                    @media screen and (max-width: 970px) {
+                    @media screen and (max-width: 640px) {
                         background-position: calc(50% - 75px) calc(156px);
                     }
-                    @media screen and (min-width: 971px) {
+                    @media screen and (min-width: 641px) {
                         background-position: calc(50% - -1px) calc(209px);
                     }
                 }
                 &.support > .solution__icon {
                     background-image: url(/img/index/keyvisual_icn_ds.svg);
                     background-size: 26px;
-                    @media screen and (max-width: 970px) {
+                    @media screen and (max-width: 640px) {
                         background-position: calc(50% - 75px) calc(180px);
                     }
-                    @media screen and (min-width: 971px) {
+                    @media screen and (min-width: 641px) {
                         background-position: calc(50% - 1px) calc(209px);
                     }
                 }
                 &.devops > .solution__icon {
                     background-image: url(/img/index/keyvisual_icn_do.svg);
                     background-size: 26px;
-                    @media screen and (max-width: 970px) {
+                    @media screen and (max-width: 640px) {
                         background-position: calc(50% - 75px) calc(156px);
                     }
-                    @media screen and (min-width: 971px) {
+                    @media screen and (min-width: 641px) {
                         background-position: calc(50% - -1px) calc(209px);
                     }
                 }
@@ -205,13 +205,13 @@ html[lang=ja] body.home {
                 > .solution__title {
                     font-weight: bold;
                     color: white;
-                    @media screen and (max-width: 970px) {
+                    @media screen and (max-width: 640px) {
                         padding: 29px 20px 0 calc(50% + 5px);
                         text-align: left;
                         font-size: 16px;
                         line-height: 21px;
                     }
-                    @media screen and (min-width: 971px) {
+                    @media screen and (min-width: 641px) {
                         margin: 0 auto;
                         padding-top: 248px;
                         width: 214px;
@@ -226,12 +226,12 @@ html[lang=ja] body.home {
                     font-weight: normal;
                     color: white;
                     opacity: 0.8;
-                    @media screen and (max-width: 970px) {
+                    @media screen and (max-width: 640px) {
                         padding: 8px 20px 0 calc(50% + 5px);
                         font-size: 13px;
                         line-height: 20px;
                     }
-                    @media screen and (min-width: 971px) {
+                    @media screen and (min-width: 641px) {
                         margin: 0 auto;
                         padding-top: 10px;
                         width: 214px;
@@ -247,12 +247,12 @@ html[lang=ja] body.home {
                     align-items: center;
 
                     position: absolute;
-                    @media screen and (max-width: 970px) {
+                    @media screen and (max-width: 640px) {
                         left: calc((100% - 276px)/2);
                         width: 276px;
                         bottom: 19px;
                     }
-                    @media screen and (min-width: 971px) {
+                    @media screen and (min-width: 641px) {
                         left: calc((100% - 200px)/2);
                         width: 200px;
                         bottom: 23px;
