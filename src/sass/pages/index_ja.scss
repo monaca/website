@@ -438,6 +438,12 @@ html[lang=ja] body.home {
             a {
                 font-size: 20px;
                 color: #47A3E6;
+                text-decoration: none;
+                transition: filter 0.3s ease-out;
+                filter: brightness(100%);
+                &:hover, &:active {
+                    filter: brightness(80%);
+                }
             }
         }
         &.top > .solution-detail__description {
