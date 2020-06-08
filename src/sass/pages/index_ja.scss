@@ -3,9 +3,6 @@
 @import "../constants";
 
 html[lang=ja] body.home {
-    background-image: url('/img/index/bg_index.svg');
-    background-repeat: repeat-y;
-    background-position: calc(50% + 520px) calc(-42px);
     overflow-x: hidden;
 
     .landing-keyvisual {
@@ -358,6 +355,12 @@ html[lang=ja] body.home {
         @media screen and (min-width: 971px) {
             display: none;
         }
+    }
+
+    .solution-details-container {
+        background-image: url('/img/index/bg_index.svg');
+        background-repeat: repeat-y;
+        background-position: calc(50% + 520px) calc(-842px);
     }
 
     .solution-detail {
