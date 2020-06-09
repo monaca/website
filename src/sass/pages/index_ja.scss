@@ -578,4 +578,55 @@ html[lang=ja] body.home {
             }
         }
     }
+
+    .cases {
+        padding-top: 54px;
+
+        .cases__title {
+            padding-bottom: 27px;
+            font-size: 20px;
+        }
+
+        .cases__list {
+            .case {
+                height: 247px;
+    
+                .case__image {
+                    img {
+                        width: 276px;
+                        object-fit: contain;
+                    }
+                }
+                .case__name {
+                    padding-top: 9px;
+                }
+            }
+        }
+
+        .cases__button-container {
+            padding: 18px 0 50px;
+
+            a.cases__button {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+
+                margin: 0 auto;
+                border-radius: 4px;
+                width: 220px;
+                height: 40px;
+                background-color: #468FFF;
+
+                font-size: 16px;
+                font-weight: bold;
+                text-decoration: none;
+                color: white;
+                transition: background-color 0.3s ease-out;
+                &:hover, &:active {
+                    background-color: #2071C7;
+                }
+            }
+        }
+    }
 }
