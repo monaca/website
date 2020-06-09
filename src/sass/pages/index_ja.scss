@@ -437,7 +437,7 @@ html[lang=ja] body.home {
                 background-size: 214px;
             }
             @media screen and (min-width: 641px) {
-                padding-bottom: 182px;
+                padding-bottom: 223px;
                 background-position: calc(50% + 235px) calc(75%);
             }
         }
@@ -548,11 +548,11 @@ html[lang=ja] body.home {
                     }
                     svg {
                         @media screen and (max-width: 640px) {
-                        width: 14px;
+                            width: 14px;
+                        }
                     }
                 }
             }
-        }
         }
         &.top > .solution-detail__description {
             padding-bottom: 15px;
@@ -582,25 +582,91 @@ html[lang=ja] body.home {
     }
 
     .cases {
-        padding-top: 54px;
+        @media screen and (max-width: 640px) {
+            padding-top: 54px;
+            background-color: transparent;
+        }
+        @media screen and (min-width: 641px) {
+            padding-top: 74px;
+            background-color: #E3E3E3;
+        }
 
         .cases__title {
             padding-bottom: 27px;
-            font-size: 20px;
+            color: #444444;
+            @media screen and (max-width: 640px) {
+                font-size: 20px;
+            }
+            @media screen and (min-width: 641px) {
+                font-size: 40px;
+            }
         }
 
         .cases__list {
+            display: flex;
+            @media screen and (max-width: 640px) {
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+            @media screen and (min-width: 641px) and (max-width: 970px) {
+                flex-flow: column nowrap;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+                padding-top: 17px;
+            }
+            @media screen and (min-width: 971px) {
+                flex-flow: row nowrap;
+                justify-content: space-around;
+                align-items: flex-start;
+                margin: 0 auto;
+                padding-top: 17px;
+                max-width: 990px;
+            }
+
             .case {
-                height: 247px;
+                @media screen and (max-width: 640px) {
+                    height: 247px;
+                }
+                @media screen and (min-width: 641px) and (max-width: 970px) {
+                    height: 280px;
+                }
+                @media screen and (min-width: 971px) {
+                    flex: 1;
+                }
     
                 .case__image {
                     img {
-                        width: 276px;
+                        @media screen and (max-width: 640px) {
+                            width: 276px;
+                        }
+                        @media screen and (min-width: 641px) {
+                            width: 300px;
+                        }
                         object-fit: contain;
                     }
                 }
                 .case__name {
                     padding-top: 9px;
+                    color: #6F777F;
+                    a {
+                        color: #6F777F;
+                        text-decoration: none;
+                        transition: filter 0.3s ease-out;
+                        filter: brightness(100%);
+                        &:hover, &:active {
+                            filter: brightness(80%);
+                        }
+                    }
+                    @media screen and (max-width: 640px) {
+                    }
+                    @media screen and (min-width: 641px) {
+                        margin: 0 auto;
+                        width: 300px;
+                        text-align: left;
+                        font-size: 20px;
+                    }
                 }
             }
         }
@@ -609,24 +675,47 @@ html[lang=ja] body.home {
             padding: 18px 0 50px;
 
             a.cases__button {
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: center;
-                align-items: center;
+                @media screen and (max-width: 640px) {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: center;
+                    align-items: center;
+    
+                    margin: 0 auto;
+                    border-radius: 4px;
+                    width: 220px;
+                    height: 40px;
+                    background-color: #468FFF;
+    
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: white;
+                    transition: background-color 0.3s ease-out;
+                    &:hover, &:active {
+                        background-color: #2071C7;
+                    }
 
-                margin: 0 auto;
-                border-radius: 4px;
-                width: 220px;
-                height: 40px;
-                background-color: #468FFF;
+                    svg {
+                        display: none;
+                    }
+                }
+                @media screen and (min-width: 641px) {
+                    font-size: 16px;
+                    color: #0054AC;
+                    text-decoration: none;
+                    transition: filter 0.3s ease-out;
+                    filter: brightness(100%);
+                    &:hover, &:active {
+                        filter: brightness(80%);
+                    }
 
-                font-size: 16px;
-                font-weight: bold;
-                text-decoration: none;
-                color: white;
-                transition: background-color 0.3s ease-out;
-                &:hover, &:active {
-                    background-color: #2071C7;
+                    svg {
+                        padding-left: 7px;
+                        g {
+                            fill: #0054AC;
+                        }
+                    }
                 }
             }
         }
