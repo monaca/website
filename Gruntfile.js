@@ -335,6 +335,7 @@ module.exports = function (grunt) {
                 src: [
                     'js/bootstrap.min.js',
                     'css/bootstrap.min.css',
+                    'fonts/**/*',
                 ],
                 dest: '<%= config.dist %>/'
             },
