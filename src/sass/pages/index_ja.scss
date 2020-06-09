@@ -547,10 +547,12 @@ html[lang=ja] body.home {
                         }
                     }
                     svg {
+                        @media screen and (max-width: 640px) {
                         width: 14px;
                     }
                 }
             }
+        }
         }
         &.top > .solution-detail__description {
             padding-bottom: 15px;
