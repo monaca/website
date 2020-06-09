@@ -28,7 +28,12 @@ html[lang=ja] {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 66px;
+        @media screen and (max-width: 970px) {
+            height: 50px;
+        }
+        @media screen and (min-width: 971px) {
+            height: 66px;
+        }
         background-color: #fff;
 
         > div.ja-globalnav__logo {
@@ -120,7 +125,12 @@ html[lang=ja] {
                 > div.ja-globalnav__menu-title {
                     a {
                         display: inline-block;
-                        line-height: 66px;
+                        @media screen and (max-width: 970px) {
+                            line-height: 50px;
+                        }
+                        @media screen and (min-width: 971px) {
+                            line-height: 66px;
+                        }
                         color: $nav-item-dark-color;
                         white-space: nowrap;
                         transition: $header-transition;
@@ -394,11 +404,17 @@ html[lang=ja] {
     }
     // Sidebar should be shown only when width >= 971px
     .ja-globalsidebar {
+        $extra-height: 100px;
+
         z-index: 200;
         position: fixed;
-        top: 66px;
+        @media screen and (max-width: 970px) {
+            top: 50px;
+        }
+        @media screen and (min-width: 971px) {
+            top: 66px;
+        }
         right: 0;
-        padding-bottom: calc(66px + 50px); // Show whole part of globalsidebar when scrolling
         width: 100%;
         height: 100%;
         background-color: white;
@@ -421,6 +437,7 @@ html[lang=ja] {
             box-sizing: border-box;
             margin: 0 22px;
             border-top: 1px solid #E6E6E6;
+            padding-bottom: $extra-height; // Show whole part of globalsidebar when scrolling
 
             > div.ja-globalsidebar__menu {
                 display: flex;
@@ -474,7 +491,12 @@ html[lang=ja] {
     .ja-subnav {
         z-index: 100;
         position: fixed;
-        top: 66px;
+        @media screen and (max-width: 970px) {
+            top: 50px;
+        }
+        @media screen and (min-width: 971px) {
+            top: 66px;
+        }
         right: 0;
         left: 0;
         display: flex;
@@ -862,11 +884,17 @@ html[lang=ja] {
     }
     // Sidebar should be shown only when width >= 971px
     .ja-subsidebar {
+        $extra-height: 200px;
+
         z-index: 50;
         position: fixed;
-        top: 122px;
+        @media screen and (max-width: 970px) {
+            top: calc(50px + 56px);
+        }
+        @media screen and (min-width: 971px) {
+            top: calc(66px + 56px);
+        }
         right: 0;
-        padding-bottom: calc(122px + 50px); // Show whole part of subsidebar when scrolling
         width: 100%;
         height: 100%;
         background-color: white;
@@ -892,6 +920,7 @@ html[lang=ja] {
             box-sizing: border-box;
             margin: 0 22px;
             border-top: 1px solid #E6E6E6;
+            padding-bottom: $extra-height; // Show whole part of globalsidebar when scrolling
 
             > div.ja-subsidebar__menu {
                 display: flex;
@@ -940,58 +969,27 @@ html[lang=ja] {
             }
         }
     }
-}
 
-#language-switch-container {
-    z-index: 9;
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0, 0, 0, 0.1);
-
-    #language-switch {
-        width: 536px;
-        margin: 200px auto 0;
-        padding: 32px;
-        color: white;
-        background-color: #3c4758;
-        z-index: 10;
-        font-size: 20px;
-        @media screen and (max-width: $break) {
-            width: 92%;
-            box-sizing: border-box;
-            padding: 32px percentage(30px/640px);
+    // Override padding-top of main div (only when a specific class is set)
+    .main {
+        &.ja-globalnav-shown {
+            @media screen and (max-width: 970px) {
+                padding-top: 50px;
+            }
+            @media screen and (min-width: 971px) {
+                padding-top: 66px;
+            }
+        }
+        &.ja-subnav-shown {
+            padding-top: 56px;
+        }
+        &.ja-globalnav-shown.ja-subnav-shown {
+            @media screen and (max-width: 970px) {
+                padding-top: #{50px + 56px};
+            }
+            @media screen and (min-width: 971px) {
+                padding-top: #{66px + 56px};
+            }
         }
     }
-
-    a.btn-lang-switch {
-        @extend %flat-btn;
-        color: white;
-        background-color: #468fff;
-        border: none;
-        font-weight: 600;
-        height: 45px;
-        font-size: 20px;
-        line-height: 46px;
-        &:hover {
-            opacity: 0.8;
-        }
-    }
-
-    p {
-        margin: 0 0 32px 0;
-    }
-
-    p.language-switch-button-container {
-        margin: 10px 0;
-        text-align: center;
-    }
-    .close {
-        float: right;
-        margin-top: -8px;
-        margin-right: -8px;
-    }
 }
-
