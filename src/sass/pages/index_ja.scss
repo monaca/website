@@ -371,6 +371,7 @@ html[lang=ja] body.home {
     }
 
     .solution-detail {
+        position: relative;
         margin: 0 auto;
         padding: 0 32px 62px;
         background-repeat: no-repeat;
@@ -441,7 +442,17 @@ html[lang=ja] body.home {
                 background-position: calc(50% + 235px) calc(75%);
             }
         }
-        
+
+        #platform, #support, #devops {
+            position: absolute;
+            @media screen and (max-width: 640px) {
+                top: -50px;
+            }
+            @media screen and (min-width: 641px) {
+                top: -100px;
+            }
+        }
+
         > .solution-detail__title {
             font-size: 20px;
             font-weight: normal;
