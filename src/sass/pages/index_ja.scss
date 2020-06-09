@@ -578,29 +578,4 @@ html[lang=ja] body.home {
             }
         }
     }
-
-    .case-container {
-        background: #E3E3E3;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        flex-wrap: wrap;
-
-        .other_case_studies {
-            margin: 45px 0;
-            padding: 0;
-            font-size: 40px;
-            font-weight: normal;
-            width: 100%;
-        }
-
-        > a {
-            margin: 50px 0;
-            padding: 0;
-            font-size: 16px;
-            font-weight: normal;
-            width: 100%;
-            text-align: center;
-        }
-    }
 }
