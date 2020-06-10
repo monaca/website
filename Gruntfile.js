@@ -84,6 +84,18 @@ module.exports = function (grunt) {
             }
         },
 
+        postcss: {
+            options: {
+                map: true,
+                processors: [
+                    require('autoprefixer')({ grid: true })
+                ]
+            },
+            dist: {
+                src: '<%= config.dist %>/css/**/*.css'
+            }
+        },
+
         watch: {
             options: {
                 livereload: {
@@ -564,6 +576,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-styledocco');
+    grunt.loadNpmTasks('grunt-postcss');
 
 
     function injectManifest() {
@@ -618,6 +631,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'sass:dist',
+        'postcss:dist',
         'concat',
         'copy',
         'uglify',
