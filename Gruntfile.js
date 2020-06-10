@@ -57,7 +57,7 @@ module.exports = function (grunt) {
         sass: {
             options: {
                 implementation: sass,
-                outputStyle: "compressed",
+                // outputStyle: "compressed",
                 sourceMap: true,
                 includePaths: require('node-bourbon').includePaths
             },
@@ -86,6 +86,7 @@ module.exports = function (grunt) {
 
         postcss: {
             options: {
+                diff: true,
                 map: true,
                 processors: [
                     require('autoprefixer')({ grid: true })
