@@ -91,6 +91,10 @@ $black: black;
 
 //CSS
 body.dev-support {
+    * {
+        box-sizing: border-box;
+    }
+
     p {
         color: $black;
     }
