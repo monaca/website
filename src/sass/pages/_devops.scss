@@ -107,6 +107,13 @@ $background-gray: #F0F0F0;
 
 //CSS
 body.devops {
+    .bold-font {
+        font-family: "Hiragino Kaku Gothic ProN W6", "Hiragino Sans", Meiryo, "Helvetica Neue", Arial, sans-serif;
+        color: $text-dark-gray;
+        line-height: 30px;
+
+    }
+
     p {
         color: $text-dark-gray;
         font-size: 20px;
@@ -146,9 +153,30 @@ body.devops {
     }
 
     .keyvisual {
-        background: $background-gray;
+        background-image: url("/img/devops/keyvisual_devops.svg");
+        background-position: 48% -18px;
+        background-repeat: no-repeat;
+        min-height: 200px;
+        background-size: 300%;
+
+        @include media-sm-up {
+            background-position: center -56px;
+            background-size: auto;
+            height: 713px;
+        }
+
         h1 {
             text-align: center;
+            color: #44607E;
+            font-family: 'ITC Avant Garde Gothic Std', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Helvetica Neue", sans-serif;
+            font-size: 2.5em;
+            font-weight: bold;
+            padding-top: 18%;
+
+            @include media-sm-up {
+                font-size: 5em;
+                padding-top: 170px;
+            }
 
             &.tablet-up {
                 padding-top: 200px;
@@ -170,13 +198,56 @@ body.devops {
     }
 
     #features {
+        padding-top: 0;
+        padding-bottom: 10px;
+        margin-top: -70px;
+        overflow-x: hidden;
+
+        @include media-sm-up {
+            margin-top: -40%;
+        }
+
+        @include media-md-up {
+            margin-top: -392px;
+        }
+
         p {
             margin-bottom: 70px;
         }
+
+        & > p {
+            max-width: 703px;
+            margin: auto;
+            margin-bottom: 32px;
+
+            @include media-md-up {
+                margin-right: 56px;
+                margin-bottom: auto;
+            }
+        }
+
+        & > img {
+            margin-bottom: 19.5px;
+            max-width: initial;
+            max-height: 80px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+
+            @include media-sm-up {
+                max-width: 100%;
+                max-height: none;
+            }
+        }
+
         .feature {
+            max-width: 600px;
+            margin: auto;
+
             img {
+                max-width: 400px;
                 display: block;
                 width: 100%;
+                margin: auto;
 
                 &.tablet-only {
                     display: none;
@@ -203,6 +274,7 @@ body.devops {
             .feature-desc {
                 color: $text-dark-gray;
                 font-size: 16px;
+                margin-bottom: 0;
             }
         }
     }
@@ -210,9 +282,10 @@ body.devops {
     #pipeline, #in-house-support {
         img {
             width: 100%;
+            max-width: 400px;
             margin-bottom: 20px;
 
-            @include media-sm-up {
+            @include media-md-up {
                 float: right;
                 margin-left: 64px;
                 width: 60%;
@@ -223,20 +296,67 @@ body.devops {
             font-size: 20px;
             word-break: break-all;
             color: $text-dark-gray;
-            padding-left: 15px;
-            padding-right: 15px;
             text-align: left;
+            padding: 0 5%;
 
-            @include media-sm-up {
-                padding-left: 0;
+            @include media-md-up {
+                max-width: 312px;
+                margin-bottom: 90px;
+                padding: 0;
             }
         }
     }
 
     #pipeline {
+        padding-bottom: 0;
+
+        img {
+            @include media-sm-up {
+                float: none;
+                margin-left: auto;
+                width: 100%;
+                max-width: 585px;
+            }
+
+            @include media-md-up {
+                max-width: 800px;
+                position: absolute;
+                margin-top: 32px;
+                right: 16px;
+            }
+        }
+
+        div {
+            margin: auto;
+            max-width: 600px;
+
+            @include media-md-up {
+                margin: 0;
+                max-width: 312px;
+                padding-bottom: 160px;
+            }
+        }
     }
 
     #in-house-support {
+        padding-bottom: 0;
+
+        img {
+            @include media-md-up {
+                margin-bottom: 0;
+            }
+        }
+
+        div {
+            margin: auto;
+            padding-bottom: 90px;
+            max-width: 600px;
+
+            @include media-md-up {
+                margin-bottom: 0;
+                margin: 0;
+            }
+        }
     }
 
     #case-study-wrapper {
@@ -245,6 +365,8 @@ body.devops {
 
         #case-study {
             overflow: hidden;
+            padding-bottom: 122px;
+            padding-top: 80px;
 
             img {
                 width: 100%;
@@ -262,10 +384,16 @@ body.devops {
             .subtitle, p {
                 color: $text-dark-gray;
                 text-align: left;
+                padding: 0 5%;
+
+                @include media-sm-up {
+                   padding: 0;
+                }
             }
 
             .subtitle {
-                margin-bottom: 25px;
+                font-size: 20px;
+                margin-bottom: 27px;
                 font-weight: bold;
             }
 
@@ -273,7 +401,7 @@ body.devops {
                 line-height: 23px;
                 font-size: 16px;
                 color: #0054ac;
-                background: url('/img/home/ico-arrow.png') no-repeat right;
+                background: url('/img/devops/icn_arrow_r.svg') no-repeat right;
                 background-position-y: 2px;
                 padding-right: 30px;
 
@@ -285,8 +413,13 @@ body.devops {
     }
 
     #pricing {
+        padding-bottom: 100px;
         h1 {
+            padding-top: 10px;
+            margin-bottom: 76px;
             color: #444444;
+            font-size: 30px;
+            font-family: "Hiragino Kaku Gothic ProN W6", "Hiragino Sans", Meiryo, "Helvetica Neue", Arial, sans-serif;
         }
         .options {
             color: $text-dark-gray;
@@ -316,6 +449,14 @@ body.devops {
                 .examples {}
             }
 
+            #ci-plan .option-title {
+                background-color: #47A3E6;
+            }
+
+            #support-plan .option-title {
+                background-color: #76BE60;
+            }
+
             .option {
                 border-radius: 5px;
                 overflow: hidden;
@@ -335,6 +476,7 @@ body.devops {
 
                 .option-title {
                     background-color: $background-gray;
+                    color: white;
                     display: block;
                     width: 100%;
                     text-align: center;
