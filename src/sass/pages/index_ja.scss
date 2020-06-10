@@ -128,7 +128,7 @@ html[lang=ja] body.home {
                     width: 100%;
                     height: 100%;
                 }
-                &.platform > .solution__background > svg {
+                &.platform > .solution__background > img {
                     position: relative;
                     @media screen and (max-width: 640px) {
                         left: -65px;
@@ -139,7 +139,7 @@ html[lang=ja] body.home {
                         top: 68px;
                     }
                 }
-                &.support > .solution__background > svg {
+                &.support > .solution__background > img {
                     position: relative;
                     @media screen and (max-width: 640px) {
                         left: -89px;
@@ -150,7 +150,7 @@ html[lang=ja] body.home {
                         top: 62px;
                     }
                 }
-                &.devops > .solution__background > svg {
+                &.devops > .solution__background > img {
                     position: relative;
                     @media screen and (max-width: 640px) {
                         left: -88px;
