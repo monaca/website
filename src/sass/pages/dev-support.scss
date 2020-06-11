@@ -1734,6 +1734,27 @@ body.dev-support {
                     margin-left: 0;
 
                     .table_item {
+                        &:nth-child(1) {
+                            grid-column: 1 / 2;
+                            grid-row: 1 / 2;
+                        }
+                        &:nth-child(2) {
+                            grid-column: 2 / 3;
+                            grid-row: 1 / 2;
+                        }
+                        &:nth-child(3) {
+                            grid-column: 1 / 2;
+                            grid-row: 2 / 3;
+                        }
+                        &:nth-child(4) {
+                            grid-column: 2 / 3;
+                            grid-row: 2 / 3;
+                        }
+                        &:nth-child(5) {
+                            grid-column: 1 / 2;
+                            grid-row: 3 / 4;
+                        }
+
                         width: 85%;
                         padding: 2%;
                         padding-bottom: 5%;
@@ -1783,6 +1804,27 @@ body.dev-support {
                     margin-left: 6%;
 
                     .table_item {
+                        &:nth-child(1) {
+                            grid-column: 1 / 2;
+                            grid-row: 1 / 2;
+                        }
+                        &:nth-child(2) {
+                            grid-column: 2 / 3;
+                            grid-row: 1 / 2;
+                        }
+                        &:nth-child(3) {
+                            grid-column: 1 / 2;
+                            grid-row: 2 / 3;
+                        }
+                        &:nth-child(4) {
+                            grid-column: 2 / 3;
+                            grid-row: 2 / 3;
+                        }
+                        &:nth-child(5) {
+                            grid-column: 1 / 2;
+                            grid-row: 3 / 4;
+                        }
+
                         width: 75%;
                         padding: 2%;
                         padding-bottom: 5%;
