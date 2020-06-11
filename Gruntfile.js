@@ -115,7 +115,7 @@ module.exports = function (grunt) {
             },
             sass: {
                 files: ['<%= config.src %>/**/*.scss'],
-                tasks: ['sass', 'copy:css'],
+                tasks: ['sass', 'postcss', 'copy:css'],
                 options: {
                     spawn: false
                 }
