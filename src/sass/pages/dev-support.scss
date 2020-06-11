@@ -1164,7 +1164,7 @@ body.dev-support {
 
                         .phase_num {
                             font-size: 41px;
-                            margin-block-end: unset;
+                            margin-bottom: 0;
                             margin-top: -8%;
                             @include font_nueve;
                         }
@@ -1175,7 +1175,7 @@ body.dev-support {
                         }
 
                         p {
-                            margin-block-end: unset;
+                            margin-bottom: 0;
                             color: white;
                         }
                     }
@@ -1204,7 +1204,7 @@ body.dev-support {
                         }
                         p {
                             padding-left: 10%;
-                            margin-block-end: unset;
+                            margin-bottom: 0;
                             @include gray_p;
                         }
                     }
