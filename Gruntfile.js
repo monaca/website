@@ -57,7 +57,7 @@ module.exports = function (grunt) {
         sass: {
             options: {
                 implementation: sass,
-                outputStyle: "compressed",
+                // outputStyle: "compressed",
                 sourceMap: true,
                 includePaths: require('node-bourbon').includePaths
             },
@@ -84,6 +84,19 @@ module.exports = function (grunt) {
             }
         },
 
+        postcss: {
+            options: {
+                diff: true,
+                map: true,
+                processors: [
+                    require('autoprefixer')({ grid: true })
+                ]
+            },
+            dist: {
+                src: '<%= config.dist %>/css/**/*.css'
+            }
+        },
+
         watch: {
             options: {
                 livereload: {
@@ -102,7 +115,7 @@ module.exports = function (grunt) {
             },
             sass: {
                 files: ['<%= config.src %>/**/*.scss'],
-                tasks: ['sass', 'copy:css'],
+                tasks: ['sass', 'postcss', 'copy:css'],
                 options: {
                     spawn: false
                 }
@@ -564,6 +577,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-styledocco');
+    grunt.loadNpmTasks('grunt-postcss');
 
 
     function injectManifest() {
@@ -618,6 +632,7 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'clean:dist',
         'sass:dist',
+        'postcss:dist',
         'concat',
         'copy',
         'uglify',

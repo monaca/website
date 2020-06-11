@@ -22,9 +22,13 @@
     "server:ja": "grunt server:ja",
     "server:en": "grunt server:en"
   },
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {
     "assemble-contrib-i18n": "^0.1.6",
     "assemble-middleware-sitemap": "^0.2.5",
+    "autoprefixer": "^9.8.0",
     "grunt": "^1.0.4",
     "grunt-assemble": "^0.4.0",
     "grunt-aws-s3": "^0.12.3",
@@ -39,6 +43,7 @@
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.1.0",
     "grunt-styledocco": "^0.3.0",
     "load-grunt-tasks": "^5.1.0",
