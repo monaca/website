@@ -1461,6 +1461,9 @@ body.dev-support {
         }
 
         .wrap_left {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+
             margin-top: 12%;
             h2 {
                 margin-left: 16%;
@@ -1495,6 +1498,11 @@ body.dev-support {
                     font-size: 20px;
                 }
             }
+        }
+
+        .training_img {
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
         }
 
         .training_wrap_mobile {
