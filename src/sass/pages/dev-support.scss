@@ -1146,6 +1146,9 @@ body.dev-support {
                     text-align: left;
 
                     .banner {
+                        grid-column: 1 / 2;
+                        grid-row: 1 / 2;
+
                         position: relative;
                         .title {
                             position: absolute;
@@ -1178,10 +1181,21 @@ body.dev-support {
                     }
 
                     .side_info {
+                        grid-column: 2 / 3;
+                        grid-row: 1 / 2;
+
                         display: grid;
                         grid-template-columns: 100%;
                         .mobile_title {
                             display: none;
+                        }
+                        .phase_0_info:nth-child(1) {
+                            grid-column: 1 / 2;
+                            grid-row: 1 / 2;
+                        }
+                        .phase_0_info:nth-child(2) {
+                            grid-column: 1 / 2;
+                            grid-row: 2 / 3;
                         }
                         h3 {
                             border-bottom: #c8cacc solid 1px;
