@@ -111,11 +111,11 @@ body.dev-support {
     h2 {
         @include h2-titles;
         @include margin-left-center;
-        text-align: start;
+        text-align: left;
     }
 
     h3 {
-        text-align: start;
+        text-align: left;
         @include h3-titles;
         margin-bottom: 1%;
         font-family: "Heebo", sans-serif;
@@ -200,7 +200,7 @@ body.dev-support {
             .title {
                 font-weight: bold;
                 border-bottom: solid #ffffff40 1px;
-                text-align: start;
+                text-align: left;
                 width: 90%;
                 margin-bottom: 1%;
                 color: white;
@@ -233,7 +233,7 @@ body.dev-support {
             }
 
             div {
-                text-align: start;
+                text-align: left;
                 font-size: 20px;
                 color: #ffffffbd;
 
@@ -485,7 +485,7 @@ body.dev-support {
                 .first {
                     font-size: 15px;
                     color: rgba(255, 255, 255, 0.71);
-                    text-align: start;
+                    text-align: left;
                     float: left;
                 }
 
@@ -600,7 +600,7 @@ body.dev-support {
                 .mobile_showcase_title {
                     display: block;
                     width: 85%;
-                    text-align: start;
+                    text-align: left;
                     margin: auto;
                     margin-bottom: 10%;
                 }
@@ -615,11 +615,11 @@ body.dev-support {
                         .first {
                             font-size: 4vw;
                             color: rgba(255, 255, 255, 0.71);
-                            text-align: start;
+                            text-align: left;
                         }
 
                         .second {
-                            text-align: start;
+                            text-align: left;
 
                             .num {
                                 color: white;
@@ -722,7 +722,7 @@ body.dev-support {
                 .mobile_showcase_title {
                     display: block;
                     width: 80%;
-                    text-align: start;
+                    text-align: left;
                     margin: auto;
                     margin-bottom: 9%;
                 }
@@ -736,11 +736,11 @@ body.dev-support {
                         .first {
                             font-size: 17px;
                             color: rgba(255, 255, 255, 0.71);
-                            text-align: start;
+                            text-align: left;
                         }
 
                         .second {
-                            text-align: start;
+                            text-align: left;
 
                             .num {
                                 color: white;
@@ -935,7 +935,7 @@ body.dev-support {
                 background-color: white;
                 width: 91%;
                 height: auto;
-                text-align: start;
+                text-align: left;
                 //margin-bottom: 0%;
                 border-radius: 5px;
                 -moz-box-shadow: 3px 3px 5px 6px #ccc;
@@ -1113,7 +1113,7 @@ body.dev-support {
                     display: grid;
                     grid-template-columns: 14% 86%;
                     margin-bottom: -4px;
-                    text-align: start;
+                    text-align: left;
 
                     .banner {
                         position: relative;
@@ -1425,7 +1425,7 @@ body.dev-support {
                 margin-top: 7%;
                 margin-left: 15%;
                 background: white;
-                text-align: start;
+                text-align: left;
                 padding: 6%;
                 width: 82%;
                 -moz-box-shadow: 3px 3px 5px 6px #ccc;
@@ -1633,7 +1633,7 @@ body.dev-support {
                         height: 144px;
                         margin: auto;
                         margin-top: 15%;
-                        text-align: start;
+                        text-align: left;
                         font-size: 16px;
                         color: #6f777f;
                     }
@@ -1833,7 +1833,7 @@ body.dev-support {
         }
 
         .prices_title {
-            text-align: start;
+            text-align: left;
             .title {
                 padding-bottom: 6%;
             }
@@ -1848,7 +1848,7 @@ body.dev-support {
             #price_categories {
                 width: 93%;
                 margin-top: 39px;
-                text-align: start;
+                text-align: left;
 
                 .table_categories {
                     color: #6f777fbd;
@@ -1873,7 +1873,7 @@ body.dev-support {
                 }
 
                 .title {
-                    text-align: start;
+                    text-align: left;
                 }
 
                 .content {
@@ -2325,7 +2325,7 @@ body.dev-support {
             color: #444444;
             margin-bottom: 1%;
             margin-top: 3%;
-            text-align: start;
+            text-align: left;
         }
 
         input,
