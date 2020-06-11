@@ -137,6 +137,7 @@ body.dev-support {
         overflow: hidden;
         z-index: 0;
         display: grid;
+        grid-template-columns: 100%;
         padding-bottom: 9%;
 
         p,
