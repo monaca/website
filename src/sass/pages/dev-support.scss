@@ -1149,6 +1149,7 @@ body.dev-support {
 
                     .side_info {
                         display: grid;
+                        grid-template-columns: 100%;
                         .mobile_title {
                             display: none;
                         }
