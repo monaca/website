@@ -1920,6 +1920,9 @@ body.dev-support {
             margin-left: 3%;
 
             #price_categories {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+
                 width: 93%;
                 margin-top: 39px;
                 text-align: left;
@@ -1935,6 +1938,23 @@ body.dev-support {
             }
 
             .prices_table_item {
+                &:nth-child(2) {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 2;
+                }
+                &:nth-child(3) {
+                    grid-column: 3 / 4;
+                    grid-row: 1 / 2;
+                }
+                &:nth-child(4) {
+                    grid-column: 4 / 5;
+                    grid-row: 1 / 2;
+                }
+                &:nth-child(5) {
+                    grid-column: 5 / 6;
+                    grid-row: 1 / 2;
+                }
+
                 background: white;
                 margin-right: 10%;
                 border-radius: 5px;
@@ -2017,6 +2037,31 @@ body.dev-support {
 
                 .row_3 {
                     padding-top: 50%;
+                }
+            }
+        }
+
+        .prices_title {
+            div {
+                &:nth-child(1) {
+                    grid-column: 1 / 2;
+                    grid-row: 1 / 2;
+                }
+                &:nth-child(2) {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 2;
+                }
+                &:nth-child(3) {
+                    grid-column: 3 / 4;
+                    grid-row: 1 / 2;
+                }
+                &:nth-child(4) {
+                    grid-column: 4 / 5;
+                    grid-row: 1 / 2;
+                }
+                &:nth-child(5) {
+                    grid-column: 5 / 6;
+                    grid-row: 1 / 2;
                 }
             }
         }
