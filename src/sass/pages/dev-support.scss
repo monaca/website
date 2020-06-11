@@ -148,6 +148,8 @@ body.dev-support {
         @include h1-titles;
 
         .wrap {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
             width: 77%;
             margin: auto;
             text-align: center;
@@ -207,6 +209,27 @@ body.dev-support {
             .content {
                 display: grid;
                 grid-template-columns: 32% 31% 27%;
+
+                div:nth-child(1) {
+                    grid-column: 1 / 2;
+                    grid-row: 1 / 2;
+                }
+                div:nth-child(2) {
+                    grid-column: 2 / 3;
+                    grid-row: 1 / 2;
+                }
+                div:nth-child(3) {
+                    grid-column: 3 / 4;
+                    grid-row: 1 / 2;
+                }
+                div:nth-child(4) {
+                    grid-column: 1 / 2;
+                    grid-row: 2 / 3;
+                }
+                div:nth-child(5) {
+                    grid-column: 2 / 3;
+                    grid-row: 2 / 3;
+                }
             }
 
             div {
