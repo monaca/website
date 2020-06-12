@@ -178,11 +178,6 @@ body.dev-support {
                     border-radius: 3px;
                     font-size: 15px;
                     font-weight: bold;
-                    transition: all 0.3s linear; /* vendorless fallback */
-                    -o-transition: all 0.3s linear; /* opera */
-                    -ms-transition: all 0.3s linear; /* IE 10 */
-                    -moz-transition: all 0.3s linear; /* Firefox */
-                    -webkit-transition: all 0.3s linear; /*safari and chrome */
                 }
 
                 button:hover {
@@ -2637,12 +2632,6 @@ body.dev-support {
             border-radius: 3px;
             font-size: 16px;
             font-weight: bold;
-
-            transition: all 0.3s linear; /* vendorless fallback */
-            -o-transition: all 0.3s linear; /* opera */
-            -ms-transition: all 0.3s linear; /* IE 10 */
-            -moz-transition: all 0.3s linear; /* Firefox */
-            -webkit-transition: all 0.3s linear; /*safari and chrome */
         }
 
         button:hover {
