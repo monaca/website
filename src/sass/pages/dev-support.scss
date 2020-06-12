@@ -150,54 +150,43 @@ body.dev-support {
         .wrap {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            width: 77%;
+            width: 100%;
             margin: auto;
             text-align: center;
 
-            max-width: 1024px;
-            margin-left: auto;
-            margin-right: auto;
-
             .wrap_keyvisual {
-                margin-top: 2%;
-                display: flex;
-                @include margin-left-center;
-    
-                .left {
-                    width: 50%;
-                    text-align: left;
+                position: relative;
+                text-align: left;
+                height: 368px;
+
+                max-width: 1024px;
+                margin-left: auto;
+                margin-right: auto;
+
+                button {
+                    background: transparent;
+                    color: white;
+                    border: white solid 1px;
                     margin-top: 6%;
-    
-                    button {
-                        background: transparent;
-                        color: white;
-                        border: white solid 1px;
-                        margin-top: 6%;
-                        padding: 1% 3% 1% 3%;
-                        border-radius: 3px;
-                        font-size: 15px;
-                        font-weight: bold;
-                    }
-    
-                    button:hover {
-                        background: #ffffff;
-                        color: #47a3e6;
-                        box-shadow: 0px 3px 12px 0px #494847;
-                    }
+                    padding: 1% 3% 1% 3%;
+                    border-radius: 3px;
+                    font-size: 15px;
+                    font-weight: bold;
                 }
-    
-                .right {
-                    width: 43.8%;
-    
-                    > img {
-                        transform: translateX(6.5px) translateY(-4.3px);
-                    }
+
+                button:hover {
+                    background: #ffffff;
+                    color: #47a3e6;
+                    box-shadow: 0px 3px 12px 0px #494847;
                 }
             }
     
             .characteristics {
                 color: white;
-                @include margin-left-center;
+
+                max-width: 1024px;
+                margin-left: auto;
+                margin-right: auto;
     
                 .title {
                     font-weight: bold;
@@ -256,33 +245,40 @@ body.dev-support {
 
                 .wrap_keyvisual {
                     display: block;
-                    margin-top: 0;
-                    margin-left: 0;
+                    height: 256px;
+                
 
-                    .left {
-                        text-align: center;
+                    text-align: center;
+                    width: 100%;
+
+                    .wrap_keyvisual_bg {
+                        position: absolute;
+                        top: -11px;
+                        right: 2px;
                         width: 100%;
-                        margin-top: unset;
-
-                        h1 {
-                            font-size: 20px;
-                            line-height: 26px;
-                        }
-
-                        button {
-                            position: fixed;
-                            @include phone-content-width;
-                            background: #fa6800;
-                            border: unset;
-                            padding: 3% 4% 3% 4%;
-                            top: 89%;
-                            left: 8%;
-                        }
+                        height: 100%;
+    
+                        background-image: url('/img/dev-support/bg_dev-support.svg');
+                        background-repeat: no-repeat;
+                        background-position: 50% 72px;
+                        background-size: 275px;
                     }
 
-                    .right {
-                        width: 100%;
-                        margin-top: 10%;
+                    h1 {
+                        position: relative;
+                        top: -8px;
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+
+                    button {
+                        position: fixed;
+                        @include phone-content-width;
+                        background: #fa6800;
+                        border: unset;
+                        padding: 3% 4% 3% 4%;
+                        top: 89%;
+                        left: 8%;
                     }
                 }
 
@@ -323,22 +319,17 @@ body.dev-support {
                 width: 90%;
 
                 .wrap_keyvisual {
-                    .left {
-                        margin-top: 11%;
-
-                        h1 {
-                            font-size: 2.6vw;
-                        }
-
-                        button {
-                            width: 65%;
-                            top: 81%;
-                            left: 18%;
-                        }
+                    .wrap_keyvisual_bg {
                     }
 
-                    .right {
-                        width: 70%;
+                    h1 {
+                        font-size: 2.6vw;
+                    }
+
+                    button {
+                        width: 65%;
+                        top: 81%;
+                        left: 18%;
                     }
                 }
 
@@ -364,9 +355,11 @@ body.dev-support {
 
             .wrap {
                 width: 90%;
+
                 .wrap_keyvisual {
-                    margin-top: 2%;
-                    margin-left: 5%;
+                    .wrap_keyvisual_bg {
+
+                    }
                 }
 
                 .characteristics {
@@ -387,17 +380,29 @@ body.dev-support {
 
         @include for-laptop {
             .wrap {
-                width: 90%;
-
                 .wrap_keyvisual {
-                    .left {
-                        h1 {
-                            font-size: 32px;
-                        }
+                    .wrap_keyvisual_bg {
+                        position: absolute;
+                        top: 36px;
+                        right: 32px;
+                        width: 500px;
+                        height: 500px;
     
-                        button {
-                            font-size: 17px;
-                        }
+                        background-image: url('/img/dev-support/bg_dev-support.svg');
+                        background-repeat: no-repeat;
+                        background-position: 100% 0;
+                        background-size: 529px;
+                    }
+
+                    h1 {
+                        padding-top: 99px;
+                        padding-left: 32px;
+                        font-size: 36px;
+                        line-height: 48px;
+                    }
+
+                    button {
+                        font-size: 17px;
                     }
                 }
     
