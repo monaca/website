@@ -859,19 +859,6 @@ body.dev-support {
             }
         }
 
-        @media (min-width: 630px) and (max-width: 767px) {
-            .showcase_content {
-                .horizontal_wrap {
-                    .horizontal_item {
-                        width: 55vw;
-                    }
-                    #last_item {
-                        margin-left: -9%;
-                    }
-                }
-            }
-        }
-
         @include for-tablet-only {
             @include fixing_width;
             .showcase_content {
