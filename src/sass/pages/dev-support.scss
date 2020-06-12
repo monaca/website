@@ -22,7 +22,7 @@
 }
 
 @mixin for-laptop {
-    @media (min-width: 1025px) and (max-device-width: 1320px) {
+    @media (min-width: 1025px) {
         @content;
     }
 }
