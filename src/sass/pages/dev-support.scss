@@ -190,8 +190,12 @@ body.dev-support {
 
             .right {
                 width: 43.8%;
+
+                > img {
+                    transform: translateX(6.5px) translateY(-4.3px);
                 }
             }
+        }
 
         .characteristics {
             color: white;
@@ -202,7 +206,6 @@ body.dev-support {
                 border-bottom: solid rgba(255, 255, 255, 0.251) 1px;
                 text-align: left;
                 width: 90%;
-                margin-bottom: 1%;
                 color: white;
             }
 
@@ -236,10 +239,10 @@ body.dev-support {
                 text-align: left;
                 font-size: 20px;
                 font-weight: normal;
-                color: rgba(255, 255, 255, 0.741);
+                color: rgba(255, 255, 255, 0.7);
 
                 p {
-                    color: rgba(255, 255, 255, 0.741);
+                    color: rgba(255, 255, 255, 0.7);
                 }
             }
         }
@@ -264,7 +267,7 @@ body.dev-support {
 
                         h1 {
                             font-size: 20px;
-                            line-height: 27px;
+                            line-height: 26px;
                         }
 
                         button {
@@ -286,7 +289,7 @@ body.dev-support {
 
                 .characteristics {
                     margin-left: 0;
-                    padding-top: 5px;
+                    padding-top: 7px;
 
                     .title {
                         text-align: center;
@@ -301,9 +304,9 @@ body.dev-support {
                         div {
                             display: flex;
                             font-size: 12px;
+                            line-height: 16px;
                             border-bottom: solid rgba(255, 255, 255, 0.251) 1px;
-                            padding-top: 3%;
-                            padding-bottom: 3%;
+                            padding: 6px 0;
                         }
                     }
 
@@ -620,18 +623,18 @@ body.dev-support {
                     width: 85%;
                     text-align: left;
                     margin: auto;
-                    margin-bottom: 10%;
+                    margin-bottom: 7%;
                 }
 
                 .mobile_showcase_headers {
-                    margin-left: 11%;
+                    margin-left: 9%;
                     font-size: 5vw;
 
                     .header {
                         display: inline-block;
 
                         .first {
-                            font-size: 4vw;
+                            font-size: 4.5vw;
                             color: rgba(255, 255, 255, 0.71);
                             text-align: left;
                         }
@@ -641,18 +644,19 @@ body.dev-support {
 
                             .num {
                                 color: white;
-                                font-size: 12vw;
+                                font-size: 13vw;
                                 @include font_nueve;
                             }
 
                             .text {
-                                font-size: 5vw;
+                                font-size: 6vw;
+                                font-weight: normal;
                                 color: rgba(255, 255, 255, 0.71);
                             }
                         }
                     }
                     #header1 {
-                        margin-right: 10%;
+                        margin-right: 12%;
                     }
                 }
 
@@ -960,7 +964,7 @@ body.dev-support {
                     grid-row: 1 / 2;
                 }
 
-                border: rgba(15, 25, 42, 0.11) solid 2px;
+                border: #EDEDED solid 1px;
                 padding: 7%;
                 padding-bottom: 47px;
                 background-color: white;
@@ -969,9 +973,7 @@ body.dev-support {
                 text-align: left;
                 //margin-bottom: 0%;
                 border-radius: 5px;
-                -moz-box-shadow: 3px 3px 5px 6px #ccc;
-                -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-                box-shadow: 0px 3px 10px 0px #ccc;
+                box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.1);
 
                 .num {
                     color: #47a3e6;
@@ -998,7 +1000,7 @@ body.dev-support {
                     @include h3-titles;
                     margin: 0;
                     text-align: center;
-                    padding: 5% 19% 5% 19%;
+                    padding: 5% 5%;
                 }
 
                 .card_wrap {
@@ -1271,12 +1273,12 @@ body.dev-support {
                             }
 
                             p {
-                                padding-left: 6%;
+                                padding-left: 10px;
                                 font-size: 4vw;
                             }
 
                             h3 {
-                                padding-left: 5%;
+                                padding-left: 10px;
                                 color: #444444;
                                 padding-bottom: 3%;
                                 font-size: 4vw;
@@ -1441,7 +1443,7 @@ body.dev-support {
             position: absolute;
             width: 130%;
             height: 21%;
-            bottom: 6%;
+            bottom: 7%;
             left: -5%;
             z-index: -1;
             background: #e8ebed 0 0 repeat;
@@ -1473,13 +1475,12 @@ body.dev-support {
             .card_info {
                 margin-top: 7%;
                 margin-left: 15%;
+                border: #EDEDED solid 1px;
                 background: white;
                 text-align: left;
                 padding: 6%;
                 width: 82%;
-                -moz-box-shadow: 3px 3px 5px 6px #ccc;
-                -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-                box-shadow: 0px 3px 10px 0px #ccc;
+                box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.1);
                 font-size: 16px;
                 color: #6f777f;
 
@@ -1681,13 +1682,12 @@ body.dev-support {
                         grid-row: 1 / 2;
                     }
 
+                    border: #EDEDED solid 1px;
                     background: white;
                     padding: 10%;
                     padding-bottom: 25%;
                     width: 95%;
-                    -moz-box-shadow: 3px 3px 5px 6px #ccc;
-                    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-                    box-shadow: 0px 3px 10px 0px #ccc;
+                    box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.1);
 
                     img {
                         width: 70%;
@@ -1998,12 +1998,11 @@ body.dev-support {
                     grid-row: 1 / 2;
                 }
 
+                border: #EDEDED solid 1px;
                 background: white;
                 margin-right: 10%;
                 border-radius: 5px;
-                -moz-box-shadow: 3px 3px 5px 6px #ccc;
-                -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-                box-shadow: 0px 3px 10px 0px #ccc;
+                box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.1);
 
                 .price_bold {
                     font-weight: bold;
@@ -2157,6 +2156,7 @@ body.dev-support {
                         overflow-x: scroll;
                         overflow-y: hidden;
                         white-space: nowrap;
+                        padding-bottom: 24px;
                         width: 75%;
 
                         .prices_title {
@@ -2336,15 +2336,14 @@ body.dev-support {
 
                 .logo_group {
                     margin: auto;
+                    border: #EDEDED solid 1px;
                     background: white;
                     display: grid;
                     grid-template-columns: 25% 25% 25% 25%;
                     padding: 5%;
                     padding-left: 2%;
                     padding-right: 2%;
-                    -moz-box-shadow: 3px 3px 5px 6px #ccc;
-                    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-                    box-shadow: 0px 3px 10px 0px #ccc;
+                    box-shadow: 0px 3px 13px rgba(0, 0, 0, 0.1);
 
                     > div {
                         &:nth-child(1) {
