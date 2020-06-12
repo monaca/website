@@ -190,8 +190,8 @@ body.dev-support {
 
             .right {
                 width: 43.8%;
+                }
             }
-        }
 
         .characteristics {
             color: white;
@@ -199,7 +199,7 @@ body.dev-support {
 
             .title {
                 font-weight: bold;
-                border-bottom: solid #ffffff40 1px;
+                border-bottom: solid rgba(255, 255, 255, 0.251) 1px;
                 text-align: left;
                 width: 90%;
                 margin-bottom: 1%;
@@ -235,10 +235,11 @@ body.dev-support {
             div {
                 text-align: left;
                 font-size: 20px;
-                color: #ffffffbd;
+                font-weight: normal;
+                color: rgba(255, 255, 255, 0.741);
 
                 p {
-                    color: #ffffffbd;
+                    color: rgba(255, 255, 255, 0.741);
                 }
             }
         }
@@ -280,12 +281,12 @@ body.dev-support {
                     .right {
                         width: 100%;
                         margin-top: 10%;
-                        margin-bottom: 5%;
                     }
                 }
 
                 .characteristics {
                     margin-left: 0;
+                    padding-top: 5px;
 
                     .title {
                         text-align: center;
@@ -300,7 +301,7 @@ body.dev-support {
                         div {
                             display: flex;
                             font-size: 12px;
-                            border-bottom: solid #ffffff40 1px;
+                            border-bottom: solid rgba(255, 255, 255, 0.251) 1px;
                             padding-top: 3%;
                             padding-bottom: 3%;
                         }
@@ -716,7 +717,7 @@ body.dev-support {
 
                 .divider_line {
                     display: block;
-                    border-bottom: #00000021 solid 1px;
+                    border-bottom: rgba(0, 0, 0, 0.129) solid 1px;
                     width: 85%;
                     margin: auto;
                     margin-top: 16%;
@@ -843,7 +844,7 @@ body.dev-support {
 
                 .divider_line {
                     display: block;
-                    border-bottom: #00000021 solid 1px;
+                    border-bottom: rgba(0, 0, 0, 0.129) solid 1px;
                     width: 85%;
                     margin: auto;
                     margin-top: 16%;
@@ -959,7 +960,7 @@ body.dev-support {
                     grid-row: 1 / 2;
                 }
 
-                border: #0f192a1c solid 2px;
+                border: rgba(15, 25, 42, 0.11) solid 2px;
                 padding: 7%;
                 padding-bottom: 47px;
                 background-color: white;
@@ -1970,8 +1971,8 @@ body.dev-support {
                 text-align: left;
 
                 .table_categories {
-                    color: #6f777fbd;
-                    border-top: #c3c2c282 solid 1.3px;
+                    color: rgba(111, 119, 127, 0.741);
+                    border-top: rgba(195, 194, 194, 0.51) solid 1.3px;
                     padding-top: 5%;
                     padding-bottom: 65%;
                     width: 95%;
@@ -2054,7 +2055,7 @@ body.dev-support {
                     padding-top: 65%;
                 }
                 #third_row {
-                    border-bottom: solid #cecece82 1px;
+                    border-bottom: solid rgba(206, 206, 206, 0.51) 1px;
                     padding-bottom: 10%;
                     padding-top: 10%;
                 }
@@ -2065,7 +2066,7 @@ body.dev-support {
 
                 .row_1,
                 .row_2 {
-                    border-bottom: solid #cdcdcda3 1px;
+                    border-bottom: solid rgba(205, 205, 205, 0.639) 1px;
                 }
 
                 .row_1 {
@@ -2143,7 +2144,7 @@ body.dev-support {
 
                         .table_categories {
                             color: #6f777f;
-                            border-top: #c3c2c282 solid 1.3px;
+                            border-top: rgba(195, 194, 194, 0.51) solid 1.3px;
                             padding-top: 10%;
                             padding-bottom: 122%;
                             width: 95%;
@@ -2213,7 +2214,7 @@ body.dev-support {
 
                         .table_categories {
                             color: #6f777f;
-                            border-top: #c3c2c282 solid 1.3px;
+                            border-top: rgba(195, 194, 194, 0.51) solid 1.3px;
                             padding-top: 10%;
                             padding-bottom: 78%;
                             width: 95%;
