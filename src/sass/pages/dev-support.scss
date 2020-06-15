@@ -125,13 +125,17 @@ body.dev-support {
         width: 6%;
     }
 
+    .main {
+        overflow: hidden;
+    }
+
     .keyvisual-mob-serv {
         position: relative;
-        overflow: hidden;
+        overflow: visible;
         z-index: 0;
         display: grid;
         grid-template-columns: 100%;
-        padding-bottom: 9%;
+        padding-bottom: 25px;
 
         p,
         h1 {
@@ -424,11 +428,11 @@ body.dev-support {
         position: absolute;
         width: 200%;
         height: 200%;
-        bottom: 17%;
+        bottom: 0;
         left: -50%;
         z-index: -1;
         background: #47a3e6 0 0 repeat;
-        transform: rotate(-5deg);
+        transform: rotate(-4.2deg);
 
         @include for-phone-only {
             width: 130%;
@@ -446,17 +450,16 @@ body.dev-support {
         }
 
         @include for-laptop {
-            bottom: 11%;
+            bottom: 10px;
         }
     }
 
     .showcase {
         color: white;
-        padding-top: 15%;
+        padding-top: 53px;
         //padding-bottom: 5%;
         position: relative;
-        overflow: hidden;
-        margin-top: -17%;
+        overflow: visible;
 
         a {
             text-decoration: inherit; /* no underline */
@@ -468,7 +471,7 @@ body.dev-support {
             width: 68%;
             margin: auto;
             font-weight: bold;
-            margin-top: 2%;
+            margin-top: 0;
 
             max-width: 960px;
             margin-left: auto;
@@ -902,13 +905,13 @@ body.dev-support {
     .showcase::before {
         content: "";
         position: absolute;
-        width: 130%;
-        height: 70%;
-        bottom: 45%;
-        left: -5%;
+        top: 0;
+        left: -10%;
+        width: 120%;
+        height: 280px;
         z-index: -1;
         background: #2c6ea8 0 0 repeat;
-        transform: rotate(-5deg);
+        transform: rotate(-4.2deg);
 
         @include for-phone-only {
             height: 70%;
@@ -922,7 +925,8 @@ body.dev-support {
         }
 
         @include for-laptop {
-            bottom: 43%;
+            // bottom: 43%;
+            top: -88px;
         }
     }
 
