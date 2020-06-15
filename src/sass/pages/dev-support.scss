@@ -218,6 +218,7 @@ body.dev-support {
                 div {
                     text-align: left;
                     font-size: 20px;
+                    line-height: 26px;
                     font-weight: normal;
                     color: rgba(255, 255, 255, 0.9);
     
@@ -401,11 +402,17 @@ body.dev-support {
     
                 .characteristics {
                     .title {
+                        padding-top: 4px;
+                        padding-bottom: 7px;
                         width: 93.4%;
+                        font-size: 14px;
+                        line-height: 14px;
                     }
     
                     .content {
                         grid-template-columns: 35% 35% 25%;
+                        height: 154px;
+                        padding-top: 13px;
                     }
                 }
             }
