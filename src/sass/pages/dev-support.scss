@@ -485,6 +485,73 @@ body.dev-support {
                 display: none;
             }
 
+            .pc_showcase_stats {
+                display: none;
+                @include for-laptop {
+                    display: flex;
+                }
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                box-sizing: content-box;
+                padding-top: 27px;
+                height: 114px;
+
+                > .pc_showcase_stats_item {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    white-space: nowrap;
+                    &:nth-child(2) {
+                        margin-left: 5.7%;
+                    }
+                    &:last-child {
+                        padding-top: 10px;
+                        padding-right: 3px;
+                    }
+
+                    .pc_showcase_stats_title {
+                        font-size: 15px;
+                        color: rgba(255, 255, 255, 0.71);
+                        text-align: left;
+                    }
+
+                    .pc_showcase_stats_description {
+                        position: relative;
+                        top: -24px;
+                        left: 11px;
+
+                        .num {
+                            color: white;
+                            font-size: 80px;
+                            @include font_nueve;
+                        }
+
+                        .text {
+                            font-size: 25px;
+                            line-height: 33px;
+                            letter-spacing: -0.1em;
+                            color: rgba(255, 255, 255, 0.71);
+                        }
+                    }
+
+                    a {
+                        color: white;
+                        font-size: 16px;
+                        font-weight: normal;
+
+                        .arrow {
+                            width: 18px;
+                        }
+                    }
+                }
+
+                > .pc_showcase_stats_spacer {
+                    flex: 1;
+                }
+            }
+
             .wrap {
                 display: grid;
                 grid-template-columns: 30% 30% 25% 25%;
@@ -513,30 +580,6 @@ body.dev-support {
                 width: 100%;
                 float: left;
                 padding-bottom: 169px;
-
-                .first {
-                    font-size: 15px;
-                    color: rgba(255, 255, 255, 0.71);
-                    text-align: left;
-                    float: left;
-                }
-
-                .second {
-                    float: left;
-                    margin-top: -11%;
-                    margin-left: 5%;
-
-                    .num {
-                        color: white;
-                        font-size: 80px;
-                        @include font_nueve;
-                    }
-
-                    .text {
-                        font-size: 25px;
-                        color: rgba(255, 255, 255, 0.71);
-                    }
-                }
 
                 .showcase_img {
                     cursor: pointer;
@@ -598,17 +641,6 @@ body.dev-support {
                         left: 55%;
                     }
                     left: 17%;
-                }
-
-                #last_link {
-                    font-size: 16px;
-                    color: white;
-                    color: rgba(255, 255, 255, 0.71);
-                    margin-left: -33%;
-
-                    .arrow {
-                        width: 9%;
-                    }
                 }
             }
         }
@@ -908,7 +940,7 @@ body.dev-support {
         top: 0;
         left: -10%;
         width: 120%;
-        height: 280px;
+        height: 329px;
         z-index: -1;
         background: #2c6ea8 0 0 repeat;
         transform: rotate(-4.2deg);
