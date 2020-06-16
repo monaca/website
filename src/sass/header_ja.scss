@@ -2,6 +2,7 @@
 @import "button";
 
 $menu-item-color: #fff;
+$menu-title-login-color: #47A3E6;
 $nav-item-bright-color: #B3B3B3;
 $nav-item-dark-color: #718091;
 $nav-item-darker-color: #132C47;
@@ -140,6 +141,9 @@ html[lang=ja] {
                 
                         &:hover, &:focus {
                             color: $nav-item-darker-color;
+                        }
+                        &.login {
+                            color: $menu-title-login-color;
                         }
                     }
 
