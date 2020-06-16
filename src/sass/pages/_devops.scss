@@ -152,33 +152,43 @@ body.devops {
     }
 
     .keyvisual {
-        background-image: url("/img/devops/keyvisual_devops.svg");
-        background-position: 48% -18px;
-        background-repeat: no-repeat;
+        background: url("/img/devops/keyvisual_devops.svg") no-repeat center center;
+        background-size: cover;
         min-height: 200px;
-        background-size: 300%;
+        padding-bottom: 20%;
 
-        @include media-sm-up {
-            background-position: center -56px;
-            background-size: auto;
-            height: 713px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        font-family: 'ITC Avant Garde Gothic Std', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Helvetica Neue", sans-serif;
+
+        @media screen and (max-width: $break) {
+            height: 300px;
+        }
+    
+        .text-center-sub {
+            text-align: center;
+            color: #44607E;
+            font-size: 1em;
+            font-weight: bold;
+
+            @include media-sm-up {
+                font-size: 1.5em;
+            }
         }
 
         h1 {
             text-align: center;
             color: #44607E;
-            font-family: 'ITC Avant Garde Gothic Std', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Helvetica Neue", sans-serif;
-            font-size: 2.5em;
+            font-size: 1.5em;
             font-weight: bold;
-            padding-top: 18%;
 
             @include media-sm-up {
-                font-size: 5em;
-                padding-top: 170px;
+                font-size: 3em;
             }
 
             &.tablet-up {
-                padding-top: 200px;
                 display: none;
                 @include media-sm-up {
                     display: block;
@@ -186,8 +196,6 @@ body.devops {
             }
 
             &.phone-only {
-                padding-top: 85px;
-                padding-bottom: 85px;
                 color: $text-dark-gray;
                 @include media-sm-up {
                     display: none;
@@ -196,31 +204,24 @@ body.devops {
         }
     }
 
-    .main-desc {
-      color: $text-dark-gray;
-      font-size: 17px;
-      margin: 15px 0;
-      max-width: none;
-      line-height: 1.4;
+    #overview {
+        margin-top: -25%;
+        padding-top: 0;
+        padding-bottom: 10px;
+        overflow-x: hidden;
+
+        .main-desc {
+            color: $text-dark-gray;
+            font-size: 17px;
+            margin: 40px 0 15px 0;
+            max-width: none;
+            line-height: 1.4;
+          }
     }
 
     #features {
-        padding-top: 0;
-        padding-bottom: 10px;
-        margin-top: -70px;
-        overflow-x: hidden;
-
-        @include media-sm-up {
-            margin-top: -40%;
-        }
-
-        @include media-md-up {
-            margin-top: -392px;
-        }
-
-        p {
-            margin-bottom: 70px;
-        }
+        padding-top: 40px;
+        padding-bottom: 0;
 
         & > p {
             max-width: 703px;
@@ -251,9 +252,9 @@ body.devops {
             margin: auto;
 
             img {
-                max-width: 400px;
+                max-width: 300px;
                 display: block;
-                width: 100%;
+                width: 90%;
                 margin: auto;
 
                 &.tablet-only {
@@ -296,7 +297,7 @@ body.devops {
                 float: right;
                 margin-left: 64px;
                 width: 60%;
-                max-width: 585px;
+                max-width: 400px;
             }
         }
         div {
@@ -326,7 +327,7 @@ body.devops {
             }
 
             @include media-md-up {
-                max-width: 800px;
+                max-width: 600px;
                 position: absolute;
                 margin-top: 32px;
                 right: 16px;
@@ -340,7 +341,7 @@ body.devops {
             @include media-md-up {
                 margin: 0;
                 max-width: 312px;
-                padding-bottom: 160px;
+                padding-bottom: 100px;
             }
         }
     }
