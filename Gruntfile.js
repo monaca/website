@@ -59,13 +59,13 @@ module.exports = function (grunt) {
                 configFile: '.stylelintrc',
                 formatter: 'string',
                 ignoreDisables: false,
-                failOnError: true,
+                failOnError: false,
                 outputFile: '',
                 reportNeedlessDisables: false,
                 syntax: 'scss'
             },
             src: [
-                'src/sass/**/*.scss',
+                'src/sass/pages/dev-support.scss',
             ],
         },
 
@@ -647,7 +647,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
-        // 'stylelint',
+        'stylelint',
         'sass:dist',
         'postcss:dist',
         'concat',
