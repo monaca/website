@@ -108,7 +108,9 @@ module.exports = function (grunt) {
                 ]
             },
             dist: {
-                src: '<%= config.dist %>/css/**/*.css'
+                src: [
+                    '<%= config.dist %>/css/pages/dev-support.css',
+                ],
             }
         },
 
