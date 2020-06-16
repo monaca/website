@@ -34,7 +34,8 @@ html[lang=ja] {
         @media screen and (min-width: 971px) {
             height: 66px;
         }
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(2px);
 
         > div.ja-globalnav__logo {
             display: inline-flex;
