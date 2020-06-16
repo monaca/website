@@ -54,6 +54,21 @@ module.exports = function (grunt) {
     grunt.initConfig({
         config: config,
 
+        stylelint: {
+            options: {
+                configFile: '.stylelintrc',
+                formatter: 'string',
+                ignoreDisables: false,
+                failOnError: true,
+                outputFile: '',
+                reportNeedlessDisables: false,
+                syntax: 'scss'
+            },
+            src: [
+                'src/sass/**/*.scss',
+            ],
+        },
+
         sass: {
             options: {
                 implementation: sass,
@@ -578,6 +593,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-styledocco');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-stylelint');
 
 
     function injectManifest() {
@@ -631,6 +647,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        // 'stylelint',
         'sass:dist',
         'postcss:dist',
         'concat',
