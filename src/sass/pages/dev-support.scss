@@ -34,12 +34,8 @@
     grid-template-columns: 25% 25% 25% 25%;
 }
 
-@mixin font_hiragino {
-    font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
-}
-
 @mixin font_nueve {
-    font-family: "Helvetica Neue";
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     font-weight: 200;
 }
 
@@ -125,13 +121,17 @@ body.dev-support {
         width: 6%;
     }
 
+    .main {
+        overflow: hidden;
+    }
+
     .keyvisual-mob-serv {
         position: relative;
-        overflow: hidden;
+        overflow: visible;
         z-index: 0;
         display: grid;
         grid-template-columns: 100%;
-        padding-bottom: 9%;
+        padding-bottom: 25px;
 
         p,
         h1 {
@@ -152,7 +152,7 @@ body.dev-support {
                 text-align: left;
                 height: 368px;
 
-                max-width: 1024px;
+                max-width: 960px;
                 margin-left: auto;
                 margin-right: auto;
 
@@ -177,7 +177,7 @@ body.dev-support {
             .characteristics {
                 color: white;
 
-                max-width: 1024px;
+                max-width: 960px;
                 margin-left: auto;
                 margin-right: auto;
     
@@ -218,6 +218,7 @@ body.dev-support {
                 div {
                     text-align: left;
                     font-size: 20px;
+                    line-height: 26px;
                     font-weight: normal;
                     color: rgba(255, 255, 255, 0.9);
     
@@ -377,7 +378,7 @@ body.dev-support {
                     .wrap_keyvisual_bg {
                         position: absolute;
                         top: 36px;
-                        right: 32px;
+                        right: 0;
                         width: 500px;
                         height: 500px;
     
@@ -389,7 +390,7 @@ body.dev-support {
 
                     h1 {
                         padding-top: 99px;
-                        padding-left: 32px;
+                        padding-left: 0;
                         font-size: 36px;
                         line-height: 48px;
                     }
@@ -401,11 +402,17 @@ body.dev-support {
     
                 .characteristics {
                     .title {
+                        padding-top: 4px;
+                        padding-bottom: 7px;
                         width: 93.4%;
+                        font-size: 14px;
+                        line-height: 14px;
                     }
     
                     .content {
                         grid-template-columns: 35% 35% 25%;
+                        height: 154px;
+                        padding-top: 13px;
                     }
                 }
             }
@@ -417,11 +424,11 @@ body.dev-support {
         position: absolute;
         width: 200%;
         height: 200%;
-        bottom: 17%;
+        bottom: 0;
         left: -50%;
         z-index: -1;
         background: #47a3e6 0 0 repeat;
-        transform: rotate(-5deg);
+        transform: rotate(-4.2deg);
 
         @include for-phone-only {
             width: 130%;
@@ -439,17 +446,16 @@ body.dev-support {
         }
 
         @include for-laptop {
-            bottom: 11%;
+            bottom: 10px;
         }
     }
 
     .showcase {
         color: white;
-        padding-top: 15%;
+        padding-top: 53px;
         //padding-bottom: 5%;
         position: relative;
-        overflow: hidden;
-        margin-top: -17%;
+        overflow: visible;
 
         a {
             text-decoration: inherit; /* no underline */
@@ -461,9 +467,9 @@ body.dev-support {
             width: 68%;
             margin: auto;
             font-weight: bold;
-            margin-top: 2%;
+            margin-top: 0;
 
-            max-width: 1024px;
+            max-width: 960px;
             margin-left: auto;
             margin-right: auto;
 
@@ -473,6 +479,73 @@ body.dev-support {
             .showcase_mobile_button,
             .divider_line {
                 display: none;
+            }
+
+            .pc_showcase_stats {
+                display: none;
+                @include for-laptop {
+                    display: flex;
+                }
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                box-sizing: content-box;
+                padding-top: 27px;
+                height: 114px;
+
+                > .pc_showcase_stats_item {
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    white-space: nowrap;
+                    &:nth-child(2) {
+                        margin-left: 5.7%;
+                    }
+                    &:last-child {
+                        padding-top: 10px;
+                        padding-right: 3px;
+                    }
+
+                    .pc_showcase_stats_title {
+                        font-size: 15px;
+                        color: rgba(255, 255, 255, 0.71);
+                        text-align: left;
+                    }
+
+                    .pc_showcase_stats_description {
+                        position: relative;
+                        top: -24px;
+                        left: 11px;
+
+                        .num {
+                            color: white;
+                            font-size: 80px;
+                            @include font_nueve;
+                        }
+
+                        .text {
+                            font-size: 25px;
+                            line-height: 33px;
+                            letter-spacing: -0.1em;
+                            color: rgba(255, 255, 255, 0.71);
+                        }
+                    }
+
+                    a {
+                        color: white;
+                        font-size: 16px;
+                        font-weight: normal;
+
+                        .arrow {
+                            width: 18px;
+                        }
+                    }
+                }
+
+                > .pc_showcase_stats_spacer {
+                    flex: 1;
+                }
             }
 
             .wrap {
@@ -503,30 +576,6 @@ body.dev-support {
                 width: 100%;
                 float: left;
                 padding-bottom: 169px;
-
-                .first {
-                    font-size: 15px;
-                    color: rgba(255, 255, 255, 0.71);
-                    text-align: left;
-                    float: left;
-                }
-
-                .second {
-                    float: left;
-                    margin-top: -11%;
-                    margin-left: 5%;
-
-                    .num {
-                        color: white;
-                        font-size: 80px;
-                        @include font_nueve;
-                    }
-
-                    .text {
-                        font-size: 25px;
-                        color: rgba(255, 255, 255, 0.71);
-                    }
-                }
 
                 .showcase_img {
                     cursor: pointer;
@@ -588,17 +637,6 @@ body.dev-support {
                         left: 55%;
                     }
                     left: 17%;
-                }
-
-                #last_link {
-                    font-size: 16px;
-                    color: white;
-                    color: rgba(255, 255, 255, 0.71);
-                    margin-left: -33%;
-
-                    .arrow {
-                        width: 9%;
-                    }
                 }
             }
         }
@@ -895,13 +933,13 @@ body.dev-support {
     .showcase::before {
         content: "";
         position: absolute;
-        width: 130%;
-        height: 70%;
-        bottom: 45%;
-        left: -5%;
+        top: 0;
+        left: -10%;
+        width: 120%;
+        height: 329px;
         z-index: -1;
         background: #2c6ea8 0 0 repeat;
-        transform: rotate(-5deg);
+        transform: rotate(-4.2deg);
 
         @include for-phone-only {
             height: 70%;
@@ -915,7 +953,8 @@ body.dev-support {
         }
 
         @include for-laptop {
-            bottom: 43%;
+            // bottom: 43%;
+            top: -88px;
         }
     }
 
@@ -931,7 +970,7 @@ body.dev-support {
             margin: auto;
             width: 80%;
 
-            max-width: 1024px;
+            max-width: 960px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -1129,7 +1168,7 @@ body.dev-support {
             margin: auto;
             width: 80%;
 
-            max-width: 1024px;
+            max-width: 960px;
             margin-left: auto;
             margin-right: auto;
 
@@ -1458,7 +1497,7 @@ body.dev-support {
             display: grid;
             grid-template-columns: 50% 50%;
 
-            max-width: 1024px;
+            max-width: 960px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -1644,7 +1683,7 @@ body.dev-support {
             margin: auto;
             //background: #0a001f;
 
-            max-width: 1024px;
+            max-width: 960px;
             margin-left: auto;
             margin-right: auto;
 
@@ -1946,7 +1985,7 @@ body.dev-support {
             width: 80%;
             margin: auto;
 
-            max-width: 1024px;
+            max-width: 960px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -2319,7 +2358,7 @@ body.dev-support {
             width: 80%;
             margin: auto;
 
-            max-width: 1024px;
+            max-width: 960px;
             margin-left: auto;
             margin-right: auto;
 
@@ -2572,7 +2611,7 @@ body.dev-support {
         margin: auto;
         margin-bottom: 10%;
 
-        max-width: 1024px;
+        max-width: 700px;
         margin-left: auto;
         margin-right: auto;
 
