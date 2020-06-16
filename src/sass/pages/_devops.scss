@@ -111,7 +111,6 @@ body.devops {
         font-family: "Hiragino Kaku Gothic ProN W6", "Hiragino Sans", Meiryo, "Helvetica Neue", Arial, sans-serif;
         color: $text-dark-gray;
         line-height: 30px;
-
     }
 
     p {
@@ -195,6 +194,14 @@ body.devops {
                 }
             }
         }
+    }
+
+    .main-desc {
+      color: $text-dark-gray;
+      font-size: 17px;
+      margin: 15px 0;
+      max-width: none;
+      line-height: 1.4;
     }
 
     #features {
@@ -501,7 +508,7 @@ body.devops {
                     margin-right: 20px;
                     padding: 24px 10px;
                     text-align: left;
-                    border-bottom: 1px solid $border-gray;
+                    // border-bottom: 1px solid $border-gray;
                     word-break: break-all;
 
                     @include media-md-up {
