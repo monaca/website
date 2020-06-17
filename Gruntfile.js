@@ -135,6 +135,9 @@ module.exports = function (grunt) {
 
         uglify: {
             monaca: {
+                options: {
+                  ie8: true,
+                },
                 files: [{
                     expand: true,
                     src: '<%= config.distEn %>/js/all.js',
