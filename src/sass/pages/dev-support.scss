@@ -47,10 +47,6 @@
     width: 85%;
 }
 
-@mixin fixing_width {
-    width: 108%;
-}
-
 @mixin h1-titles {
     font-size: 36px;
     font-weight: bold;
@@ -1200,7 +1196,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 108%;
 
             .reasons_content {
                 width: 90%;
@@ -1499,7 +1495,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 108%;
             .phases_wrap {
                 width: 90%;
                 padding-top: 4%;
@@ -1711,7 +1707,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 108%;
             padding-bottom: 15%;
 
             .training_wrap {
@@ -1999,7 +1995,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 108%;
             .service_wrap {
                 width: 79%;
                 margin-left: 6%;
@@ -2404,7 +2400,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 108%;
             .prices_wrap {
                 width: 90%;
 
@@ -2666,7 +2662,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 108%;
             .showcase_logo_wrap {
                 width: 90%;
                 .logos {
@@ -2821,7 +2817,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 108%;
             width: 89%;
             margin-bottom: 15%;
             margin-left: 10%;
