@@ -1,3 +1,4 @@
+$output-bourbon-deprecation-warnings: false !default;
 @import "bourbon";
 
 @import "../constants";
@@ -124,9 +125,10 @@ html[lang=ja] body.platform {
             padding: 143px 40px;
             max-width: 1285px;
             height: 513px;
-            background-image: url('/img/platform/platform_background.svg');
+            background-image: url('/img/platform/platform_background.png');
             background-position: center center;
             background-repeat: no-repeat;
+            background-size: cover;
         }
     }
   }
@@ -146,9 +148,10 @@ html[lang=ja] body.platform {
         padding: 143px 40px;
         max-width: 1285px;
         height: 513px;
-        background-image: url('/img/platform/platform_background.svg');
+        background-image: url('/img/platform/platform_background.png');
         background-position: center center;
         background-repeat: no-repeat;
+        background-size: cover;
 
         > .title {
             position: absolute;
@@ -360,7 +363,8 @@ html[lang=ja] body.platform {
         > .v2-section--keyvisual__wrapper {
             padding: 126px 20px;
             height: 737px;
-            background-image: url('/img/platform/platform_background_mobile.svg');
+            background-image: url('/img/platform/platform_background.png');
+            background-size: cover;
 
             > .title {
                 text-align: center;

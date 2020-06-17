@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+$output-bourbon-deprecation-warnings: false !default;
 @import "bourbon";
 
 //  Reset CSS and variables have been to _init.scss
