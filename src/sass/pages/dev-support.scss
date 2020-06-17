@@ -309,35 +309,78 @@ body.dev-support {
         }
 
         @include phone_tablet_inbetween {
+            z-index: 1;
+            padding-bottom: 25%;
+
             .wrap {
-                width: 90%;
+                @include phone-content-width;
+                margin-top: 10%;
 
                 .wrap_keyvisual {
+                    display: block;
+                    height: 256px;
+                
+
+                    text-align: center;
+                    width: 100%;
+
                     .wrap_keyvisual_bg {
+                        position: absolute;
+                        top: -11px;
+                        right: 2px;
+                        width: 100%;
+                        height: 100%;
+    
+                        background-image: url('/img/dev-support/bg_dev-support.svg');
+                        background-repeat: no-repeat;
+                        background-position: 50% 72px;
+                        background-size: 275px;
                     }
 
                     h1 {
-                        font-size: 2.6vw;
+                        position: relative;
+                        top: -8px;
+                        font-size: 20px;
+                        line-height: 26px;
                     }
 
                     button {
-                        width: 65%;
-                        top: 81%;
-                        left: 18%;
+                        position: fixed;
+                        @include phone-content-width;
+                        background: #fa6800;
+                        border: unset;
+                        padding: 3% 4% 3% 4%;
+                        top: 89%;
+                        left: 8%;
                     }
                 }
 
                 .characteristics {
+                    margin-left: 0;
+                    padding-top: 7px;
+
                     .title {
-                        font-size: 4vw;
+                        text-align: center;
+                        padding-bottom: 2%;
+                        width: 100%;
+                        font-size: 14px;
                     }
 
                     .content {
-                        grid-template-columns: 33% 33% 30%;
+                        display: block;
+
                         div {
-                            font-size: 2.5vw;
-                            margin-right: 13%;
-                            margin-bottom: 20%;
+                            display: flex;
+                            font-size: 12px;
+                            line-height: 16px;
+                            border-bottom: solid rgba(255, 255, 255, 0.251) 1px;
+                            padding: 6px 0;
+                        }
+                    }
+
+                    div {
+                        br {
+                            display: none;
                         }
                     }
                 }
@@ -345,28 +388,46 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
-
             .wrap {
-                width: 90%;
-
                 .wrap_keyvisual {
                     .wrap_keyvisual_bg {
+                        position: absolute;
+                        top: 36px;
+                        right: 0;
+                        width: 500px;
+                        height: 500px;
+    
+                        background-image: url('/img/dev-support/bg_dev-support_pc.svg');
+                        background-repeat: no-repeat;
+                        background-position: 100% 0;
+                        background-size: 529px;
+                    }
 
+                    h1 {
+                        padding-top: 99px;
+                        padding-left: 0;
+                        font-size: 36px;
+                        line-height: 48px;
+                    }
+
+                    button {
+                        font-size: 17px;
                     }
                 }
-
+    
                 .characteristics {
-                    margin-left: 4%;
-                    margin-top: 3%;
                     .title {
-                        width: 98%;
+                        padding-top: 4px;
+                        padding-bottom: 7px;
+                        width: 93.4%;
+                        font-size: 14px;
+                        line-height: 14px;
                     }
+    
                     .content {
-                        grid-template-columns: 37% 36% 26%;
-                    }
-                    div {
-                        font-size: 19px;
+                        grid-template-columns: 35% 35% 25%;
+                        height: 154px;
+                        padding-top: 13px;
                     }
                 }
             }
@@ -438,11 +499,14 @@ body.dev-support {
         }
 
         @include phone_tablet_inbetween {
-            bottom: 10%;
+            width: 130%;
+            height: 130%;
+            bottom: 8%;
+            left: -15%;
         }
 
         @include for-tablet-only {
-            bottom: 8%;
+            bottom: 10px;
         }
 
         @include for-laptop {
