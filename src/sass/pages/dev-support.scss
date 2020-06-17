@@ -231,7 +231,7 @@ body.dev-support {
 
         @include for-phone-only {
             z-index: 1;
-            padding-bottom: 25%;
+            padding-bottom: 80px;
 
             .wrap {
                 @include phone-content-width;
@@ -310,7 +310,7 @@ body.dev-support {
 
         @include phone_tablet_inbetween {
             z-index: 1;
-            padding-bottom: 25%;
+            padding-bottom: 120px;
 
             .wrap {
                 @include phone-content-width;
