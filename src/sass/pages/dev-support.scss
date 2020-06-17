@@ -390,6 +390,9 @@ body.dev-support {
         @include for-tablet-only {
             .wrap {
                 .wrap_keyvisual {
+                    box-sizing: content-box;
+                    padding: 0 32px;
+
                     .wrap_keyvisual_bg {
                         position: absolute;
                         top: 36px;
@@ -416,6 +419,9 @@ body.dev-support {
                 }
     
                 .characteristics {
+                    box-sizing: content-box;
+                    padding: 0 32px;
+
                     .title {
                         padding-top: 4px;
                         padding-bottom: 7px;
@@ -436,6 +442,9 @@ body.dev-support {
         @include for-laptop {
             .wrap {
                 .wrap_keyvisual {
+                    box-sizing: content-box;
+                    padding: 0 32px;
+
                     .wrap_keyvisual_bg {
                         position: absolute;
                         top: 36px;
@@ -462,6 +471,9 @@ body.dev-support {
                 }
     
                 .characteristics {
+                    box-sizing: content-box;
+                    padding: 0 32px;
+
                     .title {
                         padding-top: 4px;
                         padding-bottom: 7px;
