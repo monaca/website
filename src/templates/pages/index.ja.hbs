@@ -1,144 +1,210 @@
 ---
-title: Monaca - HTML5ハイブリッドアプリ開発プラットフォーム
+title: Monaca - すべての人にアプリ開発を
+
 class: home
 layout: src/templates/layouts/index.hbs
+stylesheets:
+    - /css/init.css
+    - /css/header_ja.css
+    - /css/footer_ja.css
+    - /css/pages/register.css
+    - /css/pages/index_ja.css
 fixednav: true
+show_ja_globalnav: true
 show_monaca_description: false # Parameter for section_monaca_ja
 ---
+{{!-- Define SVG data used in this page --}}
+<svg data-name="next_arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 14" style="display: none;">
+  <symbol>
+    <g id="next_arrow">
+      <rect x="13.8" y="-0.74" width="2" height="9.9" transform="translate(1.36 11.7) rotate(-45)"/>
+      <rect y="6.01" width="17.25" height="2"/>
+      <rect x="9.85" y="8.79" width="9.9" height="2" transform="translate(-2.59 13.33) rotate(-45)"/>
+    </g>
+  </symbol>
+</svg>
 
-<div class="v2-section--keyvisual">
-    <div class="v2-section--keyvisual__wrapper">
-        <div class="v2-section--keyvisual__subtitle">あらゆるニーズに応える</div>
-        <div class="v2-section--keyvisual__title">
-            No.1アプリ開発クラウド
-            <img src="/img/index-v2/pwa.png" alt="新機能登場！PWA対応" class="pwa_img">
-        </div>
-        <div class="v2-section--keyvisual__description">Monacaは20万人以上のWeb技術者に選ばれたモバイルアプリ開発環境です</div>
-        <a class="v2-section--keyvisual__trial-button" href="https://monaca.mobi/ja/signup" onclick="gtag('event', 'view_item', {'event_category': 'engagement','event_label': 'trial-start'});">無料トライアル</a>
-        <div class="v2-section--keyvisual__app-development"><a href="/development.html" onclick="gtag('event', 'view_item', {'event_category': 'engagement','event_label': 'dev-inquiry'});">アプリ開発のご相談はこちら<img src="/img/common-v2/ico_next_arrow1.svg" style="margin-left: 7px;" /></a></div>
+<section class="landing-keyvisual">
+    <div class="tagline">
+        <span style="display: inline-block;">すべての人に</span><span style="display: inline-block;">アプリ開発を</span>
     </div>
-</div>
-<div class="v2-section--logos">
-    <div class="v2-section--logos__wrapper">
-        <span class="v2-section--logos__logo">
-            <div class="v2-section--logos__logo-inner" style="background-image: url('/img/index-v2/logo1_jnb.png');"></div>
-        </span>
-        <span class="v2-section--logos__logo">
-            <div class="v2-section--logos__logo-inner" style="background-image: url('/img/index-v2/logo2_tvasahi.png');"></div>
-        </span>
-        <span class="v2-section--logos__logo">
-            <div class="v2-section--logos__logo-inner" style="background-image: url('/img/index-v2/logo3_fujitsu.png');"></div>
-        </span>
-        <span class="v2-section--logos__logo">
-            <div class="v2-section--logos__logo-inner" style="background-image: url('/img/index-v2/logo4_fujitec.png');"></div>
-        </span>
-        <span class="v2-section--logos__logo">
-            <div class="v2-section--logos__logo-inner" style="background-image: url('/img/index-v2/logo5_asics.png');"></div>
-        </span>
-        <span class="v2-section--logos__logo">
-            <div class="v2-section--logos__logo-inner" style="background-image: url('/img/index-v2/logo6_unisys.png');"></div>
-        </span>
-    </div>
-</div>
-<div class="v2-section--html5">
-    <div class="v2-section--html5__wrapper">
-        <div class="v2-section--html5__left-side">
-            <div class="v2-section--html5__title">
-                HTML5でiOS &amp; Android 向けのアプリを同時開発
+
+    <div class="solutions">
+        <div class="solution platform">
+            <div class="solution__background">
+                <img src="/img/index/keyvisual_dc.svg" width="96.578" height="121.016" />
             </div>
-            <div class="v2-section--html5__description">
-                HTML5、JavaScriptなどのWeb標準言語でモバイルアプリ開発を行うことで、開発コスト高騰や技術者不足などアプリ開発に関わる課題が解決できます。またモバイルアプリだけでなく、Progressive Web Apps（PWA）としてもリリースが可能になります。
-            </div>
-            <div class="v2-section--html5__navigation">
-                <a href="/features/html5.html">HTML5とは？<img src="/img/common-v2/ico_next_arrow2.svg" style="margin-left: 7px;" /></a>
-            </div>
+            <div class="solution__icon"></div>
+            <div class="solution__title"><span style="display: inline-block;">Web技術で</span><span style="display: inline-block;">アプリ開発を</span><span style="display: inline-block;">はじめたい</span></div>
+            <div class="solution__description">Web技術で、モバイル、PWA、PC向けクロスプラットフォーム開発を実現します。</div>
+            <a href="/platform/">開発を始める</a>
         </div>
-        <div class="v2-section--html5__right-side">
-            <div class="v2-section--html5__image"></div>
+        <div class="solution support">
+            <div class="solution__background">
+                <img src="/img/index/keyvisual_ds.svg" width="189.133" height="139.317" />
+            </div>
+            <div class="solution__icon"></div>
+            <div class="solution__title"><span style="display: inline-block;">開発チームを</span><span style="display: inline-block;">サポート</span><span style="display: inline-block;">してほしい</span></div>
+            <div class="solution__description">トレーニングから技術調査、PoC、バージョンアップ対応など様々な開発支援を行います。</div>
+            <a href="/dev-support/">開発支援の相談をする</a>
+        </div>
+        <div class="solution devops">
+            <div class="solution__background">
+                <img src="/img/index/keyvisual_do.svg" width="151.148" height="151.68" />
+            </div>
+            <div class="solution__icon"></div>
+            <div class="solution__title"><span style="display: inline-block;">DevOpsで</span><span style="display: inline-block;">開発力を</span><span style="display: inline-block;">強化したい</span></div>
+            <div class="solution__description">既存システムの資産を活かしつつ、大規模環境でのDevOpsを実現します。</div>
+            <a href="/devops/">DevOpsの相談をする</a>
         </div>
     </div>
-</div>
-{{> section_monaca_ja }}
-<div class="v2-section--apps">
-    <div class="v2-section--apps__wrapper">
-        <div class="v2-section--apps__title">20万人の開発者による<br>9万個を超えるアプリが誕生</div>
-        <div class="v2-section--apps__app-container">
-            <div class="v2-section--apps__app" style="background-image: url('/img/index-v2/ico-app1.png');"><a href="/great-apps.html"></a></div>
-            <div class="v2-section--apps__app" style="background-image: url('/img/index-v2/ico-app2.png');"><a href="/great-apps.html"></a></div>
-            <div class="v2-section--apps__app" style="background-image: url('/img/index-v2/ico-app3.png');"><a href="/great-apps.html"></a></div>
-            <div class="v2-section--apps__app" style="background-image: url('/img/index-v2/ico-app4.png');"><a href="/great-apps.html"></a></div>
-            <div class="v2-section--apps__app" style="background-image: url('/img/index-v2/ico-app5.png');"><a href="/great-apps.html"></a></div>
-            <div class="v2-section--apps__app" style="background-image: url('/img/index-v2/ico-app6.png');"><a href="/great-apps.html"></a></div>
-            <div class="v2-section--apps__app" style="background-image: url('/img/index-v2/ico-app7.png');"><a href="/great-apps.html"></a></div>
-            <div class="v2-section--apps__app" style="background-image: url('/img/index-v2/ico-app8.png');"><a href="/great-apps.html"></a></div>
-            <div class="v2-section--apps__app" style="background-image: url('/img/index-v2/ico-app9.png');"><a href="/great-apps.html"></a></div>
-            <div class="v2-section--apps__app" style="background-image: url('/img/index-v2/ico-app10.png');"><a href="/great-apps.html"></a></div>
+</section>
+
+<section class="logos--pc">
+    <div class="logos--pc__wrapper">
+        <img src="/img/index/logo_area_pc.svg" width="3436.9" height="100" />
+        <img src="/img/index/logo_area_pc.svg" width="3436.9" height="100" />
+        <img src="/img/index/logo_area_pc.svg" width="3436.9" height="100" />
+    </div>
+</section>
+<section class="logos--sp">
+    <div class="logos--sp__wrapper">
+        <img src="/img/index/logo_area_sp.svg" width="1718.45" height="56" />
+        <img src="/img/index/logo_area_sp.svg" width="1718.45" height="56" />
+        <img src="/img/index/logo_area_sp.svg" width="1718.45" height="56" />
+    </div>
+</section>
+
+
+<div class="solution-details-container">
+    <div class="solution-detail platform top">
+        <div id="platform"></div>{{!-- for fragment link --}}
+        <div class="solution-detail__title">
+            アプリ開発プラットフォーム
         </div>
-        <div class="v2-section--apps__navigation">
-            <a href="/great-apps.html">もっと見る<img src="/img/common-v2/ico_next_arrow2.svg" style="margin-left: 7px;" /></a>
+        <div class="solution-detail__abstract">
+            <span style="display: inline-block;">25万人が利用する</span><span style="display: inline-block;">アプリ開発クラウド</span>
+        </div>
+        <div class="solution-detail__description">
+            <p style="padding-bottom: 4px;">
+                汎用性の高いWeb技術でどんな種類のアプリも作れるように。Monacaを使うと、JavaScriptとHTML5の共通スキルセットで、<br>
+                ・モバイル（iOS、Android）<br>
+                ・デスクトップアプリ（Windows、macOS）<br>
+                ・Webアプリ（SPA、PWA）<br>
+                など多彩なアプリを開発できます。もちろんAngularやVue.jsなどの各種ライブラリにも対応。
+            </p>
+            <p class="solution-detail__description-links" style="padding-bottom: 4px;">
+                <a href="https://monaca.mobi/ja/signup" onclick="gtag('event', 'view_item', {'event_category': 'engagement','event_label': 'trial-start'});">無料サインアップはこちら&nbsp;<svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" style="fill: #47A3E6;"><g class="color"><use xlink:href="#next_arrow"></use></g></svg></a>
+            </p>
+            <p class="solution-detail__description-links">
+                <a href="/platform/">特徴を知る&nbsp;<svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" style="fill: #47A3E6;"><g class="color"><use xlink:href="#next_arrow"></use></g></svg></a>
+            </p>
+        </div>
+    </div>
+
+    <div class="solution-detail support">
+        <div id="support"></div>{{!-- for fragment link --}}
+        <div class="solution-detail__title">
+            アプリ開発支援サービス
+        </div>
+        <div class="solution-detail__abstract">
+            アプリ開発をトータルサポート
+        </div>
+        <div class="solution-detail__description">
+            <p>
+                自社だけでは解決できない課題に直面したら、開発支援サービスをご利用ください。モバイル、PC、Webの種類を問わず、Monacaのエキスパートがあなたのアプリ開発をサポートします。
+            </p>
+            <p style="padding-bottom: 10px;">
+                サービス内容は、ご要望に合わせて完全にオーダーメイド。技術検証やトレーニングから部分的な開発受託、アフターサポートまで、開発プロセス全体の課題に一緒に取り組みます。
+            </p>
+            <p class="solution-detail__description-links">
+                <a href="/dev-support/">さらに詳しく&nbsp;<svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" style="fill: #47A3E6;"><g class="color"><use xlink:href="#next_arrow" /></g></svg></a>
+            </p>
+        </div>
+    </div>
+
+    <div class="solution-detail devops">
+        <div id="devops"></div>{{!-- for fragment link --}}
+        <div class="solution-detail__title">
+            Monaca DevOps
+        </div>
+        <div class="solution-detail__abstract">
+            DevOps × 開発マネジメント
+        </div>
+        <div class="solution-detail__description">
+            <p>
+                優れたソフトウェアをすばやく構築、提供しましょう。そのためには、単なる開発ツールを超えた、コラボレーション中心型の開発ソリューションが必要です。
+            </p>
+            <p style="padding-bottom: 14px;">
+                Monacaは継続的なデリバリの仕組みやクラウドサービスとのインテグレーションを備えた、フルカスタマイズ可能なプラットフォームとしてご活用いただけます。
+            </p>
+            <p class="solution-detail__description-links">
+                <a href="/devops/">さらに詳しく&nbsp;<svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" style="fill: #47A3E6;"><g class="color"><use xlink:href="#next_arrow" /></g></svg></a>
+            </p>
+        </div>
+    </div>
+
+    <div class="solution-detail education">
+        <div class="solution-detail__title">
+            プログラミング教育
+        </div>
+        <div class="solution-detail__abstract">
+            <span style="display: inline-block;">アプリ開発で楽しく</span><span style="display: inline-block;">プログラミング学習</span>
+        </div>
+        <div class="solution-detail__description">
+            <p style="padding-bottom: 14px;">
+                Monacaは800以上の教育機関で利用されている、プログラミング学習プラットフォームでもあります。クラウドサービスの活用で、教育現場での導入や運用をシンプルにし、自宅での予習復習も容易。課題研究やコンテストなどの実績も豊富です。
+            </p>
+            <p class="solution-detail__description-links">
+                <a href="https://edu.monaca.io/" target="_blank" rel="noopener">さらに詳しく&nbsp;<svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" style="fill: #47A3E6;"><g class="color"><use xlink:href="#next_arrow" /></g></svg></a>
+            </p>
         </div>
     </div>
 </div>
-<div class="v2-section--customers">
-    <div class="v2-section--customers__wrapper">
-        <div class="v2-section--customers__title">Monacaの導入事例</div>
-        <div class="v2-section--customers__description">あらゆる業種の企業や団体の<br />モバイルアプリに活用されています</div>
-        <div class="v2-section--customers__customer-container">
-            <div class="v2-section--customers__customer">
-                <div class="v2-section--customers__customer-logo" style="background-image: url('/img/index-v2/section4_logo-fujitec@2x.png');">
-                </div>
-                <div class="v2-section--customers__customer-face" style="background-image: url('/img/index-v2/img_fujitec.jpg');">
-                </div>
-                <div class="v2-section--customers__customer-description">
-                    モバイルファーストな情報システム内製化基盤にMonacaを採用
-                </div>
-                <div class="v2-section--customers__customer-navigation">
-                    <a href="/showcase/fujitec.html">詳しく見る<img src="/img/common-v2/ico_next_arrow2.svg" style="margin-left: 7px;" /></a>
-                </div>
+
+<div class="cases">
+    <div class="cases__title">
+        導入事例
+    </div>
+    <div class="cases__list">
+        <div class="case">
+            <div class="case__image">
+                <a href="/showcase/fujitec.html">
+                    <img src="/img/showcase/buttons/01-fujitec.jpg">
+                </a>
             </div>
-            <div class="v2-section--customers__customer">
-                <div class="v2-section--customers__customer-logo" style="background-image: url('/img/index-v2/section4_logo-nijibox@2x.png');">
-                </div>
-                <div class="v2-section--customers__customer-face" style="background-image: url('/img/index-v2/img_nijibox.jpg');">
-                </div>
-                <div class="v2-section--customers__customer-description">
-                    エンジニア1名、実工数2週間でWebサービスをモバイルアプリ化
-                </div>
-                <div class="v2-section--customers__customer-navigation">
-                    <a href="/showcase/nijibox.html">詳しく見る<img src="/img/common-v2/ico_next_arrow2.svg" style="margin-left: 7px;" /></a>
-                </div>
+            <div class="case__name">
+                <a href="/showcase/fujitec.html">
+                    フジテック株式会社 様
+                </a>
             </div>
-            <div class="v2-section--customers__customer">
-                <div class="v2-section--customers__customer-logo" style="background-image: url('/img/index-v2/section4_logo-future@2x.png');">
-                </div>
-                <div class="v2-section--customers__customer-face" style="background-image: url('/img/index-v2/img_future.jpg');">
-                </div>
-                <div class="v2-section--customers__customer-description">
-                    金融機関向けの渉外支援システムのアプリ対応工数を2/3に圧縮
-                </div>
-                <div class="v2-section--customers__customer-navigation">
-                    <a href="/showcase/naganobank.html">詳しく見る<img src="/img/common-v2/ico_next_arrow2.svg" style="margin-left: 7px;" /></a>
-                </div>
+        </div>
+        <div class="case">
+            <div class="case__image" style="position: relative;">
+                <a href="/showcase/monex.html">
+                    <img src="/img/showcase/buttons/02-monex.jpg">
+                </a>
             </div>
-            <div class="v2-section--customers__customer">
-                <div class="v2-section--customers__customer-logo" style="background-image: url('/img/index-v2/section4_logo-tvasahi@2x.png');">
-                </div>
-                <div class="v2-section--customers__customer-face" style="background-image: url('/img/index-v2/img_tvasahi.jpg');">
-                </div>
-                <div class="v2-section--customers__customer-description">
-                    ネイティブ開発に比べてアプリ開発コストを半分に圧縮
-                </div>
-                <div class="v2-section--customers__customer-navigation">
-                    <a href="/showcase/tvasahi.html">詳しく見る<img src="/img/common-v2/ico_next_arrow2.svg" style="margin-left: 7px;" /></a>
-                </div>
+            <div class="case__name">
+                <a href="/showcase/monex.html">
+                    マネックス証券株式会社 様
+                </a>
+            </div>
+        </div>
+        <div class="case">
+            <div class="case__image">
+                <a href="/showcase/smbc.html">
+                    <img src="/img/showcase/buttons/03-smbc.jpg">
+                </a>
+            </div>
+            <div class="case__name">
+                <a href="/showcase/smbc.html">
+                    <span style="display: inline-block;">株式会社三井住友</span><span style="display: inline-block;">フィナンシャルグループ 様</span>
+                </a>
             </div>
         </div>
     </div>
-</div>
-<div class="v2-section--closing">
-    <div class="v2-section--closing__wrapper">
-        <div class="v2-section--closing__title">いますぐMonacaを試してみましょう。</div>
-        <a class="v2-section--closing__trial-button" href="https://monaca.mobi/ja/signup">無料トライアル</a>
+    <div class="cases__button-container">
+        <a href="/showcase/" class="cases__button">全ての導入事例を見る<svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" style="fill: #47A3E6;"><g class="color"><use xlink:href="#next_arrow"></use></g></svg></a>
     </div>
 </div>
-{{> section_specials_ja }}

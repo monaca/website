@@ -1,15 +1,21 @@
 ---
-title: Monaca - HTML5アプリの特徴
+title: Monaca - Web技術でアプリ開発とは
 class: features-html5
 layout: src/templates/layouts/index.hbs
+stylesheets:
+    - /css/bootstrap.min.css
+    - /css/all.css
+    - https://use.typekit.net/tky7gag.css
 fixednav: true
+show_ja_globalnav: true
+show_ja_subnav: true
 show_monaca_description: true # Parameter for section_monaca_ja
 ---
 
 <div class="v2-section--keyvisual">
     <div class="v2-section--keyvisual__wrapper">
-        <div class="v2-section--keyvisual__subtitle">モバイルアプリ開発に</div>
-        <div class="v2-section--keyvisual__title">HTML5が選ばれる理由</div>
+        <div class="v2-section--keyvisual__subtitle">モバイル、PC、Webで動く</div>
+        <div class="v2-section--keyvisual__title">Web技術を用いたアプリ開発</div>
     </div>
 </div>
 <div class="v2-section--feature-container">
@@ -17,10 +23,10 @@ show_monaca_description: true # Parameter for section_monaca_ja
         <div class="v2-section--feature__wrapper">
             <div class="v2-section--feature__text-side">
                 <div class="v2-section--feature__title">
-                    Web標準技術でモバイルアプリ開発
+                    Web標準技術で<br>クロスプラットフォーム開発
                 </div>
                 <div class="v2-section--feature__description">
-                    <p>MonacaではHTML5、JavaScriptといったWeb標準技術を用いてiOS、Android向けのモバイルアプリやPWAの開発を行うことができます。</p>
+                    <p>MonacaではHTML5、JavaScriptといったWeb標準技術を用いてiOS、Android向けのモバイルアプリ、Windows、macOS、Linux向けのデスクトップアプリ、そしてブラウザー向けのPWAアプリの開発を行うことができます。</p>
                 </div>
             </div>
             <div class="v2-section--feature__image-side">
@@ -32,11 +38,11 @@ show_monaca_description: true # Parameter for section_monaca_ja
         <div class="v2-section--feature__wrapper">
             <div class="v2-section--feature__text-side">
                 <div class="v2-section--feature__title">
-                    モバイルアプリ開発の未経験者に最適
+                    プロユース<br>でも難しくない！
                 </div>
                 <div class="v2-section--feature__description">
-                    <p>HTML5は学習コストが低く日本語での情報も豊富なため、これからモバイルアプリ開発を始める方には最適な選択肢の一つです。</p>
-                    <p>また、HTML5モバイルアプリ開発のために習得した技術は、従来のWebアプリだけでなくPWA (Progressive Web App)やElectronと今後有望なクロスプラットフォーム開発にも活用できます。</p>
+                    <p>HTML5やJavaScriptに代表されるWeb技術は、日本語での情報も豊富で、多くの学習コンテンツが揃っています。</p>
+                    <p>Monacaで使う技術は、一般的なWebアプリの開発で使われるものばかり。Monaca特有の知識は一切不要で始められます。</p>
                 </div>
             </div>
             <div class="v2-section--feature__image-side">
@@ -48,27 +54,11 @@ show_monaca_description: true # Parameter for section_monaca_ja
         <div class="v2-section--feature__wrapper">
             <div class="v2-section--feature__text-side">
                 <div class="v2-section--feature__title">
-                    既存のWeb開発チームがアプリ開発チームに
-                </div>
-                <div class="v2-section--feature__description">
-                    <p>モバイルアプリ開発にHTML5を採用すれば、既存のWeb開発チームでモバイルアプリ開発を行うことができます。</p>
-                    <p>iOSやAndroidアプリに特化したアプリ開発チームを作る必要がなく、メンバーのやりくりもしやすいので特に企業でのアプリ開発で多く採用されています。</p>
-                </div>
-            </div>
-            <div class="v2-section--feature__image-side">
-                <div class="v2-section--feature__image" style="background-image: url('/img/features/html5/section1_contents3.jpg');"></div>
-            </div>
-        </div>
-    </div>
-    <div class="v2-section--feature">
-        <div class="v2-section--feature__wrapper">
-            <div class="v2-section--feature__text-side">
-                <div class="v2-section--feature__title">
                     iOS &amp; Androidアプリを同時開発
                 </div>
                 <div class="v2-section--feature__description">
-                    <p>HTML5でアプリを開発するとiOSとAndroidのアプリを一つのソースコードで開発することができます。</p>
-                    <p>同じアプリをOS毎に2つ開発する必要がなくなるため、ネイティブ開発に比較して開発工数も開発期間も大幅に短縮できます。</p>
+                    <p>iOSとAndroidのアプリを一つのソースコードで開発。</p>
+                    <p>同じアプリをOSごとに開発する必要がなくなるため、従来の開発と比べ開発工数も開発期間も大幅に短縮できます。アプリの運用効率も大幅にアップ。</p>
                 </div>
             </div>
             <div class="v2-section--feature__image-side">
@@ -80,26 +70,10 @@ show_monaca_description: true # Parameter for section_monaca_ja
         <div class="v2-section--feature__wrapper">
             <div class="v2-section--feature__text-side">
                 <div class="v2-section--feature__title">
-                    アプリの運用コストを劇的に低減
+                    100%ネイティブアプリ
                 </div>
                 <div class="v2-section--feature__description">
-                    <p>HTML5で開発されたiOS、AndroidアプリはOSのアップデートの影響を受けにくく、また両OS向けのアプリがワンソースで管理できます。</p>
-                    <p>さらにWeb開発者がアプリのメンテナンスを行うためアプリ運用の専用チームを抱える必要もありません。このためアプリの運用コストを劇的に低減することができます。</p>
-                </div>
-            </div>
-            <div class="v2-section--feature__image-side">
-                <div class="v2-section--feature__image" style="background-image: url('/img/features/html5/section1_contents5.jpg');"></div>
-            </div>
-        </div>
-    </div>
-    <div class="v2-section--feature">
-        <div class="v2-section--feature__wrapper">
-            <div class="v2-section--feature__text-side">
-                <div class="v2-section--feature__title">
-                    ネイティブ機能を使ったアプリ開発も可能
-                </div>
-                <div class="v2-section--feature__description">
-                    <p>HTML5モバイルアプリでは、プラグインを利用することでプッシュ通知やカメラ、Bluetoothなど各OSが提供するネイティブ機能をアプリに組み込むことができます。</p>
+                    <p>プッシュ通知やカメラ、Bluetoothなど、各OSが提供するネイティブ機能をアプリに組み込み、利用できます。</p>
                     <p>既存のプラグインを使ってもよし、自身でプラグイン開発してもよし、アプリの可能性は無限です。</p>
                 </div>
             </div>
@@ -136,8 +110,8 @@ show_monaca_description: true # Parameter for section_monaca_ja
 <div class="v2-section--closing">
     <div class="v2-section--closing__wrapper">
         <div class="v2-section--closing__title">Monacaに興味を持っていただけましたか？</div>
-        <div class="v2-section--closing__description">本格的なHTML5アプリが驚くほど簡単に作れます。<br>まずは無料でお試しください。</div>
-        <a class="v2-section--closing__trial-button" href="https://monaca.mobi/ja/signup">無料トライアル</a>
+        <div class="v2-section--closing__description">本格的なアプリが驚くほど簡単に作れます。<br>無料トライアルで開発を実際に試してみる、もしくはMonacaの導入についてご相談ください。</div>
+        <a class="v2-section--closing__trial-button" href="https://monaca.mobi/ja/signup">開発者向け無料トライアル</a>
+        <a class="v2-section--closing__trial-button" href="/dev-support/">導入支援メニューを見る</a>
     </div>
 </div>
-{{> section_specials_ja }}

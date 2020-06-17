@@ -1,0 +1,347 @@
+@import "constants";
+@import "button";
+
+$header-transition: all .2s ease-out;
+
+html[lang=en] .navbar {
+    border-width: 0px;
+    border-radius: 0;
+    width: 100%;
+    padding: 0 25px;
+    background-color: #2687ea;
+    z-index: 100;
+
+    .monaca-logo {
+        height: 26px;
+        transition: $header-transition;
+    }
+
+    &:not(.navbar-fixed-top) {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .container {
+        padding: 0px 15px;
+        width: 1170px;
+        @media screen and (max-width: 1169px) and (min-width: $break + 1px) {
+            width: 100%;
+        }
+        @media screen and (max-width: $break) {
+          width: 100%;
+          padding: 0;
+        }
+        .header-accordion {
+          background-color: #222;
+          max-height: 0;
+          overflow: hidden;
+          -webkit-transition: max-height 420ms;
+          -moz-transition: max-height 420ms;
+          -o-transition: max-height 420ms;
+          transition: max-height 420ms;
+          -webkit-transform: translate3d(0, 0, 0);
+          -moz-transform: translate3d(0, 0, 0);
+          -ms-transform: translate3d(0, 0, 0);
+          -o-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+        .header-accordion.on {
+          max-height: 750px;
+        }
+        .header-accordion.on:lang(ja) {
+          max-height: 1300px;
+        }
+        .header-accordion.loggedin.on {
+          max-height: 850px;
+        }
+        .header-accordion.loggedin.on:lang(ja) {
+          max-height: 1420px;
+        }
+    }
+    .navbar-header {
+        margin: 0;
+        .navbar-brand {
+            margin: 0;
+            padding: 13px 0;
+            @media screen and (max-width: $break) {
+                padding-left: 16px;
+            }
+            img {
+                width: 110px;
+            }
+            img:hover {
+              opacity: 0.7;
+            }
+        }
+        .navbar-toggle {
+            background-color: rgba(0, 0, 0, 0.16);
+            border-radius: 0;
+            border: none;
+            height: 50px;
+            margin: 0;
+            padding: 0 0 0 15px;
+            position: relative;
+            text-align: left;
+            width: 52px;
+            .icon-bar {
+                opacity: 0;
+                transition: opacity 140ms;
+            }
+            .icon-bar-left, .icon-bar-right {
+                position: absolute;
+                background-color: #fff;
+                transition: transform 140ms cubic-bezier(.34, .94, .69, 1);
+                transform-origin: bottom center;
+                float: left;
+                width: 14px;
+                height: 2px;
+            }
+            .icon-bar-left {
+                top: 24px;
+                left: 15px;
+                border-radius: 1px 0 0 1px;
+                transform: rotate(-45deg);
+            }
+            .icon-bar-right {
+                top: 24px;
+                right: 15px;
+                border-radius: 0 1px 1px 0;
+                transform: rotate(45deg);
+            }
+            .icon-bar + .icon-bar {
+                clear: both;
+                margin-top: 10px;
+            }
+            &.collapsed {
+                background-color: transparent;
+                .icon-bar {
+                    opacity: 1;
+                }
+                .icon-bar-left {
+                    transform: rotate(0);
+                    width: 12px;
+                }
+                .icon-bar-right {
+                    transform: rotate(0);
+                    width: 12px;
+                }
+            }
+        }
+    }
+    .navbar-collapse {
+        .navbar-right {
+            margin-right: 0;
+        }
+
+        border-top: none;
+        box-shadow: none;
+        float: none;
+        @media screen and (max-width: $break - 1px) {
+            background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.16), #2c2c2c);
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.16), #2c2c2c 60%);
+            float: none;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        @media screen and (min-width: 641px) {
+            padding-left: 15px;
+            padding-right: 0;
+        }
+    }
+    .navbar-nav {
+        .dashboard {
+            text-decoration: underline;
+        }
+        .nav-title {
+            color: #80d4ff;
+            display: inline-block;
+            font-size: 13px;
+            height: 50px;
+            line-height: 51px;
+            padding: 0 13px 0 0;
+            @media screen and (max-width: 1000px) {
+              font-size: 11px;
+            }
+            @media screen and (max-width: 900px) {
+              font-size: 10px;
+            }
+            @media screen and (min-width: $break + 1px) and (max-width: 860px) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            @media screen and (min-width: $break + 1px) and (max-width: 820px) {
+                padding-left: 2px;
+                padding-right: 2px;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        > li > a {
+            color: #fff;
+            padding: 16px 10px 14px;
+            -webkit-font-smoothing: antialiased;
+            @media screen and (min-width: $break + 1px) and (max-width: 860px) {
+                font-size: 14px;
+            }
+            &:hover {
+                color: #7cdaff;
+            }
+            &.login {
+                color: #7cdaff;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        .pc {
+            display: block;
+                @media screen and (max-width: $break) {
+                    display: none;
+                }
+        }
+        .sp {
+            display: none;
+            @media screen and (max-width: $break) {
+                    display: block;
+                    a {
+                        text-align: left;
+                        text-decoration: underline;
+                        color: #80d4ff;
+                        font-weight: bold;
+                        img {
+                            margin: 0 5px 0 0;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+        }
+        .nav-user {
+            background: url("../img/common/user-menu-triangle.png") no-repeat scroll right center;
+            .user-icon {
+                vertical-align: -7px;
+            }
+        }
+        .dropdown:hover > .dropdown-toggle {
+            background-color: #2c2c2c;
+            color: #7cdaff;
+        }
+        @media screen and (max-width: $break) {
+            .nav-dashboard {
+                text-align: left;
+            }
+            .dropdown-toggle {
+                color: white;
+            }
+            > li > a {
+                color: #0088cc;
+                font-size: 1rem;
+                font-weight: 700;
+                // padding-left: 16px;
+                text-align: left;
+            }
+            .dropdown:hover > .dropdown-toggle {
+                background-color: transparent;
+                color: #fff;
+            }
+        }
+    }
+    .dropdown-menu {
+        background-color: #2c2c2c;
+        li {
+          color: #ffffff;
+          height: 38px;
+          a,
+          span {
+            color: #ffffff;
+            display: inline-block;
+            -webkit-font-smoothing: antialiased;
+            padding: 0 25px;
+            width: 100%;
+            height: 100%;
+            line-height: 39px;
+            &:hover,
+            &.active {
+              background-color: #383838;
+              color: #7cdaff;
+            }
+          }
+        }
+        border-top: none;
+        margin-top: -1px;
+        margin-left: -1px;
+        padding: 15px 0 18px;
+        left: 0;
+        right: auto;
+        @media screen and (max-width: $break) {
+            background: none transparent;
+            border-color: transparent;
+            box-shadow: none;
+            display: block;
+            padding: 0;
+            position: static;
+            top: auto;
+            left: auto;
+            float: none;
+            li a.nav-title {
+                color: #80d4ff;
+                font-weight: bold;
+            }
+        }
+    }
+    .nav-user {
+        .dropdown-menu {
+            @extend .dropdown-menu;
+            left: -110px;
+        }
+    }
+    //bootstrap init
+    ul.nav li.dropdown:hover > ul.dropdown-menu {
+        display: block;
+    }
+    .glyphicon-new-window {
+        top: 4px;
+        transform: scale(0.9);
+        &:before {
+            content: url('data:image/svg+xml;utf8,<svg width="16" height="16" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M1408 928v320q0 119-84.5 203.5t-203.5 84.5h-832q-119 0-203.5-84.5t-84.5-203.5v-832q0-119 84.5-203.5t203.5-84.5h704q14 0 23 9t9 23v64q0 14-9 23t-23 9h-704q-66 0-113 47t-47 113v832q0 66 47 113t113 47h832q66 0 113-47t47-113v-320q0-14 9-23t23-9h64q14 0 23 9t9 23zm384-864v512q0 26-19 45t-45 19-45-19l-176-176-652 652q-10 10-23 10t-23-10l-114-114q-10-10-10-23t10-23l652-652-176-176q-19-19-19-45t19-45 45-19h512q26 0 45 19t19 45z"/></svg>');
+        }
+    }
+    @media screen and (max-width: $break) {
+        .dropdown.open .dropdown-menu > li > a {
+            color: #0088cc;
+            padding: 0 0 0 30px;
+            line-height: 39px;
+        }
+    }
+}
+
+html[lang=en] {
+    body > .navbar > div.container {
+        max-width: 1170px;
+        padding: 35px 0 57px;
+
+        &.small {
+            padding: 0;
+        }
+    }
+
+    .navbar-collapse {
+        @media screen and (max-width: $break - 1px) {
+            background-image: none;
+            background-color: #2c2c2c;
+
+            > ul.navbar-nav {
+                margin: 0;
+            }
+        }
+    }
+
+    // Override padding-top of main div (only when a specific class is set)
+    .main {
+        &.en-globalnav-shown {
+            padding-top: 50px;
+        }
+    }
+}

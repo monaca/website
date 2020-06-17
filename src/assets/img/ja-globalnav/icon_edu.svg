@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="icon_edu" transform="translate(-1095.509 -405)">
+    <g id="icon_area" transform="translate(1095.509 405)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="26" height="26" stroke="none"/>
+      <rect x="0.5" y="0.5" width="25" height="25" fill="none"/>
+    </g>
+    <rect id="長方形_308" data-name="長方形 308" width="11.7" height="11.7" rx="1" transform="translate(1102.659 414.425)" fill="#3b8be0" opacity="0.7"/>
+    <rect id="長方形_310" data-name="長方形 310" width="19.5" height="8.775" rx="1" transform="translate(1098.759 417.35)" fill="#3b8be0" opacity="0.7"/>
+    <path id="長方形_309" data-name="長方形 309" d="M1,0H2.9a1,1,0,0,1,1,1V4.875a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V1A1,1,0,0,1,1,0Z" transform="translate(1106.559 409.55)" fill="#3b8be0" opacity="0.7"/>
+  </g>
+</svg>

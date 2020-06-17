@@ -22,11 +22,16 @@
     "server:ja": "grunt server:ja",
     "server:en": "grunt server:en"
   },
+  "browserslist": [
+    "IE 11",
+    "Chrome 81"
+  ],
   "devDependencies": {
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "assemble-contrib-i18n": "^0.1.6",
     "assemble-middleware-sitemap": "^0.2.5",
+    "autoprefixer": "^9.8.0",
     "grunt": "^1.0.4",
     "grunt-assemble": "^0.4.0",
     "grunt-aws-s3": "^0.12.3",
@@ -42,18 +47,18 @@
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0",
     "grunt-sass": "^3.1.0",
     "grunt-styledocco": "^0.3.0",
+    "grunt-stylelint": "^0.15.0",
     "load-grunt-tasks": "^5.1.0",
-    "node-bourbon": "^1.2.3",
+    "node-bourbon": "^4.2.8",
     "node-sass": "^4.13.0",
+    "stylelint": "^13.6.0",
+    "stylelint-config-sass-guidelines": "^7.0.0",
     "time-grunt": "^1.0.0",
     "workbox-build": "^3.6.3"
   },
-  "browserslist": [
-    "IE 11",
-    "Chrome 81"
-  ],
   "licenses": [
     {
       "type": "MIT",

@@ -2,7 +2,16 @@
 title: テクニカルサポート | MonacaでHTML5モバイルアプリ開発
 class: support
 description: クラウド上のアプリ開発環境。iOS/Android/Windows向けHTML5ハイブリッドアプリに対応。
+stylesheets:
+    - /css/bootstrap.min.css
+    - /css/all.css
+    - https://use.typekit.net/tky7gag.css
+    - https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css
+show_ja_globalnav: true
 ---
+<section class="nav clearfix">
+  <a href="/support" class="back"><img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg">お問い合わせトップ</a>
+</section>
 
 <section id="loading" class="subpage"><img src="/img/common/loading_large.gif" /></section>
 
@@ -42,12 +51,17 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
     <h1 class="for-technical">テクニカルサポート</h1>
     <h1 class="for-bugs">障害・不具合報告</h1>
 
-    <p>下のフォームにて検索キーワード(例:'Android Build', 'Monaca CLI')を入力し、お問い合わせに関する内容をMonacaドキュメントから探すことができます。解決しない場合は、以下のフォームをご記入ください</p>
-    <div class="aside-search" id="aside-search" style="padding-top: 10px; padding-bottom: 20px;">
-      <input type="search" id="technical-search-doc" placeholder="キーワード"><br />
-    </div>
+    <p class="notification for-technical">
+      開発サポートはもちろん、トレーニングや開発依頼など、技術に関することをお気軽にお問い合わせください。
+    </p>
+    <p class="sub-notification for-technical">
+      ※ テクニカルサポートは有償サービスです。利用には、Proプラン以上の加入とサポートチケットが必要です。
+    </p>
+    <p class="notification for-bugs">
+      障害・不具合についての報告は、こちらからお願いいたします。
+    </p>
+    <p class="sub-notification for-bugs"></p>
 
-    <p class="notification for-technical">テクニカルサポートは有償サービスです。利用には、Proプラン以上の加入とサポートチケットが必要です。</p>
     <hr class="for-technical">
 
     <form id="support-form">
@@ -88,38 +102,38 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
           </td>
         </tr>
         <tr>
-          <td class="colspan-title">
+          <td class="label title-label">
             <span class="input-label">対象プロジェクト<span class="required">*</span></span>
           </td>
-          <td class="form-item">
+          <td class="form-item block-item">
             <select name="support[project_id]" id="project-id"></select>
             <p class="form-error" id="project-id-error"></p>
           </td>
         </tr>
         <tr>
-          <td colspan="2" class="colspan-title"><span class="input-label">お問い合わせ内容</span>
+          <td colspan="2" class="label title-label"><span class="input-label">お問い合わせ内容</span>
           </td>
         </tr>
         <tr>
           <td class="label no-label"></td>
-          <td class="form-item">
+          <td class="form-item block-item separate-table-block-item">
             <textarea rows="4" cols="30" name="support[message]" id="message" class="support-text" placeholder="ここに内容を記入して下さい"></textarea>
             <p class="form-error" id="message-error"></p>
           </td>
         </tr>
         <tr>
-          <td colspan="2" class="colspan-title">
+          <td colspan="2" class="label title-label">
             <span class="input-label">現象が発生する端末を入力してください（任意）</span></td>
         </tr>
         <tr>
           <td class="label no-label"></td>
-          <td class="form-item">
+          <td class="form-item block-item separate-table-block-item">
             <ul id="device-checkbox"></ul>
             <label class="other-device-label"><input type="text" name="support[device_os_other]" class="target-device" id="device-os-other" placeholder="入力してください" /></label>
           </td>
         </tr>
         <tr class="for-technical">
-          <td colspan="2" class="colspan-title">
+          <td colspan="2" class="label title-label">
             <span class="input-label">保有しているサポートチケット</span>
             <strong class="ticket-retain"></strong>枚 <a id="show-support-ticket" class="link-blue">所有チケットの詳細を表示</a>
             <div class="balloon-wrapper" id="support-ticket-balloon" style="display: none;">
@@ -136,7 +150,7 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
         </tr>
         <tr class="for-technical">
           <td class="label no-label"></td>
-          <td class="form-item">
+          <td class="form-item block-item separate-table-block-item">
             <p>テクニカルサポートの返信の際に1枚のチケットが減算されます。ただし、ユーザー由来の問題でない場合にはその限りではありません。</p>
           </td>
         </tr>
@@ -201,24 +215,3 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
   </div>
 </section>
 
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script type="text/javascript">
-  {{#is language "ja"}}
-      docsearch({
-      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
-      indexName: 'monaca',
-      inputSelector: '#technical-search-doc',
-      algoliaOptions: { 'facetFilters': ["language:ja"] },
-      debug: false // Set debug to true if you want to inspect the dropdown
-    });
-  {{else}}
-      docsearch({
-      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
-      indexName: 'monaca',
-      inputSelector: '#technical-search-doc',
-      algoliaOptions: { 'facetFilters': ["language:en"] },
-      debug: false // Set debug to true if you want to inspect the dropdown
-    });
-  {{/is}}
-</script>

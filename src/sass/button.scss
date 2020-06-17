@@ -1,0 +1,254 @@
+/*
+#### %btn for button template
+*/
+
+$hover-intensity: 5;
+
+@if not variable-exists(__is_button_imported) { // include guard
+    %btn {
+        border: none;
+        display: inline-block;
+        $height: 32px;
+        letter-spacing: 1px;
+        height: $height;
+        text-align: center;
+        padding: 0 14px;
+        font-size: 13px;
+        line-height: $height;
+        text-decoration: none !important;
+        border-radius: 4px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        font-weight: 500;
+        color: #fff;
+        &:hover {
+            cursor: pointer;
+            outline: none;
+        }
+        &[disabled] {
+            cursor: not-allowed;
+            opacity: 0.3;
+            filter: alpha(opacity=30);
+        }
+    }
+    %flat-btn {
+        border-radius: 3px;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin: 0;
+        padding: 0 14px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        height: 40px;
+        line-height: 40px;
+        text-decoration: none;
+        -webkit-font-smoothing: antialiased;
+        transition-property: background-color, border-color, color;
+        transition-duration: 80ms, 80ms, 80ms;
+        &:hover {
+            text-decoration: none;
+        }
+        &:focus {
+            outline: none;
+            color: #fff;
+        }
+        &:active {
+            opacity: 1;
+            outline: none;
+        }
+        &[disabled] {
+            cursor: default;
+            opacity: 0.4;
+            pointer-events: none;
+            &:hover {
+                opacity: 0.4;
+            }
+            &:active {
+                opacity: 0.4;
+            }
+        }
+    }
+    /*
+    # Blue button
+    
+    Use with "btn" class
+    
+    ```
+    <a href="#" class="btn btn-blue">Test</a>
+    ```
+    */
+    
+    .btn-blue {
+        @extend %flat-btn;
+        background-color: #468fff;
+        border: 1px solid #468fff;
+        color: #fff;
+        font-weight: 400;
+        text-shadow: none;
+        color: #fff;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        &:hover {
+            background-color: lighten(#468fff, $hover-intensity);
+            color: #fff;
+        }
+    }
+    /*
+    # Green button
+    
+    ```
+    <a href="#" class="btn btn-green">Test</a>
+    ```
+    */
+    
+    .btn-green {
+        @extend %flat-btn;
+        background-color: #8bcc37;
+        border: 1px solid #8bcc37;
+        color: #fff;
+        font-weight: 400;
+        text-shadow: none;
+        &:hover {
+            background-color: lighten(#8bcc37, $hover-intensity + 2);
+            color: #fff;
+        }
+    }
+    /*
+    # White button
+    
+    ```
+    <a href="#" class="btn btn-white">Test</a>
+    ```
+    */
+    
+    .btn-white {
+        @extend %flat-btn;
+        background-color: #ffffff;
+        border: 1px solid #c9c9c9;
+        color: #505763;
+        &:hover{
+            color: lighten(#505763, $hover-intensity);
+        }
+    }
+    /*
+    # Dark gray button
+    
+    ```
+    <a href="#" class="btn btn-darkgray">Test</a>
+    ```
+    */
+    
+    .btn-darkgray {
+        @extend %btn;
+        background-color: #4d5868;
+        color: #ffffff;
+        &:hover {
+            background-color: lighten(#4d5868, $hover-intensity + 3);
+            color: #ffffff;
+        }
+    }
+    
+    .btn-gray {
+      @extend %btn;
+      background-color: #6F777F;
+      color: #ffffff;
+      &:hover {
+        background-color: lighten(#6F777F, $hover-intensity + 3);
+        color: #ffffff;
+    }
+    }
+    
+    /*
+    # White button with border
+    
+    ```
+    <div style="background-color: #333; padding: 30px;">
+      <a href="#" class="btn btn-line-white">Test</a>
+    </div>
+    ```
+    */
+    
+    .btn-line-white {
+        @extend %flat-btn;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        color: #ffffff;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #ffffff;
+        }
+    }
+    /*
+    # Orange button
+    
+    ```
+    <a href="#" class="btn btn-orange">Test</a>
+    ```
+    */
+    
+    .btn-orange {
+        @extend %btn;
+        background-color: #ff8b24;
+        border: 1px solid #ec761f;
+        color: #fff;
+        text-shadow: 0 -1px 0px rgba(0, 0, 0, .1);
+        &[disabled] {
+            opacity: 0.2;
+        }
+        &:not([disabled]) {
+            &:hover {
+                background-color: lighten(#ff8b24, $hover-intensity);
+                border-color: #ff8f4b;
+                opacity: 0.85;
+            }
+            &:active {
+                background-color: darken(#ff8b24, 10);
+            }
+        }
+        .small {
+            font-size: 0.88rem;
+        }
+    }
+    /*
+    # Black button
+    
+    ```
+    <a href="#" class="btn btn-black">Test</a>
+    ```
+    */
+    
+    .btn-black {
+        @extend %btn;
+        background-color: #505763;
+        border: 1px solid #373d47;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        &[disabled]:hover {
+            opacity: 0.2;
+        }
+        &[disabled]:active {
+            opacity: 0.2;
+        }
+        &:hover {
+            opacity: 0.85;
+        }
+        &:active {
+            opacity: 1;
+        }
+    }
+    
+    .submit-btn {
+      width: 200px;
+    }
+}
+$__is_button_imported: true;

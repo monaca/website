@@ -2,57 +2,42 @@
 title: Monaca - プロダクトパートナー一覧
 class: product-partner
 description: クラウド上のアプリ開発環境。iOS/Android/Windows向けHTML5ハイブリッドアプリに対応。
-viewport: width=1200px
+stylesheets:	
+    - /css/bootstrap.min.css	
+    - /css/all.css	
+    - https://use.typekit.net/tky7gag.css	
+    - https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css
+show_ja_globalnav: true
 ---
 
 <div id="main-wrap">
   <section id="productsPartner">
     <div class="productsPartner-header">
-      <div class="productsPartner-contents">
-        <div class="productsPartner-txt">
-          <h2 class="title"><img src="/img/product-partner/bg_keyvisual_title.png" alt="Monacaプロダクトパートナー　HTML5モバイルアプリ開発ツールMonacaを使って、HTML5、JavaScriptによるハイブリッド型のモバイルアプリ（ハイブリッドアプリ）開発を行います。"></h2>
+      <h1>プロダクトパートナー</h1>
+      <div class="description">
+        <div class="text">
+          アプリ開発の効率化や収益化を支援するツールをご紹介します。<br class="hide-mobile">
+          各サービスまたはプロダクトパートナーへの登録にご興味ある方は、お気軽にお問い合わせください。
         </div>
       </div>
     </div>
 
-    <div class="cate">
-      <ul class="cate-link">
-        <li>
-          <a href="#pp-backend">
-            <div class="cate-img backend-img"></div>
-            <p><i class="glyphicon glyphicon-chevron-down"></i> バックエンド</p>
-          </a>
-        </li>
-        <li>
-          <a href="#pp-test">
-            <div class="cate-img test-img"></div>
-            <p><i class="glyphicon glyphicon-chevron-down"></i> テスト支援</p>
-          </a>
-        </li>
-        <li>
-          <a href="#pp-ad">
-            <div class="cate-img ad-img"></div>
-            <p><i class="glyphicon glyphicon-chevron-down"></i> 広告</p>
-          </a>
-        </li>
-        <li>
-          <a href="#pp-analytics">
-            <div class="cate-img analytics-img"></div>
-            <p><i class="glyphicon glyphicon-chevron-down"></i> 分析</p>
-          </a>
-        </li>
-        <li>
-          <a href="#pp-security">
-            <div class="cate-img security-img"></div>
-            <p><i class="glyphicon glyphicon-chevron-down"></i> セキュリティ</p>
-          </a>
-        </li>
-        <li>
-          <a href="#pp-iot">
-            <div class="cate-img iot-img"></div>
-            <p><i class="glyphicon glyphicon-chevron-down"></i> IoTデバイス</p>
-          </a>
-        </li>
+    <ul class="productsPartner-nav">
+      <li class="productsPartner-nav-item"><a href="#pp-backend">バックエンド</a></li>
+      <li class="productsPartner-nav-item"><a href="#pp-test">テスト支援</a></li>
+      <li class="productsPartner-nav-item"><a href="#pp-ad">広告</a></li>
+      <li class="productsPartner-nav-item"><a href="#pp-analytics">分析</a></li>
+      <li class="productsPartner-nav-item"><a href="#pp-security">セキュリティ</a></li>
+      <li class="productsPartner-nav-item"><a href="#pp-iot">IoTデバイス</a></li>
+    </ul>
+    <div class="list-container">
+      <ul class="link-list">
+        <li><a href="#pp-backend"><i class="glyphicon glyphicon-chevron-down"></i> バックエンド</a></li>
+        <li><a href="#pp-test"><i class="glyphicon glyphicon-chevron-down"></i> テスト支援</a></li>
+        <li><a href="#pp-ad"><i class="glyphicon glyphicon-chevron-down"></i> 広告</a></li>
+        <li><a href="#pp-analytics"><i class="glyphicon glyphicon-chevron-down"></i> 分析</a></li>
+        <li><a href="#pp-security"><i class="glyphicon glyphicon-chevron-down"></i> セキュリティ</a></li>
+        <li><a href="#pp-iot"><i class="glyphicon glyphicon-chevron-down"></i> IoTデバイス</a></li>
       </ul>
     </div>
 
@@ -62,19 +47,29 @@ viewport: width=1200px
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_mbaas.png" alt="ニフクラ mobile backend">
-            <a class="btn-gray-line" href="http://mb.cloud.nifty.com/monaca_mbaas/" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="http://mb.cloud.nifty.com/monaca_mbaas/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="http://mb.cloud.nifty.com/monaca_mbaas/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>ニフクラ mobile backend</h4>
-              <p>ニフクラ mobile backendはスマートフォンアプリ開発のバックエンド機能をパーツとしてクラウド上から利用できるサービスです。「会員認証」「多様なPUSH通知」「SNS連携」「位置情報検索」などを簡単にアプリに組み込むことが可能。これらの機能を、安心の国産品質にて【無料から】ご利用頂けます。開発工数の削減・スピード向上に加え、サーバ運用の手間も省いて、クライアントアプリ開発に集中してください！</p>
+              <p>ニフクラ mobile
+                backendはスマートフォンアプリ開発のバックエンド機能をパーツとしてクラウド上から利用できるサービスです。「会員認証」「多様なPUSH通知」「SNS連携」「位置情報検索」などを簡単にアプリに組み込むことが可能。これらの機能を、安心の国産品質にて【無料から】ご利用頂けます。開発工数の削減・スピード向上に加え、サーバ運用の手間も省いて、クライアントアプリ開発に集中してください！
+              </p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>富士通クラウドテクノロジーズ株式会社</h5></li>
-              <li class="form link-area"><a href="http://mb.cloud.nifty.com/support.htm" target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
-              <li class="homepage"><a href="http://mb.cloud.nifty.com/monaca_mbaas/" target="_blank">ホームページ <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a href="http://mb.cloud.nifty.com/support.htm" target="_blank">お問い合わせフォーム <i
+                      class="fa fa-external-link"></i></a></li>
+              <li class="homepage"><a href="http://mb.cloud.nifty.com/monaca_mbaas/" target="_blank">ホームページ <i
+                      class="fa fa-external-link"></i></a></li>
 
             </ul>
           </td>
@@ -106,66 +101,95 @@ viewport: width=1200px
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_baas.png" alt="BaaS＠rakuza">
-            <a class="btn-gray-line" href="http://www.raku-za.jp/baas/" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="http://www.raku-za.jp/baas/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="http://www.raku-za.jp/baas/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>BaaS＠rakuza</h4>
-              <p>BaaS@rakuzaは、モバイルアプリの開発・運用に必要となるバックエンド機能を提供するクラウドサービスです。ユーザー管理、プッシュ通知、データ管理をベースにクーポン管理やポイント管理などのサービス業向けアプリに最適な機能とアプリの運用上必要となる管理者画面を提供しています。また、複数事業者で1アプリを提供するポータル（マルチテナント）環境での利用も可能です。提供形態はクラウド版とオンプレミス版がありますが、まずは無料体験版からBaaS@rakuzaでの簡単アプリ開発をお試しください。</p>
+              <p>
+                BaaS@rakuzaは、モバイルアプリの開発・運用に必要となるバックエンド機能を提供するクラウドサービスです。ユーザー管理、プッシュ通知、データ管理をベースにクーポン管理やポイント管理などのサービス業向けアプリに最適な機能とアプリの運用上必要となる管理者画面を提供しています。また、複数事業者で1アプリを提供するポータル（マルチテナント）環境での利用も可能です。提供形態はクラウド版とオンプレミス版がありますが、まずは無料体験版からBaaS@rakuzaでの簡単アプリ開発をお試しください。</p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>ピープルソフトウェア株式会社 </h5></li>
               <li class="tel link-area">0120-542-070（無料）</li>
-              <li class="form"><a href="http://www.raku-za.jp/baas/inquiry/" target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
+              <li class="form"><a href="http://www.raku-za.jp/baas/inquiry/" target="_blank">お問い合わせフォーム <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_apppot.png" alt="AppPot">
-            <a class="btn-gray-line" href="http://apppot.jp/" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="http://apppot.jp/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="http://apppot.jp/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>AppPot</h4>
               <p>AppPotはユーザー管理、データ管理API、Push通知などの機能をモバイルアプリやWebアプリからAPI経由で利用できるサービス、ソフトウェアです。<br>
-              AppPotは企業向けに特化しており、ActiveDirectoryやGoogle Appsと連携したユーザー認証、他システムのDBやWebサービスとの連携などの企業向けの機能が用意されています。<br>
-              導入にはクラウド版とオンプレミス版を選択できます。</p>
+                AppPotは企業向けに特化しており、ActiveDirectoryやGoogle Appsと連携したユーザー認証、他システムのDBやWebサービスとの連携などの企業向けの機能が用意されています。<br>
+                導入にはクラウド版とオンプレミス版を選択できます。</p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>NCデザイン＆コンサルティング株式会社 </h5></li>
-              <li class="mail link-area"><a href="mailto:info@ncdc.co.jp?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ <i class="fa fa-external-link"></i></a></li>
+              <li class="mail link-area"><a href="mailto:info@ncdc.co.jp?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ <i
+                      class="fa fa-external-link"></i></a></li>
               <li class="tel link-area">050-3530-9791</li>
-              <li class="form"><a href="http://apppot.jp/contact.html" target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
+              <li class="form"><a href="http://apppot.jp/contact.html" target="_blank">お問い合わせフォーム <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_kintone.png" alt="Kintone">
-            <a class="btn-gray-line" href="https://kintone.cybozu.com/jp/" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="https://kintone.cybozu.com/jp/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="https://kintone.cybozu.com/jp/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>kintone（キントーン）</h4>
-              <p>業務に合わせたシステムをドラッグ＆ドロップでかんたんに作成できる、サイボウズのクラウドサービスです。社員間のつながりを活性化する社内SNSとしての機能も備えているため、スピーディーにチーム間の情報共有ができます。多種多様な業務に適用できるようにkintoneには、画面をカスタマイズできるJavaScript API、データ連携がしやすいREST APIを揃えており、数多くのシステム、サービスとの連携の実績も業種職種向けに豊富です。また、実験したい開発者向けに、1年間無償で利用できる開発者ライセンスを用意しており、ユーザー同士で問題解決できるコミュニティサイトも充実しています。</p>
+              <p>
+                業務に合わせたシステムをドラッグ＆ドロップでかんたんに作成できる、サイボウズのクラウドサービスです。社員間のつながりを活性化する社内SNSとしての機能も備えているため、スピーディーにチーム間の情報共有ができます。多種多様な業務に適用できるようにkintoneには、画面をカスタマイズできるJavaScript
+                API、データ連携がしやすいREST
+                APIを揃えており、数多くのシステム、サービスとの連携の実績も業種職種向けに豊富です。また、実験したい開発者向けに、1年間無償で利用できる開発者ライセンスを用意しており、ユーザー同士で問題解決できるコミュニティサイトも充実しています。</p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>サイボウズ株式会社 </h5></li>
-              <li class="form link-area"><a href="https://kintone.cybozu.com/jp/faq/" target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a href="https://kintone.cybozu.com/jp/faq/" target="_blank">お問い合わせフォーム <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_pt.png" alt="Beacapp">
-            <a class="btn-gray-line" href="https://push.appirits.com/" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="https://push.appirits.com/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="https://push.appirits.com/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
@@ -173,216 +197,305 @@ viewport: width=1200px
               <p>PushTrackerは、多数のユーザー属性を用いたセグメント配信と、通知後の行動分析により、最適なプッシュ通知を実現するSaaS型のサービスです。<br>
                 スマートフォンアプリだけでなくWebブラウザにも通知できるので、アプリを持たれていない企業様でも簡単にプッシュ通知を開始できます。<br>
                 更に、ユーザー行動に合わせて通知できる「イベント通知」により、離脱ユーザーを呼び戻すだけでなく、能動的なユーザーをよりアクティブにすることも可能です。</p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>株式会社アピリッツ </h5></li>
-              <li class="mail link-area"><a href="mailto:dsd-sales@appirits.com?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ <i class="fa fa-external-link"></i></a></li>
+              <li class="mail link-area"><a href="mailto:dsd-sales@appirits.com?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ
+                <i class="fa fa-external-link"></i></a></li>
               <li class="tel link-area">03-5485-7270</li>
-              <li class="form link-area"><a href="https://push.appirits.com/inquiry/privacy_collect" target="_blank">お問い合わせフォーム  <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a href="https://push.appirits.com/inquiry/privacy_collect" target="_blank">お問い合わせフォーム
+                <i class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_beacapp.png" alt="Beacapp">
-            <a class="btn-gray-line" href="https://www.beacapp.com/" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="https://www.beacapp.com/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="https://www.beacapp.com/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Beacapp</h4>
               <p>アプリの Beacon 対応を簡単・迅速に実現し、現地でのユーザー体験を演出・効果測定できるクラウドサービスです。<br>
-              Beaconを使うことで、GPSよりもさらに近距離・高精度の位置情報を利用することができます。<br>
-              イベントアプリ、ゲームアプリ、小売店向けアプリ、行動解析など多くのアプリで採用されています。</p>
+                Beaconを使うことで、GPSよりもさらに近距離・高精度の位置情報を利用することができます。<br>
+                イベントアプリ、ゲームアプリ、小売店向けアプリ、行動解析など多くのアプリで採用されています。</p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>株式会社ジェーエムエーシステムズ </h5></li>
-              <li class="form link-area"><a href="https://www.beacapp.com/contact/" target="_blank">お問い合わせフォーム  <i class="fa fa-external-link"></i></a></li>
-              <li class="homepage"><a href="https://www.beacapp.com/" target="_blank">製品ページの URL <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a href="https://www.beacapp.com/contact/" target="_blank">お問い合わせフォーム <i
+                      class="fa fa-external-link"></i></a></li>
+              <li class="homepage"><a href="https://www.beacapp.com/" target="_blank">製品ページの URL <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_kii.png" alt="Kii Cloud">
-            <a class="btn-gray-line" href="https://kii.com" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="https://kii.com" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="https://kii.com" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Kii Cloud</h4>
-              <p>Kiiは、IoT機器や、モバイルアプリに必要なサーバ側の機能をクラウド (API) でご提供するサービスです。モノ管理、ユーザ管理、データ管理、プッシュ通知、位置情報、独自サーバコード、分析等の機能と、様々なOS対応のSDK（APIと通信するためのプログラムライブラリ）が揃っており、開発工数、費用を大幅に削減できます。日英中の３言語で詳細な技術資料を公開済みで、コミュニティサイトで質問したり情報共有いただくこともできます。どうぞご利用ください！</p>
+              <p>Kiiは、IoT機器や、モバイルアプリに必要なサーバ側の機能をクラウド (API)
+                でご提供するサービスです。モノ管理、ユーザ管理、データ管理、プッシュ通知、位置情報、独自サーバコード、分析等の機能と、様々なOS対応のSDK（APIと通信するためのプログラムライブラリ）が揃っており、開発工数、費用を大幅に削減できます。日英中の３言語で詳細な技術資料を公開済みで、コミュニティサイトで質問したり情報共有いただくこともできます。どうぞご利用ください！</p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>Kii株式会社</h5></li>
-              <li class="mail link-area"><a href="mailto:support@kii.com?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ <i class="fa fa-external-link"></i></a></li>
+              <li class="mail link-area"><a href="mailto:support@kii.com?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
       </table>
-      <p class="btn-btt"><a href="#header-top">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
+      <p class="btn-btt"><a href="#productsPartner">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
 
       <h3 id="pp-test">テスト支援</h3>
       <table>
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_remote_testkit.png" alt="Remote Testkit">
-            <a class="btn-gray-line" href="https://secure.appkitbox.com/agencies/affiliate?ref=aa1069441222" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="https://secure.appkitbox.com/agencies/affiliate?ref=aa1069441222"
+               target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="https://secure.appkitbox.com/agencies/affiliate?ref=aa1069441222" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Remote Testkit</h4>
-              <p>RemoteTestKitは、NTTレゾナント社が提供する、スマートフォン実機の「リモート・レンタル・サービス」です。<br>パソコンから遠隔のスマートフォン実機にリモート接続を行い、パソコンの画面にスマートフォンの画面を表示させます。<br>そのスマートフォンの画面をパソコンから操作することで、手元に実機がなくてもアプリケーションやWebサイトの検証が簡単に実現できるソリューション型ソフトウェアです。</p>
+              <p>RemoteTestKitは、NTTレゾナント社が提供する、スマートフォン実機の「リモート・レンタル・サービス」です。<br>パソコンから遠隔のスマートフォン実機にリモート接続を行い、パソコンの画面にスマートフォンの画面を表示させます。<br>そのスマートフォンの画面をパソコンから操作することで、手元に実機がなくてもアプリケーションやWebサイトの検証が簡単に実現できるソリューション型ソフトウェアです。
+              </p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>エヌ・ティ・ティ レゾナント株式会社</h5></li>
               <li class="tantou">スマートナビゲーション事業部<br>Remote TestKit担当</li>
-              <li class="form link-area"><a href="https://help.goo.ne.jp/cc/app/m/129400/" target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
-              <li class="homepage"><a href="https://secure.appkitbox.com/agencies/affiliate?ref=aa1069441222" target="_blank">ホームページ <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a href="https://help.goo.ne.jp/cc/app/m/129400/" target="_blank">お問い合わせフォーム <i
+                      class="fa fa-external-link"></i></a></li>
+              <li class="homepage"><a href="https://secure.appkitbox.com/agencies/affiliate?ref=aa1069441222"
+                                      target="_blank">ホームページ <i class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
       </table>
-      <p class="btn-btt"><a href="#header-top">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
+      <p class="btn-btt"><a href="#productsPartner">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
 
       <h3 id="pp-ad">広告</h3>
       <table>
         <tr>
           <th class="products-name">
-            <img src="/img/product-partner/logo_ad_generation.png" alt="appC cloud" style="margin: -30px 0 0;">
-            <a class="btn-gray-line" href="http://www.scaleout.jp/ad-generation/" target="_blank">詳細を見る</a>
+            <img src="/img/product-partner/logo_ad_generation.png" alt="appC cloud" >
+            <a class="btn-gray-line hide-tablet" href="http://www.scaleout.jp/ad-generation/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="http://www.scaleout.jp/ad-generation/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Ad Generation（アドジェネ）</h4>
-              <p>Ad Generation（アドジェネ）は複数のDSP・アドネットワークから、最も収益の高い広告を自動配信するSSPサービスです。<br />１つの広告タグを導入するだけで、手間なく20社以上のDSP・アドネットワークの様々な種類の広告が配信可能です。<br />配信状況や収益はアドジェネ管理画面で一括管理、メディア様のマネタイズを最大限サポート致します。</p>
+              <p>Ad Generation（アドジェネ）は複数のDSP・アドネットワークから、最も収益の高い広告を自動配信するSSPサービスです。<br/>１つの広告タグを導入するだけで、手間なく20社以上のDSP・アドネットワークの様々な種類の広告が配信可能です。<br/>配信状況や収益はアドジェネ管理画面で一括管理、メディア様のマネタイズを最大限サポート致します。
+              </p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>Supership株式会社</h5></li>
               <!-- <li class="tantou">営業チーム</li> -->
-              <li class="mail link-area"><a href="mailto:adg-info@supership.jp?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ <i class="fa fa-external-link"></i></a></li>
+              <li class="mail link-area"><a href="mailto:adg-info@supership.jp?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ
+                <i class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
       </table>
-      <p class="btn-btt"><a href="#header-top">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
+      <p class="btn-btt"><a href="#productsPartner">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
 
       <h3 id="pp-analytics">分析</h3>
       <table>
         <tr>
           <th class="products-name">
-            <img src="/img/product-partner/logo_repro.png" alt="Repro" style="margin: -30px 0 0;">
-            <a class="btn-gray-line" href="https://repro.io/" target="_blank">詳細を見る</a>
+            <img src="/img/product-partner/logo_repro.png" alt="Repro" >
+            <a class="btn-gray-line hide-tablet" href="https://repro.io/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="https://repro.io/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Repro</h4>
-              <p>Reproは従来型の定量分析に加え、ユーザーの画面操作を動画で見える化する定性分析、さらには、各種分析機能からユーザーをターゲティングして、プッシュ通知やアプリ内メッセージを配信できる機能を提供するアプリの成長支援プラットフォームです。アプリへの組み込みは非常に簡単で、しかも、「無料」から御利用頂けます。</p>
+              <p>
+                Reproは従来型の定量分析に加え、ユーザーの画面操作を動画で見える化する定性分析、さらには、各種分析機能からユーザーをターゲティングして、プッシュ通知やアプリ内メッセージを配信できる機能を提供するアプリの成長支援プラットフォームです。アプリへの組み込みは非常に簡単で、しかも、「無料」から御利用頂けます。</p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>Repro株式会社</h5></li>
-              <li class="form link-area"><a href="https://support.repro.io/hc/ja/requests/new" target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
-              <li class="homepage"><a href="https://repro.io/" target="_blank">ホームページ <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a href="https://support.repro.io/hc/ja/requests/new" target="_blank">お問い合わせフォーム
+                <i class="fa fa-external-link"></i></a></li>
+              <li class="homepage"><a href="https://repro.io/" target="_blank">ホームページ <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_amazon.png" alt="Amazon Mobile Analytics">
-            <a class="btn-gray-line" href="http://aws.amazon.com/jp/mobileanalytics/" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="http://aws.amazon.com/jp/mobileanalytics/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="http://aws.amazon.com/jp/mobileanalytics/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Amazon Mobile Analytics</h4>
-              <p>Amazon Mobile Analytics を使用すると、アプリケーションの使用状況と収益を測定できます。新規ユーザーとリピートユーザー、アプリケーション収益、ユーザー定着率、カスタムのアプリケーション内動作イベントなどの主要トレンドを追跡することで、データに基づいて決定し、アプリケーションの関心度と収益力を高めることができます。Mobile Analytics コンソールで主要なグラフを表示し、アプリケーションイベントデータを Amazon S3 と Amazon Redshift に自動的にエクスポートして、カスタム分析を実行できます。</p>
+              <p>Amazon Mobile Analytics
+                を使用すると、アプリケーションの使用状況と収益を測定できます。新規ユーザーとリピートユーザー、アプリケーション収益、ユーザー定着率、カスタムのアプリケーション内動作イベントなどの主要トレンドを追跡することで、データに基づいて決定し、アプリケーションの関心度と収益力を高めることができます。Mobile
+                Analytics コンソールで主要なグラフを表示し、アプリケーションイベントデータを Amazon S3 と Amazon Redshift に自動的にエクスポートして、カスタム分析を実行できます。</p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>アマゾン株式会社</h5></li>
-              <li class="form link-area"><a href="https://aws.amazon.com/jp/contact-us/aws-sales/" target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
-              <li class="homepage"><a href="http://aws.amazon.com/jp/" target="_blank">ホームページ <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a href="https://aws.amazon.com/jp/contact-us/aws-sales/" target="_blank">お問い合わせフォーム
+                <i class="fa fa-external-link"></i></a></li>
+              <li class="homepage"><a href="http://aws.amazon.com/jp/" target="_blank">ホームページ <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_appsflyer.png" alt="AppsFlyer株式会社">
-            <a class="btn-gray-line" href="https://www.appsflyer.com/jp/overview/" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="https://www.appsflyer.com/jp/overview/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="https://www.appsflyer.com/jp/overview/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>AppsFlyer</h4>
               <p>AppsFlyerは、モバイル広告のアトリビューション分析のマーケットリーダーです。
-              ターゲットを明確にし、広告支出を最適化、そしてROIを大幅に向上できるようにマーケターを支援しています。<br>AppsFlyerのAPIを利用することで、AppsFlyerの機能をユーザーアプリにて簡単に利用および統合できます。<br>詳細情報は、AppsFlyerにご確認ください。</p>
+                ターゲットを明確にし、広告支出を最適化、そしてROIを大幅に向上できるようにマーケターを支援しています。<br>AppsFlyerのAPIを利用することで、AppsFlyerの機能をユーザーアプリにて簡単に利用および統合できます。<br>詳細情報は、AppsFlyerにご確認ください。
+              </p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>AppsFlyer株式会社</h5></li>
-              <li class="form link-area"><a href="https://www.appsflyer.com/jp/contact/" target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
-              <li class="homepage"><a href="https://www.appsflyer.com/jp/" target="_blank">ホームページ <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a href="https://www.appsflyer.com/jp/contact/" target="_blank">お問い合わせフォーム <i
+                      class="fa fa-external-link"></i></a></li>
+              <li class="homepage"><a href="https://www.appsflyer.com/jp/" target="_blank">ホームページ <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_yahooymi.png" alt="ヤフー株式会社">
-            <a class="btn-gray-line" href="https://ymi.yahoo.co.jp/" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="https://ymi.yahoo.co.jp/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="https://ymi.yahoo.co.jp/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>Yahoo! MOBILE INSIGHT</h4>
-              <p>Yahoo! MOBILE INSIGHTでは、アプリ公開後のメディアパートナーとの広告効果測定や分析、利用ユーザー行動を理解した最適なプロモーションへの活用など、アプリマーケティングに必要なPDCAを実現できます。またトラッキングやアナリティクスによって分析した結果を利用することで、分析だけに限らず、既存ユーザーや、新規に獲得したいユーザー層に向けた強力なアプローチが可能になります。</p>
+              <p>Yahoo! MOBILE
+                INSIGHTでは、アプリ公開後のメディアパートナーとの広告効果測定や分析、利用ユーザー行動を理解した最適なプロモーションへの活用など、アプリマーケティングに必要なPDCAを実現できます。またトラッキングやアナリティクスによって分析した結果を利用することで、分析だけに限らず、既存ユーザーや、新規に獲得したいユーザー層に向けた強力なアプローチが可能になります。</p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>ヤフー株式会社</h5></li>
-              <li class="form link-area"><a href="https://forms.business.yahoo.co.jp/webform/Inquiry/InquiryTop?inquiry_type=MI_INQ_7601" target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
-              <li class="homepage"><a href="https://ymi.yahoo.co.jp/" target="_blank">ホームページ <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a
+                      href="https://forms.business.yahoo.co.jp/webform/Inquiry/InquiryTop?inquiry_type=MI_INQ_7601"
+                      target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
+              <li class="homepage"><a href="https://ymi.yahoo.co.jp/" target="_blank">ホームページ <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
       </table>
-      <p class="btn-btt"><a href="#header-top">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
+      <p class="btn-btt"><a href="#productsPartner">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
 
       <h3 id="pp-security">セキュリティ</h3>
       <table>
         <tr>
           <th class="products-name">
-            <img src="/img/product-partner/logo_clomo.png" alt="CLOMO" style="margin: -30px 0 0;">
-            <a class="btn-gray-line" href="http://www.i3-systems.com/clomo.html" target="_blank">詳細を見る</a>
+            <img src="/img/product-partner/logo_clomo.png" alt="CLOMO">
+            <a class="btn-gray-line hide-tablet" href="http://www.i3-systems.com/clomo.html" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="http://www.i3-systems.com/clomo.html" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>CLOMO（クロモ）</h4>
               <p>CLOMOは国内6年連続シェアNo.1のモバイル管理(EMM)サービスです。<br>
-              CLOMOを利用すると、業務用モバイルアプリを手軽で安全にスマートデバイスに遠隔配布できます。Monacaで作成したモバイルアプリにも対応しており、アプリの強制インストール・アップデート機能などを用いて「アプリ配布の手間」を大幅に削減できます。さらに、スクリーンショット機能やUSB接続、SDメモリ利用などの制限設定も手軽に行えるため「アプリ開発時のセキュリティ対応の手間」も削減できます。</p>
+                CLOMOを利用すると、業務用モバイルアプリを手軽で安全にスマートデバイスに遠隔配布できます。Monacaで作成したモバイルアプリにも対応しており、アプリの強制インストール・アップデート機能などを用いて「アプリ配布の手間」を大幅に削減できます。さらに、スクリーンショット機能やUSB接続、SDメモリ利用などの制限設定も手軽に行えるため「アプリ開発時のセキュリティ対応の手間」も削減できます。
+              </p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>株式会社アイキューブドシステムズ</h5></li>
-              <li class="form link-area"><a href="http://www.i3-systems.com/contact-list.html" target="_blank">お問い合わせ窓口 <i class="fa fa-external-link"></i></a></li>
-              <li class="homepage"><a href="http://www.i3-systems.com/" target="_blank">ホームページ <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a href="http://www.i3-systems.com/contact-list.html" target="_blank">お問い合わせ窓口
+                <i class="fa fa-external-link"></i></a></li>
+              <li class="homepage"><a href="http://www.i3-systems.com/" target="_blank">ホームページ <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
         <tr>
           <th class="products-name">
-            <img src="/img/product-partner/logo_scc.png" alt="Secure Coding Checker" style="margin: -30px 0 0;">
-            <a class="btn-gray-line" href="http://www.sonydna.com/sdna/solution/scc.html" target="_blank">詳細を見る</a>
+            <img src="/img/product-partner/logo_scc.png" alt="Secure Coding Checker" >
+            <a class="btn-gray-line hide-tablet" href="http://www.sonydna.com/sdna/solution/scc.html" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="http://www.sonydna.com/sdna/solution/scc.html" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
@@ -392,19 +505,26 @@ viewport: width=1200px
                 日本スマートフォンセキュリティ協会(JSSEC)の「Androidアプリのセキュア設計・セキュアコーディングガイド」を検査基準とし、僅か数十秒で脆弱性の有無と修正方法を提示します。<br>
                 二週間の無料トライアルをご利用いただけます。
               </p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>ソニーデジタルネットワークアプリケーションズ株式会社</h5></li>
-              <li class="mail link-area"><a href="mailto:sdna-security-sales@jp.sony.com?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ <i class="fa fa-external-link"></i></a></li>
+              <li class="mail link-area"><a href="mailto:sdna-security-sales@jp.sony.com?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ
+                <i class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
         <tr>
           <th class="products-name">
-            <img src="/img/product-partner/logo_dxsheild.png" alt="DxShield" style="margin: -30px 0 0;">
-            <a class="btn-gray-line" href="https://dxshield.altplus.co.jp/" target="_blank">詳細を見る</a>
+            <img src="/img/product-partner/logo_dxsheild.png" alt="DxShield" >
+            <a class="btn-gray-line hide-tablet" href="https://dxshield.altplus.co.jp/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="https://dxshield.altplus.co.jp/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
@@ -412,67 +532,87 @@ viewport: width=1200px
               <p>
                 スマートフォンアプリ開発者向けセキュリティソリューション【DxShield】はチート、リセマラ、ハッキング、FakeGPSなど、様々な脅威からアプリを守ります。利便性の高い管理コンソールでは攻撃数、攻撃手法、どこの国から攻撃を受けているかなどリアルタイムに集計をおこなうことが可能。１ヶ月の検証期間を設けているので安心してご導入をいただけます。セキュリティはDxShieldにお任せいただき、不安なく開発をおこなってください！
               </p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>株式会社オルトプラス</h5></li>
-              <li class="homepage link-area"><a href="https://dxshield.altplus.co.jp/index.php#front-contact" target="_blank">ホームページの問い合わせから<br />お問い合わせください。 <i class="fa fa-external-link"></i></a></li>
+              <li class="homepage link-area"><a href="https://dxshield.altplus.co.jp/index.php#front-contact"
+                                                target="_blank">ホームページの問い合わせから<br/>お問い合わせください。 <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
       </table>
-      <p class="btn-btt"><a href="#header-top">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
+      <p class="btn-btt"><a href="#productsPartner">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
 
       <h3 id="pp-iot">IoTデバイス</h3>
       <table>
         <tr>
           <th class="products-name">
             <img src="/img/product-partner/logo_tagcast.png" alt="Tag Cast">
-            <a class="btn-gray-line" href="https://tagcast.jp/" target="_blank">詳細を見る</a>
+            <a class="btn-gray-line hide-tablet" href="https://tagcast.jp/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="https://tagcast.jp/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>TAGCAST</h4>
-              <p>TAGCASTは空間に位置情報「場所のIoT」を整備するテクノロジーです。ビーコンと呼ばれるBluetoothの発信機をクラウドで統合管理し、スマートフォンアプリと連携することでモバイルシステムに位置情報を提供します。iOS/Android開発者向けCordovaプラグインを無償提供しており、来店者への来店証明やクーポン配布などが行えるようなアプリ開発を容易にします。Developerサイトでは技術情報を公開しております。ぜひご覧ください（無料）。</p>
+              <p>
+                TAGCASTは空間に位置情報「場所のIoT」を整備するテクノロジーです。ビーコンと呼ばれるBluetoothの発信機をクラウドで統合管理し、スマートフォンアプリと連携することでモバイルシステムに位置情報を提供します。iOS/Android開発者向けCordovaプラグインを無償提供しており、来店者への来店証明やクーポン配布などが行えるようなアプリ開発を容易にします。Developerサイトでは技術情報を公開しております。ぜひご覧ください（無料）。</p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>株式会社タグキャスト</h5></li>
-              <li class="form link-area"><a href="https://tagcast.jp/contact/inquiry/" target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a href="https://tagcast.jp/contact/inquiry/" target="_blank">お問い合わせフォーム <i
+                      class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
         <tr>
           <th class="products-name">
-            <img src="/img/product-partner/logo_jins.png" alt="jins-meme" style="margin: -30px 0 0;">
-            <a class="btn-gray-line" href="https://jins-meme.com/" target="_blank">詳細を見る</a>
+            <img src="/img/product-partner/logo_jins.png" alt="jins-meme" >
+            <a class="btn-gray-line hide-tablet" href="https://jins-meme.com/" target="_blank">詳細を見る</a>
+            <a class="show-tablet" href="https://jins-meme.com/" target="_blank">
+              <img src="/img/common-v2/ico_next_arrow2.svg">
+            </a>
           </th>
           <td class="outline">
             <div class="outline-contents">
               <h4>JINS MEME SDK for Monaca</h4>
               <p>世界初、自分を見るメガネJINS MEME（ジンズ・ミーム）スマートフォンアプリケーションをMonacaで実装できるようになりました！<br>
-              このプラグインを使い、眼の動きを利用したコントローラーから集中度測定アプリまで、あなたのアイデアひとつで世の中の役に立つ幅広いソリューション開発へ応用が可能です。<br>
-              メガネの進化を促すあなたの斬新な開発アイデアを、その手で実現させてみませんか？</p>
+                このプラグインを使い、眼の動きを利用したコントローラーから集中度測定アプリまで、あなたのアイデアひとつで世の中の役に立つ幅広いソリューション開発へ応用が可能です。<br>
+                メガネの進化を促すあなたの斬新な開発アイデアを、その手で実現させてみませんか？</p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
             <ul>
               <li><h5>株式会社 ジェイアイエヌ</h5></li>
-              <li class="mail link-area"><a href="mailto:meme-devstand@jin-co.com?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ <i class="fa fa-external-link"></i></a></li>
-              <li class="form link-area"><a href="https://jins-meme.com/ja/support/contact" target="_blank">お問い合わせフォーム <i class="fa fa-external-link"></i></a></li>
+              <li class="mail link-area"><a href="mailto:meme-devstand@jin-co.com?subject=Monacaプロダクトパートナーについて">メールでお問い合わせ
+                <i class="fa fa-external-link"></i></a></li>
+              <li class="form link-area"><a href="https://jins-meme.com/ja/support/contact" target="_blank">お問い合わせフォーム
+                <i class="fa fa-external-link"></i></a></li>
             </ul>
           </td>
         </tr>
       </table>
-      <p class="btn-btt" style="margin-bottom: 250px;"><a href="#header-top">TOP <img src="/img/partner/ico_back_to_top.png" alt=""></a></p>
+      <p class="btn-btt" style="margin-bottom: 250px;"><a href="#productsPartner">TOP <img
+              src="/img/partner/ico_back_to_top.png" alt=""></a></p>
 
     </div>
   </section>
+</div>
 
+  <script src="/js/jquery.min.js"></script>
   <script src="/js/jquery.smoothScroll.js"></script>
-
-  
-  <!-- <script src="/js/jquery.min.js"></script> -->
-

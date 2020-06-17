@@ -1,42 +1,36 @@
 ---
-title: Monaca導入事例：全国生活協同組合連合会
+title: Monaca - 導入事例：全国生活協同組合連合会
 class: showcase seikyoren
 description: 災害時の損害調査業務のタブレット化で、より迅速な共済金の支払いを実現
 keywords: Monaca,HTML5,Cordova,PhoneGap,クラウド,セキュリティ
+stylesheets:
+    - /css/bootstrap.min.css
+    - /css/all.css
+    - https://use.typekit.net/tky7gag.css
+    - https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css
+show_ja_globalnav: true
 ---
 <header>
-    全国生活協同組合連合会
-  <em>損害調査アプリ</em>
+    <div class="image-wrapper">
+        <img src="/img/seikyoren/keyvisual.jpg" alt="" class="keyvisual">
+    </div>
+    <h1>
+        <span>注目事例</span>
+        災害時の損害調査業務のタブレット化で、より迅速な共済金の支払いを実現
+    </h1>
+    <div class="info-cont">
+        <img src="/img/seikyoren/logo_seikyoren.png" alt="全国生活協同組合連合会" />
+        <h3>全国生活協同組合連合会</h3>
+        <ul>
+            <li>火災共済金サービス部</li>
+            <li>大沢 嘉克氏</li>
+        </ul>
+    </div>
 </header>
 
-<section class="info">
-    <div class="info-header">
-      <h1 class="pc-copy">災害時の損害調査業務のタブレット化で、より迅速な共済金の支払いを実現</h1>
-      <img src="/img/seikyoren/keyvisual.png" alt="" class="keyvisual">
-    </div>
-    <h1 class="sp-copy">災害時の損害調査業務のタブレット化で、より迅速な共済金の支払いを実現</h1>
-
-    <div class="info-cont">
-        <h1><img src="/img/seikyoren/logo_seikyoren.png" alt="全国生活協同組合連合会" /></h1>
-
-        <dl>
-            <dt>商号</dt>
-            <dd><em>全国生活協同組合連合会</em></dd>
-        </dl>
-        <dl>
-            <dt>Web</dt>
-            <dd><a href="https://www.kyosai-cc.or.jp/index.html" target="_blank">https://www.kyosai-cc.or.jp/index.html <i class="glyphicon glyphicon-new-window"></i></a></dd>
-        </dl>
-        <dl>
-            <dt>担当開発会社</dt>
-            <dd><em>AGS株式会社</em></dd>
-        </dl>
-        <dl>
-            <dt>Web</dt>
-            <dd><a href="https://www.ags.co.jp/" target="_blank">https://www.ags.co.jp/ <i class="glyphicon glyphicon-new-window"></i></a></dd>
-        </dl>
-        <p class="note">（平成31年3月現在）</a>
-    </div>
+<section class="showcase-nav">
+    <a href="hitachitool.html" class="prev"><img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg">日立ツール株式会社</a>
+    <a href="canbe.html" class="next">株式会社スタジオキャンビー<img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg"></a>
 </section>
 
 <section class="app-info">
@@ -76,7 +70,7 @@ keywords: Monaca,HTML5,Cordova,PhoneGap,クラウド,セキュリティ
 
         <h2>Q1. 自然災害時の現場調査業務と「損害調査アプリ」導入前の課題について教えて下さい。</h2>
         <p><b>大沢氏</b>　地震や洪水などの自然災害が発生した際、住宅の被害状況に応じてお支払いする共済金額が変わるため、職員が現地に伺い被害状況の確認を行います。浸水の場合は建物のどこまで浸水したのかなどを調べます。地震の場合は建物の傾きや外壁・基礎の損害程度などを計測します。従来はこれらの調査を行うために、紙の調査票と筆記用具に加えて、電卓、傾斜計、デジカメなど多くの道具が必要でした。これらの道具を用いての調査業務は煩雑なため、一件あたりの調査時間もかなり長く掛かっていました。</p>
-        
+
         <h2>Q2. 「損害調査アプリ」で現場調査業務はどのように改善されましたか？</h2>
         <p><b>大沢氏</b>　まず職員が持ち歩くものが減りました。メジャーとタブレットを持っていくだけで調査が完結できるため作業もシンプルになり、一件あたりの調査時間も従来の半分程度に短縮できるような効果が出ています。アプリの入力指示に従って調査を進めていくため、手作業によって起こり得る作業ミスも解消されました。</p>
         <p>また、アプリ上の地図で調査先の情報が確認できるため、効率的な現場訪問が可能となりました。</p>
@@ -85,11 +79,11 @@ keywords: Monaca,HTML5,Cordova,PhoneGap,クラウド,セキュリティ
         <h2>Q3. その他に「損害調査アプリ」を導入した利点はございましたか？</h2>
         <p><b>大沢氏</b>　開発時には想定していなかった使い方だったのですが、昨年の西日本豪雨の際には被害件数がとても多かったため、現地の県民共済の事務所だけでは事務処理を行う人手が不足していました。そこで「損害調査アプリ」で入力をされた調査データをいち早く連合会（埼玉）で確認し、事務処理を一部代行しました。</p>
         <p>これは紙の調査票で業務を行っていたら実現できなかったことだと思います。</p>
-        
+
         <h2>Q4. 「損害調査アプリ」の開発プロジェクト概要について教えて下さい。</h2>
         <p><b>五十畑氏</b>　以前より全国生協連様の各種システムの開発をお任せいただいていた関係で「損害調査アプリ」のご相談をいただきました。おおよそ5ヶ月間程度のプロジェクトでした。AGSではアシアル社とモバイルアプリ開発に関する業務提携を結んでいたため、アプリ開発部分についてはアシアル社の技術協力を受けながらハイブリッドアプリとMonacaを採用しアプリ開発を行いました。</p>
         <p>誰でも直感的に使えるUIやセキュリティ面などにも十分考慮し開発を行ったことで、お客様に高い評価をいただけたと考えております。</p>
-        
+
 
         <h2>Q5. 「損害調査アプリ」をハイブリッドアプリとして開発するにあたって懸念点などはございませんでしたか？</h2>
         <p><b>星野氏</b>　当初からネイティブ開発を行う考えはありませんでした。「損害調査アプリ」で想定される業務でネイティブ開発を行わなければ実現できない機能はありませんでした。また、今後のバージョンアップ対応や、ソースコードのメンテナンスの面などでもハイブリッド開発のメリットは大きいと考えました。</p>
@@ -116,17 +110,62 @@ keywords: Monaca,HTML5,Cordova,PhoneGap,クラウド,セキュリティ
     </div>
 </section>
 
+<section class="info">
+    <div class="info-cont">
+        <h1><img src="/img/seikyoren/logo_seikyoren.png" alt="全国生活協同組合連合会" /></h1>
+
+        <dl>
+            <dt>商号</dt>
+            <dd><em>全国生活協同組合連合会</em></dd>
+        </dl>
+        <dl>
+            <dt>Web</dt>
+            <dd><a href="https://www.kyosai-cc.or.jp/index.html" target="_blank">https://www.kyosai-cc.or.jp/index.html <i class="glyphicon glyphicon-new-window"></i></a></dd>
+        </dl>
+        <dl>
+            <dt>担当開発会社</dt>
+            <dd><em>AGS株式会社</em></dd>
+        </dl>
+        <dl>
+            <dt>Web</dt>
+            <dd><a href="https://www.ags.co.jp/" target="_blank">https://www.ags.co.jp/ <i class="glyphicon glyphicon-new-window"></i></a></dd>
+        </dl>
+        <p class="note">（平成31年3月現在）</a>
+    </div>
+</section>
+
 <!-- ダウンロード無し -->
 <!--
 <div class="container download">
-    <p>「BongoFaster」のダウンロードはこちらから</p>
-    <a href="https://itunes.apple.com/jp/app/bongofaster/id1338603772?mt=8" alt="App Store" target="_blank"><img src="/img/hitachitool/bnr_appstore.png" alt="App Store"></a>
-    <a href="https://play.google.com/store/apps/details?id=tz.co.bongofaster.app&hl=ja" target="_blank"><img src="/img/hitachitool/bnr_googleplay.png" alt="Google Play"></a>
+    <span>「BongoFaster」のダウンロードはこちらから</span>
+    <a href="https://play.google.com/store/apps/details?id=tz.co.bongofaster.app&hl=ja"><img src="/img/common/bnr_googleplay.svg" alt=""></a>
+    <a href="https://itunes.apple.com/jp/app/bongofaster/id1338603772?mt=8"><img src="/img/common/bnr_appstore.svg" alt=""></a>
 </div>
 -->
 
 <div class="container contact">
     <p>Monaca導入のご相談、お見積り、資料請求はお気軽に<br />こちらからお問い合わせください。</p>
-    <a href="/support/inquiry.html" class="btn btn-big btn-blue">お問い合わせ</a>
-    <a class="list-back" href="/showcase/">事例一覧に戻る</a>
+    <a href="/support/inquiry.html" class="btn btn-big btn-gray">お問い合わせ</a>
+</div>
+
+<h2 class="other_case_studies">他の導入事例</h2>
+
+<div class="case-container">
+    <ul class="cases">
+        <li class="case">
+            <img src="/img/showcase/buttons/01-fujitec.jpg" alt="" class="thumb">
+            <span class="title">フジテック株式会社</span>
+            <a href="fujitec.html">詳しく見る<img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg"></a>
+        </li>
+        <li class="case">
+            <img src="/img/showcase/buttons/02-monex.jpg" alt="" class="thumb">
+            <span class="title">マネックス証券株式会社</span>
+            <a href="canbe.html">詳しく見る<img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg"></a>
+        </li>
+        <li class="case">
+            <img src="/img/showcase/buttons/03-smbc.jpg" alt="" class="thumb">
+            <p class="title">株式会社三井住友フィナンシャルグループ</p>
+            <a href="kavli.html">詳しく見る<img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg"></a>
+        </li>
+    </ul>
 </div>

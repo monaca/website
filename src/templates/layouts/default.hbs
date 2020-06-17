@@ -1,181 +1,163 @@
 <!DOCTYPE html>
 <html lang="{{language}}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-    <meta charset="UTF-8">
+  {{!-- meta elements (1 of 2) --}}
+  <meta charset="UTF-8">
+{{#compare viewport "typeof" "string"}}
+  <meta name="viewport" content="{{viewport}}">
+{{else}}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+{{/compare}}
 
-    {{#compare viewport "typeof" "string"}}
-        <meta name="viewport" content="{{viewport}}">
+  {{!-- title element --}}
+  {{!-- must be under charset="UTF-8", name="viewport" and name="robots". --}}
+  <title>
+    {{#compare title "typeof" "string"}}
+      {{#is language "ja"}}
+        {{title}}
+      {{else}}
+        {{title}}
+      {{/is}}
     {{else}}
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+      {{#is language "ja"}}
+        {{title.ja}}
+      {{else}}
+        {{title.en}}
+      {{/is}}
     {{/compare}}
+  </title>
 
-    <title>
-        {{#compare title "typeof" "string"}}
-            {{#is language "ja"}}
-                {{title}}
-            {{else}}
-                {{title}}
-            {{/is}}
-        {{else}}
-            {{#is language "ja"}}
-                {{title.ja}}
-            {{else}}
-                {{title.en}}
-            {{/is}}
-        {{/compare}}
-    </title>
+  {{!-- meta elements (2 of 2) --}}
+{{#is language "ja"}}
+  <meta name="keywords" content="
+      {{#compare keywords "typeof" "string"}}
+          {{keywords}}
+      {{else}}
+          Cordova,モバイルアプリ開発,iPhone開発,Android開発,ハイブリッドアプリ,クロスプラットフォーム,PhoneGap,Monaca
+      {{/compare}}
+  ">
+{{/is}}
+{{#compare redirect "typeof" "string"}}
+  <meta http-equiv="refresh" content="0; URL={{redirect}}">
+{{/compare}}
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="
+      {{#compare title "typeof" "string"}}
+          {{#is language "ja"}}
+              {{title}}
+          {{else}}
+              {{title}}
+          {{/is}}
+      {{else}}
+          {{#is language "ja"}}
+              {{title.ja}}
+          {{else}}
+              {{title.en}}
+          {{/is}}
+      {{/compare}}
+  ">
+  <meta property="og:image" content="{{#compare image "typeof" "string"}}{{image}}{{else}}https://monaca.io/img/ogp_ja.png{{/compare}}">
+  <meta property="fb:admins" content="597508315" >
+  <meta name="twitter:site" content="@monaca_io">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@monaca_io">
+  <meta name="twitter:image" content="{{#compare image "typeof" "string"}}{{image}}{{else}}https://monaca.io/img/ogp_ja.png{{/compare}}">
+  <meta property="twitter:title" content="
+      {{#compare title "typeof" "string"}}
+          {{#is language "ja"}}
+              {{title}}
+          {{else}}
+              {{title}}
+          {{/is}}
+      {{else}}
+          {{#is language "ja"}}
+              {{title.ja}}
+          {{else}}
+              {{title.en}}
+          {{/is}}
+      {{/compare}}
+  ">
+{{#compare description "typeof" "string"}}
+  <meta name="description" content="{{description}}">
+  <meta property="og:description" content="{{description}}">
+  <meta name="twitter:description" content="{{description}}">
+{{else}}
+  <meta name="description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
+  <meta property="og:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
+  <meta name="twitter:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
+{{/compare}}
+
+  {{!-- link elements (1 of 2) - Resources --}}
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  {{!-- link elements (2 of 2) - Stylesheets --}}
+{{#if stylesheets}}
+  {{#each stylesheets}}
+  <link rel="stylesheet" href="{{this}}">
+  {{/each}}
+{{/if}}
+
+  {{!-- script elements --}}
+  {{!-- (Note: Inline scripts cannot be deferred and evaluated immediately) --}}
+  <script>
+    window.MONACA_API_URL = "{{site.monaca_api}}";
+    window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
     {{#is language "ja"}}
-        <meta name="keywords" content="
-            {{#compare keywords "typeof" "string"}}
-                {{keywords}}
-            {{else}}
-                Cordova,モバイルアプリ開発,iPhone開発,Android開発,ハイブリッドアプリ,クロスプラットフォーム,PhoneGap,Monaca
-            {{/compare}}
-        ">
-    {{/is}}
-
-    {{#compare redirect "typeof" "string"}}
-        <meta http-equiv="refresh" content="0; URL={{redirect}}">
-    {{/compare}}
-
-    <script>
-        var loadResources = function() {
-            var res = ["/css/codemirror.css", "//fonts.googleapis.com/css?family=Open+Sans:400,700"];
-            var headElement = document.getElementsByTagName("head")[0];
-            var l = document.createElement("link");
-
-            for (var i = 0; i < res.length; i++) {
-                var linkElement = document.createElement("link");
-                linkElement.rel = "stylesheet";
-                linkElement.href = res[i];
-                headElement.appendChild(linkElement);
-            }
-        };
-
-        var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame;
-        if (raf) {
-            raf(loadResources);
-        } else {
-            window.addEventListener('load', loadResources);
-        }
-    </script>
-  {{#is language "ja"}}
-    <script type="text/javascript">var Kairos3Tracker="asial";</script>
-    <script type="text/javascript" charset="utf-8" src="//c.k3r.jp"></script>
-  {{/is}}
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-
-    <link rel="shortcut icon" href="/img/favicon.ico">
-
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="
-        {{#compare title "typeof" "string"}}
-            {{#is language "ja"}}
-                {{title}}
-            {{else}}
-                {{title}}
-            {{/is}}
-        {{else}}
-            {{#is language "ja"}}
-                {{title.ja}}
-            {{else}}
-                {{title.en}}
-            {{/is}}
-        {{/compare}}
-    ">
-    <meta property="og:image" content="{{#compare image "typeof" "string"}}{{image}}{{else}}https://monaca.io/img/ogp_ja.png{{/compare}}">
-    <meta property="fb:admins" content="597508315" >
-    <meta name="twitter:site" content="@monaca_io">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:creator" content="@monaca_io">
-    <meta name="twitter:image" content="{{#compare image "typeof" "string"}}{{image}}{{else}}https://monaca.io/img/ogp_ja.png{{/compare}}">
-    <meta property="twitter:title" content="
-        {{#compare title "typeof" "string"}}
-            {{#is language "ja"}}
-                {{title}}
-            {{else}}
-                {{title}}
-            {{/is}}
-        {{else}}
-            {{#is language "ja"}}
-                {{title.ja}}
-            {{else}}
-                {{title.en}}
-            {{/is}}
-        {{/compare}}
-    ">
-
-    {{#compare description "typeof" "string"}}
-        <meta name="description" content="{{description}}">
-        <meta property="og:description" content="{{description}}">
-        <meta name="twitter:description" content="{{description}}">
+        window.LANG = "ja";
     {{else}}
-        <meta name="description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
-        <meta property="og:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
-        <meta name="twitter:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered app development tools and services.">
-    {{/compare}}
-
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/all.js"></script>
-
-    <script src="https://use.typekit.net/tky7gag.js"></script>
-    <script>
-        if (location.href.indexOf('/contest/') > 0) {
-            try{Typekit.load({ async: true });}catch(e){}
-        }
-    </script>
-
-    <!-- algolia search -->
-    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
-
+        window.LANG = "en";
+    {{/is}}
+    window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
+  </script>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      $(document).ajaxError(function (e, request, settings) {
+        ga('send', 'exception', {
+          exDescription: 'Ajax Error ' + settings.url + ' ' + e.result + ' EventType:' + e.type + ' Status:' + request.status
+        });
+      });
+    });
+  </script>
+{{#is language "ja"}}
+  <script defer type="text/javascript">var Kairos3Tracker="asial";</script>
+  <script defer type="text/javascript" charset="utf-8" src="//c.k3r.jp"></script>
+{{/is}}
+  <script defer src="/js/jquery.min.js"></script>
+  <script defer src="/js/bootstrap.min.js"></script>
+  <script defer src="/js/all.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+{{#is class "error"}}
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      monacaApi.loginCheck(false); // Force to stop login check request When web-server error
+    });
+  </script>
+{{else}}
+  {{#is language "ja"}}
+  <script defer src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
+  {{else}}
+  <script defer src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
+  {{/is}}
+{{/is}}
 </head>
 
 <body class="{{class}}">
+  {{#is language "ja"}}
+  {{> header_ja }}
+  {{else}}
+  {{#unless hideHeader}}{{> header_en }}{{/unless}}
+  {{/is}}
+  {{> loginPopup }}
+  {{> notificationHeader }}
+  <article class="main{{#is language "ja"}}{{#if show_ja_globalnav}} ja-globalnav-shown{{/if}}{{#if show_ja_subnav}} ja-subnav-shown{{/if}}{{else}}{{#unless hideHeader}} en-globalnav-shown{{/unless}}{{/is}}" role="main">
 
-    {{#unless hideHeader}}
-    {{#is language "ja"}}{{> header_ja }}{{else}}{{> header_en }}{{/is}}
-    {{/unless}}
-    {{> loginPopup }}
-    {{> notificationHeader }}
-    <article class="main" role="main">
+    {{> body }}
 
-      {{> body }}
-
-    </article>
-
-    {{#unless hideFooter}}
-    {{#is language "ja"}}{{> footer_ja }}{{else}}{{> footer_en }}{{/is}}
-    {{/unless}}
-
-    <script>
-        window.MONACA_API_URL = "{{site.monaca_api}}";
-        window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
-        {{#is language "ja"}}
-            window.LANG = "ja";
-        {{else}}
-            window.LANG = "en";
-        {{/is}}
-        window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
-
-        $(document).ajaxError(function (e, request, settings) {
-          ga('send', 'exception', {
-            exDescription: 'Ajax Error ' + settings.url + ' ' + e.result + ' EventType:' + e.type + ' Status:' + request.status
-          });
-        });
-    </script>
-    {{#is class "error"}}
-      <script>
-        monacaApi.loginCheck(false); // Force to stop login check request When web-server error
-      </script>
-    {{else}}
-      {{#is language "ja"}}
-        <script src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
-      {{else}}
-        <script src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
-      {{/is}}
-    {{/is}}
-  </body>
+  </article>
+  {{#is language "ja"}}
+  {{> footer_ja }}
+  {{else}}
+  {{#unless hideFooter}}{{> footer_en }}{{/unless}}
+  {{/is}}
+</body>
 </html>

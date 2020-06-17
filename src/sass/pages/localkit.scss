@@ -1,0 +1,192 @@
+@import "../constants";
+
+body.localkit {
+    .keyvisual {
+        background: url(../img/localkit/keyvisual.jpg) no-repeat center bottom, url(../img/localkit/keyvisual_bg.png) repeat-x left bottom;
+        color: #000;
+        padding-bottom: 0;
+        position: relative;
+        @media screen and (max-width: $break) {
+            padding-bottom: 40px;
+            background-size: cover;
+        }
+        h1 {
+            font-weight: 400;
+            margin-bottom: 50px;
+            padding-top: 120px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+            letter-spacing: -0.03em;
+            font-size: 45px;
+            padding-right: 330px;
+            @media screen and (max-width: 1020px) {
+                padding-top: 100px;
+                padding-right: 0px;
+            }
+            @media screen and (max-width: $break-xs) {
+                margin-bottom: 30px;
+            }
+            img {
+                vertical-align: -10px;
+            }
+        }
+        .version {
+            text-align: left;
+            font-size: 20px;
+            margin-bottom: 10px;
+            min-height:1.4em;
+            text-indent: 0.2em;
+            @media screen and (max-width: $break) {
+                text-align: center;
+                margin-bottom: 20px;
+                
+            }
+            @media screen and (max-width: $break-xs) {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+        .box-try {
+            text-align: left;
+            padding: 40px 0 0;
+        }
+        .btns {
+            padding: 0 0 40px;
+            line-height: 64px;
+            text-align: left;
+            @media screen and (max-width: $break) {
+                height: 178px;
+                text-align: center;
+            }
+            .btn {
+                font-size: 1.3rem;
+                padding: 0 20px;
+                min-width: 240px;
+            }
+            @media screen and (max-width: $break-xs) {
+                text-align: center;
+            }
+            .btn-green {
+                @media screen and (max-width: $break) {
+                    width: 398px;
+                    margin-bottom: 10px;
+                }
+                @media screen and (max-width: $break-xs) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                &:first-child {
+                    @media screen and (max-width: $break) {
+                        margin-right: 0px;
+                    }
+                }
+                &:last-child {
+                    margin-right: 0px;
+                    @media screen and (max-width: $break-xs) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    article.main {
+        section {
+            border-bottom: 1px solid #ccc;
+            padding-top: 90px;
+            padding-bottom: 80px;
+            h1 {
+                text-align: center;
+                @media screen and (max-width: $break) {
+                    font-weight: 400;
+                }
+            }
+            p {
+                margin-bottom: 30px;
+                text-align: left;
+            }
+            &.debug {
+                background: url(../img/localkit/img_3.png) no-repeat center bottom;
+                background-size: 110%;
+                padding-bottom: 53%;
+                @media screen and (min-width: $break-xl) {
+                    padding-bottom: 630px;
+                }
+                @media screen and (max-width: $break) {
+                    background-position: center bottom;
+                }
+            }
+        }
+        section.debug {
+            border-bottom: none;
+        }
+        section.btns_box_body {
+            padding: 0;
+            height: 250px;
+            border-bottom: 0px;
+            @media screen and (max-width: 854px) {
+                height: 348px;
+            }
+            @media screen and (max-width: $break) {
+                height: 348px;
+            }
+            @media screen and (max-width: $break-xs) {
+                height: 221px;
+            }
+        }
+        .keyvisual + section {
+            @media screen and (min-width: $break) {
+                padding-top: 140px;
+            }
+        }
+        .box-try {
+            border-top: 1px solid #ccc;
+            padding: 100px 0px;
+            @media screen and (max-width: $break) {
+                padding: 100px 0;
+            }
+            @media screen and (max-width: $break-xs) {
+                padding: 50px 3% 30px;
+                font-size: 16px;
+            }              
+            .btn {
+                padding: 12px 40px 0;
+                min-width: 210px;
+                height: auto;
+                min-height: 54px;
+                line-height: 1.2;
+                @media screen and (min-width: $break-xs) {
+                    br.opt {
+                        display: none;
+                    }
+                }
+                a {
+                    color: #ffffff;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+            .btn-green {
+                margin-right: 10px;
+                font-size: 22px;
+                margin-bottom: 20px;
+                @media screen and (max-width: $break) {
+                    margin: 0 0 20px;
+                    padding: 12px 40px 0;
+                }
+                @media screen and (max-width: $break-xs) {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 12px 10px 0;
+                }
+                &:last-child {
+                    @media screen and (max-width: $break-xs) {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .notes {
+                margin-top: 30px;
+            }
+        }
+    }
+}

@@ -54,10 +54,25 @@ module.exports = function (grunt) {
     grunt.initConfig({
         config: config,
 
+        stylelint: {
+            options: {
+                configFile: '.stylelintrc',
+                formatter: 'string',
+                ignoreDisables: false,
+                failOnError: false,
+                outputFile: '',
+                reportNeedlessDisables: false,
+                syntax: 'scss'
+            },
+            src: [
+                // 'src/sass/pages/dev-support.scss', // outputs many warnings, so disabled temporaliry
+            ],
+        },
+
         sass: {
             options: {
                 implementation: sass,
-                outputStyle: "compressed",
+                // outputStyle: "compressed",
                 sourceMap: true,
                 includePaths: require('node-bourbon').includePaths
             },
@@ -65,7 +80,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: 'src/sass',
-                    src: '*.scss',
+                    src: '**/*.scss',
                     dest: '<%= config.dist %>/css/',
                     ext: '.css'
                 }]
@@ -81,6 +96,21 @@ module.exports = function (grunt) {
                     dest: 'docs/styleguide',
                     ext: '.css'
                 }]
+            }
+        },
+
+        postcss: {
+            options: {
+                diff: true,
+                map: true,
+                processors: [
+                    require('autoprefixer')({ grid: true })
+                ]
+            },
+            dist: {
+                src: [
+                    '<%= config.dist %>/css/pages/dev-support.css',
+                ],
             }
         },
 
@@ -102,7 +132,7 @@ module.exports = function (grunt) {
             },
             sass: {
                 files: ['<%= config.src %>/**/*.scss'],
-                tasks: ['sass', 'copy:css'],
+                tasks: ['stylelint', 'sass', 'postcss', 'copy:css'],
                 options: {
                     spawn: false
                 }
@@ -204,6 +234,7 @@ module.exports = function (grunt) {
 
         assemble: {
             options: {
+                helpers: ['<%= config.src %>/helpers/*.js'],
                 flatten: true,
                 layout: '<%= config.src %>/templates/layouts/default.hbs',
                 data: ['<%= config.src %>/data/i18n/*.{json,yml}'],
@@ -211,7 +242,7 @@ module.exports = function (grunt) {
                 partials: '<%= config.src %>/templates/partials/*.hbs',
                 plugins: ['assemble-middleware-sitemap'],
                 i18n: {
-                    languages: ["en", "ja", "es", "de", "it", "ru"],
+                    languages: ["en", "ja"],
                     templates: ["<%= config.src %>/templates/pages/*.hbs"],
                 },
                 sitemap: {
@@ -271,62 +302,6 @@ module.exports = function (grunt) {
                         return dest + src.replace('.ja.hbs', '.html');
                     }
                 }]
-            },
-            es: {
-                options: {
-                    language: "es"
-                },
-                files: [{
-                    expand: true,
-                    cwd: "<%= config.src %>/templates/pages/",
-                    src: 'index.es.hbs',
-                    dest: '<%= config.dist %>/es/',
-                    rename: function (dest, src) {
-                        return dest + src.replace('.es.hbs', '.html');
-                    }
-                }]
-            },
-            de: {
-                options: {
-                    language: "de"
-                },
-                files: [{
-                    expand: true,
-                    cwd: "<%= config.src %>/templates/pages/",
-                    src: 'index.de.hbs',
-                    dest: '<%= config.dist %>/de/',
-                    rename: function (dest, src) {
-                        return dest + src.replace('.de.hbs', '.html');
-                    }
-                }]
-            },
-            it: {
-                options: {
-                    language: "it"
-                },
-                files: [{
-                    expand: true,
-                    cwd: "<%= config.src %>/templates/pages/",
-                    src: 'index.it.hbs',
-                    dest: '<%= config.dist %>/it/',
-                    rename: function (dest, src) {
-                        return dest + src.replace('.it.hbs', '.html');
-                    }
-                }]
-            },
-            ru: {
-                options: {
-                    language: "ru"
-                },
-                files: [{
-                    expand: true,
-                    cwd: "<%= config.src %>/templates/pages/",
-                    src: 'index.ru.hbs',
-                    dest: '<%= config.dist %>/ru/',
-                    rename: function (dest, src) {
-                        return dest + src.replace('.ru.hbs', '.html');
-                    }
-                }]
             }
         },
 
@@ -334,7 +309,11 @@ module.exports = function (grunt) {
             bootstrap: {
                 expand: true,
                 cwd: 'bower_components/bootstrap/dist/',
-                src: ['**', '!**/*.js', '**/*.min.js', '!**/*.css', '**/*.min.css'],
+                src: [
+                    'js/bootstrap.min.js',
+                    'css/bootstrap.min.css',
+                    'fonts/**/*',
+                ],
                 dest: '<%= config.dist %>/'
             },
             jquery: {
@@ -378,7 +357,7 @@ module.exports = function (grunt) {
             css: {
                 expand: true,
                 cwd: '<%= config.dist %>/css/',
-                src: 'style.*',
+                src: '**/*.css',
                 dest: '<%= config.distJa %>/css/'
             },
             js: {
@@ -469,12 +448,12 @@ module.exports = function (grunt) {
             options: {
                 livereload: 35729,
                 hostname: '0.0.0.0',
-                protocol: 'https'
+                protocol: 'http'
             },
             en: {
                 options: {
                     open: {
-                        target: 'https://localhost:3010',
+                        target: 'http://localhost:3010',
                         appName: isWindows ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' : 'Google Chrome'
                     },
                     port: 3010,
@@ -486,7 +465,7 @@ module.exports = function (grunt) {
             ja: {
                 options: {
                     open: {
-                        target: 'https://localhost:3011',
+                        target: 'http://localhost:3011',
                         appName: isWindows ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' : 'Google Chrome'
                     },
                     port: 3011,
@@ -578,6 +557,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-styledocco');
     grunt.loadNpmTasks('grunt-babel');
+    grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-stylelint');
 
 
     function injectManifest() {
@@ -631,7 +612,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'stylelint',
         'sass:dist',
+        'postcss:dist',
         'concat',
         'copy',
         'babel',

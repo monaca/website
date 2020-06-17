@@ -1,0 +1,183 @@
+@import "../constants";
+
+body.book-support {
+    .book-support-header {
+        margin-top: 90px;
+        margin-bottom: 40px;
+        position: relative;
+
+        @media screen and (max-width: $break) {
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #444444;
+            font-size: 36px;
+            line-height: 36px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 0;
+        }
+
+        @media screen and (max-width: $break) {
+            h1 {
+                font-size: 24px;
+                line-height: 31px;
+                color: #6F777F;
+                font-weight: bold;
+                margin: 50px auto 30px;
+            }
+        }
+
+        .description {
+            display: flex;
+            justify-content: center;
+            max-width: 960px;
+            margin: 0 auto;
+            align-items: center;
+
+            .text {
+                max-width: 700px;
+                color: #6F777F;
+                font-size: 20px;
+                line-height: 30px;
+                text-align: left;
+            }
+
+            @media screen and (max-width: $break-lg) {
+                flex-direction: column-reverse;
+                width: 100%;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+        }
+    }
+
+    .section.book-support {
+        padding: 0;
+        margin-top: 70px;
+        margin-bottom: 100px;
+    }
+
+    .book-support-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .book-support-list-item {
+            display: flex;
+            flex-direction: column;
+            padding: 0 40px;
+
+            .book-cover {
+                width: 220px;
+                margin-bottom: 17px;
+                align-self: center;
+            }
+
+            .summary {
+                color: #6F777F;
+                font-size: 10px;
+                line-height: 15px;
+                text-align: left;
+                min-height: 48px
+            }
+
+            .links {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 10px;
+                row-gap: 5px;
+                min-height: 80px;
+
+                &.center {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .link {
+                    background-color: #C7C5C2;
+                    border-radius: 2px;
+                    height: 28px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    font-weight: bold;
+                    font-size: 12px;
+                    line-height: 20px;
+                    width: 100%;
+                }
+            }
+
+            .description {
+                color: #6F777F;
+                font-size: 16px;
+                line-height: 32px;
+                text-align: left;
+                margin-bottom: 15px;
+                min-height: 195px;
+            }
+
+            .details {
+                border-top: 1px solid #B3B3B3;
+                border-bottom: 1px solid #B3B3B3;
+                padding: 20px 0;
+                font-size: 11px;
+                line-height: 18px;
+                color: #6F777F;
+                text-align: left;
+                min-height: 150px;
+
+                a {
+                    margin-top: 7px;
+
+                    img {
+                        transform: rotate(-45deg);
+                        height: 7px;
+                        margin-left: 3px;
+                    }
+                }
+            }
+        }
+
+        @media screen and(max-width: 1070px) {
+            grid-template-columns: 1fr;
+            row-gap: 70px;
+            .book-support-list-item {
+                .book-cover {
+                    margin-bottom: 30px;
+                }
+
+                .summary {
+                    min-height: unset;
+                    margin-bottom: 10px;
+                }
+
+                .links {
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 30px;
+
+                    .link {
+                        width: 100%;
+                        margin-bottom: 10px;
+                        height: 40px;
+                    }
+                }
+
+                .description {
+                    font-size: 14px;
+                    line-height: 28px;
+                    min-height: unset;
+                }
+
+                .details {
+                    padding: 20px 0;
+                    min-height: unset;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,123 @@
+$output-bourbon-deprecation-warnings: false !default;
+@import "bourbon";
+
+@import "../constants";
+
+body.debugger {
+    .keyvisual {
+        background: url(../img/debugger/keyvisual.jpg) no-repeat center bottom, url(../img/debugger/keyvisual_bg.png) repeat-x left bottom;
+        color: #000;
+        padding-bottom: 0;
+        @media screen and (max-width: $break) {
+            background-size: cover;
+        }
+        @media screen and (max-width: $break-xs) {
+            padding-bottom: 20px;
+        }
+        h1 {
+            font-weight: 400;
+            margin-bottom: 10px;
+            padding-top: 140px;
+            text-align: left;
+            @media screen and (min-width: 1280px) {
+                br.opt {
+                    display: none;
+                }
+            }
+            img {
+                vertical-align: 4px;
+            }
+        }
+        .btns {
+            font-size: 20px;
+            line-height: 64px;
+            padding-top: 40px;
+            text-align: left;
+            width: 500px;
+            word-break: break-all;
+            img {
+                margin-right: 10px;
+                width: 135px;
+            }
+            @media screen and (max-width: 500px) {
+                width: 100%;
+                img {
+                    display: block;
+                    margin: 0 auto 10px
+                }
+            }
+        }
+    }
+    article.main {
+        section {
+            h1 {
+                padding-left: 5%;
+                padding-right: 5%;
+                box-sizing: border-box;
+            }
+            h2 {
+                color: #666;
+                font-size: 30px;
+                padding-left: 5%;
+                padding-right: 5%;
+                box-sizing: border-box;
+            }
+            p {
+                text-align: left;
+            }
+            &.debug {
+                padding-left: 0;
+                padding-right: 0;
+                width: auto;
+                .integration, .usb, .plugins {
+                    padding-top: 130px;
+                }
+                .integration,
+                .usb {
+                    overflow: hidden;
+                    .illust {
+                        display: block;
+                        margin: 0 auto;
+                        padding: 3% 0;
+                        @include transform(scale(1.05, 1.05));
+                    }
+                }
+            }
+            &.collaboration {
+                padding: 90px 0;
+                h1 + p {
+                    @media screen and (max-width: $break) {
+                        margin-bottom: 20px;
+                    }
+                }
+                .internet {
+                    overflow: hidden;
+                    padding: 60px 5% 0;
+                    .illust {
+                        display: block;
+                        margin: 0 auto;
+                        padding: 12% 0 20%;
+                        @include transform(scale(1.25, 1.25));
+                    }
+                }
+                .communication {
+                    padding-top: 0;
+                }
+            }
+        }
+        .box-try {
+            padding: 40px 0;
+            p {
+                margin-bottom: 40px;
+            }
+            a img {
+                margin: 0 10px;
+                width: 135px;
+                @media screen and (max-width: 500px) {
+                    display: block;
+                    margin: 0 auto 10px
+                }
+            }
+        }
+    }
+}

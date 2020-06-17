@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="icon_dev_support" transform="translate(-556 -390)">
+    <g id="icon_area" transform="translate(556 390)" fill="#fff" stroke="#707070" stroke-width="1" opacity="0">
+      <rect width="26" height="26" stroke="none"/>
+      <rect x="0.5" y="0.5" width="25" height="25" fill="none"/>
+    </g>
+    <rect id="長方形_232" data-name="長方形 232" width="19.5" height="7.8" rx="1" transform="translate(559.25 399.1)" fill="#3b8be0" opacity="0.7"/>
+    <rect id="長方形_233" data-name="長方形 233" width="19.5" height="7.8" rx="1" transform="translate(565.1 412.75) rotate(-90)" fill="#3b8be0" opacity="0.7"/>
+  </g>
+</svg>

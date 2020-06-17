@@ -2,20 +2,26 @@
 title: Monaca - HTML5モバイルアプリ開発プラットフォーム
 class: support
 description: クラウド上のアプリ開発環境。iOS/Android/Windows向けHTML5ハイブリッドアプリに対応。
+stylesheets:
+    - /css/bootstrap.min.css
+    - /css/all.css
+    - https://use.typekit.net/tky7gag.css
+    - https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css
+show_ja_globalnav: true
 ---
+<section class="nav clearfix">
+  <a href="/support" class="back"><img class="icon-arrow" src="/img/common-v2/ico_next_arrow2.svg">お問い合わせトップ</a>
+</section>
 
 <section id="loading" class="subpage"><img src="/img/common/loading_large.gif" /></section>
 
 <section id="support-inquiry" class="subpage">
   <div class="container">
-    <h1>お問い合わせ</h1>
+    <h1>一般的なお問い合わせ</h1>
     <div id="content">
       <form class="feedback-form" id="contactForm">
 
-        <p>下のフォームにて検索キーワード(例:'Android Build', 'Monaca CLI')を入力し、お問い合わせに関する内容をMonacaドキュメントから探すことができます。解決しない場合は、以下のフォームをご記入ください。 </p>
-        <div class="aside-search" id="aside-search" style="padding-top: 10px; padding-bottom: 20px;">
-          <input type="search" id="inquiry-search-doc" placeholder="キーワード"><br />
-        </div>
+        <p>プランやパートナー、トレーニングに関するお問い合わせにつきましては、以下のフォームよりご入力の上、送信してください。</p>
 
         <div class="feedback-item feedback-item-radio">
           <h2>お問い合わせの種類：<span style="color:red"></span></h2>
@@ -79,24 +85,3 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
     </div>
   </div>
 </section>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
-<script type="text/javascript">
-  {{#is language "ja"}}
-      docsearch({
-      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
-      indexName: 'monaca',
-      inputSelector: '#inquiry-search-doc',
-      algoliaOptions: { 'facetFilters': ["language:ja"] },
-      debug: false // Set debug to true if you want to inspect the dropdown
-    });
-  {{else}}
-      docsearch({
-      apiKey: 'cb8771194cfef15ef3d6578f488656b7',
-      indexName: 'monaca',
-      inputSelector: '#inquiry-search-doc',
-      algoliaOptions: { 'facetFilters': ["language:en"] },
-      debug: false // Set debug to true if you want to inspect the dropdown
-    });
-  {{/is}}
-</script>
