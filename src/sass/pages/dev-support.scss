@@ -239,7 +239,8 @@ body.dev-support {
 
                 .wrap_keyvisual {
                     display: block;
-                    height: 256px;
+                    min-height: 256px;
+                    height: unset;
                 
 
                     text-align: center;
@@ -247,13 +248,21 @@ body.dev-support {
 
                     .wrap_keyvisual_bg {
                         position: static;
+                        padding-top: 3vw;
+
+                        img {
+                            min-width: 275px;
+                            height: 185.938px;
+                            width: 90%;
+                            height: 50%;
                         }
+                    }
 
                     h1 {
                         position: relative;
                         top: -8px;
-                        font-size: 20px;
-                        line-height: 26px;
+                        font-size: 6vw;
+                        line-height: 7.5vw;
                     }
 
                     button {
@@ -283,8 +292,8 @@ body.dev-support {
 
                         div {
                             display: flex;
-                            font-size: 12px;
-                            line-height: 16px;
+                            font-size: 3.75vw;
+                            line-height: 5vw;
                             border-bottom: solid rgba(255, 255, 255, 0.251) 1px;
                             padding: 6px 0;
                         }
@@ -309,21 +318,25 @@ body.dev-support {
 
                 .wrap_keyvisual {
                     display: block;
-                    height: 256px;
-                
+                    height: unset;
 
                     text-align: center;
                     width: 100%;
 
                     .wrap_keyvisual_bg {
                         position: static;
+
+                        img {
+                            width: 77%;
+                            height: 43%;
+                        }
                     }
 
                     h1 {
                         position: relative;
                         top: -8px;
-                        font-size: 20px;
-                        line-height: 26px;
+                        font-size: 4vw;
+                        line-height: 5vw;
                     }
 
                     button {
@@ -353,8 +366,8 @@ body.dev-support {
 
                         div {
                             display: flex;
-                            font-size: 12px;
-                            line-height: 16px;
+                            font-size: 18px;
+                            line-height: 24px;
                             border-bottom: solid rgba(255, 255, 255, 0.251) 1px;
                             padding: 6px 0;
                         }
@@ -421,6 +434,11 @@ body.dev-support {
                         height: 154px;
                         padding-top: 13px;
                         white-space: nowrap;
+
+                        div {
+                            font-size: 18px;
+                            line-height: 24px;
+                        }
                     }
                 }
             }
