@@ -4454,23 +4454,3 @@ description: クラウド上のアプリ開発環境。iOS/Android/Windows向け
   </section>
 </div>
 
-<script>
-  $(window).load(function() {
-  	var fadeInSpeed = 400;
-  	$('div.solution-partner span#github-published_at').hide();
-  	$.ajax({
-  		url: 'https://api.github.com/repos/monaca/Localkit/releases',
-  		dataType: 'jsonp',
-  		success: function(res) {
-  			$("div.solution-partner span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
-  			$('div.solution-partner span#github-published_at a strong').text(res.data[0].name);
-  			var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
-  			$('div.solution-partner span#github-published_at span').text(dateJa);
-  			$('div.solution-partner span#github-published_at').fadeIn(fadeInSpeed);
-  		},
-  		error: function() {
-  			$('div.solution-partner span#github-published_at').hide();
-  		}
-  	});
-  });
-</script>

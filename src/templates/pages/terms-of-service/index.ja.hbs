@@ -146,28 +146,7 @@ viewport: width=1200px
 <script src="/js/jquery.smoothScroll.js"></script>
 
 
-<script src="/js/moment.js"></script>
-<script src="/js/jquery.min.js"></script>
-<script>
 
-    $(window).load(function() {
-    	var fadeInSpeed = 400;
-    	$('div.terms-of-service span#github-published_at').hide();
-    	$.ajax({
-    		url: 'https://api.github.com/repos/monaca/Localkit/releases',
-    		dataType: 'jsonp',
-    		success: function(res) {
-    			$("div.terms-of-service span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a> / <span id="published_Date"></span>'));
-    			$('div.terms-of-service span#github-published_at a strong').text(res.data[0].name);
-    			var dateJa = moment(res.data[0].published_at).format('YYYY年M月D日');
-    			$('div.terms-of-service span#github-published_at span').text(dateJa);
-    			$('div.terms-of-service span#github-published_at').fadeIn(fadeInSpeed);
-    		},
-    		error: function() {
-    			$('div.terms-of-service span#github-published_at').hide();
-    		}
-    	});
-    });
-</script>
+<script src="/js/jquery.min.js"></script>
 
 
