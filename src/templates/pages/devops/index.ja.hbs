@@ -80,52 +80,23 @@ show_ja_globalnav: true
     </section>
 </div> --}}
 
-<section id="pricing">
-    <h1>ご利用料金</h1>
-    <div class="row options">
-        <div class="col-md-2 hidden-xs hidden-sm">
-            <div class="legend">
-                <div class="cost">費用</div>
-                <div class="content">内容</div>
-            </div>
-        </div>
-        <div class="col-md-4" id="ci-plan">
-            <div class="option">
-                <h4 class="option-title">CI/CDパイプライン構築支援</h4>
-                <div class="cost">
-                    <div class="visible-xs visible-sm legend">費用</div>
-                    基本料金(50,000円)〜<br>
-                    ＋<br>
-                    20,000円/1時間 〜
-                </div>
-                <div class="content">
-                    <div class="visible-xs visible-sm legend">内容</div>
-                    <ul>
-                      <li>・CI/CDの設計および導入支援</li>
-                      <li>・サーバーのDocker化の支援</li>
-                      <li>・ビルド/テストの自動化スクリプトの開発支援</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4" id="support-plan">
-            <div class="option">
-                <h4 class="option-title">内製化支援</h4>
-                <div class="cost">
-                    <div class="visible-xs visible-sm legend">費用</div>
-                    基本料金(100,000円)〜<br>
-                    ＋<br>
-                    30,000円/1時間 〜
-                </div>
-                <div class="content">
-                    <div class="visible-xs visible-sm legend">内容</div>
-                    <ul>
-                      <li>・開発言語やフレームワークのトレーニング</li>
-                      <li>・DevOpsを用いた開発環境の構築支援</li>
-                      <li>・スクラム手法での開発プロセス支援</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+<section>
+  <form class="inquiry" id="contact_us">
+      <h2>まずはお問い合わせください</h2>
+
+      <h3>Monacaチームへ<br>お気軽にお問い合わせください。</h3>
+
+      <p>お名前 *</p>
+      <input type="text" id="name" name="name" placeholder="例）山田太郎" required>
+
+      <p>会社名 *</p>
+      <input type="text" id="company_name" name="company_name" placeholder="例）株式会社アシアル" required>
+
+      <p>メールアドレス *</p>
+      <input type="email" id="email" name="email" placeholder="例）xxxxxxxxx@monaca.io" required>
+
+      <p>内容 *</p>
+      <textarea id="message" placeholder="お問い合わせ内容を入力してください。" required></textarea>
+      <button type="submit">送信</button>
+  </form>
 </section>

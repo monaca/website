@@ -560,4 +560,126 @@ body.devops {
             }
         }
     }
+
+    .inquiry {
+      margin: auto;
+      max-width: 700px;
+
+      h2 {
+          margin-left: 0;
+          margin-bottom: 4%;
+      }
+
+      h3 {
+          font-size: 20px;
+          color: #6f777f;
+          font-weight: normal;
+          margin-bottom: 6%;
+      }
+
+      p {
+          font-size: 16px;
+          color: #444444;
+          margin-bottom: 1%;
+          margin-top: 3%;
+          text-align: left;
+      }
+
+      input,
+      textarea {
+          width: 100%;
+          padding: 3%;
+          border: solid #b3b3b3 1px;
+          border-radius: 5px;
+      }
+
+      textarea {
+          height: 338px;
+          resize: none;
+      }
+
+      button {
+          width: 20%;
+          background: #468fff;
+          padding: 2%;
+          margin-top: 5%;
+          border-radius: 3px;
+          font-size: 16px;
+          font-weight: bold;
+      }
+
+      button:hover {
+          background: #2773e6;
+          box-shadow: 0px 3px 12px 0px #494847;
+      }
+
+      @include for-phone-only {
+          width: 85%;
+          padding-bottom: 5%;
+          margin-top: 10%;
+
+          h2 {
+              font-size: 20px;
+              margin: auto;
+              margin-bottom: 8%;
+              color: #444444;
+          }
+
+          h3 {
+              font-size: 14px;
+              margin: auto;
+              text-align: center;
+              font-weight: normal;
+              margin-bottom: 12%;
+
+              span {
+                  font-size: 12px;
+
+                  #underlined {
+                      color: #0054ac;
+                      text-decoration: underline;
+                  }
+              }
+          }
+
+          p {
+              margin-bottom: 2%;
+          }
+
+          input {
+              padding: 6%;
+              margin-bottom: 6%;
+          }
+
+          button {
+              width: 100%;
+              padding: 4%;
+              margin-top: 13%;
+          }
+      }
+
+      @include phone_tablet_inbetween {
+          width: 85%;
+
+          h2 {
+              margin-bottom: 6%;
+          }
+
+          h3 {
+              font-size: 18px;
+              margin-bottom: 7%;
+          }
+      }
+
+      @include for-tablet-only {
+          width: 100%;
+          width: 89%;
+          margin-bottom: 15%;
+          margin-left: 10%;
+      }
+
+      @include for-laptop {
+          width: 75%;
+      }
+  }
 }
