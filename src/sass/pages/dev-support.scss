@@ -16,7 +16,7 @@
 
 @mixin for-tablet-only {
     //@media (max-width: 360px) { @content; }
-    @media (min-device-width: 768px) and (max-device-width: 1023px) {
+    @media (min-width: 768px) and (max-width: 1023px) {
         @content;
     }
 }
@@ -247,7 +247,7 @@ body.dev-support {
 
                     .wrap_keyvisual_bg {
                         position: static;
-                    }
+                        }
 
                     h1 {
                         position: relative;
