@@ -11,22 +11,29 @@
 
   {{!-- meta elements (2 of 2) --}}
   <meta name="theme-color" content="#0054ac"/>
-  <meta name="description" content="{{#is language "ja"}}Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。{{else is language "es"}}Monaca es un completo set de servicios y herramientas que simplifica el desarrollo de aplicaciones móviles basadas en PhoneGap/Cordova y lo hace mucho más fácil e intuitivo.{{else is language "de"}}Monaca macht hybride App-Entwicklung mit PhoneGap/Cordova wesentlich einfacher durch eine cloudbasierende Entwicklungsplatform und Dienstleistungen.{{else is language "it"}}Monaca rende molto più semplice lo sviluppo di applicazioni mobile ibride basate su PhoneGap/Cordova grazie ai suoi strumenti di sviluppo e servizi cloud-powered.{{else is language "ru"}}Monaca делает разработку гибридных мобильных приложений на основе PhoneGap/Cordova простой и легкой.{{else}}Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered mobile app development tools and services.{{/is}}">
 {{#is language "ja"}}
-  <meta name="keywords" content="Monaca,HTML5,Cordova,PhoneGap,MEAP">
+  <meta name="description" content="Monacaは最新のWeb技術を活用したアプリ開発ソリューションです。モバイル、PC、Webアプリのクロスプラットフォーム開発を実現します。組織全体のスキルセットを統一し、実践的で効果的な開発プロセスを実現します。">
+  <meta property="og:description" content="Monacaは最新のWeb技術を活用したアプリ開発ソリューションです。モバイル、PC、Webアプリのクロスプラットフォーム開発を実現します。組織全体のスキルセットを統一し、実践的で効果的な開発プロセスを実現します。">
+  <meta name="keywords" content="Monaca,DevOps,Cordova,クロスプラットフォーム開発,デジタルトランスフォメーション,開発クラウド">
+  <meta property="og:image" content="https://monaca.io/img/ogp_ja.png">
+  <meta property="og:url" content="https://ja.monaca.io/">
+  <meta name="twitter:image" content="https://monaca.io/img/ogp_ja.png">
+  <meta property="twitter:description" content="Monacaは最新のWeb技術を活用したアプリ開発ソリューションです。モバイル、PC、Webアプリのクロスプラットフォーム開発を実現します。組織全体のスキルセットを統一し、実践的で効果的な開発プロセスを実現します。">
+{{else}}
+  <meta name="description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered mobile app development tools and services.">
+  <meta property="og:image" content="https://monaca.io/img/ogp.png">
+  <meta property="og:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered mobile app development tools and services.">
+  <meta property="og:url" content="https://monaca.io/">
+  <meta name="twitter:image" content="https://monaca.io/img/ogp.png">
+  <meta property="twitter:description" content="Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered mobile app development tools and services.">
 {{/is}}
-  <meta property="og:url" content="{{#is language "ja"}}https://ja.monaca.io/{{else}}https://monaca.io/{{/is}}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{title}}">
-  <meta property="og:image" content="https://monaca.io/img/ogp_ja.png">
-  <meta property="og:description" content="{{#is language "ja"}}Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。{{else is language "es"}}Monaca es un completo set de servicios y herramientas que simplifica el desarrollo de aplicaciones móviles basadas en PhoneGap/Cordova y lo hace mucho más fácil e intuitivo.{{else is language "de"}}Monaca macht hybride App-Entwicklung mit PhoneGap/Cordova wesentlich einfacher durch eine cloudbasierende Entwicklungsplatform und Dienstleistungen.{{else is language "it"}}Monaca rende molto più semplice lo sviluppo di applicazioni mobile ibride basate su PhoneGap/Cordova grazie ai suoi strumenti di sviluppo e servizi cloud-powered.{{else is language "ru"}}Monaca делает разработку гибридных мобильных приложений на основе PhoneGap/Cordova простой и легкой.{{else}}Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered mobile app development tools and services.{{/is}}">
   <meta property="fb:admins" content="597508315" >
   <meta name="twitter:site" content="@monaca_io">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@monaca_io">
-  <meta name="twitter:image" content="https://monaca.io/img/ogp_ja.png">
   <meta property="twitter:title" content="{{title}}">
-  <meta property="twitter:description" content="{{#is language "ja"}}Monacaは、Cordovaを内包したHTML5ハイブリッドアプリ開発プラットフォームです。HTML5でマルチプラットフォーム対応のモバイルアプリ開発が行えます。{{else is language "es"}}Monaca es un completo set de servicios y herramientas que simplifica el desarrollo de aplicaciones móviles basadas en PhoneGap/Cordova y lo hace mucho más fácil e intuitivo.{{else is language "de"}}Monaca macht hybride App-Entwicklung mit PhoneGap/Cordova wesentlich einfacher durch eine cloudbasierende Entwicklungsplatform und Dienstleistungen.{{else is language "it"}}Monaca rende molto più semplice lo sviluppo di applicazioni mobile ibride basate su PhoneGap/Cordova grazie ai suoi strumenti di sviluppo e servizi cloud-powered.{{else is language "ru"}}Monaca делает разработку гибридных мобильных приложений на основе PhoneGap/Cordova простой и легкой.{{else}}Monaca makes hybrid app development with PhoneGap/Cordova a lot easier with its comprehensive cloud-powered mobile app development tools and services.{{/is}}">
 {{#if addEnIndexMeta}}
   <meta name="wot-verification" content="e3deda70c83199129d73"/>
 {{/if}}
