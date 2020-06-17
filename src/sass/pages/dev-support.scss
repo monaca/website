@@ -787,11 +787,12 @@ body.dev-support {
                     white-space: nowrap;
                     -webkit-overflow-scrolling: touch;
                     margin-top: -10%;
+                    padding-left: 9vw;
 
                     .horizontal_item {
                         display: inline-block;
                         position: relative;
-                        width: 85vw;
+                        width: 70vw;
                         cursor: pointer;
 
                         .tablet {
