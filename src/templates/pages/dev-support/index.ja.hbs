@@ -554,57 +554,15 @@ show_ja_globalnav: true
         <span>Monacaは<span id="underlined">アシアル株式会社</span>が運営しております。</span></h3>
 
     <p>お名前 *</p>
-    <input type="text" id="name" name="name" placeholder="例）山田太郎">
+    <input type="text" id="name" name="name" placeholder="例）山田太郎" required>
 
     <p>会社名 *</p>
-    <input type="text" id="company_name" name="company_name" placeholder="例）株式会社アシアル">
+    <input type="text" id="company_name" name="company_name" placeholder="例）株式会社アシアル" required>
 
     <p>メールアドレス *</p>
-    <input type="email" id="email" name="email" placeholder="例）xxxxxxxxx@monaca.io">
+    <input type="email" id="email" name="email" placeholder="例）xxxxxxxxx@monaca.io" required>
 
     <p>内容 *</p>
-    <textarea placeholder="お問い合わせ内容を入力してください。"></textarea>
-
-    <button>送信</button>
+    <textarea id="message" placeholder="お問い合わせ内容を入力してください。" required></textarea>
+    <button type="submit">送信</button>
 </form>
-
-<script>
-    $("#scroll_to_form").click(function () {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $("#contact_us").offset().top - 20
-        }, 2000);
-    });
-
-    $(".seikyoren").click(function () {
-        window.location.href = "/showcase/seikyoren.html";
-    });
-
-    $(".naganobank").click(function () {
-        window.location.href = "/showcase/naganobank.html";
-    });
-
-    $(".smbc").click(function () {
-        window.location.href = "/showcase/smbc.html";
-    });
-
-    $(".monex").click(function () {
-        window.location.href = "/showcase/monex.html";
-    });
-
-    $(".showcase_mobile_button").click(function () {
-        window.location.href = "/showcase/";
-    });
-
-    $(".logos_button_mobile").click(function () {
-        window.location.href = "/showcase/";
-    });
-
-    $(".logos_link").click(function () {
-        window.location.href = "/showcase/";
-    });
-
-    $(".showcase_link").click(function () {
-        window.location.href = "/showcase/";
-    });
-
-</script>
