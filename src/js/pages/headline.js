@@ -167,7 +167,7 @@
         }
       }
 
-      data = [].concat(headlines, trainings, events);
+      var data = [].concat(headlines, trainings, events);
       // Sort by date
       data.sort(function(a, b) {
         return (new Date(b.date)) - (new Date(a.date))
