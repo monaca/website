@@ -550,6 +550,21 @@ module.exports = function (grunt) {
                     dest: '<%= config.distJa %>/img/'
                 }]
             }
+        },
+
+        babel: {
+            options: {
+              sourceMap: true,
+              presets: [
+                  '@babel/preset-env'
+              ]
+            },
+            dist: {
+              files: {
+                '<%= config.distEn %>/js/all.js': '<%= config.distEn %>/js/all.js',
+                '<%= config.distJa %>/js/all.js': '<%= config.distJa %>/js/all.js'
+              }
+            }
         }
     });
 
@@ -562,6 +577,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-styledocco');
+    grunt.loadNpmTasks('grunt-babel');
 
 
     function injectManifest() {
@@ -618,6 +634,7 @@ module.exports = function (grunt) {
         'sass:dist',
         'concat',
         'copy',
+        'babel',
         'uglify',
         'assemble',
         'cssmin',
