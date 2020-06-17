@@ -559,6 +559,9 @@ body.dev-support {
 
             .pc_showcase_stats {
                 display: none;
+                @include for-tablet-only {
+                    display: flex;
+                }
                 @include for-laptop {
                     display: flex;
                 }
@@ -972,15 +975,17 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
             .showcase_content {
-                width: 79%;
-                margin-top: 5%;
+                width: 75%;
+
+                .wrap {
+                    grid-template-columns: 30% 30% 26% 26%;
+                }
 
                 .showcase_item {
-                    #phone1 {
+                    .showcase_img {
                         a {
-                            font-size: 11px;
+                            font-size: 12.7px;
                         }
                     }
                 }
@@ -1024,12 +1029,15 @@ body.dev-support {
         }
 
         @include phone_tablet_inbetween {
-            bottom: 49%;
-            left: -15%;
+            height: 70%;
+            bottom: 50%;
+            left: -10%;
+        }
+        @include for-tablet-only {
+            top: -88px;
         }
 
         @include for-laptop {
-            // bottom: 43%;
             top: -88px;
         }
     }
