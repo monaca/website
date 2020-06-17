@@ -166,13 +166,13 @@ body.devops {
         font-family: 'ITC Avant Garde Gothic Std', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Helvetica Neue", sans-serif;
 
         @media screen and (max-width: $break) {
-            height: 300px;
+            height: 350px;
         }
         
         &.desc-wrapper {
             padding: 140px 0;
             @include for-phone-only {
-              padding: 80px 0;
+              padding: 100px 0;
             }
         }
 
@@ -220,8 +220,8 @@ body.devops {
         max-width: 650px;
         overflow-x: hidden;
 
-        @include for-phone-only {
-          margin-top: -60px;
+        @media (min-width: 480px) and (max-width: 767px) {
+          margin-top: 0px;
         }
         
         .main-desc {
