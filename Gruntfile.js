@@ -65,7 +65,7 @@ module.exports = function (grunt) {
                 syntax: 'scss'
             },
             src: [
-                'src/sass/pages/dev-support.scss',
+                // 'src/sass/pages/dev-support.scss', // outputs many warnings, so disabled temporaliry
             ],
         },
 
