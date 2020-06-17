@@ -16,7 +16,7 @@
 
 @mixin for-tablet-only {
     //@media (max-width: 360px) { @content; }
-    @media (min-device-width: 768px) and (max-device-width: 1023px) {
+    @media (min-width: 768px) and (max-width: 1023px) {
         @content;
     }
 }
@@ -45,10 +45,6 @@
 
 @mixin phone-content-width {
     width: 85%;
-}
-
-@mixin fixing_width {
-    width: 108%;
 }
 
 @mixin h1-titles {
@@ -231,7 +227,7 @@ body.dev-support {
 
         @include for-phone-only {
             z-index: 1;
-            padding-bottom: 25%;
+            padding-bottom: 80px;
 
             .wrap {
                 @include phone-content-width;
@@ -239,30 +235,30 @@ body.dev-support {
 
                 .wrap_keyvisual {
                     display: block;
-                    height: 256px;
+                    min-height: 256px;
+                    height: unset;
                 
 
                     text-align: center;
                     width: 100%;
 
                     .wrap_keyvisual_bg {
-                        position: absolute;
-                        top: -11px;
-                        right: 2px;
-                        width: 100%;
-                        height: 100%;
-    
-                        background-image: url('/img/dev-support/bg_dev-support.svg');
-                        background-repeat: no-repeat;
-                        background-position: 50% 72px;
-                        background-size: 275px;
+                        position: static;
+                        padding-top: 3vw;
+
+                        img {
+                            min-width: 275px;
+                            height: 185.938px;
+                            width: 90%;
+                            height: 50%;
+                        }
                     }
 
                     h1 {
                         position: relative;
                         top: -8px;
-                        font-size: 20px;
-                        line-height: 26px;
+                        font-size: 6vw;
+                        line-height: 7.5vw;
                     }
 
                     button {
@@ -292,8 +288,8 @@ body.dev-support {
 
                         div {
                             display: flex;
-                            font-size: 12px;
-                            line-height: 16px;
+                            font-size: 3.75vw;
+                            line-height: 5vw;
                             border-bottom: solid rgba(255, 255, 255, 0.251) 1px;
                             padding: 6px 0;
                         }
@@ -309,35 +305,73 @@ body.dev-support {
         }
 
         @include phone_tablet_inbetween {
+            z-index: 1;
+            padding-bottom: 120px;
+
             .wrap {
-                width: 90%;
+                @include phone-content-width;
+                margin-top: 10%;
 
                 .wrap_keyvisual {
+                    display: block;
+                    height: unset;
+
+                    text-align: center;
+                    width: 100%;
+
                     .wrap_keyvisual_bg {
+                        position: static;
+
+                        img {
+                            width: 77%;
+                            height: 43%;
+                        }
                     }
 
                     h1 {
-                        font-size: 2.6vw;
+                        position: relative;
+                        top: -8px;
+                        font-size: 4vw;
+                        line-height: 5vw;
                     }
 
                     button {
-                        width: 65%;
-                        top: 81%;
-                        left: 18%;
+                        position: fixed;
+                        @include phone-content-width;
+                        background: #fa6800;
+                        border: unset;
+                        padding: 3% 4% 3% 4%;
+                        top: 89%;
+                        left: 8%;
                     }
                 }
 
                 .characteristics {
+                    margin-left: 0;
+                    padding-top: 7px;
+
                     .title {
-                        font-size: 4vw;
+                        text-align: center;
+                        padding-bottom: 2%;
+                        width: 100%;
+                        font-size: 14px;
                     }
 
                     .content {
-                        grid-template-columns: 33% 33% 30%;
+                        display: block;
+
                         div {
-                            font-size: 2.5vw;
-                            margin-right: 13%;
-                            margin-bottom: 20%;
+                            display: flex;
+                            font-size: 18px;
+                            line-height: 24px;
+                            border-bottom: solid rgba(255, 255, 255, 0.251) 1px;
+                            padding: 6px 0;
+                        }
+                    }
+
+                    div {
+                        br {
+                            display: none;
                         }
                     }
                 }
@@ -345,47 +379,26 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
-
-            .wrap {
-                width: 90%;
-
-                .wrap_keyvisual {
-                    .wrap_keyvisual_bg {
-
-                    }
-                }
-
-                .characteristics {
-                    margin-left: 4%;
-                    margin-top: 3%;
-                    .title {
-                        width: 98%;
-                    }
-                    .content {
-                        grid-template-columns: 37% 36% 26%;
-                    }
-                    div {
-                        font-size: 19px;
-                    }
-                }
-            }
-        }
-
-        @include for-laptop {
             .wrap {
                 .wrap_keyvisual {
+                    box-sizing: content-box;
+                    padding: 0 32px;
+
                     .wrap_keyvisual_bg {
                         position: absolute;
                         top: 36px;
-                        right: 0;
+                        left: 450px;
                         width: 500px;
                         height: 500px;
     
-                        background-image: url('/img/dev-support/bg_dev-support.svg');
+                        background-image: url('/img/dev-support/bg_dev-support_pc.svg');
                         background-repeat: no-repeat;
                         background-position: 100% 0;
                         background-size: 529px;
+
+                        img {
+                            display: none;
+                        }
                     }
 
                     h1 {
@@ -401,6 +414,9 @@ body.dev-support {
                 }
     
                 .characteristics {
+                    box-sizing: content-box;
+                    padding: 0 32px;
+
                     .title {
                         padding-top: 4px;
                         padding-bottom: 7px;
@@ -413,6 +429,69 @@ body.dev-support {
                         grid-template-columns: 35% 35% 25%;
                         height: 154px;
                         padding-top: 13px;
+                        white-space: nowrap;
+
+                        div {
+                            font-size: 18px;
+                            line-height: 24px;
+                        }
+                    }
+                }
+            }
+        }
+
+        @include for-laptop {
+            .wrap {
+                .wrap_keyvisual {
+                    box-sizing: content-box;
+                    padding: 0 32px;
+
+                    .wrap_keyvisual_bg {
+                        position: absolute;
+                        top: 36px;
+                        left: 500px;
+                        width: 500px;
+                        height: 500px;
+    
+                        background-image: url('/img/dev-support/bg_dev-support_pc.svg');
+                        background-repeat: no-repeat;
+                        background-position: 100% 0;
+                        background-size: 529px;
+
+                        img {
+                            display: none;
+                        }
+                    }
+
+                    h1 {
+                        padding-top: 99px;
+                        padding-left: 0;
+                        font-size: 36px;
+                        line-height: 48px;
+                    }
+
+                    button {
+                        font-size: 17px;
+                    }
+                }
+    
+                .characteristics {
+                    box-sizing: content-box;
+                    padding: 0 32px;
+
+                    .title {
+                        padding-top: 4px;
+                        padding-bottom: 7px;
+                        width: 93.4%;
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
+    
+                    .content {
+                        grid-template-columns: 35% 35% 25%;
+                        height: 154px;
+                        padding-top: 13px;
+                        white-space: nowrap;
                     }
                 }
             }
@@ -438,11 +517,14 @@ body.dev-support {
         }
 
         @include phone_tablet_inbetween {
-            bottom: 10%;
+            width: 130%;
+            height: 130%;
+            bottom: 8%;
+            left: -15%;
         }
 
         @include for-tablet-only {
-            bottom: 8%;
+            bottom: 10px;
         }
 
         @include for-laptop {
@@ -464,7 +546,6 @@ body.dev-support {
         }
 
         .showcase_content {
-            width: 68%;
             margin: auto;
             font-weight: bold;
             margin-top: 0;
@@ -483,6 +564,9 @@ body.dev-support {
 
             .pc_showcase_stats {
                 display: none;
+                @include for-tablet-only {
+                    display: flex;
+                }
                 @include for-laptop {
                     display: flex;
                 }
@@ -509,7 +593,7 @@ body.dev-support {
 
                     .pc_showcase_stats_title {
                         font-size: 15px;
-                        color: rgba(255, 255, 255, 0.71);
+                        color: rgba(255, 255, 255, 0.7);
                         text-align: left;
                     }
 
@@ -528,7 +612,7 @@ body.dev-support {
                             font-size: 25px;
                             line-height: 33px;
                             letter-spacing: -0.1em;
-                            color: rgba(255, 255, 255, 0.71);
+                            color: rgba(255, 255, 255, 0.7);
                         }
                     }
 
@@ -674,7 +758,7 @@ body.dev-support {
 
                         .first {
                             font-size: 4.5vw;
-                            color: rgba(255, 255, 255, 0.71);
+                            color: rgba(255, 255, 255, 0.7);
                             text-align: left;
                         }
 
@@ -689,8 +773,9 @@ body.dev-support {
 
                             .text {
                                 font-size: 6vw;
+                                letter-spacing: -0.1em;
                                 font-weight: normal;
-                                color: rgba(255, 255, 255, 0.71);
+                                color: rgba(255, 255, 255, 0.7);
                             }
                         }
                     }
@@ -706,11 +791,12 @@ body.dev-support {
                     white-space: nowrap;
                     -webkit-overflow-scrolling: touch;
                     margin-top: -10%;
+                    padding-left: 9vw;
 
                     .horizontal_item {
                         display: inline-block;
                         position: relative;
-                        width: 85vw;
+                        width: 70vw;
                         cursor: pointer;
 
                         .tablet {
@@ -796,7 +882,7 @@ body.dev-support {
 
                         .first {
                             font-size: 17px;
-                            color: rgba(255, 255, 255, 0.71);
+                            color: rgba(255, 255, 255, 0.7);
                             text-align: left;
                         }
 
@@ -811,7 +897,8 @@ body.dev-support {
 
                             .text {
                                 font-size: 23.4px;
-                                color: rgba(255, 255, 255, 0.71);
+                                letter-spacing: -0.1em;
+                                color: rgba(255, 255, 255, 0.7);
                             }
                         }
                     }
@@ -827,7 +914,8 @@ body.dev-support {
                     overflow-y: hidden;
                     white-space: nowrap;
                     -webkit-overflow-scrolling: touch;
-                    margin-top: -10%;
+                    margin-top: -60px;
+                    padding-left: 9vw;
 
                     .horizontal_item {
                         display: inline-block;
@@ -896,15 +984,18 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
             .showcase_content {
-                width: 79%;
-                margin-top: 5%;
+                box-sizing: content-box;
+                padding: 0 32px;
+    
+                .wrap {
+                    grid-template-columns: 30% 30% 26% 26%;
+                }
 
                 .showcase_item {
-                    #phone1 {
+                    .showcase_img {
                         a {
-                            font-size: 11px;
+                            font-size: 12.7px;
                         }
                     }
                 }
@@ -913,8 +1004,9 @@ body.dev-support {
 
         @include for-laptop {
             .showcase_content {
-                width: 75%;
-
+                box-sizing: content-box;
+                padding: 0 32px;
+    
                 .wrap {
                     grid-template-columns: 30% 30% 26% 26%;
                 }
@@ -942,18 +1034,21 @@ body.dev-support {
         transform: rotate(-4.2deg);
 
         @include for-phone-only {
-            height: 70%;
+            height: 55%;
             bottom: 50%;
             left: -10%;
         }
 
         @include phone_tablet_inbetween {
-            bottom: 49%;
-            left: -15%;
+            height: 55%;
+            bottom: 50%;
+            left: -10%;
+        }
+        @include for-tablet-only {
+            top: -88px;
         }
 
         @include for-laptop {
-            // bottom: 43%;
             top: -88px;
         }
     }
@@ -1101,7 +1196,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 100%;
 
             .reasons_content {
                 width: 90%;
@@ -1400,7 +1495,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 100%;
             .phases_wrap {
                 width: 90%;
                 padding-top: 4%;
@@ -1612,7 +1707,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 100%;
             padding-bottom: 15%;
 
             .training_wrap {
@@ -1738,19 +1833,15 @@ body.dev-support {
                     }
 
                     h3 {
-                        width: 95%;
-                        margin: auto;
-                        margin-top: -10%;
+                        margin: -10% -4px 0 -4px;
                         text-align: center;
                         font-weight: normal;
                     }
 
                     .squares {
-                        //width: 85%;
-                        width: 140px;
-                        height: 144px;
                         margin: auto;
                         margin-top: 15%;
+                        padding: 0 2px;
                         text-align: left;
                         font-size: 16px;
                         color: #6f777f;
@@ -1811,13 +1902,12 @@ body.dev-support {
 
                         h3 {
                             font-size: 14px;
-                            margin-top: -17%;
+                            margin-top: -17% -4px 0 -4px;
                         }
 
                         .squares {
-                            width: 100px;
-                            height: 108px;
                             margin-top: 8%;
+                            padding: 0 8px;
                             font-size: 12px;
                         }
                     }
@@ -1881,13 +1971,12 @@ body.dev-support {
 
                         h3 {
                             font-size: 14px;
-                            margin-top: -17%;
+                            margin-top: -17% -4px 0 -4px;
                         }
 
                         .squares {
-                            width: 100px;
-                            height: 108px;
                             margin-top: 8%;
+                            padding: 0 8px;
                             font-size: 12px;
                         }
                     }
@@ -1900,7 +1989,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 100%;
             .service_wrap {
                 width: 79%;
                 margin-left: 6%;
@@ -1924,6 +2013,7 @@ body.dev-support {
 
                         h3 {
                             font-size: 16px;
+                            margin: -10% -4px 0 -4px;
                         }
 
                         img {
@@ -1932,7 +2022,6 @@ body.dev-support {
                         }
 
                         .squares {
-                            height: 125px;
                             font-size: 15.6px;
                         }
                     }
@@ -2305,7 +2394,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 100%;
             .prices_wrap {
                 width: 90%;
 
@@ -2567,7 +2656,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 100%;
             .showcase_logo_wrap {
                 width: 90%;
                 .logos {
@@ -2722,7 +2811,7 @@ body.dev-support {
         }
 
         @include for-tablet-only {
-            @include fixing_width;
+            width: 100%;
             width: 89%;
             margin-bottom: 15%;
             margin-left: 10%;

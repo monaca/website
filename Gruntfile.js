@@ -54,6 +54,21 @@ module.exports = function (grunt) {
     grunt.initConfig({
         config: config,
 
+        stylelint: {
+            options: {
+                configFile: '.stylelintrc',
+                formatter: 'string',
+                ignoreDisables: false,
+                failOnError: false,
+                outputFile: '',
+                reportNeedlessDisables: false,
+                syntax: 'scss'
+            },
+            src: [
+                'src/sass/pages/dev-support.scss',
+            ],
+        },
+
         sass: {
             options: {
                 implementation: sass,
@@ -93,7 +108,9 @@ module.exports = function (grunt) {
                 ]
             },
             dist: {
-                src: '<%= config.dist %>/css/**/*.css'
+                src: [
+                    '<%= config.dist %>/css/pages/dev-support.css',
+                ],
             }
         },
 
@@ -115,7 +132,7 @@ module.exports = function (grunt) {
             },
             sass: {
                 files: ['<%= config.src %>/**/*.scss'],
-                tasks: ['sass', 'postcss', 'copy:css'],
+                tasks: ['stylelint', 'sass', 'postcss', 'copy:css'],
                 options: {
                     spawn: false
                 }
@@ -522,6 +539,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-aws-s3');
     grunt.loadNpmTasks('grunt-styledocco');
     grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-stylelint');
 
 
     function injectManifest() {
@@ -575,6 +593,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
+        'stylelint',
         'sass:dist',
         'postcss:dist',
         'concat',
