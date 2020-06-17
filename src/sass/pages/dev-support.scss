@@ -542,7 +542,6 @@ body.dev-support {
         }
 
         .showcase_content {
-            width: 68%;
             margin: auto;
             font-weight: bold;
             margin-top: 0;
@@ -909,7 +908,8 @@ body.dev-support {
                     overflow-y: hidden;
                     white-space: nowrap;
                     -webkit-overflow-scrolling: touch;
-                    margin-top: -10%;
+                    margin-top: -60px;
+                    padding-left: 9vw;
 
                     .horizontal_item {
                         display: inline-block;
@@ -979,8 +979,9 @@ body.dev-support {
 
         @include for-tablet-only {
             .showcase_content {
-                width: 75%;
-
+                box-sizing: content-box;
+                padding: 0 32px;
+    
                 .wrap {
                     grid-template-columns: 30% 30% 26% 26%;
                 }
@@ -997,8 +998,9 @@ body.dev-support {
 
         @include for-laptop {
             .showcase_content {
-                width: 75%;
-
+                box-sizing: content-box;
+                padding: 0 32px;
+    
                 .wrap {
                     grid-template-columns: 30% 30% 26% 26%;
                 }
@@ -1026,13 +1028,13 @@ body.dev-support {
         transform: rotate(-4.2deg);
 
         @include for-phone-only {
-            height: 70%;
+            height: 55%;
             bottom: 50%;
             left: -10%;
         }
 
         @include phone_tablet_inbetween {
-            height: 70%;
+            height: 55%;
             bottom: 50%;
             left: -10%;
         }
