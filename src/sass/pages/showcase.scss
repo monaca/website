@@ -616,7 +616,7 @@ body.showcase {
                 position: absolute;
                 right: 15%;
                 bottom: 90px;
-                background: rgba(255,255,255,.875);
+                background: rgba(255,255,255,0.99);
                 z-index: 9;
 
                 @media screen and (max-width: $width) {
@@ -655,9 +655,11 @@ body.showcase {
 
                 h3 {
                     display: block;
+                    font-weight: 600;
+                    text-align: center;
                     margin: 10px auto;
                     font-size: 14px;
-                    width: 188px;
+                    width: 215px;
                     height: 40px;
                     color: #444444;
                     white-space: nowrap;
@@ -675,7 +677,7 @@ body.showcase {
                     li {
                         padding: 0;
                         list-style: none;
-                        height: 24px;
+                        // height: 24px;
                         line-height: 24px;
                         color: #444444;
                     }
