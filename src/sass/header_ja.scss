@@ -59,9 +59,11 @@ html[lang=ja] {
                     // width: 181.11px;
                     transition: $header-transition;
                     @media screen and (max-width: 970px) {
+                        width: calc(181.11px / 40 * 24);
                         height: 24px;
                     }
                     @media screen and (min-width: 971px) {
+                        width: calc(181.11px / 40 * 26);
                         height: 26px;
                     }
 
