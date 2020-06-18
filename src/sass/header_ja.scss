@@ -508,7 +508,7 @@ html[lang=ja] {
         left: 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         height: 56px;
         background-color: #fff;
 
@@ -555,6 +555,10 @@ html[lang=ja] {
                     opacity: 1 !important;
                 }
             }
+        }
+
+        > div.ja-subnav__spacer {
+            flex: 1;
         }
 
         > ul.ja-subnav__menu-list {
