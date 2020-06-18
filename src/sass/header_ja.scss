@@ -510,7 +510,8 @@ html[lang=ja] {
         align-items: center;
         justify-content: center;
         height: 56px;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(2px);
 
         > div.ja-subnav__top-bar {
             position: absolute;
