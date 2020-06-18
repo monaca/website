@@ -117,6 +117,7 @@ html[lang=ja] body.platform {
   .v2-section--keyvisual {
     // In PC mode (926px up)
     @media screen and (min-width: 926px) {
+        padding-top: 40px;
 
         > .v2-section--keyvisual__wrapper {
             position: relative;
@@ -164,6 +165,7 @@ html[lang=ja] body.platform {
                 font-size: 20px;
                 line-height: 34px;
                 font-weight: 600;
+                white-space: nowrap;
             }
 
             .long {
@@ -182,7 +184,7 @@ html[lang=ja] body.platform {
             > .v2-section--keyvisual__description {
                 font-size: 14px;
                 line-height: 24px;
-                font-weight: 600px;
+                font-weight: bold;
                 opacity: 0.5;
 
                 > .wide-screen {
@@ -238,7 +240,7 @@ html[lang=ja] body.platform {
             .description {
                 color: #6F777F;
                 font-size: 14px;
-                font-weight: 600px;
+                font-weight: bold;
                 line-height: 21px;
             }
 
@@ -371,6 +373,7 @@ html[lang=ja] body.platform {
                 color: white;
                 top: 10px;
                 left: 50%;
+                padding-top: 30px;
                 transform: translate(-50%);
                 min-width: 260px;
                 padding-left: 35px;
@@ -462,10 +465,14 @@ html[lang=ja] body.platform {
                 > .app {
                     min-width: 216px;
                     max-width: 216px;
-                    min-height: 195px;
-                    max-height: 195px;
+                    min-height: 215px;
+                    max-height: 215px;
                     top: 30px;
                     left: 30px;
+
+                    .description {
+                        font-weight: normal;
+                    }
 
                     > .v2-section--keyvisual__app-development {
                         min-width: 216px;
