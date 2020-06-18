@@ -192,9 +192,10 @@ body.devops {
             color: #44607E;
             font-size: 1.5em;
             font-weight: bold;
+            letter-spacing: -0.03em;
 
             @include media-sm-up {
-                font-size: 3em;
+                font-size: 60px;
             }
 
             &.tablet-up {
