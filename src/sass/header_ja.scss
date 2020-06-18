@@ -253,18 +253,20 @@ html[lang=ja] {
                         }
                     }
                     &.blogs {
-                        left: unset;
+                        left: auto;
                         right: -89px;
+                        box-sizing: content-box;
+                        width: 720px;
                         transform: translateY(0);
                         flex-flow: row nowrap;
                         padding: 26px 30px;
                         &::before { // Arrow
-                            left: unset;
-                            right: 132px;
+                            left: auto;
+                            right: 112px;
                         }
                         &::after { // Hide shadow of arrow
-                            left: unset;
-                            right: calc(132px - 50px);
+                            left: auto;
+                            right: calc(112px - 50px);
                         }
                     }
 
