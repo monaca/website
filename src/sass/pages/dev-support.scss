@@ -259,6 +259,7 @@ body.dev-support {
                         top: -8px;
                         font-size: 6vw;
                         line-height: 7.5vw;
+                        white-space: nowrap;
                     }
 
                     button {
@@ -333,6 +334,7 @@ body.dev-support {
                         top: -8px;
                         font-size: 4vw;
                         line-height: 5vw;
+                        white-space: nowrap;
                     }
 
                     button {
@@ -406,6 +408,7 @@ body.dev-support {
                         padding-left: 0;
                         font-size: 36px;
                         line-height: 48px;
+                        white-space: nowrap;
                     }
 
                     button {
@@ -469,6 +472,7 @@ body.dev-support {
                         padding-left: 0;
                         font-size: 36px;
                         line-height: 48px;
+                        white-space: nowrap;
                     }
 
                     button {
@@ -993,6 +997,10 @@ body.dev-support {
                     grid-template-columns: 30% 30% 26% 26%;
                 }
 
+                .mobile_showcase_headers {
+                    visibility: hidden;
+                }
+
                 .showcase_item {
                     .showcase_img {
                         a {
@@ -1010,6 +1018,10 @@ body.dev-support {
     
                 .wrap {
                     grid-template-columns: 30% 30% 26% 26%;
+                }
+
+                .mobile_showcase_headers {
+                    visibility: hidden;
                 }
 
                 .showcase_item {

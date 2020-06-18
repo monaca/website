@@ -59,9 +59,11 @@ html[lang=ja] {
                     // width: 181.11px;
                     transition: $header-transition;
                     @media screen and (max-width: 970px) {
+                        width: calc(181.11px / 40 * 24);
                         height: 24px;
                     }
                     @media screen and (min-width: 971px) {
+                        width: calc(181.11px / 40 * 26);
                         height: 26px;
                     }
 
@@ -251,18 +253,20 @@ html[lang=ja] {
                         }
                     }
                     &.blogs {
-                        left: unset;
-                        right: -109px;
+                        left: auto;
+                        right: -89px;
+                        box-sizing: content-box;
+                        width: 720px;
                         transform: translateY(0);
                         flex-flow: row nowrap;
                         padding: 26px 30px;
                         &::before { // Arrow
-                            left: unset;
-                            right: 132px;
+                            left: auto;
+                            right: 112px;
                         }
                         &::after { // Hide shadow of arrow
-                            left: unset;
-                            right: calc(132px - 50px);
+                            left: auto;
+                            right: calc(112px - 50px);
                         }
                     }
 
@@ -506,9 +510,10 @@ html[lang=ja] {
         left: 0;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
         height: 56px;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(2px);
 
         > div.ja-subnav__top-bar {
             position: absolute;
@@ -553,6 +558,10 @@ html[lang=ja] {
                     opacity: 1 !important;
                 }
             }
+        }
+
+        > div.ja-subnav__spacer {
+            flex: 1;
         }
 
         > ul.ja-subnav__menu-list {

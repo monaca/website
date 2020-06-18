@@ -180,7 +180,7 @@ body.devops {
             text-align: center;
             color: #44607E;
             font-size: 1em;
-            font-weight: bold;
+            font-weight: normal;
 
             @include media-sm-up {
                 font-size: 1.5em;
@@ -192,9 +192,10 @@ body.devops {
             color: #44607E;
             font-size: 1.5em;
             font-weight: bold;
+            letter-spacing: -0.03em;
 
             @include media-sm-up {
-                font-size: 3em;
+                font-size: 60px;
             }
 
             &.tablet-up {
@@ -231,7 +232,7 @@ body.devops {
             margin: auto;
             max-width: none;
             line-height: 1.5;
-            text-align: center;
+            text-align: left;
           }
     }
 
