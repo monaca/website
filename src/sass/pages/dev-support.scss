@@ -993,6 +993,10 @@ body.dev-support {
                     grid-template-columns: 30% 30% 26% 26%;
                 }
 
+                .mobile_showcase_headers {
+                    visibility: hidden;
+                }
+
                 .showcase_item {
                     .showcase_img {
                         a {
@@ -1010,6 +1014,10 @@ body.dev-support {
     
                 .wrap {
                     grid-template-columns: 30% 30% 26% 26%;
+                }
+
+                .mobile_showcase_headers {
+                    visibility: hidden;
                 }
 
                 .showcase_item {
