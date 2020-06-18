@@ -88,6 +88,9 @@ show_ja_globalnav: true
                 社内アプリのモバイル化の工数を大きく削減。対応データソースは、MySQL、SQL Server、PostgreSQL、Oracle などのRDB だけでなく、CSV やExcel などのファイル、Salesforce、kintone、WordPress、Sansan、Googlesheets といったSaaS を含む200種類以上。
                 基幹・SaaS データに連携するモバイルアプリ開発に最適のバックエンドツールです。
               </p>
+              <p class="show-mobile show-content">
+                全てを見る<img src="/img/common-v2/ic_keyboard_arrow_down.svg"/>
+              </p>
             </div>
           </td>
           <td class="info">
@@ -619,4 +622,34 @@ show_ja_globalnav: true
 </div>
 
   <script src="/js/jquery.min.js"></script>
-  <script src="/js/jquery.smoothScroll.js"></script>
+  <script>
+
+    $(window).load(function () {
+      var navItems = $('ul.productsPartner-nav > li.productsPartner-nav-item > a');
+      navItems.click(function () {
+        navItems.each(function () {
+          $(this).removeClass('active');
+        });
+        $(this).addClass('active');
+      });
+      navItems.each(function () {
+        var href = $(this).attr('href');
+        if (window.location.hash.indexOf(href) > -1) {
+          $(this).addClass('active');
+        } else {
+          $(this).removeClass('active');
+        }
+      });
+
+      // Show more button on mobile
+      $(".show-content").click(function(){
+        $(this).prev().toggleClass("non-hidden");
+        const img = $(this).clone().children()
+        $(this).text(function(i, text){
+          return text.includes("全てを見る") ? "折りたたみ" : "全てを見る";
+        })
+        $(this).append(img);
+        $(this).children('img').toggleClass("rotated");
+      });
+    });
+  </script>
