@@ -240,7 +240,7 @@ html[lang=ja] body.platform {
             .description {
                 color: #6F777F;
                 font-size: 14px;
-                font-weight: bold;
+                font-weight: normal;
                 line-height: 21px;
             }
 
@@ -331,9 +331,10 @@ html[lang=ja] body.platform {
             }
 
             > .box {
-                min-width: 630px;
-                min-height: 250px;
-                padding: 10px;
+                min-width: 650px;
+                min-height: 270px;
+                padding: 20px 40px;
+                top: 220px;
                 
                 .title {
                     font-size: 20px;
@@ -345,15 +346,17 @@ html[lang=ja] body.platform {
                 }
 
                 > .trial {
+                    position: relative;
                     max-width: 300px;
                     min-height: 230px;
                     padding-right: 10px;
                 }
 
                 > .app {
+                    position: relative;
                     max-width: 300px;
                     min-height: 230px;
-                    padding-left: 10px;
+                    padding-left: 30px;
                     right: 10px;
                 }
             }
@@ -440,12 +443,17 @@ html[lang=ja] body.platform {
                 }
 
                 > .trial {
+                    position: absolute;
                     min-width: 216px;
                     max-width: 216px;
                     min-height: 210px;
                     max-height: 210px;
                     left: 30px;
                     bottom: 30px;
+
+                    .description {
+                        font-weight: normal;
+                    }
 
                     > a.v2-section--keyvisual__trial-button {
                         min-width: 216px;
@@ -463,10 +471,12 @@ html[lang=ja] body.platform {
                 }
 
                 > .app {
+                    position: absolute;
                     min-width: 216px;
                     max-width: 216px;
                     min-height: 215px;
                     max-height: 215px;
+                    padding-left: 0;
                     top: 30px;
                     left: 30px;
 
