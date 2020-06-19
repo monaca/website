@@ -117,6 +117,13 @@ body.book-support {
                 text-align: left;
                 margin-bottom: 15px;
                 min-height: 195px;
+
+                .sample-download {
+                  margin: 30px 0;
+                  a {
+                    text-decoration: underline;
+                  }
+                }
             }
 
             .details {
