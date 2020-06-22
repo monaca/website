@@ -563,12 +563,15 @@ body.showcase {
             h1 {
                 display: block;
                 width: 45%;
+                line-height: 40px;
                 position: absolute;
                 left: 15%;
                 bottom: 24px;
                 font-size: 30px;
+                font-weight: 600;
                 z-index: 9;
                 color: white;
+                white-space: nowrap;
 
                 @media screen and (max-width: $width) {
                     position: relative;
@@ -615,9 +618,10 @@ body.showcase {
             .info-cont {
                 display: block;
                 width: 250px;
-                height: 310px;
+                min-height: 320px;
+                padding-bottom: 20px;
                 position: absolute;
-                right: 15%;
+                right: 12%;
                 bottom: 90px;
                 background: rgba(255,255,255,0.99);
                 z-index: 9;
@@ -631,7 +635,9 @@ body.showcase {
                     right: 0;
                     margin-top: 0;
                 }
-
+                .label-dev-company {
+                  font-size:10px;
+                }
                 &.flipped {
                     right: initial;
                     left: 15%;
@@ -641,7 +647,7 @@ body.showcase {
                     display: block;
                     max-width: 200px;
                     max-height: 100px;
-                    margin: 44px auto 32px;
+                    margin: 30px auto 30px;
 
                     @media screen and (max-width: $width) {
                         max-width: 315px;
@@ -654,27 +660,35 @@ body.showcase {
                     @media screen and (max-width: $break) {
                         width: 40%;
                     }
+
+                    &.img-lg {
+                      margin: 60px auto 60px;
+                    }
                 }
 
                 h3 {
                     display: block;
                     font-weight: 600;
-                    text-align: center;
                     margin: 10px auto;
                     font-size: 14px;
-                    width: 215px;
-                    height: 40px;
-                    color: #444444;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    line-height: 40px;
-                    border-bottom: 1px solid #b3b3b3;
+                    width: 190px;
+                    // height: 33px;
+                    color: #444;
+                    line-height: 18px;
                 }
-
+                hr {
+                  display: block;
+                  height: 0;
+                  border: 0;
+                  border-top: 1px solid #B3B3B3;
+                  margin: 1em auto;
+                  width: 191px;
+                  padding: 0;
+                }
                 ul {
                     display: block;
                     margin: 0 auto;
-                    width: 188px;
+                    width: 190px;
                     font-size: 14px;
 
                     li {
