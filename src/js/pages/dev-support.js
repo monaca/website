@@ -5,11 +5,16 @@
     }, 2000);
   }
 
+  function hideInquiryButton() {
+    $("#scroll_to_form").fadeOut(500);
+  }
+
   window.monacaPages = window.monacaPages || [];
 
   monacaPages["/dev-support/index.html"] = function () {
     $("#scroll_to_form").click(function () {
-      moveToContactForm()
+      moveToContactForm();
+      hideInquiryButton();
     });
 
     $(".seikyoren").click(function () {
@@ -47,6 +52,10 @@
     var initFormData;
     displayBody();
     showLoading("support-inquiry", "loading");
+
+    $("#contact_us input, #contact_us textarea").on('focus', () => {
+      hideInquiryButton();
+    });
 
     $("#contact_us").submit(function (e) {
       e.preventDefault();
