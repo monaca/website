@@ -1,7 +1,7 @@
 (function () {
   function moveToContactForm() {
     $([document.documentElement, document.body]).animate({
-      scrollTop: $("#contact_us").offset().top - 20
+      scrollTop: $("#contact_us").offset().top - window.HEADER_HEIGHT
     }, 2000);
   }
 
