@@ -120,4 +120,5 @@ html[lang="ja"] body {
     // Use Japanese-font glyphs for alphanumerics
     font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Helvetica Neue", Arial, sans-serif;
     font-size: 14px;
+    overflow-x: hidden;
 }
