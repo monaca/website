@@ -87,6 +87,31 @@
       gtag('config', 'UA-526750-32', { 'optimize_id': 'GTM-N5QB3FJ'});
     });
   </script>
+{{#is language "ja"}}
+  <script>
+    var $buoop = {
+      required: { e: 12 },
+      mobile: false,
+      style: "bottom",
+      api: 2020.06,
+      noclose:true,
+      no_permanent_hide:true,
+      text: {
+        'msg':'お使いのブラウザ ({brow_name}) はサポートされていません。<br>',
+        'msgmore': '本サイトを快適にご利用いただくには、最新の Google Chrome ブラウザをご使用ください。', 
+        'bupdate': 'Google Chrome のウェブサイトに移動する'
+      },
+      url: 'https://www.google.com/chrome/',
+    };
+    function $buo_f() {
+      var e = document.createElement("script");
+      e.src = "//browser-update.org/update.min.js";
+      document.body.appendChild(e);
+    };
+    try { document.addEventListener("DOMContentLoaded", $buo_f, false); }
+    catch (e) { window.attachEvent("onload", $buo_f); }
+  </script>
+{{/is}}
   <script defer src="/js/jquery.min.js"></script>
   <script defer src="/js/bootstrap.min.js"></script>
   <script defer src="/js/all.js"></script>
