@@ -114,7 +114,7 @@
     window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
   </script>
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('DOMContentLoaded', function() {
       $(document).ajaxError(function (e, request, settings) {
         ga('send', 'exception', {
           exDescription: 'Ajax Error ' + settings.url + ' ' + e.result + ' EventType:' + e.type + ' Status:' + request.status
@@ -157,7 +157,7 @@
   <script defer src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 {{#is class "error"}}
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('DOMContentLoaded', function() {
       monacaApi.loginCheck(false); // Force to stop login check request When web-server error
     });
   </script>
