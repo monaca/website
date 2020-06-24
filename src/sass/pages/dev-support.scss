@@ -266,10 +266,11 @@ body.dev-support {
                         position: fixed;
                         @include phone-content-width;
                         background: #fa6800;
-                        border: unset;
+                        border: none;
                         padding: 3% 4% 3% 4%;
-                        top: 89%;
-                        left: 8%;
+                        bottom: 16px;
+                        left: 50%;
+                        transform: translateX(-50%);
                     }
                 }
 
@@ -341,10 +342,11 @@ body.dev-support {
                         position: fixed;
                         @include phone-content-width;
                         background: #fa6800;
-                        border: unset;
+                        border: none;
                         padding: 3% 4% 3% 4%;
-                        top: 89%;
-                        left: 8%;
+                        bottom: 16px;
+                        left: 50%;
+                        transform: translateX(-50%);
                     }
                 }
 

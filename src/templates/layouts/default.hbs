@@ -104,8 +104,12 @@
     window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
     {{#is language "ja"}}
         window.LANG = "ja";
+        window.HEADER_HEIGHT = 0;
+        {{#if show_ja_globalnav}}window.HEADER_HEIGHT += 66;{{/if}}
+        {{#if show_ja_subnav}}window.HEADER_HEIGHT += 56;{{/if}}
     {{else}}
         window.LANG = "en";
+        window.HEADER_HEIGHT = 0;
     {{/is}}
     window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
   </script>

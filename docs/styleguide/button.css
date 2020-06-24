@@ -111,7 +111,8 @@ img, iframe, object {
 html[lang="ja"],
 html[lang="ja"] body {
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  overflow-x: hidden; }
 
 /*
 #### %btn for button template

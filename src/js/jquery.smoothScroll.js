@@ -68,12 +68,12 @@
 					return;
 				targetBody.animate(
 					{
-						scrollTop: offset.top
+						scrollTop: offset.top - window.HEADER_HEIGHT
 					},
 					params.duration,
 					params.easing,
 					function() {
-						location.hash = targetHash;
+						// location.hash = targetHash; // This statement causes sudden scroll
 					}
 				);
 
