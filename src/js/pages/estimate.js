@@ -28,8 +28,8 @@
 
       
 
-      const _dmains = freeMailDomains.join('|');
-      const regexp = `^(?=.*@(${_dmains})).+$`; //stop free mail domain
+      var _dmains = freeMailDomains.join('|');
+      var regexp = '^(?=.*@(' + _dmains + ')).+$'; //stop free mail domain
       if ((new RegExp(regexp)).test($('input[name="email"]').val())) {
         $('#content input[name="email"] ~ p.form-error')
         .html("独自ドメインメールをご入力ください。").show();
@@ -75,7 +75,7 @@
     });
   }
 
-  const freeMailDomains = [
+  var freeMailDomains = [
     'gmail.com',
     'yahoo',
     'hotmail',
