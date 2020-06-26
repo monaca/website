@@ -614,6 +614,10 @@ body.devops {
           box-shadow: 0px 3px 12px 0px #494847;
       }
 
+      .form-error {
+        color: #f55b56;
+      }
+
       @include for-phone-only {
           width: 85%;
           padding-bottom: 5%;
