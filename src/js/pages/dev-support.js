@@ -53,7 +53,7 @@
     displayBody();
     showLoading("support-inquiry", "loading");
 
-    $("#contact_us input, #contact_us textarea").on('focus', () => {
+    $("#contact_us input, #contact_us textarea").on('focus', function() {
       hideInquiryButton();
     });
 

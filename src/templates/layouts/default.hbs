@@ -114,7 +114,7 @@
     window.NOTIFICATION_MESSAGE_URL = "https://642dad3ff5abc36218998a19ee31a174f322b763.googledrive.com/host/0B-F5PfgMvTC9dmJONEtWY2xCRm8/emergency_notification/emergency_header.json";
   </script>
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('DOMContentLoaded', function() {
       $(document).ajaxError(function (e, request, settings) {
         ga('send', 'exception', {
           exDescription: 'Ajax Error ' + settings.url + ' ' + e.result + ' EventType:' + e.type + ' Status:' + request.status
@@ -123,7 +123,33 @@
     });
   </script>
 {{#is language "ja"}}
-  <script defer type="text/javascript">var Kairos3Tracker="asial";</script>
+  <script>
+    var $buoop = {
+      required: { e: 12 },
+      mobile: false,
+      style: "bottom",
+      api: 2020.06,
+      noclose: true,
+      no_permanent_hide: true,
+      ignorecookie: true,
+      text: {
+        'msg': 'お使いのブラウザ ({brow_name}) はサポートされていません。<br>',
+        'msgmore': '本サイトを快適にご利用いただくには、最新の Google Chrome ブラウザをご使用ください。',
+        'bupdate': 'Google Chrome のウェブサイトに移動する'
+      },
+      url: 'https://www.google.com/intl/ja/chrome/'
+    };
+    function $buo_f() {
+      var e = document.createElement("script");
+      e.src = "//browser-update.org/update.min.js";
+      document.body.appendChild(e);
+    };
+    try { document.addEventListener("DOMContentLoaded", $buo_f, false); }
+    catch (e) { window.attachEvent("onload", $buo_f); }
+  </script>
+{{/is}}
+{{#is language "ja"}}
+  <script>var Kairos3Tracker="asial";</script>
   <script defer type="text/javascript" charset="utf-8" src="//c.k3r.jp"></script>
 {{/is}}
   <script defer src="/js/jquery.min.js"></script>
@@ -132,7 +158,7 @@
   <script defer src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
 {{#is class "error"}}
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('DOMContentLoaded', function() {
       monacaApi.loginCheck(false); // Force to stop login check request When web-server error
     });
   </script>
