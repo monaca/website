@@ -9,6 +9,13 @@
       e.preventDefault();
       formUtil.disableAllInput();
       var sendData = createSendData();
+      
+      if (isFreeMail($('#email').val())) {
+        $('#contact_us input[name="email"] ~ p.form-error')
+        .html("独自ドメインメールをご入力ください。").show();
+        formUtil.enableAllInput();
+        return;
+      }
 
       $.ajax({
         type: "POST",
