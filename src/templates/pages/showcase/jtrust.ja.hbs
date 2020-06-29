@@ -13,12 +13,15 @@ show_ja_globalnav: true
 ---
 <header>
     <div class="image-wrapper">
-        <img src="/img/jtrust/keyvisual.jpg" alt="" class="keyvisual">
+        <picture>
+          <source media="(max-width: 768px)" srcset="/img/jtrust/m_keyvisual.png">
+          <img src="/img/jtrust/keyvisual.jpg" alt="" class="keyvisual">
+        </picture>
     </div>
     <h1 class="flipped">
         「Monaca」初挑戦ながらIRアプリを<br>1か月でリリース
     </h1>
-    {{!-- <div class="info-cont flipped">
+    <div class="info-cont flipped">
         <img class="img-lg" src="/img/jtrust/logo_jtrust.png" alt="Jトラストシステム株式会社" />
         <h3>Jトラストシステム株式会社</h3>
         <hr>
@@ -27,7 +30,7 @@ show_ja_globalnav: true
             <li>長野 義孝氏</li>
             <li>櫻井 健太郎氏</li>
         </ul>
-    </div> --}}
+    </div>
 </header>
 
 <section class="showcase-nav">
