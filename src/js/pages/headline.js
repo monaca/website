@@ -81,8 +81,8 @@
         );
 
         $('.headline-entry-toggle').on('click', 'img', function () {
-          $img = $(this);
-          $entries = $img.parent().parent().find('.headline-sub-entries');
+          var $img = $(this);
+          var $entries = $img.parent().parent().find('.headline-sub-entries');
           if ($entries.css('display') == 'none') {
             $img.attr('src', '/img/headline/ico_tri_downward.png');
           } else {

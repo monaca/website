@@ -1,0 +1,535 @@
+$phonegap_btn_color: #ff2222;
+$phonegap_btn_hover_color: #aa0000;
+
+
+html[lang=en] header.navbar {
+    &.phonegap-navbar {
+        background-color: #fff;
+        .navbar-nav {
+            > li > a {
+                color: #333;
+            }
+        }
+    }
+} 
+
+.document-link {
+    line-height: 23px;
+    font-size: 18px;
+    color: #248bdb;
+    background: url(/img/home/ico-arrow.png) no-repeat right;
+    background-position-y: 2px;
+    padding-right: 30px;
+}
+
+
+html[lang=en] body.phonegap {
+    color: #888888;
+
+    header.navbar {
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 34px;
+        color: #333333;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    h2 + p {
+        text-align: center;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 140%;
+    }
+
+
+    .v2-section--keyvisual {
+        display: flex;
+        .v2-section--keyvisual__background-wrapper {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            .v2-section--keyvisual__background-left {
+                background-image: url('/img/phonegap/bg_left.png');
+                width: calc(50% - 590px);
+            }
+            .v2-section--keyvisual__background-center {
+                position: relative;
+                width: 1180px;
+                min-width: 1180px;
+                height: 490px;
+
+                .background-back {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 1180px;
+                    height: 490px;
+                    z-index: 1;
+                }
+             
+                .background-buildings {
+                    position: absolute;
+                    left: 43px;
+                    bottom: 0;
+                    width: 1095px;
+                    height: 439px;
+                    z-index: 5;
+                }
+                .app-train-area {
+                     position: absolute;
+                     width: 800px;
+                     height: 33px;
+                     left: 190px;
+                     bottom: 60px;
+                     overflow: hidden;
+                     z-index: 3;
+
+                    .app-train {
+                        display: block;
+                        position: relative;
+                        width: 229px;
+                        margin-top: 4px;
+                        margin-left: -50px;
+                        animation: train-animation 12s ease 0s infinite normal;
+                    }
+                }
+            }
+            .v2-section--keyvisual__background-right {
+                background-image: url('/img/phonegap/bg_right.png');
+                width: calc(50% - 590px);
+            }
+        }
+        .v2-section--keyvisual__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+            position: absolute;
+            width: 1180px;
+            z-index: 10;
+
+            a,
+            a:visited,
+            a:hover,
+            a:active {
+                font-size: 18px;
+            }
+
+            > .v2-section--keyvisual__title {
+                color: #333;
+                margin-top: 64px;
+                font-size: 46px;
+            }
+            > .v2-section--keyvisual__description {
+                margin: 0 auto;
+                margin-top: 12px;
+                max-width: 900px;
+                font-size: 18px;
+            }
+            > .v2-section--keyvisual__image {
+                display: block;
+                margin: 32px auto 0 auto;
+                width: 640px;
+                height: 260px;
+                background-image: url('/img/phonegap/phonegap-monaca.svg');
+                background-size: 80% 80%;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            > a.v2-section--keyvisual__trial-button {
+                display: inline-block;
+                margin-top: 47px;
+                margin-bottom: 15px;
+                border: none;
+                border-radius: 5px;
+                padding: 15px 31px;
+                background-color: $phonegap-btn-color;
+                color: white;
+                font-size: 20px;
+                font-weight: 700;
+                cursor: pointer;
+                transition: background-color .4s ease;
+                width: 240px;
+                height: 60px;
+
+                &:hover {
+                    background-color: $phonegap-btn-hover-color;
+                    text-decoration: none;
+                }
+                &:focus {
+                    outline: none;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .v2-section--nav {
+      background-color: #f5f5f5;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        font-size: 18px;
+        color: #4477bb;
+        margin: 0;
+      }
+    }
+
+    .v2-section--features {
+        border-bottom: 1px solid #f0f0f0;
+        overflow: hidden;
+
+        > .v2-section--features__wrapper {
+            box-sizing: border-box;
+            margin: 48px auto;
+            max-width: 1024px;
+            text-align: left;
+            display: flex;
+            flex-flow: row nowrap;
+
+            > .v2-section--features__feature {
+                flex: 1;
+                padding: 0 30px;
+
+                > .v2-section--features__feature-icon {
+                    height: 68px;
+                    background-size: 42px 42px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+                > .v2-section--features__feature-title {
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: 700;
+                    margin-bottom: 20px;
+                }
+                > .v2-section--features__feature-description {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+            }
+        }
+    }
+
+    .v2-section--general {
+        overflow: hidden;
+
+        > .v2-section--general__wrapper {
+            box-sizing: border-box;
+            padding: 0 100px;
+            margin: 48px auto;
+            max-width: 1080px;
+            text-align: left;
+
+
+            h3 {
+                margin-top: 60px;
+                margin-bottom: 24px;
+                padding-top: 8px;
+                color: #444;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            ul {
+                list-style: disc;
+                margin-left: 32px;
+                margin-bottom: 2em;
+
+                li {
+                    margin-top: 4px;
+                    margin-bottom: 12px;
+                    font-weight: 700;
+
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+
+            &.migration-guide {
+                h3 {
+                    margin-top: 100px;
+                    font-size: 22px;
+                    margin-bottom: 40px;
+                }
+
+                p {
+                    margin-bottom: 20px;
+                }
+
+                .guide-main {
+                    margin: 0 40px;
+                }
+
+                pre {
+                    margin-bottom: 40px;
+                    padding: 16px;
+                    font-family: monaco, Consolas, "Lucida Console", monospace;
+
+                    code {
+                        color: #222;
+                    }
+                    code::before {
+                        content: '$ ';
+                        color: #999;
+                    }
+                }
+                img {
+                    margin: 20px auto;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                }
+            }
+        }
+    }
+
+    .v2-section--migration {
+        > .v2-section--migration__wrapper {
+            h3 {
+                margin-top: 60px;
+                margin-bottom: 24px;
+                padding-top: 8px;
+                font-size: 22px;
+                font-weight: 700;
+            }
+
+
+            a.v2-section--migration__button {
+                display: inline-block;
+                margin: 0 auto;
+                margin-top: 0;
+                margin-bottom: 21px;
+                border: 1px solid rgba(0,0,0,0.5);
+                border-radius: 9999px;
+                padding: 12px 36px;
+                color: rgba(0,0,0,0.6);
+                font-size: 18px;
+                cursor: pointer;
+                opacity: 1;
+
+                &:hover {
+                    opacity: 0.8;
+                    text-decoration: none;
+                }
+                &:focus {
+                    outline: none;
+                    text-decoration: none;
+                }
+            }
+
+            ul {
+                list-style: disc;
+                margin-left: 32px;
+                margin-top: 42px;
+                margin-bottom: 32px;
+
+                li {
+                    margin-top: 16px;
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+
+    .v2-section--needhelp {
+        border-bottom: 1px solid #f0f0f0;
+        overflow: hidden;
+
+        > .v2-section--needhelp__wrapper {
+            box-sizing: border-box;
+            margin: 48px auto;
+            max-width: 1024px;
+            text-align: left;
+
+            p {
+                margin-bottom: 2em;
+                font-size: 17px;
+                font-weight: 400;
+                line-height: 140%;
+            }
+
+            a.v2-section--needhelp__button {
+                display: inline-block;
+                margin: 0 auto;
+                margin-top: 31px;
+                border: 1px solid rgba(0,0,0,0.4);
+                border-radius: 9999px;
+                padding: 16px 36px;
+                color: rgba(0,0,0,0.5);
+                font-size: 18px;
+                cursor: pointer;
+                opacity: 1;
+
+                &:hover {
+                    opacity: 0.8;
+                    text-decoration: none;
+                }
+                &:focus {
+                    outline: none;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    .feature-comparison-table {
+        width: 100%;
+        margin: 50px 0 10px 0;
+
+        td, th {
+            padding: 30px 20px;
+            text-align: center;
+            vertical-align: middle;
+            &:last-of-type {
+                border-right: 0;
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+            .status-mark {
+                display: block;
+                width: 30px;
+                height: 30px;
+                background-size: 30px 30px;
+                margin: auto;
+                margin-bottom: 15px;
+            }
+
+            .ok {
+                background-image: url('/img/phonegap/Checkmark.svg');
+            }
+
+            .ng {
+                background-image: url('/img/phonegap/Delete.svg');
+            }
+
+            .partial {
+                background-image: url('/img/phonegap/Triangle.svg');
+            }
+        }
+
+        td.feature-name {
+            text-align: left;
+            vertical-align: top;
+            strong {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 18px;
+                color: #333;
+                font-weight: normal;
+            }
+        }
+
+        th {
+            color: #333;
+            font-weight: 700;
+        }
+
+        tr {
+            border-bottom: 1px solid #f2f2f2;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.03);
+            }
+
+            &:last-of-type {
+                border-bottom: 0;
+            }
+        }
+
+        img {
+            display: block;
+            margin: 0 auto 5px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    a.btn-trial {
+        background-color: $phonegap-btn-color;
+        transition: background-color .4s ease;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+
+        &:hover {
+            background-color: $phonegap-btn-hover-color;
+        }
+    }
+
+    .btn-coming-soon {
+        color: #999;
+        font-size: 18px;
+        cursor: default;
+    }
+
+    .btn-line-gray {
+        background-color: rgba(0,0,0,0.02);
+        border: 1px solid #575e66;
+        color: #575e66;
+        text-shadow: none;
+        font-size: 16px;
+
+        &:hover {
+            background-color: lighten(rgba(204,204,204,0.1), 7);
+            border: 1px solid #8a9199;
+            color: #8a9199;
+        }
+    }
+
+
+
+
+    @media screen and (max-width: 568px) {
+        .v2-section--keyvisual__wrapper {
+            padding-top: 40px !important;
+        }
+
+        .v2-section--general__wrapper {
+            padding: 0 12px !important;
+        }
+
+        .feature-comparison-table {
+            width: 100%;
+
+            td, th {
+                padding: 20px 10px;
+            }
+
+            img {
+                width: 18px;
+                height: 18px;
+            }
+
+            .btn {
+                white-space: normal;
+                padding: 5px;
+                font-size: 14px;
+            }
+        }
+
+        .table-overscroll-wrapper {
+            overflow: auto;
+            padding: 5px; // Keep the table's box-shadow visible
+            margin: -5px;
+        }
+    }
+}
+
+@keyframes train-animation {
+  0% { transform: translate3d(-150px, 0, 0); }
+  100% { transform: translate3d(900px, 0, 0); }
+}
