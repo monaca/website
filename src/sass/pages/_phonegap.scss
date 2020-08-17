@@ -1,6 +1,27 @@
 $phonegap_btn_color: #ff2222;
 $phonegap_btn_hover_color: #aa0000;
 
+$breakpoints: (
+  'small'  : ( max-width:  767px ),
+  'medium' : ( max-width:  768px ),
+  'large'  : ( max-width: 1024px )
+);
+ 
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
 
 html[lang=en] header.navbar {
     &.phonegap-navbar {
@@ -34,7 +55,7 @@ html[lang=en] body.phonegap {
         text-align: center;
         font-size: 34px;
         color: #333333;
-        margin-top: 100px;
+        margin-top: 20px;
         margin-bottom: 50px;
     }
 
@@ -50,37 +71,52 @@ html[lang=en] body.phonegap {
 
     .v2-section--keyvisual {
         display: flex;
+        @include respond-to(large) {
+          height: 420px;
+        }
+        @include respond-to(medium) {
+          height: 320px;
+        }
+        @include respond-to(small) {
+          height: 420px;
+        }
+
         .v2-section--keyvisual__background-wrapper {
             display: flex;
             flex-direction: row;
             width: 100%;
-            .v2-section--keyvisual__background-left {
-                background-image: url('/img/phonegap/bg_left.png');
-                width: calc(50% - 590px);
-            }
+            background-image: url('/img/phonegap/bg_right.png');
+            
             .v2-section--keyvisual__background-center {
                 position: relative;
-                width: 1180px;
-                min-width: 1180px;
-                height: 490px;
-
-                .background-back {
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    width: 1180px;
-                    height: 490px;
-                    z-index: 1;
+                width: 100%;
+                
+                height: 450px;             
+                @include respond-to(large) {
+                  height: 320px;
+                }
+                @include respond-to(small) {
+                  height: 100px;
                 }
              
                 .background-buildings {
+                  @include respond-to(small) {
+                    display: none;
+                  }
+                    background: url(/img/phonegap/migration_bg.png) 0 0 no-repeat;
+                    padding-top: calc(100%*439/1095);
+                    background-size: 100% auto;
+                    width: 100%;
+                    max-height: 440px;
+                    max-width: 1080px;
+                    margin: 25px auto;
                     position: absolute;
-                    left: 43px;
+                    top: 0;
                     bottom: 0;
-                    width: 1095px;
-                    height: 439px;
-                    z-index: 5;
+                    left: 0;
+                    right: 0;
                 }
+
                 .app-train-area {
                      position: absolute;
                      width: 800px;
@@ -111,7 +147,11 @@ html[lang=en] body.phonegap {
             align-items: center;
             box-sizing: border-box;
             position: absolute;
-            width: 1180px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
             z-index: 10;
 
             a,
@@ -123,14 +163,24 @@ html[lang=en] body.phonegap {
 
             > .v2-section--keyvisual__title {
                 color: #333;
-                margin-top: 64px;
-                font-size: 46px;
+                margin-top: 60px;
+                font-size: 2em;
+                @include respond-to(medium) {
+                  margin-top: 30px;
+                }
+                @include respond-to(small) {
+                  font-size: 1.7em;
+                }
             }
             > .v2-section--keyvisual__description {
                 margin: 0 auto;
                 margin-top: 12px;
                 max-width: 900px;
                 font-size: 18px;
+                @include respond-to(medium) {
+                  margin: 10px 30px 0;
+                  font-size: 14px;
+                }
             }
             > .v2-section--keyvisual__image {
                 display: block;
@@ -227,8 +277,8 @@ html[lang=en] body.phonegap {
 
         > .v2-section--general__wrapper {
             box-sizing: border-box;
-            padding: 0 100px;
-            margin: 48px auto;
+            padding: 48px 100px 0;
+            margin: auto;
             max-width: 1080px;
             text-align: left;
 
@@ -490,14 +540,14 @@ html[lang=en] body.phonegap {
         }
     }
 
-
-
+    .v2-section--keyvisual__wrapper {
+      padding-top: 40px !important;
+      @include respond-to(medium) {
+        padding-top: 10px !important;
+      }
+    }
 
     @media screen and (max-width: 568px) {
-        .v2-section--keyvisual__wrapper {
-            padding-top: 40px !important;
-        }
-
         .v2-section--general__wrapper {
             padding: 0 12px !important;
         }
