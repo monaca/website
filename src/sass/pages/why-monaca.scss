@@ -115,6 +115,9 @@ body.why-monaca {
 
         &:first-child {
             margin-top: 100px;
+            @media screen and (min-width: $v2-break-ipad-pro) {
+              margin-bottom: 0;
+            }
         }
 
         h2 {
@@ -175,7 +178,106 @@ body.why-monaca {
             width: 433.50px;
             height: 360.50px;
         }
+    }
 
+    .service-panel {
+      margin-bottom: 80px;
+      .wide-screen {
+          margin: 0;
+          padding: 0;
+          font-size: 40px;
+          line-height: 48px;
+          font-weight: 300;
+          color: #444444;
+          text-align: center;
+          margin-bottom: 50px;
+      }
+
+      .service-container {
+        a {
+          text-decoration: unset;
+        }
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        .service {
+          max-width: 300px;
+          min-height: 250px;
+          margin: 10px;
+          padding: 30px;
+          border: solid 1px #B3B3B3;
+          border-radius: 5px;
+
+          > .title {
+            height: 50px;
+            text-align: left;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 23px;
+            color: #444;
+          }
+
+          > .descritpion {
+            margin: 15px 0;
+            text-align: left;
+            height: 100px;
+            font-weight: 300;
+            font-size: 14px;
+            color: #6F777F;
+          }
+
+          > .link::after {
+            content: url(/img/common-v2/ico_next_arrow2.svg);
+            display: inline-block;
+            vertical-align: middle;
+            transform: scale(.8)
+          }
+        }
+      }
+    }
+
+    .education-link {
+      text-decoration: unset;
+      max-width: 360px;
+      min-height: 55px;
+      margin: 30px auto;
+      border: solid 1px #B3B3B3;
+      border-radius: 5px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > .text {
+        font-weight: 300;
+        font-size: 20px;
+        color: #444;
+        &::before {
+          content: "";
+          width:1em;
+	        height:1em;
+          background: url("/img/index/icn_ed.svg") no-repeat;
+          background-size: contain;
+          display: inline-block;
+          vertical-align: middle;
+          transform: translate(-6px,-1px);
+        }
+        &::after {
+          content: "";
+          width:1em;
+	        height:1em;
+          background: url(/img/common-v2/ico_next_arrow2.svg) no-repeat;
+          background-size: contain;
+          display: inline-block;
+          vertical-align: middle;
+          transform: scale(.8) rotate(-40deg) translate(3px, 3px);
+        }
+
+        > .link {
+          color: #0054AC;
+        }
+      }
     }
 
     // Pre ipad pro
@@ -229,6 +331,12 @@ body.why-monaca {
 
         }
 
+        .service-panel {
+          .wide-screen {
+              font-size: 35px;
+              margin-bottom: 50px;
+          }
+        }
     }
 
     // ipad
@@ -281,6 +389,12 @@ body.why-monaca {
 
         }
 
+        .service-panel {
+          .wide-screen {
+              font-size: 25px;
+              margin-bottom: 20px;
+          }
+        }
     }
 
     // Specific screen to handle
@@ -371,6 +485,16 @@ body.why-monaca {
                 height: 169px;
             }
 
+        }
+
+        .service-panel {
+          .wide-screen {
+              font-size: 20px;
+              margin-bottom: 10px;
+          }
+        }
+        .education-link .text{
+          font-size: 16px;
         }
     }
 }
