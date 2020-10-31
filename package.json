@@ -27,13 +27,13 @@
     "Chrome 81"
   ],
   "devDependencies": {
-    "@babel/core": "^7.10.2",
-    "@babel/preset-env": "^7.10.2",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
     "assemble-contrib-i18n": "^0.1.6",
     "assemble-middleware-sitemap": "^0.2.5",
-    "autoprefixer": "^9.8.0",
-    "grunt": "^1.0.4",
-    "grunt-assemble": "^0.4.0",
+    "autoprefixer": "^9.8.6",
+    "grunt": "^1.3.0",
+    "grunt-assemble": "^0.6.3",
     "grunt-aws-s3": "^0.12.3",
     "grunt-babel": "^8.0.0",
     "grunt-cli": "^1.3.2",
@@ -43,7 +43,7 @@
     "grunt-contrib-connect": "^2.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^3.0.0",
-    "grunt-contrib-imagemin": "^3.1.0",
+    "grunt-contrib-imagemin": "^4.0.0",
     "grunt-contrib-uglify": "^4.0.1",
     "grunt-contrib-uglify-es": "^3.3.0",
     "grunt-contrib-watch": "^1.1.0",
@@ -53,10 +53,10 @@
     "grunt-stylelint": "^0.15.0",
     "load-grunt-tasks": "^5.1.0",
     "node-bourbon": "^4.2.8",
-    "node-sass": "^4.13.1",
-    "stylelint": "^13.6.0",
-    "stylelint-config-sass-guidelines": "^7.0.0",
-    "time-grunt": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "stylelint": "^13.7.2",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "time-grunt": "^1.4.0",
     "workbox-build": "^3.6.3"
   },
   "licenses": [
@@ -72,5 +72,8 @@
     "site generator",
     "site builder",
     "grunt"
-  ]
+  ],
+  "dependencies": {
+    "coffeescript": "^2.5.1"
+  }
 }
