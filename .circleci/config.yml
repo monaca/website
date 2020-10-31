@@ -15,7 +15,7 @@ jobs:
 
   build-production:
     docker:
-      - image: circleci/node:8.4.0
+      - image: circleci/node:10.16.0
     steps:
       - checkout
       - run: |
