@@ -745,23 +745,25 @@ body.solution-partner {
   }
 
   .detail-text {
+    margin-left: 60px;
+
     .company-url {
       position: relative;
       z-index: 99;
       bottom: 0;
       @media screen and (max-width: $break) {
-        position: absolute;
+        // position: absolute;
       }
     }
 
     @media screen and (max-width: $break) {
-      float: left;
+      // float: left;
       width: 82%;
     }
   }
 
   .two-line {
-    float: left;
+    // float: left;
     width: 90%;
     @media screen and (max-width: $break) {
       width: 80%;
