@@ -116,10 +116,33 @@
   <script defer src="/js/jquery.min.js"></script>
   <script defer src="/js/bootstrap.min.js"></script>
   <script defer src="/js/all.js"></script>
-{{#is language "ja"}}
-  <script defer src="{{site.monaca_api}}/ja/login_io?callback=monacaApi.loginCheck"></script>
+{{#is class "error"}}
+  {{!-- In error page --}}
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      // Skip login check when API server is down
+      monacaApi.loginCheck(false);
+    });
+  </script>
 {{else}}
-  <script defer src="{{site.monaca_api}}/en/login_io?callback=monacaApi.loginCheck"></script>
+  {{!-- In normal page --}}
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      // Login check + IP address country check
+      $.ajax({
+        url: '{{site.monaca_api}}/{{language}}/login_io',
+        dataType: 'json',
+        timeout: 2000,
+        success: function(data, textStatus, jqXHR) {
+          monacaApi.loginCheck(data);
+        },
+        error: function(jqXHR, textStatus, err) {
+          // If request failed or response is not valid JSON
+          monacaApi.loginCheck(false); // Assume that not logged in
+        }
+      });
+    });
+  </script>
 {{/is}}
 </head>
 <body class="{{class}}">
