@@ -138,7 +138,7 @@ component: navbar
             </div>
         </li>
         <li class="ja-globalnav__menu{{#_or (_is page.class "support")}} selected{{/_or}}">
-            <div class="ja-globalnav__menu-title"><a class="login" href="https://monaca.mobi/ja/login">ログイン</a></div>
+            <div class="ja-globalnav__menu-title"><a class="login" href="https://{{site.monaca_api}}/ja/login">ログイン</a></div>
             <div class="ja-globalnav__menu-bottom-bar static"></div>
         </li>
     </ul>
@@ -166,7 +166,7 @@ component: navbar
         <div class="ja-globalsidebar__menu item"><a href="https://blog.asial.co.jp/" target="_blank" rel="noopener">アシアルブログ<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
         <div class="ja-globalsidebar__menu item"><a href="https://medium.com/the-web-tub" target="_blank" rel="noopener">The Web Tub<img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
         <div class="ja-globalsidebar__menu item" style="height: auto; line-height: 1.5;"><a href="https://note.asial.co.jp/" target="_blank" rel="noopener"><span style="display: inline-block;">エンジニアリングで</span><span style="display: inline-block;">世界をちょっとよくする</span><span style="display: inline-block;">ノート</span><img class="ja-globalsidebar__menu-exlink" src="/img/ja-globalnav/icn_arrow_r.svg" /></a></div>
-        <div class="ja-globalsidebar__menu group"><a href="https://monaca.mobi/ja/login">ログイン</a></div>
+        <div class="ja-globalsidebar__menu group"><a href="https://{{site.monaca_api}}/ja/login">ログイン</a></div>
     </div>
 </div>
 {{/if}}
@@ -217,10 +217,10 @@ component: navbar
             <div class="ja-subnav__menu-button blue" id="show_loginpopup">ログイン</div>
         </li>
         <li class="ja-subnav__menu" id="trial-button-menu" style="margin-left: 5px; margin-right: 0;">
-            <a href="https://monaca.mobi/ja/signup" onclick="gtag('event', 'view_item', {'event_category': 'engagement','event_label': 'trial-start'});"><div class="ja-subnav__menu-button blue-ghost">無料トライアル</div></a>
+            <a href="https://{{site.monaca_api}}/ja/signup" onclick="gtag('event', 'view_item', {'event_category': 'engagement','event_label': 'trial-start'});"><div class="ja-subnav__menu-button blue-ghost">無料トライアル</div></a>
         </li>
         <li class="ja-subnav__menu" id="dashboard-button-menu" style="margin-left: 10px; margin-right: 0;">
-            <a href="https://monaca.mobi/{{language}}/dashboard"><div class="ja-subnav__menu-button green">ダッシュボード</div></a>
+            <a href="https://{{site.monaca_api}}/{{language}}/dashboard"><div class="ja-subnav__menu-button green">ダッシュボード</div></a>
         </li>
     </ul>
     {{!-- subsidebar toggle button should be shown only in non-PC mode --}}

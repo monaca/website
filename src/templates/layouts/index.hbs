@@ -64,7 +64,7 @@
       });
     }
 
-    window.MONACA_API_URL = "{{site.monaca_api}}";
+    window.MONACA_API_URL = "https://{{site.monaca_api}}";
     window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
     {{#is language "ja"}}
         window.LANG = "ja";
@@ -130,7 +130,7 @@
     window.addEventListener('DOMContentLoaded', function() {
       // Login check + IP address country check
       $.ajax({
-        url: '{{site.monaca_api}}/{{language}}/login_io',
+        url: 'https://{{site.monaca_api}}/{{language}}/login_io',
         dataType: 'json',
         timeout: 2000,
         success: function(data, textStatus, jqXHR) {
