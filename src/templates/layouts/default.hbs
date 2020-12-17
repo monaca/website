@@ -100,7 +100,7 @@
   {{!-- script elements --}}
   {{!-- (Note: Inline scripts cannot be deferred and evaluated immediately) --}}
   <script>
-    window.MONACA_API_URL = "{{site.monaca_api}}";
+    window.MONACA_API_URL = "https://{{site.monaca_api}}";
     window.MONACA_GITHUB_OAUTH_URL = window.MONACA_API_URL+"/oauth/github/"+(+new Date());
     {{#is language "ja"}}
         window.LANG = "ja";
