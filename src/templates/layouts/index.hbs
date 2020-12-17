@@ -132,6 +132,9 @@
       $.ajax({
         url: 'https://{{site.monaca_api}}/{{language}}/login_io',
         dataType: 'json',
+        xhrFields: {
+          withCredentials: true
+        },
         timeout: 2000,
         success: function(data, textStatus, jqXHR) {
           monacaApi.loginCheck(data);
