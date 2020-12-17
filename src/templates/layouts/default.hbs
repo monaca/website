@@ -170,7 +170,7 @@
     window.addEventListener('DOMContentLoaded', function() {
       // Login check + IP address country check
       $.ajax({
-        url: '{{site.monaca_api}}/{{language}}/login_io',
+        url: 'https://{{site.monaca_api}}/{{language}}/login_io',
         dataType: 'json',
         xhrFields: {
           withCredentials: true
