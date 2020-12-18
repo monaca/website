@@ -41,15 +41,16 @@ module.exports = function (grunt) {
     };
 
     // Load site.yml
-    if (grunt.option('site-config')) {
-        var site_yaml = grunt.file.readYAML(config.src + '/data/site_' + grunt.option('site-config') + '.yml');
-    } else {
-        var site_yaml = grunt.file.readYAML(config.src + '/data/site.yml');
+    let siteYaml;
+    {
+        const site_config = grunt.option('site-config') || 'local'; // Use local by default
+
+        siteYaml = grunt.file.readYAML(config.src + '/data/site_' + site_config + '.yml');
     }
 
     // Display information
-    grunt.log.writeln('Title:        ' + site_yaml.title);
-    grunt.log.writeln('API Endpoint: ' + site_yaml.monaca_api);
+    grunt.log.writeln('Title:        ' + siteYaml.title);
+    grunt.log.writeln('API Endpoint: ' + siteYaml.monaca_api);
 
     grunt.initConfig({
         config: config,
@@ -158,7 +159,7 @@ module.exports = function (grunt) {
             },
             // options : {
             //   process : function(content,path) {
-            //     return grunt.template.process(content,{ data : site_yaml } );
+            //     return grunt.template.process(content,{ data : siteYaml } );
             //   }
             // }
         },
@@ -238,7 +239,7 @@ module.exports = function (grunt) {
                 flatten: true,
                 layout: '<%= config.src %>/templates/layouts/default.hbs',
                 data: ['<%= config.src %>/data/i18n/*.{json,yml}'],
-                site: site_yaml,
+                site: siteYaml,
                 partials: '<%= config.src %>/templates/partials/*.hbs',
                 plugins: ['assemble-middleware-sitemap'],
                 i18n: {

@@ -16,9 +16,9 @@ show_ja_globalnav: true
     <p class="version"><span id="github-published_at" class="version"></span></p>
 	
 	<div class="btns">
-		<a class="btn btn-green localkit_download_for_win" href="https://monaca.mobi/download/localkit-win">Windows版ダウンロード</a>
-		<a class="btn btn-green localkit_download_for_mac" href="https://monaca.mobi/download/localkit-mac">Mac OS X版ダウンロード</a>
-		<a class="btn btn-green localkit_download_for_linux" href="https://monaca.mobi/download/localkit-linux">Linux版ダウンロード</a>
+		<a class="btn btn-green localkit_download_for_win" href="https://{{site.monaca_api}}/download/localkit-win">Windows版ダウンロード</a>
+		<a class="btn btn-green localkit_download_for_mac" href="https://{{site.monaca_api}}/download/localkit-mac">Mac OS X版ダウンロード</a>
+		<a class="btn btn-green localkit_download_for_linux" href="https://{{site.monaca_api}}/download/localkit-linux">Linux版ダウンロード</a>
 	</div>
 </div></div>
 
@@ -43,9 +43,9 @@ show_ja_globalnav: true
 </section>
 
 <div class="box-try">
-	<a class="btn btn-green localkit_download_for_win" href="https://monaca.mobi/download/localkit-win">Windows版ダウンロード</a>
-	<a class="btn btn-green localkit_download_for_mac" href="https://monaca.mobi/download/localkit-mac">MacOS X版ダウンロード</a>
-	<a class="btn btn-green localkit_download_for_linux" href="https://monaca.mobi/download/localkit-linux">Linux版ダウンロード</a>
+	<a class="btn btn-green localkit_download_for_win" href="https://{{site.monaca_api}}/download/localkit-win">Windows版ダウンロード</a>
+	<a class="btn btn-green localkit_download_for_mac" href="https://{{site.monaca_api}}/download/localkit-mac">MacOS X版ダウンロード</a>
+	<a class="btn btn-green localkit_download_for_linux" href="https://{{site.monaca_api}}/download/localkit-linux">Linux版ダウンロード</a>
 </div>
 
 
@@ -56,7 +56,7 @@ $(window).load(function() {
 	var fadeInSpeed = 400;
 	$('div.keyvisual span#github-published_at').hide();
 	$.ajax({
-		url: 'https://ide.monaca.mobi/api/public/versions',
+		url: 'https://ide.{{site.monaca_api}}/api/public/versions',
 		dataType: 'json',
 		success: function(res) {
       $("div.keyvisual span#github-published_at").append($('<a href="https://github.com/monaca/Localkit/releases">Version <strong></strong></a>'));
