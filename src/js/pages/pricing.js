@@ -56,42 +56,44 @@
     var tableEl;
     var contEl;
 
-    // If accessed from Japanese network
-    if (loginData.status.inJapan) {
-      $('.plan-ja').css('display', 'block');
-      tableEl = document.getElementById("compare-cont-table-ja");
-      contEl = document.getElementById("compare-cont-ja");
-
-      if (loginData.status.isLogin) {
-        $('.btn-trial').html(getProPlanTrialButtonLabel());
+    loginData.onPreReady(function() {
+      // If accessed from Japanese network
+      if (loginData.status.inJapan) {
+        $('.plan-ja').css('display', 'block');
+        tableEl = document.getElementById("compare-cont-table-ja");
+        contEl = document.getElementById("compare-cont-ja");
+  
+        if (loginData.status.isLogin) {
+          $('.btn-trial').html(getProPlanTrialButtonLabel());
+        }
+  
+      } else {
+        $('.plan-en').css('display', 'block');
+        tableEl = document.getElementById("compare-cont-table");
+        contEl = document.getElementById("compare-cont");
       }
-
-    } else {
-      $('.plan-en').css('display', 'block');
-      tableEl = document.getElementById("compare-cont-table");
-      contEl = document.getElementById("compare-cont");
-    }
-
-    //contEl.addEventListener("scroll", setShadow);
-    //window.addEventListener("resize", setShadow);
-    //setShadow();
-
-    $('.btn-tooltip').tooltip();
-
-    function setShadow(event) {
-      (contEl.scrollLeft > 0) ? contEl.classList.add("leftshadow") : contEl.classList.remove("leftshadow");
-      (contEl.clientWidth + contEl.scrollLeft < tableEl.clientWidth) ? contEl.classList.add("rightshadow") : contEl.classList.remove("rightshadow");
-    }
-
-    // If accessed from Japanese network
-    if (loginData.status.inJapan) {
-      $('.dev-plan').remove();
-    } else {
-      $('.personal-plan').remove();
-    }
-
-    displayNewPlanInfo();
-    displayBody();
+  
+      //contEl.addEventListener("scroll", setShadow);
+      //window.addEventListener("resize", setShadow);
+      //setShadow();
+  
+      $('.btn-tooltip').tooltip();
+  
+      function setShadow(event) {
+        (contEl.scrollLeft > 0) ? contEl.classList.add("leftshadow") : contEl.classList.remove("leftshadow");
+        (contEl.clientWidth + contEl.scrollLeft < tableEl.clientWidth) ? contEl.classList.add("rightshadow") : contEl.classList.remove("rightshadow");
+      }
+  
+      // If accessed from Japanese network
+      if (loginData.status.inJapan) {
+        $('.dev-plan').remove();
+      } else {
+        $('.personal-plan').remove();
+      }
+  
+      displayNewPlanInfo();
+      displayBody();
+    });
   };
 
 

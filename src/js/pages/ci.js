@@ -19,12 +19,14 @@
       (contEl.clientWidth + contEl.scrollLeft < tableEl.clientWidth) ? contEl.classList.add("rightshadow") : contEl.classList.remove("rightshadow");
     }
 
-    if (loginData.status.inJapan) {
-      $('.foreign-plan').remove();
-    } else {
-      $('.japan-plan').remove();
-    }
+    loginData.onPreReady(function() {
+      if (loginData.status.inJapan) {
+        $('.foreign-plan').remove();
+      } else {
+        $('.japan-plan').remove();
+      }
 
-    displayBody();
+      displayBody();
+    });
   };
 })();
