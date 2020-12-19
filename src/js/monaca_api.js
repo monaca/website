@@ -79,11 +79,6 @@
       loginData.setReady();
       this.showcaseAddEnable(false);
     }
-
-    var monacaPageHook = monacaPages[location.pathname];
-    if (monacaPageHook) {
-      monacaPageHook(loginData);
-    }
   };
   
   monacaApi.getBaseUrl = function() {
@@ -207,6 +202,11 @@
       $("#login-popup-form").attr('action', window.MONACA_API_URL + "/" + window.LANG + "/login");
       $("#login-popup-form").submit();
     });
+
+    var f = monacaPages[path];
+    if (f) {
+      f(loginData);
+    }
 
     function setCsrfToken(elementId, url) {
       getCsrfToken(url, function(token) {
