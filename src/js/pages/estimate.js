@@ -23,6 +23,7 @@
         data[$(el).attr('name')] = $(el).val();
       });
       data.comment = "ご予算:" + $('#budget option:selected').text() + "\n" + data.comment;
+      data.referer = location.href;
       
       $('.form-error').hide(); // hide old errors
 
