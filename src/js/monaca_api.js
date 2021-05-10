@@ -12,7 +12,7 @@
     autoDisplay:  true,
 
     setReady: function() {
-      this.ready = true; 
+      this.ready = true;
       this.listeners.forEach(function(f) {
         f(this);
       });
@@ -80,7 +80,7 @@
       this.showcaseAddEnable(false);
     }
   };
-  
+
   monacaApi.getBaseUrl = function() {
     return window.MONACA_API_URL;
   };
@@ -107,7 +107,7 @@
         loginData.setReady();
       }
     });
- 
+
   };
 
   monacaApi.showGravator = function ( ) {
@@ -150,6 +150,25 @@
 
     $('.go-to-dashboard').click(function() {
       location.href = MONACA_API_URL + '/' + LANG + '/dashboard';
+    });
+
+    $('.account-page').click(function() {
+      const defaultAccountPageUrl = `${MONACA_API_URL}/${LANG}/account/edit`;
+      $.ajax({
+        type: "GET",
+        url: MONACA_IDE_API_URL + '/api/environment/configurations',
+        xhrFields: {
+          withCredentials: true
+        },
+        dataType: "json",
+        success: function (msg) {
+          const accountPageUrl = msg.result.client.service.use_new_monaca_frontend ? `${MONACA_API_URL}/frontend/account/edit` : defaultAccountPageUrl;
+          location.href = accountPageUrl;
+        },
+        error: function (err) {
+          location.href = defaultAccountPageUrl;
+        }
+      });
     });
 
     $('.btn-github').click(function() {
@@ -289,7 +308,7 @@
       inputs.removeAttr('disabled');
       loginRequiredButton.hide();
     } else {
-      inputs.attr('disabled', 'disabled');      
+      inputs.attr('disabled', 'disabled');
       loginRequiredButton.show();
     }
   };
