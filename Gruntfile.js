@@ -22,6 +22,7 @@ module.exports = function (grunt) {
     const sass = require('node-sass');
 
     var isWindows = /^win/.test(process.platform);
+    var isLinux = /^linux/.test(process.platform);
     var workboxBuild = require('workbox-build');
     var precachedFiles = [
         '**/css/bootstrap-theme.min.css',
@@ -51,6 +52,7 @@ module.exports = function (grunt) {
     // Display information
     grunt.log.writeln('Title:        ' + siteYaml.title);
     grunt.log.writeln('API Endpoint: ' + siteYaml.monaca_api);
+    grunt.log.writeln('IDE API Endpoint: ' + siteYaml.monaca_ide_api);
 
     grunt.initConfig({
         config: config,
@@ -455,7 +457,7 @@ module.exports = function (grunt) {
                 options: {
                     open: {
                         target: 'http://localhost:3010',
-                        appName: isWindows ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' : 'Google Chrome'
+                        appName: isWindows ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' : isLinux ? 'google-chrome' : 'Google Chrome'
                     },
                     port: 3010,
                     base: [
@@ -467,7 +469,7 @@ module.exports = function (grunt) {
                 options: {
                     open: {
                         target: 'http://localhost:3011',
-                        appName: isWindows ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' : 'Google Chrome'
+                        appName: isWindows ? 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe' : isLinux ? 'google-chrome' : 'Google Chrome'
                     },
                     port: 3011,
                     base: [
